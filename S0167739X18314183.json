@@ -1,0 +1,3587 @@
+{
+    "abstract": "The recent upsurge in the available amount of health data and the advances in next-generation sequencing are setting the ground for the long-awaited precision medicine. To process this deluge of data, bioinformatics workloads are becoming more complex and more computationally demanding. For this reasons they have been extended to support different computing architectures, such as GPUs and FPGAs, to leverage the form of parallelism typical of each of such architectures. The paper describes how a genomic workload such as k-mer frequency counting that takes advantage of a GPU can be offloaded to one or even more FPGAs. Moreover, it performs a comprehensive analysis of the FPGA acceleration comparing its performance to a non-accelerated configuration and when using a GPU. Lastly, the paper focuses on how, when using accelerators with a throughput-oriented workload, one should also take into consideration both kernel execution time and how well each accelerator board overlaps kernels and PCIe transferred. Results show that acceleration with two FPGAs can improve both time- and energy-to-solution for the entire accelerated part by a factor of 1.32x. Per contra, acceleration with one GPU delivers an improvement of 1.77x in time-to-solution but of a lower 1.49x in energy-to-solution due to persistently higher power consumption. The paper also evaluates how future FPGA boards with components (i.e., off-chip memory and PCIe) on par with those of the GPU board could provide an energy-efficient alternative to GPUs.",
+    "author_highlights": [
+        {
+            "endOffset": 22854,
+            "sentence": "Refactoring of OpenCL GPU code to efficiently run on multiple FPGAs.",
+            "startOffset": 22786
+        },
+        {
+            "endOffset": 22940,
+            "sentence": "Multi-kernel FPGA design for k-mer generation that saturates on-board DRAM bandwidth.",
+            "startOffset": 22855
+        },
+        {
+            "endOffset": 23004,
+            "sentence": "Time, energy, and power evaluation of GPU and FPGAs offloading.",
+            "startOffset": 22941
+        },
+        {
+            "endOffset": 23096,
+            "sentence": "Analysis of how accelerators parts (i.e., off-chip memory and PCIe) can hinder performance.",
+            "startOffset": 23005
+        },
+        {
+            "endOffset": 23201,
+            "sentence": "Estimation of how next FPGA boards constitute a real asset for more energy-efficient genomics workloads.",
+            "startOffset": 23097
+        }
+    ],
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "Valent\u00ed",
+                    "initial": "V.",
+                    "last": "Moncunill"
+                },
+                {
+                    "first": "Santi",
+                    "initial": "S.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "S\u00edlvia",
+                    "initial": "S.",
+                    "last": "Be\u00e0"
+                },
+                {
+                    "first": "Lise O.",
+                    "initial": "L.O.",
+                    "last": "Andrieux"
+                },
+                {
+                    "first": "Itziar",
+                    "initial": "I.",
+                    "last": "Salaverria"
+                },
+                {
+                    "first": "Cristina",
+                    "initial": "C.",
+                    "last": "Royo"
+                },
+                {
+                    "first": "Laura",
+                    "initial": "L.",
+                    "last": "Martinez"
+                },
+                {
+                    "first": "Montserrat",
+                    "initial": "M.",
+                    "last": "Puiggr\u00f2s"
+                },
+                {
+                    "first": "Maia",
+                    "initial": "M.",
+                    "last": "Segura-Wang"
+                },
+                {
+                    "first": "Adrian M.",
+                    "initial": "A.M.",
+                    "last": "St\u00fctz"
+                },
+                {
+                    "first": "Alba",
+                    "initial": "A.",
+                    "last": "Navarro"
+                },
+                {
+                    "first": "Romina",
+                    "initial": "R.",
+                    "last": "Royo"
+                },
+                {
+                    "first": "Josep L.",
+                    "initial": "J.L.",
+                    "last": "Gelp\u00ed"
+                },
+                {
+                    "first": "Ivo G.",
+                    "initial": "I.G.",
+                    "last": "Gut"
+                },
+                {
+                    "first": "Carlos",
+                    "initial": "C.",
+                    "last": "L\u00f3pez-Ot\u00edn"
+                },
+                {
+                    "first": "Modesto",
+                    "initial": "M.",
+                    "last": "Orozco"
+                },
+                {
+                    "first": "Jan O.",
+                    "initial": "J.O.",
+                    "last": "Korbel"
+                },
+                {
+                    "first": "Elias",
+                    "initial": "E.",
+                    "last": "Campo"
+                },
+                {
+                    "first": "Xose S.",
+                    "initial": "X.S.",
+                    "last": "Puente"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Torrents"
+                }
+            ],
+            "doi": "10.1038/nbt.3027",
+            "firstpage": "1106",
+            "issn": "10870156",
+            "lastpage": "1112",
+            "pmid": "25344728",
+            "pub_year": 2014,
+            "title": "Comprehensive characterization of complex structural variations in cancer by directly comparing genome sequence reads",
+            "volume": "32"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "Fahad Bin",
+                    "initial": "F.B.",
+                    "last": "Muslim"
+                },
+                {
+                    "first": "Liang",
+                    "initial": "L.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Mehdi",
+                    "initial": "M.",
+                    "last": "Roozmeh"
+                },
+                {
+                    "first": "Luciano",
+                    "initial": "L.",
+                    "last": "Lavagno"
+                }
+            ],
+            "doi": "10.1109/ACCESS.2017.2671881",
+            "firstpage": "2747",
+            "issn": "21693536",
+            "lastpage": "2762",
+            "pub_year": 2017,
+            "title": "Efficient FPGA implementation of Open CL high-performance computing applications via high-level synthesis",
+            "volume": "5"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Hamid Reza",
+                    "initial": "H.R.",
+                    "last": "Zohouri"
+                },
+                {
+                    "first": "Naoya",
+                    "initial": "N.",
+                    "last": "Maruyamay"
+                },
+                {
+                    "first": "Aaron",
+                    "initial": "A.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "Motohiko",
+                    "initial": "M.",
+                    "last": "Matsuda"
+                },
+                {
+                    "first": "Satoshi",
+                    "initial": "S.",
+                    "last": "Matsuoka"
+                }
+            ],
+            "doi": "10.1109/SC.2016.34",
+            "firstpage": "409",
+            "issn": "21674329",
+            "lastpage": "420",
+            "pub_year": 2016,
+            "title": "Evaluating and Optimizing OpenCL Kernels for High Performance Computing with FPGAs",
+            "volume": "0"
+        },
+        "b12": null,
+        "b13": {
+            "authors": [
+                {
+                    "first": "Enzo",
+                    "initial": "E.",
+                    "last": "Rucci"
+                },
+                {
+                    "first": "Carlos",
+                    "initial": "C.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "Guillermo",
+                    "initial": "G.",
+                    "last": "Botella"
+                },
+                {
+                    "first": "Armando De",
+                    "initial": "A.D.",
+                    "last": "Giusti"
+                },
+                {
+                    "first": "Marcelo",
+                    "initial": "M.",
+                    "last": "Naiouf"
+                },
+                {
+                    "first": "Manuel",
+                    "initial": "M.",
+                    "last": "Prieto-Matias"
+                }
+            ],
+            "doi": "10.1109/Trustcom.2015.634",
+            "firstpage": "208",
+            "lastpage": "213",
+            "pub_year": 2015,
+            "title": "Smith-Waterman Protein Search with OpenCL on an FPGA",
+            "volume": "3"
+        },
+        "b14": null,
+        "b15": {
+            "authors": [
+                {
+                    "first": "Lorenzo",
+                    "initial": "L.",
+                    "last": "Di Tucci"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "O'Brien"
+                },
+                {
+                    "first": "Michaela",
+                    "initial": "M.",
+                    "last": "Blott"
+                },
+                {
+                    "first": "Marco D.",
+                    "initial": "M.D.",
+                    "last": "Santambrogio"
+                }
+            ],
+            "doi": "10.23919/DATE.2017.7927082",
+            "firstpage": "716",
+            "lastpage": "721",
+            "pub_year": 2017,
+            "title": "Architectural optimizations for high performance and energy efficient Smith-Waterman implementation on FPGAs using OpenCL"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Ernst",
+                    "initial": "E.",
+                    "last": "Houtgast"
+                },
+                {
+                    "first": "Vlad Mihai",
+                    "initial": "V.M.",
+                    "last": "Sima"
+                },
+                {
+                    "first": "Zaid",
+                    "initial": "Z.",
+                    "last": "Al-Ars"
+                }
+            ],
+            "doi": "10.1109/BIBE.2017.000-6",
+            "firstpage": "492",
+            "lastpage": "496",
+            "pub_year": 2017,
+            "title": "High performance streaming smith-waterman implementation with implicit synchronization on intel FPGA using OpenCL",
+            "volume": "2018-"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Carl",
+                    "initial": "C.",
+                    "last": "Poirier"
+                },
+                {
+                    "first": "Benoit",
+                    "initial": "B.",
+                    "last": "Gosselin"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Fortier"
+                }
+            ],
+            "doi": "10.1109/EMBC.2015.7319879",
+            "firstpage": "6489",
+            "issn": "1557170X",
+            "lastpage": "6492",
+            "pmid": "26737779",
+            "pub_year": 2015,
+            "title": "DNA assembly with de bruijn graphs on FPGA",
+            "volume": "2015-"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Nathaniel",
+                    "initial": "N.",
+                    "last": "McVicar"
+                },
+                {
+                    "first": "Chih Ching",
+                    "initial": "C.C.",
+                    "last": "Lin"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Hauck"
+                }
+            ],
+            "doi": "10.1109/FCCM.2017.23",
+            "firstpage": "203",
+            "lastpage": "210",
+            "pub_year": 2017,
+            "title": "K-mer counting using bloom filters with an FPGA-attached HMC"
+        },
+        "b19": null,
+        "b2": {
+            "authors": [
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Cadenelli"
+                },
+                {
+                    "first": "Jord\u00e0",
+                    "initial": "J.",
+                    "last": "Polo"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Carrera"
+                }
+            ],
+            "doi": "10.1109/HPCC-SmartCity-DSS.2017.57",
+            "firstpage": "434",
+            "lastpage": "441",
+            "pub_year": 2018,
+            "title": "Accelerating K-mer Frequency Counting with GPU and Non-Volatile Memory",
+            "volume": "2018-"
+        },
+        "b3": {
+            "authors": [
+                {
+                    "first": "Ruiqiang",
+                    "initial": "R.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Hongmei",
+                    "initial": "H.",
+                    "last": "Zhu"
+                },
+                {
+                    "first": "Jue",
+                    "initial": "J.",
+                    "last": "Ruan"
+                },
+                {
+                    "first": "Wubin",
+                    "initial": "W.",
+                    "last": "Qian"
+                },
+                {
+                    "first": "Xiaodong",
+                    "initial": "X.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Zhongbin",
+                    "initial": "Z.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Yingrui",
+                    "initial": "Y.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Shengting",
+                    "initial": "S.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Gao",
+                    "initial": "G.",
+                    "last": "Shan"
+                },
+                {
+                    "first": "Karsten",
+                    "initial": "K.",
+                    "last": "Kristiansen"
+                },
+                {
+                    "first": "Songgang",
+                    "initial": "S.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Huanming",
+                    "initial": "H.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Jian",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1101/gr.097261.109",
+            "firstpage": "265",
+            "issn": "10889051",
+            "lastpage": "272",
+            "pmid": "20019144",
+            "pub_year": 2010,
+            "title": "De novo assembly of human genomes with massively parallel short read sequencing",
+            "volume": "20"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "David R.",
+                    "initial": "D.R.",
+                    "last": "Kelley"
+                },
+                {
+                    "first": "Michael C.",
+                    "initial": "M.C.",
+                    "last": "Schatz"
+                },
+                {
+                    "first": "Steven L.",
+                    "initial": "S.L.",
+                    "last": "Salzberg"
+                }
+            ],
+            "doi": "10.1186/gb-2010-11-11-r116",
+            "issn": "14747596",
+            "pmid": "21114842",
+            "pub_year": 2010,
+            "title": "Quake: Quality-aware detection and correction of sequencing errors",
+            "volume": "11"
+        },
+        "b5": null,
+        "b6": {
+            "authors": [
+                {
+                    "first": "Zeke",
+                    "initial": "Z.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Bingsheng",
+                    "initial": "B.",
+                    "last": "He"
+                },
+                {
+                    "first": "Wei",
+                    "initial": "W.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1109/FPL.2015.7293941",
+            "pub_year": 2015,
+            "title": "A study of data partitioning on OpenCL-based FPGAS"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Srikanth",
+                    "initial": "S.",
+                    "last": "Sridharan"
+                },
+                {
+                    "first": "Paolo",
+                    "initial": "P.",
+                    "last": "Durante"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Faerber"
+                },
+                {
+                    "first": "Niko",
+                    "initial": "N.",
+                    "last": "Neufeld"
+                }
+            ],
+            "doi": "10.1109/FPL.2016.7577351",
+            "pub_year": 2016,
+            "title": "Accelerating particle identification for high-speed data-filtering using OpenCL on FPGAs and other architectures"
+        },
+        "b8": {
+            "authors": [
+                {
+                    "first": "Oliver Jakob",
+                    "initial": "O.J.",
+                    "last": "Arndt"
+                },
+                {
+                    "first": "Fabian David",
+                    "initial": "F.D.",
+                    "last": "Trager"
+                },
+                {
+                    "first": "Tobias",
+                    "initial": "T.",
+                    "last": "Mob"
+                },
+                {
+                    "first": "Holger",
+                    "initial": "H.",
+                    "last": "Blume"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2017.100",
+            "firstpage": "6",
+            "lastpage": "17",
+            "pub_year": 2017,
+            "title": "Portable implementation of advanced driver-assistance algorithms on heterogeneous architectures"
+        },
+        "b9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 50449,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "We describe this in more detail in the result section.",
+            "startOffset": 50395,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 42335,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 42164,
+                    "startOffset": 42161
+                }
+            },
+            "secId": "sec4",
+            "sentence": "The characterization of the application presented in [2] showed that the main bottleneck for the Prune and Count units is the randomness of accesses to host DRAM given by lookups and insertions in Bloom Filters and hash tables.",
+            "startOffset": 42108,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 60196,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Intuitively, this is because when scaling to multiple devices, the Encode and Shuffle kernels of each device still process the same data, like if only one device was to be used.",
+            "startOffset": 60019,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 50674,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Moreover, now that the solution has multiple different output buffers, one can also decide to replicate the Bloom Filter kernels to be able to filter the k-mers of one partition from all, or some, output buffers in parallel.",
+            "startOffset": 50450,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 25936,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As a result, when evaluating the usage of these kinds of boards for throughput-oriented workloads, one cannot look only at the execution time of kernels completely disregarding transfers between the host and the device.",
+            "startOffset": 25717,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59291,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "We achieved this using a single-producer/multiple-consumers design were the internal parallelism of the produced kernel, obtained with loop unrolling, equals the number of the consumer kernels.",
+            "startOffset": 59098,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 57542,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In fact, as discussed in 4.3, only for configuration (iii), in the Prune unit Bloom filters are updated once every eight cycles of the software pipeline instead than at each cycle.",
+            "startOffset": 57362,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 70094,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Overall results showed that one FPGA is not enough to improve the baseline CPU-only implementation but that two FPGAs yield an improvement of 1.32x in both time- and energy-to-solution.",
+            "startOffset": 69909,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 24855,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, FPGAs have recently become more accessible thanks to high-level languages like OpenCL, a portable programming language that allows executing the same code across a variety of platforms.",
+            "startOffset": 24661,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39372,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, to achieve good performance an extra effort to port and optimize the code for FPGAs must be made.",
+            "startOffset": 39266,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61559,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Intuitively, this is due to the random memory accesses of the Bloom Filter due to the many random requests.",
+            "startOffset": 61452,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 40481,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Proving that does not matter how fast a kernel is, if the transfer component is much larger, the overall speedup will be significantly reduced.",
+            "startOffset": 40338,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67200,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Not only have the FPGAs a narrower and slower connection, but also they lack of a dual copy engine.",
+            "startOffset": 67101,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 57805,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In Count unit instead, this configuration allowed to load the Bloom filters to the two FPGAs at the very beginning of the execution and, because during this unit the filters are not altered by the CPU consumer threads, there is no need to update them constantly.",
+            "startOffset": 57543,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 25454,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Additionally, being a more mature product, discrete GPU boards are usually equipped with high-performance on-board memory (i.e., GDDR5X or HBM2) and a high-speed full-duplex interconnection (i.e., PCIe Gen3 x16 with a dual copy engine).",
+            "startOffset": 25218,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58579,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "With accelerators, the software double buffering pipeline was set to work with input chunks of 400 MB; requiring around 1630 cycles to process the whole input.",
+            "startOffset": 58420,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 34544,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "This latest implementation of the method, makes use of a data partitioning scheme to spread the k-mers, thus the workload, among different CPU threads but also among multiple nodes if needed.",
+            "startOffset": 34353,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 34957,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The work we present here focuses only on single node configurations; thus the partitioning scheme is used to spread the work among multiple CPU threads; usually with as many partitions as the number of CPU consumer threads.",
+            "startOffset": 34734,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 35822,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "At each cycle of the pipeline each step works on a different chunk of data.",
+            "startOffset": 35747,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 63729,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "This figure shows how, not only is the power consumption with FPGAs similar to the CPU Only configuration, but, in some cases, it\u2019s even lower; demonstrating how the FPGAs are more power-efficient than the CPUs.",
+            "startOffset": 63518,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 42754,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Next, we describe in detail how the OpenCL kernels were redesigned to run on FPGAs.",
+            "startOffset": 42671,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 23746,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, even if publicly accessible genomics and biomedical datasets are becoming more and more popular and sequencing a human genome has become much faster and cheaper than a few years ago, the workloads that process this deluge of data are becoming more and more complex and more computationally demanding.",
+            "startOffset": 23437,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26830,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this paper, we describe how we ported this algorithm to FPGAs, and we compare its performance against the original CPU-only and GPU-accelerated versions.",
+            "startOffset": 26674,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48513,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "Even if we changed the parallelism model to a pipeline, loop unrolling could always be exploited to process multiple DNA reads in parallel like outlined in the listing 3.",
+            "startOffset": 48343,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 31571,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In other words, this method could allow the discovery of what mutations lead to a particular disease.",
+            "startOffset": 31470,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 26673,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 26553,
+                    "startOffset": 26550
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In its latest implementation [2], the initial part of this workload, that consists of a k-mer frequency counting algorithm, was adapted to exploit GPUs.",
+            "startOffset": 26521,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69000,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Making FPGAs an asset for future energy-efficient genomics workloads.",
+            "startOffset": 68931,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 28922,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Next, Section 4 presents the FPGA acceleration method in detail.",
+            "startOffset": 28858,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42425,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this paper, we do not discuss a method to improve the data locality, nor we intend to.",
+            "startOffset": 42336,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 42670,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "First, we present a method to reduce global memory access that could also be used with GPUs.",
+            "startOffset": 42578,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 46749,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This fact is mostly due to the different parallelism offered by GPUs and FPGAs (i.e., multithreaded SIMD vs. Pipeline) and it is a key concept when porting code from one architecture to another.",
+            "startOffset": 46555,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 48343,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "Similarly, also the Bloom Filter kernel was changed to a task by merely adding a loop to process all k-mers.",
+            "startOffset": 48235,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 56197,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Even if hosted in the same board, the two FPGAs are independent and, as shown in Fig. 3, they only share the PCIe Gen3 x16 bus and an on-board dedicated interface to talk to each other.",
+            "startOffset": 56012,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 48671,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "In fact, using loop unrolling (line 8 and 17), the encode kernel can process many DNA reads in parallel and generate one k-mer from each read at every cycle.",
+            "startOffset": 48514,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 55384,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The GPU was used with with ECC enabled and GPUBoost disabled.",
+            "startOffset": 55323,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 52193,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Instead, it was the CPU consumer threads.",
+            "startOffset": 52152,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 46439,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "However, its performance varies from architecture to architecture.",
+            "startOffset": 46373,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 68179,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Consequently, stalling the FPGA chip in executing following kernels in each cycle of the software pipeline, and the facto, exacerbating the kernel execution time; thus, the cycle time and time-to-solution of the entire software.",
+            "startOffset": 67951,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 31138,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The basic idea behind this method can be summarized in the following steps: (i) input two sets of nucleic acid reads, normal and tumoral; (ii) build frequency counters of normal and tumoral substrings in the input reads; and (iii) compare normal and tumoral counters to find imbalances, which are then extracted as candidate positions for DNA mutations.",
+            "startOffset": 30785,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 54450,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For simplicity\u2019s sake, and because the execution time of non-accelerated units is constant, we report only the results of accelerated units relative to k-mers frequency counting \u2014 Prune and Count.",
+            "startOffset": 54254,
+            "title": "Results"
+        },
+        {
+            "endOffset": 58228,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 58079,
+                    "startOffset": 58076
+                }
+            },
+            "secId": "sec5.2",
+            "sentence": "The input genome was characterized by randomly chosen germline and somatic variants as described in [1]; including SNPs, SNVs (more than 100 bp apart), translocations, and with random insertions, deletions and inversions, all ranging from 1 to 100 Mbp.",
+            "startOffset": 57976,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 26435,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Software implementations of this method are meant to run at scale to process repositories with thousands of human DNA samples to set the ground for precision medicine.",
+            "startOffset": 26268,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28719,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The remainder of this paper is as follows.",
+            "startOffset": 28677,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54850,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "We conducted our experiments on a machine with two Intel Xeon CPU E5-2680v3 with 48 CPU threads in total, sixteen 32-GB DDR4 DIMMs running at 2133 MHz for a total of 512 GB of DRAM.",
+            "startOffset": 54669,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 29005,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finally, Section 6 concludes.",
+            "startOffset": 28976,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65958,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The figures also show how, for configurations with one device, the difference between the two medians is even more significant.",
+            "startOffset": 65831,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 36352,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In more detail, the five steps comprise: (i) CPU loader threads read and decompress input files from storage to an input chunk in DRAM; (ii) PCIe transfers of an input chunk containing DNA sequences and quality markers from host DRAM to GPU on-board memory; (iii) GPU kernels execution to generate k-mers from input DNA sequences; (iv) PCIe transfers of k-mers from GPU to host DRAM; and (v) CPU consumer threads that insert k-mers into the chain of Bloom filters in the Prune unit or into the frequency tables in the Count unit.",
+            "startOffset": 35823,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 41167,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Results shown an improvement of peak performance of 3.4x over the performance obtained with a GPU NVIDIA Tesla K40 and of a 2x over the best-practice with Intel AVX technology using 44 cores.",
+            "startOffset": 40976,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 28975,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 5 discusses results of the proposed changes.",
+            "startOffset": 28923,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67100,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Another aspect that must be taken into consideration is the inferior PCIe capabilities of the FPGAs when compared to the GPU used.",
+            "startOffset": 66970,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 35531,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Additionally, the latest implementation enables the offloading of some computation intensive operations of the Prune and Count units to a GPU.",
+            "startOffset": 35389,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 71131,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 71022,
+                    "startOffset": 71018
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Besides, we are exploring how NVMe over Fabrics [19] and pooled accelerators can reduce the total cost of ownership without overly penalizing the execution time.",
+            "startOffset": 70970,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 41691,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 41389,
+                    "startOffset": 41385
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The work presented in [18] studies how k-mer counting using Bloom filters on FPGA can get one order of magnitude faster when using newer memory technologies such as HMC (Hybrid Memory Cube) instead of DDR memory, proving how FPGAs have the potential to become more competitive with the adoption of more recent memory technology.",
+            "startOffset": 41363,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 36531,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The first four kernels are executed only once per each input chuck.",
+            "startOffset": 36464,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 43604,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "This because, these offsets are the result of the exclusive sum-prefix on the global histogram which changes from one input chunk to another.",
+            "startOffset": 43463,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 52653,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "We implemented the support to multiple FPGAs assigning a subset of partitions to each FPGAs and copying all input chunks to all accelerators.",
+            "startOffset": 52512,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 52512,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "To overcome this, one possible path is to use multiple accelerators at the same time.",
+            "startOffset": 52427,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 53050,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In this manner, each FPGAs only need to process, and store, the Bloom filters of the partitions assigned to it.",
+            "startOffset": 52939,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 51701,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 51550,
+                    "startOffset": 51547
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "As described in [2], when there is no space to store the second level Bloom filters in the accelerator memory, the application virtualizes the device memory in host DRAM.",
+            "startOffset": 51531,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 42857,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Finally, we demonstrate how the redesigned code can take advantage of multiple FPGAs at the same time.",
+            "startOffset": 42755,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 36786,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Differently, the last kind of kernel is executed, per each input chunk, as many time as many partitions.",
+            "startOffset": 36682,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 26890,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The contributions in this work can be summarized as follows:",
+            "startOffset": 26830,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35389,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Note that, the aggregation of all frequency tables or bloom filters can be seen as a big unique data structure covering the entire k-mers domain.",
+            "startOffset": 35244,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 65602,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Moreover, these plots show the effect of Bloom filter kernels waiting for the PCIe transfer of the relative Bloom filter to complete before to start; thus, increasing the cycle time for kernel execution.",
+            "startOffset": 65399,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 70709,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "With power samples collected throughout the executions we revealed how the offloading to FPGAs didn\u2019t increase the power envelope but instead, in some moments, even lowered the power consumption of the entire node of few Watts.",
+            "startOffset": 70482,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 65398,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "However, as discussed in 5.3, the random memory accesses of the Bloom filter kernels together with the low bandwidth offered by the on-board DDR4 are to be blamed.",
+            "startOffset": 65235,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 50394,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "However, performance does not scale linearly because at some point the maximum memory bandwidth is reached; thus, the replication factor depends not only on the FPGAs but also on the board used and its memory.",
+            "startOffset": 50185,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 56406,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "FPGA code was compiled and executed using IntelFPGA SDK for OpenCL version 17.1 Build 270 and Nallatech board support package version R001.005.004 for HPC offering OpenCL version 1.0 with an embedded profile.",
+            "startOffset": 56198,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 40643,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Furthermore, because of the low power profile offered by the FPGA, the single FPGA implementation is 3.4x more energy-efficient than the dual-GPU implementation.",
+            "startOffset": 40482,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64310,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Fig. 4 suggests that the FPGA kernels as main bottleneck.",
+            "startOffset": 64253,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 39080,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In the following sections we describe how this GPU code was redesigned to work on FPGAs.",
+            "startOffset": 38992,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 36934,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Its purpose is to unburden CPU consumer threads of some or all Bloom filters lookups taking advantage of the high bandwidth memory typical of GPUs.",
+            "startOffset": 36787,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 42578,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "We focus instead, on how we redesigned the accelerated GPU code for FPGAs and on FPGA-specific techniques required to achieve good performance on FPGAs.",
+            "startOffset": 42426,
+            "title": "Acceleration method"
+        },
+        {
+            "endOffset": 59525,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "For comparison, execution time of equivalent kernels on the GPU are also reported.",
+            "startOffset": 59443,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 60825,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "More in detail, Fig. 4b illustrates that the kernel execution time of only the Encode and Shuffle kernels scales linearly to up to four replicas; but, with eight replicas the improvement starts to be sub-linear.",
+            "startOffset": 60614,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 60466,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "As a result, when increasing the number of devices, the only difference is in the amount of data written by the Shuffle kernels in each device.",
+            "startOffset": 60323,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 69909,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "For the same reason, this same technique proved very poor improvement for Bloom Filter kernels where the filters where stored off-chip.",
+            "startOffset": 69774,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 46869,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For this reasons, many GPU algorithms require the refactoring of the whole accelerated code to make it best suit FPGAs.",
+            "startOffset": 46750,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 54648,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The evaluation also includes an analysis of the scalability of the single-producer/multiple-consumers design and a discussion on downsides and benefits of the accelerator boards used (see Table 1).",
+            "startOffset": 54451,
+            "title": "Results"
+        },
+        {
+            "endOffset": 55519,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "On the FPGAs side, we used a Nallatech 510T board equipped with two independent Arria 10 1150 GX FPGAs for a denser compute power.",
+            "startOffset": 55389,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 40975,
+            "parents": [],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 40835,
+                    "startOffset": 40832
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Others instead [9], explored the acceleration of the PairHMM algorithm for the GATK (Genome Analysis Tool Kit) mapping the algorithm into a 2D systolic array.",
+            "startOffset": 40817,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48234,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "In fact, the only reason why these two kernels are separated is that there is no way to create a global memory barrier that synchronizes all the work-items of an NDRange if not to conclude the kernel.",
+            "startOffset": 48034,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 55322,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For the GPU, we used one GeForce GTX 1080 Ti with 11 GB of GDDR5X, Nvidia Driver version 390.30 offering OpenCL version 1.2.",
+            "startOffset": 55198,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 57361,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Meanwhile, the overall memory of the two FPGAs of configuration (iii) was enough not to require the virtualization; thus, reducing the PCIe traffic in both Prune and Count unit.",
+            "startOffset": 57184,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 70839,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Based on these findings, we outlined how next-generation FPGA boards constitute an asset for energy-efficient genomics workloads.",
+            "startOffset": 70710,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 36463,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The GPU algorithm counts of five different kinds of kernels executed one after the other per each input chuck.",
+            "startOffset": 36353,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 26520,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For these reasons, the SMUFIN method is an important real-world use case to analyze.",
+            "startOffset": 26436,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52151,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 52051,
+                    "startOffset": 52048
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "Despite this, performance and system analysis carried out by the authors in [2], showed that neither the GPU nor the PCIe Gen3 x16 bus were ever the bottleneck of the application.",
+            "startOffset": 51972,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 67334,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Meaning that, whereas the GPU is capable of overlapping transfers in both directions, transfers to and from the FPGAs are serialized.",
+            "startOffset": 67201,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 60613,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "For instance, if with one device the output is of 1 GB; with two devices instead, the amount of output is spread evenly for a 512 MB on each FPGA.",
+            "startOffset": 60467,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 24660,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Despite this, they have traditionally used RTL-based (Register-Transfer Level) languages, such as Verilog and VHDL, leading to longer development cycles and poor code maintainability.",
+            "startOffset": 24477,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39843,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 39842,
+                    "startOffset": 39837
+                },
+                "b8": {
+                    "endOffset": 39842,
+                    "startOffset": 39837
+                },
+                "b9": {
+                    "endOffset": 39842,
+                    "startOffset": 39837
+                }
+            },
+            "secId": "sec3",
+            "sentence": "However, very little was found about comparing OpenCL performance portability between GPUs and FPGAs on real-world fully fledged applications [7\u20139].",
+            "startOffset": 39695,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62271,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Finally, even if the best FPGA configuration \u2013 eight Shuffle kernels and two FPGAs \u2013 is approximately 4.9 times slower than the GPU, one should not look only at the execution time of kernels but also at the total execution time of the entire application.",
+            "startOffset": 62017,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 40816,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 40767,
+                    "startOffset": 40760
+                },
+                "b13": {
+                    "endOffset": 40767,
+                    "startOffset": 40760
+                },
+                "b14": {
+                    "endOffset": 40767,
+                    "startOffset": 40760
+                },
+                "b15": {
+                    "endOffset": 40767,
+                    "startOffset": 40760
+                },
+                "b16": {
+                    "endOffset": 40767,
+                    "startOffset": 40760
+                },
+                "b17": {
+                    "endOffset": 40815,
+                    "startOffset": 40811
+                }
+            },
+            "secId": "sec3",
+            "sentence": "With regards of genomics, different efforts has been done to exploit FPGAs using OpenCL for Smith\u2013Waterman algorithm [12\u201316] and for DNA Assembly with De Bruijn Graphs [17].",
+            "startOffset": 40643,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 39485,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In this direction, IntelFPGA Design Examples offers basic OpenCL example for a range of different optimizations.",
+            "startOffset": 39373,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43871,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "However, on today\u2019s FPGA boards, which use DDR4, memory bandwidth is one order of magnitude lower and global memory accesses should be minimized.",
+            "startOffset": 43726,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 43306,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "This additional memory trip and the extra buffer for staging k-mers are required by the shuffling algorithm.",
+            "startOffset": 43198,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 49780,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "While kernel replication removes the need of synchronization, the usage of channels allows to directly stream data from the producer to the consumer kernels; eliminating the need to write all k-mers to global memory in the producer kernel and to read them back in the consumer kernels.",
+            "startOffset": 49495,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 53630,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In fact, when this is the case, in the Prune unit offloaded Bloom Filters can be updated every few cycles of the software pipeline.",
+            "startOffset": 53499,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 66970,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "However, because SMUFIN makes use of the whole 11 GB of memory that the GeForce GTX 1080 Ti offers, when deploying it at scale it\u2019s not possible to share the GPU with other instances of SMUFIN or other workloads.",
+            "startOffset": 66758,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 31469,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "This output, together with the clinical records of each patient, will help biologists to identify common groups of mutations among patients with the same disease and vice versa.",
+            "startOffset": 31292,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 58903,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Lastly, to prevent accounting the power consumption of idle accelerators, the PCIe slot of unused device was disabled from the BIOS.",
+            "startOffset": 58771,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 39605,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 39502,
+                    "startOffset": 39499
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Among these, [5] shows how channels and multiple kernels can be used to spread the work to multiple pipeline (kernels).",
+            "startOffset": 39486,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64759,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "For instance, a kernel execution that, before to start, must wait for PCIe transfer to conclude.",
+            "startOffset": 64663,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 48982,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "To prevent the need of synchronization when writing k-mers to global memory, we adopted a single-producer/multiple-consumers solution that takes advantage of Intel\u2019s OpenCL channels to directly stream the k-mers from the producer to the consumer kernels like Fig. 2 depicts.",
+            "startOffset": 48708,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 50184,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Ideally, the more the consumer kernel is replicated, the more FPGA resources are used, and the higher should be the throughout.",
+            "startOffset": 50057,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 65032,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "These plots show the distribution of the execution time of all five steps of the software pipeline used to overlap CPU threads, PCIe transfers, and kernel execution on the accelerators.",
+            "startOffset": 64847,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 64565,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "However, when it comes to evaluate one board for an application, where PCIe transfers and kernels execution are overlapped, one must look beyond the mere kernel execution time taking into account the cycle time of each component of the software pipeline.",
+            "startOffset": 64311,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 69139,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In this paper, we presented the result of porting and optimizing a k-mer frequency counting workload from GPUs to FPGAs boards.",
+            "startOffset": 69012,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 61821,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Besides, Figs. 4c details how the execution of the Bloom filters dominates the execution time and how this hinders performance scalability.",
+            "startOffset": 61682,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 39265,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Thanks to high-level languages such as OpenCL, designing FPGAs became more accessible and we expect that always more code from all possible domains will be ported to FPGAs.",
+            "startOffset": 39093,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62978,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Both configurations with two FPGAs and one GPU outperform the non-accelerated configuration in terms of time and energy.",
+            "startOffset": 62858,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 66577,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Which results in a much lower PCIe host to device time and much closer, yet distinct, medians of mere kernel time and kernel execution step of the pipeline.",
+            "startOffset": 66421,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 65119,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Intuitively, the longest step consist in the main bottleneck of the software pipeline.",
+            "startOffset": 65033,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 47493,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Motivated by these factors, we redesigned the algorithm from the ground up to take advantage of FPGA-specific features and optimizations.",
+            "startOffset": 47356,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 52938,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The changes in the OpenCL kernel code were minimal and regarded only the FPGA shuffle kernel that was instructed (line 14 of Algorithm 4) to output only those k-mers belonging to partitions assigned to the FPGA where the kernel is running (parameter pid_in and pid_in of Algorithm 4).",
+            "startOffset": 52654,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 25217,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Consequently, the porting of an application from one architecture to another requires a consistent refactoring of the offloaded code to adopt device-specific optimizations.",
+            "startOffset": 25045,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49344,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Consumer kernels that, in turn: read the k-mers from the dedicated channel; and store, shuffling, them to a dedicated global memory buffer and builds a private histogram.",
+            "startOffset": 49174,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 30784,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 30783,
+                    "startOffset": 30780
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "SMUFIN is a state-of-art method whose peculiarity is the comparison of normal and tumor genomic samples of the same patient without the need for a reference genome [1].",
+            "startOffset": 30616,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 40337,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 40103,
+                    "startOffset": 40100
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In particular, in [7] the authors showed how Cherenkov angle reconstruction algorithm, an algorithm used in high energy physics, is 3.6x slower on an FPGA than on two GPUs but that, when PCIe transfer times are accounted for, the FPGA is only 1.4x slower.",
+            "startOffset": 40082,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 70969,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We are currently working on methods to improve data locality for the Bloom filters and that could make the FPGAs more competitive.",
+            "startOffset": 70839,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 23436,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The recent upsurge in the available amount of health data and the advances in next-generation sequencing are setting the ground for the long-awaited precision medicine.",
+            "startOffset": 23268,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59442,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Fig. 4a shows the execution time of the kernels with a breakdown for the Encode plus Shuffle kernels and the Bloom filter kernels in one and two FPGAs.",
+            "startOffset": 59291,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 53834,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In the Count unit instead, where the Bloom filters are only used for lookups, the filters are copied to the FPGAs memory only at the beginning of the execution; significantly reducing the PCIe transfers.",
+            "startOffset": 53631,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 69581,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Additionally, we described how data partitioning could be used to expand similar designs to support an arbitrary number of FPGAs without the need to recompile the design.",
+            "startOffset": 69411,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 28857,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 surveys related work.",
+            "startOffset": 28826,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66757,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Lastly, and to be completely fair, these plots also prove that in the configuration with one GPU, the GPU itself is not always busy, and how the CPU threads become the bottleneck.",
+            "startOffset": 66578,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 66146,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "This because, in these configurations, the application virtualizes devices memory in the host DRAM, copying the Bloom filters buffer to the device at every cycle of the software pipeline.",
+            "startOffset": 65959,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 49173,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In this solution, the producer (encode) kernel processes N DNA reads in parallel using loop unrolling and delivers, at each FPGA cycle, one k-mer to each of the N consumer (shuffle) kernels.",
+            "startOffset": 48983,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 58285,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In silico sequencing was simulated using ART Illumina21.",
+            "startOffset": 58229,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 59852,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "That is, 48 with one FPGA and 24 with two FPGAs.",
+            "startOffset": 59804,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 61681,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "On the other hand, as we split the Bloom filter kernels between devices, they do scale linearly with the number of FPGAs.",
+            "startOffset": 61560,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 53498,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "And, when the overall memory of all FPGAs is enough to fit all the buffers, there is no need to virtualize the accelerator memory; reducing the PCIe transfers.",
+            "startOffset": 53339,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 54064,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The last advantage is that, because kernel parameters are used to tell each FPGA its subset of partitions, this implementation allows to reuse the same FPGA design with an arbitrary number of FPGAs without requiring to recompile.",
+            "startOffset": 53835,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 24476,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "On their hand, FPGAs are known for their lower performance per watt than GPUs and CPUs.",
+            "startOffset": 24389,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50056,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In our case, the number of DNA reads processed in parallel in the producer must match the number of consumer kernels and should be chosen accurately.",
+            "startOffset": 49907,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 53097,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The advantages of this solution are multiples.",
+            "startOffset": 53051,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 66420,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "In the configuration with two FPGAs instead, where the overall memory is enough to store the second level Bloom filters, the Bloom filters in the accelerators are updated only once every eight cycle in the Prune unit and only at the beginning of the execution in the Count.",
+            "startOffset": 66147,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 59668,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "With multiple devices and kernels, that are executed concurrently, the plot reports the execution time of the slower kernel among all devices.",
+            "startOffset": 59526,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 70481,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We carried out a comprehensive analysis that took in consideration PCIe capabilities and the on-board memory of both FPGA and GPU boards to uncover that the FPGA chip itself is not the main bottleneck.",
+            "startOffset": 70280,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 55198,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Source codes were compiled with g++ version 4.8.5 and the -03 flag set.",
+            "startOffset": 55127,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 24388,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "GPUs are popular due to their embarrassingly parallel architecture that offers multithreaded SIMD (Single Instruction Multiple Data) with thousands of cores.",
+            "startOffset": 24231,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67738,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Although it is a common belief that independent tasks (i.e., a PCIe transfer and a kernel) enqueued on different command queues could be carried out whenever the resource (i.e., bus or chip) is free, this is not always true.",
+            "startOffset": 67514,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 67513,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "A third factor to bear in mind is how well a board can overlap independent PCIe transfers and kernel execution.",
+            "startOffset": 67402,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 60018,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The plot clearly shows how the execution time of the Encode and Shuffle kernels scales with the number of Consumers kernels but it does not with the number of FPGAs.",
+            "startOffset": 59853,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 55047,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Both NVMe were formatted using ext4.",
+            "startOffset": 55011,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 64041,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Lastly, the difference in the power consumption between two FPGAs and one GPU suggests that: if it were possible to shorten the execution time of the configuration with two FPGAs of some minutes, this configuration could become the most energy-efficient even if still slower than the configuration using one GPU.",
+            "startOffset": 63729,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 47355,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In detail, the code in Algorithm 1, makes use of 64-bit atomic operations (line 25) and also of local and global barrier functions (lines 4, 19, and 37); making it a bad fit for FPGAs or even unfeasible for those devices that lack some of these functionalities (e.g., 64-bit atomics).",
+            "startOffset": 47071,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 31714,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Software implementations of this method are going to be executed at scale making both time-to-solution and energy-to-solution crucial factors.",
+            "startOffset": 31572,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 68485,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Therefore, justifying the difference between the box plot of the kernels execution cycle time and the median of the mere kernel execution in Fig. 7b where there is no dependencies between PCIe transfers and kernels execution and all steps of the software pipeline could, in principle, be fully overlapped.",
+            "startOffset": 68180,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 39694,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 39620,
+                    "startOffset": 39617
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Similarly, [6] studies how the multi-kernel design can be used for relational databases.",
+            "startOffset": 39606,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64252,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Considering the different FPGAs and GPU components, it is not easy to define the real reason of why the setup with two FPGAs falls behind the one with one GPU.",
+            "startOffset": 64093,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 56844,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Accelerators unburdened both kinds of CPU threads and removeed communication from loader to consumer threads.",
+            "startOffset": 56735,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 63236,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Moreover, as depicted in Figs. 5b, while with two FPGAs there is an improvement in time- and energy-to-solution of 1.32x for both measurements, with one GPU instead, the improvement is of 1.77x in time-to-solution but of a lower 1.49x in energy-to-solution.",
+            "startOffset": 62979,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 47805,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "With only one thread, the global histogram can be built directly without the need of atomic operations nor memory barriers.",
+            "startOffset": 47682,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 36681,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Their aim is to generate all k-mers from the input DNA reads and to shuffle them according to partition \u2013 thus, CPU consumer thread \u2013 they belong to.",
+            "startOffset": 36532,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 36976,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The kernels can be summarized as follows:",
+            "startOffset": 36935,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 41363,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, the overall speedup of the entire application over the best Intel AVX implementation was of a lower 1.2x; confirming how important it\u2019s to consider the overall impact on the application.",
+            "startOffset": 41168,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67950,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "In fact, even if the FPGA board we used can start one PCIe transfer and many kernels at the same time, for some yet not clear reasons, it is not able to start a kernel execution if a PCIe transfer is in process.",
+            "startOffset": 67739,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 50950,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.3",
+            "sentence": "This is because the partitioning criterion only takes into account the k-mer itself.",
+            "startOffset": 50866,
+            "title": "On-chip and global memory"
+        },
+        {
+            "endOffset": 46372,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "OpenCL programming language is designed to be used on different kind of hardware platforms (e.g., CPUs, GPUs, DSPs, FPGAs).",
+            "startOffset": 46249,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 56579,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "We executed using four different hardware configurations: (i) CPU only, (ii) CPU plus one FPGA, (iii) CPU plus two FPGAs, and (iv) CPU plus one GPU.",
+            "startOffset": 56431,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 50865,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.3",
+            "sentence": "The only downside of SMUFIN partitioning scheme is that given a DNA read; there is no relation between consecutive k-mers and the partition to which they belong.",
+            "startOffset": 50704,
+            "title": "On-chip and global memory"
+        },
+        {
+            "endOffset": 61451,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "On the Bloom filter kernels side instead, Figs. 4b and 4c illustrate how these kernels do not scale with the number of parallel kernels.",
+            "startOffset": 61315,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 55126,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The machine ran CentOS 7.4 with a 3.10.0\u2013693 kernel with OS swapping disabled.",
+            "startOffset": 55048,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 60953,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "With the rationale being the lower frequency achieved by the FPGA design, noted in Table 2, and the pressure on DRAM subsystem.",
+            "startOffset": 60826,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 62717,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Figs. 5a and 5b display the time- and energy-to-solution of all four hardware configurations.",
+            "startOffset": 62624,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 31291,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The method is meant to run at scale to process repositories with thousands of human DNA samples to extract candidate somatic mutations for each patient.",
+            "startOffset": 31139,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 56011,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Both FPGAs come with 16 GB of 2133 MHz DDR4 memory in a 4-bank configuration but, at the time of writing, only 2 banks per FPGA \u2013 8 GB \u2013 could be used with OpenCL for a nominal DDR4 memory bandwidth of 37.5 GB/s.",
+            "startOffset": 55799,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 51971,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Meaning that, at each cycle, the entire 9 GB of the filters are transferred from the host to the device; putting pressure on the PCIe bus.",
+            "startOffset": 51833,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 53338,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Secondly, spreading the Bloom Filters to the different accelerators reduces the memory requirement on each accelerator.",
+            "startOffset": 53219,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 61315,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Regarding the pressure on DRAM instead, one can deduct this by looking at how, with eight replicas, the execution time with two FPGAs is slightly better than with one.",
+            "startOffset": 61148,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 57183,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 57182,
+                    "startOffset": 57179
+                }
+            },
+            "secId": "sec5.2",
+            "sentence": "Note that, in configurations (ii) and (iv) that use only one accelerator, the device memory was not enough to fit all Bloom filters; thus, the application virtualized the device memory in host DRAM as outline in [2].",
+            "startOffset": 56967,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 69410,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Even if the code is written in OpenCL, due to the fundamental differences between the two hardware architectures the work comprised different programming techniques such as kernel replication, inter-kernel communication using Intel\u2019s OpenCL channels, and loop unrolling.",
+            "startOffset": 69140,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 47070,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In our case, the GPU algorithm relies on a parallel histogram and shuffle algorithm that uses millions of threads to process the just as many DNA reads in each input chunk like outlined in Section 2.2.",
+            "startOffset": 46869,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 68673,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "In conclusion, we can affirm that, for this k-mer counting algorithm, the two FPGAs are slower than the GPU because of the slower on-board memory and due to the inferior PCIe capabilities.",
+            "startOffset": 68485,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 69773,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We presented a detailed scalability analysis of the kernel replication technique that showed how performance scales linearly until the off-chip DDR4 memory of the FPGAs become the bottleneck.",
+            "startOffset": 69582,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 43082,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "At first, in the encode kernel, k-mers are written to an extra buffer for staging.",
+            "startOffset": 43000,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 55010,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "As storage, we used one 1600 GB HGST Ultrastar SN100 Series NVMe SSD used as normal storage and one 375 GB Intel Optane SSD DC P4800X used as memory extension.",
+            "startOffset": 54851,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 47681,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "To better adapt the algorithm to FPGAs, the OpenCL NDRange kernels used for the GPU were replaced with OpenCL tasks \u2014 single work-item kernels using only one thread.",
+            "startOffset": 47516,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 63392,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "This difference between the improvement in time and energy of the configuration with one GPU is to attribute to the higher power consumption of GPU itself.",
+            "startOffset": 63237,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 58419,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The total size of the final normal and tumoral samples is of 312 GB of gzip compressed FASTQ files \u2014 around 638 GB once uncompressed.",
+            "startOffset": 58286,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 59097,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "As we outlined in Section 4.2.2, one possible strategy to increase the performance of FPGAs is to increase the parallelism by replicating kernels.",
+            "startOffset": 58951,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 62555,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "In fact, to evaluate one board and one acceleration technique, one should always keep into account other factors like: host-device synchronization, PCIe performance, how well PCIe transfers and kernels execution are overlapped on each board, and how is the overall software impacted.",
+            "startOffset": 62272,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 24230,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Owing to this reason, bioinformatics workloads have been ported to different computing architectures, such as GPUs and FPGAs, to leverage the form of parallelism typical of each of such architectures.",
+            "startOffset": 24030,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40081,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 39930,
+                    "startOffset": 39923
+                },
+                "b11": {
+                    "endOffset": 39930,
+                    "startOffset": 39923
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In fact, most of the literature focuses either on synthetic benchmarks like in [10,11], or only on the kernel time completely disregarding PCIe transfers between host and device, and without showing the overall impact on the application.",
+            "startOffset": 39844,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 42999,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "As described in the previous section, the GPU algorithm writes to memory all the k-mers two times.",
+            "startOffset": 42901,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 59803,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Also, the time related to the Bloom filters kernels is the aggregated time for all partitions, which are executed one after the other.",
+            "startOffset": 59669,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 51510,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.3",
+            "sentence": "This cache allows to store up to eight k-mers per each partition and to flush to global memory all eight k-mers of one partition using one unique 512-bit wide request to use the memory bandwidth at best.",
+            "startOffset": 51307,
+            "title": "On-chip and global memory"
+        },
+        {
+            "endOffset": 56966,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Communication that in the CPU only configuration takes place via 8 \u00d7 48 dedicated single-producer single-consumer queues.",
+            "startOffset": 56845,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 62017,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 62016,
+                    "startOffset": 62012
+                }
+            },
+            "secId": "sec5.3",
+            "sentence": "However, because this is due to the low bandwidth offered by the DDR4 DIMMs, next-generation FPGA board equipped with faster memory technology are expected to be competitive like studied in [18].",
+            "startOffset": 61822,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 64662,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "A consideration that is even more important when there are dependencies between different steps.",
+            "startOffset": 64566,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 47948,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "In such a way, the code gets extremely simplified; making it a simple build for the FPGA compiler and reducing the number of resources needed.",
+            "startOffset": 47806,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 67402,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "As a result, with FPGAs the PCIe time increases in both directions.",
+            "startOffset": 67335,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 26267,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 26053,
+                    "startOffset": 26050
+                }
+            },
+            "secId": "sec1",
+            "sentence": "To evaluate the efficiency of GPUs and FPGAs for throughput-oriented genomics workloads, we test them with SMUFIN [1], a state-of-the-art variant calling method that performs a direct comparison of normal and tumor genomic samples from the same patient without the need of a reference genome, leading to more comprehensive results.",
+            "startOffset": 25936,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46554,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Moreover, optimizations typical of GPU programming can lead to poor performance on FPGAs and the other way around.",
+            "startOffset": 46440,
+            "title": "FPGA-specific optimizations"
+        },
+        {
+            "endOffset": 28825,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 introduces k-mer frequency counting, an overview of the SMUFIN method and its GPU acceleration.",
+            "startOffset": 28720,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57975,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "For all the hardware configurations we evaluated the time-to-solution and energy efficiency to count k-mer frequency of a personalized genome based on the Hg19 reference.",
+            "startOffset": 57805,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 51125,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.3",
+            "sentence": "As a consequence, when shuffling, the partitions of two consecutive k-mers and so the offsets in the output buffer are completely random; resulting in random memory accesses.",
+            "startOffset": 50951,
+            "title": "On-chip and global memory"
+        },
+        {
+            "endOffset": 51832,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In such way, the host program itself takes care of copying each Bloom filter in the device memory before being used at each cycle.",
+            "startOffset": 51702,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 54253,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In order to evaluate the impact of the presented work, we compare execution time, energy and power consumption of the latest version of SMUFIN running with and without accelerators.",
+            "startOffset": 54072,
+            "title": "Results"
+        },
+        {
+            "endOffset": 43197,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Then, in the shuffle kernel, k-mers are read back to the device, shuffled, and written to the final output buffer.",
+            "startOffset": 43083,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 55798,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "with a theoretical peak performance of 1.366 TFLOPS.",
+            "startOffset": 55746,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 56734,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In each configuration, we always used 8 CPU loader threads and 48 CPU consumer threads; thus, 48 partitions and as many Bloom Filters in the accelerators.",
+            "startOffset": 56580,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 41897,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Genomics workloads and pipelines are, in general, a good fit for resource disaggregation but their large-scale exploitation hasn\u2019t been explored much and usually focuses on adapting the existing algorithm.",
+            "startOffset": 41692,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43725,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "This method works well on GPUs where the memory bandwidth offered by GDDR5X or HBM2 is in the order of hundreds of GB/s.",
+            "startOffset": 43605,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 49906,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In general, this approach provides a way to equilibrate possible throughout unbalances between the producer and consumer code.",
+            "startOffset": 49780,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 48033,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "Moreover, when using tasks, also the Zero-out and Prefix-sum kernels can be removed.",
+            "startOffset": 47949,
+            "title": "Parallel paradigms"
+        },
+        {
+            "endOffset": 62857,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Results show how only one FPGA is not sufficient and becomes the bottlenecks of the application considerably increasing the execution time.",
+            "startOffset": 62718,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 64846,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "A visual aid that helps in this direction comes from the plots in Figs. 6(c) and 7(c).",
+            "startOffset": 64760,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 68930,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Also, we can deduce that future FPGAs board equipped with faster memory and adequate PCIe subsystem, including a dual memory engine to allow full overlapping of transfers and kernels, could come closer to the performance of the GPUat a lower power envelop.",
+            "startOffset": 68674,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 34733,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "This partitioning scheme is based on a simple base-match criterion defined a priori that uses statistical data on k-mer distribution to spread the amount of k-mers equally into partitions.",
+            "startOffset": 34545,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 60322,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "With the only difference being in the shuffle kernels that discard k-mers belonging to partitions assigned to another device.",
+            "startOffset": 60197,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 55745,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Each of the two FPGA has 427 K Adaptive logic modules (ALMs), 1.7 M registers, 2.7 K M20 K memory blocks (53 Mb), 12.7 Mb MLAB memory blocks, and 1,518 variable-precision DSP blocks; and sports a maximum frequency of 450 MHz.",
+            "startOffset": 55520,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 24030,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In order to make precision medicine possible at scale within reasonable computer and power envelops, different players from academia, industry, healthcare, and government agencies are working together in the attempt to improve the performance and energy efficiency of such workloads.",
+            "startOffset": 23747,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63517,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In facts, like Fig. 5c illustrates, with one GPU there is steady higher power consumption than with any other configuration.",
+            "startOffset": 63393,
+            "title": "Considerations on time-, energy-to-solution, and power consumption"
+        },
+        {
+            "endOffset": 65830,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "One can observe the effect of these dependencies in all plots in Figs. 6(c) and 7(c), where the median of the box plots relative to the kernel execution is significantly higher than the median of the mere kernel execution time.",
+            "startOffset": 65603,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 25716,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Whereas, discrete FPGA boards are, as of today, a still younger product that is catching up and that usually offers much less performing memory (e.g., DDR4) and a slower half-duplex connection with the host system (e.g., PCIe Gen3 x8 with a single copy engine).",
+            "startOffset": 25455,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49495,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In this way, k-mers are equally spread among the different consumer kernels, each of them receiving the same amount of k-mers set by the host program.",
+            "startOffset": 49345,
+            "title": "Kernels replication and channels"
+        },
+        {
+            "endOffset": 65234,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Plots 6a, 6b, 7a, and 7b confirms that the kernels execution is the bottleneck for the configurations using FPGAs.",
+            "startOffset": 65120,
+            "title": "Final considerations on GPU and FPGAs performance"
+        },
+        {
+            "endOffset": 61147,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The former can be either a direct consequence of higher FPGA resourced used by the design, a different seed used in the place-en-route algorithm during compilation, or a combination of the two.",
+            "startOffset": 60954,
+            "title": "Performance and scalability of OpenCL kernels"
+        },
+        {
+            "endOffset": 58770,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Energy measurements and power samples were collected using a metered-by-outlet PDU (Power Distribution Unit) and also IPMI (Intelligent Platform Management Interface) to validate the results.",
+            "startOffset": 58579,
+            "title": "Evaluation methodology"
+        },
+        {
+            "endOffset": 35243,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The main benefit of this partitioning of the k-mers is that it enables CPU consumer threads to work on dedicated data structures \u2013 chain of two Bloom filters or frequency table depending on which unit is being executed \u2013 removing the need to synchronize accesses to the data structure.",
+            "startOffset": 34958,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 38741,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "As Algorithm 1 shows, the code resembles a parallel count sort that uses SMUFIN data partitioning scheme to shuffle k-mers by the partition they belong to.",
+            "startOffset": 38586,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 42088,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 41945,
+                    "startOffset": 41941
+                }
+            },
+            "secId": "sec3",
+            "sentence": "With SMUFIN instead, the work presented in [19] shown that NVMe over Fabrics storage can be shared across multiple instances running on different nodes with a minimal penalty in performance.",
+            "startOffset": 41898,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 51306,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "FPGA-specific optimizations"
+                }
+            ],
+            "secId": "sec4.2.3",
+            "sentence": "To mitigate this effect and perform memory writes in bulk, the consumer kernels are designed to create a small cache in the on-chip memory of the FPGA (kmers_cache in Algorithm 4).",
+            "startOffset": 51126,
+            "title": "On-chip and global memory"
+        },
+        {
+            "endOffset": 53218,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Firstly, the Bloom Filter kernels are distributed and executed in parallel on multiple FPGAs decreasing the kernel time.",
+            "startOffset": 53098,
+            "title": "Multi-FPGA support"
+        },
+        {
+            "endOffset": 25044,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Even though OpenCL offers code portability, performance portability between hardware platforms is not guaranteed and rare to achieve due to the fundamental differences among architectures.",
+            "startOffset": 24856,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38991,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 38990,
+                    "startOffset": 38987
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "With input chunks of hundreds of MB and containing millions of DNA reads, the code takes advantage of the high level of parallelism offered by GPUs and showed a reduction of the time-to-solution for the entire k-mer frequency counting algorithm [2].",
+            "startOffset": 38742,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 35746,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Offloading, takes place by splitting the input genomes into many chunks \u2013 hereinafter referred to as input chunks \u2013 and adopting a 5-step double buffering pipeline to overlap CPU/GPU computation and PCIe transfers.",
+            "startOffset": 35532,
+            "title": "SMUFIN and its k-mer frequency counting"
+        },
+        {
+            "endOffset": 43462,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Algorithm that shuffles in an out-of-place manner because it\u2019s impossible to know a priori the offsets to use when writing the k-mers to the output buffer.",
+            "startOffset": 43307,
+            "title": "Reducing global memory usage and accesses"
+        },
+        {
+            "endOffset": 70279,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Results also showed how the GPU outperforms the two FPGAs with an improvement of 1.77x in time-to-solution but, due to higher power consumption, of a lower 1.49x in energy-to-solution.",
+            "startOffset": 70095,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 52426,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Acceleration method"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "However, when using devices with a narrower, thus slower, PCIe connection and slower on-board memory technology, transfers between the host and the accelerator take more time and might become the bottleneck of the software pipeline.",
+            "startOffset": 52194,
+            "title": "Multi-FPGA support"
+        }
+    ],
+    "docId": "S0167739X18314183",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "nicola.cadenelli@bsc.es",
+                "first": "Nicola",
+                "initial": "N.",
+                "last": "Cadenelli"
+            },
+            {
+                "email": "zoran.jaksic@bsc.es",
+                "first": "Zoran",
+                "initial": "Z.",
+                "last": "Jaks\u0306i\u0107"
+            },
+            {
+                "email": "jorda.polo@bsc.es",
+                "first": "Jord\u00e0",
+                "initial": "J.",
+                "last": "Polo"
+            },
+            {
+                "email": "david.carrera@bsc.es",
+                "first": "David",
+                "initial": "D.",
+                "last": "Carrera"
+            }
+        ],
+        "doi": "10.1016/j.future.2018.11.028",
+        "firstpage": "148",
+        "issn": "0167739X",
+        "keywords": [
+            "Energy-to-solution",
+            "FPGAs",
+            "GPUs",
+            "Genomics",
+            "K-mer",
+            "OpenCL"
+        ],
+        "lastpage": "159",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Considerations in using OpenCL on GPUs and FPGAs for throughput-oriented genomics workloads"
+    }
+}

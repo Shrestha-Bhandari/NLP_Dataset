@@ -1,0 +1,4875 @@
+{
+    "abstract": "Mass flow simulations are considered important tools for hazard analysis. For the simulation of single process mass flows such as debris flows, robust tools and reasonable parameter range estimates are available. However, this is much less the case for more complex mass flows, e.g. involving process chains and flow transformation. We explore the challenges of simulating complex flow-dominated landslides by back-calculating the Huascar\u00e1n events of 1962 and 1970 with r.avaflow, a two-phase mass flow model (Pudasaini, 2012) in a GIS-based open source simulation framework. Both events started as rock-ice falls on the western slope of the north summit of Nevado Huascar\u00e1n (Cordillera Blanca, Peru) and entrained large volumes of glacial till at lower elevation, resulting in highly mobile debris avalanches. Whereas the 1962 event badly affected the village of Ranrahirca when spreading over a debris cone, the 1970 event overtopped a ridge and led to the complete destruction of the town of Yungay. Well documented in the literature, these events provide an opportunity as a natural laboratory for testing innovative mass flow simulation tools and their features. In a first step, we consider (i) the 1962 event and (ii) the 1970 event separately, for each of them optimizing the key input parameters in terms of empirical adequacy. In a second step, we apply the optimized parameter set for (i) to the 1970 event and the parameter set derived for (ii) to the 1962 event. In a third step, we explore the sensitivity of the model outcomes to selected key parameters (basal friction angle and entrainment coefficient). The results (a) demonstrate the general ability of r.avaflow to reproduce the spatio-temporal evolution of flow heights and velocities as well as travel times and volumes of these complex mass flow events reasonably well; and (b) highlight the challenges and uncertainties involved in predictive simulations with parameter sets obtained from back-calculations. We suggest a strategy to appropriately deal with uncertain outcomes by superimposing the results of multiple simulations.",
+    "author_highlights": [
+        {
+            "endOffset": 27971,
+            "sentence": "Two-phase models are needed for the simulation of complex mass flows.",
+            "startOffset": 27902
+        },
+        {
+            "endOffset": 28056,
+            "sentence": "r.avaflow successfully back-calculates complex mass flows with optimized parameters.",
+            "startOffset": 27972
+        },
+        {
+            "endOffset": 28133,
+            "sentence": "Predictive simulations based on optimized parameter sets remain a challenge.",
+            "startOffset": 28057
+        },
+        {
+            "endOffset": 28215,
+            "sentence": "Hazard mapping needs scenario analyses or likelihood measures (parameter ranges).",
+            "startOffset": 28134
+        }
+    ],
+    "bib_entries": {
+        "bb0005": null,
+        "bb0010": null,
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Keith",
+                    "initial": "K.",
+                    "last": "Beven"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Freer"
+                }
+            ],
+            "doi": "10.1016/S0022-1694(01)00421-8",
+            "firstpage": "11",
+            "issn": "00221694",
+            "lastpage": "29",
+            "pub_year": 2001,
+            "title": "Equifinality, data assimilation, and uncertainty estimation in mechanistic modelling of complex environmental systems using the GLUE methodology",
+            "volume": "249"
+        },
+        "bb0020": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Carey"
+                }
+            ],
+            "doi": "10.1016/j.gloplacha.2004.10.007",
+            "firstpage": "122",
+            "issn": "09218181",
+            "lastpage": "134",
+            "pub_year": 2005,
+            "title": "Living and dying with glaciers: People's historical vulnerability to avalanches and outburst floods in Peru",
+            "volume": "47"
+        },
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Carey"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Bury"
+                },
+                {
+                    "first": "C\u00e9sar",
+                    "initial": "C.",
+                    "last": "Portocarrero"
+                },
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                }
+            ],
+            "doi": "10.1007/s10584-011-0249-8",
+            "firstpage": "733",
+            "issn": "01650009",
+            "lastpage": "767",
+            "pub_year": 2012,
+            "title": "An integrated socio-environmental framework for glacier hazard management and climate change adaptation: Lessons from Lake 513, Cordillera Blanca, Peru",
+            "volume": "112"
+        },
+        "bb0030": null,
+        "bb0035": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Christen"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Kowalski"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Bartelt"
+                }
+            ],
+            "doi": "10.1016/j.coldregions.2010.04.005",
+            "firstpage": "1",
+            "issn": "0165232X",
+            "lastpage": "14",
+            "pub_year": 2010,
+            "title": "RAMMS: Numerical simulation of dense snow avalanches in three-dimensional terrain",
+            "volume": "63"
+        },
+        "bb0040": null,
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "Tjalling",
+                    "initial": "T.",
+                    "last": "De Haas"
+                },
+                {
+                    "first": "Lisanne",
+                    "initial": "L.",
+                    "last": "Braat"
+                },
+                {
+                    "first": "Jasper R.F.W.",
+                    "initial": "J.R.F.W.",
+                    "last": "Leuven"
+                },
+                {
+                    "first": "Ivar R.",
+                    "initial": "I.R.",
+                    "last": "Lokhorst"
+                },
+                {
+                    "first": "Maarten G.",
+                    "initial": "M.G.",
+                    "last": "Kleinhans"
+                }
+            ],
+            "doi": "10.1002/2015JF003525",
+            "firstpage": "1949",
+            "issn": "21699003",
+            "lastpage": "1972",
+            "pub_year": 2015,
+            "title": "Effects of debris flow composition on runout, depositional mechanisms, and deposit morphology in laboratory experiments",
+            "volume": "120"
+        },
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Carolina",
+                    "initial": "C.",
+                    "last": "de Lima Neves Seefelder"
+                },
+                {
+                    "first": "S\u00e9rgio",
+                    "initial": "S.",
+                    "last": "Koide"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Mergili"
+                }
+            ],
+            "doi": "10.1007/s10346-016-0783-6",
+            "firstpage": "1389",
+            "issn": "1612510X",
+            "lastpage": "1401",
+            "pub_year": 2017,
+            "title": "Does parameterization influence the performance of slope stability model results? A case study in Rio de Janeiro, Brazil",
+            "volume": "14"
+        },
+        "bb0055": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Demeritt"
+                },
+                {
+                    "first": "Sebastien",
+                    "initial": "S.",
+                    "last": "Nobert"
+                },
+                {
+                    "first": "Hannah L.",
+                    "initial": "H.L.",
+                    "last": "Cloke"
+                },
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Pappenberger"
+                }
+            ],
+            "doi": "10.1002/hyp.9419",
+            "firstpage": "147",
+            "issn": "08856087",
+            "lastpage": "157",
+            "pub_year": 2013,
+            "title": "The European Flood Alert System and the communication, perception, and use of ensemble predictions for operational flood risk management",
+            "volume": "27"
+        },
+        "bb0060": {
+            "authors": [
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Emmer"
+                },
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Klime\u0161"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Mergili"
+                },
+                {
+                    "first": "V\u00edt",
+                    "initial": "V.",
+                    "last": "Vil\u00edmek"
+                },
+                {
+                    "first": "Alejo",
+                    "initial": "A.",
+                    "last": "Cochachin"
+                }
+            ],
+            "doi": "10.1016/j.catena.2016.07.032",
+            "firstpage": "269",
+            "issn": "03418162",
+            "lastpage": "279",
+            "pub_year": 2016,
+            "title": "882 lakes of the Cordillera Blanca: An inventory, classification, evolution and assessment of susceptibility to outburst floods",
+            "volume": "147"
+        },
+        "bb0065": null,
+        "bb0070": null,
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "Stephen G.",
+                    "initial": "S.G.",
+                    "last": "Evans"
+                },
+                {
+                    "first": "Nicholas F.",
+                    "initial": "N.F.",
+                    "last": "Bishop"
+                },
+                {
+                    "first": "Lionel",
+                    "initial": "L.",
+                    "last": "Fidel Smoll"
+                },
+                {
+                    "first": "Patricio",
+                    "initial": "P.",
+                    "last": "Valderrama Murillo"
+                },
+                {
+                    "first": "Keith B.",
+                    "initial": "K.B.",
+                    "last": "Delaney"
+                },
+                {
+                    "first": "Anthony",
+                    "initial": "A.",
+                    "last": "Oliver-Smith"
+                }
+            ],
+            "doi": "10.1016/j.enggeo.2009.06.020",
+            "firstpage": "96",
+            "issn": "00137952",
+            "lastpage": "118",
+            "pub_year": 2009,
+            "title": "A re-examination of the mechanism and human impact of catastrophic mass flows originating on Nevado Huascar\u00e1n, Cordillera Blanca, Peru in 1962 and 1970",
+            "volume": "108"
+        },
+        "bb0080": {
+            "authors": [
+                {
+                    "first": "Jan Thomas",
+                    "initial": "J.T.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "Julia",
+                    "initial": "J.",
+                    "last": "Kowalski"
+                },
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.1016/j.coldregions.2012.01.005",
+            "firstpage": "21",
+            "issn": "0165232X",
+            "lastpage": "30",
+            "pub_year": 2012,
+            "title": "Topographic curvature effects in applied avalanche modeling",
+            "volume": "74-75"
+        },
+        "bb0085": {
+            "authors": [
+                {
+                    "first": "Jan Thomas",
+                    "initial": "J.T.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "Kofler"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "Fellin"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Granig"
+                },
+                {
+                    "first": "Karl",
+                    "initial": "K.",
+                    "last": "Kleemayr"
+                }
+            ],
+            "doi": "10.3189/2015JoG14J168",
+            "firstpage": "875",
+            "issn": "00221430",
+            "lastpage": "888",
+            "pub_year": 2015,
+            "title": "Multivariate parameter optimization for computational snow avalanche simulation",
+            "volume": "61"
+        },
+        "bb0090": null,
+        "bb0095": null,
+        "bb0100": null,
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Gruber"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                }
+            ],
+            "doi": "10.1029/2006JF000547",
+            "issn": "21699011",
+            "pub_year": 2007,
+            "title": "Permafrost in steep bedrock slopes and its temperatures-related destabilization following climate change",
+            "volume": "112"
+        },
+        "bb0110": {
+            "authors": [
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                }
+            ],
+            "doi": "10.1002/ppp.3430030208",
+            "firstpage": "111",
+            "issn": "10456740",
+            "lastpage": "124",
+            "pub_year": 1992,
+            "title": "Construction, environmental problems and natural hazards in periglacial mountain belts",
+            "volume": "3"
+        },
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "Colin",
+                    "initial": "C.",
+                    "last": "Whiteman"
+                }
+            ],
+            "doi": "10.1016/C2011-0-07024-2",
+            "firstpage": "1",
+            "lastpage": "762",
+            "pub_year": 2014,
+            "title": "Snow and Ice-Related Hazards, Risks, and Disasters"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "Wllfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Wegmann"
+                },
+                {
+                    "first": "Daniel Vonder",
+                    "initial": "D.V.",
+                    "last": "M\u00fchll"
+                }
+            ],
+            "firstpage": "407",
+            "issn": "00129402",
+            "lastpage": "414",
+            "pub_year": 1997,
+            "title": "Slope stability problems related to glacier shrinkage and permafrost degradation in the Alps",
+            "volume": "90"
+        },
+        "bb0125": {
+            "authors": [
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "Yvonne",
+                    "initial": "Y.",
+                    "last": "Schaub"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2016.02.009",
+            "firstpage": "405",
+            "issn": "0169555X",
+            "lastpage": "417",
+            "pub_year": 2017,
+            "title": "Increasing risks related to landslides from degrading permafrost into new lakes in de-glaciating mountain ranges",
+            "volume": "293"
+        },
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Harris"
+                },
+                {
+                    "first": "Lukas U.",
+                    "initial": "L.U.",
+                    "last": "Arenson"
+                },
+                {
+                    "first": "Hanne H.",
+                    "initial": "H.H.",
+                    "last": "Christiansen"
+                },
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Etzelm\u00fcller"
+                },
+                {
+                    "first": "Regula",
+                    "initial": "R.",
+                    "last": "Frauenfelder"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Gruber"
+                },
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Hauck"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "H\u00f6lzle"
+                },
+                {
+                    "first": "Ole",
+                    "initial": "O.",
+                    "last": "Humlum"
+                },
+                {
+                    "first": "Ketil",
+                    "initial": "K.",
+                    "last": "Isaksen"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "K\u00e4\u00e4b"
+                },
+                {
+                    "first": "Martina A.",
+                    "initial": "M.A.",
+                    "last": "Kern-L\u00fctschg"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lehning"
+                },
+                {
+                    "first": "Norikazu",
+                    "initial": "N.",
+                    "last": "Matsuoka"
+                },
+                {
+                    "first": "Julian B.",
+                    "initial": "J.B.",
+                    "last": "Murton"
+                },
+                {
+                    "first": "Jeanette",
+                    "initial": "J.",
+                    "last": "N\u00f6tzli"
+                },
+                {
+                    "first": "Marcia",
+                    "initial": "M.",
+                    "last": "Phillips"
+                },
+                {
+                    "first": "Neil",
+                    "initial": "N.",
+                    "last": "Ross"
+                },
+                {
+                    "first": "Matti",
+                    "initial": "M.",
+                    "last": "Sepp\u00e4l\u00e4"
+                },
+                {
+                    "first": "Sarah M.",
+                    "initial": "S.M.",
+                    "last": "Springman"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Vonder M\u00fchll"
+                }
+            ],
+            "doi": "10.1016/j.earscirev.2008.12.002",
+            "firstpage": "117",
+            "issn": "00128252",
+            "lastpage": "171",
+            "pub_year": 2009,
+            "title": "Permafrost and climate in Europe: Monitoring and modelling thermal, geomorphological and geotechnical responses",
+            "volume": "92"
+        },
+        "bb0135": null,
+        "bb0140": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "K\u00e4\u00e4b"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Krummenacher"
+                }
+            ],
+            "firstpage": "647",
+            "issn": "15618633",
+            "lastpage": "662",
+            "pub_year": 2003,
+            "title": "Regional-scale GIS-models for assessment of hazards from glacier lake outbursts: Evaluation and application in the Swiss Alps",
+            "volume": "3"
+        },
+        "bb0145": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Zgraggen-Oswald"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "K\u00e4\u00e4b"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Polkvoj"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Galushkin"
+                },
+                {
+                    "first": "S. G.",
+                    "initial": "S.G.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.5194/nhess-5-173-2005",
+            "firstpage": "173",
+            "issn": "15618633",
+            "lastpage": "187",
+            "pub_year": 2005,
+            "title": "The 2002 rock/ice avalanche at Kolka/Karmadon, Russian Caucasus: Assessment of extraordinary avalanche formation and mobility, and application of QuickBird satellite imagery",
+            "volume": "5"
+        },
+        "bb0150": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Salzmann"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Allen"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Caplan-Auerbach"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Larsen"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Schneider"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Wessels"
+                }
+            ],
+            "doi": "10.1098/rsta.2010.0078",
+            "firstpage": "2435",
+            "issn": "1364503X",
+            "lastpage": "2459",
+            "pub_year": 2010,
+            "title": "Recent and future warm extreme events and high-mountain slope stability",
+            "volume": "368"
+        },
+        "bb0155": {
+            "authors": [
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "John J.",
+                    "initial": "J.J.",
+                    "last": "Clague"
+                },
+                {
+                    "first": "Oliver",
+                    "initial": "O.",
+                    "last": "Korup"
+                }
+            ],
+            "doi": "10.1002/esp.2223",
+            "firstpage": "77",
+            "issn": "01979337",
+            "lastpage": "91",
+            "pub_year": 2012,
+            "title": "Is climate change responsible for changing landslide activity in high mountains?",
+            "volume": "37"
+        },
+        "bb0160": {
+            "authors": [
+                {
+                    "first": "Richard M.",
+                    "initial": "R.M.",
+                    "last": "Iverson"
+                }
+            ],
+            "doi": "10.1029/97RG00426",
+            "firstpage": "245",
+            "issn": "87551209",
+            "lastpage": "296",
+            "pub_year": 1997,
+            "title": "The physics of debris flows",
+            "volume": "35"
+        },
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "Melanie S.",
+                    "initial": "M.S.",
+                    "last": "Kappes"
+                },
+                {
+                    "first": "Margreth",
+                    "initial": "M.",
+                    "last": "Keiler"
+                },
+                {
+                    "first": "Kirsten",
+                    "initial": "K.",
+                    "last": "von Elverfeldt"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Glade"
+                }
+            ],
+            "doi": "10.1007/s11069-012-0294-2",
+            "firstpage": "1925",
+            "issn": "0921030X",
+            "lastpage": "1958",
+            "pub_year": 2012,
+            "title": "Challenges of analyzing multi-hazard risk: A review",
+            "volume": "64"
+        },
+        "bb0170": {
+            "authors": [
+                {
+                    "first": "Parameshwari",
+                    "initial": "P.",
+                    "last": "Kattel"
+                },
+                {
+                    "first": "Khim B.",
+                    "initial": "K.B.",
+                    "last": "Khattri"
+                },
+                {
+                    "first": "Puskar R.",
+                    "initial": "P.R.",
+                    "last": "Pokhrel"
+                },
+                {
+                    "first": "Jeevan",
+                    "initial": "J.",
+                    "last": "Kafle"
+                },
+                {
+                    "first": "Bhadra Man",
+                    "initial": "B.M.",
+                    "last": "Tuladhar"
+                },
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.3189/2016AoG71A039",
+            "firstpage": "349",
+            "issn": "02603055",
+            "lastpage": "358",
+            "pub_year": 2016,
+            "title": "Simulating glacial lake outburst floods with a two-phase mass flow model",
+            "volume": "57"
+        },
+        "bb0175": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Krautblatter"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Funk"
+                },
+                {
+                    "first": "Friederike K.",
+                    "initial": "F.K.",
+                    "last": "G\u00fcnzel"
+                }
+            ],
+            "doi": "10.1002/esp.3374",
+            "firstpage": "876",
+            "issn": "01979337",
+            "lastpage": "887",
+            "pub_year": 2013,
+            "title": "Why permafrost rocks become unstable: A rock-ice-mechanical model in time and space",
+            "volume": "38"
+        },
+        "bb0180": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mergili"
+                },
+                {
+                    "first": "J. T.",
+                    "initial": "J.T.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Frattini"
+                },
+                {
+                    "first": "S. P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "firstpage": "1195",
+            "lastpage": "1203",
+            "pub_year": 2016,
+            "title": "Optimizing the parameterization of mass flow models",
+            "volume": "2"
+        },
+        "bb0185": null,
+        "bb0190": {
+            "authors": [
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "McDougall"
+                },
+                {
+                    "first": "Oldrich",
+                    "initial": "O.",
+                    "last": "Hungr"
+                }
+            ],
+            "doi": "10.1139/T04-052",
+            "firstpage": "1084",
+            "issn": "00083674",
+            "lastpage": "1097",
+            "pub_year": 2004,
+            "title": "A model for the analysis of rapid landslide motion across three-dimensional terrain",
+            "volume": "41"
+        },
+        "bb0195": {
+            "authors": [
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "McDougall"
+                },
+                {
+                    "first": "Oldrich",
+                    "initial": "O.",
+                    "last": "Hungr"
+                }
+            ],
+            "doi": "10.1139/t05-064",
+            "firstpage": "1437",
+            "issn": "00083674",
+            "lastpage": "1448",
+            "pub_year": 2005,
+            "title": "Dynamic modelling of entrainment in rapid landslides",
+            "volume": "42"
+        },
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mergili"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Chu"
+                }
+            ],
+            "doi": "10.5194/gmd-8-4027-2015",
+            "firstpage": "4027",
+            "issn": "1991959X",
+            "lastpage": "4043",
+            "pub_year": 2015,
+            "title": "R.randomwalk v1, a multi-functional conceptual tool for mass movement routing",
+            "volume": "8"
+        },
+        "bb0205": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Mergili"
+                },
+                {
+                    "first": "Jan Thomas",
+                    "initial": "J.T.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "Julia",
+                    "initial": "J.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.5194/gmd-10-553-2017",
+            "firstpage": "553",
+            "issn": "1991959X",
+            "lastpage": "569",
+            "pub_year": 2017,
+            "title": "R.avaflow v1, an advanced open-source computational framework for the propagation and interaction of two-phase mass flows",
+            "volume": "10"
+        },
+        "bb0210": null,
+        "bb0215": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Mergili"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Emmer"
+                },
+                {
+                    "first": "Anna",
+                    "initial": "A.",
+                    "last": "Ju\u0159icov\u00e1"
+                },
+                {
+                    "first": "Alejo",
+                    "initial": "A.",
+                    "last": "Cochachin"
+                },
+                {
+                    "first": "Jan Thomas",
+                    "initial": "J.T.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.1002/esp.4318",
+            "firstpage": "1373",
+            "issn": "01979337",
+            "lastpage": "1389",
+            "pub_year": 2018,
+            "title": "How well can we simulate complex hydro-geomorphic process chains? The 2012 multi-lake outburst flood in the Santa Cruz Valley (Cordillera Blanca, Per\u00fa)",
+            "volume": "43"
+        },
+        "bb0220": {
+            "authors": [
+                {
+                    "first": "Haim",
+                    "initial": "H.",
+                    "last": "Nessyahu"
+                },
+                {
+                    "first": "Eitan",
+                    "initial": "E.",
+                    "last": "Tadmor"
+                }
+            ],
+            "doi": "10.1016/0021-9991(90)90260-8",
+            "firstpage": "408",
+            "issn": "00219991",
+            "lastpage": "463",
+            "pub_year": 1990,
+            "title": "Non-oscillatory central differencing for hyperbolic conservation laws",
+            "volume": "87"
+        },
+        "bb0225": {
+            "authors": [
+                {
+                    "first": "Jeannette",
+                    "initial": "J.",
+                    "last": "Noetzli"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Hoelzle"
+                },
+                {
+                    "first": "Wilfried",
+                    "initial": "W.",
+                    "last": "Haeberli"
+                }
+            ],
+            "doi": "10.1007/s10596-005-9017-z",
+            "firstpage": "161",
+            "issn": "14200597",
+            "lastpage": "178",
+            "pub_year": 2006,
+            "title": "GIS-based modelling of rock-ice avalanches from Alpine permafrost areas",
+            "volume": "10"
+        },
+        "bb0230": {
+            "authors": [
+                {
+                    "first": "Naomi",
+                    "initial": "N.",
+                    "last": "Oreskes"
+                },
+                {
+                    "first": "Kristin",
+                    "initial": "K.",
+                    "last": "Shrader-Frechette"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "Belitz"
+                }
+            ],
+            "doi": "10.1126/science.263.5147.641",
+            "firstpage": "641",
+            "issn": "00368075",
+            "lastpage": "646",
+            "pub_year": 1994,
+            "title": "Verification, validation, and confirmation of numerical models in the earth sciences",
+            "volume": "263"
+        },
+        "bb0235": {
+            "authors": [
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Pappenberger"
+                },
+                {
+                    "first": "Elisabeth",
+                    "initial": "E.",
+                    "last": "Stephens"
+                },
+                {
+                    "first": "Jutta",
+                    "initial": "J.",
+                    "last": "Thielen"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Salamon"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Demeritt"
+                },
+                {
+                    "first": "Schalk Jan",
+                    "initial": "S.J.",
+                    "last": "van Andel"
+                },
+                {
+                    "first": "Fredrik",
+                    "initial": "F.",
+                    "last": "Wetterhall"
+                },
+                {
+                    "first": "Lorenzo",
+                    "initial": "L.",
+                    "last": "Alfieri"
+                }
+            ],
+            "doi": "10.1002/hyp.9253",
+            "firstpage": "132",
+            "issn": "08856087",
+            "lastpage": "146",
+            "pub_year": 2013,
+            "title": "Visualizing probabilistic flood forecast information: Expert preferences and perceptions of best practice in uncertainty communication",
+            "volume": "27"
+        },
+        "bb0240": {
+            "authors": [
+                {
+                    "first": "E. B.",
+                    "initial": "E.B.",
+                    "last": "Pitman"
+                },
+                {
+                    "first": "C. C.",
+                    "initial": "C.C.",
+                    "last": "Nichita"
+                },
+                {
+                    "first": "A. K.",
+                    "initial": "A.K.",
+                    "last": "Patra"
+                },
+                {
+                    "first": "A. C.",
+                    "initial": "A.C.",
+                    "last": "Bauer"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Bursik"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Webb"
+                }
+            ],
+            "firstpage": "589",
+            "issn": "15313492",
+            "lastpage": "599",
+            "pub_year": 2003,
+            "title": "A model of granular flows over an erodible surface",
+            "volume": "3"
+        },
+        "bb0245": {
+            "authors": [
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Plafker"
+                },
+                {
+                    "first": "G. E.",
+                    "initial": "G.E.",
+                    "last": "Ericksen"
+                }
+            ],
+            "doi": "10.1016/B978-0-444-41507-3.50016-7",
+            "firstpage": "277",
+            "issn": "01651250",
+            "lastpage": "314",
+            "pub_year": 1978,
+            "title": "Nevados huascar\u00e1n avalanches, peru",
+            "volume": "14"
+        },
+        "bb0250": {
+            "authors": [
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.1029/2011JF002186",
+            "issn": "21699011",
+            "pub_year": 2012,
+            "title": "A general two-phase debris flow model",
+            "volume": "117"
+        },
+        "bb0255": null,
+        "bb0260": null,
+        "bb0265": {
+            "authors": [
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                },
+                {
+                    "first": "Kolumban",
+                    "initial": "K.",
+                    "last": "Hutter"
+                }
+            ],
+            "doi": "10.1007/978-3-540-32687-8",
+            "firstpage": "1",
+            "lastpage": "602",
+            "pub_year": 2007,
+            "title": "Avalanche dynamics: Dynamics of rapid flows of dense granular avalanches"
+        },
+        "bb0270": {
+            "authors": [
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Krautblatter"
+                }
+            ],
+            "doi": "10.1002/2014JF003183",
+            "firstpage": "2272",
+            "issn": "21699003",
+            "lastpage": "2290",
+            "pub_year": 2014,
+            "title": "A two-phasemechanicalmodel for rock-ice avalanches",
+            "volume": "119"
+        },
+        "bb0275": {
+            "authors": [
+                {
+                    "first": "Shiva P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                },
+                {
+                    "first": "Stephen A.",
+                    "initial": "S.A.",
+                    "last": "Miller"
+                }
+            ],
+            "doi": "10.1016/j.enggeo.2013.01.012",
+            "firstpage": "124",
+            "issn": "00137952",
+            "lastpage": "132",
+            "pub_year": 2013,
+            "title": "The hypermobility of huge landslides and avalanches",
+            "volume": "157"
+        },
+        "bb0280": {
+            "authors": [
+                {
+                    "first": "S. P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Hutter"
+                }
+            ],
+            "doi": "10.5194/nhess-5-799-2005",
+            "firstpage": "799",
+            "issn": "15618633",
+            "lastpage": "819",
+            "pub_year": 2005,
+            "title": "Modelling debris flows down general channels",
+            "volume": "5"
+        },
+        "bb0285": {
+            "authors": [
+                {
+                    "first": "Maria Helena",
+                    "initial": "M.H.",
+                    "last": "Ramos"
+                },
+                {
+                    "first": "Thibault",
+                    "initial": "T.",
+                    "last": "Mathevet"
+                },
+                {
+                    "first": "Jutta",
+                    "initial": "J.",
+                    "last": "Thielen"
+                },
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Pappenberger"
+                }
+            ],
+            "doi": "10.1002/met.202",
+            "firstpage": "223",
+            "issn": "13504827",
+            "lastpage": "235",
+            "pub_year": 2010,
+            "title": "Communicating uncertainty in hydro-meteorological forecasts: Mission impossible?",
+            "volume": "17"
+        },
+        "bb0290": {
+            "authors": [
+                {
+                    "first": "Ludovic",
+                    "initial": "L.",
+                    "last": "Ravanel"
+                },
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Deline"
+                }
+            ],
+            "doi": "10.1177/0959683610374887",
+            "firstpage": "357",
+            "issn": "09596836",
+            "lastpage": "365",
+            "pub_year": 2011,
+            "title": "Climate influence on rockfalls in high-alpine steep rockwalls: The north side of the aiguilles de chamonix (mont blanc massif) since the end of the 'Little Ice Age'",
+            "volume": "21"
+        },
+        "bb0295": {
+            "authors": [
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Saltelli"
+                },
+                {
+                    "first": "Paola",
+                    "initial": "P.",
+                    "last": "Annoni"
+                }
+            ],
+            "doi": "10.1016/j.envsoft.2010.04.012",
+            "firstpage": "1508",
+            "issn": "13648152",
+            "lastpage": "1517",
+            "pub_year": 2010,
+            "title": "How to avoid a perfunctory sensitivity analysis",
+            "volume": "25"
+        },
+        "bb0300": {
+            "authors": [
+                {
+                    "first": "S. B.",
+                    "initial": "S.B.",
+                    "last": "Savage"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Hutter"
+                }
+            ],
+            "doi": "10.1017/S0022112089000340",
+            "firstpage": "177",
+            "issn": "00221120",
+            "lastpage": "215",
+            "pub_year": 1989,
+            "title": "The motion of a finite mass of granular material down a rough incline",
+            "volume": "199"
+        },
+        "bb0305": {
+            "authors": [
+                {
+                    "first": "Yvonne",
+                    "initial": "Y.",
+                    "last": "Schaub"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "Alejo",
+                    "initial": "A.",
+                    "last": "Cochachin"
+                }
+            ],
+            "doi": "10.1007/s10346-015-0658-2",
+            "firstpage": "1445",
+            "issn": "1612510X",
+            "lastpage": "1459",
+            "pub_year": 2016,
+            "title": "Ice-avalanche scenario elaboration and uncertainty propagation in numerical simulation of rock-/ice-avalanche-induced impact waves at Mount Hualc\u00e1n and Lake 513, Peru",
+            "volume": "13"
+        },
+        "bb0310": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Schneider"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Cochachin"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Guill\u00e9n"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Garc\u00eda"
+                }
+            ],
+            "doi": "10.5194/adgeo-35-145-2014",
+            "firstpage": "145",
+            "issn": "16807340",
+            "lastpage": "155",
+            "pub_year": 2014,
+            "title": "Mapping hazards from glacier lake outburst floods based on modelling of process cascades at Lake 513, Carhuaz, Peru",
+            "volume": "35"
+        },
+        "bb0315": {
+            "authors": [
+                {
+                    "first": "Marcelo A.",
+                    "initial": "M.A.",
+                    "last": "Somos-Valenzuela"
+                },
+                {
+                    "first": "Rachel E.",
+                    "initial": "R.E.",
+                    "last": "Chisolm"
+                },
+                {
+                    "first": "Denny S.",
+                    "initial": "D.S.",
+                    "last": "Rivas"
+                },
+                {
+                    "first": "Cesar",
+                    "initial": "C.",
+                    "last": "Portocarrero"
+                },
+                {
+                    "first": "Daene C.",
+                    "initial": "D.C.",
+                    "last": "McKinney"
+                }
+            ],
+            "doi": "10.5194/hess-20-2519-2016",
+            "firstpage": "2519",
+            "issn": "10275606",
+            "lastpage": "2543",
+            "pub_year": 2016,
+            "title": "Modeling a glacial lake outburst flood process chain: The case of Lake Palcacocha and Huaraz, Peru",
+            "volume": "20"
+        },
+        "bb0320": {
+            "authors": [
+                {
+                    "first": "Y. C.",
+                    "initial": "Y.C.",
+                    "last": "Tai"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Noelle"
+                },
+                {
+                    "first": "J. M.N.T.",
+                    "initial": "J.M.N.T.",
+                    "last": "Gray"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Hutter"
+                }
+            ],
+            "doi": "10.1006/jcph.2001.6946",
+            "firstpage": "269",
+            "issn": "00219991",
+            "lastpage": "301",
+            "pub_year": 2002,
+            "title": "Shock-capturing and front-tracking methods for granular avalanches",
+            "volume": "175"
+        },
+        "bb0325": {
+            "authors": [
+                {
+                    "first": "Tamotsu",
+                    "initial": "T.",
+                    "last": "Takahashi"
+                },
+                {
+                    "first": "Hajime",
+                    "initial": "H.",
+                    "last": "Nakagawa"
+                },
+                {
+                    "first": "Tatsuo",
+                    "initial": "T.",
+                    "last": "Harada"
+                },
+                {
+                    "first": "Yousuke",
+                    "initial": "Y.",
+                    "last": "Yamashiki"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9429(1992)118:11(1490)",
+            "firstpage": "1490",
+            "issn": "07339429",
+            "lastpage": "1507",
+            "pub_year": 1992,
+            "title": "Routing debris flows with particle segregation",
+            "volume": "118"
+        },
+        "bb0330": null,
+        "bb0335": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Hutter"
+                },
+                {
+                    "first": "S. P.",
+                    "initial": "S.P.",
+                    "last": "Pudasaini"
+                }
+            ],
+            "doi": "10.1002/zamm.200310123",
+            "firstpage": "507",
+            "issn": "00442267",
+            "lastpage": "527",
+            "pub_year": 2004,
+            "title": "The savage-hutter theory: A system of partial differential equations for avalanche flows of snow, debris, and mud. Plenary lecture presented at the 81st Annual GAMM Conference, March 24-28, 2003",
+            "volume": "84"
+        },
+        "bb0340": null,
+        "bb0345": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Westoby"
+                },
+                {
+                    "first": "N. F.",
+                    "initial": "N.F.",
+                    "last": "Glasser"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Brasington"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Hambrey"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Quincey"
+                },
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Reynolds"
+                }
+            ],
+            "doi": "10.1016/j.earscirev.2014.03.009",
+            "firstpage": "137",
+            "issn": "00128252",
+            "lastpage": "159",
+            "pub_year": 2014,
+            "title": "Modelling outburst floods from moraine-dammed glacial lakes",
+            "volume": "134"
+        },
+        "bb0350": {
+            "authors": [
+                {
+                    "first": "Raphael",
+                    "initial": "R.",
+                    "last": "Worni"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Huggel"
+                },
+                {
+                    "first": "John J.",
+                    "initial": "J.J.",
+                    "last": "Clague"
+                },
+                {
+                    "first": "Yvonne",
+                    "initial": "Y.",
+                    "last": "Schaub"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "Stoffel"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2014.06.031",
+            "firstpage": "161",
+            "issn": "0169555X",
+            "lastpage": "176",
+            "pub_year": 2014,
+            "title": "Coupling glacial lake impact, dam breach, and flood processes: A modeling perspective",
+            "volume": "224"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 61173,
+            "parents": [],
+            "refoffsets": {
+                "bb0215": {
+                    "endOffset": 61171,
+                    "startOffset": 61151
+                },
+                "bb0305": {
+                    "endOffset": 61149,
+                    "startOffset": 61130
+                },
+                "bb0345": {
+                    "endOffset": 61128,
+                    "startOffset": 61108
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Recent studies have identified and highlighted challenges related to limited physical understanding, limited capabilities of current simulation approaches at process boundaries, and uncertain surface topography and material parameters (Westoby et al., 2014; Schaub et al., 2016; Mergili et al., 2018).",
+            "startOffset": 60872,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 69391,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In the context of the present study, the most obvious threshold effect is overtopping of Cerro de Aira \u2013 observed in 1970 but not in 1962.",
+            "startOffset": 69253,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 40479,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The output of r.avaflow essentially consists in raster maps \u2013 maximum and for all time steps \u2013 of solid and fluid flow heights H (m), velocities, pressures, kinetic energies, and entrained heights E (m).",
+            "startOffset": 40276,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 47378,
+            "parents": [],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 47377,
+                    "startOffset": 47344
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Such an extension could build on the rock-ice avalanche model introduced by Pudasaini and Krautblatter (2014).",
+            "startOffset": 47268,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 30471,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Current key research challenges include the understanding and modelling of interaction processes at the boundary of mass flows, specifically entrainment along the flow path and flow transformations.",
+            "startOffset": 30273,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46807,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The internal friction angle is globally set to \u03c6 = 35\u00b0, whereas the solid density is adapted to the ice content of the mass flows (see Table 4).",
+            "startOffset": 46663,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 38191,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 38151,
+                    "startOffset": 38133
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The right portion of the flow overtopped Cerro de Aira and impacted the town of Yungay (see Fig. 2a, c), leading to approx. 6000 fatalities (Evans et al., 2009; numbers vary among different sources).",
+            "startOffset": 37992,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 34227,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 33982,
+                    "startOffset": 33964
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Such landslides as well as glacial lake outburst floods (e.g. Emmer et al., 2016) have repeatedly evolved into complex mass flows or even process chains travelling over tens of kilometres and, as a consequence, badly affecting the communities in the densely populated Callej\u00f3n de Huaylas valley west of the Cordillera Blanca.",
+            "startOffset": 33902,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 59179,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "One consequence of the response of VDF to \u03b4D \u2013 which is stronger than the response to CE within the considered parameter space \u2013 consists in the slight depletion of VDE with decreasing \u03b4D.",
+            "startOffset": 58991,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 33636,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Nevado Huascar\u00e1n is the highest peak of the approx. 200 km\u2013long, NW\u2013SE\u2013stretching Cordillera Blanca, Peru, the most heavily glaciated mountain range throughout the tropics.",
+            "startOffset": 33464,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 38458,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Fig. 3 illustrates the difference in the impact area between the events of 1962 and 1970.",
+            "startOffset": 38369,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 58400,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "A clear increase of the volume is observed when CE is increased, whereas the volume tends to increase slightly when \u03b4D is increased.",
+            "startOffset": 58268,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 62380,
+            "parents": [],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 62267,
+                    "startOffset": 62234
+                }
+            },
+            "secId": "s0065",
+            "sentence": "This can be done by taking into account further flow models such as the rock-ice avalanche model of Pudasaini and Krautblatter (2014): this approach considers internal mass and momentum exchanges between the phases, lubrication, and fluidization.",
+            "startOffset": 62134,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 31963,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this sense, we employ the 1962 and 1970 events at Nevado Huascar\u00e1n (Cordillera Blanca, Peru) for:",
+            "startOffset": 31863,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68709,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "However, implementation of this advanced model is not the focus here as it requires more detailed scrutiny and investigation.",
+            "startOffset": 68584,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51898,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The apex of the Ranrahirca debris cone is reached after approx. 330 s, and R\u00edo Santa after t \u2248 480 s.",
+            "startOffset": 51797,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 43480,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "All performance indicators can be combined into the synthetic performance index (SPI) pointing out the overall empirical adequacy of a given simulation (see Table 2).",
+            "startOffset": 43314,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 53221,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The spatial distribution of the maximum flow height and the total height of basal entrainment derived with the optimized parameter set is illustrated in Fig. 6b, whereas Fig. 8 summarizes the predicted travel times and frontal velocities.",
+            "startOffset": 52983,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 38653,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 38651,
+                    "startOffset": 38633
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Based on various eyewitness reports, experiments, and literature analysis, the average flow velocity was deduced from travel times between the initial detachment and Yungay (Evans et al., 2009).",
+            "startOffset": 38459,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 30864,
+            "parents": [],
+            "refoffsets": {
+                "bb0350": {
+                    "endOffset": 30751,
+                    "startOffset": 30732
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Even though such a coupling may have some advantages, Worni et al. (2014) have emphasized the need for integrated concepts, including also the process boundaries and related transitions.",
+            "startOffset": 30678,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29041,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 28919,
+                    "startOffset": 28901
+                },
+                "bb0095": {
+                    "endOffset": 28820,
+                    "startOffset": 28796
+                },
+                "bb0145": {
+                    "endOffset": 29013,
+                    "startOffset": 28994
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The resulting complex mass movements \u2014 sometimes even evolving into process chains \u2014 have led to major disasters in recorded history: the 1963 Vajont landslide and flood disaster in the Italian Alps (Genevois and Tecca, 2013); the 1962 and 1970 Huascar\u00e1n debris avalanches in the Cordillera Blanca, Peru (Evans et al., 2009); and the 2002 Kolka-Karmadon ice-rock avalanche in the Russian Caucasus (Huggel et al., 2005) are some notable examples.",
+            "startOffset": 28596,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 32569,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The availability of two reference events with comparable characteristics, but different magnitudes, is the ideal precondition for cross-wise parameter optimization and for predictive simulations with the parameter sets optimized for the other event.",
+            "startOffset": 32320,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45776,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The DEM is not corrected for deposition, as the spatial patterns of deposition are hardly known and deposition is not supposed to have changed the terrain patterns in a way that significantly affects the simulation results.",
+            "startOffset": 45553,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 57865,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The initial conditions of the 1970 event are applied (see Table 4).",
+            "startOffset": 57798,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 55262,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The predicted flow volume deposited in Zone F sums up to 3.4 million m3, corresponding reasonably well to the observation, considering the associated uncertainties (see Tables 1, 5).",
+            "startOffset": 55080,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 70472,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Predictive simulations of complex mass flows require appropriate strategies in order to adequately deal with this issue.",
+            "startOffset": 70352,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 52130,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "A total of 8.7 million m3 of basal material is entrained, leading to a final flow volume of 11.7 million m3, most of which is deposited in the Zone E (Table 5).",
+            "startOffset": 51970,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 55079,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Most notably, the fact that the cemetery hill was spared by the flow is also reflected in the simulation results.",
+            "startOffset": 54966,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 72018,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Representing well-documented events with similar release areas and characteristics, but varying in their magnitude and level of complexity, the 1962 and 1970 mass flows at Huascar\u00e1n (Cordillera Blanca, Peru) may assist mass flow modelers to increase the understanding of key challenges they are facing in their research work.",
+            "startOffset": 71693,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 44903,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Neither triggering of the events nor the distal debris floods are subjects of the present study.",
+            "startOffset": 44807,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 63049,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Therefore, validation of the model outcomes in a strict sense is not possible.",
+            "startOffset": 62971,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 50686,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The optimized parameter set (values of \u03b4, CAD, and CFF for each of the zones A\u2013G) is provided in Table 4.",
+            "startOffset": 50581,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 68583,
+            "parents": [],
+            "refoffsets": {
+                "bb0260": {
+                    "endOffset": 68484,
+                    "startOffset": 68455
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The physically-based entrainment model of Pudasaini and Fischer (2016b) directly correlating the basal friction to the entrainment coefficient may produce better results.",
+            "startOffset": 68413,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 72930,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Systematically analyzing the effects of the basal friction angle in a specific zone and the entrainment coefficient reveals a high sensitivity of the key model outcomes to even small variations in the combination of the parameter values.",
+            "startOffset": 72693,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 32835,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 32747,
+                    "startOffset": 32726
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Testing the concept of the impact indicator index (Mergili et al., 2017a) to appropriately display and evaluate parameter uncertainty in the simulation results.",
+            "startOffset": 32675,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46102,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "No corrections for vegetation or buildings are applied, meaning that the corrected DEM is directly used as a Digital Terrain Model (DTM).",
+            "startOffset": 45965,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 60328,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Consequently, the values of III are much lower in Zone F than in Zone E. With none of the parameter combinations explored in experiment 1970S, the southward \u201coutbursts\u201d in Zone C, which are very evident in the experiment 1970R, are observed (see Figs. 8, 10c).",
+            "startOffset": 60068,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 39355,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "These features facilitate the simulation of complex mass flows as well as of process chains and interactions.",
+            "startOffset": 39246,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 50887,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 6a shows the spatial patterns of the maximum flow height and the total height of basal entrainment predicted for the 1962 event, whereas Fig. 7 summarizes the travel times and frontal velocities.",
+            "startOffset": 50687,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 31545,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 31521,
+                    "startOffset": 31501
+                },
+                "bb0215": {
+                    "endOffset": 31543,
+                    "startOffset": 31523
+                },
+                "bb0230": {
+                    "endOffset": 31499,
+                    "startOffset": 31479
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Even though r.avaflow \u2013 as well as other mass flow simulation tools \u2013 largely relies on physical parameters in theory, in practice it has to be optimized to bring the simulation results in line with the observation, i.e. to reach a satisfactory degree of empirical adequacy (Oreskes et al., 1994; Fischer et al., 2015; Mergili et al., 2018).",
+            "startOffset": 31204,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56128,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As can be seen in Fig. 9a, overtopping of Cerro de Aira is predicted, a behaviour not corresponding to the observation for the 1962 event.",
+            "startOffset": 55990,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 29180,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 29149,
+                    "startOffset": 29126
+                },
+                "bb0115": {
+                    "endOffset": 29178,
+                    "startOffset": 29151
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Complex mass flows and process chains often occur related to a changing cryosphere (Evans and Delaney, 2014; Haeberli and Whiteman, 2014).",
+            "startOffset": 29042,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39562,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Mainly those aspects relevant for the computational experiments conducted on the 1962 and 1970 Huascar\u00e1n events are outlined in this section.",
+            "startOffset": 39421,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 57601,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The ranges considered in terms of CE and \u03b4D are chosen in a way to at least fully cover the parameter space between the optimized values for the 1962 and 1970 events, and even going beyond - particularly with CE.",
+            "startOffset": 57389,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 34912,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 34779,
+                    "startOffset": 34760
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Evans et al. (2009) have summarized all the available literature and provide a comprehensive and detailed account of the characteristics of both events.",
+            "startOffset": 34760,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 52755,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The synthetic performance index (SPI) is in the range 0.82\u20130.87 (depending on the travel time down to the R\u00edo Santa used for reference).",
+            "startOffset": 52619,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 68197,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The larger and more energy-rich 1970 flow may have evolved in a physically different way than the 1962 flow.",
+            "startOffset": 68089,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 41879,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "r.avaflow operates on the basis of GIS raster cells.",
+            "startOffset": 41827,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 43774,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The availability of two reference events, different in magnitude but sharing some major characteristics, opens the opportunity to learn about the general applicability of optimized parameter sets.",
+            "startOffset": 43578,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 51796,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Most notably, at t \u2248 220 s the flow runs up the valley slopes in a way very similar to the observation.",
+            "startOffset": 51693,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 59654,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In the upper part of the flow down to Zone D, III does not react in a way that is sensitive to variations in the parameters under investigation.",
+            "startOffset": 59510,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 53655,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The simulated extent of lateral spreading in Zone C is in reasonable correspondence with the observation.",
+            "startOffset": 53550,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 72575,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Running the simulations for the two events with switched parameter sets (set optimized for the 1962 event applied to the 1970 event and vice versa) leads to unsatisfactory results in both cases.",
+            "startOffset": 72381,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33741,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 33739,
+                    "startOffset": 33726
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Geologically it is part of a batholith characterized by tonalite and granodiorite rocks (Cobbing, 1981).",
+            "startOffset": 33637,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 37824,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In contrast to the 1962 event, the resulting debris-ice avalanche was not constrained to the valley of the R\u00edo Ranrahirca.",
+            "startOffset": 37702,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 45552,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 45423,
+                    "startOffset": 45404
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Thereby we follow, as far as possible, the findings of Evans et al. (2009) who have compiled all available pieces of information on the 1962 and 1970 mass flows, complemented by their own investigations.",
+            "startOffset": 45349,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 48162,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Variations in CE govern the spatio-temporal evolution of the flow.",
+            "startOffset": 48096,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 54543,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As prescribed by the optimization, the spatial extent of the flow, except for the distal part of the debris cone where the flow transformed to a debris flood (not considered in the present work), corresponds reasonably well to the observation.",
+            "startOffset": 54300,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 61849,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The present study has clearly demonstrated the ability of r.avaflow to back-calculate complex mass flows in an empirically largely adequate way.",
+            "startOffset": 61705,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 52618,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Table 5 summarizes the performance indicators associated with the experiment R1962.",
+            "startOffset": 52535,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 63363,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 63339,
+                    "startOffset": 63303
+                },
+                "bb0215": {
+                    "endOffset": 63361,
+                    "startOffset": 63341
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The optimized parameter values are not necessarily physically meaningful, but should be considered as heuristically derived values leading to empirical adequacy (de Lima Neves Seefelder et al., 2017; Mergili et al., 2018).",
+            "startOffset": 63141,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 43313,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Additional indicators are derived manually from the relation between simulated and observed volumes, travel times, or velocities.",
+            "startOffset": 43184,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 47267,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "A physically better founded representation of the initial phase of the events would require an extension of r.avaflow and the underlying flow model.",
+            "startOffset": 47119,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 41039,
+            "parents": [],
+            "refoffsets": {
+                "bb0170": {
+                    "endOffset": 40910,
+                    "startOffset": 40891
+                },
+                "bb0205": {
+                    "endOffset": 40933,
+                    "startOffset": 40912
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Among others, they include (i) ambient drag, accounting for air resistance (Kattel et al., 2016; Mergili et al., 2017a); and (ii) fluid friction, accounting for the influence of basal surface roughness on the fluid momentum.",
+            "startOffset": 40815,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 64300,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 64161,
+                    "startOffset": 64149
+                },
+                "bb0015": {
+                    "endOffset": 64188,
+                    "startOffset": 64166
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Further, the effects of variations in \u03b4 on the simulation results mix with the effects of other parameters: results are susceptible to equifinality in the sense of Beven (1996) and Beven and Freer (2001), particularly when considering only one or few reference parameters while optimizing multiple model parameters.",
+            "startOffset": 63985,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47118,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Therefore, entrainable snow is considered fluid from the beginning, and so is a certain fraction (2/3) of the ice.",
+            "startOffset": 47004,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 72691,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Most notably, overtopping of Cerro de Aira, representing an important threshold effect, is not correctly predicted.",
+            "startOffset": 72576,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 39965,
+            "parents": [],
+            "refoffsets": {
+                "bb0250": {
+                    "endOffset": 39769,
+                    "startOffset": 39753
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The Pudasaini (2012) two-phase mass flow model is used for simulating the propagation of mass flows from one or more pre-defined release areas down a mountain topography, represented by a Digital Terrain Model (DTM).",
+            "startOffset": 39749,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 36210,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Based on a combination of sources, the same authors suggest an initial volume of 1 million m3 of rock and 2 million m3 of ice, whereas 13 million m3 of solid material (including ice) were deposited on the cone of R\u00edo Ranrahirca.",
+            "startOffset": 35982,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 63141,
+            "parents": [],
+            "refoffsets": {
+                "bb0230": {
+                    "endOffset": 63140,
+                    "startOffset": 63119
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Instead, we rather evaluate their empirical adequacy in the sense of Oreskes et al. (1994).",
+            "startOffset": 63050,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63627,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "This makes the application of optimization procedures necessary.",
+            "startOffset": 63563,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 68412,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 68284,
+                    "startOffset": 68263
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The approach used in r.avaflow to multiply CE with the momentum (Mergili et al., 2017a) might insufficiently capture the physical processes: otherwise the entrained volume would scale correctly with flow magnitude.",
+            "startOffset": 68198,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48627,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "CAD and CFF are varied among the zones A\u2013G, but not among the computational experiments.",
+            "startOffset": 48539,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 57797,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Even though the choice of the parameter space has to be considered as arbitrary in its details, widening or slightly narrowing the space would not change the key message conveyed through Fig. 10.",
+            "startOffset": 57602,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 43183,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Whereas CSI and D2PC indicate the degree of overlay between the simulated and the observed impact areas, FoC measures whether the simulation overestimates (conservative result) or underestimates the observed impact area (non-conservative result).",
+            "startOffset": 42937,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 44688,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The experiment S1970 elaborates on the sensitivity of the model outcomes to selected key parameters and serves for evaluating a strategy of dealing with parameter uncertainty.",
+            "startOffset": 44513,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 60871,
+            "parents": [],
+            "refoffsets": {
+                "bb0165": {
+                    "endOffset": 60694,
+                    "startOffset": 60675
+                },
+                "bb0310": {
+                    "endOffset": 60838,
+                    "startOffset": 60816
+                },
+                "bb0315": {
+                    "endOffset": 60869,
+                    "startOffset": 60840
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Multi-hazard phenomena and situations recently have attracted increased scientific interest, both at a conceptual level (Kappes et al., 2012), and \u2013 particularly for complex mass flows and process chains \u2013 for event back-calculations using computer simulations (Schneider et al., 2014; Somos-Valenzuela et al., 2016).",
+            "startOffset": 60554,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 70658,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "On the other hand, ranges of initial conditions and flow parameters can be analyzed instead of fixed values.",
+            "startOffset": 70550,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 41562,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Maximum entrainable solid and fluid heights can be defined as well.",
+            "startOffset": 41495,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 60543,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This is possibly an effect of cell size (12 m in the experiment 1970R vs. 24 m in the experiment 1970S).",
+            "startOffset": 60439,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 29673,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 29453,
+                    "startOffset": 29442
+                },
+                "bb0105": {
+                    "endOffset": 29574,
+                    "startOffset": 29549
+                },
+                "bb0110": {
+                    "endOffset": 29469,
+                    "startOffset": 29455
+                },
+                "bb0120": {
+                    "endOffset": 29492,
+                    "startOffset": 29471
+                },
+                "bb0125": {
+                    "endOffset": 29671,
+                    "startOffset": 29650
+                },
+                "bb0130": {
+                    "endOffset": 29595,
+                    "startOffset": 29576
+                },
+                "bb0140": {
+                    "endOffset": 29525,
+                    "startOffset": 29494
+                },
+                "bb0150": {
+                    "endOffset": 29525,
+                    "startOffset": 29494
+                },
+                "bb0155": {
+                    "endOffset": 29525,
+                    "startOffset": 29494
+                },
+                "bb0175": {
+                    "endOffset": 29648,
+                    "startOffset": 29623
+                },
+                "bb0225": {
+                    "endOffset": 29547,
+                    "startOffset": 29527
+                },
+                "bb0290": {
+                    "endOffset": 29621,
+                    "startOffset": 29597
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Climate-induced environmental changes such as glacier retreat, the associated formation of hanging glaciers, the exposure of steep, debuttressed rock or moraine walls, and the degradation of mountain permafrost facilitate the release of initial mass movements (Alean, 1985; Haeberli, 1992; Haeberli et al., 1997; Huggel et al., 2003, 2010, 2012; Noetzli et al., 2006; Gruber and Haeberli, 2007; Harris et al., 2009; Ravanel and Deline, 2011; Krautblatter et al., 2013; Haeberli et al., 2017).",
+            "startOffset": 29181,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51969,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "At this stage, the flow velocity decreases from >20 m s\u22121 to <5 m s\u22121.",
+            "startOffset": 51899,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 69527,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The computational experiment S1970 has clearly illustrated the high sensitivity of overtopping on two uncertain model input parameters.",
+            "startOffset": 69392,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 49186,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Only heights \u22650.25 m are considered for the evaluation of the simulation results.",
+            "startOffset": 49105,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 46662,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 46661,
+                    "startOffset": 46639
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Most of the flow parameters are kept constant throughout all the zones and all the computational experiments as well, set to the values recommended by Mergili et al. (2017a).",
+            "startOffset": 46488,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 72379,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The key observations for each of the two events can be computationally reproduced at a reasonable degree of accuracy with tailor-made (optimized) sets of parameter values.",
+            "startOffset": 72208,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 51692,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "From this point, the simulated impact area corresponds reasonably well to the observation in its spatial extent.",
+            "startOffset": 51580,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 30677,
+            "parents": [],
+            "refoffsets": {
+                "bb0310": {
+                    "endOffset": 30644,
+                    "startOffset": 30622
+                },
+                "bb0315": {
+                    "endOffset": 30675,
+                    "startOffset": 30646
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The simulation of complex mass flows often includes cascading model chains, switching from one approach or tool to the next at each process boundary (Schneider et al., 2014; Somos-Valenzuela et al., 2016).",
+            "startOffset": 30472,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41361,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Entrainment is computed through an empirical approach.",
+            "startOffset": 41307,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 40062,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Solid and fluid material can be entrained from the basal surface and incorporated into the flow.",
+            "startOffset": 39966,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 45964,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Effects of the dam-break flood or subsequent changes in the topography are neglected as well, whereas some local artefacts clearly associated to errors in the DEM acquisition are removed.",
+            "startOffset": 45777,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 62970,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 62968,
+                    "startOffset": 62950
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Even though the Huascar\u00e1n mass flows are generally well documented (particularly the event of 1970), the observations used as reference are uncertain (Evans et al., 2009).",
+            "startOffset": 62799,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39420,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 39419,
+                    "startOffset": 39397
+                }
+            },
+            "secId": "s0030",
+            "sentence": "r.avaflow is described in full detail by Mergili et al. (2017a).",
+            "startOffset": 39356,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 65959,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "On the other hand, failure to reproduce the observation with a plausible parameterization may reflect a partly insufficient representation of the process by the simulation.",
+            "startOffset": 65787,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47003,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "We note that r.avaflow is currently not able (i) to adequately simulate the transition from solid to fluid material; and (ii) to consider rock and ice separately with different material densities.",
+            "startOffset": 46807,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 50249,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Due to the large spatial extent of both events, a cell size of 12 m (the TanDEM-X cell size) is considered sufficient to capture the key patterns of the mass flows, and is used throughout all simulations except for the experiment 1970S, where a cell size of 24 m is applied.",
+            "startOffset": 49975,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 73638,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Whereas these findings may help to improve some concepts employed in r.avaflow, they also underline some major general issues to be considered for predictions of mass flows conducted with the purpose to inform risk management: enhanced back-calculation efforts and parameter studies with a larger number of well-documented events of various types and magnitudes are required in order to allow for the anticipation of the key characteristics of future mass flow events in terms of likelihood measures or scenario analyses.",
+            "startOffset": 73117,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 38893,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 38891,
+                    "startOffset": 38867
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The maximum velocity in the initial phase of the movement may have exceeded 125 m s\u22121 (Erismann and Abele, 2001).",
+            "startOffset": 38780,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 41154,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "These extensions rely on the empirical coefficients CAD for ambient drag and CFF for fluid friction, respectively.",
+            "startOffset": 41040,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 41713,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The solid ratio of the entrained material is always identical to the solid ratio of the basal material, assuming vertically uniform moisture patterns.",
+            "startOffset": 41563,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 58501,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The increase in volume with increasing CE can be explained with the higher total volume of the flow.",
+            "startOffset": 58401,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 32129,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Evaluation of numerical reproduction of spatio-temporal evolution of flow heights, velocities, travel times and volumes of complex mass flow events using r.avaflow.",
+            "startOffset": 31965,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34759,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 34702,
+                    "startOffset": 34680
+                },
+                "bb0135": {
+                    "endOffset": 34757,
+                    "startOffset": 34732
+                },
+                "bb0245": {
+                    "endOffset": 34730,
+                    "startOffset": 34704
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Due to the outstanding physical characteristics of the 1970 event in particular, and the huge impact of both events on society, the Huascar\u00e1n mass flow events have been subject of extensive research over the past decades and described in detail in various sources (e.g. Ghiglino Antunez, 1971; Plafker and Ericksen, 1978; Hofmann and Patzelt, 1983).",
+            "startOffset": 34410,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 35909,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Due to the entrainment of snow from Glacier 511 beneath the rock face, and the uptake of primarily glacial deposits in the area beneath the glacier down to the R\u00edo Ranrahirca Valley (see Fig. 1), the movement evolved into a highly mobile debris-ice avalanche reaching the R\u00edo Santa and continuing further down as a debris flood.",
+            "startOffset": 35581,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 50581,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Parameter optimization is performed in order to achieve a high correspondence between the key output parameters impact area, volumes deposited in zones E and F, and travel time to R\u00edo Santa; and the reference observations (see Table 1).",
+            "startOffset": 50345,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 60067,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In zones D\u2013F the spatial dimension of the effects illustrated in Fig. 10a and b becomes evident: (i) decreasing values of III in the lateral portions of the flow in zones D and E; and (ii) a sharp decrease of III at Cerro de Aira, reflecting the threshold effect of overtopping.",
+            "startOffset": 59789,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 41306,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 41304,
+                    "startOffset": 41283
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Optional complementary functions include diffusion control, conservation of volume, surface control, entrainment, and stopping (Mergili et al., 2017a).",
+            "startOffset": 41155,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 58038,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "All simulations are run at a cell size of 24 m instead of 12 m in order to optimize the computational efficiency, and to explore possible effects of the spatial resolution.",
+            "startOffset": 57866,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 59509,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 59507,
+                    "startOffset": 59486
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Fig. 10c illustrates the spatial patterns of the impact indicator index (III) derived from 25 simulations with the same combinations of CE and \u03b4D as shown in Fig. 10a and b. III is the fraction of simulations predicting an impact (in the present study, defined as H \u2265 0.25 m) at a given computational cell (Mergili et al., 2017a).",
+            "startOffset": 59179,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 39245,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "It further considers entrainment of material along the path.",
+            "startOffset": 39185,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 67842,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "However, some other effects are thought to be more important:",
+            "startOffset": 67781,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 57204,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As a follow-up to the findings of the experiments 1962F and 1970F, we systematically elaborate the influence of CE and \u03b4D on selected simulation results, considering the total deposition volumes in zones E and F (Fig. 10).",
+            "startOffset": 56982,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 65786,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The empirically most adequate results do not necessarily coincide with a plausible spatial differentiation of the basal friction angle: on the one hand, such a spatial differentiation introduces equifinality also among the friction angles of the zones A\u2013G, in addition to the equifinality issues among the various parameters.",
+            "startOffset": 65461,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 67002,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Having said that, the question of applicability of optimized parameter sets for predictive simulations arises.",
+            "startOffset": 66892,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48874,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 48771,
+                    "startOffset": 48749
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Parameter optimization is performed through an iterative approximation, largely starting from the parameters suggested by Mergili et al. (2017a), and then adjusting the parameters in a trial-and-error procedure until empirical adequacy is reached.",
+            "startOffset": 48627,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 30273,
+            "parents": [],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 30271,
+                    "startOffset": 30250
+                },
+                "bb0160": {
+                    "endOffset": 30148,
+                    "startOffset": 30135
+                },
+                "bb0190": {
+                    "endOffset": 30220,
+                    "startOffset": 30195
+                },
+                "bb0240": {
+                    "endOffset": 30193,
+                    "startOffset": 30174
+                },
+                "bb0265": {
+                    "endOffset": 30248,
+                    "startOffset": 30222
+                },
+                "bb0300": {
+                    "endOffset": 30133,
+                    "startOffset": 30110
+                },
+                "bb0325": {
+                    "endOffset": 30172,
+                    "startOffset": 30150
+                },
+                "bb0330": {
+                    "endOffset": 30108,
+                    "startOffset": 30095
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Single-phase flow models, considering either solid or fluid, or a mixture of both, have been theoretically developed during the past decades, and more recently have also been increasingly implemented in computer codes (Voellmy, 1955; Savage and Hutter, 1989; Iverson, 1997; Takahashi et al., 1992; Pitman et al., 2003; McDougall and Hungr, 2004; Pudasaini and Hutter, 2007; Christen et al., 2010).",
+            "startOffset": 29876,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71083,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Indices or probabilities implicitly account for the uncertainties in the results.",
+            "startOffset": 71002,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46256,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The investigation area is split into seven zones A\u2013G. Each zone represents an area with particular geomorphological characteristics (Fig. 5 and Table 4).",
+            "startOffset": 46103,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 40715,
+            "parents": [],
+            "refoffsets": {
+                "bb0250": {
+                    "endOffset": 40714,
+                    "startOffset": 40698
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The model equations and the physical concepts applied are described in detail by Pudasaini (2012).",
+            "startOffset": 40617,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 58990,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Whereas no overtopping at all is predicted with lower values of CE and higher values of \u03b4D, a more or less linear increase in volume is observed above a threshold line in the CE-\u03b4D-diagram, corresponding to the \u201cminimum requirements\u201d for overtopping.",
+            "startOffset": 58740,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 66892,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The generally decreasing ambient drag coefficient represents an assumed tendency of the movement to gradually transform from falling and jumping to flowing, and thereby decreasing air resistance.",
+            "startOffset": 66697,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53353,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As in the 1962 event, the initial rock-ice avalanche reaches maximum frontal velocities >50 m s\u22121 when travelling over Glacier 511.",
+            "startOffset": 53222,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 70847,
+            "parents": [],
+            "refoffsets": {
+                "bb0200": {
+                    "endOffset": 70796,
+                    "startOffset": 70768
+                },
+                "bb0205": {
+                    "endOffset": 70796,
+                    "startOffset": 70768
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The result of this type of approach are likelihood measures such as the impact indicator index introduced by Mergili et al. (2015, 2017a) and applied in the computational experiment S1970.",
+            "startOffset": 70659,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 62133,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "While this is considered a major step forward, there is still potential to extend the physical basis of the simulation framework.",
+            "startOffset": 62004,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 49474,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The empirical adequacy of the outcomes of all computational experiments is quantified through the performance indicators summarized in Table 2, with the purpose of parameter optimization in the experiments R1962 and R1970, and evaluation of the results in the experiments F1962 and F1970.",
+            "startOffset": 49186,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 42578,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "All cells with simulated mass flow impact are recorded as simulated positives (SP), those without simulated mass flow impact as simulated negatives (SN).",
+            "startOffset": 42425,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 47738,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The basal friction angle \u03b4, the ambient drag coefficient CAD, and the fluid friction coefficient CFF are varied among the zones A\u2013G. Preliminary simulations have suggested that the results in terms of the travel distance, impact area, travel time, and volumes deposited in the various zones are sensitive to the volume involved, and to the friction parameters.",
+            "startOffset": 47378,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 53487,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fluid material is entrained, whereas the observed deposition in Zone B is not at all matched by the simulation results (see Table 1).",
+            "startOffset": 53354,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 55941,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Applying the parameter set optimized for the 1970 event (see Table 4) to the 1962 event leads to a significantly poorer performance than achieved in the experiment R1962.",
+            "startOffset": 55771,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 40616,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The evolution of the flow is computed through depth-averaged mass and momentum balance equations for the solid and the fluid components.",
+            "startOffset": 40480,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 55337,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The simulated solid content of the deposit mostly shows values around 75%.",
+            "startOffset": 55263,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 55989,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "SPI ranges between 0.45 and 0.51 (see Table 5).",
+            "startOffset": 55942,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 42424,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Those GIS raster cells with observed mass flow impact are recorded as observed positives (OP), the ones without observed mass flow impact as observed negatives (ON).",
+            "startOffset": 42259,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 71419,
+            "parents": [],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 71390,
+                    "startOffset": 71369
+                },
+                "bb0235": {
+                    "endOffset": 71417,
+                    "startOffset": 71392
+                },
+                "bb0285": {
+                    "endOffset": 71367,
+                    "startOffset": 71349
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Communicating uncertain simulation results to authorities represents a challenge on its own, with experiences available for example from flood risk management (Ramos et al., 2010; Demeritt et al., 2013; Pappenberger et al., 2013).",
+            "startOffset": 71189,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 41826,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Solid and fluid flow heights and momenta as well as the change of the basal topography are continuously updated.",
+            "startOffset": 41714,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 58267,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "VDE depends on variations of both parameters in a largely linear way, without visible threshold effects (see Fig. 10a).",
+            "startOffset": 58148,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 42936,
+            "parents": [],
+            "refoffsets": {
+                "bb0090": {
+                    "endOffset": 42902,
+                    "startOffset": 42881
+                },
+                "bb0205": {
+                    "endOffset": 42925,
+                    "startOffset": 42904
+                }
+            },
+            "secId": "s0030",
+            "sentence": "In the present work we relate the true positive (TP), true negative (TN), false positive (FP) and false negative (FN) predictions in order to derive a set of performance indicators including critical success index (CSI), distance to perfect classification (D2PC), and factor of conservativeness (FoC) (Formetta et al., 2015; Mergili et al., 2017a; Table 2).",
+            "startOffset": 42579,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 40814,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "In the implementation of r.avaflow used in the present work, some model extensions are introduced.",
+            "startOffset": 40716,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 57388,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Thereby we keep in mind that CE is used as a surrogate for the volume involved, and \u03b4D serves as a surrogate for the friction parameters needed as input for r.avaflow (see Section 4).",
+            "startOffset": 57205,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 48935,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "All complementary functions except for stopping are enabled.",
+            "startOffset": 48875,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 44512,
+            "parents": [],
+            "refoffsets": {
+                "bb0195": {
+                    "endOffset": 44363,
+                    "startOffset": 44338
+                },
+                "bb0275": {
+                    "endOffset": 44415,
+                    "startOffset": 44389
+                },
+                "bb0280": {
+                    "endOffset": 44387,
+                    "startOffset": 44365
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Separate parameter optimization procedures for each of the events are necessary because parameters are not only influenced by the characteristics of the surface, but also by those of the flow itself (McDougall and Hungr, 2005; Pudasaini et al., 2005; Pudasaini and Miller, 2013), and because the characteristics of the basal surface were possibly altered by the first event.",
+            "startOffset": 44138,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 54299,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The left branch continues down the valley and, from approx. 260 s onwards, spreads over the Ranrahirca debris cone down to R\u00edo Santa which it reaches after t \u2248 360 s.",
+            "startOffset": 54133,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 45348,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The DEM is corrected for release and entrainment that has occurred during the events (Fig. 5; see Section 2).",
+            "startOffset": 45239,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 48361,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 48225,
+                    "startOffset": 48214
+                },
+                "bb0015": {
+                    "endOffset": 48248,
+                    "startOffset": 48227
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The simulated volumes are subject to equifinality (Beven, 1996; Beven and Freer, 2001) with regard to mixed effects of CE and the release volumes, which are kept constant for each of the two events.",
+            "startOffset": 48163,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 33291,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We outline the data used as well as the parameterization and simulation strategy (Section 4) before presenting (Section 5) and discussing (Section 6) our results.",
+            "startOffset": 33129,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58739,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The increase with increasing \u03b4D is strongly associated with the patterns shown in Fig. 10b: overtopping of Cerro de Aira \u2013 and therefore VDF \u2013 responds in a highly nonlinear way to variations of both model parameters under investigation.",
+            "startOffset": 58502,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 36609,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Table 1 summarizes the volumes involved in the event.",
+            "startOffset": 36556,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 71188,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Making the information provided less definite increases the chance of successful predictive simulations.",
+            "startOffset": 71084,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 31203,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 31121,
+                    "startOffset": 31100
+                },
+                "bb0250": {
+                    "endOffset": 31181,
+                    "startOffset": 31165
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the present work we use the computational tool r.avaflow (Mergili et al., 2017a), which employs an enhanced version of the Pudasaini (2012) two-phase flow model.",
+            "startOffset": 31039,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34410,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The present article focuses on two events that originated from the steep, glacier-capped west face of the North Peak of Nevado Huascar\u00e1n (6654 m a.s.l.) in 1962 and in 1970 (Fig. 1).",
+            "startOffset": 34228,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 69729,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In terms of hazard mapping, simulation results based on a mis-estimate of the basal friction angle by only two degrees might put thousands of people at risk when used as the basis for spatial planning.",
+            "startOffset": 69528,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32319,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Analysis of the validity of optimized model parameters for predictive simulations of possible future events of a magnitude different from the event for which the parameters were optimized.",
+            "startOffset": 32131,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38368,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Volumes involved and deposited in the various zones are summarized in Table 1.",
+            "startOffset": 38290,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 61705,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Conventional mass flow simulation tools, even though representing valuable instruments to investigate single phase debris flows, rock avalanches, or snow avalanches, are not capable of capturing the flow dynamics resulting from multi-phase phenomena (phase separation etc.), changing solid and fluid fractions and their interactions.",
+            "startOffset": 61372,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 49031,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The flow heights at the end of each simulation (t = 900 s) are considered as deposited heights.",
+            "startOffset": 48936,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 64636,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Still, due to the large number of physically required input parameters of the two-phase mass flow model used in r.avaflow, only two were selected for sensitivity analysis.",
+            "startOffset": 64465,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56499,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As a consequence, this experiment is associated to a lower synthetic performance index than the experiment R1970 (SPI = 0.43; see Table 5 for a summary of all performance indicators).",
+            "startOffset": 56316,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 31862,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Appropriate, well-documented and well-understood case studies are therefore of great importance to test the suitability of such models and their computational implementation for complex real-world mass flow simulations, and to derive appropriate guiding parameter values which can be used for predictive simulations.",
+            "startOffset": 31546,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28385,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "High-mountain areas are often characterized by tightly coupled process domains.",
+            "startOffset": 28306,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48538,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Basal friction angle \u03b4: variations in \u03b4 serve as a surrogate for variations in all the involved friction parameters, causing potential equifinality issues with \u03c6, CAD, and CFF.",
+            "startOffset": 48362,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 66315,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "It was necessary to use a substantially lower value of the basal friction in zone D to correctly simulate overtopping of Cerro de Aira \u2013 a fact that may indicate that the complex flow behaviour, transitioning from an open slope into a narrow gully, and then partly overtopping a steep ridge, cannot be reproduced in full detail by the present simulations.",
+            "startOffset": 65960,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 73117,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "A difference of the \u2013 highly uncertain \u2013 value of the basal friction angle by just a few degrees may decide whether Cerro de Aira is overtopped or not, with all the consequences thereof.",
+            "startOffset": 72931,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 56315,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Analogously, applying the parameter set optimized for the 1962 event to the 1970 event leads to a simulation failing to reproduce the observed overtopping of Cerro de Aira (see Fig. 9b).",
+            "startOffset": 56129,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 44806,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "We only analyze the part of the mass flows starting from the release of the initial rock-ice falls down to R\u00edo Santa.",
+            "startOffset": 44689,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 49683,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 49633,
+                    "startOffset": 49615
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The observed impact areas, the volumes deposited in zones E and F, and the travel times (partly derived from average velocities inferred by Evans et al., 2009) are used for reference (see Table 1 and Fig. 5).",
+            "startOffset": 49475,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 67780,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The lower value of \u03b4 in Zone D and the higher value of CE leading to the empirically most adequate results for the 1970 event, when compared to the parameter values for the 1962 event (see Table 4) may to some extent be explained by the fact that (i) the 1962 event might have led to some smoothing of the terrain and therefore decreased basal friction; and that (ii) the properties of much of the surficial material might have changed during the 1962 event.",
+            "startOffset": 67322,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 64868,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The zonal variation of these three parameters (see Table 4) increases the complexity of the issue.",
+            "startOffset": 64770,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53975,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The flow enters Zone D at t \u2248 160 s (notably, half a minute earlier than in the experiment R1962).",
+            "startOffset": 53877,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 39184,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "It represents a comprehensive GIS-based open source computational framework which, in contrast to most other related tools, offers a two-phase-flow model.",
+            "startOffset": 39030,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 72206,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "We have deduced the following key statements from a set of computational experiments on these two events with the GIS-based open source two-phase mass flow simulation framework r.avaflow:",
+            "startOffset": 72019,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33901,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0185": {
+                    "endOffset": 33899,
+                    "startOffset": 33877
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The area has been repeatedly affected by earthquakes in historic times, some but not all of which have caused catastrophic landslides (Lliboutry et al., 1977).",
+            "startOffset": 33742,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 52982,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As with experiment R1962, parameter optimization was also performed for the 1970 event (see Table 4 for a summary of the optimized values of \u03b4, CAD, and CFF for each zone).",
+            "startOffset": 52810,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 36555,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Both transitions resulted in a drastic increase in the mobility of the landslide.",
+            "startOffset": 36474,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 54965,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The complex spatial patterns observed for the Yungay branch are effectively reproduced by the simulation in principle, though not in detail.",
+            "startOffset": 54825,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 35580,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "A rock-ice fall from the ice-capped west-facing slope of Huascar\u00e1n North Peak occurred in the evening of 10 January 1962 without an apparent trigger.",
+            "startOffset": 35431,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 62798,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "We have also identified some important limitations concerning the predictive application of the computational framework for purposes of hazard mapping and risk management.",
+            "startOffset": 62627,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 64769,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Thereby, CE serves as a surrogate for the entrained volume, whereas the effects of \u03b4 may be in part similar to those of CAD and CFF.",
+            "startOffset": 64637,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56671,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The factor of conservativeness clearly reflects the over-prediction in case of the 1962 event (FOC = 3.15) and the under-prediction in case of the 1970 event (FOC = 0.61).",
+            "startOffset": 56500,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 66696,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "According to eyewitness reports, part of the material was actually not flowing but rather dispersed in the air, a behaviour currently not included in r.avaflow.",
+            "startOffset": 66536,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51052,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The initial ice-rock avalanche rapidly gains velocity and moves over Glacier 511 at frontal velocities partly exceeding 50 m s\u22121, thereby entraining fluid material.",
+            "startOffset": 50888,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 49975,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Two values of RVol, and therefore also for w4 and SPI4 (for zones E and F) are considered, so that the number of performance parameters is six, and the weights w1\u2013w5 take values of 1/6 each.",
+            "startOffset": 49785,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 67321,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "However, the findings of the experiments F1962, F1970, and S1970 do not support such an approach.",
+            "startOffset": 67224,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 62003,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In contrast to earlier approaches, r.avaflow supports a continuous simulation across the boundaries of the individual components of these complex events.",
+            "startOffset": 61850,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 68088,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 68041,
+                    "startOffset": 68021
+                },
+                "bb0255": {
+                    "endOffset": 68071,
+                    "startOffset": 68043
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The basal friction angle is not only governed by the characteristics of the surface, but also by those of the flow itself, including possible grain sorting and phase-separation (de Haas et al., 2015; Pudasaini and Fischer, 2016a), and so is CFF.",
+            "startOffset": 67843,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65461,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 65324,
+                    "startOffset": 65303
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Further extending the tool developed by Fischer et al. (2015) could enable systematic multi-parameter studies in the future, where also equifinality issues can be covered in a more quantitative way.",
+            "startOffset": 65263,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 69964,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In summary, it has to be stated that computational experiments such as those conducted in this work help us to better understand the model, its application to real-world cases, and its behaviour with various parameterization scenarios.",
+            "startOffset": 69729,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 49104,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "At this point of time the dynamics of the simulated flows is negligible.",
+            "startOffset": 49032,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 54663,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This correspondence is also found in the volume deposited in Zone E, accumulating to 45.2 million m3 (see Tables 1, 5).",
+            "startOffset": 54544,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 44137,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The experiments R1962 and R1970 aim to reproduce each of the events in an empirically adequate way \u2013 based on iterative optimization of the key parameters for each of the events \u2013 whereas the experiments F1962 and F1970 explore the potential of the optimized parameter sets for predictive simulations, each using the parameter sets optimized for the other event.",
+            "startOffset": 43775,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 51579,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Such behaviour particularly concerns the tongues developing at the (left) southern side of the landslide, and the sharp bend before t \u2248 160 s. Here, a minor portion of the simulated flow overtops a ridge and enters the Llanganuco Valley, whereas the main landslide follows the Shacsha Valley.",
+            "startOffset": 51287,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 38289,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The material deposited in the areas of Ranrahirca and Yungay was described as fluid black slurry.",
+            "startOffset": 38192,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 44994,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "We use a TanDEM-X Digital Elevation Model (DEM) from 2013 (after the 1962 and 1970 events).",
+            "startOffset": 44903,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 31038,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To this aim, two-phase flow models offer an important advantage by separately considering the solid and the fluid phase, but also the strong interactions between the phases.",
+            "startOffset": 30865,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51152,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The flow enters Zone C after approx. 60 s and starts entraining the glacial deposits exposed there.",
+            "startOffset": 51053,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 63984,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "This fact is illustrated by the low empirically adequate values of \u03b4, compared to the angle of reach of the events of approx. 13\u201314\u00b0 (see Table 4): \u03b4 applies only to the solid fraction and is governed by a complex interplay of the flow and basal material as well as by the dynamics of the flow, which are impossible to measure for events of this magnitude.",
+            "startOffset": 63628,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47884,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Consequently, parameter optimization \u2013 in terms of empirical adequacy \u2013 builds on variations in the spatial patterns of the following parameters:",
+            "startOffset": 47739,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 56904,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "These outcomes are closely related to the combined effect of CE \u2013 acting as a surrogate for the increase in the flow volume \u2013 and \u03b4D in determining the energy of a mass flow, and therefore its ability to overtop a >100 m-high ridge.",
+            "startOffset": 56672,
+            "title": "Experiments F1962 and F1970: predictive simulations with switched parameter sets"
+        },
+        {
+            "endOffset": 70549,
+            "parents": [],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 70547,
+                    "startOffset": 70528
+                }
+            },
+            "secId": "s0065",
+            "sentence": "On the one hand, multiple scenarios can be considered (Schaub et al., 2016).",
+            "startOffset": 70473,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32674,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Identifying issues of parameter sensitivity with particular emphasis on possible key threshold effects.",
+            "startOffset": 32571,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29875,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The anticipation of complex mass flows in high-mountain areas \u2013 and therefore also hazard analysis approaches, such as mapping or zoning \u2013 largely involve computer simulations based on mass flow models.",
+            "startOffset": 29673,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39749,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The codes, a user manual, a collection of test data and the associated start scripts are available at http://www.avaflow.org.",
+            "startOffset": 39624,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 52314,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 52232,
+                    "startOffset": 52213
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Whereas this value is lower than the uncertain value of 13 million m3 reported by Evans et al. (2009) and given in Table 1, the simulation leads to an overestimate of the impact area.",
+            "startOffset": 52131,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 37223,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 37167,
+                    "startOffset": 37148
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The initial volume was much larger than in 1962: Evans et al. (2009) suggest 6.5 million m3 of rock and 1 million m3 of ice.",
+            "startOffset": 37099,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 37379,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Consequently, the energy of the event was higher and the entrainment of snow from Glacier 511 and of glacial deposits below was more intense (see Table 1).",
+            "startOffset": 37224,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 37701,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The transitions and associated increase in mobility inferred for the 1962 event also apply to the 1970 event in principle, however at a higher magnitude: 7.8 million m3 of water equivalent were added from the surface of Glacier 511, whereas 53 million m3 of glacial deposit \u2013 including its water content \u2013 were entrained.",
+            "startOffset": 37380,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 49784,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Thereby, all relevant performance parameters receive the same weight for deriving SPI (see Table 2).",
+            "startOffset": 49684,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 59788,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This is not surprising as \u03b4 is only varied in Zone D. Also the effects of an increased value of CE are relatively moderate in zone C.",
+            "startOffset": 59655,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 61371,
+            "parents": [],
+            "refoffsets": {
+                "bb0350": {
+                    "endOffset": 61193,
+                    "startOffset": 61174
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Worni et al. (2014) underline the need for combining the individual components of complex mass flows and process chains in one integrated model, instead of coupling different simulation approaches.",
+            "startOffset": 61174,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39623,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The logical framework of r.avaflow is illustrated in Fig. 4.",
+            "startOffset": 39563,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 52466,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Consequently, the optimized parameter set (see Table 4) is considered a compromise between approximating the observed impact area and deposited volume.",
+            "startOffset": 52315,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 55520,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The predicted flow velocities on the Ranrahirca cone and the Yungay branch largely range between 20 m s\u22121 and 50 m s\u22121, only dropping below 20 m s\u22121 close to termination of the flow.",
+            "startOffset": 55338,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 53549,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Entrainment of glacial deposits occurs from t \u2248 50 s onwards.",
+            "startOffset": 53488,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 60438,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Instead, the southernmost portion of the observed impact area in Zone C is under-predicted by the simulation.",
+            "startOffset": 60329,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 40159,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Arbitrary assemblages of solid and fluid release heights and entrainable heights may be defined.",
+            "startOffset": 40063,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 69055,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The effects described may influence the simulation results either in a linear way, with smooth and gradual responses of the simulation results to parameter variations \u2013 mainly in the case of \u201csimple\u201d processes such as the runout of a mass flow on a debris cone (see Fig. 10a) \u2013 but they may also lead to critical threshold effects (see Fig. 10b).",
+            "startOffset": 68709,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 33359,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, we conclude with the key messages of the work (Section 7).",
+            "startOffset": 33292,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37098,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In the afternoon of 31 May 1970, an earthquake triggered another rock-ice fall from the west face of Huascar\u00e1n North Peak (Fig. 2a, b), possibly preconditioned by mechanical destabilization through the 1962 event.",
+            "startOffset": 36885,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 33128,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Then we introduce the simulation framework r.avaflow (Section 3).",
+            "startOffset": 33063,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42168,
+            "parents": [],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 42073,
+                    "startOffset": 42047
+                },
+                "bb0320": {
+                    "endOffset": 42147,
+                    "startOffset": 42131
+                },
+                "bb0335": {
+                    "endOffset": 42166,
+                    "startOffset": 42149
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The framework of model equations is solved through the high resolution Total Variation Diminishing Non-Oscillatory Central Differencing (TVD-NOC) Scheme introduced by Nessyahu and Tadmor (1990) and commonly applied to this type of mass flow problems (Tai et al., 2002; Wang et al., 2004).",
+            "startOffset": 41880,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 33062,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The key points of the event documentation are outlined in Section 2.",
+            "startOffset": 32994,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41494,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Thereby, a user-defined entrainment coefficient CE (kg\u22121) is multiplied with the total (solid + fluid) momentum at each raster cell.",
+            "startOffset": 41362,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 40275,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 40239,
+                    "startOffset": 40218
+                }
+            },
+            "secId": "s0030",
+            "sentence": "r.avaflow further relies on a set of flow parameters (see Mergili et al., 2017a for a summary of input parameters).",
+            "startOffset": 40160,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 46487,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 46472,
+                    "startOffset": 46453
+                }
+            },
+            "secId": "s0035",
+            "sentence": "They are kept constant throughout the respective computational experiments, following the information provided by Evans et al. (2009) (see Table 2).",
+            "startOffset": 46339,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 67223,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "One could postulate that predictions of future mass flows can be conducted on the basis of back-calculated parameters of an earlier event in the same area, and of scenarios of the release volume and the type of material.",
+            "startOffset": 67003,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35981,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 35942,
+                    "startOffset": 35923
+                }
+            },
+            "secId": "s0020",
+            "sentence": "According to Evans et al. (2009), up to approx. 650 people were killed.",
+            "startOffset": 35910,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 36473,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Major transitions occurred (i) through the production of melt water from the initial ice content and the 1.8 million m3 water equivalent of the entrained snow; and (ii) through the gain in volume by uptake of 12.3 million m3 of glacial deposits, including water.",
+            "startOffset": 36211,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 54824,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The branch having overtopped Cerro de Aira reaches the town of Yungay at t \u2248 310 s, a longer time than the 180\u2013270 s inferred through reports and field evidence.",
+            "startOffset": 54663,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 53876,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "However, the simulated lateral branches of the flow proceeding in the southward direction were not at all observed; and some patches within the observed impact area in Zone C are not impacted according to the simulation.",
+            "startOffset": 53656,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 69252,
+            "parents": [],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 69167,
+                    "startOffset": 69139
+                },
+                "bb0215": {
+                    "endOffset": 69167,
+                    "startOffset": 69139
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The issue of threshold effects in mass flow simulation was recently highlighted by Mergili et al. (2017b, 2018), employing generic and real-world cases of landslide impact into a lake as examples.",
+            "startOffset": 69056,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 37991,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The subsequent debris flood reached the Pacific Ocean at a distance of 180 km.",
+            "startOffset": 37913,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 63562,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In theory, almost all of the parameters can be determined through experiments in the field or in the laboratory \u2013 in practice this is only feasible for many types of simple materials and conditions.",
+            "startOffset": 63364,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65262,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 65096,
+                    "startOffset": 65076
+                },
+                "bb0295": {
+                    "endOffset": 65006,
+                    "startOffset": 64981
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Even though, in theory, a systematic multi-parameter sensitivity and optimization campaign would be preferable (Saltelli and Annoni, 2010) and potentially useful approaches to perform such an analysis (e.g. Fischer et al., 2015) can be coupled to r.avaflow, such an analysis requires specific strategies (also for reducing the computational time) and goes beyond the scope of the present work.",
+            "startOffset": 64869,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 71681,
+            "parents": [],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 71653,
+                    "startOffset": 71642
+                },
+                "bb0025": {
+                    "endOffset": 71679,
+                    "startOffset": 71655
+                },
+                "bb0030": {
+                    "endOffset": 71679,
+                    "startOffset": 71655
+                }
+            },
+            "secId": "s0065",
+            "sentence": "More appropriate communication strategies would be essential to establish and maintain well-targeted management strategies of the risks associated to complex mass flows in the Cordillera Blanca and elsewhere in the world (Carey, 2005; Carey et al., 2012, 2014).",
+            "startOffset": 71420,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48095,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 48093,
+                    "startOffset": 48072
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Entrainment coefficient CE: CE is an empirical coefficient which is multiplied with the momentum of the flow in order to derive the entrainment rate at a given raster cell and time step (Mergili et al., 2017a).",
+            "startOffset": 47885,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 64464,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In the present work, the model parameters are optimized in terms of empirical adequacy against various reference parameters, possibly reducing equifinality issues.",
+            "startOffset": 64301,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35040,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 34992,
+                    "startOffset": 34973
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Consequently, we only give a general overview, referring to Evans et al. (2009) and the references therein for further details.",
+            "startOffset": 34913,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 42258,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The simulation outcomes are further evaluated against a user-defined observed impact area.",
+            "startOffset": 42168,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 51232,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Frontal velocities in this zone are in the range between 20 m s\u22121 and 50 m s\u22121.",
+            "startOffset": 51153,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 55688,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The performance indicators derived from the experiment R1970 are summarized in Table 5, with SPI = 0.85\u20130.88 depending on the travel time to Yungay used for reference.",
+            "startOffset": 55521,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 70351,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "However, a large aleatoric component of parameter uncertainty will most probably remain, so that parameter sets back-calculated from past events are not necessarily the key to the future.",
+            "startOffset": 70164,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 36858,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 36856,
+                    "startOffset": 36838
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The velocities estimated for the event vary over a considerable range: 27 m s\u22121 was suggested for the terminal part of Glacier 511, whereas the average velocity to R\u00edo Santa was given as 17 m s\u22121 and 37 m s\u22121 (see references in Evans et al., 2009).",
+            "startOffset": 36610,
+            "title": "The event of 10 January 1962"
+        },
+        {
+            "endOffset": 62626,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The associated internal and basal strength weakening provide a more realistic simulation, especially during the critical initial and propagation stages, and explain the exceptionally high and dynamically changing mobility of rock-ice avalanches.",
+            "startOffset": 62381,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 58147,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "We now focus on the deposition volume in zones E (VDE, debris cone of Ranrahirca) and F (VDF, Yungay branch).",
+            "startOffset": 58038,
+            "title": "Experiment S1970: sensitivity to basal friction and entrainment coefficient"
+        },
+        {
+            "endOffset": 66535,
+            "parents": [],
+            "refoffsets": {
+                "bb0080": {
+                    "endOffset": 66533,
+                    "startOffset": 66513
+                }
+            },
+            "secId": "s0065",
+            "sentence": "These effects, which appear due to more or less abrupt changes in the topography, are also related to the spatial resolution (computational or DTM), including e.g. curvature related accelerations (Fischer et al., 2012).",
+            "startOffset": 66316,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 70163,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "To a certain degree, the uncertainty in parameterization contains an epistemic component that can be reduced through the derivation of guiding parameter values for certain flow types and magnitudes.",
+            "startOffset": 69965,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32993,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 32992,
+                    "startOffset": 32973
+                },
+                "bb0135": {
+                    "endOffset": 32968,
+                    "startOffset": 32942
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Thereby we rely on the detailed description and topographic reconstruction of both events, mainly based on Hofmann and Patzelt (1983) and Evans et al. (2009).",
+            "startOffset": 32835,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45238,
+            "parents": [],
+            "refoffsets": {
+                "bb0340": {
+                    "endOffset": 45236,
+                    "startOffset": 45214
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The DEM is available with a 12 m posting from TanDEM-X acquisitions performed along ascending and descending orbits on 10 October 2013 and 24 January 2013, combined in order to minimize issues of layover and shadowing (Wegm\u00fcller et al., 2014).",
+            "startOffset": 44995,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 51286,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Lateral spreading reaches beyond the observed extent.",
+            "startOffset": 51233,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 37912,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The left part followed the R\u00edo Ranrahirca Valley, temporarily impounding the R\u00edo Santa.",
+            "startOffset": 37825,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 43577,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Five computational experiments are conducted and summarized in Table 3.",
+            "startOffset": 43506,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 54132,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "It proceeds down the Shacsha Valley and starts overtopping Cerro de Aira at t \u2248 220 s, from where it splits into two branches (profiles B and C in Fig. 8b).",
+            "startOffset": 53976,
+            "title": "Experiment R1970: back-calculation of the 1970 event"
+        },
+        {
+            "endOffset": 38779,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Estimated travel times in the range of 180\u2013270 s allowed us to constrain average flow velocities to the range of 50\u201385 m s\u22121.",
+            "startOffset": 38654,
+            "title": "The event of 31 May 1970"
+        },
+        {
+            "endOffset": 52534,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results of the computational experiments"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The simulated solid content of the deposit shows values around 65%.",
+            "startOffset": 52467,
+            "title": "Experiment R1962: back-calculation of the 1962 event"
+        },
+        {
+            "endOffset": 28595,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Gravitational mass movements starting at higher elevation may impact distant lower areas not only directly, but also through cascading effects sometimes involving water bodies or entrainment of basal material.",
+            "startOffset": 28386,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35180,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "In particular, we revisit those characteristics of the events which are of especial importance for the computational experiments performed.",
+            "startOffset": 35041,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 39029,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "r.avaflow has been designed for simulating the propagation of various types of geomorphic mass flows.",
+            "startOffset": 38928,
+            "title": "The simulation framework r.avaflow"
+        },
+        {
+            "endOffset": 35400,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "The 1962 and 1970 Huascar\u00e1n mass flow events"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Most importantly, we note that both events were complex in nature due to various flow transitions, excessive entrainment, and complex topographic conditions with overtopping of a >100 m\u2013high ridge during the 1970 event.",
+            "startOffset": 35181,
+            "title": "The Cordillera Blanca as the origin of complex mass flows"
+        },
+        {
+            "endOffset": 46338,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Also the initial conditions applied to the simulations are summarized in Table 4.",
+            "startOffset": 46257,
+            "title": "Computational experiments"
+        },
+        {
+            "endOffset": 71001,
+            "parents": [],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 70999,
+                    "startOffset": 70981
+                }
+            },
+            "secId": "s0065",
+            "sentence": "An important, yet challenging step consists in the identification of suitable parameter spaces that can be applied in such contexts (Krenn et al., 2016).",
+            "startOffset": 70848,
+            "title": "Discussion"
+        }
+    ],
+    "docId": "S0169555X18303350",
+    "metadata": {
+        "asjc": [
+            "1904"
+        ],
+        "authors": [
+            {
+                "email": "martin.mergili@boku.ac.at",
+                "first": "Martin",
+                "initial": "M.",
+                "last": "Mergili"
+            },
+            {
+                "email": null,
+                "first": "Bernhard",
+                "initial": "B.",
+                "last": "Frank"
+            },
+            {
+                "email": null,
+                "first": "Jan Thomas",
+                "initial": "J.T.",
+                "last": "Fischer"
+            },
+            {
+                "email": null,
+                "first": "Christian",
+                "initial": "C.",
+                "last": "Huggel"
+            },
+            {
+                "email": null,
+                "first": "Shiva P.",
+                "initial": "S.P.",
+                "last": "Pudasaini"
+            }
+        ],
+        "doi": "10.1016/j.geomorph.2018.08.032",
+        "firstpage": "15",
+        "issn": "0169555X",
+        "keywords": [
+            "Numerical simulation",
+            "Parameter optimization",
+            "Process chain",
+            "Rapid landslide"
+        ],
+        "lastpage": "28",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "EART"
+        ],
+        "title": "Computational experiments on the 1962 and 1970 landslide events at Huascar\u00e1n (Peru) with r.avaflow: Lessons learned for predictive mass flow simulations"
+    }
+}

@@ -1,0 +1,1461 @@
+{
+    "abstract": "This paper investigates the computational performance of S-CLAY1S constitutive model by varying its yield function equation. S-CLAY1S is an advanced anisotropic elasto-plastic model that has been developed based on the extension of conventional critical state theory. In addition to modified Cam-Clays hardening law, S-CLAY1S also accounts for inherent and evolving plastic anisotropy, interparticle bonding and degradation of bonds during plastic straining. A modified Newton-Raphson stress update algorithm has been adopted for the implementation of the model and it was found that the algorithms convergence performance is sensitive to the expression of the yield function. It is shown that for an elasto-plastic model which is developed based on the critical state theory, it is possible to improve the performance of the numerical implementation by changing the form of the yield function. The results of this work can provide a new perspective for computationally cost-effective implementation of complex constitutive models in finite element analysis that can yield in more efficient boundary value level simulations. \u00a9 2014 The Authors.",
+    "author_highlights": [
+        {
+            "endOffset": 84026,
+            "sentence": "An implicit algorithm is proposed for stress integration of S-CLAY1S constitutive model.",
+            "startOffset": 83938
+        },
+        {
+            "endOffset": 84104,
+            "sentence": "Computational accuracy and robustness of the new implementation is validated.",
+            "startOffset": 84027
+        },
+        {
+            "endOffset": 84206,
+            "sentence": "Influence of yield function equation form on numerical performance of the implementation is analysed.",
+            "startOffset": 84105
+        },
+        {
+            "endOffset": 84307,
+            "sentence": "It is verified that the efficiency of a complex model can be improved by straightforward techniques.",
+            "startOffset": 84207
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Graham"
+                },
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Noonan"
+                },
+                {
+                    "first": "K. V.",
+                    "initial": "K.V.",
+                    "last": "Lew"
+                }
+            ],
+            "doi": "10.1139/t83-058",
+            "firstpage": "502",
+            "issn": "00083674",
+            "lastpage": "516",
+            "pub_year": 1983,
+            "title": "Yield states and stress-strain relationships in a natural plastic clay.",
+            "volume": "20"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Minna",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                },
+                {
+                    "first": "Harald",
+                    "initial": "H.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "Simon J.",
+                    "initial": "S.J.",
+                    "last": "Wheeler"
+                },
+                {
+                    "first": "Mirva",
+                    "initial": "M.",
+                    "last": "Koskinen"
+                },
+                {
+                    "first": "Rachid",
+                    "initial": "R.",
+                    "last": "Zentar"
+                }
+            ],
+            "doi": "10.1061/(ASCE)1532-3641(2005)5:2(87)",
+            "firstpage": "87",
+            "issn": "15323641",
+            "lastpage": "97",
+            "pub_year": 2005,
+            "title": "Effect of anisotropy and destructuration on the behavior of Murro test embankment",
+            "volume": "5"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "Minna",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Wiltafsky"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Scharinger"
+                },
+                {
+                    "first": "H. F.",
+                    "initial": "H.F.",
+                    "last": "Schweiger"
+                }
+            ],
+            "doi": "10.1002/nag.507",
+            "firstpage": "953",
+            "issn": "03639061",
+            "lastpage": "982",
+            "pub_year": 2006,
+            "title": "Modelling the behaviour of an embankment on soft clay with different constitutive models",
+            "volume": "30"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "Abdulazim",
+                    "initial": "A.",
+                    "last": "Yildiz"
+                },
+                {
+                    "first": "Minna",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                },
+                {
+                    "first": "Harald",
+                    "initial": "H.",
+                    "last": "Krenn"
+                }
+            ],
+            "doi": "10.1061/(ASCE)1532-3641(2009)9:4(153)",
+            "firstpage": "153",
+            "issn": "15323641",
+            "lastpage": "168",
+            "pub_year": 2009,
+            "title": "Effect of anisotropy and destructuration on behavior of Haarajoki test embankment",
+            "volume": "9"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Castro"
+                },
+                {
+                    "first": "Minna",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                }
+            ],
+            "doi": "10.1139/T10-019",
+            "firstpage": "1127",
+            "issn": "00083674",
+            "lastpage": "1138",
+            "pub_year": 2010,
+            "title": "Numerical simulations of stone column installation",
+            "volume": "47"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "A. J.",
+                    "initial": "A.J.",
+                    "last": "Abbo"
+                },
+                {
+                    "first": "S. W.",
+                    "initial": "S.W.",
+                    "last": "Sloan"
+                }
+            ],
+            "doi": "10.1002/(SICI)1097-0207(19960530)39:10<1737::AID-NME927>3.0.CO;2-5",
+            "firstpage": "1737",
+            "issn": "00295981",
+            "lastpage": "1759",
+            "pub_year": 1996,
+            "title": "An automatic load stepping algorithm with error control",
+            "volume": "39"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                },
+                {
+                    "first": "R. L.",
+                    "initial": "R.L.",
+                    "last": "Taylor"
+                }
+            ],
+            "doi": "10.1016/0045-7825(85)90070-2",
+            "firstpage": "101",
+            "issn": "00457825",
+            "lastpage": "118",
+            "pub_year": 1985,
+            "title": "Consistent tangent operators for rate-independent elastoplasticity",
+            "volume": "48"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ortiz"
+                },
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                }
+            ],
+            "doi": "10.1002/nme.1620230303",
+            "firstpage": "353",
+            "issn": "00295981",
+            "lastpage": "366",
+            "pub_year": 1986,
+            "title": "An analysis of a new class of integration algorithms for elastoplastic constitutive relations",
+            "volume": "23"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Ronaldo I.",
+                    "initial": "R.I.",
+                    "last": "Borja"
+                }
+            ],
+            "doi": "10.1016/0045-7825(91)90256-6",
+            "firstpage": "225",
+            "issn": "00457825",
+            "lastpage": "240",
+            "pub_year": 1991,
+            "title": "Cam-Clay plasticity, Part II: Implicit integration of constitutive equation based on a nonlinear elastic stress predictor",
+            "volume": "88"
+        },
+        "bib18": null,
+        "bib19": null,
+        "bib2": null,
+        "bib20": {
+            "authors": [
+                {
+                    "first": "K. H.",
+                    "initial": "K.H.",
+                    "last": "Roscoe"
+                },
+                {
+                    "first": "A. N.",
+                    "initial": "A.N.",
+                    "last": "Schofield"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Thurairajah"
+                }
+            ],
+            "doi": "10.1680/geot.1963.13.3.211",
+            "firstpage": "211",
+            "issn": "00168505",
+            "lastpage": "240",
+            "pub_year": 1963,
+            "title": "Yielding of clays in states wetter than critical",
+            "volume": "13"
+        },
+        "bib21": null,
+        "bib22": {
+            "authors": [
+                {
+                    "first": "William M.",
+                    "initial": "W.M.",
+                    "last": "Coombs"
+                },
+                {
+                    "first": "Roger S.",
+                    "initial": "R.S.",
+                    "last": "Crouch"
+                }
+            ],
+            "doi": "10.1016/j.cma.2011.03.019",
+            "firstpage": "2297",
+            "issn": "00457825",
+            "lastpage": "2318",
+            "pub_year": 2011,
+            "title": "Algorithmic issues for three-invariant hyperplastic Critical State models",
+            "volume": "200"
+        },
+        "bib23": null,
+        "bib24": null,
+        "bib25": null,
+        "bib26": null,
+        "bib27": null,
+        "bib28": null,
+        "bib29": null,
+        "bib3": {
+            "authors": [
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Wheeler"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Naatanen"
+                }
+            ],
+            "firstpage": "33",
+            "lastpage": "40",
+            "pub_year": 1999,
+            "title": "Anisotropic hardening model for normally consolidated soft clays"
+        },
+        "bib30": null,
+        "bib31": {
+            "authors": [
+                {
+                    "first": "S. W.",
+                    "initial": "S.W.",
+                    "last": "Sloan"
+                },
+                {
+                    "first": "A. J.",
+                    "initial": "A.J.",
+                    "last": "Abbo"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Sheng"
+                }
+            ],
+            "doi": "10.1108/02644400110365842",
+            "firstpage": "121",
+            "issn": "02644401",
+            "lastpage": "154",
+            "pub_year": 2001,
+            "title": "Refined explicit integration of elastoplastic models with automatic error control",
+            "volume": "18"
+        },
+        "bib4": null,
+        "bib5": null,
+        "bib6": {
+            "authors": [
+                {
+                    "first": "M. C.R.",
+                    "initial": "M.C.R.",
+                    "last": "Davies"
+                },
+                {
+                    "first": "T. A.",
+                    "initial": "T.A.",
+                    "last": "Newson"
+                }
+            ],
+            "firstpage": "219",
+            "lastpage": "229",
+            "pub_year": 1993,
+            "title": "A critical state constitutive model for anisotropic soil"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Andrew J.",
+                    "initial": "A.J.",
+                    "last": "Whittle"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Kavvadas"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9410(1994)120:1(173)",
+            "firstpage": "173",
+            "issn": "07339410",
+            "lastpage": "198",
+            "pub_year": 1994,
+            "title": "Formulation of MIT-E3 constitutive model for overconsolidated clays",
+            "volume": "120"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Simon J.",
+                    "initial": "S.J.",
+                    "last": "Wheeler"
+                },
+                {
+                    "first": "Anu",
+                    "initial": "A.",
+                    "last": "N\u00e4\u00e4t\u00e4nen"
+                },
+                {
+                    "first": "Minna",
+                    "initial": "M.",
+                    "last": "Karstunen"
+                },
+                {
+                    "first": "Matti",
+                    "initial": "M.",
+                    "last": "Lojander"
+                }
+            ],
+            "doi": "10.1139/t02-119",
+            "firstpage": "403",
+            "issn": "00083674",
+            "lastpage": "418",
+            "pub_year": 2003,
+            "title": "An anisotropic elastoplastic model for soft clays",
+            "volume": "40"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Yannis F.",
+                    "initial": "Y.F.",
+                    "last": "Dafalias"
+                },
+                {
+                    "first": "Majid T.",
+                    "initial": "M.T.",
+                    "last": "Manzari"
+                },
+                {
+                    "first": "Achilleas G.",
+                    "initial": "A.G.",
+                    "last": "Papadimitriou"
+                }
+            ],
+            "doi": "10.1002/nag.524",
+            "firstpage": "1231",
+            "issn": "03639061",
+            "lastpage": "1257",
+            "pub_year": 2006,
+            "title": "SANICLAY: Simple anisotropic clay plasticity model",
+            "volume": "30"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 85724,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 85722,
+                    "startOffset": 85717
+                },
+                "bib2": {
+                    "endOffset": 85722,
+                    "startOffset": 85717
+                },
+                "bib3": {
+                    "endOffset": 85722,
+                    "startOffset": 85717
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It is a well-established fact in soil mechanics that the yield curves obtained from experimental tests (with triaxial or hollow cylinder apparatuses) on undisturbed samples of natural clays are inclined due to the inherent fabric anisotropy in the soil\u05f3s structure (e.g. [1\u20133]).",
+            "startOffset": 85446,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86634,
+            "parents": [],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 86633,
+                    "startOffset": 86630
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The consideration of anisotropy in this model is similar to an earlier version of the model called S-CLAY1 [8].",
+            "startOffset": 86523,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101088,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "At first stage, the verification of the implementation is performed by using an in-house developed integration point programme (IPP).",
+            "startOffset": 100955,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 90613,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 90447,
+                    "startOffset": 90443
+                },
+                "bib20": {
+                    "endOffset": 90493,
+                    "startOffset": 90489
+                },
+                "bib21": {
+                    "endOffset": 90612,
+                    "startOffset": 90608
+                }
+            },
+            "secId": "s0005",
+            "sentence": "More recently Pipatpongsa et al. have shown that the form of the MCC\u05f3s yield function influences the performance of their developed backward Euler stress update algorithm for the model [19]; and, in case of original Cam-Clay model [20] the success or failure of their semi-implicit implementation has also been dependant on the yield function\u05f3s form [21].",
+            "startOffset": 90258,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 108162,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Mohr\u2013Coulomb model is also used to represent the behaviour of the over-consolidated dry crust layer, assuming the following relevant parameter values: E=3000 kN/m2, \u03bd\u2032=0.2, \u03c6\u2032=37.1\u00b0, \u03c8\u2032=0\u00b0, c\u2032=2 kN/m2, and \u03b3=19 kN/m3.",
+            "startOffset": 107945,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 111761,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "However, they still provide a very good graphical glimpse of the return mapping algorithm function in different cases.",
+            "startOffset": 111643,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 88560,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This method is popular within the research community mainly due to its simplicity.",
+            "startOffset": 88478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91575,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Through model performance comparisons the most suitable formulation of the advanced anisotropic model is identified for its implementation.",
+            "startOffset": 91436,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106090,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "To compare the numerical performance of the implicit integration scheme described in the previous section at boundary value level, a relatively simple example is analysed with finite element method.",
+            "startOffset": 105892,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 90863,
+            "parents": [],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 90656,
+                    "startOffset": 90652
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In a separate work, Coombs and Crouch [22] have demonstrated the effects that alternative expressions of yield function has on the robustness and efficiency of a backward Euler stress integration method for a critical state based hyperplastic model.",
+            "startOffset": 90614,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97322,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The results of the dimensional analysis are summarised in Table 2 with SI units used in the analyses.",
+            "startOffset": 97221,
+            "title": "S-CLAY1S implementation"
+        },
+        {
+            "endOffset": 88318,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "There are generally two techniques to solve a constitutive model\u05f3s system of equations at a stress point, the explicit (incremental) method and the implicit (iterative) method.",
+            "startOffset": 88142,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88141,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The main problem for successful implementation of complex constitutive models in the finite element method is error control that is the result of adopting finite number of loading steps.",
+            "startOffset": 87955,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106945,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "A simplified soil profile is considered for the soft deposit underneath the embankment, which includes a 1 m deep over-consolidated dry crust followed by 29 m of soft Bothkennar clay.",
+            "startOffset": 106762,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 108749,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "refoffsets": {
+                "bib30": {
+                    "endOffset": 108671,
+                    "startOffset": 108667
+                }
+            },
+            "secId": "s0030",
+            "sentence": "It should also be added that for the example considered here, the initial state of stress is generated by adopting K0-procedure [30] where K0, which is the in-situ coefficient of earth pressure at rest, is 0.5.",
+            "startOffset": 108539,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 111642,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "It should be mentioned that these contours are plotted at the end of consolidation in each analysis and hence signify values only at the final time increment of the analyses.",
+            "startOffset": 111468,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 86841,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In both S-CLAY1 and S-CLAY1S models the initial anisotropy is assumed to be cross-anisotropic, which is a realistic assumption for normally consolidated clays deposited along the direction of consolidation.",
+            "startOffset": 86635,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107701,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The embankment is constructed in two steps; at each step 1 m of fill material is placed during 5 days.",
+            "startOffset": 107599,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 101653,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Depending on which form of the yield function is employed in the implementation, the convergence speed of the iterative scheme would vary as it depends on the degree of nonlinearity in the system of governing equations.",
+            "startOffset": 101434,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 106252,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The boundary value problem involves plane strain analysis of a hypothetical embankment constructed on a soft soil deposit with the properties of Bothkennar clay.",
+            "startOffset": 106091,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 87202,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "S-CLAY1S model is further extended to account for inter-particle bonding in natural soil\u05f3s structure, and subsequent destructuration of bonds when the soil is under plastic straining.",
+            "startOffset": 87019,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91435,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is also shown that the yield function form of the S-CLAY1S model can be presented with different alternative formulations; therefore, the corresponding solution algorithm results in different convergence speeds depending on which form of the yield function is used.",
+            "startOffset": 91167,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 111467,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For an enhanced evaluation of the MNR performance with different yield function forms, the error proportionalities within the plastic domain of Fig. 5 are presented in Figs. 6\u20138 using contour maps of normalised residuals and iteration numbers.",
+            "startOffset": 111224,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 112898,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For further comparison, the above finite element analysis has been repeated with tolerance values, RTOL and FTOL, relaxed once to 1\u00d710\u22126 and the other time to 1\u00d710\u22124.",
+            "startOffset": 112732,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 87954,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Particularly implementation of advanced constitutive models to solve boundary value problems requires integration algorithms that are not only stable, robust and accurate but also computationally efficient; because, in this case, the number of calculations involved per analysis increment is much higher than in the case of simple element level simulations for model validation.",
+            "startOffset": 87576,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89913,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 89859,
+                    "startOffset": 89855
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In this study the return mapping algorithm [15] has been utilised for integrating the S-CLAY1S model.",
+            "startOffset": 89812,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88886,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This problem usually results in limiting the application of an advanced constitutive model at practical level.",
+            "startOffset": 88776,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85997,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 85996,
+                    "startOffset": 85993
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Since consideration of full anisotropy in modelling soil\u05f3s behaviour is not practical due to the number of parameters involved, efforts have been mainly focused on the development of models with reduced number of parameters while maintaining the capacity of the model [4].",
+            "startOffset": 85725,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100688,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Bothkennar clay is a soft normally consolidated marine clay deposited on the Forth River Estuary which is located approximately midway between Glasgow and Edinburgh in Scotland.",
+            "startOffset": 100511,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 108932,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The existence of dry crust layer, modelled with a simple Mohr\u2013Coulomb model, ensures that all stress points with the critical state model S-CLAY1S start from a positive stress state.",
+            "startOffset": 108750,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 89352,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this method the computed stress state automatically satisfies the yield condition.",
+            "startOffset": 89267,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107008,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The groundwater table is located 1 m below the ground surface.",
+            "startOffset": 106946,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 107599,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The simulations have been done using 1696, 15-noded triangular elements with 12 stress points, and mesh-sensitivity studies have been performed to ensure the accuracy of the results.",
+            "startOffset": 107417,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 87467,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 87466,
+                    "startOffset": 87462
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The main advantages of S-CLAY1S model over other proposed anisotropic models are (i) its realistic K0 prediction, and most importantly (ii) the fact that model parameter values can be determined from standard laboratory tests using well-defined methodologies [10].",
+            "startOffset": 87203,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88775,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the main issue in an explicit algorithm is that its success largely relies on the size of the incremental load steps, therefore the results particularly at boundary value level, can be load step dependant.",
+            "startOffset": 88561,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107944,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The embankment which is assumed to be made of granular fill is modelled with a simple Mohr\u2013Coulomb model considering the following typical values for the embankment material: E=40,000 kN/m2, \u03bd\u2032=0.35, \u03c6\u2032=40\u00b0, \u03c8\u2032=0\u00b0, c\u2032=2 kN/m2, and \u03b3=20 kN/m3.",
+            "startOffset": 107702,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 103491,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Among them, Fig. 3(a)\u2013(c) represents triaxial undrained compression, undrained extension and isotropic compression conditions respectively, and Fig. 3(d) represents oedometer condition (one dimensional straining).",
+            "startOffset": 103278,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 97057,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Dimensional analysis of Eq. (7-a) is required to determine whether it is correct to use any of the three yield function forms, presented in Table 1, in the MNR algorithm.",
+            "startOffset": 96887,
+            "title": "S-CLAY1S implementation"
+        },
+        {
+            "endOffset": 108368,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The permeability, k, of the clay is assumed to be isotropic and equal to 2.5E-4 (m/day).",
+            "startOffset": 108280,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 89812,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However its application for advanced constitutive models is very difficult as it requires second order derivatives of the yield function.",
+            "startOffset": 89675,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86522,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 86396,
+                    "startOffset": 86392
+                },
+                "bib11": {
+                    "endOffset": 86520,
+                    "startOffset": 86513
+                },
+                "bib12": {
+                    "endOffset": 86520,
+                    "startOffset": 86513
+                },
+                "bib13": {
+                    "endOffset": 86520,
+                    "startOffset": 86513
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Among the developed anisotropic models, S-CLAY1S model [10] has been well-validated and accepted as a practical anisotropic model for simulating natural clays\u05f3 behaviour (e.g. [11\u201313]).",
+            "startOffset": 86337,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88477,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the explicit method the solution is approached using the previously known stress point\u05f3s response in order to approximate the nonlinear material behaviour.",
+            "startOffset": 88319,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 108538,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The FE analysis includes two construction phases followed by a consolidation phase that continues until full dissipation of excess pore pressures in the soft soil layer.",
+            "startOffset": 108369,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 101234,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The S-CLAY1S model subroutine is strain driven, i.e. known increments in strain are input to the model and the corresponding stresses are output.",
+            "startOffset": 101089,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 112034,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "From Figs. 6\u20138 it is generally observed that residual contour maps are somehow representing the mobilised slip surface due to loading (particularly in Cases II and III); in Fig. 8 related to Case III even the stress concentration below the embankment toe can be identified.",
+            "startOffset": 111761,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 112516,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Case I results in less residual values, i.e. less errors, over the plastic points; however that is accompanied with higher computational cost as in this particular snapshot for the majority of the points 13 stress integration iterations are needed (see Fig. 6).",
+            "startOffset": 112255,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 112254,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This could be expected given the fact that stress points along the slip surface are the more critical ones where the imposed stress distribution deviates significantly from the initial stress distribution in the ground.",
+            "startOffset": 112035,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 87575,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "With additional complexity of a constitutive model, comes additional computational cost for its application.",
+            "startOffset": 87467,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106761,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "It is assumed that the embankment is 2 m high, its width at the top is 10 m and the side slopes have a gradient of 1:2.",
+            "startOffset": 106642,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 108279,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The S-CLAY1S material parameters used for the Bothkennar clay are the same as those used for the stress point study.",
+            "startOffset": 108163,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 107306,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In terms of boundary conditions, the left and right boundaries of the model are fixed in horizontal direction and the bottom boundary is fixed in both horizontal and vertical directions.",
+            "startOffset": 107120,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 97220,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The first two terms of the Eq. (7-a) are strains and therefore dimensionless, hence the third term, i.e. the plastic strain increment, must also be dimensionless.",
+            "startOffset": 97058,
+            "title": "S-CLAY1S implementation"
+        },
+        {
+            "endOffset": 100891,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 100765,
+                    "startOffset": 100761
+                }
+            },
+            "secId": "s0025",
+            "sentence": "There is extensive laboratory data available for Bothkennar clay (e.g., [26]) which makes it possible to derive a consistent set of material parameters for the advanced constitutive model being studied.",
+            "startOffset": 100689,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 87018,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Both models account for the development or erasure of anisotropy if the subsequent loading produces irrecoverable strains, resulting a generalised plastic anisotropy condition.",
+            "startOffset": 86842,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90103,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 90102,
+                    "startOffset": 90095
+                },
+                "bib17": {
+                    "endOffset": 90102,
+                    "startOffset": 90095
+                },
+                "bib18": {
+                    "endOffset": 90016,
+                    "startOffset": 90012
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Previously, the applications of the return mapping algorithm to the modified Cam-Clay (MCC) model [18], through implicit and semi-implicit integration schemes, were investigated in [16,17].",
+            "startOffset": 89914,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86336,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 86213,
+                    "startOffset": 86210
+                },
+                "bib6": {
+                    "endOffset": 86334,
+                    "startOffset": 86329
+                },
+                "bib7": {
+                    "endOffset": 86334,
+                    "startOffset": 86329
+                },
+                "bib8": {
+                    "endOffset": 86334,
+                    "startOffset": 86329
+                },
+                "bib9": {
+                    "endOffset": 86334,
+                    "startOffset": 86329
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In order to capture the effects of anisotropy on soil\u05f3s behaviour, a number of researcher have proposed anisotropic elasto-plastic constitutive models involving an inclined yield curve that is either fixed (e.g. [5]) or is able to rotate in order to simulate the development or erasure of anisotropy during plastic straining (e.g. [6\u20139]).",
+            "startOffset": 85998,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90257,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It was found that the algorithm is capable of efficiently solving the nonlinear system of equations of the MCC model even during large strain increments.",
+            "startOffset": 90104,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89039,
+            "parents": [],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 88981,
+                    "startOffset": 88977
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Nevertheless, there are modifications such as adopting an automatic substepping technique [14] to improve the performance of an explicit implementation.",
+            "startOffset": 88887,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106479,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 106426,
+                    "startOffset": 106422
+                }
+            },
+            "secId": "s0030",
+            "sentence": "This is a good case for assessing the performance of the integration algorithm with different yield function forms due to the significant rotation of principal stresses [29] particularly in areas directly below the embankment.",
+            "startOffset": 106253,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 89498,
+            "parents": [],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 89497,
+                    "startOffset": 89493
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Also it does not need the computation of the intersection with the yield surface as the stress state changes from elastic to elasto-plastic [17].",
+            "startOffset": 89353,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89674,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The implicit method is particularly attractive if the model is to be used for practical simulations, which is mainly due to the fact that it is much more stable and efficient.",
+            "startOffset": 89499,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106641,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The S-CLAY1S model has been implemented into PLAXIS finite element programme as a user-defined soil model in order to be used for the boundary value level study.",
+            "startOffset": 106480,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 90995,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this paper a new Modified Newton\u2013Raphson stress update scheme is employed for the numerical implementation of the S-CLAY1S model.",
+            "startOffset": 90863,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100510,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "A set of parameter values for the S-CLAY1S constitutive model representing a well-known soft clay, namely Bothkennar clay, is selected in order to demonstrate the computational performance of the model implementation (see Table 3).",
+            "startOffset": 100279,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 89266,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 89098,
+                    "startOffset": 89094
+                },
+                "bib16": {
+                    "endOffset": 89265,
+                    "startOffset": 89261
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the implicit or so-called return mapping algorithm [15] the constitutive model\u05f3s governing equations are treated nonlinearly and are solved in an iterative manner until the drift from the yield surface is small enough [16].",
+            "startOffset": 89040,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112732,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Towards Case II and Case III the errors become more widely distributed between maximum and minimum amounts (see Figs. 7 and 8), and the required MNR iterations in the plastic domain reduces considerably in Case III.",
+            "startOffset": 112517,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 113081,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For all nine analyses, the MNR iteration numbers and the values of residuals were monitored at a single stress point inside element number 359 within the plastic domain (see Fig. 5).",
+            "startOffset": 112899,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 101433,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Thus, by specifying strain increments and the material parameters, the corresponding stress output can be used for evaluating model performance without the need for any finite element (FE) software.",
+            "startOffset": 101235,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 91166,
+            "parents": [],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 91165,
+                    "startOffset": 91161
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The scheme has proven to have very high efficiency, robustness and accuracy for integrating the constitutive relationship during incremental elasto-plastic response [23].",
+            "startOffset": 90996,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 103277,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Stress return paths for cases representing more commonly observed conditions in soil tests are presented in Fig. 3.",
+            "startOffset": 103162,
+            "title": "At stress point level"
+        },
+        {
+            "endOffset": 107416,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Taking advantage of the symmetry of the problem, just half of the geometry is considered for the FE analysis.",
+            "startOffset": 107307,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 107120,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "A schematic view of the geometry of the embankment and the soft soil profile underneath it are shown in Fig. 4.",
+            "startOffset": 107009,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 113144,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The results of all FE analyses are summarised in Tables 10\u201312.",
+            "startOffset": 113082,
+            "title": "At boundary value level"
+        },
+        {
+            "endOffset": 100955,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Computational performance"
+                }
+            ],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 100954,
+                    "startOffset": 100947
+                },
+                "bib27": {
+                    "endOffset": 100954,
+                    "startOffset": 100947
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The details of parameter determination can be found in [26,27].",
+            "startOffset": 100892,
+            "title": "At stress point level"
+        }
+    ],
+    "docId": "S0168874X14001243",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "mohammad.rezania@nottingham.ac.uk",
+                "first": "Mohammad",
+                "initial": "M.",
+                "last": "Rezania"
+            },
+            {
+                "email": "nallathamby.siva@ngi.no",
+                "first": "Nallathamby",
+                "initial": "N.",
+                "last": "Sivasithamparam"
+            },
+            {
+                "email": "m.mousavi-nezhad@warwick.ac.uk",
+                "first": "Mohaddeseh",
+                "initial": "M.",
+                "last": "Mousavi Nezhad"
+            }
+        ],
+        "doi": "10.1016/j.finel.2014.06.009",
+        "firstpage": "74",
+        "issn": "0168874X",
+        "keywords": [
+            "Constitutive modelling",
+            "Elasto-plasticity",
+            "Numerical simulation",
+            "Stress integration"
+        ],
+        "lastpage": "83",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "On the stress update algorithm of an advanced critical state elasto-plastic model and the effect of yield function equation"
+    }
+}

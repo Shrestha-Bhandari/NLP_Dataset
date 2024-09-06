@@ -1,0 +1,2715 @@
+{
+    "abstract": "Conditional Restricted Boltzmann Machine (CRBM) is a promising candidate for a multidimensional system modeling that can learn a probability distribution over a set of data. It is a specific type of an artificial neural network with one input (visible) and one output (hidden) layer. Recently published works demonstrate that CRBM is a suitable mechanism for modeling multidimensional time series such as human motion, workload characterization, city traffic analysis. The process of learning and inference of these systems relies on linear algebra functions like matrix\u2013matrix multiplication, and for higher data sets, they are very compute-intensive. In this paper, we present a configurable framework for CRBM based workloads for arbitrary large models. We show how to accelerate the learning process of CRBM with FPGAs and OpenCL, and we conduct an extensive scalability study for different model sizes and system configurations. We show significant improvement in performance/Watt for large models and batch sizes (from 1.51x up to 5.71x depending on the host configuration) when we use FPGA and OpenCL for the acceleration, and limited benefits for small models comparing to the state-of-the-art CPU solution.",
+    "author_highlights": [
+        {
+            "endOffset": 27013,
+            "sentence": "A parametrizable framework for CRBM applications based on OpenCL for FPGA.",
+            "startOffset": 26939
+        },
+        {
+            "endOffset": 27045,
+            "sentence": "Implementation of GEMM on FPGA.",
+            "startOffset": 27014
+        },
+        {
+            "endOffset": 27120,
+            "sentence": "Optimization of the CPU (Host) code to support usage of FPGA GEMM designs.",
+            "startOffset": 27046
+        },
+        {
+            "endOffset": 27161,
+            "sentence": "CRBM based pplication scalability study.",
+            "startOffset": 27121
+        }
+    ],
+    "bib_entries": {
+        "b1": null,
+        "b10": {
+            "authors": [
+                {
+                    "first": "Srikanth",
+                    "initial": "S.",
+                    "last": "Sridharan"
+                }
+            ],
+            "doi": "10.1088/1742-6596/664/9/092023",
+            "issn": "17426588",
+            "pub_year": 2015,
+            "title": "Evaluation of 'OpenCL for FPGA' for data acquisition and acceleration in high energy physics",
+            "volume": "664"
+        },
+        "b11": null,
+        "b12": null,
+        "b13": {
+            "authors": [
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Yinger"
+                },
+                {
+                    "first": "Eriko",
+                    "initial": "E.",
+                    "last": "Nurvitadhi"
+                },
+                {
+                    "first": "Davor",
+                    "initial": "D.",
+                    "last": "Capalija"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Ling"
+                },
+                {
+                    "first": "Debbie",
+                    "initial": "D.",
+                    "last": "Marr"
+                },
+                {
+                    "first": "Srivatsan",
+                    "initial": "S.",
+                    "last": "Krishnan"
+                },
+                {
+                    "first": "Duncan",
+                    "initial": "D.",
+                    "last": "Moss"
+                },
+                {
+                    "first": "Suchit",
+                    "initial": "S.",
+                    "last": "Subhaschandra"
+                }
+            ],
+            "doi": "10.1109/FPT.2017.8280155",
+            "firstpage": "259",
+            "lastpage": "262",
+            "pub_year": 2018,
+            "title": "Customizable FPGA OpenCL matrix multiply design template for deep neural networks",
+            "volume": "2018-"
+        },
+        "b14": null,
+        "b15": {
+            "authors": [
+                {
+                    "first": "Duncan J.M.",
+                    "initial": "D.J.M.",
+                    "last": "Moss"
+                },
+                {
+                    "first": "Srivatsan",
+                    "initial": "S.",
+                    "last": "Krishnan"
+                },
+                {
+                    "first": "Eriko",
+                    "initial": "E.",
+                    "last": "Nurvitadhi"
+                },
+                {
+                    "first": "Piotr",
+                    "initial": "P.",
+                    "last": "Ratuszniak"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Jaewoong",
+                    "initial": "J.",
+                    "last": "Sim"
+                },
+                {
+                    "first": "Asit",
+                    "initial": "A.",
+                    "last": "Mishra"
+                },
+                {
+                    "first": "Debbie",
+                    "initial": "D.",
+                    "last": "Marr"
+                },
+                {
+                    "first": "Suchit",
+                    "initial": "S.",
+                    "last": "Subhaschandra"
+                },
+                {
+                    "first": "Philip H.W.",
+                    "initial": "P.H.W.",
+                    "last": "Leong"
+                }
+            ],
+            "doi": "10.1145/3174243.3174258",
+            "firstpage": "107",
+            "lastpage": "116",
+            "pub_year": 2018,
+            "title": "A customizable matrix multiplication framework for the intel HARPv2 Xeon+FPGA platform a deep learning case study",
+            "volume": "2018-"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Daniel L.",
+                    "initial": "D.L.",
+                    "last": "Ly"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Chow"
+                }
+            ],
+            "doi": "10.1145/1508128.1508140",
+            "firstpage": "73",
+            "lastpage": "82",
+            "pub_year": 2009,
+            "title": "A high-performance FPGA architecture for restricted machines"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Bingzhe",
+                    "initial": "B.",
+                    "last": "Li"
+                },
+                {
+                    "first": "M. Hassan",
+                    "initial": "M.H.",
+                    "last": "Najafi"
+                },
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Lilja"
+                }
+            ],
+            "doi": "10.1109/ASAP.2015.7245709",
+            "firstpage": "68",
+            "issn": "10636862",
+            "lastpage": "69",
+            "pub_year": 2015,
+            "title": "An FPGA implementation of a Restricted Boltzmann Machine classifier using stochastic bit streams",
+            "volume": "2015-"
+        },
+        "b18": null,
+        "b19": {
+            "authors": [
+                {
+                    "first": "Sang Kyun",
+                    "initial": "S.K.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Lawrence C.",
+                    "initial": "L.C.",
+                    "last": "McAfee"
+                },
+                {
+                    "first": "Peter L.",
+                    "initial": "P.L.",
+                    "last": "McMahon"
+                },
+                {
+                    "first": "Kunle",
+                    "initial": "K.",
+                    "last": "Olukotun"
+                }
+            ],
+            "doi": "10.1109/FPL.2009.5272262",
+            "firstpage": "367",
+            "lastpage": "372",
+            "pub_year": 2009,
+            "title": "A highly scalable restricted Boltzmann machine FPGA implementation"
+        },
+        "b2": {
+            "authors": [
+                {
+                    "first": "Graham W.",
+                    "initial": "G.W.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Geoffrey E.",
+                    "initial": "G.E.",
+                    "last": "Hinton"
+                },
+                {
+                    "first": "Sam T.",
+                    "initial": "S.T.",
+                    "last": "Roweis"
+                }
+            ],
+            "firstpage": "1025",
+            "issn": "15324435",
+            "lastpage": "1068",
+            "pub_year": 2011,
+            "title": "Two distributed-state models for generating high-dimensional time series",
+            "volume": "12"
+        },
+        "b20": null,
+        "b21": null,
+        "b22": {
+            "authors": [
+                {
+                    "first": "Lok Won",
+                    "initial": "L.W.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1109/TNNLS.2017.2665555",
+            "firstpage": "1441",
+            "issn": "2162237X",
+            "lastpage": "1453",
+            "pmid": "28287986",
+            "pub_year": 2018,
+            "title": "DeepX: Deep learning accelerator for restricted boltzmann machine artificial neural networks",
+            "volume": "29"
+        },
+        "b23": null,
+        "b24": {
+            "authors": [
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Cong"
+                },
+                {
+                    "first": "Zhenman",
+                    "initial": "Z.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lo"
+                },
+                {
+                    "first": "Hanrui",
+                    "initial": "H.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Jingxian",
+                    "initial": "J.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Shaochong",
+                    "initial": "S.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1109/FCCM.2018.00023",
+            "firstpage": "93",
+            "lastpage": "96",
+            "pub_year": 2018,
+            "title": "Understanding Performance Differences of FPGAs and GPUs"
+        },
+        "b25": null,
+        "b3": {
+            "authors": [
+                {
+                    "first": "David Buchaca",
+                    "initial": "D.B.",
+                    "last": "Prats"
+                },
+                {
+                    "first": "Josep Lluis",
+                    "initial": "J.L.",
+                    "last": "Berral"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Carrera"
+                }
+            ],
+            "doi": "10.1109/TNSM.2017.2786047",
+            "firstpage": "142",
+            "issn": "19324537",
+            "lastpage": "155",
+            "pub_year": 2018,
+            "title": "Automatic Generation of Workload Profiles Using Unsupervised Learning Pipelines",
+            "volume": "15"
+        },
+        "b4": null,
+        "b5": null,
+        "b6": {
+            "authors": [
+                {
+                    "first": "Utku",
+                    "initial": "U.",
+                    "last": "Aydonat"
+                },
+                {
+                    "first": "Shane",
+                    "initial": "S.",
+                    "last": "O'Connell"
+                },
+                {
+                    "first": "Davor",
+                    "initial": "D.",
+                    "last": "Capalija"
+                },
+                {
+                    "first": "Andrew C.",
+                    "initial": "A.C.",
+                    "last": "Ling"
+                },
+                {
+                    "first": "Gordon R.",
+                    "initial": "G.R.",
+                    "last": "Chiu"
+                }
+            ],
+            "doi": "10.1145/3020078.3021738",
+            "firstpage": "55",
+            "lastpage": "64",
+            "pub_year": 2017,
+            "title": "An OpenCL\u2122 deep learning accelerator on Arria 10"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Jialiang",
+                    "initial": "J.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1145/3020078.3021698",
+            "firstpage": "25",
+            "lastpage": "34",
+            "pub_year": 2017,
+            "title": "Improving the performance of OpenCL-based FPGA accelerator for convolutional neural network"
+        },
+        "b8": {
+            "authors": [
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Cadenelli"
+                },
+                {
+                    "first": "Zoran",
+                    "initial": "Z.",
+                    "last": "Jaks\u0306i\u0107"
+                },
+                {
+                    "first": "Jord\u00e0",
+                    "initial": "J.",
+                    "last": "Polo"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Carrera"
+                }
+            ],
+            "doi": "10.1016/j.future.2018.11.028",
+            "firstpage": "148",
+            "issn": "0167739X",
+            "lastpage": "159",
+            "pub_year": 2019,
+            "title": "Considerations in using OpenCL on GPUs and FPGAs for throughput-oriented genomics workloads",
+            "volume": "94"
+        },
+        "b9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 30561,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In essence, it is a set of C libraries that provide two different things:",
+            "startOffset": 30488,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40300,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 40164,
+                    "startOffset": 40157
+                },
+                "b20": {
+                    "endOffset": 40164,
+                    "startOffset": 40157
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In [19,20] authors prove that for the learning phase of CRBM, the precision of 16-bit is enough, and investigation in that direction is promising.",
+            "startOffset": 40154,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45047,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In the text that comes, we use the terminology according to Fig. 3.",
+            "startOffset": 44980,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 63112,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Even for the \u201ctiny\u201d model for one thread configuration, the FPGA version shows better results than CPU only version, but for \u201ctiny\u201d model those improvements disappear very fast as the number of thread increase to 3.",
+            "startOffset": 62897,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 57170,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "After the synthesis, the compilation report shows the kernel frequency of around 299 MHz (for both versions, the traditional one and the one with Host Pipes).",
+            "startOffset": 57012,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 64935,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The paper proposes the usage of host pipes to reduce data transfer overhead between CPU and FPGA when there is a data dependency (as in the case of CRBM learning process).",
+            "startOffset": 64764,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 50768,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 50749,
+                    "startOffset": 50745
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "The functions that we execute on the CPU (blocking, sigmoid, transposition) are parallelized for a certain number of threads using OpenMPv3.0 [23] programming model.",
+            "startOffset": 50603,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 29834,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Although FPGAs have existed for decades, their application in the areas of High-Performance Computing (HPC) and Deep Learning (DL) is relatively new.",
+            "startOffset": 29685,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28369,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Thus, the acceleration of learning is essential.",
+            "startOffset": 28321,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29685,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Because of that, to exploit the advantage of an accelerator over a CPU-only state-of-the-art solution, a holistic approach in analyzing the application is necessary.",
+            "startOffset": 29520,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38383,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "We split these works into two categories.",
+            "startOffset": 38342,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45814,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "A PE also sends processed input data to the adjacent PEs (to the right PE which receives a block from the input A, and to the bottom PE which receives the data block of the input B).",
+            "startOffset": 45632,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 60000,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In this analysis, we do not include this effect in our performance numbers because we are not interested in some specific use-case of CRBM.",
+            "startOffset": 59861,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 42909,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 42908,
+                    "startOffset": 42905
+                }
+            },
+            "secId": "sec4",
+            "sentence": "The Gibbs sampling of CRBM, described in Section 2, is the most time-consuming part of CRBM learning process [3].",
+            "startOffset": 42796,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 53224,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "They achieve similar results in terms of execution time and energy consumption, but more importantly, they showed that in order to efficiently use FPGAs, the GPU OpenCL code needs to be rewritten entirely.",
+            "startOffset": 53019,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 39066,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Besides, they do not state the matrix dimensions for their benchmarks.",
+            "startOffset": 38996,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 44786,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Fig. 2 presents a block scheme of the solution.",
+            "startOffset": 44739,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 49922,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The portion of execution time that goes on communication between CPU and FPGA card is the primary issue.",
+            "startOffset": 49818,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 32776,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In summary, our contributions are:",
+            "startOffset": 32742,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41348,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Unlike other papers, we focused our work on four major points:",
+            "startOffset": 41286,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 51920,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Host pipe allows data transfer from FPGA to CPU as results arrive.",
+            "startOffset": 51854,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 48387,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Since we want to achieve a maximal number of GFLOPs of GEMM on FPGA, to relax the compiler, and reduce the on-chip memory needed for an efficient implementation, we perform blocking part on CPU, i.e., CPU takes the input data and transform the matrices so that FPGA can process the data as they arrive sequentially.",
+            "startOffset": 48072,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 62418,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "We perform scalability analysis of the solution, and we present how the application behaves when it uses only a limited number of cores.",
+            "startOffset": 62282,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 66113,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Up to 15% in the reduction of the execution time, we achieved when we used host pipes for data transfer between FPGA and CPU.",
+            "startOffset": 65988,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34904,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The rest of the paper is organized as follows.",
+            "startOffset": 34858,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47095,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "When the multiplication of one row of superblocks of matrix A and one column of superblocks of matrix B finishes, the results are transferred to DRAINC kernels.",
+            "startOffset": 46935,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 32259,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 32257,
+                    "startOffset": 32253
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Knowing the real requirements of workloads is especially important when they should work in an environment with hard power or timing constraints (e.g., environment on the edge [11]).",
+            "startOffset": 32077,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39613,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 39612,
+                    "startOffset": 39608
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Also, in our work, we are more interested to see the benefit in the learning process of some DL mechanism rather than inference what was the case in [15].",
+            "startOffset": 39459,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62896,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "When compared with one-thread application improvements in FPGA goes up to 5.5x for \u201chuge\u201d model.",
+            "startOffset": 62800,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 54615,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "If that happens, our Host code version that uses Host Pipe feature would demand minimal change (if any) to use GPU accelerator.",
+            "startOffset": 54488,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 38228,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 38160,
+                    "startOffset": 38156
+                }
+            },
+            "secId": "sec3",
+            "sentence": "A very good survey paper [12] summarizes the current state-of-the-art in the domain of DL and AI.",
+            "startOffset": 38131,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 42969,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Thus, our initial idea is to offload this sampling to FPGA.",
+            "startOffset": 42910,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 44537,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Obviously, the usage of 16-bit floating-point data in this implementation would leave much more resources for GEMM on FPGA.",
+            "startOffset": 44414,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 56309,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "However, as the size increases, the effects of pipeline warming up disappears, and performance improves.",
+            "startOffset": 56205,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 54811,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The most critical parameters of the system we present in Table 2.",
+            "startOffset": 54746,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 46070,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "All these kernels exchange data over separate channels, an OpenCL mechanism which is, in essence, a FIFO buffer.",
+            "startOffset": 45958,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 51853,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "To speed up the process of communication between FPGA to CPU, we use a host pipe.",
+            "startOffset": 51772,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 27617,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "They are a specific type of an artificial neural network (ANN) with two layers.",
+            "startOffset": 27538,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56075,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "These results are reasonable because the pipeline of the systolic structure has to be warmed up at the beginning.",
+            "startOffset": 55962,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 44979,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "We use the standard technique of dividing matrices into the blocks (tiles) to improve utilization of adjacent data, which maximizes the performance.",
+            "startOffset": 44831,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 56682,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The number is almost constant, and it is about 220 GFLOPS, which is close to the theoretical maximum that this CPU can achieve.",
+            "startOffset": 56555,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 47246,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Its dimensions are 160 \u00d7 256.",
+            "startOffset": 47217,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 52885,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It has been already shown that writing efficient OpenCL code for a device that would map well both for FPGA or GPU is hard.",
+            "startOffset": 52762,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 56773,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "By limiting the execution for a smaller number of cores, performance drops proportionally.",
+            "startOffset": 56683,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 38834,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 38723,
+                    "startOffset": 38719
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The authors of [14] claim the performance of almost 0.9 TFLOPs on the Arria 10 1150 FPGA, the same one that we used in this paper.",
+            "startOffset": 38704,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 38130,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Research on accelerating of HPC and DL workloads with FPGAs and GPUs is a very actual topic.",
+            "startOffset": 38038,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 44830,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "We implement a systolic algorithm for GEMM.",
+            "startOffset": 44787,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 49750,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Algorithm 1 shows application details.",
+            "startOffset": 49712,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 60171,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Instead, we want to show how the application behaves for different configurations (CPU version and FPGA accelerated one) for the same model size and system configuration.",
+            "startOffset": 60001,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 35361,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Restricted Boltzmann Machine (RBM) is a type of artificial neural network that can learn a probability distribution over its set of inputs.",
+            "startOffset": 35222,
+            "title": "Conditional restricted Boltzmann machine"
+        },
+        {
+            "endOffset": 43868,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In this work, we use 32-bit floating-point presentation of the data.",
+            "startOffset": 43800,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 50188,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 50132,
+                    "startOffset": 50128
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "In theory, we could solve this dependency by processing the row of blocks when it is ready ([22] presents an architecture that leverages this approach).",
+            "startOffset": 50036,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 44100,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In this work, we want to evaluate the application for different model sizes.",
+            "startOffset": 44024,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 46358,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "All the blocks that we process on every PEs form a superblock which dimension depends on the number of PEs.",
+            "startOffset": 46251,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 43371,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 43370,
+                    "startOffset": 43365
+                },
+                "b3": {
+                    "endOffset": 43370,
+                    "startOffset": 43365
+                }
+            },
+            "secId": "sec4",
+            "sentence": "These calculations comprise two essential components: a General matrix\u2013matrix Multiplication (GEMM) that we execute in both Forward and Backward pass, and the computation of the activation function in the Forward step [2,3].",
+            "startOffset": 43147,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 44413,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Since there is not much data how many bits are enough for specific model size, we have taken a \u201cskeptical\u201d approach in these implementations and evaluations, and we use 32-bit floating-point data.",
+            "startOffset": 44217,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 47692,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Board Support Package of the Intel A10 Dev Kit that we used in the implementation has support for host pipe.",
+            "startOffset": 47584,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 55094,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "According to the size of the model, we named them from the smallest to the largest: \u201ctiny, small, medium, large and huge\u201d.",
+            "startOffset": 54972,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 59305,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "We measured execution time and total energy of the system for the different configurations, and model sizes.",
+            "startOffset": 59197,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 65189,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We performed an in-depth scalability study of the application for different configurations (number of threads that runs on CPU, batch sizes, Gibbs samples, and model sizes).",
+            "startOffset": 65016,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33841,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The framework that we present here is highly scalable and easily portable to any newer version of the FPGA accelerator board that supports OpenCL.",
+            "startOffset": 33695,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53018,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 52914,
+                    "startOffset": 52911
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "For instance, authors in [8] discuss usage of FPGA and GPU for an acceleration of data-intensive memory-bounded genomic application.",
+            "startOffset": 52886,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 66234,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "However, these improvements go on the cost of overall energy consumption.",
+            "startOffset": 66161,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65726,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Smaller models and batch sizes favor CPU-MKL version because of the two reasons.",
+            "startOffset": 65646,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 54971,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We evaluate the training of the models of different sizes.",
+            "startOffset": 54913,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 48765,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "However, the compilation crashes at some point.",
+            "startOffset": 48718,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 29519,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Otherwise, the benefit of code acceleration would be significantly lower due to non-optimized communication between a host and an accelerator, i.e., an accelerator or a host can be idle a significant percentage of time due to inadequate data transfer mechanism.",
+            "startOffset": 29258,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47300,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Lastly, we implement the kernel WRITEC in two flavors:",
+            "startOffset": 47246,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 65824,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "First, the total number of GFLOPS that FPGA achieves is lower when matrix dimensions are smaller.",
+            "startOffset": 65727,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 55142,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Table 3 shows the configuration of every model.",
+            "startOffset": 55095,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 27902,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 27830,
+                    "startOffset": 27827
+                },
+                "b3": {
+                    "endOffset": 27861,
+                    "startOffset": 27858
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Recent publications demonstrate that CRBM is a right candidate for modeling of multidimensional time-series such as human motion [2], workload characterization [3], road traffic analysis/predictions, etc.",
+            "startOffset": 27698,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28203,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Implementation of this algorithm relies on linear algebra functions like vector\u2013matrix and matrix\u2013matrix multiplication.",
+            "startOffset": 28083,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40409,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, since we also tested larger models in our paper, in this paper, we only evaluated 32-bit solutions.",
+            "startOffset": 40301,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46741,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For more straightforward implementation, we fix the inner dimension of the superblock to 256 elements.",
+            "startOffset": 46639,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 66160,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This technique reduces communication overhead.",
+            "startOffset": 66114,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 29257,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "More precisely, the data transfer between the Host application (that typically runs on a general-purpose CPU) and an accelerator has to be taken into account as well.",
+            "startOffset": 29091,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36793,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The learning process of a CRBM can be generalized in the following five steps:",
+            "startOffset": 36715,
+            "title": "Conditional restricted Boltzmann machine"
+        },
+        {
+            "endOffset": 47216,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Finally, WRITEC kernel receives the data from the last DRAINC kernel, and it writes the output superblock to the memory.",
+            "startOffset": 47096,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 48543,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The critical limiting resource is the number of DSP Blocks (84% used).",
+            "startOffset": 48473,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 44216,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "It is a known fact that for larger models, to achieve the desired accuracy, we need a higher precision of the data.",
+            "startOffset": 44101,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 65438,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "For instance, when compared to the one-thread state-of-the-art CPU-MKL implementation, we achieve 5.6x improvement in the execution time.",
+            "startOffset": 65301,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65646,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This number reduces when we make comparisons with the CPU version with the higher number of threads (e.g., for six CPU threads version improvements reach 1.55x in the execution time and 1.61x in the energy).",
+            "startOffset": 65439,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65015,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "As far as we know, this is the first paper that proposes and evaluate all this.",
+            "startOffset": 64936,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 48472,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Table 1 presents resource utilization for the FPGA that we use in our implementation.",
+            "startOffset": 48387,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 57519,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Maybe we could achieve a slightly higher frequency if we set different compilation seed or a different number of processing elements for GEMM structure.",
+            "startOffset": 57367,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 31074,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Although much effort has been invested in the development of OpenCL compilers to make FPGA technology more accessible to people with a little background on it, many improvements are still necessary.",
+            "startOffset": 30876,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56204,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "In other words, for \u201ctiny\u201d model the last PEs of the matrix multiplier does not start working before we load the whole matrices.",
+            "startOffset": 56076,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 59860,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "It should be clear that the algorithm convergence, in general, depends on the batch size, and it might need more epoch to reach the final equilibrium when the batch size is smaller.",
+            "startOffset": 59679,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 43799,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Since we implemented the learning part of a CRBM, data precision is fundamental.",
+            "startOffset": 43719,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 48717,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "We tried to compile FPGA design with the configuration for a higher number of PEs (we thought that compiler might use ALMs for the implementation of multipliers and adders).",
+            "startOffset": 48544,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 46251,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To increase the performance of PEs, we implement double buffering (ping-pong) at the input and the output, so multiplication and accumulation happen in parallel with data transfer.",
+            "startOffset": 46071,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 52265,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Overall benefits of this approach we evaluate in Section 5.",
+            "startOffset": 52206,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 31620,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 31619,
+                    "startOffset": 31614
+                },
+                "b6": {
+                    "endOffset": 31619,
+                    "startOffset": 31614
+                },
+                "b7": {
+                    "endOffset": 31619,
+                    "startOffset": 31614
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Nowadays, the research on the OpenCL for FPGA development is mostly focused on the acceleration of (Convolutional) Deep Neural Networks (DNN), especially their inference part [5\u20137].",
+            "startOffset": 31439,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50542,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In any case, some improvements are possible.",
+            "startOffset": 50498,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 33977,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We perform in-depth scalability study in terms of batch size, number of Gibbs samples and model size, as well as the number of threads.",
+            "startOffset": 33842,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38342,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Mentioning all these papers goes beyond the scope of this work, so here we cite just the most significant for us.",
+            "startOffset": 38229,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49817,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Although the algorithm is simple, some problems are hard to solve.",
+            "startOffset": 49751,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 28916,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These accelerators provide a higher number of GFLOP/s when compared to CPU, and potentially any ML (DL) application that based on General Matrix Multiplication (GEMM) could benefit from using it.",
+            "startOffset": 28721,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33694,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As far as we know, this is the first paper that describes an implementation of (Conditional) Restricted Boltzmann Machines using FPGA and OpenCL.",
+            "startOffset": 33549,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39458,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, differently from our work, they show results with smaller data types (16 and 8 bits), and they use the approach to accelerate the inference part of some convolutional neural networks.",
+            "startOffset": 39266,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46517,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "We implement the design on the Arria 10 1150 FPGA, which provides enough resources for this structure size.",
+            "startOffset": 46410,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 52517,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "OpenCL is a programming model that we use for writing programs for heterogeneous platforms that consist CPU (usually called a Host) and accelerator (which can be GPU, DSP or FPGA).",
+            "startOffset": 52337,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 34414,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For large models, we observe performance improvements from 1.51x to 5.51x when we compare results with the state-of-the-art CPU implementations compiled for a different number of threads.",
+            "startOffset": 34227,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56554,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Dashed lines show the performance of GEMM when executed on a 6-core CPU that we have in our workstation when we use highly optimized state-of-the-art Intel Library for Linear Algebra (MKL).",
+            "startOffset": 56365,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 31439,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Also, orchestrating their execution in the manner that the whole system gets utilized as much as possible is a separate problem but equally important when designing an application.",
+            "startOffset": 31259,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54416,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "At the moment of writing this paper, we were not aware of any GPU or DSP device that offers the feature of Host Pipes.",
+            "startOffset": 54298,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 31258,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The compilation of OpenCL kernels for FPGA guarantees the correct execution of the code, but achieving a maximal performance is not a trivial task at the current stage of development.",
+            "startOffset": 31075,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44023,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 43888,
+                    "startOffset": 43881
+                },
+                "b20": {
+                    "endOffset": 43888,
+                    "startOffset": 43881
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "Although in [19,20] authors show that 16-bit floating-point data could be enough for CRBM learning, those works investigate performance on smaller models.",
+            "startOffset": 43869,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 32390,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this work, we present a parametrizable framework for implementation of CRBM based applications accelerated with FPGA and OpenCL.",
+            "startOffset": 32259,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43672,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "We implement the entire design with OpenCL, i.e., we used OpenCL for two purposes: (1) to perform GEMM on FPGA and (2) as an interface between CPU and FPGA accelerator.",
+            "startOffset": 43504,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 54105,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The host code is pretty much general.",
+            "startOffset": 54068,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 28456,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For large datasets and model dimensions, these applications are very compute-intensive.",
+            "startOffset": 28369,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59406,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b25": {
+                    "endOffset": 59364,
+                    "startOffset": 59360
+                }
+            },
+            "secId": "sec5.2",
+            "sentence": "For energy measurement, we used \u201cWattsup\u201d power meter [25] to collect real power data of the system.",
+            "startOffset": 59306,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 54298,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Besides the part that is responsible for starting and monitoring the kernel execution, the rest of the code (copying data to the device, updating weights, etc.) should work without any change.",
+            "startOffset": 54106,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 64763,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We implemented kernels that perform GEMM on FPGA, and we showed how to optimize the host application that runs on CPU to speed up the process of Gibbs sampling, which is a dominant part of the learning process.",
+            "startOffset": 64553,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 66376,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Also, increasing the number of Gibbs samples for gradient computation scales better with FPGA versions in terms of energy and execution time.",
+            "startOffset": 66235,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34533,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Reduction in energy consumption is even higher and goes from 1.61x to 5.71x for the same baselines and configurations.",
+            "startOffset": 34415,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44739,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Accordingly, we could achieve a higher number of operations per second in FPGA, which would (without any doubt) benefit the total execution time of the FPGA solution over the corresponding CPU version.",
+            "startOffset": 44538,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 35547,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It is a form of a bipartite graph where nodes of one part are input, usually referred to as a visible layer, and nodes of another part are output, commonly called hidden layer (Fig. 1).",
+            "startOffset": 35362,
+            "title": "Conditional restricted Boltzmann machine"
+        },
+        {
+            "endOffset": 39854,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the second category, we put the papers whose primary objective is the implementation of (C)RBM with FPGA.",
+            "startOffset": 39746,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55711,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "On Fig. 5, we show the performance of GEMM on FPGA.",
+            "startOffset": 55660,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 37472,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As in any other DL applications, we define different algorithms based on their batch size:",
+            "startOffset": 37382,
+            "title": "Conditional restricted Boltzmann machine"
+        },
+        {
+            "endOffset": 50602,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Fig. 4 shows a block diagram of the Gibbs sampling process.",
+            "startOffset": 50543,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 30487,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 30391,
+                    "startOffset": 30388
+                }
+            },
+            "secId": "sec1",
+            "sentence": "OpenCL [4] is one approach for designing HPC and DL applications when we use FPGAs for their acceleration.",
+            "startOffset": 30381,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49601,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Implementing sigmoid in FPGA would consume its hardware resources.",
+            "startOffset": 49535,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 52205,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "However, reading the data on the CPU side at slower rate could backpressure FPGA execution.",
+            "startOffset": 52114,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 55786,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "We show the results for different configurations and different batch size.",
+            "startOffset": 55712,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 28720,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To improve the performance of these algorithms or to reduce the overall energy consumption.",
+            "startOffset": 28629,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54745,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For the evaluation of the proposal, we used a Workstation with one discrete FPGA \u2013 the Arria 10 Development kit.",
+            "startOffset": 54633,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 65300,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The proposed solution has better performance than the state-of-the-art CPU-MKL implementation for large models.",
+            "startOffset": 65189,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34995,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 2 we give a theoretical background of Conditional Restricted Boltzmann Machine.",
+            "startOffset": 34905,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50263,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "However, that would mean transferring smaller chunks between FPGA and CPU.",
+            "startOffset": 50189,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 55961,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "We see that performance of the Matrix Multiplication goes from very poor 130 GFLOPS for \u201ctiny\u201d model and batch size 160 up to 650 GFLOPs for \u201chuge\u201d model and 2560 batch size.",
+            "startOffset": 55787,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 30381,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Because of that, some alternative approaches as High-Level Synthesis (HLS) emerged to offer a faster design time at the cost of some performance penalty.",
+            "startOffset": 30228,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35181,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finally, in Section 6 we draw conclusions.",
+            "startOffset": 35139,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59538,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Sampling interval was 1 s.",
+            "startOffset": 59512,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 46409,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In our configuration, all PEs form a 5 \u00d7 8 matrix.",
+            "startOffset": 46359,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 52113,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In theory, this reduces the execution time of the application because no separate data transfer of the output is necessary, i.e., the FPGA execution runs in parallel with output data transfer.",
+            "startOffset": 51921,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 54913,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We compiled the application and accelerator design, with Intel OpenCL compiler for FPGA version 18.0.",
+            "startOffset": 54812,
+            "title": "System evaluation"
+        },
+        {
+            "endOffset": 66533,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Lastly, using OpenCL for FPGA besides it shortens the design time, it opens the possibility of using the code that is applicable for different architectures.",
+            "startOffset": 66376,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 47583,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Host pipe is a relatively new thing that Intel introduced in their SDK from version 17.1.",
+            "startOffset": 47494,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 50035,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Because of data dependency between the Forward and the Backward Gibbs sample, double buffering is not an option.",
+            "startOffset": 49923,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 49711,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Since sigmoid is calculated only once at the output of the Forward step, we execute this function on the CPU.",
+            "startOffset": 49602,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 38704,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 38521,
+                    "startOffset": 38517
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In [13], the authors propose some optimization for sparse matrices, but since there is not much data about the potential sparsity of CRBM models, we did not focus our work in that direction.",
+            "startOffset": 38514,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 54487,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Of course, there is a possibility that some will appear in the future.",
+            "startOffset": 54417,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 34707,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, for small CRBM models and batch sizes, we observe a significant loss in the performance because the data transfer between the CPU and FPGA dominates execution time.",
+            "startOffset": 34534,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35138,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4 we describe our system solution and in Section 5 we present performance and energy numbers.",
+            "startOffset": 35034,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31873,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 31765,
+                    "startOffset": 31759
+                },
+                "b8": {
+                    "endOffset": 31765,
+                    "startOffset": 31759
+                },
+                "b9": {
+                    "endOffset": 31765,
+                    "startOffset": 31759
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Although some interesting works that leverage these techniques for the acceleration of HPC applications appear from time to time (like in [8\u201310]); more effort should be put in this direction in order to understand the real potential of OpenCL for FPGA.",
+            "startOffset": 31621,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64552,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In this paper, we presented a parametrizable framework for implementation CRBM based workloads accelerated with FPGA and OpenCL.",
+            "startOffset": 64424,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65988,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Second FPGA and CPU are stalled a significant percentage of the time because of CPU\u2013FPGA communication and data dependency between steps of Gibbs sampling process.",
+            "startOffset": 65825,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 32742,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "At first, we implement matrix multiplication kernels with OpenCL and compile it for Arria 10 FPGA board, and then we show how to optimize the host code of a CRBM based application to support FPGA accelerated version.",
+            "startOffset": 32526,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57772,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "However, testing all the configurations for a various seed to find the solution that can improve performance couple of percents, we do not see very useful, especially if we know that the whole process of compilation for this design can last up to 10 h.",
+            "startOffset": 57520,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 56365,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "It reaches saturation at 650 GFLOPs for \u201clarge\u201d inputs.",
+            "startOffset": 56310,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 38514,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the first category, we put the most recent research works that propose an efficient solution for matrix multiplication on FPGA.",
+            "startOffset": 38384,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 39148,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 39073,
+                    "startOffset": 39069
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In [15] authors present a framework for matrix-multiply for Intel HARPv2 platform.",
+            "startOffset": 39066,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 47942,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Instead to write the whole data to the board local memory and after the full processing finishes, transfer all the data traditionally with \u201cclEnqueueReadBuffer\u201d function, WRITEC sends the result directly to the CPU as the data arrives via host pipe.",
+            "startOffset": 47693,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 62564,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "This kind of analysis is useful if someone wants to use just a part of the CPU cores for CRBM learning and another piece for another application.",
+            "startOffset": 62419,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 57012,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "It is essential to show what are the maximal performance that can be achieved by CPU and FPGA for GEMM before anything since this comparison gives a critical insight what level of performance improvement we can expect for the application.",
+            "startOffset": 56774,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 27537,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It can learn a probability distribution over a set of data, and its application in system modeling and prediction is under research primarily in the area of unsupervised learning.",
+            "startOffset": 27358,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27697,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Usually, authors name the input \u201cvisible layer,\u201d and the output \u201chidden layer\u201d.",
+            "startOffset": 27618,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62695,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "So we configured the application to run for a different number of threads on CPU, and we present results on the following figures.",
+            "startOffset": 62565,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 29090,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "A big issue, on the other hand, for the usage of the heterogeneous architectures in the workload acceleration, is the communication between the different parts of the system.",
+            "startOffset": 28916,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39746,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Since the systolic architectures map well for FPGA, most of these works adopt that approach for matrix multiplication implementation.",
+            "startOffset": 39613,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48072,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "As far as we know, this is the first application of the host pipe mechanism in the FPGA acceleration of some GEMM based workload.",
+            "startOffset": 47943,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 59511,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "We used a simple script that performs sampling of the power consumption when the application is running.",
+            "startOffset": 59407,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 30227,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, the design and verification of those projects are very demanding, and they consume a significant amount of time.",
+            "startOffset": 30106,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48821,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Accordingly, we accepted this configuration as optimal.",
+            "startOffset": 48766,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 32076,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Application characterizations are critical since they offer valuable insights to the Cloud/Data-Center/Supercomputer architects about the system requirements at the early stage before they get deployed.",
+            "startOffset": 31874,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38995,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, it is not clear if they used OpenCL for the implementation, or they use some RTL language to optimize the design and achieve these performance numbers.",
+            "startOffset": 38835,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40153,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 40101,
+                    "startOffset": 40097
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Although there is a paper whose primary focus is the acceleration of the inference part of CRBM [18], the majority try to speed up the learning process.",
+            "startOffset": 40001,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 32526,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For the acceleration part, we improve the performance of the learning part of the CRBM as we observed that it dominates over inference.",
+            "startOffset": 32391,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50939,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Besides, we use a separate thread for copying data between CPU and the FPGA board and to start GEMM execution on FPGA to run in parallel when there is no data dependency.",
+            "startOffset": 50769,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 35033,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 3 we present related work.",
+            "startOffset": 34996,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43503,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, we first present an implementation of GEMM multiplication on FPGA, and then we describe the whole CRBM application.",
+            "startOffset": 43371,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 62799,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Fig. 8 shows the results when the batch size is 1280, but the numbers are similar for other batch sizes.",
+            "startOffset": 62695,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 28082,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In essence, the learning process of CRBMs, as in other Deep Neural Networks (DNN), uses a gradient descent algorithm where weights are updated continuously in an iterative process.",
+            "startOffset": 27902,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28320,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 28225,
+                    "startOffset": 28222
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Previous research [3] proved that the learning process of a (C)RBM is much longer and dominates over inference time.",
+            "startOffset": 28204,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43146,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "To do this, we first divide it into two steps: A Forward step that calculates the values of the hidden layer and a Backward pass that computes the numbers of the visible layer.",
+            "startOffset": 42970,
+            "title": "System implementation"
+        },
+        {
+            "endOffset": 59678,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Fig. 6 shows the Execution Time of the CPU version of the CRBM application and FPGA accelerated version for different models and batch size.",
+            "startOffset": 59538,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 50498,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Moving smaller chunks of data over PCIe leads to the lower PCIe bandwidth utilization, and potential benefits of that implementation get mitigated due to the slower transfer of data, so in our system, this is not a very good solution.",
+            "startOffset": 50264,
+            "title": "CRBM learning algorithm"
+        },
+        {
+            "endOffset": 27357,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 27267,
+                    "startOffset": 27262
+                },
+                "b2": {
+                    "endOffset": 27267,
+                    "startOffset": 27262
+                },
+                "b3": {
+                    "endOffset": 27267,
+                    "startOffset": 27262
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Conditional Restricted Boltzmann Machine (CRBM) [1\u20133] is a Machine Learning (ML) mechanism that attracts significant attention in recent years.",
+            "startOffset": 27214,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46638,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Since we use 32-bit floating-point data, the limitation comes from the number of the multipliers that Arria 10 FPGA has.",
+            "startOffset": 46518,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 39265,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 39189,
+                    "startOffset": 39185
+                }
+            },
+            "secId": "sec3",
+            "sentence": "They state a lower performance than [14], possibly because of smaller resources available on FPGA for this platform.",
+            "startOffset": 39149,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57277,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The maximal clock frequency that Arria 10 FPGA can achieve is 450 MHz, according to Intel\u2019s documentation.",
+            "startOffset": 57171,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 28628,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Because of that, nowadays many proposals try to leverage technologies such as General Purpose Graphical Processor Units (GPGPUs) or Field Programmable Gate Arrays (FPGAs).",
+            "startOffset": 28457,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52762,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Although the goal of this paper is not to compare different technologies and to discuss which one is better for our CRBM application, we present some essential notes about generality and applicability of our solution to the other architectures.",
+            "startOffset": 52518,
+            "title": "Considerations on using this approach with other type of accelerators"
+        },
+        {
+            "endOffset": 29946,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Traditionally, people have used some Hardware Description Languages (VHDL or Verilog) to implement FPGA design.",
+            "startOffset": 29835,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34858,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Because of the data dependency, FPGA stays idle for a considerable portion of the time, which increases the overall execution time of the application.",
+            "startOffset": 34708,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40520,
+            "parents": [],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 40417,
+                    "startOffset": 40413
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In [20] authors reached similar conclusions to ours: the FPGA has limited capability to speed up these models.",
+            "startOffset": 40410,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45957,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The border PEs receive data from FEEDA and FEEDB kernels, and the first FEEDA and FEEDB kernels collect data from the LOADA and LOADB modules.",
+            "startOffset": 45815,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 30105,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Programming FPGA with these languages allows fine-tuning of the logic, and in conjunction with placement and timing constraints, achieves optimal performance.",
+            "startOffset": 29947,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46935,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "System implementation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "So when the data pipeline is full, the system receives and process a superblock of the input matrix A which sizes are 160 \u00d7 256 and a superblock of the input matrix B which sizes are 256 \u00d7 256.",
+            "startOffset": 46742,
+            "title": "General Matrix Multiplication (GEMM) on FPGA"
+        },
+        {
+            "endOffset": 34227,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Moreover, some conclusions that we draw here overcome the scope of CRBM acceleration, and they are relevant for any application based on GEMM that uses discrete FPGA for acceleration, especially when there is data dependency between input and output.",
+            "startOffset": 33977,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62278,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Combining power and time numbers in the overall energy consumption, we obtained plots presented on Fig. 7.",
+            "startOffset": 62172,
+            "title": "CRBM application results"
+        },
+        {
+            "endOffset": 57366,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "System evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "However, this number is tough to reach, principally when we use some HLS tool as OpenCL.",
+            "startOffset": 57278,
+            "title": "GEMM performance"
+        },
+        {
+            "endOffset": 66708,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Although more efforts have to be put in order to make a fully portable solution for CRBM for different accelerators (GPU, DSP), this work is a step forward in that direction.",
+            "startOffset": 66534,
+            "title": "Conclusion"
+        }
+    ],
+    "docId": "S0167739X19313676",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "zoran.jaksic@bsc.es",
+                "first": "Zoran",
+                "initial": "Z.",
+                "last": "Jak\u0161i\u0107"
+            },
+            {
+                "email": "nicola.cadenelli@bsc.es",
+                "first": "Nicola",
+                "initial": "N.",
+                "last": "Cadenelli"
+            },
+            {
+                "email": "david.buchaca@bsc.es",
+                "first": "David Buchaca",
+                "initial": "D.B.",
+                "last": "Prats"
+            },
+            {
+                "email": "jorda.polo@bsc.es",
+                "first": "Jord\u00e0",
+                "initial": "J.",
+                "last": "Polo"
+            },
+            {
+                "email": "josep.berral@bsc.es",
+                "first": "Josep Llu\u00eds",
+                "initial": "J.L.",
+                "last": "Berral Garcia"
+            },
+            {
+                "email": "david.carrera@bsc.es",
+                "first": "David Carrera",
+                "initial": "D.C.",
+                "last": "Perez"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.10.025",
+        "firstpage": "201",
+        "issn": "0167739X",
+        "keywords": [
+            "ANN",
+            "CRBM",
+            "FPGA",
+            "GEMM",
+            "OpenCL",
+            "Time-series"
+        ],
+        "lastpage": "211",
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "A highly parameterizable framework for Conditional Restricted Boltzmann Machine based workloads accelerated with FPGAs and OpenCL"
+    }
+}

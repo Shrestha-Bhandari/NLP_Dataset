@@ -1,0 +1,2823 @@
+{
+    "abstract": "This paper provides a comprehensive performance analysis of parametric and non-parametric machine learning classifiers including a deep feed-forward multi-layer perceptron (MLP) network on two variants of improved Concept Vector Space (iCVS) model. In the first variant, a weighting scheme enhanced with the notion of concept importance is used to assess weight of ontology concepts. Concept importance shows how important a concept is in an ontology and it is automatically computed by converting the ontology into a graph and then applying one of the Markov based algorithms. In the second variant of iCVS, concepts provided by the ontology and their semantically related terms are used to construct concept vectors in order to represent the document into a semantic vector space. We conducted various experiments using a variety of machine learning classifiers for three different models of document representation. The first model is a baseline concept vector space (CVS) model that relies on an exact/partial match technique to represent a document into a vector space. The second and third model is an iCVS model that employs an enhanced concept weighting scheme for assessing weights of concepts (variant 1), and the acquisition of terms that are semantically related to concepts of the ontology for semantic document representation (variant 2), respectively. Additionally, a comparison between seven different classifiers is performed for all three models using precision, recall, and F1 score. Results for multiple configurations of deep learning architecture are obtained by varying the number of hidden layers and nodes in each layer, and are compared to those obtained with conventional classifiers. The obtained results show that the classification performance is highly dependent upon the choice of a classifier, and that the Random Forest, Gradient Boosting, and Multilayer Perceptron are among the classifiers that performed rather well for all three models.",
+    "bib_entries": {
+        "b1": null,
+        "b10": {
+            "authors": [
+                {
+                    "first": "Charalampos",
+                    "initial": "C.",
+                    "last": "Bratsas"
+                },
+                {
+                    "first": "Vassilis",
+                    "initial": "V.",
+                    "last": "Koutkias"
+                },
+                {
+                    "first": "Evangelos",
+                    "initial": "E.",
+                    "last": "Kaimakamis"
+                },
+                {
+                    "first": "Panagiotis",
+                    "initial": "P.",
+                    "last": "Bamidis"
+                },
+                {
+                    "first": "Nicos",
+                    "initial": "N.",
+                    "last": "Maglaveras"
+                }
+            ],
+            "doi": "10.1109/IEMBS.2007.4353158",
+            "firstpage": "3794",
+            "issn": "05891019",
+            "lastpage": "3797",
+            "pmid": "18002824",
+            "pub_year": 2007,
+            "title": "Ontology-based vector space model and fuzzy query expansion to retrieve knowledge on medical computational problem solutions"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Pablo",
+                    "initial": "P.",
+                    "last": "Castells"
+                },
+                {
+                    "first": "Miriam",
+                    "initial": "M.",
+                    "last": "Fern\u00e1ndez"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Vallet"
+                }
+            ],
+            "doi": "10.1109/TKDE.2007.22",
+            "firstpage": "261",
+            "issn": "10414347",
+            "lastpage": "272",
+            "pub_year": 2007,
+            "title": "An adaptation of the vector-space model for ontology-based information retrieval",
+            "volume": "19"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Shuang",
+                    "initial": "S.",
+                    "last": "Deng"
+                },
+                {
+                    "first": "Hong",
+                    "initial": "H.",
+                    "last": "Peng"
+                }
+            ],
+            "doi": "10.1109/WI.2006.65",
+            "firstpage": "473",
+            "lastpage": "476",
+            "pub_year": 2006,
+            "title": "Document classification based on support vector machine using a concept vector model"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Zenun",
+                    "initial": "Z.",
+                    "last": "Kastrati"
+                },
+                {
+                    "first": "Ali Shariq",
+                    "initial": "A.S.",
+                    "last": "Imran"
+                },
+                {
+                    "first": "Sule Yildirim",
+                    "initial": "S.Y.",
+                    "last": "Yayilgan"
+                }
+            ],
+            "doi": "10.1109/SITIS.2015.102",
+            "firstpage": "240",
+            "lastpage": "245",
+            "pub_year": 2015,
+            "title": "An Improved Concept Vector Space Model for Ontology Based Classification"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Gang",
+                    "initial": "G.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Juanzi",
+                    "initial": "J.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Ling",
+                    "initial": "L.",
+                    "last": "Feng"
+                },
+                {
+                    "first": "Kehong",
+                    "initial": "K.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1007/978-3-540-88564-1-3",
+            "firstpage": "33",
+            "issn": "03029743",
+            "lastpage": "49",
+            "pub_year": 2008,
+            "title": "Identifying potentially important concepts and relations in an ontology",
+            "volume": "5318"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "Nayat",
+                    "initial": "N.",
+                    "last": "Sanchez-Pi"
+                },
+                {
+                    "first": "Luis",
+                    "initial": "L.",
+                    "last": "Mart\u00ed"
+                },
+                {
+                    "first": "Ana Cristina Bicharra",
+                    "initial": "A.C.B.",
+                    "last": "Garcia"
+                }
+            ],
+            "doi": "10.1007/978-3-319-01854-6_22",
+            "firstpage": "211",
+            "issn": "21945357",
+            "lastpage": "220",
+            "pub_year": 2014,
+            "title": "Text classification techniques in oil industry applications",
+            "volume": "239"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Xi Quan",
+                    "initial": "X.Q.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Na",
+                    "initial": "N.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Ye",
+                    "initial": "Y.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "De Ran",
+                    "initial": "D.R.",
+                    "last": "Kong"
+                }
+            ],
+            "doi": "10.1109/SMAP.2008.17",
+            "firstpage": "147",
+            "lastpage": "152",
+            "pub_year": 2008,
+            "title": "General framework for text classification based on domain ontology"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "Xiao Dong",
+                    "initial": "X.D.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Ning",
+                    "initial": "N.",
+                    "last": "Yang"
+                }
+            ],
+            "doi": "10.1109/FSKD.2007.432",
+            "firstpage": "627",
+            "lastpage": "631",
+            "pub_year": 2007,
+            "title": "Ontology-based automatic classification and ranking for web documents",
+            "volume": "3"
+        },
+        "b18": null,
+        "b19": null,
+        "b2": null,
+        "b20": {
+            "authors": [
+                {
+                    "first": "Ali Shariq",
+                    "initial": "A.S.",
+                    "last": "Imran"
+                },
+                {
+                    "first": "Faouzi Alaya",
+                    "initial": "F.A.",
+                    "last": "Cheikh"
+                }
+            ],
+            "firstpage": "333",
+            "issn": "22195491",
+            "lastpage": "337",
+            "pub_year": 2010,
+            "title": "Blind image quality metric for blackboard lecture images"
+        },
+        "b21": {
+            "authors": [
+                {
+                    "first": "Jianzhuang",
+                    "initial": "J.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Wenqing",
+                    "initial": "W.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Yupeng",
+                    "initial": "Y.",
+                    "last": "Tian"
+                }
+            ],
+            "firstpage": "325",
+            "lastpage": "327",
+            "pub_year": 1991,
+            "title": "Automatic thresholding of gray-level pictures using two-dimensional Otsu method"
+        },
+        "b22": null,
+        "b23": {
+            "authors": [
+                {
+                    "first": "Ali Shariq",
+                    "initial": "A.S.",
+                    "last": "Imran"
+                },
+                {
+                    "first": "Sukalpa",
+                    "initial": "S.",
+                    "last": "Chanda"
+                },
+                {
+                    "first": "Faouzi Alaya",
+                    "initial": "F.A.",
+                    "last": "Cheikh"
+                },
+                {
+                    "first": "Katrin",
+                    "initial": "K.",
+                    "last": "Franke"
+                },
+                {
+                    "first": "Umapada",
+                    "initial": "U.",
+                    "last": "Pal"
+                }
+            ],
+            "doi": "10.1109/SITIS.2012.33",
+            "firstpage": "155",
+            "lastpage": "160",
+            "pub_year": 2012,
+            "title": "Cursive handwritten segmentation and recognition for instructional videos"
+        },
+        "b24": null,
+        "b25": null,
+        "b26": {
+            "authors": [
+                {
+                    "first": "Lawrence",
+                    "initial": "L.",
+                    "last": "Page"
+                },
+                {
+                    "first": "Sergey",
+                    "initial": "S.",
+                    "last": "Brin"
+                }
+            ],
+            "firstpage": "107",
+            "issn": "13891286",
+            "lastpage": "117",
+            "pub_year": 1998,
+            "title": "The anatomy of a large-scale hypertextual Web search engine",
+            "volume": "30"
+        },
+        "b27": {
+            "authors": [
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "White"
+                },
+                {
+                    "first": "Padhraic",
+                    "initial": "P.",
+                    "last": "Smyth"
+                }
+            ],
+            "doi": "10.1145/956750.956782",
+            "firstpage": "266",
+            "lastpage": "275",
+            "pub_year": 2003,
+            "title": "Algorithms for estimating relative importance in networks"
+        },
+        "b28": null,
+        "b29": null,
+        "b3": {
+            "authors": [
+                {
+                    "first": "Prabhakar",
+                    "initial": "P.",
+                    "last": "Raghavan"
+                }
+            ],
+            "firstpage": "635",
+            "issn": "07308078",
+            "pub_year": 2003,
+            "title": "Extracting and Exploiting Structure in Text Search"
+        },
+        "b4": null,
+        "b5": {
+            "authors": [
+                {
+                    "first": "Sharifullah",
+                    "initial": "S.",
+                    "last": "Khan"
+                },
+                {
+                    "first": "Muhammad",
+                    "initial": "M.",
+                    "last": "Safyan"
+                }
+            ],
+            "doi": "10.1016/j.jksuci.2014.03.010",
+            "firstpage": "247",
+            "issn": "13191578",
+            "lastpage": "257",
+            "pub_year": 2014,
+            "title": "Semantic matching in hierarchical ontologies",
+            "volume": "26"
+        },
+        "b6": {
+            "authors": [
+                {
+                    "first": "Mostafa",
+                    "initial": "M.",
+                    "last": "Keikha"
+                },
+                {
+                    "first": "Ahmad",
+                    "initial": "A.",
+                    "last": "Khonsari"
+                },
+                {
+                    "first": "Farhad",
+                    "initial": "F.",
+                    "last": "Oroumchian"
+                }
+            ],
+            "doi": "10.1016/j.knosys.2008.06.002",
+            "firstpage": "67",
+            "issn": "09507051",
+            "lastpage": "71",
+            "pub_year": 2009,
+            "title": "Rich document representation and classification: An analysis",
+            "volume": "22"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Abdalraouf",
+                    "initial": "A.",
+                    "last": "Hassan"
+                },
+                {
+                    "first": "Ausif",
+                    "initial": "A.",
+                    "last": "Mahmood"
+                }
+            ],
+            "doi": "10.1109/ACCESS.2018.2814818",
+            "firstpage": "13949",
+            "issn": "21693536",
+            "lastpage": "13957",
+            "pub_year": 2018,
+            "title": "Convolutional Recurrent Deep Learning Model for Sentence Classification",
+            "volume": "6"
+        },
+        "b8": null,
+        "b9": {
+            "authors": [
+                {
+                    "first": "Nayat",
+                    "initial": "N.",
+                    "last": "Sanchez-Pi"
+                },
+                {
+                    "first": "Luis",
+                    "initial": "L.",
+                    "last": "Mart\u00ed"
+                },
+                {
+                    "first": "Ana Cristina",
+                    "initial": "A.C.",
+                    "last": "Bicharra Garcia"
+                }
+            ],
+            "doi": "10.1016/j.jal.2015.09.008",
+            "firstpage": "48",
+            "issn": "15708683",
+            "lastpage": "58",
+            "pub_year": 2016,
+            "title": "Improving ontology-based text classification: An occupational health and security application",
+            "volume": "17"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 55754,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The idea behind Markov based algorithms is representing the graph as a stochastic process, more concretely as a first-order Markov chain where the importance for a given vertex is defined as the fraction of time spent traversing that vertex for an infinitely long time in a random walk over the vertices.",
+            "startOffset": 55450,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 60338,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.7",
+            "sentence": "In essence, a document represented via concept vector space is fed into the classifier to build a prediction model that can be used to classify a new unseen document.",
+            "startOffset": 60172,
+            "title": "Document classification"
+        },
+        {
+            "endOffset": 60888,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "A real-world domain ontology called INFUSE ontology is used for computing concept importance.",
+            "startOffset": 60795,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 64271,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Linear Support Vector Machine contains a fixed size of parameters represented by the weight coefficient and thus it belongs to the parametric techniques.",
+            "startOffset": 64118,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 38833,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 38669,
+                    "startOffset": 38665
+                }
+            },
+            "secId": "sec2",
+            "sentence": "One example is presented in [15], in which the authors introduced a classification approach that relies on a document representation model constructed using concepts gathered by a domain ontology.",
+            "startOffset": 38637,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 60604,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "It also gives a description of the dataset used to perform the experiments for demonstrating the applicability of our proposed document representation models.",
+            "startOffset": 60446,
+            "title": "Results and analysis"
+        },
+        {
+            "endOffset": 63793,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "On the contrary, a nonparametric machine learning technique assumes no prior parameterized knowledge about the underlying probability density function and the classification uses the information provided by training samples alone.",
+            "startOffset": 63563,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 71759,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In a bootstrap sampling, a new training set is created by taking data from the original training set, thus some data may be used several times to construct the forest and others not at all.",
+            "startOffset": 71570,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 42979,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This is achieved using a vector space document representations learned by deep learning and convolutional neural networks with a test accuracy of 85%.",
+            "startOffset": 42829,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 74564,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Generally, iCVS variant 1 employing an enhanced weighting scheme used for assessing weights of concepts did not add much to the overall performance except for Random Forest which gave better results employing baseline CVS and iCVS variant 2 with an F1 score of just over 81%.",
+            "startOffset": 74289,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 37786,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The field of document classification has attracted a lot of attention in recent years, thereby resulting in a wide variety of approaches.",
+            "startOffset": 37649,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 56077,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "This property, known as the Markov property, enables the transition probabilities to be represented as a stochastic matrix with non-negative entries and the maximum probability of 1.",
+            "startOffset": 55895,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 49175,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Extraction of concepts through acquisition of relevant terminology that is related and can be attached to ontology concepts is a more complex task which is achieved through exploitation of both contextual and semantic information of terms occurring in a document.",
+            "startOffset": 48912,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 57566,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b28": {
+                    "endOffset": 57565,
+                    "startOffset": 57561
+                }
+            },
+            "secId": "sec3.5",
+            "sentence": "It should be aperiodic and irreducible [28].",
+            "startOffset": 57522,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 63105,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Table 3 shows five categories along with the number of training and testing documents in each category.",
+            "startOffset": 63002,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 69490,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the context of deep networks, the best performance is achieved by an MLP architecture with 7 hidden layers and 256 neurons per layer with an F1 score of 76.64%,.",
+            "startOffset": 69326,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 38636,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "There is some research work in which concepts exploited by ontologies are used for semantic document representation.",
+            "startOffset": 38520,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43543,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The main goal of the proposed model shown in Fig. 1 is classification of image and textual documents using an improved concept vector space which relies on semantically rich document representations and an enhanced concept weighting scheme.",
+            "startOffset": 43303,
+            "title": "Architecture of the proposed model"
+        },
+        {
+            "endOffset": 37182,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 describes related work.",
+            "startOffset": 37149,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37148,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The rest of the paper is structured as follows.",
+            "startOffset": 37101,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38039,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Depending on the vector space document representation model employed there are two main categories of these approaches relevant to the classification task: (1) Keyword based vector space approach, and (2) Concept (ontology) based vector space approach.",
+            "startOffset": 37787,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52683,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "In this module we present an enhanced concept weighting scheme which besides concept relevance, introduces a new parameter called concept importance that reflects the contribution of a concept in the ontology.",
+            "startOffset": 52474,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 50887,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "More concretely, terms that are above the specified threshold (top-N) are considered to be the relevant terms.",
+            "startOffset": 50777,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 54959,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The difference is that a relation in an ontology graph is defined as a vertex in the RDF graph.",
+            "startOffset": 54864,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 55258,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "In other words, a relation in RDF graph is a link between a subject denoted by rdfs:domain property and an object denoted by rdfs:range property as given in Definition 3.",
+            "startOffset": 55088,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 60445,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This section describes the calculation of concept importance of a real-world ontology.",
+            "startOffset": 60359,
+            "title": "Results and analysis"
+        },
+        {
+            "endOffset": 39314,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This extended work proposed a classification approach that employs a semantic document representation model that, besides concepts derived by the ontology, uses a list of semantically related terms.",
+            "startOffset": 39116,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57521,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "There are two properties that are necessary to be satisfied in order for a Markov based algorithm to converge.",
+            "startOffset": 57411,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 61260,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "A part of INFUSE domain ontology represented as an ontology graph is shown in Fig. 3.",
+            "startOffset": 61175,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 40274,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 40162,
+                    "startOffset": 40158
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For instance, researchers in [16] used three different weights for concepts depending on the position where they occur in the ontology hierarchy.",
+            "startOffset": 40129,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68495,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "On the other hand, MLP with 3 hidden layers and 1024 neurons in each layer outperforms other deep network achieving an F1 score of 80.02%.",
+            "startOffset": 68357,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 48385,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "where, EM and PM denote exact match and partial match, respectively.",
+            "startOffset": 48317,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 32858,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 32747,
+                    "startOffset": 32744
+                }
+            },
+            "secId": "sec1",
+            "sentence": "According to IBM [2], in 2013 the amount of data produced was 2.5 quintillion when the Internet users were around 2.7 billion only.",
+            "startOffset": 32727,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75641,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Furthermore, the primary focus of our study was addressing two major concept vectors limitations namely exact matching and weighting scheme by proposing an improved concept vector space model.",
+            "startOffset": 75449,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 45014,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The next step of TAM module is segmentation and extraction of text lines from the connected components obtained as blobs after localization followed by extraction of words using vertical 1-D projection histogram.",
+            "startOffset": 44802,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 46321,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "A feature vector is an n-dimensional vector comprised of concepts provided by domain ontologies so as to make a move from the keyword-based vector representation towards the semantic-based vector representation.",
+            "startOffset": 46110,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 45554,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These text documents undergo preprocessing steps including morpho-syntactic analysis.",
+            "startOffset": 45469,
+            "title": "Preprocessing"
+        },
+        {
+            "endOffset": 52936,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "Concept importance is processed offline and it involves the following steps: (1) mapping the domain ontology into an ontology graph, (2) applying Markov based algorithms, and (3) calculation of concept importance and aggregation with concept relevance.",
+            "startOffset": 52684,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 70045,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For example, terms fund, amount, part, subsistence, and grant, are the top-5 terms that are found to be the most semantically related terms with ontology concept funding.",
+            "startOffset": 69875,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 74289,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "A three hidden layer MLP with 64 neurons achieves higher classification performance compared to other architecture configurations.",
+            "startOffset": 74159,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 42005,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The algorithm uses all concepts of ontology and the importance of a concept is computed relative to all other concepts in the ontology.",
+            "startOffset": 41870,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45668,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The first preprocessing step involved is tokenization in which the text is split in small pieces known as tokens.",
+            "startOffset": 45555,
+            "title": "Preprocessing"
+        },
+        {
+            "endOffset": 46735,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The extracted terms are stemmed using a stemming method.",
+            "startOffset": 46679,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 61516,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 61443,
+                    "startOffset": 61439
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "This algorithm is part of the extensions module of GraphDB [29] and it computes the importance for every vertex in the entire RDF graph.",
+            "startOffset": 61380,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 47967,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The exact and partial match is formally defined as following.",
+            "startOffset": 47906,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 53375,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The modelling is an equivalent mapping which means that an ontology concept is mapped into a graph vertex and an ontology relation into a graph edge which connects two vertices.",
+            "startOffset": 53198,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 62517,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In order to demonstrate the general applicability of our proposed classification model and to validate its effectiveness, extensive experiments using various classifiers are conducted on the INFUSE dataset.",
+            "startOffset": 62311,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 43087,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 43086,
+                    "startOffset": 43083
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Another example of using convolutional recurrent deep learning model for classification is proposed in [7].",
+            "startOffset": 42980,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 69325,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As with baseline CVS model, the obtained results using iCVS variant 1 show that Gradient Boosting classifier achieved the highest improvement compared to other conventional machine learning and deep learning techniques.",
+            "startOffset": 69106,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 54421,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The formal definition of RDF graph is given as following.",
+            "startOffset": 54364,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 69551,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "iCVS variant 2 model is also evaluated in a similar fashion.",
+            "startOffset": 69491,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 41220,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Path length is also used to compute the weight of concepts but rather than considering all ontology concepts, only the leaf concepts are used.",
+            "startOffset": 41078,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 69105,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Six different conventional Machine Learning techniques, and a Multilayer Perceptron with different number of hidden layers and different number of neurons per layer, are used for classification and the obtained results are shown in Tables 6 and 7, respectively.",
+            "startOffset": 68844,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 52211,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The weight of a concept is a numeric value which is assigned to each concept in order to assess its power in distinguishing a particular document from others.",
+            "startOffset": 52053,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 46016,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The output of this module is a collection of documents composed of plain text with no semantics associated to them and it is linked directly to the concept extraction module in order to embed semantics into those text documents.",
+            "startOffset": 45788,
+            "title": "Preprocessing"
+        },
+        {
+            "endOffset": 53458,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The formal definition of this graph, known as ontology graph, is given as follows.",
+            "startOffset": 53376,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 62031,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "As can be seen from the chart diagram, the concept importance is different for different concepts, varying from 0.2\u20130.02 for almost half of the concepts set, while for the rest of the concepts it is 0.01.",
+            "startOffset": 61827,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 62672,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The INFUSE dataset consists of 467 grant documents that had been collected and classified into 5 categories by field experts as part of the INFUSE project.",
+            "startOffset": 62517,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 73990,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For all three models, Random Forest, Gradient Boosting, and Multilayer Perceptron, performed rather well.",
+            "startOffset": 73885,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 62261,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "These findings confirm the idea that the contribution of ontology concepts in terms of concepts\u2019 discriminating power is different and thus some concepts are more important than the others with respect to document classification.",
+            "startOffset": 62032,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 53918,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The details of the INFUSE ontology are given in Section 4.",
+            "startOffset": 53860,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 63562,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In essence, the statistical model of parametric techniques is specified by a simplified function through two types of distributions, namely, the class prior probability, and the class conditional probability density function (posterior) for each dimension.",
+            "startOffset": 63306,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 43887,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The model consists of seven main modules that are described in the following subsections.",
+            "startOffset": 43798,
+            "title": "Architecture of the proposed model"
+        },
+        {
+            "endOffset": 45788,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Next, stop words and duplicate words are removed, and finally a stemming is performed to normalize the retrieved words.",
+            "startOffset": 45669,
+            "title": "Preprocessing"
+        },
+        {
+            "endOffset": 33332,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 33308,
+                    "startOffset": 33305
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The penetration of Internet of Things (IoT) and smart gadgets to households and a huge amount of data produced every minute as a result has created a need for better organization and structuring of the data, which according to [3] is mostly unstructured.",
+            "startOffset": 33078,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62826,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The dataset is split randomly, in which 70% of the documents are used to build the classifier and the remaining 30% to test the performance of the model.",
+            "startOffset": 62673,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 72005,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "It is also interesting to note from Fig. 7 that in general MLP classifier outperforms all conventional machine learning classifiers achieving a classification F1 score of 84.98%.",
+            "startOffset": 71827,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 44311,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "TAM module itself consists of three steps and preprocessing is the very first one which ensures that the image has a readable text.",
+            "startOffset": 44180,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 44802,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b21": {
+                    "endOffset": 44690,
+                    "startOffset": 44686
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The image is then converted into binary format using Otsu technique [21] and text regions are localized using a 4-connected component based labelling approach as illustrated in Fig. 2.",
+            "startOffset": 44618,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 67668,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Three different models of vector space document representation are used to test the classifiers.",
+            "startOffset": 67572,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 68184,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Precision, recall, and F1 results obtained from six conventional Machine Learning techniques and a deep MLP with different number of hidden layers and neurons are shown in Tables 4 and 5, respectively.",
+            "startOffset": 67983,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 70314,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The performance of document classification, in terms of precision, recall and F1 measure, achieved by six conventional Machine Learning techniques and a Multilayer Perceptron with different number of hidden layers and neurons, is given in Tables 8 and 9, respectively.",
+            "startOffset": 70046,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 71162,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The bar chart shows the weighted F1 score obtained by conventional machine learning, namely Naive Bayes (NB), Decision Tree (DT), Random Forest (RF), Support Vector Machine (SVM), Gradient Boosting (GB), and Ada Boosting (AD), and a Multilayer Perceptron (MLP) with 3 hidden layers and 64 neurons per layer, tested on three different models of document representation.",
+            "startOffset": 70794,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 39115,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 39088,
+                    "startOffset": 39084
+                },
+                "b9": {
+                    "endOffset": 39114,
+                    "startOffset": 39111
+                }
+            },
+            "secId": "sec2",
+            "sentence": "An extended version of classification approach given in [15] is presented later in [9].",
+            "startOffset": 39028,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 41077,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 41076,
+                    "startOffset": 41072
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The same approach of using layers for calculating weight values of concepts is used in [19].",
+            "startOffset": 40985,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61034,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "This ontology is developed as part of the INFUSE1  project and it comes from the funding domain.",
+            "startOffset": 60889,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 70557,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As can be seen from the results shown in Tables 8 and 9, the best performing classifier is an MLP having three hidden layers and 64 neurons in each layer with an F1 score of 84.98% which is slightly better than SVM with an F1 score of 84.11%.",
+            "startOffset": 70315,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 52300,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "A technique used to compute the weight of concepts is known as concept weighting scheme.",
+            "startOffset": 52212,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 33837,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 33836,
+                    "startOffset": 33833
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For text-based documents, ontology can play a vital role in this regard [5].",
+            "startOffset": 33761,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60171,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.7",
+            "sentence": "The last module of proposed model deals with classification of documents into appropriate categories using conventional machine learning classifiers and deep learning.",
+            "startOffset": 60004,
+            "title": "Document classification"
+        },
+        {
+            "endOffset": 64117,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "We also have chosen to use Support Vector Machine (SVM) for classification that can be either parametric or non-parametric technique.",
+            "startOffset": 63984,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 59978,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.6",
+            "sentence": "Table 1 illustrates an example of semantic document representation through a vector space that is constructed by using concepts (GeographicalArea and Applicant) and their weights composed of two components, Importance (Imp) and Relevance (Rel), as described in Section 3.5.",
+            "startOffset": 59705,
+            "title": "Document representation"
+        },
+        {
+            "endOffset": 70793,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The figure presents a complete picture of the performance of conventional machine learning and deep learning techniques on the INFUSE dataset for the proposed models.",
+            "startOffset": 70627,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 43797,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "An image document in our case is a movie frame containing handwritten lecture notes on the chalkboard extracted from a lecture video employing image processing techniques while the textual documents are financial documents that are stored in pdf format.",
+            "startOffset": 43544,
+            "title": "Architecture of the proposed model"
+        },
+        {
+            "endOffset": 73391,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Importance of an ontology concept is then aggregated with concept relevance which is computed using the frequency of appearances of a concept in the document.",
+            "startOffset": 73233,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 73591,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "A semantic representation of document is achieved using concepts derived from ontology through matching technique and acquisition of new terms that can be semantically related with ontology concepts.",
+            "startOffset": 73392,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 45153,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "We assume that the text documents obtained at this stage are correct since the evaluation of TAM itself is beyond the scope of this paper.",
+            "startOffset": 45015,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 33078,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By 2020, it is estimated that around 1.7 MB of data will be created every second for every person on earth.",
+            "startOffset": 32971,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33760,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finding relevant information for every query from plethora of resources is a challenging task.",
+            "startOffset": 33666,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42660,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Another strand of research covers the work related to the use of machine learning approaches for document classification.",
+            "startOffset": 42539,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 75759,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "However, our proposed approach does not handle another concept vectors limitation which is ontological relationships.",
+            "startOffset": 75642,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 68356,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As can be seen from the results, Gradient Boosting classifier shows the best performance compared to other conventional classifier achieving a 82.58% of weighted F1 score.",
+            "startOffset": 68185,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 57965,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "This does not meet the criteria of irreducibility property which requires the transition probabilities to be greater than 0.",
+            "startOffset": 57841,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 42422,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Documents are represented as vectors containing relevance of the concepts that are gathered by an ontology by searching only the presence of their lexicalizations (concept label) in the documents.",
+            "startOffset": 42226,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61826,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Fig. 5 shows the concept importance values in ranking order after having computed them for all the concepts of the INFUSE ontology.",
+            "startOffset": 61695,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 38519,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This approach relies on a set of concepts taken from an ontology to derive the semantic representation of documents.",
+            "startOffset": 38403,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46836,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Further, noisy terms, i.e terms with single character, are removed from the list of extracted terms.",
+            "startOffset": 46736,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 61608,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Table 2 shows the concept importance values of the top ten concepts of the INFUSE ontology.",
+            "startOffset": 61517,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 71305,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As can be seen from the results shown in Fig. 7, a higher weighted classification F1 score is achieved by all classifiers using iCVS variant 2.",
+            "startOffset": 71162,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 54363,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The set of RDF triples is known as RDF graph where subject is the source vertex and object is the destination vertex, and predicate is a directed edge label which links those two vertices.",
+            "startOffset": 54175,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 42225,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "From classification perspective, studies presented above have not established well the representation of documents which is one of the main aspects that influences the performance of ontology based classification models.",
+            "startOffset": 42005,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64701,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In addition, we have applied two boosting techniques, namely Gradient Boosting and Ada Boosting, which grant power of ensemble classifiers that generate multiple predictions and majority voting among the individual classifiers.",
+            "startOffset": 64474,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 45468,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This module takes as input text documents extracted from the image documents in the TAM module and/or a collection of documents stored in unstructured textual formats, e.g. Word, PDF, Powerpoint slides, etc.",
+            "startOffset": 45261,
+            "title": "Preprocessing"
+        },
+        {
+            "endOffset": 46109,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Concept extraction module concerns with construction of feature vectors.",
+            "startOffset": 46037,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 73077,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Concept weighting scheme is enhanced with new parameter that takes into account the importance of ontology concepts.",
+            "startOffset": 72961,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 54058,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "In the semantic web, a formal syntax for defining ontologies is Web Ontology Language (OWL) and Resource Description Framework (RDF) Schema.",
+            "startOffset": 53918,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 70626,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "A side by side comparison is illustrated in Fig. 7 for three models.",
+            "startOffset": 70558,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 33573,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 33572,
+                    "startOffset": 33569
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Despite the computational resources available nowadays, organizing and structuring tremendous amount of data is not a trivial task and without it, finding and extracting useful information from massive Internet resources is a challenge [4].",
+            "startOffset": 33333,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50776,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Aggregated score through a rank cut-off method is used to acquire terms that are related to concepts of the ontology.",
+            "startOffset": 50659,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 44180,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "If the input is a document image, it initially goes through a text analysis module called TAM to extract texts from that image.",
+            "startOffset": 44053,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 55449,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The graph can be either ontology graph or RDF graph as defined above.",
+            "startOffset": 55380,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 71827,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This may be one of the reasons that this classifier performs worse.",
+            "startOffset": 71760,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 39027,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In particular, a domain ontology for Health, Safety, and Environment for oil and gas application contexts is used for classifying documents dealing with accidents from the oil and gas industry.",
+            "startOffset": 38834,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 47705,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The obtained concepts are used to construct concept vectors.",
+            "startOffset": 47645,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 63001,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The number of documents in each category varied widely, ranging from the Society category which contains 165 documents to the Music category which contains only 14 documents.",
+            "startOffset": 62827,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 37555,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 4 describes the concept importance calculation procedure and presents the performance of conventional and deep machine learning classifiers on the INFUSE dataset for classifying funding documents in to five distinct categories.",
+            "startOffset": 37320,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41682,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The drawback of above presented approaches is that they compute concepts\u2019 weight either empirically through trial and error by conducting experiments thus keeping these weights fixed or using the path length.",
+            "startOffset": 41474,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55087,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "For example, relation isReceived in ontology graph shown in Fig. 3 is represented as a vertex in RDF graph, as shown in Fig. 4.",
+            "startOffset": 54960,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 72490,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "An interesting fact that also can be observed from the bar chart shown in Fig. 7 is that iCVS variant 1 model has different impact on the performance of classifiers.",
+            "startOffset": 72325,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 75976,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Future studies on the current topic are therefore suggested in order to establish representation of documents in which concept vectors can be redefined to consider the various relationships that exist in an ontology.",
+            "startOffset": 75760,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 38316,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This approach has some limitations as it does not consider the dependency between the terms and it also ignores the order and the syntactic structure of the terms in the documents.",
+            "startOffset": 38136,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53859,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "In Fig. 3, we present part of the INFUSE ontology graph which consists of a subset of concepts and relations from the funding domain.",
+            "startOffset": 53726,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 67982,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the first model called baseline CVS, we conducted a document classification experiment on the INFUSE dataset in which an exact/partial match technique is employed to match term occurring in a document with relevant concepts of the ontology to build concept vectors for representing documents into vector space.",
+            "startOffset": 67669,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 47644,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Concept labels are considered all lexical entries and lexical variations contained in a concept.",
+            "startOffset": 47548,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 72325,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Imbalanced classes may result in biasing of the classifier towards the majority of the class and thus the performance of Naive Bayes classifier can quickly turn poor.",
+            "startOffset": 72159,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 41869,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Our approach uses a Markov based PageRank algorithm to compute the concept importance.",
+            "startOffset": 41783,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55894,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The probability of transitioning from a vertex i to a vertex j is only dependent on the vertex i and not on the path to arrive at vertex j.",
+            "startOffset": 55755,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 33665,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 33664,
+                    "startOffset": 33661
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Nearly 3.87 million Google searches are conducted every minute of the day by the users [1].",
+            "startOffset": 33574,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61695,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The concept importance is a floating point number with values varying between 0 and 1.",
+            "startOffset": 61609,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 56208,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 56112,
+                    "startOffset": 56108
+                },
+                "b27": {
+                    "endOffset": 56207,
+                    "startOffset": 56203
+                }
+            },
+            "secId": "sec3.5",
+            "sentence": "In this paper, we use PageRank [26] algorithm as one of the most well known and successful example of Markov based algorithms [27].",
+            "startOffset": 56077,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 39853,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Concept vector space approach employs a weighting technique for assessing weight of concepts that relies on the concept relevance as a discriminatory feature for document classification.",
+            "startOffset": 39667,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 74795,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Our findings showed that adding more concepts to ontology improves the classification performance by 4.78 percentage point on average in all cases, however, it is computationally expensive due to a large number of feature vectors.",
+            "startOffset": 74565,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 32726,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 32725,
+                    "startOffset": 32722
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The global Internet population has reached 3.8 billion in 2017 from 3.4 billion the year before, which is 47% of the world\u2019s population [1].",
+            "startOffset": 32586,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71569,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Random Forest is an ensemble method that employs the same decision tree classifier on different training sets generated using the bootstrap sampling method.",
+            "startOffset": 71413,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 57693,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The transition probability matrix M is a stochastic matrix with probability 1 and this makes the PageRank algorithm aperiodic.",
+            "startOffset": 57567,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 37636,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Lastly, Section 5 concludes the paper and gives an insight into the future work.",
+            "startOffset": 37556,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47547,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "To put it simply, each term identified and located in a document is searched in the domain ontology, and if an instance term matches its concept label than term is replaced with the concept.",
+            "startOffset": 47357,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 73748,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We conducted various document classification experiments on three models of document representation i.e. baseline CVS model and iCVS model with two variants.",
+            "startOffset": 73591,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 75245,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Investigation and analysis of classification performance is done on real-world ontology and dataset consisting a small number of documents, so in future work we plan to conduct a performance analysis in a large-scale dataset.",
+            "startOffset": 75020,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 73884,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Additionally, a comparison between seven different classifiers is performed for all three models using precision, recall, and F1 score.",
+            "startOffset": 73749,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 47905,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "A partial match is the case when concept label contains a term occurring in the document.",
+            "startOffset": 47816,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 53197,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "To achieve this, we adopt a model where the ontology is represented as a directed acyclic graph.",
+            "startOffset": 53101,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 61174,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "It is composed of 85 concepts, e.g. Funding, GrantSeeker and 18 object properties, e.g. isGivenBy, appliesFor, that connect these concepts.",
+            "startOffset": 61035,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 44617,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 44616,
+                    "startOffset": 44612
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "These readable text issues are avoided by using a metric designed for evaluating text quality called a reference free perceptual quality metric (RF-PQM) [20].",
+            "startOffset": 44459,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 69749,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In this model, concept vectors for representing documents into vector space are build through acquisition of new terms that are semantically related and can be attached to concepts of the ontology.",
+            "startOffset": 69552,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 40868,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 40774,
+                    "startOffset": 40767
+                },
+                "b18": {
+                    "endOffset": 40774,
+                    "startOffset": 40767
+                }
+            },
+            "secId": "sec2",
+            "sentence": "A slightly different approach of computing weights is implemented in [17,18] where layers of ontology tree are used to represent the position of concepts in the ontology.",
+            "startOffset": 40698,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52473,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "There exist various weighting schemes that typically rely on the relevance of concepts reflected by frequency of occurrences of concept\u2019s lexicalizations within a document.",
+            "startOffset": 52301,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 60762,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Finally, it provides a thorough comparison of document classification results achieved using both conventional machine learning techniques and deep networks.",
+            "startOffset": 60605,
+            "title": "Results and analysis"
+        },
+        {
+            "endOffset": 41782,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 41726,
+                    "startOffset": 41722
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Furthermore, the approach presented in [19] uses only the top-level ontology for computing weights.",
+            "startOffset": 41683,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 32970,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The number is expected to grow in coming years which means that the amount of data produced will be tremendous.",
+            "startOffset": 32859,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42828,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 42693,
+                    "startOffset": 42690
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For instance, the authors in [8] proposed a machine learning based classification approach for understanding sentiment through differentiating good news from bad news.",
+            "startOffset": 42661,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 72158,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "On the other hand, the worst performance is shown by Naive Bayes classifier which may have happened due to the imbalanced classes of the INFUSE dataset.",
+            "startOffset": 72006,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 46678,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Terms are located and extracted from documents using a Lucene inverted indexing technique which generates a list of all unique terms that occur in any document and a set of documents in which these terms occur.",
+            "startOffset": 46468,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 74158,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Furthermore, a thorough investigation is carried out to evaluate the performance of MLP by varying the number of hidden layers and the number of neurons in each layer.",
+            "startOffset": 73991,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 64473,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "On the other side, Non-linear Support Vector Machine is a non-parametric technique and Radial Basis Function Kernel Support Vector Machine, known as RBF Kernel SVM, is a typical example of this family.",
+            "startOffset": 64272,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 42539,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As a result of this, classification models are limited to capture the whole conceptualization involved in documents.",
+            "startOffset": 42423,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57840,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The PageRank algorithm is not irreducible due to the definition given in Eq. (9), where some of the transition probabilities in matrix M may be 0.",
+            "startOffset": 57694,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 38402,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "To overcome these limitations, concept based vector space approach comes into effect.",
+            "startOffset": 38317,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 75449,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We also plan to implement and test other Markov based algorithms for computing concept importance as fundamental part of concept weighting scheme and compare those techniques with the PageRank algorithm.",
+            "startOffset": 75246,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 63305,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "A parametric machine learning technique assumes that the data can be parameterized by a fixed number of parameters.",
+            "startOffset": 63190,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 72728,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "While nonparametric and boosting machine learning techniques demonstrate a positive impact on document classification using an iCVS variant 1, parametric and MLP show a negative impact on classification performance giving worse accuracy.",
+            "startOffset": 72491,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 36404,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These limitations are addressed in this paper by proposing an improved concept vector space model in which",
+            "startOffset": 36298,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68701,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the second experiment, we performed document classification using the same classifiers on the same corpus of documents from the INFUSE dataset, but employing the second model of document representation.",
+            "startOffset": 68496,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 47815,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "An exact match is the case where a concept label is identical with a instance term occurring in the document.",
+            "startOffset": 47706,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 41474,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The idea behind this approach is that more general concepts, such as superclasses, are implicitly taken into account through the use of leaf concepts by distributing their weights to all of their subclasses down to the leaf concepts in equal proportion.",
+            "startOffset": 41221,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63189,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Parametric and nonparametric machine learning techniques are used for experimenting.",
+            "startOffset": 63105,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 47169,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The extracted terms are associated with the concepts of the ontology using: (1) the matching method in which terms appearing in a document are mapped with the relevant concepts from the domain ontology, and (2) acquisition of relevant terminology that is semantically related and can be attached to concepts of that domain ontology.",
+            "startOffset": 46837,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 55379,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The next step is computation of the importance of vertices of the graph using an adoption of the Markov based algorithms.",
+            "startOffset": 55258,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 43268,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This approach is similar to our work but our focus is on classification of documents instead of sentences and we use feature vectors constructed by concepts derived by an ontology.",
+            "startOffset": 43088,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45245,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 45200,
+                    "startOffset": 45196
+                },
+                "b23": {
+                    "endOffset": 45209,
+                    "startOffset": 45205
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Readers are therefore advised to refer to [22] and [23] for full details on the TAM module.",
+            "startOffset": 45154,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 63983,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Naive Bayes is a parametric machine learning technique applied for classification in this paper, while nonparametric techniques applied in this paper include Decision Tree and Random Forest.",
+            "startOffset": 63793,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 44458,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The readable quality of a text in a document image is mostly affected by blocking and blurring artefacts as a result of compression and denoising.",
+            "startOffset": 44312,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 39451,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Although the approach presented in this paper is similar to our work, we differ in the way of how we acquire semantically related terms.",
+            "startOffset": 39315,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68843,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The second model called iCVS variant 1 is an enhanced concept weighting scheme that is used for assessing weight of concepts of the ontology.",
+            "startOffset": 68702,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 75020,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The classification performance is also highly dependent upon the choice of a classifier and we can achieve the same performance on the iCVS model (variant 1 and variant 2) with Random Forest and Gradient Boosting classifier.",
+            "startOffset": 74796,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 44052,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The input of proposed classification model is a collection of documents that can be stored either as unstructured textual data or image.",
+            "startOffset": 43916,
+            "title": "Text analysis module - TAM"
+        },
+        {
+            "endOffset": 37319,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 gives an overview of the proposed architecture and presents a detailed description of our proposed concept vector space model.",
+            "startOffset": 37183,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39991,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "A drawback of this weighting technique is that it considers all concepts equally regardless of where in the hierarchy the concepts occur.",
+            "startOffset": 39854,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 39667,
+            "parents": [],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 39666,
+                    "startOffset": 39663
+                }
+            },
+            "secId": "sec2",
+            "sentence": "An extraction technique that relies on semantic and contextual information of terms is used in our approach to find and extract the most semantically related terms instead of n-gram extraction technique used in [9].",
+            "startOffset": 39452,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40698,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The value of 0.2 is set for concepts which occur as classes, 0.5 for concepts occurring as subclasses and 0.8 when concepts occur as instances.",
+            "startOffset": 40555,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46467,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "To achieve this step toward semantic representation, we primarily need to associate terms extracted from documents with concepts of the ontology.",
+            "startOffset": 46322,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 40457,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The first weight was assigned to concepts which are occurring as classes, second weight for concepts occurring as subclasses and the third weight for concepts occurring as instances.",
+            "startOffset": 40275,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 54174,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "These languages represent the ontology as a set of Subject\u2013Predicate\u2013Object (SPO) expressions known as RDF triples.",
+            "startOffset": 54059,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 69874,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In our case, for each concept of the INFUSE ontology we used only the top-5 terms found as relevant in terms of relatedness.",
+            "startOffset": 69750,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 73232,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Concept importance is computed automatically and this is achieved by converting the ontology into a graph and then employing the PageRank algorithm on it.",
+            "startOffset": 73078,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 40554,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The value of these weights is set empirically through trial and error by conducting experiments.",
+            "startOffset": 40458,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40128,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "There have been some efforts to find concepts importance depending on the position of concepts where they are depicted in the hierarchy.",
+            "startOffset": 39992,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40984,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The weight of each concept is then computed by counting the length of path from the root node to the given concept.",
+            "startOffset": 40869,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53100,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The first and the foremost step of this module is to convert the domain ontology described in Section 3.4 into an ontology graph for calculating concept importance.",
+            "startOffset": 52936,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 61379,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To convert the ontology into an ontology graph and compute the concept importance, we have used the RDF rank algorithm.",
+            "startOffset": 61260,
+            "title": "Concept importance calculation"
+        },
+        {
+            "endOffset": 71412,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results and analysis"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "An exception is Random Forest that gives slightly worse classification performance than other classifiers.",
+            "startOffset": 71306,
+            "title": "Performance evaluation of baseline CVS and iCVS"
+        },
+        {
+            "endOffset": 38135,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The first approach relies on a set of terms (words) extracted from the documents in the dataset.",
+            "startOffset": 38039,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 47356,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 47193,
+                    "startOffset": 47189
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The matching method [12] follows the idea of searching for concepts in the domain ontology that have labels matching either partially or exactly/fully with a term occurring in a document.",
+            "startOffset": 47169,
+            "title": "Concept extraction"
+        },
+        {
+            "endOffset": 72960,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this paper, we have investigated and analysed the document classification performance using a concept vector space model improved with new concept weighting scheme, and semantic document representation.",
+            "startOffset": 72755,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 54863,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "secId": "sec3.5",
+            "sentence": "The ontology graph and RDF graph are not the same for a given ontology.",
+            "startOffset": 54792,
+            "title": "Weighting scheme"
+        },
+        {
+            "endOffset": 58414,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Architecture of the proposed model"
+                }
+            ],
+            "refoffsets": {
+                "b28": {
+                    "endOffset": 58413,
+                    "startOffset": 58409
+                }
+            },
+            "secId": "sec3.5",
+            "sentence": "The damp factor besides enabling the PageRank algorithm to converge also overcomes the problem of rank sinks [28].",
+            "startOffset": 58300,
+            "title": "Weighting scheme"
+        }
+    ],
+    "docId": "S0167739X1831745X",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "zenun.kastrati@ntnu.no",
+                "first": "Zenun",
+                "initial": "Z.",
+                "last": "Kastrati"
+            },
+            {
+                "email": null,
+                "first": "Ali Shariq",
+                "initial": "A.S.",
+                "last": "Imran"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.02.006",
+        "firstpage": "552",
+        "issn": "0167739X",
+        "keywords": [
+            "CVS",
+            "Deep learning",
+            "Document classification",
+            "Document representation",
+            "Ontology",
+            "iCVS"
+        ],
+        "lastpage": "562",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Performance analysis of machine learning classifiers on improved concept vector space models"
+    }
+}

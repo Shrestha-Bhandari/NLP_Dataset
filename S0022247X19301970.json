@@ -1,0 +1,440 @@
+{
+    "abstract": "We use a white noise approach to study the problem of optimal insider control of a stochastic delay equation driven by a Brownian motion B and a Poisson random measure N. In particular, we use Hida-Malliavin calculus and the Donsker delta functional to study the problem. We establish a sufficient and a necessary maximum principle for the optimal control when the trader from the beginning has inside information about the future value of some random variable related to the system. These results are applied to the problem of optimal inside harvesting control in a population modelled by a stochastic delay equation. Next, we apply a direct white noise method to find the logarithmic utility optimal insider portfolio in a generalized Black-Scholes type financial market. A classical result of Pikovski and Karatzas shows that when the inside information is B(T), where T is the terminal time of the trading period, then the market is not viable, i.e. the maximal utility is infinite. We consider two extensions to delay of this result and prove the following: \u2022 If the risky asset price is given by a stochastic delay equation, the resulting insider market is still not viable. \u2022 If, however, there is delay in the information flow to the insider, the market becomes viable.",
+    "bib_entries": {
+        "br0020": {
+            "authors": [
+                {
+                    "first": "J\u00fcrgen",
+                    "initial": "J.",
+                    "last": "Amendinger"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Imkeller"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Schweizer"
+                }
+            ],
+            "doi": "10.1016/S0304-4149(98)00014-3",
+            "firstpage": "263",
+            "issn": "03044149",
+            "lastpage": "286",
+            "pub_year": 1998,
+            "title": "Additional logarithmic utility of an insider",
+            "volume": "75"
+        },
+        "br0030": null,
+        "br0040": {
+            "authors": [
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Ankirchner"
+                }
+            ],
+            "doi": "10.1016/j.spa.2007.10.007",
+            "firstpage": "1662",
+            "issn": "03044149",
+            "lastpage": "1678",
+            "pub_year": 2008,
+            "title": "On filtration enlargements and purely discontinuous martingales",
+            "volume": "118"
+        },
+        "br0050": {
+            "authors": [
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Ankirchner"
+                },
+                {
+                    "first": "Jakub",
+                    "initial": "J.",
+                    "last": "Zwierz"
+                }
+            ],
+            "doi": "10.1007/s10959-010-0292-9",
+            "firstpage": "93",
+            "issn": "08949840",
+            "lastpage": "117",
+            "pub_year": 2011,
+            "title": "Initial Enlargement of Filtrations and Entropy of Poisson Compensators",
+            "volume": "24"
+        },
+        "br0100": null,
+        "br0110": {
+            "authors": [
+                {
+                    "first": "Olfa",
+                    "initial": "O.",
+                    "last": "Draouil"
+                },
+                {
+                    "first": "Bernt",
+                    "initial": "B.",
+                    "last": "\u00d8ksendal"
+                }
+            ],
+            "doi": "10.1007/s40304-015-0065-y",
+            "firstpage": "365",
+            "issn": "21946701",
+            "lastpage": "421",
+            "pub_year": 2015,
+            "title": "A Donsker Delta Functional Approach to Optimal Insider Control and Applications to Finance",
+            "volume": "3"
+        },
+        "br0120": {
+            "authors": [
+                {
+                    "first": "Olfa",
+                    "initial": "O.",
+                    "last": "Draouil"
+                },
+                {
+                    "first": "Bernt",
+                    "initial": "B.",
+                    "last": "\u00d8ksendal"
+                }
+            ],
+            "doi": "10.1080/07362994.2016.1200989",
+            "firstpage": "1045",
+            "issn": "07362994",
+            "lastpage": "1056",
+            "pub_year": 2016,
+            "title": "Optimal insider control and semimartingale decompositions under enlargement of filtration",
+            "volume": "34"
+        },
+        "br0130": null,
+        "br0140": null,
+        "br0150": null,
+        "br0220": null,
+        "br0240": null,
+        "br0260": {
+            "authors": [
+                {
+                    "first": "Bernt",
+                    "initial": "B.",
+                    "last": "\u00d8ksendal"
+                },
+                {
+                    "first": "Agn\u00e8s",
+                    "initial": "A.",
+                    "last": "Sulem"
+                },
+                {
+                    "first": "Tusheng",
+                    "initial": "T.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1239/aap/1308662493",
+            "firstpage": "572",
+            "issn": "00018678",
+            "lastpage": "596",
+            "pub_year": 2011,
+            "title": "Optimal control of stochastic delay equations and time-advanced backward stochastic differential equations",
+            "volume": "43"
+        },
+        "br0270": {
+            "authors": [
+                {
+                    "first": "Igor",
+                    "initial": "I.",
+                    "last": "Pikovsky"
+                },
+                {
+                    "first": "Ioannis",
+                    "initial": "I.",
+                    "last": "Karatzas"
+                }
+            ],
+            "doi": "10.1017/S0001867800027579",
+            "firstpage": "1095",
+            "issn": "00018678",
+            "lastpage": "1122",
+            "pub_year": 1996,
+            "title": "Anticipative portfolio optimization",
+            "volume": "28"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 63364,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "Therefore delay stochastic differential equations have many applications, and the interest of delay stochastic differential equations continues to grow in all areas of science and in particular in control engineering.",
+            "startOffset": 63147,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78399,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0060",
+            "sentence": "\u25a1",
+            "startOffset": 78398,
+            "title": "A necessary-type maximum principle"
+        },
+        {
+            "endOffset": 77164,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "refoffsets": {
+                "br0110": {
+                    "endOffset": 77100,
+                    "startOffset": 77097
+                }
+            },
+            "secId": "se0050",
+            "sentence": "We use the same techniques as the proof in [6] taking into account the new terms coming from the delay aspect.",
+            "startOffset": 77054,
+            "title": "A sufficient-type maximum principle"
+        },
+        {
+            "endOffset": 87438,
+            "parents": [],
+            "secId": "se0090",
+            "sentence": "For this we define what is a viable market:",
+            "startOffset": 87395,
+            "title": "Viability of a market with delay"
+        },
+        {
+            "endOffset": 76498,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "To guarantee that the Lipschitz condition is verified we assume that the derivatives of b, \u03c3 and \u03b3 with respect to x and y are bounded.",
+            "startOffset": 76363,
+            "title": "A sufficient-type maximum principle"
+        },
+        {
+            "endOffset": 68023,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "The problem we consider is the following:",
+            "startOffset": 67982,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76610,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "Sufficient-type maximum principle",
+            "startOffset": 76577,
+            "title": "A sufficient-type maximum principle"
+        },
+        {
+            "endOffset": 64984,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "We now explain this in more detail.",
+            "startOffset": 64949,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72329,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "In this section we will establish a sufficient maximum principle for Problem 2.3.",
+            "startOffset": 72248,
+            "title": "A sufficient-type maximum principle"
+        },
+        {
+            "endOffset": 78397,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "refoffsets": {
+                "br0110": {
+                    "endOffset": 78333,
+                    "startOffset": 78330
+                }
+            },
+            "secId": "se0060",
+            "sentence": "We refer to [6] for the proof's technique with considering the delay framework.",
+            "startOffset": 78318,
+            "title": "A necessary-type maximum principle"
+        },
+        {
+            "endOffset": 69558,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "refoffsets": {
+                "br0030": {
+                    "endOffset": 69557,
+                    "startOffset": 69552
+                },
+                "br0130": {
+                    "endOffset": 69557,
+                    "startOffset": 69552
+                }
+            },
+            "secId": "se0030",
+            "sentence": "First let us recall the Jacod condition [1,8]:",
+            "startOffset": 69512,
+            "title": "Donsker delta functional properties"
+        },
+        {
+            "endOffset": 62962,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "Delay stochastic differential equations are a type of stochastic differential equation in which the derivative of the solution process at any given time depends not only on its value at the present time, but also on its values at previous times.",
+            "startOffset": 62717,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63146,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "Many real life systems in for example engineering, biology, finance and communication networks include delay phenomena in their dynamics.",
+            "startOffset": 63009,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87394,
+            "parents": [],
+            "secId": "se0090",
+            "sentence": "In this section we study the viability of the financial market (4.1)-(4.6).",
+            "startOffset": 87319,
+            "title": "Viability of a market with delay"
+        },
+        {
+            "endOffset": 76566,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "We can now state the first maximum principle for our problem (2.11):",
+            "startOffset": 76498,
+            "title": "A sufficient-type maximum principle"
+        },
+        {
+            "endOffset": 71580,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "refoffsets": {
+                "br0220": {
+                    "endOffset": 71552,
+                    "startOffset": 71548
+                }
+            },
+            "secId": "se0040",
+            "sentence": "For results about existence and uniqueness of solutions of SDDE we refer to [11] and the references therein.",
+            "startOffset": 71472,
+            "title": "Transforming the insider control problem to a related parameterized non-insider problem"
+        },
+        {
+            "endOffset": 78168,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0060",
+            "sentence": "Necessary maximum principle",
+            "startOffset": 78141,
+            "title": "A necessary-type maximum principle"
+        },
+        {
+            "endOffset": 63009,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "They are also called systems with aftereffect.",
+            "startOffset": 62963,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77166,
+            "parents": [
+                {
+                    "id": "se0020",
+                    "title": "Maximum principle theorems using the Donsker delta functional"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "\u25a1",
+            "startOffset": 77165,
+            "title": "A sufficient-type maximum principle"
+        }
+    ],
+    "docId": "S0022247X19301970",
+    "metadata": {
+        "asjc": [
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "olfad@math.uio.no",
+                "first": "Olfa",
+                "initial": "O.",
+                "last": "Draouil"
+            },
+            {
+                "email": "oksendal@math.uio.no",
+                "first": "Bernt",
+                "initial": "B.",
+                "last": "\u00d8ksendal"
+            }
+        ],
+        "doi": "10.1016/j.jmaa.2019.02.065",
+        "firstpage": "101",
+        "issn": "0022247X",
+        "keywords": [
+            "Hida-Malliavin derivative",
+            "Optimal insider control",
+            "Optimal insider portfolio in a financial market with delay",
+            "Stochastic delay equation",
+            "Stochastic maximum principles",
+            "Time-advanced BSDE"
+        ],
+        "lastpage": "119",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "A white noise approach to optimal insider control of systems with delay"
+    }
+}

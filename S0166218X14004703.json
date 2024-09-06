@@ -1,0 +1,905 @@
+{
+    "abstract": "Tolerance graphs have been extensively studied since their introduction, due to their interesting structure and their numerous applications, as they generalize both interval and permutation graphs in a natural way. It has been conjectured by Golumbic, Monma, and Trotter in 1984 that the intersection of tolerance and cocomparability graphs coincides with bounded tolerance graphs. Since cocomparability graphs can be efficiently recognized, a positive answer to this conjecture in the general case would enable us to efficiently distinguish between tolerance and bounded tolerance graphs, although it is NP-complete to recognize each of these classes of graphs separately. This longstanding conjecture has been proved under some - rather strong - structural assumptions on the input graph; in particular, it has been proved for complements of trees, and later extended to complements of bipartite graphs, and these are the only known results so far. Furthermore, it is known that the intersection of tolerance and cocomparability graphs is contained in the class of trapezoid graphs. Our main result in this article is that the above conjecture is true for every graph G that admits a tolerance representation with exactly one unbounded vertex; note that this assumption concerns only the given tolerance representation R of G, rather than any structural property of G. Moreover, our results imply as a corollary that the conjecture of Golumbic, Monma, and Trotter is true for every graph G = (V,E) that has no three independent vertices a,b,c \u2208 V such that N(a) \u2282 N(b) \u2282 N(c), where N(v) denotes the set of neighbors of a vertex v \u2208 V ; this is satisfied in particular when G is the complement of a triangle-free graph (which also implies the above-mentioned correctness for complements of bipartite graphs). Our proofs are constructive, in the sense that, given a tolerance representation R of a graph G, we transform R into a bounded tolerance representation R\u2217 of G. Furthermore, we conjecture that any minimal tolerance graph G that is not a bounded tolerance graph, has a tolerance representation with exactly one unbounded vertex. Our results imply the non-trivial result that, in order to prove the conjecture of Golumbic, Monma, and Trotter, it suffices to prove our conjecture.",
+    "bib_entries": {
+        "br000005": {
+            "authors": [
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Andreae"
+                },
+                {
+                    "first": "Ulf",
+                    "initial": "U.",
+                    "last": "Hennig"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "Parra"
+                }
+            ],
+            "doi": "10.1016/0166-218X(93)90158-K",
+            "firstpage": "73",
+            "issn": "0166218X",
+            "lastpage": "78",
+            "pub_year": 1993,
+            "title": "On a problem concerning tolerance graphs",
+            "volume": "46"
+        },
+        "br000010": {
+            "authors": [
+                {
+                    "first": "Kenneth P.",
+                    "initial": "K.P.",
+                    "last": "Bogart"
+                },
+                {
+                    "first": "Peter C.",
+                    "initial": "P.C.",
+                    "last": "Fishburn"
+                },
+                {
+                    "first": "Garth",
+                    "initial": "G.",
+                    "last": "Isaak"
+                },
+                {
+                    "first": "Larry",
+                    "initial": "L.",
+                    "last": "Langley"
+                }
+            ],
+            "doi": "10.1016/0166-218X(94)00044-E",
+            "firstpage": "99",
+            "issn": "0166218X",
+            "lastpage": "117",
+            "pub_year": 1995,
+            "title": "Proper and unit tolerance graphs",
+            "volume": "60"
+        },
+        "br000015": null,
+        "br000020": {
+            "authors": [
+                {
+                    "first": "Arthur H.",
+                    "initial": "A.H.",
+                    "last": "Busch"
+                }
+            ],
+            "doi": "10.1016/j.dam.2005.06.010",
+            "firstpage": "471",
+            "issn": "0166218X",
+            "lastpage": "477",
+            "pub_year": 2006,
+            "title": "A characterization of triangle-free tolerance graphs",
+            "volume": "154"
+        },
+        "br000025": {
+            "authors": [
+                {
+                    "first": "Derek G.",
+                    "initial": "D.G.",
+                    "last": "Corneil"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Olariu"
+                },
+                {
+                    "first": "Lorna",
+                    "initial": "L.",
+                    "last": "Stewart"
+                }
+            ],
+            "firstpage": "S883",
+            "lastpage": "S884",
+            "pub_year": 1999,
+            "title": "LBFS orderings and cocomparability graphs"
+        },
+        "br000030": {
+            "authors": [
+                {
+                    "first": "Jitender S.",
+                    "initial": "J.S.",
+                    "last": "Deogun"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Steiner"
+                }
+            ],
+            "doi": "10.1137/S0097539791200375",
+            "firstpage": "520",
+            "issn": "00975397",
+            "lastpage": "552",
+            "pub_year": 1994,
+            "title": "Polynomial algorithms for Hamiltonian cycle in cocomparability graphs",
+            "volume": "23"
+        },
+        "br000035": {
+            "authors": [
+                {
+                    "first": "Birk",
+                    "initial": "B.",
+                    "last": "Eisermann"
+                }
+            ],
+            "doi": "10.1016/j.dam.2011.06.012",
+            "firstpage": "2165",
+            "issn": "0166218X",
+            "lastpage": "2169",
+            "pub_year": 2011,
+            "title": "A sufficient condition for boundedness of tolerance graphs",
+            "volume": "159"
+        },
+        "br000040": {
+            "authors": [
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Felsner"
+                }
+            ],
+            "doi": "10.1002/(SICI)1097-0118(199807)28:3<129::AID-JGT2>3.0.CO;2-M",
+            "firstpage": "129",
+            "issn": "03649024",
+            "lastpage": "140",
+            "pub_year": 1998,
+            "title": "Tolerance Graphs and Orders",
+            "volume": "28"
+        },
+        "br000045": null,
+        "br000050": null,
+        "br000055": {
+            "authors": [
+                {
+                    "first": "Martin Charles",
+                    "initial": "M.C.",
+                    "last": "Golumbic"
+                },
+                {
+                    "first": "Clyde L.",
+                    "initial": "C.L.",
+                    "last": "Monma"
+                },
+                {
+                    "first": "William T.",
+                    "initial": "W.T.",
+                    "last": "Trotter"
+                }
+            ],
+            "doi": "10.1016/0166-218X(84)90016-7",
+            "firstpage": "157",
+            "issn": "0166218X",
+            "lastpage": "170",
+            "pub_year": 1984,
+            "title": "Tolerance graphs",
+            "volume": "9"
+        },
+        "br000060": {
+            "authors": [
+                {
+                    "first": "Martin Charles",
+                    "initial": "M.C.",
+                    "last": "Golumbic"
+                },
+                {
+                    "first": "Assaf",
+                    "initial": "A.",
+                    "last": "Siani"
+                }
+            ],
+            "doi": "10.1007/3-540-45470-5",
+            "firstpage": "196",
+            "issn": "03029743",
+            "lastpage": "207",
+            "pub_year": 2002,
+            "title": "Coloring algorithms for tolerance graphs: Reasoning and scheduling with interval constraints",
+            "volume": "2385"
+        },
+        "br000065": null,
+        "br000070": {
+            "authors": [
+                {
+                    "first": "Ryan B.",
+                    "initial": "R.B.",
+                    "last": "Hayward"
+                },
+                {
+                    "first": "Ron",
+                    "initial": "R.",
+                    "last": "Shamir"
+                }
+            ],
+            "doi": "10.1016/j.dam.2003.08.012",
+            "firstpage": "307",
+            "issn": "0166218X",
+            "lastpage": "311",
+            "pub_year": 2004,
+            "title": "A note on tolerance graph recognition",
+            "volume": "143"
+        },
+        "br000075": {
+            "authors": [
+                {
+                    "first": "Garth",
+                    "initial": "G.",
+                    "last": "Isaak"
+                },
+                {
+                    "first": "Kathryn L.",
+                    "initial": "K.L.",
+                    "last": "Nyman"
+                },
+                {
+                    "first": "Ann N.",
+                    "initial": "A.N.",
+                    "last": "Trenkt"
+                }
+            ],
+            "firstpage": "33",
+            "issn": "03817032",
+            "lastpage": "53",
+            "pub_year": 2003,
+            "title": "A Hierarchy of Classes of Bounded Bitolerance Orders",
+            "volume": "69"
+        },
+        "br000080": {
+            "authors": [
+                {
+                    "first": "J. Mark",
+                    "initial": "J.M.",
+                    "last": "Keil"
+                },
+                {
+                    "first": "Patrice",
+                    "initial": "P.",
+                    "last": "Belleville"
+                }
+            ],
+            "doi": "10.1016/j.dam.2003.04.004",
+            "firstpage": "73",
+            "issn": "0166218X",
+            "lastpage": "89",
+            "pub_year": 2004,
+            "title": "Dominating the complements of bounded tolerance graphs and the complements of trapezoid graphs",
+            "volume": "140"
+        },
+        "br000085": null,
+        "br000090": {
+            "authors": [
+                {
+                    "first": "George B.",
+                    "initial": "G.B.",
+                    "last": "Mertzios"
+                },
+                {
+                    "first": "Ignasi",
+                    "initial": "I.",
+                    "last": "Sau"
+                },
+                {
+                    "first": "Shmuel",
+                    "initial": "S.",
+                    "last": "Zaks"
+                }
+            ],
+            "doi": "10.1137/09075994X",
+            "firstpage": "1800",
+            "issn": "08954801",
+            "lastpage": "1813",
+            "pub_year": 2009,
+            "title": "A new intersection model and imp roved algorithms for tolerance graphs",
+            "volume": "23"
+        },
+        "br000095": {
+            "authors": [
+                {
+                    "first": "George B.",
+                    "initial": "G.B.",
+                    "last": "Mertzios"
+                },
+                {
+                    "first": "Ignasi",
+                    "initial": "I.",
+                    "last": "Sau"
+                },
+                {
+                    "first": "Shmuel",
+                    "initial": "S.",
+                    "last": "Zaks"
+                }
+            ],
+            "doi": "10.1137/090780328",
+            "firstpage": "1234",
+            "issn": "00975397",
+            "lastpage": "1257",
+            "pub_year": 2011,
+            "title": "The recognition of tolerance and bounded tolerance graphs",
+            "volume": "40"
+        },
+        "br000100": {
+            "authors": [
+                {
+                    "first": "Giri",
+                    "initial": "G.",
+                    "last": "Narasimhan"
+                },
+                {
+                    "first": "Rachel",
+                    "initial": "R.",
+                    "last": "Manber"
+                }
+            ],
+            "doi": "10.1016/0166-218X(92)90203-M",
+            "firstpage": "47",
+            "issn": "0166218X",
+            "lastpage": "56",
+            "pub_year": 1992,
+            "title": "Stability number and chromatic number of tolerance graphs",
+            "volume": "36"
+        },
+        "br000105": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Parra"
+                }
+            ],
+            "doi": "10.1007/BF02940779",
+            "firstpage": "125",
+            "issn": "00255858",
+            "lastpage": "129",
+            "pub_year": 1994,
+            "title": "Eine klasse von graphen, in der Jeder toleranzgraph ein beschrankter toleranzgraph ist",
+            "volume": "64"
+        },
+        "br000110": null,
+        "br000115": {
+            "authors": [
+                {
+                    "first": "Stephen P.",
+                    "initial": "S.P.",
+                    "last": "Ryan"
+                }
+            ],
+            "doi": "10.1023/A:1006223420935",
+            "firstpage": "341",
+            "issn": "01678094",
+            "lastpage": "354",
+            "pub_year": 1998,
+            "title": "Trapezoid Order Classification",
+            "volume": "15"
+        },
+        "br000120": null
+    },
+    "body_text": [
+        {
+            "endOffset": 986301,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This parallelepiped representation of tolerance graphs generalizes the parallelogram representation of bounded tolerance graphs; the main idea is to exploit the third dimension to capture the information given by unbounded tolerances.",
+            "startOffset": 986067,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1047616,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "We present now the main theorem of this section.",
+            "startOffset": 1047568,
+            "title": "The case where u has neither the left nor the right border property"
+        },
+        {
+            "endOffset": 1054980,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "We now formally define the notion of a minimally unbounded tolerance graph.",
+            "startOffset": 1054905,
+            "title": "The general case"
+        },
+        {
+            "endOffset": 984836,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The intersection of the class of cocomparability graphs with the class of tolerance graphs is exactly the class of bounded tolerance graphs.",
+            "startOffset": 984696,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 984696,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "[11]",
+            "startOffset": 984692,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 985404,
+            "parents": [],
+            "refoffsets": {
+                "br000040": {
+                    "endOffset": 985403,
+                    "startOffset": 985400
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Furthermore, it has been proved that the intersection of the classes of tolerance and cocomparability graphs is contained in the class of trapezoid graphs  [8].",
+            "startOffset": 985244,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 986425,
+            "parents": [],
+            "refoffsets": {
+                "br000090": {
+                    "endOffset": 986424,
+                    "startOffset": 986420
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Furthermore, this model proved to be a powerful tool for designing efficient algorithms for general tolerance graphs  [18].",
+            "startOffset": 986302,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 983954,
+            "parents": [],
+            "refoffsets": {
+                "br000025": {
+                    "endOffset": 983953,
+                    "startOffset": 983942
+                },
+                "br000030": {
+                    "endOffset": 983953,
+                    "startOffset": 983942
+                },
+                "br000065": {
+                    "endOffset": 983953,
+                    "startOffset": 983942
+                },
+                "br000085": {
+                    "endOffset": 983953,
+                    "startOffset": 983942
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Cocomparability graphs have received considerable attention in the literature, mainly due to their interesting structure that leads to efficient algorithms for several NP-hard problems, see e.g.  [5,6,13,17].",
+            "startOffset": 983746,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1089695,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "The next two lemmas follow easily and will be used in the following.",
+            "startOffset": 1089627,
+            "title": "The vertex sets Cu, C2, X1, and H"
+        },
+        {
+            "endOffset": 984680,
+            "parents": [],
+            "refoffsets": {
+                "br000055": {
+                    "endOffset": 984679,
+                    "startOffset": 984675
+                }
+            },
+            "secId": "s000005",
+            "sentence": "In this context, the following conjecture has been made in 1984  [11]:",
+            "startOffset": 984610,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 984609,
+            "parents": [],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 984608,
+                    "startOffset": 984602
+                },
+                "br000120": {
+                    "endOffset": 984608,
+                    "startOffset": 984602
+                }
+            },
+            "secId": "s000005",
+            "sentence": "These structural characterizations produce direct algorithmic implications for the recognition problem of interval and permutation graphs, respectively, since the class of cocomparability graphs can be recognized efficiently  [9,24].",
+            "startOffset": 984376,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 996680,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[18]",
+            "startOffset": 996676,
+            "title": "Definitions and basic properties"
+        },
+        {
+            "endOffset": 1047950,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "sketch",
+            "startOffset": 1047944,
+            "title": "The case where u has neither the left nor the right border property"
+        },
+        {
+            "endOffset": 985243,
+            "parents": [],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 985136,
+                    "startOffset": 985133
+                },
+                "br000065": {
+                    "endOffset": 985085,
+                    "startOffset": 985081
+                },
+                "br000105": {
+                    "endOffset": 985197,
+                    "startOffset": 985193
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Conjecture 1 is a longstanding open question (cf. the open problems section of  [13]); it has been proved for complements of trees  [1], and later extended to complements of bipartite graphs  [21], and these are the only known results so far.",
+            "startOffset": 985001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 985000,
+            "parents": [],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 984955,
+                    "startOffset": 984949
+                },
+                "br000065": {
+                    "endOffset": 984955,
+                    "startOffset": 984949
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Note that the inclusion in one direction is immediate: every bounded tolerance graph is a cocomparability graph  [9,13], as well as a tolerance graph by definition.",
+            "startOffset": 984836,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1013960,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "The next lemma follows now easily by Lemmas 4 and 6.",
+            "startOffset": 1013908,
+            "title": "Definitions and basic properties"
+        },
+        {
+            "endOffset": 987222,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Any minimally unbounded tolerance graph has a tolerance representation with exactly one unbounded vertex.",
+            "startOffset": 987117,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1056179,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "refoffsets": {
+                "br000065": {
+                    "endOffset": 1056178,
+                    "startOffset": 1056174
+                }
+            },
+            "secId": "s000030",
+            "sentence": "Moreover, to the best of our knowledge, all known examples of minimally unbounded tolerance graphs have a tolerance representation with exactly one unbounded vertex; for such examples, see e.g.  [13].",
+            "startOffset": 1055979,
+            "title": "The general case"
+        },
+        {
+            "endOffset": 1204836,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Now we can prove the correctness of Condition 4.",
+            "startOffset": 1204788,
+            "title": "The correctness of Condition\u00a04"
+        },
+        {
+            "endOffset": 987485,
+            "parents": [],
+            "refoffsets": {
+                "br000065": {
+                    "endOffset": 987483,
+                    "startOffset": 987479
+                }
+            },
+            "secId": "s000005",
+            "sentence": "To the best of our knowledge, Conjecture 2 is true for all known examples of minimally unbounded tolerance graphs in the literature (see e.g.  [13]).",
+            "startOffset": 987336,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1047567,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "In the remainder of the section we assume that Condition 3 holds.",
+            "startOffset": 1047502,
+            "title": "The case where u has neither the left nor the right border property"
+        },
+        {
+            "endOffset": 1047502,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "Condition 1 implies Condition 2, and Condition 2 implies Condition 3.",
+            "startOffset": 1047433,
+            "title": "The case where u has neither the left nor the right border property"
+        },
+        {
+            "endOffset": 985813,
+            "parents": [],
+            "refoffsets": {
+                "br000035": {
+                    "endOffset": 985812,
+                    "startOffset": 985809
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Only little is known so far about the separation of tolerance and bounded tolerance graphs; a recent work can be found in  [7].",
+            "startOffset": 985686,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 984128,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Furthermore, the intersection of the class of cocomparability graphs with other graph classes has interesting properties and coincides with other widely known graph classes.",
+            "startOffset": 983955,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1124355,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000060",
+            "sentence": "Now, similarly to Lemmas 29 and 30, we state the following two lemmas.",
+            "startOffset": 1124285,
+            "title": "The recursive definition of the vertex subsets Hi\u2032, i\u22650, of H"
+        },
+        {
+            "endOffset": 984375,
+            "parents": [],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 984374,
+                    "startOffset": 984368
+                },
+                "br000110": {
+                    "endOffset": 984374,
+                    "startOffset": 984368
+                }
+            },
+            "secId": "s000005",
+            "sentence": "For instance, the intersection of the class of cocomparability graphs with the class of chordal graphs is the class of interval graphs  [9], while its intersection with the class of comparability graphs is the class of permutation graphs  [9,22].",
+            "startOffset": 984129,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 985942,
+            "parents": [],
+            "refoffsets": {
+                "br000090": {
+                    "endOffset": 985901,
+                    "startOffset": 985897
+                }
+            },
+            "secId": "s000005",
+            "sentence": "An intersection model for general tolerance graphs has been recently presented in  [18], given by 3-dimensional parallelepipeds.",
+            "startOffset": 985814,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1050994,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "The next main theorem follows by recursive application of Theorem 2.",
+            "startOffset": 1050926,
+            "title": "The general case"
+        },
+        {
+            "endOffset": 1012378,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Now we state two lemmas that are of crucial importance for the proof of Theorems 1 and 2, (in Sections  3.1 and 3.2, respectively).",
+            "startOffset": 1012247,
+            "title": "Definitions and basic properties"
+        },
+        {
+            "endOffset": 985685,
+            "parents": [],
+            "refoffsets": {
+                "br000095": {
+                    "endOffset": 985684,
+                    "startOffset": 985680
+                },
+                "br000120": {
+                    "endOffset": 985469,
+                    "startOffset": 985465
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Since cocomparability graphs can be efficiently recognized  [24], a positive answer to Conjecture 1 would enable us to efficiently distinguish between tolerance and bounded tolerance graphs, although it is NP-complete to recognize each of these classes of graphs separately  [19].",
+            "startOffset": 985405,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 986066,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "For a brief description of this intersection model we refer to Section  2 (see also Fig. 1(a) and (b) for an illustration).",
+            "startOffset": 985943,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1042726,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "We are now ready to present Lemma 13.",
+            "startOffset": 1042689,
+            "title": "The case where u has neither the left nor the right border property"
+        },
+        {
+            "endOffset": 1058658,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "First we define the following vertex sets:",
+            "startOffset": 1058616,
+            "title": "The vertex sets D1, D2, S2, and X\u02dc1 and the vertex x2"
+        },
+        {
+            "endOffset": 1055978,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Main results"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "Therefore, in order to prove Conjecture 1, it suffices to prove Conjecture 2.",
+            "startOffset": 1055901,
+            "title": "The general case"
+        },
+        {
+            "endOffset": 987335,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Our results imply the non-trivial result that, in order to prove Conjecture 1, it suffices to prove Conjecture 2.",
+            "startOffset": 987222,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 1106791,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "The next lemma, which follows now easily by Lemmas 24\u201327, will be mainly used in the following.",
+            "startOffset": 1106696,
+            "title": "The recursive definition of the vertex subsets Hi, i\u22651, of H"
+        },
+        {
+            "endOffset": 1058615,
+            "parents": [
+                {
+                    "id": "s000035",
+                    "title": "Detailed proof of Theorem\u00a02"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Recall that, whenever it is clear from the context, we may not distinguish between a vertex set and the induced subgraph on the vertices of this set.",
+            "startOffset": 1058466,
+            "title": "The vertex sets D1, D2, S2, and X\u02dc1 and the vertex x2"
+        }
+    ],
+    "docId": "S0166218X14004703",
+    "metadata": {
+        "asjc": [
+            "2604",
+            "2607"
+        ],
+        "authors": [
+            {
+                "email": "george.mertzios@durham.ac.uk",
+                "first": "George B.",
+                "initial": "G.B.",
+                "last": "Mertzios"
+            },
+            {
+                "email": "zaks@cs.technion.ac.il",
+                "first": "Shmuel",
+                "initial": "S.",
+                "last": "Zaks"
+            }
+        ],
+        "doi": "10.1016/j.dam.2014.10.025",
+        "firstpage": "46",
+        "issn": "0166218X",
+        "keywords": [
+            "3-dimensional intersection model",
+            "Cocomparability graphs",
+            "Parallelogram graphs",
+            "Tolerance graphs",
+            "Trapezoid graphs"
+        ],
+        "lastpage": "88",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "On the intersection of tolerance and cocomparability graphs"
+    }
+}

@@ -1,0 +1,2222 @@
+{
+    "abstract": "The foil-air bearing (FAB) enables the emergence of oil-free turbomachinery. However, its potential to introduce undesirable nonlinear effects necessitates a reliable means for calculating the dynamic response. The computational burden has hitherto been alleviated by simplifications that compromised the true nature of the dynamic interaction between the rotor, air film and foil structure, introducing the potential for significant error. The overall novel contribution of this research is the development of efficient algorithms for the simultaneous solution of the state equations. The equations are extracted using two alternative transformations: (i) Finite Difference (FD); and (ii) a novel arbitrary-order Galerkin Reduction (GR) which does not use a grid, considerably reducing the number of state variables. A vectorized formulation facilitates the solution in two alternative ways: (i) in the time domain for arbitrary response via implicit integration using readily available routines; and (ii) in the frequency domain for the direct computation of self-excited periodic response via a novel Harmonic Balance (HB) method. GR and FD are cross-verified by time domain simulations which confirm that GR significantly reduces the computation time. Simulations also cross-verify the time and frequency domain solutions applied to the reference FD model and demonstrate the unique ability of HB to correctly accommodate structural damping.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Gin L.",
+                    "initial": "G.L.",
+                    "last": "Agrawal"
+                }
+            ],
+            "doi": "10.1115/97-GT-347",
+            "pub_year": 1997,
+            "title": "Foil air/gas bearing technology - An overview",
+            "volume": "1"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Marco Tulio C.",
+                    "initial": "M.T.C.",
+                    "last": "Faria"
+                },
+                {
+                    "first": "Luis",
+                    "initial": "L.",
+                    "last": "San Andr\u00e9s"
+                }
+            ],
+            "doi": "10.1115/1.555335",
+            "firstpage": "124",
+            "issn": "07424787",
+            "lastpage": "130",
+            "pub_year": 2000,
+            "title": "On the numerical modeling of high-speed hydrodynamic gas bearings",
+            "volume": "122"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "Lawrence F.",
+                    "initial": "L.F.",
+                    "last": "Shampine"
+                },
+                {
+                    "first": "Mark W.",
+                    "initial": "M.W.",
+                    "last": "Reichelt"
+                }
+            ],
+            "doi": "10.1137/S1064827594276424",
+            "firstpage": "1",
+            "issn": "10648275",
+            "lastpage": "22",
+            "pub_year": 1997,
+            "title": "The MATLAB ode suite",
+            "volume": "18"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "H. S.",
+                    "initial": "H.S.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "C. H.T.",
+                    "initial": "C.H.T.",
+                    "last": "Pan"
+                }
+            ],
+            "doi": "10.1115/1.3650504",
+            "firstpage": "185",
+            "issn": "00982202",
+            "lastpage": "192",
+            "pub_year": 1965,
+            "title": "Stability analysis of gas-lubricated, self-acting, plain, cylindrical, journal bearings of finite length, using galerkin\u2019s method",
+            "volume": "87"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Hai",
+                    "initial": "H.",
+                    "last": "Pham"
+                },
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Bonello"
+                }
+            ],
+            "doi": "10.1115/GT2013-94389",
+            "pub_year": 2013,
+            "title": "Efficient techniques for the computation of the nonlinear dynamics of a foil-air bearing rotor system",
+            "volume": "7"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "E. S.",
+                    "initial": "E.S.",
+                    "last": "Piekos"
+                },
+                {
+                    "first": "K. S.",
+                    "initial": "K.S.",
+                    "last": "Breuer"
+                }
+            ],
+            "doi": "10.1115/1.2834110",
+            "firstpage": "604",
+            "issn": "07424787",
+            "lastpage": "609",
+            "pub_year": 1999,
+            "title": "Pseudospectral orbit simulation of nonideal gas-lubricated journal bearings for microfabricated turbomachines",
+            "volume": "121"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Bonello"
+                },
+                {
+                    "first": "Pham",
+                    "initial": "P.",
+                    "last": "Minh Hai"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2009.01.039",
+            "firstpage": "221",
+            "issn": "0022460X",
+            "lastpage": "242",
+            "pub_year": 2009,
+            "title": "A receptance harmonic balance technique for the computation of the vibration of a whole aero-engine model with nonlinear bearings",
+            "volume": "324"
+        },
+        "bib16": null,
+        "bib17": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Bonello"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Brennan"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Holmes"
+                }
+            ],
+            "doi": "10.1006/jsvi.2001.3911",
+            "firstpage": "743",
+            "issn": "0022460X",
+            "lastpage": "773",
+            "pub_year": 2002,
+            "title": "Non-linear modelling of rotor dynamic systems with squeeze film dampers - An efficient integrated approach",
+            "volume": "249"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Feng",
+                    "initial": "F.",
+                    "last": "Li"
+                },
+                {
+                    "first": "G. T.",
+                    "initial": "G.T.",
+                    "last": "Flowers"
+                }
+            ],
+            "doi": "10.2514/6.1996-1596",
+            "firstpage": "2437",
+            "lastpage": "2446",
+            "pub_year": 1996,
+            "title": "Nonlinear dynamics of a foil bearing supported rotor system: Simulation and analysis"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Snorre",
+                    "initial": "S.",
+                    "last": "Farner"
+                },
+                {
+                    "first": "Christophe",
+                    "initial": "C.",
+                    "last": "Vergez"
+                },
+                {
+                    "first": "Jean",
+                    "initial": "J.",
+                    "last": "Kergomard"
+                },
+                {
+                    "first": "Aude",
+                    "initial": "A.",
+                    "last": "Liz\u00e9e"
+                }
+            ],
+            "doi": "10.1121/1.2166602",
+            "firstpage": "1794",
+            "issn": "00014966",
+            "lastpage": "1804",
+            "pmid": "16583920",
+            "pub_year": 2006,
+            "title": "Contribution to harmonic balance calculations of self-sustained periodic oscillations with focus on single-reed instruments",
+            "volume": "119"
+        },
+        "bib2": null,
+        "bib20": null,
+        "bib21": {
+            "authors": [
+                {
+                    "first": "Z. C.",
+                    "initial": "Z.C.",
+                    "last": "Peng"
+                },
+                {
+                    "first": "M. M.",
+                    "initial": "M.M.",
+                    "last": "Khonsari"
+                }
+            ],
+            "doi": "10.1115/1.1739242",
+            "firstpage": "542",
+            "issn": "07424787",
+            "lastpage": "546",
+            "pub_year": 2004,
+            "title": "Hydrodynamic analysis of compliant foil bearings with compressible air flow",
+            "volume": "126"
+        },
+        "bib22": null,
+        "bib23": {
+            "authors": [
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Heshmat"
+                }
+            ],
+            "doi": "10.1115/1.2927211",
+            "firstpage": "287",
+            "issn": "07424787",
+            "lastpage": "294",
+            "pub_year": 1994,
+            "title": "Advancements in the performance of aerodynamic foil journal bearings: High speed and load capability",
+            "volume": "116"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Daejong",
+                    "initial": "D.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Soongook",
+                    "initial": "S.",
+                    "last": "Park"
+                }
+            ],
+            "doi": "10.1016/j.triboint.2008.08.001",
+            "firstpage": "413",
+            "issn": "0301679X",
+            "lastpage": "425",
+            "pub_year": 2009,
+            "title": "Hydrostatic air foil bearings: Analytical and experimental investigation",
+            "volume": "42"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Tae Ho",
+                    "initial": "T.H.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Luis San",
+                    "initial": "L.S.",
+                    "last": "Andr\u00e9s"
+                }
+            ],
+            "doi": "10.1115/1.2966421",
+            "issn": "07424795",
+            "pub_year": 2009,
+            "title": "Effect of side feed pressurization on the dynamic performance of gas foil bearings: A model anchored to test data",
+            "volume": "131"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "S\u00e9bastien",
+                    "initial": "S.",
+                    "last": "Le Lez"
+                },
+                {
+                    "first": "Miha\u00ef",
+                    "initial": "M.",
+                    "last": "Arghir"
+                },
+                {
+                    "first": "Jean",
+                    "initial": "J.",
+                    "last": "Fr\u00eane"
+                }
+            ],
+            "doi": "10.1115/1.2967481",
+            "issn": "07424795",
+            "pub_year": 2009,
+            "title": "Nonlinear numerical prediction of gas foil bearing stability and unbalanced response",
+            "volume": "131"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Keir Harvey",
+                    "initial": "K.H.",
+                    "last": "Groves"
+                },
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Bonello"
+                }
+            ],
+            "doi": "10.1016/j.triboint.2010.03.010",
+            "firstpage": "1639",
+            "issn": "0301679X",
+            "lastpage": "1649",
+            "pub_year": 2010,
+            "title": "Improved identification of squeeze-film damper models for aeroengine vibration analysis",
+            "volume": "43"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "C. C.",
+                    "initial": "C.C.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "C. K.",
+                    "initial": "C.K.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1115/1.1388302",
+            "firstpage": "755",
+            "issn": "07424787",
+            "lastpage": "767",
+            "pub_year": 2001,
+            "title": "Bifurcation analysis of self-acting gas journal bearings",
+            "volume": "123"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Jiazhong",
+                    "initial": "J.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Wei",
+                    "initial": "W.",
+                    "last": "Kang"
+                },
+                {
+                    "first": "Yan",
+                    "initial": "Y.",
+                    "last": "Liu"
+                }
+            ],
+            "doi": "10.1115/1.3007973",
+            "firstpage": "1",
+            "issn": "15551415",
+            "lastpage": "9",
+            "pub_year": 2009,
+            "title": "Numerical method and bifurcation analysis of Jeffcott rotor system supported in gas journal bearings",
+            "volume": "4"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Daejong",
+                    "initial": "D.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1115/1.2540065",
+            "firstpage": "354",
+            "issn": "07424787",
+            "lastpage": "364",
+            "pub_year": 2007,
+            "title": "Parametric studies on static and dynamic performance of air foil bearings with different top foil geometries and bump stiffness distributions",
+            "volume": "129"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Ju Ho",
+                    "initial": "J.H.",
+                    "last": "Song"
+                },
+                {
+                    "first": "Daejong",
+                    "initial": "D.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1115/1.2736455",
+            "firstpage": "628",
+            "issn": "07424787",
+            "lastpage": "639",
+            "pub_year": 2007,
+            "title": "Foil gas bearing with compression springs: Analyses and experiments",
+            "volume": "129"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Dong Hyun",
+                    "initial": "D.H.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Young Cheol",
+                    "initial": "Y.C.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Kyung Woong",
+                    "initial": "K.W.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1080/10402000802192685",
+            "firstpage": "146",
+            "issn": "10402004",
+            "lastpage": "156",
+            "pub_year": 2009,
+            "title": "The dynamic performance analysis of foil journal bearings considering coulomb friction: Rotating unbalance response",
+            "volume": "52"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 119669,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Further integration over 80 shaft revolutions shows that the trajectory remains at this position, as evident from Fig. 4(b), where the \u201ctrajectory\u201d is indicated by a point.",
+            "startOffset": 119497,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 115387,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The system of Eqs. (40) can then be solved over a range of rotational speeds \u03a9 to yield a set of solutions defining a \u201cspeed\u2013response curve\u201d.",
+            "startOffset": 115246,
+            "title": "Frequency domain solution (for self-excited systems)"
+        },
+        {
+            "endOffset": 100212,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, in type (ii), \u03c9 is not known beforehand and is one of the unknowns.",
+            "startOffset": 100136,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125516,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "It is seen from Fig. 9 that the self-excitation is approximately a case of half-frequency whirl.",
+            "startOffset": 125420,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 102049,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 102048,
+                    "startOffset": 102044
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The research presented in this paper is a much-developed form of the preliminary outline given by the authors in [13].",
+            "startOffset": 101931,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129625,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 129565,
+                    "startOffset": 129561
+                }
+            },
+            "secId": "s0045",
+            "sentence": "38 s for the second point on the speed\u2013response curve, with the initial approximation obtained using the \u201ctangent\u201d technique [16], one Jacobian calculation and inversion being required; and",
+            "startOffset": 129436,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 99750,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, it alleviates the computational burden since it calculates it directly, in contrast to the time domain integration, which has to integrate step-by-step past the transient stage to arrive to the steady-state response.",
+            "startOffset": 99525,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131893,
+            "parents": [],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 131760,
+                    "startOffset": 131756
+                },
+                "bib24": {
+                    "endOffset": 131891,
+                    "startOffset": 131885
+                },
+                "bib8": {
+                    "endOffset": 131891,
+                    "startOffset": 131885
+                }
+            },
+            "secId": "s0050",
+            "sentence": "It is also applicable to those experimental works where the FAB was supplied from one end by fresh air at approximately ambient pressure (as in [23]) or where the FAB was supplied by pressurised air through holes in the top foil along the mid-section of the bearing (as in [8,24]).",
+            "startOffset": 131612,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 130859,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 130691,
+                    "startOffset": 130688
+                }
+            },
+            "secId": "s0050",
+            "sentence": "However, as observed in [3], clearance is not a well defined parameter for FABs and in practice there can be a preload (interference fit) between the undeformed top foil and the journal i.e. c<0.",
+            "startOffset": 130664,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 124752,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It is noted that GR typically resulted in significantly reduced computation times relative to FD, although this reduction was not as stark as the reduction in the number of state equations by GR.",
+            "startOffset": 124557,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 131367,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "However, further modifications are likely to be needed since the film thickness would need to be truncated to a prescribed minimum to cater for the condition where the film pressure is not high enough, and/or the eccentricity is not large enough, to push the foil clear.",
+            "startOffset": 131097,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 99524,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In contrast to the time domain integration, a frequency domain method like HB is restricted to a periodic steady-state response.",
+            "startOffset": 99396,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96386,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Since the above-described methods do not reflect the true simultaneously coupled nature of the state variables of the original stiff system, they are inevitably slow through the need to maintain sufficiently small time steps.",
+            "startOffset": 96161,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98528,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 98432,
+                    "startOffset": 98428
+                }
+            },
+            "secId": "s0005",
+            "sentence": "GR was used in the 1960s [12] to calculate the stability of static equilibrium solutions of a rotor system with air bearings.",
+            "startOffset": 98403,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117973,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "These latter four parameters are then altered for the second part of the analysis.",
+            "startOffset": 117891,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 100135,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 100134,
+                    "startOffset": 100130
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In type (i), \u03c9 is known beforehand (equal to either the rotational speed or some sub-multiple of it) [15].",
+            "startOffset": 100029,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 128879,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "One should note that the foil stiffness was rather high in this case (evident from the small foil deflections in Fig. 10).",
+            "startOffset": 128757,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 115653,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 115401,
+                    "startOffset": 115394
+                },
+                "bib17": {
+                    "endOffset": 115401,
+                    "startOffset": 115394
+                }
+            },
+            "secId": "s0030",
+            "sentence": "As in [15,17], the continuation technique used to advance the solution procedure along the curve uses a predictor\u2013corrector approach where the initial approximation v0 (or \u201cpredictor\u201d) for the solution v at a point on the curve is obtained from the previous points.",
+            "startOffset": 115388,
+            "title": "Frequency domain solution (for self-excited systems)"
+        },
+        {
+            "endOffset": 91852,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A FAB (or \u201cgas foil\u201d bearing) overcomes this problem by utilising a flexible foil structure to replace the rigid bearing surface (Fig. 1(a)).",
+            "startOffset": 91711,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97603,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "FD \u2013 this will be the reference model; and",
+            "startOffset": 97561,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97094,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The overall novel contribution of this paper is the development of efficient algorithms that enable the simultaneous solution of the state equations, preserving the state equations of the air film.",
+            "startOffset": 96897,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125180,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The limit cycle defined by the steady-state portion of the trajectory in Fig. 8(a) was used to provide the initial approximation to the first point on the speed\u2013response curve, which was then generated over range of rotational speeds.",
+            "startOffset": 124946,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 111566,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Table 1 compares, for representative GR orders, the number of integration operations involved in evaluating the right hand side of Eq. (33) by the two approaches: (a) by direct evaluation of the double integrals; and (b) using the two kernel sets of single integrals (Eqs. (34)).",
+            "startOffset": 111287,
+            "title": "Galerkin Reduction (GR) transformation"
+        },
+        {
+            "endOffset": 96161,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 96160,
+                    "startOffset": 96157
+                },
+                "bib9": {
+                    "endOffset": 95912,
+                    "startOffset": 95907
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The works in [3,9] used a more sophisticated foil structure model with the Coulomb friction; the foil deformation was updated by applying an implicit integrator to the foil structure ODEs by assuming that the pressure varied linearly over the interval [tk\u22121, tk] [3].",
+            "startOffset": 95894,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 122920,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "At this moderate unbalance, the steady-state trajectory is roughly an ellipse centred around the static equilibrium position at the respective speed.",
+            "startOffset": 122771,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 128991,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Hence, the damping model may have a more significant influence on the predictions for other bearing parameters.",
+            "startOffset": 128880,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 95689,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These latter were then used in the integration of the rotor ODEs to yield the journal displacements and velocities at tk.",
+            "startOffset": 95568,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134316,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Despite the huge size of the HB problem applied to FD (7150 unknowns), the formulation ensured that the solution times were typically a fraction of a minute per rotor speed value, although there was a limitation on Jacobian size imposed by the computer memory.",
+            "startOffset": 134056,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 111640,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The latter method results in a drastic reduction in computational burden.",
+            "startOffset": 111567,
+            "title": "Galerkin Reduction (GR) transformation"
+        },
+        {
+            "endOffset": 120187,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 120081,
+                    "startOffset": 120077
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Table 2 compares the computation times to generate the results in Fig. 4 (by both FD and GR) using the implicit integrator (ode23s [11], as described in Section 2.3) with those of an explicit integrator (4th order Runge\u2013Kutta, as in solver ode45 [11]), both using an adaptive time-step size to keep the numerical error within the same prescribed tolerance.",
+            "startOffset": 119831,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 91710,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 91709,
+                    "startOffset": 91706
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A major disadvantage of the conventional self-acting air (or \u201cgas\u201d) bearing is the requirement for a very tight radial clearance for air pressure generation, since shaft growth (e.g. due to temperature) may exceed this clearance [1].",
+            "startOffset": 91477,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119005,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The zoomed views in Fig. 2(c) and (d) show the effect of the FD grid size on the accuracy; it is evident that refinement beyond a grid size of Nz=8, N\u03b8=128 did not result in significant changes to the trajectory.",
+            "startOffset": 118793,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 104920,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "/ operators, defined in the Nomenclature list).",
+            "startOffset": 104873,
+            "title": "Theory"
+        },
+        {
+            "endOffset": 133697,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Preliminary simulations demonstrated the stiffness of the state equations, as evident by the time advantage of implicit over explicit integration, the former\u05f3s advantage being realised through the vectorized formulation.",
+            "startOffset": 133477,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 101930,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The results of the simulations are presented and discussed in Section 3.",
+            "startOffset": 101858,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93195,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Hence, additional state variables are introduced by the air film pressure distribution and, in the case of FABs, the degrees of freedom of the foil structure.",
+            "startOffset": 93037,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 123029,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 7 also shows the foil deflection at the instant when the journal eccentricity \u03b5 (=|\u03b5|) is at a maximum.",
+            "startOffset": 122921,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 97478,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By alleviating the computational burden involved in the nonlinear dynamic performance simulations, such algorithms can contribute to the proliferation of FABs within various turbomachinery applications.",
+            "startOffset": 97276,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92081,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As the shaft rotates, the pressure generated pushes the foil boundary away, allowing the shaft to become completely airborne.",
+            "startOffset": 91956,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 104771,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The system response is obtained by solving simultaneously the three sets of Eqs. (1), (2), and (4) after transformation into a form that is tractable to time or frequency domain solution algorithms.",
+            "startOffset": 104573,
+            "title": "Theory"
+        },
+        {
+            "endOffset": 97652,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "a novel arbitrary-order Galerkin Reduction (GR).",
+            "startOffset": 97604,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101327,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 101326,
+                    "startOffset": 101322
+                },
+                "bib7": {
+                    "endOffset": 101270,
+                    "startOffset": 101265
+                },
+                "bib8": {
+                    "endOffset": 101270,
+                    "startOffset": 101265
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Time domain analysis for arbitrary response inevitably necessitates the use of an assumed equivalent viscous damping model for those foil structure models that use a structural (hysteretic) damping loss factor e.g. [7,8], since this is defined only for harmonic vibration [20].",
+            "startOffset": 101050,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 132177,
+            "parents": [],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 131960,
+                    "startOffset": 131956
+                }
+            },
+            "secId": "s0050",
+            "sentence": "If the FAB is supplied by pressurised air from one end, as in [25], the symmetry assumption is not applicable; the FD grid would then have to cover the whole bearing; the Galerkin expression of Eq. (13) would also need to be modified to reflect the change in the boundary conditions.",
+            "startOffset": 131894,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 93036,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                },
+                "bib5": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                },
+                "bib6": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                },
+                "bib7": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                },
+                "bib8": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                },
+                "bib9": {
+                    "endOffset": 93035,
+                    "startOffset": 93028
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the case of compressible fluid bearings (FABs and air bearings), the RE is a state equation since it includes time as an independent variable [3,5\u20139].",
+            "startOffset": 92883,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134537,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 134507,
+                    "startOffset": 134504
+                }
+            },
+            "secId": "s0055",
+            "sentence": "Further development of the research will involve its extension to more complex foil models (e.g. [3]) and experimental validation.",
+            "startOffset": 134407,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 92493,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This necessitates a means for calculating the nonlinear dynamic response of rotor systems with FABs.",
+            "startOffset": 92393,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 123223,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Agreement between GR and FD is very good (note that, in the case of the journal trajectory, the dashed line of the GR simulation appears as a solid line due to loop repetition over 100 cycles).",
+            "startOffset": 123030,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 95791,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The approximate pressure distribution at tk was also used to update the foil deflection distribution.",
+            "startOffset": 95690,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118060,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "In Section 3.1, time domain analysis is used to compare the FD and GR transformations.",
+            "startOffset": 117974,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 111286,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 111193,
+                    "startOffset": 111189
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The authors\u05f3 preliminary non-vectorized analysis in [13] illustrated the manipulation involved in replacing the double integrals by single integrals.",
+            "startOffset": 111137,
+            "title": "Galerkin Reduction (GR) transformation"
+        },
+        {
+            "endOffset": 120401,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The advantage of implicit over explicit integration is clearly evident, made possible through the vectorized formulation.",
+            "startOffset": 120280,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 101603,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                },
+                "bib5": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                },
+                "bib6": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                },
+                "bib7": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                },
+                "bib8": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                },
+                "bib9": {
+                    "endOffset": 101544,
+                    "startOffset": 101537
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The theoretical methods in this paper are developed with reference to the simple symmetric rigid rotor-FAB system in Fig. 1(b), as in [3,5\u20139], but can be extended to more complicated rotor structures.",
+            "startOffset": 101403,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134406,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The next phase of the research is to apply HB to GR, thus removing the memory limitation.",
+            "startOffset": 134317,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 133476,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The different transformations (FD, GR) and solution algorithms developed (time domain integration, HB) were independent but complementary and therefore cross-validating: the novel arbitrary-order GR did not involve spatial discretisation, unlike FD; and the novel self-excited HB method (like all frequency domain methods) did not involve time domain discretisation, unlike the integration approach.",
+            "startOffset": 133077,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 96897,
+            "parents": [],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 96684,
+                    "startOffset": 96681
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In [9] a more refined, but still time-consuming approach was used, wherein the procedure described in the previous paragraph was closed through an iterative feed-back loop to restore the coupling between the subsystems.",
+            "startOffset": 96678,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117788,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 117716,
+                    "startOffset": 117711
+                },
+                "bib8": {
+                    "endOffset": 117716,
+                    "startOffset": 117711
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The results presented pertain to the following parameters [7,8]: mr=3.061 kg, R=19.05 mm, L=38 mm, pa=101,325 Pa, and \u03bc=1.95\u00d710\u22125 N/m2.",
+            "startOffset": 117653,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 98214,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 98172,
+                    "startOffset": 98164
+                },
+                "bib12": {
+                    "endOffset": 98104,
+                    "startOffset": 98100
+                },
+                "bib6": {
+                    "endOffset": 98172,
+                    "startOffset": 98164
+                },
+                "bib9": {
+                    "endOffset": 98172,
+                    "startOffset": 98164
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The GR (originating from [12]) should not be confused with the FE Galerkin Method (FEGM) [6,9,10] used for the FE discretisation of the RE.",
+            "startOffset": 98075,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99096,
+            "parents": [],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 99095,
+                    "startOffset": 99091
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The researchers in [14] avoided this by adapting GR to a \u201cpseudospectral technique\u201d, wherein the residual functions were evaluated at a limited number of points in the \u03b8 and z domains; application to gas bearings met with limited success [14].",
+            "startOffset": 98853,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129435,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "40 s for the starting point, with the initial approximation obtained from time domain data, one Jacobian (7150\u00d77150) calculation and inversion being required (see Section 2.4);",
+            "startOffset": 129259,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 118187,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "In Section 3.2 the FD transformation is used to compare the frequency and time domain solutions for the self-excited response.",
+            "startOffset": 118061,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 98694,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, to the authors\u05f3 knowledge, this method has not so far been used for the much-needed nonlinear response analysis of systems with either air bearings or FABs.",
+            "startOffset": 98529,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98075,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "in the frequency domain using a novel rotordynamic Harmonic Balance (HB) method that can compute self-excited periodic oscillations (limit cycles).",
+            "startOffset": 97928,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 104873,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The following analysis makes use of vectorisation notation borrowed from Matlab (namely the (:), .\u204e, .",
+            "startOffset": 104771,
+            "title": "Theory"
+        },
+        {
+            "endOffset": 100028,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 100026,
+                    "startOffset": 100020
+                },
+                "bib3": {
+                    "endOffset": 100026,
+                    "startOffset": 100020
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For FAB application, the HB method has to cater for two types of problem: (i) unbalance-driven excitation; and (ii) self-excitation (resulting in limit cycles [3,16]).",
+            "startOffset": 99861,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 115739,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 115738,
+                    "startOffset": 115734
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Eqs. (40) are then solved by the damped Newton\u2013Raphson method (the \u201ccorrector\u201d) [22].",
+            "startOffset": 115654,
+            "title": "Frequency domain solution (for self-excited systems)"
+        },
+        {
+            "endOffset": 133953,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Simulations also cross-verified the time and frequency domain solutions applied to the reference FD model.",
+            "startOffset": 133847,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 117890,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 117889,
+                    "startOffset": 117884
+                },
+                "bib8": {
+                    "endOffset": 117889,
+                    "startOffset": 117884
+                }
+            },
+            "secId": "s0035",
+            "sentence": "For the first part of the analysis kb=4.739 GN/m3, \u03b7=0.25, c=31.8\u00d710\u22126 m, and S=\u2212mrg (\u2248\u221230 N), [7,8].",
+            "startOffset": 117789,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 123390,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Returning to the case of no unbalance excitation, it was found that no limit cycles could be achieved with the parameters used \u2013 as observed when discussing Fig. 6(b).",
+            "startOffset": 123223,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 130406,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The above simulations were carried out for the case of an actual (non-zero) radial clearance c between the undeformed top foil and the FAB journal.",
+            "startOffset": 130259,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 99860,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A fundamental issue that has been overcome in this research is the fundamental frequency \u03c9 of the HB solution.",
+            "startOffset": 99750,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92255,
+            "parents": [],
+            "refoffsets": {
+                "bib2": {
+                    "endOffset": 92188,
+                    "startOffset": 92185
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Advances by NASA in the foil materials have opened the way for oil-free high-temperature turbomachines [2], resulting in intensified research into their dynamic performance.",
+            "startOffset": 92082,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95893,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 95800,
+                    "startOffset": 95795
+                },
+                "bib8": {
+                    "endOffset": 95800,
+                    "startOffset": 95795
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In [7,8] the spring-damper model was approximated to allow explicit updating of the foil deformation.",
+            "startOffset": 95792,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124169,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In this way, the nonlinear characteristics of the air film are brought up as the dominant factor.",
+            "startOffset": 124072,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 132272,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 132271,
+                    "startOffset": 132267
+                }
+            },
+            "secId": "s0050",
+            "sentence": "Finally, the variation of the foil deflection in the axial direction was neglected, as in [21].",
+            "startOffset": 132177,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 100704,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 100468,
+                    "startOffset": 100464
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Apart from this major limitation, the foil-bearing HB analysis in [18] had further serious limitations: the air film (i.e. the RE) was completely neglected; the bearing forces in the x and y directions were decoupled; and the shaft orbits were assumed to be circular and centred within the bearing housing.",
+            "startOffset": 100398,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99395,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 99394,
+                    "startOffset": 99390
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The complementary nature and relative merits of time domain vs frequency domain methods have been extensively documented [15].",
+            "startOffset": 99269,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124071,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For this reason, for the following illustrative analysis on limit cycle computation (Section 3.2), a tighter radial clearance (c=0.5\u00d731.8\u00d710\u22126 m), a much higher foil stiffness (kb=50\u00d74.739 GN/m3), a lower loss factor (\u03b7=0.1) and a higher static load (S=\u22123\u00d730 N) are used.",
+            "startOffset": 123800,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 93448,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Creation of a grid (spatial domain discretisation) for modelling the air film, resulting in the conversion of the RE into a system of ordinary differential equations (ODEs);",
+            "startOffset": 93275,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97812,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By adopting a Matlab-inspired vectorized formulation that minimises matrix multiplication, the transformed equations can then be solved efficiently in two ways:",
+            "startOffset": 97652,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 133846,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The GR and FD transformations were cross-verified by time domain simulation results which showed that GR significantly reduced the computation time.",
+            "startOffset": 133698,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 92392,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 92391,
+                    "startOffset": 92388
+                }
+            },
+            "secId": "s0005",
+            "sentence": "FABs, like gas or oil bearings, are capable of introducing undesirable nonlinear effects into the dynamics of a rotor-bearing system [3].",
+            "startOffset": 92255,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95439,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In such works, the air-film ODEs were approximated into a system of algebraic equations by replacing the term \u2202p/\u2202t by a backward difference approximation and approximating the current values of air film gap h and \u2202h/\u2202t using the journal and foil state variables at the previous time step tk\u22121.",
+            "startOffset": 95145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100764,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The research of this paper overcomes all these limitations.",
+            "startOffset": 100705,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134056,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The unique ability of HB to accommodate correctly quantified structural damping was also demonstrated.",
+            "startOffset": 133954,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 129258,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 129240,
+                    "startOffset": 129236
+                }
+            },
+            "secId": "s0045",
+            "sentence": "The computation times, based on an arc-length continuation process [17], were as follows:",
+            "startOffset": 129169,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 92882,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 92881,
+                    "startOffset": 92878
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the case of a rotordynamic system with incompressible fluid (oil) bearings, the number of state variables is simply 2H, where H is the total number of rotor modes considered, since the Reynolds Equation (RE) governing the pressure distribution used to calculate the instantaneous bearing forces will be a partial differential equation in terms of the spatial variables (\u03b8, z) only [4].",
+            "startOffset": 92494,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97560,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Firstly, the system equations are extracted using two alternative transformations:",
+            "startOffset": 97478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98852,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 98851,
+                    "startOffset": 98847
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The most likely reason for this is the prohibitive workload involved in evaluating the huge number of analytical integrals in the GR residual functions [13].",
+            "startOffset": 98695,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124410,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The high degree of correlation between FD (Nz=8, N\u03b8=72) and GR (N=5, M=4) justifies the use of an FD grid size 8\u00d772 for the analysis in the following section.",
+            "startOffset": 124252,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 131611,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 131610,
+                    "startOffset": 131600
+                },
+                "bib3": {
+                    "endOffset": 131610,
+                    "startOffset": 131600
+                },
+                "bib7": {
+                    "endOffset": 131610,
+                    "startOffset": 131600
+                },
+                "bib8": {
+                    "endOffset": 131610,
+                    "startOffset": 131600
+                }
+            },
+            "secId": "s0050",
+            "sentence": "This latter assumption has been used in many theoretical works e.g. [3,7,8,21].",
+            "startOffset": 131532,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 91955,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "While stationary, there is either a slight clearance or a preload between shaft (journal) and bearing.",
+            "startOffset": 91853,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95144,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                },
+                "bib5": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                },
+                "bib6": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                },
+                "bib7": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                },
+                "bib8": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                },
+                "bib9": {
+                    "endOffset": 95143,
+                    "startOffset": 95136
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In an attempt to make the integration faster, it has been a common practice to adopt the approach described in step (ii) above for the solution for the nonlinear dynamic response of rotor systems with air bearings or FAB systems [3,5\u20139].",
+            "startOffset": 94907,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125419,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 9 shows one representation of the speed\u2013response curve, wherein the computed non-dimensional fundamental frequency of the limit cycles is plotted (an alternative representation of the speed\u2013response is an amplitude plot shown later).",
+            "startOffset": 125181,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 101677,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Sections 2.1 and 2.2 respectively describe the FD and GR transformations.",
+            "startOffset": 101604,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119831,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 4(b) also shows the predicted steady-state deformation of the clearance (i.e. the profile of the top foil) by both FD and GR, which are virtually identical.",
+            "startOffset": 119670,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 98402,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Unlike FEGM, GR is a mesh-free transformation (i.e. it involves no physical spatial discretisation) and therefore has the potential of considerably reducing the number of state variables.",
+            "startOffset": 98215,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 128466,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 12 shows the effect of using the corrected damping model on the HB-computed limit cycles at the speeds corresponding to those at the marked points A\u2013C in Fig. 9, including an additional point X that is approximately intermediate to points A and B.",
+            "startOffset": 128214,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 120279,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The number of FD equations is 1156, whereas the number of GR equations is 72 (Section 2.3).",
+            "startOffset": 120188,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 100397,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 100363,
+                    "startOffset": 100356
+                },
+                "bib17": {
+                    "endOffset": 100363,
+                    "startOffset": 100356
+                },
+                "bib18": {
+                    "endOffset": 100396,
+                    "startOffset": 100392
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Up to now, HB has only been used in rotordynamics for the solution of type (i), mainly in the context of oil squeeze-film damper bearings e.g. [15,17] but also for a foil bearing [18].",
+            "startOffset": 100213,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129995,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 129748,
+                    "startOffset": 129744
+                },
+                "bib22": {
+                    "endOffset": 129993,
+                    "startOffset": 129989
+                }
+            },
+            "secId": "s0045",
+            "sentence": "16 s for the third point (and so on, typically), with the initial approximation obtained using the \u201csecant\u201d technique [16], no further Jacobian calculation and inversion being required if convergence was achieved (i.e. the inverse of the Jacobian, which is what is actually used by the Newton\u2013Raphson solver, was continually updated using Broyden\u05f3s approximation [22]).",
+            "startOffset": 129626,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 99269,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The present research has overcome this difficulty by identifying the underlying structure of the integrals, enabling the use of an arbitrarily high-order GR transformation.",
+            "startOffset": 99097,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131096,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "In principle, the above analysis can be adapted for this case if the air film thickness Eq. (3) is slightly altered by changing the sign of the first term on the right hand side (i.e. replacing 1 by \u22121) and replacing c by |c| elsewhere.",
+            "startOffset": 130860,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 122770,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 7 shows the steady-state response to unbalance excitation of magnitude mru=10\u00d710\u22123 kg mm at two speeds.",
+            "startOffset": 122662,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 130222,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "It is noted that the use of a finer FD grid with the same number of harmonics was not possible on the platform used (Matlab on a standard desktop) since the memory could not accommodate the sheer size of the resulting Jacobian.",
+            "startOffset": 129995,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 96677,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 96415,
+                    "startOffset": 96412
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Although it was shown in [7] that accurate journal orbits can be obtained for a simple rotor-bearing system if the step size is small enough, the potentially significant error of the aforementioned approximations had to be checked by repeating the same calculation for different time steps.",
+            "startOffset": 96387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101403,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The self-excited HB developed here has the ability to test that assumption.",
+            "startOffset": 101328,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118435,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For the results presented in this section, the time domain analysis described in Section 2.3 was used.",
+            "startOffset": 118333,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 124556,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Before leaving the time domain analysis, it is worth comparing the computation times for FD and GR shown in Table 2 and the captions of Figs. 6\u20138.",
+            "startOffset": 124410,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 130663,
+            "parents": [],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 130590,
+                    "startOffset": 130581
+                },
+                "bib24": {
+                    "endOffset": 130590,
+                    "startOffset": 130581
+                },
+                "bib25": {
+                    "endOffset": 130661,
+                    "startOffset": 130657
+                },
+                "bib3": {
+                    "endOffset": 130555,
+                    "startOffset": 130548
+                },
+                "bib7": {
+                    "endOffset": 130555,
+                    "startOffset": 130548
+                },
+                "bib8": {
+                    "endOffset": 130590,
+                    "startOffset": 130581
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The radial clearance of 31.8 \u03bcm is standard for research on the size of bearing used in Section 3 (38.1 mm diameter): both numerical studies [3,7,8] and experimental studies [8,23\u201325] have used the same or similar parameters (e.g. 40 \u03bcm clearance in [25]).",
+            "startOffset": 130407,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 128756,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "It is seen that, for this particular case, the only significant effect of using the corrected damping model was that the Hopf bifurcation occurred at a slightly higher speed (Fig. 12(a) and (b)); from point C onward, the predictions by the two models were virtually identical (Fig. 12(d)).",
+            "startOffset": 128467,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 101857,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 2.4 develops the self-excited HB in the context of the reference FD transformation only.",
+            "startOffset": 101761,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118293,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "All simulations were implemented in Matlab on a standard desktop computer with Intel\u00ae Core\u2122 i7 Processor.",
+            "startOffset": 118188,
+            "title": "Results and discussion"
+        },
+        {
+            "endOffset": 101050,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 101049,
+                    "startOffset": 101045
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In particular, the issue of the unknown fundamental \u03c9 for the solution of problem type (ii) is overcome by including an extra constraint, originally used by acousticians using HB to study a less computationally challenging problem involving self-excited sound in wind instruments [19].",
+            "startOffset": 100765,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119219,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 3(a) and (b) shows the effect of the order of the GR transformation, when using GR to predict the same trajectory; increasing the order beyond N=3, M=8 did not result in significant changes to the prediction.",
+            "startOffset": 119006,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 129065,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Finally, the computational issues relating to this HB study are discussed.",
+            "startOffset": 128991,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 119342,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 4(a) shows that the trajectory computed by GR (N=3, M=8) is virtually identical to that computed by FD (Nz=8, N\u03b8=128).",
+            "startOffset": 119219,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 132459,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 132458,
+                    "startOffset": 132455
+                }
+            },
+            "secId": "s0050",
+            "sentence": "This is considered reasonable for bump-type foil structures used in many applications and, in fact, the same assumption was also made in a more complex model of bump-type structures [3].",
+            "startOffset": 132273,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 119496,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 4(a) shows that the transient trajectory converges to a fixed point A, which is the static equilibrium position of the journal centre at 10,000 rpm.",
+            "startOffset": 119343,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 110188,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These obstacles have been overcome in this paper through vectorisation in conjunction with meticulous manipulation that breaks down the double integrals so that the integration in each direction is undertaken separately.",
+            "startOffset": 109968,
+            "title": "Galerkin Reduction (GR) transformation"
+        },
+        {
+            "endOffset": 101760,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 2.3 describes the time domain solution procedure for both transformations.",
+            "startOffset": 101678,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129168,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Since an 8\u00d772 grid and Q=5 harmonics were used, the total number of unknowns was 7150 (see Eqs. (40)).",
+            "startOffset": 129066,
+            "title": "Self-excitation frequency domain analysis vs time domain analysis (using FD)"
+        },
+        {
+            "endOffset": 123799,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 123411,
+                    "startOffset": 123407
+                },
+                "bib3": {
+                    "endOffset": 123753,
+                    "startOffset": 123750
+                },
+                "bib5": {
+                    "endOffset": 123679,
+                    "startOffset": 123674
+                },
+                "bib6": {
+                    "endOffset": 123679,
+                    "startOffset": 123674
+                }
+            },
+            "secId": "s0040",
+            "sentence": "As discussed in [13], this may be explained by the fact that the linear compliance of the foil model dominates over the nonlinearity of the air film \u2013 in fact, simulated limit cycles have been usually obtained for plain air bearings (which provide a rigid boundary for the air film) [5,6] and FABs with a nonlinearity in the foil model (e.g. Coulomb friction [3]), typically under substantial static loading.",
+            "startOffset": 123391,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 124867,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The reason for this is that the GR state equations, though much fewer in number, contain significantly more terms.",
+            "startOffset": 124753,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 97275,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The algorithms are \u201cefficient\u201d in the sense that they enable the hitherto avoided simultaneous solution to be achieved within reasonable timeframes on standard computing platforms.",
+            "startOffset": 97095,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 115885,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Theory"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The initial approximation for the first point on the curve (only) is provided by the Fourier coefficients of a time-domain solution of Eqs. (10).",
+            "startOffset": 115740,
+            "title": "Frequency domain solution (for self-excited systems)"
+        },
+        {
+            "endOffset": 118792,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Considering the case of no unbalance excitation (i.e. u=0 in Eqs. (1)), Fig. 2(a) shows the FD (Nz=8, N\u03b8=128) simulation for the trajectory of the journal centre from default initial conditions (corresponding to zero journal centre displacements and velocities, air film at atmospheric pressure and undeformed foil) over 20 shaft revolutions at 10,000 rpm.",
+            "startOffset": 118436,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 133076,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "This paper\u05f3s overall contribution has been the development of efficient algorithms for the simultaneous solution of the state equations governing the dynamic interaction between the air film, foil structure and rotor in oil-free turbomachinery.",
+            "startOffset": 132832,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 93272,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The computational approach for such systems has hitherto involved two steps:",
+            "startOffset": 93196,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93704,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Time domain integration (discretisation in the time domain) that is further approximated by the adoption of a non-simultaneous solution approach wherein the air-film ODEs are uncoupled from the rest and treated as algebraic rather than state equations.",
+            "startOffset": 93452,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95567,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These resulting equations were then solved iteratively to yield the pressure distribution and, hence, the bearing forces at tk.",
+            "startOffset": 95440,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131531,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "In Section 2.1 the FD computational burden was reduced by exploiting symmetry arising from the assumption that the bearing is open to ambient pressure at both ends.",
+            "startOffset": 131367,
+            "title": "Notes on limitations of the analysis"
+        },
+        {
+            "endOffset": 97927,
+            "parents": [],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 97922,
+                    "startOffset": 97918
+                }
+            },
+            "secId": "s0005",
+            "sentence": "in the time domain for arbitrary response via implicit integration using readily available routines e.g. [11]; and",
+            "startOffset": 97813,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124251,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 8 shows that a limit cycle is indeed obtained with these altered parameters.",
+            "startOffset": 124170,
+            "title": "FD vs GR (using time domain analysis)"
+        },
+        {
+            "endOffset": 132820,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 132819,
+                    "startOffset": 132814
+                },
+                "bib8": {
+                    "endOffset": 132819,
+                    "startOffset": 132814
+                }
+            },
+            "secId": "s0050",
+            "sentence": "It is also noted that certain works (e.g. [7,8]) that took into account deflection variation in the axial direction had to assume that the foil deflection at a given point was dependent only on the pressure at that point; this therefore required a correction to avoid an erroneous deflection of zero at the bearing edges (where the pressure was ambient) [7,8].",
+            "startOffset": 132460,
+            "title": "Notes on limitations of the analysis"
+        }
+    ],
+    "docId": "S0022460X14001813",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "philip.bonello@manchester.ac.uk",
+                "first": "P.",
+                "initial": "P.",
+                "last": "Bonello"
+            },
+            {
+                "email": null,
+                "first": "H. M.",
+                "initial": "H.M.",
+                "last": "Pham"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2014.03.001",
+        "firstpage": "3459",
+        "issn": "0022460X",
+        "lastpage": "3478",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "The efficient computation of the nonlinear dynamic response of a foil-air bearing rotor system"
+    }
+}

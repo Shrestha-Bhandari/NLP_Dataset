@@ -1,0 +1,4138 @@
+{
+    "abstract": "In alpine terrain, blowing snow events strongly affect the local evolution of the avalanche danger and must be taken into account by avalanche hazard forecasters. This study presents the implementation and the evaluation of the blowing snow scheme Sytron into the operational chain for avalanche hazard forecasting (named S2M) used in the main French mountain ranges. S2M-Sytron provides information on blowing snow occurrence and intensity per 300-m elevation bands and aspects for several regions of the French mountains. The wind forcing is provided by the meteorological analysis system SAFRAN. S2M-Sytron was evaluated for winter 2015/16 at 11 automatic stations measuring wind speed and blowing snow fluxes in the French Alps. The system detects 55% of blowing snow days with less than 10% of false alarms. S2M-Sytron captures the occurrence of blowing snow events with and without concurrent snowfall. Improvements are obtained when considering an updated parameterization for the properties of falling snow which reduces the threshold velocity for freshly fallen snow. Using observed wind speed instead of SAFRAN wind speed to drive Sytron shows further improvements at stations where SAFRAN wind speed differs from the observations due to local topographic features. Overall, S2M-Sytron provides a regional blowing snow assessment but cannot fully reproduce the local intensity of blowing snow events.",
+    "author_highlights": [
+        {
+            "endOffset": 20561,
+            "sentence": "A blowing snow scheme is implemented in a system for avalanche hazard forecasting.",
+            "startOffset": 20479
+        },
+        {
+            "endOffset": 20645,
+            "sentence": "The new system detects 55% of blowing snow days with less than 10% of false alarms.",
+            "startOffset": 20562
+        },
+        {
+            "endOffset": 20701,
+            "sentence": "The system provides a regional blowing snow assessment.",
+            "startOffset": 20646
+        },
+        {
+            "endOffset": 20781,
+            "sentence": "Sources of errors are input wind speed and threshold wind speed for fresh snow.",
+            "startOffset": 20702
+        }
+    ],
+    "bib_entries": {
+        "bb0005": {
+            "authors": [
+                {
+                    "first": "Marielle",
+                    "initial": "M.",
+                    "last": "Amodei"
+                },
+                {
+                    "first": "Jo\u00ebl",
+                    "initial": "J.",
+                    "last": "Stein"
+                }
+            ],
+            "doi": "10.1002/met.101",
+            "firstpage": "191",
+            "issn": "13504827",
+            "lastpage": "203",
+            "pub_year": 2009,
+            "title": "Deterministic and fuzzy verification methods for a hierarchy of numerical models",
+            "volume": "16"
+        },
+        "bb0010": {
+            "authors": [
+                {
+                    "first": "Perry",
+                    "initial": "P.",
+                    "last": "Bartelt"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lehning"
+                }
+            ],
+            "doi": "10.1016/S0165-232X(02)00074-5",
+            "firstpage": "123",
+            "issn": "0165232X",
+            "lastpage": "145",
+            "pub_year": 2002,
+            "title": "A physical SNOWPACK model for the Swiss avalanche warning Part I: Numerical model",
+            "volume": "35"
+        },
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Brousseau"
+                },
+                {
+                    "first": "Yann",
+                    "initial": "Y.",
+                    "last": "Seity"
+                },
+                {
+                    "first": "Didier",
+                    "initial": "D.",
+                    "last": "Ricard"
+                },
+                {
+                    "first": "Julien",
+                    "initial": "J.",
+                    "last": "L\u00e9ger"
+                }
+            ],
+            "doi": "10.1002/qj.2822",
+            "firstpage": "2231",
+            "issn": "00359009",
+            "lastpage": "2243",
+            "pub_year": 2016,
+            "title": "Improvement of the forecast of convective activity from the AROME-France system",
+            "volume": "142"
+        },
+        "bb0020": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Brun"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "David"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Sudul"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Brunot"
+                }
+            ],
+            "firstpage": "13",
+            "issn": "00221430",
+            "lastpage": "22",
+            "pub_year": 1992,
+            "title": "A nutnerical tnodel to simulate snow-cover stratigraphy for operational avalanche forecasting",
+            "volume": "38"
+        },
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Chritin"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Bolognesi"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Gubler"
+                }
+            ],
+            "doi": "10.1016/S0165-232X(99)00012-9",
+            "firstpage": "125",
+            "issn": "0165232X",
+            "lastpage": "133",
+            "pub_year": 1999,
+            "title": "FlowCapt: A new acoustic sensor to measure snowdrift and wind velocity for avalanche forecasting",
+            "volume": "30"
+        },
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Clifton"
+                },
+                {
+                    "first": "Jean Daniel",
+                    "initial": "J.D.",
+                    "last": "R\u00fcedi"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lehning"
+                }
+            ],
+            "doi": "10.3189/172756506781828430",
+            "firstpage": "585",
+            "issn": "00221430",
+            "lastpage": "596",
+            "pub_year": 2006,
+            "title": "Snow saltation threshold measurements in a drifting-snow wind tunnel",
+            "volume": "52"
+        },
+        "bb0035": {
+            "authors": [
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Comola"
+                },
+                {
+                    "first": "Jasper F.",
+                    "initial": "J.F.",
+                    "last": "Kok"
+                },
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Gaume"
+                },
+                {
+                    "first": "Enrico",
+                    "initial": "E.",
+                    "last": "Paterna"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lehning"
+                }
+            ],
+            "doi": "10.1002/2017GL073039",
+            "firstpage": "4195",
+            "issn": "00948276",
+            "lastpage": "4203",
+            "pub_year": 2017,
+            "title": "Fragmentation of wind-blown snow crystals",
+            "volume": "44"
+        },
+        "bb0040": null,
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Durand"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Giraud"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Brun"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "M\u00e9rindol"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Martin"
+                }
+            ],
+            "doi": "10.1017/S0022143000001337",
+            "firstpage": "469",
+            "issn": "00221430",
+            "lastpage": "484",
+            "pub_year": 1999,
+            "title": "A computer-based system simulating snowpack structures as a tool for regional avalanche forecasting",
+            "volume": "45"
+        },
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Durand"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Guyomarc'h"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "M\u00ebrindol"
+                }
+            ],
+            "firstpage": "187",
+            "issn": "02603055",
+            "lastpage": "194",
+            "pub_year": 2001,
+            "title": "Numerical experiments of wind transport over a mountainous instrumented site: I. Regional scale",
+            "volume": "32"
+        },
+        "bb0055": {
+            "authors": [
+                {
+                    "first": "Yves",
+                    "initial": "Y.",
+                    "last": "Durand"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Laternser"
+                },
+                {
+                    "first": "G\u00e9rald",
+                    "initial": "G.",
+                    "last": "Giraud"
+                },
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Etchevers"
+                },
+                {
+                    "first": "Bernard",
+                    "initial": "B.",
+                    "last": "Lesaffre"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "M\u00e9rindol"
+                }
+            ],
+            "doi": "10.1175/2008JAMC1808.1",
+            "firstpage": "429",
+            "issn": "15588424",
+            "lastpage": "449",
+            "pub_year": 2009,
+            "title": "Reanalysis of 44 yr of climate in the French Alps (1958-2002): Methodology, model validation, climatology, and trends for air temperature and precipitation",
+            "volume": "48"
+        },
+        "bb0060": {
+            "authors": [
+                {
+                    "first": "Pere",
+                    "initial": "P.",
+                    "last": "Esteban"
+                },
+                {
+                    "first": "Philip D.",
+                    "initial": "P.D.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Mart\u00edn-Vide"
+                },
+                {
+                    "first": "Montse",
+                    "initial": "M.",
+                    "last": "Mases"
+                }
+            ],
+            "doi": "10.1002/joc.1103",
+            "firstpage": "319",
+            "issn": "08998418",
+            "lastpage": "329",
+            "pub_year": 2005,
+            "title": "Atmospheric circulation patterns related to heavy snowfall days in Andorra, Pyrenees",
+            "volume": "25"
+        },
+        "bb0065": {
+            "authors": [
+                {
+                    "first": "P. M.B.",
+                    "initial": "P.M.B.",
+                    "last": "Fohn"
+                }
+            ],
+            "doi": "10.1017/S0022143000010984",
+            "firstpage": "469",
+            "issn": "00221430",
+            "lastpage": "480",
+            "pub_year": 1980,
+            "title": "Snow transport over mountain crests.",
+            "volume": "26"
+        },
+        "bb0070": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Gauer"
+                }
+            ],
+            "doi": "10.3189/172756501781832476",
+            "firstpage": "97",
+            "issn": "00221430",
+            "lastpage": "110",
+            "pub_year": 2001,
+            "title": "Numerical modeling of blowing and drifting snow in Alpine terrain",
+            "volume": "47"
+        },
+        "bb0075": null,
+        "bb0080": {
+            "authors": [
+                {
+                    "first": "Gilbert",
+                    "initial": "G.",
+                    "last": "Guyomarc'h"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "M\u00e9rindol"
+                }
+            ],
+            "firstpage": "138",
+            "issn": "02603055",
+            "lastpage": "143",
+            "pub_year": 1998,
+            "title": "Validation of an application for forecasting blowing snow",
+            "volume": "26"
+        },
+        "bb0085": {
+            "authors": [
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Helbig"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Mott"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Van Herwijnen"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Winstral"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Jonas"
+                }
+            ],
+            "doi": "10.1002/2016JD025593",
+            "firstpage": "651",
+            "issn": "01480227",
+            "lastpage": "667",
+            "pub_year": 2017,
+            "title": "Parameterizing surface wind speed over complex topography",
+            "volume": "122"
+        },
+        "bb0090": null,
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Lehning"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Doorschot"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Bartelt"
+                }
+            ],
+            "firstpage": "382",
+            "issn": "02603055",
+            "lastpage": "386",
+            "pub_year": 2000,
+            "title": "A snowdrift index based on SNOWPACK model calculations",
+            "volume": "31"
+        },
+        "bb0100": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lehning"
+                },
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Fierz"
+                }
+            ],
+            "doi": "10.1016/j.coldregions.2007.05.012",
+            "firstpage": "240",
+            "issn": "0165232X",
+            "lastpage": "252",
+            "pub_year": 2008,
+            "title": "Assessment of snow transport in avalanche terrain",
+            "volume": "51"
+        },
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Lehning"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "L\u00f6we"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ryser"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Raderschall"
+                }
+            ],
+            "doi": "10.1029/2007WR006545",
+            "issn": "00431397",
+            "pub_year": 2008,
+            "title": "Inhomogeneous precipitation distribution and snow transport in steep terrain",
+            "volume": "44"
+        },
+        "bb0110": {
+            "authors": [
+                {
+                    "first": "Long",
+                    "initial": "L.",
+                    "last": "Li"
+                },
+                {
+                    "first": "John W.",
+                    "initial": "J.W.",
+                    "last": "Pomeroy"
+                }
+            ],
+            "doi": "10.1175/1520-0450(1997)036<0205:EOTWSF>2.0.CO;2",
+            "firstpage": "205",
+            "issn": "08948763",
+            "lastpage": "213",
+            "pub_year": 1997,
+            "title": "Estimates of threshold wind speeds for snow transport using meteorological data",
+            "volume": "36"
+        },
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "Glen E.",
+                    "initial": "G.E.",
+                    "last": "Liston"
+                },
+                {
+                    "first": "Robert B.",
+                    "initial": "R.B.",
+                    "last": "Haehnel"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Sturm"
+                },
+                {
+                    "first": "Christopher A.",
+                    "initial": "C.A.",
+                    "last": "Hiemstra"
+                },
+                {
+                    "first": "Svetland",
+                    "initial": "S.",
+                    "last": "Berezovskaya"
+                },
+                {
+                    "first": "Ronald D.",
+                    "initial": "R.D.",
+                    "last": "Tabler"
+                }
+            ],
+            "doi": "10.3189/172756507782202865",
+            "firstpage": "241",
+            "issn": "00221430",
+            "lastpage": "256",
+            "pub_year": 2007,
+            "title": "Simulating complex snow distributions in windy environments using SnowTran-3D",
+            "volume": "53"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "M. K.",
+                    "initial": "M.K.",
+                    "last": "MacDonald"
+                },
+                {
+                    "first": "J. W.",
+                    "initial": "J.W.",
+                    "last": "Pomeroy"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Pietroniro"
+                }
+            ],
+            "doi": "10.5194/hess-14-1401-2010",
+            "firstpage": "1401",
+            "issn": "10275606",
+            "lastpage": "1415",
+            "pub_year": 2010,
+            "title": "On the importance of sublimation to an alpine snow mass balance in the Canadian Rocky Mountains",
+            "volume": "14"
+        },
+        "bb0125": null,
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "Florence",
+                    "initial": "F.",
+                    "last": "Naaim-Bouvet"
+                },
+                {
+                    "first": "Herv\u00e9",
+                    "initial": "H.",
+                    "last": "Bellot"
+                },
+                {
+                    "first": "Mohamed",
+                    "initial": "M.",
+                    "last": "Naaim"
+                }
+            ],
+            "doi": "10.3189/172756410791386661",
+            "firstpage": "207",
+            "issn": "02603055",
+            "lastpage": "217",
+            "pub_year": 2010,
+            "title": "Back analysis of drifting-snow measurements over an instrumented mountainous site",
+            "volume": "51"
+        },
+        "bb0135": {
+            "authors": [
+                {
+                    "first": "Florence",
+                    "initial": "F.",
+                    "last": "Naaim-Bouvet"
+                },
+                {
+                    "first": "Mohamed",
+                    "initial": "M.",
+                    "last": "Naaim"
+                },
+                {
+                    "first": "Herv\u00e9",
+                    "initial": "H.",
+                    "last": "Bellot"
+                },
+                {
+                    "first": "Kouichi",
+                    "initial": "K.",
+                    "last": "Nishimura"
+                }
+            ],
+            "doi": "10.3189/172756411797252112",
+            "firstpage": "223",
+            "issn": "02603055",
+            "lastpage": "230",
+            "pub_year": 2011,
+            "title": "Wind and drifting-snow gust factor in an Alpine context",
+            "volume": "52"
+        },
+        "bb0140": null,
+        "bb0145": null,
+        "bb0150": null,
+        "bb0155": {
+            "authors": [
+                {
+                    "first": "Takeshi",
+                    "initial": "T.",
+                    "last": "Sato"
+                },
+                {
+                    "first": "Kenji",
+                    "initial": "K.",
+                    "last": "Kosugi"
+                },
+                {
+                    "first": "Shigeto",
+                    "initial": "S.",
+                    "last": "Mochizuki"
+                },
+                {
+                    "first": "Masaki",
+                    "initial": "M.",
+                    "last": "Nemoto"
+                }
+            ],
+            "doi": "10.1016/j.coldregions.2007.05.004",
+            "firstpage": "229",
+            "issn": "0165232X",
+            "lastpage": "239",
+            "pub_year": 2008,
+            "title": "Wind speed dependences of fracture and accumulation of snowflakes on snow surface",
+            "volume": "51"
+        },
+        "bb0160": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Scheffknecht"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Richard"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lambert"
+                }
+            ],
+            "doi": "10.1002/qj.3140",
+            "firstpage": "2987",
+            "issn": "00359009",
+            "lastpage": "2998",
+            "pub_year": 2017,
+            "title": "Climatology of heavy precipitation over Corsica in the period 1985\u20132015",
+            "volume": "143"
+        },
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "R. A.",
+                    "initial": "R.A.",
+                    "last": "Schmidt"
+                }
+            ],
+            "doi": "10.1017/S0022143000010972",
+            "firstpage": "453",
+            "issn": "00221430",
+            "lastpage": "467",
+            "pub_year": 1980,
+            "title": "Threshold windspeeds and elastic impact in snow transport.",
+            "volume": "26"
+        },
+        "bb0170": {
+            "authors": [
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "Schneiderbauer"
+                },
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Prokop"
+                }
+            ],
+            "doi": "10.3189/002214311796905677",
+            "firstpage": "526",
+            "issn": "00221430",
+            "lastpage": "542",
+            "pub_year": 2011,
+            "title": "The atmospheric snow-transport model: SnowDrift3D",
+            "volume": "57"
+        },
+        "bb0175": null,
+        "bb0180": {
+            "authors": [
+                {
+                    "first": "J\u00fcrg",
+                    "initial": "J.",
+                    "last": "Schweizer"
+                },
+                {
+                    "first": "J. Bruce",
+                    "initial": "J.B.",
+                    "last": "Jamieson"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Schneebeli"
+                }
+            ],
+            "doi": "10.1029/2002RG000123",
+            "firstpage": "1",
+            "issn": "87551209",
+            "lastpage": "25",
+            "pub_year": 2003,
+            "title": "Snow avalanche formation",
+            "volume": "41"
+        },
+        "bb0185": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Seity"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Malardel"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Hello"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "B\u00e9nard"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Bouttier"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Lac"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Masson"
+                }
+            ],
+            "doi": "10.1175/2010MWR3425.1",
+            "firstpage": "976",
+            "issn": "00270644",
+            "lastpage": "991",
+            "pub_year": 2011,
+            "title": "The AROME-France convective-scale operational model",
+            "volume": "139"
+        },
+        "bb0190": {
+            "authors": [
+                {
+                    "first": "Konosuke",
+                    "initial": "K.",
+                    "last": "Sugiura"
+                },
+                {
+                    "first": "Kouichi",
+                    "initial": "K.",
+                    "last": "Nishimura"
+                },
+                {
+                    "first": "Norikazu",
+                    "initial": "N.",
+                    "last": "Maeno"
+                },
+                {
+                    "first": "Tadashi",
+                    "initial": "T.",
+                    "last": "Kimura"
+                }
+            ],
+            "doi": "10.1016/S0165-232X(98)00002-0",
+            "firstpage": "83",
+            "issn": "0165232X",
+            "lastpage": "89",
+            "pub_year": 1998,
+            "title": "Measurements of snow mass flux and transport rate at different particle diameters in drifting snow",
+            "volume": "27"
+        },
+        "bb0195": {
+            "authors": [
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Trouvilliez"
+                },
+                {
+                    "first": "Florence",
+                    "initial": "F.",
+                    "last": "Naaim-Bouvet"
+                },
+                {
+                    "first": "Herv\u00e9",
+                    "initial": "H.",
+                    "last": "Bellot"
+                },
+                {
+                    "first": "Christophe",
+                    "initial": "C.",
+                    "last": "Genthon"
+                },
+                {
+                    "first": "Hubert",
+                    "initial": "H.",
+                    "last": "Gall\u00e9e"
+                }
+            ],
+            "doi": "10.1175/JTECH-D-14-00104.1",
+            "firstpage": "1630",
+            "issn": "07390572",
+            "lastpage": "1641",
+            "pub_year": 2015,
+            "title": "Evaluation of the FlowCapt acoustic sensor for the aeolian transport of snow",
+            "volume": "32"
+        },
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Vionnet"
+                },
+                {
+                    "first": "St\u00e9phane",
+                    "initial": "S.",
+                    "last": "B\u00e9lair"
+                },
+                {
+                    "first": "Claude",
+                    "initial": "C.",
+                    "last": "Girard"
+                },
+                {
+                    "first": "Andr\u00e9",
+                    "initial": "A.",
+                    "last": "Plante"
+                }
+            ],
+            "doi": "10.1175/MWR-D-14-00128.1",
+            "firstpage": "666",
+            "issn": "00270644",
+            "lastpage": "686",
+            "pub_year": 2015,
+            "title": "Wintertime subkilometer numerical forecasts of near-surface variables in the Canadian Rocky Mountains",
+            "volume": "143"
+        },
+        "bb0205": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Vionnet"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Brun"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Morin"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Boone"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Faroux"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Le Moigne"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Willemet"
+                }
+            ],
+            "doi": "10.5194/gmd-5-773-2012",
+            "firstpage": "773",
+            "issn": "1991959X",
+            "lastpage": "791",
+            "pub_year": 2012,
+            "title": "The detailed snowpack scheme Crocus and its implementation in SURFEX v7.2",
+            "volume": "5"
+        },
+        "bb0210": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Vionnet"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Guyomarc'h"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Naaim Bouvet"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Durand"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Bellot"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Bel"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Pugli\u00e8se"
+                }
+            ],
+            "doi": "10.1016/j.advwatres.2012.05.004",
+            "firstpage": "53",
+            "issn": "03091708",
+            "lastpage": "63",
+            "pub_year": 2013,
+            "title": "Occurrence of blowing snow events at an alpine site over a 10-year period: Observations and modelling",
+            "volume": "55"
+        },
+        "bb0215": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Vionnet"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Masson"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Guyomarc'H"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Naaim-Bouvet"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Prokop"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Durand"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Lac"
+                }
+            ],
+            "doi": "10.5194/tc-8-395-2014",
+            "firstpage": "395",
+            "issn": "19940416",
+            "lastpage": "415",
+            "pub_year": 2014,
+            "title": "Simulation of wind-induced snow transport and sublimation in alpine terrain using a fully coupled snowpack/atmosphere model",
+            "volume": "8"
+        },
+        "bb0220": {
+            "authors": [
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Winstral"
+                },
+                {
+                    "first": "Tobias",
+                    "initial": "T.",
+                    "last": "Jonas"
+                },
+                {
+                    "first": "Nora",
+                    "initial": "N.",
+                    "last": "Helbig"
+                }
+            ],
+            "doi": "10.1175/JHM-D-16-0054.1",
+            "firstpage": "335",
+            "issn": "1525755X",
+            "lastpage": "348",
+            "pub_year": 2017,
+            "title": "Statistical downscaling of gridded wind speed data using local topography",
+            "volume": "18"
+        },
+        "bb5000": null,
+        "bb5005": {
+            "authors": [
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Yves",
+                    "initial": "Y.",
+                    "last": "Lejeune"
+                }
+            ],
+            "doi": "10.3189/1998aog26-1-179-183",
+            "firstpage": "179",
+            "issn": "02603055",
+            "lastpage": "183",
+            "pub_year": 1998,
+            "title": "Turbulent fluxes above the snow surface",
+            "volume": "26"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 29801,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "40\u00b0 is the slope value used to represent avalanche-prone areas in S2M.",
+            "startOffset": 29731,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 37664,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Wind speed measured at Col du Lac Blanc was also adjusted to a standard 10-m wind.",
+            "startOffset": 37582,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 33881,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Therefore, we only used the signal of the FlowCapt to determine the occurrence of blowing snow.",
+            "startOffset": 33786,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 26950,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "SAFRAN runs in analysis mode (the guess from the meteorological model is corrected by observations) and in forecast mode (in that case, the system only performs an altitudinal downscaling of the meteorological model).",
+            "startOffset": 26733,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 47980,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "They mainly differ in terms of POD.",
+            "startOffset": 47945,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 52887,
+            "parents": [],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 52885,
+                    "startOffset": 52860
+                }
+            },
+            "secId": "s0075",
+            "sentence": "This information could be used to determine more accurately the occurrence of blowing snow under gusty atmospheric conditions (Naaim-Bouvet et al., 2011).",
+            "startOffset": 52733,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 37173,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The SPC-S7, which detects each particle, is a very sensitive sensor.",
+            "startOffset": 37105,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 36673,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Horizontal snow flux is highly dependent on the height above the snow surface.",
+            "startOffset": 36595,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 39573,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "When observed wind data are not available, simulated wind speed and direction are used.",
+            "startOffset": 39486,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 39485,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Finally, a third configuration (run R3) uses the 10-m wind speed and direction measured at the stations.",
+            "startOffset": 39381,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 47874,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Improved predictions are achieved with runs R2 and R3 (POD of 0.75 and 0.88, respectively).",
+            "startOffset": 47783,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 44607,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 44561,
+                    "startOffset": 44541
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Conceptually, if Ftot represents the output transport rate of a windward slope of length L where snow erosion occurs, the average erosion flux (Eqs. 6 and 7 in Durand et al. (2001)), Fero, can be approximated as Fero = Ftot/L.",
+            "startOffset": 44381,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 31443,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "During this event, the wind was forecast to shift from west to north-west with a decreasing velocity.",
+            "startOffset": 31342,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 36320,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0150": {
+                    "endOffset": 36319,
+                    "startOffset": 36279
+                },
+                "bb0190": {
+                    "endOffset": 36319,
+                    "startOffset": 36279
+                }
+            },
+            "secId": "s0035",
+            "sentence": "At Col du Lac Blanc, horizontal blowing snow fluxes were measured at four levels above the snow surface with a vertical arrangement of four Snow Particle Counters (SPC-S7, Niigata Electric, Sato et al., 1993; Sugiura et al., 1998).",
+            "startOffset": 36089,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 21189,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Wind-induced snow transport can create large, local accumulations of snow that increase the loading of exposed slopes and can trigger natural avalanches.",
+            "startOffset": 21036,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31853,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "To assess the reliability of these information, we detail in the next sections an evaluation of S2M-Sytron in the next sections.",
+            "startOffset": 31725,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 25702,
+            "parents": [],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 25700,
+                    "startOffset": 25680
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Three configurations of the model were tested with a specific emphasis on the sensitivity of the model to wind forcing and on the importance of the properties of fresh snow influencing the threshold wind speed for snow transport (Vionnet et al., 2013).",
+            "startOffset": 25450,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50785,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This shows the crucial impact of input wind speed on the simulation of blowing snow occurrence and intensity.",
+            "startOffset": 50676,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28129,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The presence of a wet layer or a crust at the top of the snowpack prevents blowing snow.",
+            "startOffset": 28041,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 51406,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "SAFRAN cannot also capture the sheltering effect of the surrounding topography for certain wind directions at stations such as FBER and FBON.",
+            "startOffset": 51265,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29463,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Since the beginning of the winter season 2015/2016, SURFEX/Crocus including Sytron has been implemented in a new and supplementary version of the S2M modelling chain for avalanche hazard forecasting.",
+            "startOffset": 29264,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 32113,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "S2M-Sytron was evaluated over winter 2015/2016 from the perspective of an avalanche forecaster that needs to prepare a daily avalanche bulletin in a given mountain range including information about the occurrence and intensity of blowing snow.",
+            "startOffset": 31870,
+            "title": "Data and methods"
+        },
+        {
+            "endOffset": 34938,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Periods when the FlowCapt sensors were buried under snow and therefore delivered no signal were also removed.",
+            "startOffset": 34829,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 32286,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Therefore, the evaluation was carried out for each day and we assessed the ability of several versions of S2M-Sytron to simulate the occurrence of blowing snow days (BSDs).",
+            "startOffset": 32114,
+            "title": "Data and methods"
+        },
+        {
+            "endOffset": 39922,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Table 2 gives an overview of the different configurations used in the evaluation of S2M-Sytron.",
+            "startOffset": 39827,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 37861,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The evolution of snowpack conditions and blowing snow occurrence and intensity were simulated using S2M-Sytron for the 11 automatic stations described in the previous section.",
+            "startOffset": 37686,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 48855,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "When evaluated at 11 stations measuring blowing snow fluxes, we found that the system detects 55% of BSDs on average with a false alarm ratio below 10%.",
+            "startOffset": 48703,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32999,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Ten of these stations are part of the ISAW network (http://isaw.ch/, Table 1).",
+            "startOffset": 32921,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 55198,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "S2M-Sytron produces a regional blowing snow assessment but cannot fully reproduce the high local variability of blowing snow.",
+            "startOffset": 55073,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 50675,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The largest improvements are found at stations where the SAFRAN wind speed differs from the observation due to local topographic features.",
+            "startOffset": 50537,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30509,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The evening run is only used to update the SAFRAN analysis with new observations.",
+            "startOffset": 30428,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 24801,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These models have mainly been applied in a research perspective to better understand and quantify the complex interactions between the wind flow and the snow surface during blowing snow events in alpine terrain.",
+            "startOffset": 24590,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50536,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This configuration achieved the best performances in terms of POD, FAR and HSS at each station, expect FBER (Fig. 6) and for both categories of blowing snow days (Fig. 7).",
+            "startOffset": 50365,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47782,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "It shows that the default version of S2M-Sytron (run R1) captures the occurrence of 70% of BSDs without concurrent snowfall with a FAR reaching 18%.",
+            "startOffset": 47634,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 26225,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Operational avalanche hazard forecasting carried out by M\u00e9t\u00e9o-France for the three main mountain ranges in France (Alps, Pyrenees and Corsica) mainly relies on an observation network of weather and snowpack conditions.",
+            "startOffset": 26007,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 28427,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "When blowing snow occurs (wind speed higher than the threshold value), Sytron computes the amount of snow transported in saltation and turbulent suspension from the windward to the leeward side of the crest and accounts for the loss due to sublimation of a part of the redistributed snow (Fig. 1).",
+            "startOffset": 28130,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 45246,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The modification of the properties of falling snow in run R2 (parameterization Vi13 adjusted, see Section 3.2) leads to lower threshold values for snow transport and larger erosion fluxes compared to run R1.",
+            "startOffset": 45039,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 44090,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "It should be noted that simulated erosion fluxes, Fero correspond to vertical mass fluxes from the snowpack whereas observed blowing snow fluxes, FSPC, correspond to horizontal mass fluxes vertically averaged between 0.2 and 1.2 m above the snow surface.",
+            "startOffset": 43836,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 46568,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The performance of S2M-Sytron is sensitive to the wind speed input as illustrated by the comparison of runs R2 and R3.",
+            "startOffset": 46450,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 47944,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "With snowfall, FAR values below 10% are achieved with all three runs.",
+            "startOffset": 47875,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 54208,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "For each massif, S2M-Sytron provides information on blowing snow occurrence and intensity for eight aspects by elevation steps of 300 m, including regions with neither AWS nor human observations.",
+            "startOffset": 54013,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 48956,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Two additional configurations were tested to identify model sensitivity and sources of improvements.",
+            "startOffset": 48856,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 55010,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Finally, a higher prediction skill is achieved when using observed wind speed instead of SAFRAN wind speed to drive the model.",
+            "startOffset": 54884,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 35853,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0130": {
+                    "endOffset": 35851,
+                    "startOffset": 35826
+                },
+                "bb0210": {
+                    "endOffset": 35669,
+                    "startOffset": 35648
+                }
+            },
+            "secId": "s0035",
+            "sentence": "As in Vionnet et al. (2013), we used a standard log-law for the vertical profile of wind speed near the surface and an aerodynamic roughness of 1 mm typically found in alpine terrain (Naaim-Bouvet et al., 2010).",
+            "startOffset": 35642,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 25025,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The main objective of this paper is to describe and evaluate the operational implementation of a blowing snow scheme for avalanche hazard forecasting.",
+            "startOffset": 24875,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48573,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This paper has examined the performances of several versions of S2M-Sytron in simulating the occurrence of blowing snow days.",
+            "startOffset": 48448,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 33614,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0195": {
+                    "endOffset": 33515,
+                    "startOffset": 33490
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Trouvilliez et al. (2015) have shown that FlowCapt sensors can be used to accurately monitor the occurrence of blowing snow.",
+            "startOffset": 33490,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 39701,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "As in run R2, properties of falling snow are given by Vi13 adjusted.",
+            "startOffset": 39633,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 52556,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 52555,
+                    "startOffset": 52511
+                },
+                "bb0200": {
+                    "endOffset": 52446,
+                    "startOffset": 52426
+                },
+                "bb0220": {
+                    "endOffset": 52555,
+                    "startOffset": 52511
+                }
+            },
+            "secId": "s0075",
+            "sentence": "Further downscaling down to 100\u2013250 m could be achieved using dynamical downscaling with sub-kilometer NWP systems (e.g. Vionnet et al., 2015) or statistical downscaling relying on terrain-based parameters (Helbig et al., 2017; Winstral et al., 2017).",
+            "startOffset": 52305,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 45478,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Using observed wind speed instead of SAFRAN wind speed in run R3 modifies the intensity of erosion fluxes in S2M-Sytron compared to run R2.",
+            "startOffset": 45339,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 42538,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Errors statistics (Bias and RMSE) are also indicated for each station as well as the proportion of observed and simulated wind speed higher than 6 m s- 1.",
+            "startOffset": 42384,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 41990,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "POD and FAR were also computed for the prediction of BSDs with and without concurrent snowfall.",
+            "startOffset": 41895,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 32346,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "A BSD is defined as a day when a blowing snow event occurs.",
+            "startOffset": 32287,
+            "title": "Data and methods"
+        },
+        {
+            "endOffset": 24047,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 23866,
+                    "startOffset": 23822
+                },
+                "bb0090": {
+                    "endOffset": 23866,
+                    "startOffset": 23822
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Sytron is designed to work in the framework of the French operational system for avalanche hazard forecasting S2M (Durand et al., 1999; Lafaysse et al., 2013) and aims at providing avalanche forecasters with information on blowing snow occurrence and intensity in the past (analysis mode) but also for the next two days (forecasting mode).",
+            "startOffset": 23708,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38703,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The first configuration (run R1, Table 2) corresponds to the model version used operationally during winter 2015/2016.",
+            "startOffset": 38585,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 27839,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 27688,
+                    "startOffset": 27669
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The blowing snow scheme Sytron (Durand et al., 2001) has been developed to simulate wind-induced snow redistribution between the windward and the leeward side of virtual crests as illustrated in Fig. 1.",
+            "startOffset": 27637,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 45657,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "This can be associated with the good agreement between observed and SAFRAN wind speed found at Col du Lac Blanc (Fig. 4).",
+            "startOffset": 45536,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 31611,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This event was expected to mainly concern elevations above 2700 m with sporadic blowing snow occurring at lower elevation (1800 m\u20132400 m) in the evening of February 9.",
+            "startOffset": 31444,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 39066,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 38909,
+                    "startOffset": 38888
+                }
+            },
+            "secId": "s0040",
+            "sentence": "A second configuration (run R2) has been tested with an adjusted version of the parametrization of Vionnet et al. (2013) for falling snow properties (referred to as Vi13 adjusted in Table 2) allowing simultaneous occurrence of snowfall and ground snow transport above 4 m s- 1.",
+            "startOffset": 38789,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 44380,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "In particular, FSPC does not include the contribution of the saltation layer.",
+            "startOffset": 44303,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 47076,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "At the station FCEL, SAFRAN reproduces the average distribution of the wind speed well but misses the occurrence of wind speeds higher than 6 m s- 1.",
+            "startOffset": 46927,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 54709,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The default version of S2M-Sytron detects 55% of BSDs on average with a false alarm ratio below 10%.",
+            "startOffset": 54609,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49976,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "In run R2, the updated parameterization for the properties of falling snow allows simultaneous occurrence of snowfall and ground snow transport above 4 m s- 1 compared to 6 m s- 1 for run R1.",
+            "startOffset": 49785,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35100,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Finally, the remaining hourly data were analyzed and each day was classified as a BSD if at least four consecutive hours with blowing snow occurrence were found.",
+            "startOffset": 34939,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 37310,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Therefore, a filter was applied to the raw vertically-integrated blowing snow flux to only retrieve significant blowing snow occurrence.",
+            "startOffset": 37174,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 53811,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Blowing snow events in alpine terrain need to be accounted for by avalanche forecasters when preparing their avalanche bulletin.",
+            "startOffset": 53683,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 42707,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "This comparison reveals that SAFRAN reproduces well (low bias and RMSE) the wind speed distribution for the two high-altitude stations used in our study (CLB and FCHE).",
+            "startOffset": 42539,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 27498,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 27391,
+                    "startOffset": 27379
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The expert system MEPRA (Giraud, 1992) is then used to diagnose whether simulated snow conditions are conducive to significant avalanche hazard.",
+            "startOffset": 27354,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 32764,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Measurements of blowing snow fluxes are available from a network of eleven automatic stations (Fig. 3 and Table 1).",
+            "startOffset": 32649,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 36594,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The horizontal snow mass flux is calculated assuming spherical snow particles.",
+            "startOffset": 36516,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 29581,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The so-called S2M-Sytron chain is running operationally over the same mountain ranges as the S2M chain (Section 2.1).",
+            "startOffset": 29464,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 28843,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 28662,
+                    "startOffset": 28641
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Compared to the original version, Sytron in SURFEX uses the approach of Vionnet et al. (2013) to account for the effects of wind on the properties of surface snow: (i) modification of crystal shape during snowfall and (ii) packing and fragmentation when blowing snow occurs.",
+            "startOffset": 28569,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 34730,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In such a case, it is likely that the snowpack surface energy balance is positive resulting in surface melting and non-favorable conditions for blowing snow.",
+            "startOffset": 34573,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 33184,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0130": {
+                    "endOffset": 33183,
+                    "startOffset": 33135
+                },
+                "bb0210": {
+                    "endOffset": 33183,
+                    "startOffset": 33135
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The last station is the Col du Lac Blanc experimental site dedicated to blowing and drifting snow studies in high-alpine terrain (e.g. Naaim-Bouvet et al., 2010; Vionnet et al., 2013).",
+            "startOffset": 33000,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 34828,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The air temperature was used since the snow surface temperature is not measured at ISAW stations.",
+            "startOffset": 34731,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 52304,
+            "parents": [],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 52258,
+                    "startOffset": 52214
+                },
+                "bb0185": {
+                    "endOffset": 52258,
+                    "startOffset": 52214
+                }
+            },
+            "secId": "s0075",
+            "sentence": "These improvements could be obtained from the numerical weather prediction (NWP) system AROME (Seity et al., 2011; Brousseau et al., 2016) operating at 1.3-km grid spacing over France.",
+            "startOffset": 52120,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 37104,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0195": {
+                    "endOffset": 37103,
+                    "startOffset": 37078
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Therefore, a vertically-integrated blowing snow flux similar to the flux measured with FlowCapt was computed between 0.2 and 1.2 m from the measurements of the 4 SPC-S7 as in Trouvilliez et al. (2015).",
+            "startOffset": 36903,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 54311,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This information is available daily for the previous day and the next two days since winter 2015/2016.",
+            "startOffset": 54209,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49627,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The grain characteristics of falling snow are of prime importance to reproduce the occurrence of ground snow transport during snowfall in the model.",
+            "startOffset": 49479,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 54883,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Improvements are obtained when considering an updated parameterization for the properties of falling snow that influence the value of the threshold wind speed of fresh snow.",
+            "startOffset": 54710,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33785,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "However, the quality of the measurements of blowing snow flux depends on the generation of the sensor and the sensor can be partially buried under snow during the winter.",
+            "startOffset": 33615,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 21035,
+            "parents": [],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 21033,
+                    "startOffset": 21011
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In mountainous terrain wind plays a determinant role in shaping the small-scale distribution of snow and strongly influences the evolution of avalanche danger (Schweizer et al., 2003).",
+            "startOffset": 20851,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36373,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Measurements are available at a 10-minute time step.",
+            "startOffset": 36321,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 23529,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 23375,
+                    "startOffset": 23355
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To provide blowing snow information over a wide range of areas and altitudes, including regions with neither AWS nor human observations, Durand et al. (2001) have developed the conceptual scheme Sytron which simulates wind-induced snow redistribution between the windward and the leeward side of virtual crests.",
+            "startOffset": 23218,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44649,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The larger Fero, the larger Ftot will be.",
+            "startOffset": 44608,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 49478,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Dendricity tends to decrease while sphericity increases.",
+            "startOffset": 49422,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28040,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0080": {
+                    "endOffset": 27944,
+                    "startOffset": 27914
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Sytron determines the occurrence of blowing snow using the formulation of Guyomarc\u2019h and M\u00e9rindol (1998) which gives the threshold wind speed as a function of simulated snow properties at the surface.",
+            "startOffset": 27840,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 49784,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 49782,
+                    "startOffset": 49762
+                }
+            },
+            "secId": "s0075",
+            "sentence": "Indeed, in Sytron, blowing snow comes only from previously deposited snow and the model does not accoung for preferential deposition (Lehning et al., 2008).",
+            "startOffset": 49628,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39632,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The rest of the atmospheric forcing is provided by SAFRAN.",
+            "startOffset": 39574,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 42226,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 42018,
+                    "startOffset": 41997
+                }
+            },
+            "secId": "s0045",
+            "sentence": "As in Vionnet et al. (2013), these days are defined using the total SAFRAN snowfall at the stations during the blowing snow event: if the total amount is lower (higher) than 5 mmSWE, the day is defined as a BSD without (with) snowfall.",
+            "startOffset": 41991,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 44826,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 44731,
+                    "startOffset": 44708
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Assuming a typical alpine slope length of L = 70 m as in (Lehning and Fierz, 2008), gives a difference of approximately two orders of magnitude between Fero and Ftot (and FSPC)",
+            "startOffset": 44650,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 54608,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "S2M-Sytron was evaluated for winter 2015/2016 at 11 automatic stations located in the French Alps and measuring simultaneously wind and blowing snow fluxes.",
+            "startOffset": 54452,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 24102,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, Sytron has never been deployed operationally.",
+            "startOffset": 24048,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26732,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 26550,
+                    "startOffset": 26523
+                },
+                "bb0055": {
+                    "endOffset": 26550,
+                    "startOffset": 26523
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The meteorological downscaling and analysis system SAFRAN (Durand et al., 1993, 2009) provides estimates of the atmospheric conditions in 300-m elevation steps in meteorological homogeneous areas referred to as massifs, ranging approximately between 500 and 2000 km2.",
+            "startOffset": 26465,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 53135,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Finally, the stations used for the model evaluation in our study are only located across the northern and central French Alps and cover the altitude range 1800\u20132850 m. No station is located in the Pyrenees or in Corsica where S2M-Sytron runs daily.",
+            "startOffset": 52887,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46777,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "At high-altitude stations (CLB and FCHE) where SAFRAN provides good estimates of wind speed (Fig. 4), runs R2 and R3 perform similarly in terms of blowing snow occurrence (similar POD and slightly lower FAR).",
+            "startOffset": 46569,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 50128,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This change mainly improves the detection of blowing snow days with concurrent snowfall (Fig. 7) with a limited increase in the number of false alarms.",
+            "startOffset": 49977,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32540,
+            "parents": [],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 32374,
+                    "startOffset": 32353
+                }
+            },
+            "secId": "s0030",
+            "sentence": "As in Vionnet et al. (2013), a blowing snow event corresponds to a time period of at least 4 h when snow on the ground is transported in the atmosphere in saltation and in turbulent suspension.",
+            "startOffset": 32347,
+            "title": "Data and methods"
+        },
+        {
+            "endOffset": 42762,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Results are more contrasted for stations below 2500 m.",
+            "startOffset": 42708,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 29012,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 28873,
+                    "startOffset": 28852
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Indeed, Vionnet et al. (2013) have shown these effects need to be taken into account to satisfactorily simulate the occurrence of blowing snow events in alpine terrain.",
+            "startOffset": 28844,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 36089,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 36017,
+                    "startOffset": 36007
+                },
+                "bb5005": {
+                    "endOffset": 36087,
+                    "startOffset": 36063
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The log-law assumption is used to provide a first-order adjustment of wind speed, although the vertical profile of wind speed may vary near crests (e.g. F\u00f6hn, 1980) or depending on atmospheric stability (e.g. Martin and Lejeune, 1998).",
+            "startOffset": 35854,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 55072,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "In this case, 89% of BSDs are detected with a FAR of only 5%.",
+            "startOffset": 55011,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 48272,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Again, run R3 provides the highest POD and reaches a similar performance as for the prediction of BSDs without snowfall.",
+            "startOffset": 48152,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 24372,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                },
+                "bb0105": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                },
+                "bb0115": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                },
+                "bb0120": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                },
+                "bb0170": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                },
+                "bb0215": {
+                    "endOffset": 24371,
+                    "startOffset": 24237
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Other numerical models of varying complexity have been developed to simulate wind-induced snow redistribution in alpine terrain (e.g. Gauer, 2001; Liston et al., 2007; Lehning et al., 2008; MacDonald et al., 2010; Schneiderbauer and Prokop, 2011; Vionnet et al., 2014).",
+            "startOffset": 24103,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45038,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "POD, FAR and HSS for each version of S2M-Sytron are given in Table 4.",
+            "startOffset": 44969,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 31724,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Such information can be useful for avalanche forecasters when preparing the avalanche bulletin for the next day.",
+            "startOffset": 31612,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 34572,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "For example, FlowCapt data were discarded when the sensors recorded blowing snow events without snow on the ground (the signal is probably due to high wind velocity or impact of soil particles) or when the air temperature was positive since more than 24h.",
+            "startOffset": 34317,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 22144,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For the past and present conditions, they can use blowing snow information from local observers and/or blowing snow fluxes measured at automatic weather stations using specific devices.",
+            "startOffset": 21959,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45825,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Overall, S2M-Sytron using the parameterization Vi13 adjusted and observed wind speed fully captures the daily occurrence of blowing snow at Col du Lac Blanc (Table 4).",
+            "startOffset": 45658,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 42383,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Fig. 4 shows the distributions of hourly observed and simulated 10-m wind speed at the 11 stations used for model evaluation.",
+            "startOffset": 42258,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 41894,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Range of POD and FAR are 1 to 0 with 1 a perfect score for POD and 0 a perfect score for FAR.",
+            "startOffset": 41801,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 22645,
+            "parents": [],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 22579,
+                    "startOffset": 22555
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A supplementary approach has been proposed by Lehning and Fierz (2008) to increase the number of stations with blowing snow information.",
+            "startOffset": 22509,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37390,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The same threshold value of 1 g m- 2 s- 1 as for the FlowCapt sensors was used.",
+            "startOffset": 37311,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 35512,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Snow also accumulates below the wind sensor during the winter and impacts the height of the wind measurement.",
+            "startOffset": 35403,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 32920,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "These stations cover an elevation range from 1800 m up to 2850 m and are installed in six different SAFRAN massifs in the northern and central French Alps.",
+            "startOffset": 32765,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 46276,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "When using SAFRAN wind speed, run R2 performed better than run R1 at every site (averaged HSS of 0.77 and 0.61, respectively).",
+            "startOffset": 46150,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 53434,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Additional evaluation of the model in these mountain ranges would be welcome.",
+            "startOffset": 53357,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47492,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "refoffsets": {
+                "bb0210": {
+                    "endOffset": 47490,
+                    "startOffset": 47470
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Blowing snow events occur either with or without concurrent snowfall (e.g. Vionnet et al., 2013).",
+            "startOffset": 47395,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 25766,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The results of the model evaluation are described in Section 4.",
+            "startOffset": 25703,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55973,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Therefore, systems such as S2M-Sytron will still be useful in the coming years in support of avalanche hazard forecasting.",
+            "startOffset": 55851,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 50905,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The evaluation of SAFRAN wind speed (Fig. 4) has illustrated the inherent limitations of this system in alpine terrain.",
+            "startOffset": 50786,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 25218,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This implementation is described in Section 2 as well as the daily diagnostic available to avalanche forecasters.",
+            "startOffset": 25105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29220,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 29132,
+                    "startOffset": 29114
+                }
+            },
+            "secId": "s0020",
+            "sentence": "In particular, the properties of falling snow as a function of wind speed follow the observations of Sato et al. (2008) and allow simultaneous occurrence of snowfall and ground snow transport above 6 m s- 1.",
+            "startOffset": 29013,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 35402,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Periods with wind speed below 0.2 m s- 1 have been excluded from the dataset to remove potential cases of riming.",
+            "startOffset": 35289,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 46001,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Fig. 6 shows POD, FAR and HSS for the prediction of BSDs with different versions of S2M-Sytron (Table 2) for 11 stations in the French Alps.",
+            "startOffset": 45861,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 48151,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Run R2 brings substantial improvements (POD of 0.78) suggesting that the events missed by run R1 occur at moderate wind speeds.",
+            "startOffset": 48024,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 47209,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "This has direct consequences on the prediction of BSDs at this station so that using observed wind speed significantly improved POD.",
+            "startOffset": 47077,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 48702,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The first configuration of the model (run R1) corresponds to the operational configuration running daily since winter 2015/2016.",
+            "startOffset": 48574,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48437,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Overall, this evaluation reveals that S2M-Sytron brings valuable daily information for avalanche forecasters on the occurrence of both types of blowing snow events.",
+            "startOffset": 48273,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 50237,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This modification has also an impact on the intensity of blowing snow event and requires further evaluation.",
+            "startOffset": 50129,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53672,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Results concerning the influence of fresh snow properties and wind speed input are expected to be similar in these regions since the model sensitivity mainly comes from the model structure and conceptual representation of the topography.",
+            "startOffset": 53435,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29730,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For each massif and elevation band, Sytron simulates wind-induced snow redistribution between 40\u00b0 slopes of opposite aspect (N-S, NE-SW, E-W,SE-NW).",
+            "startOffset": 29582,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 45535,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "It only leads to small improvements of POD, FAR and HSS.",
+            "startOffset": 45479,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 30803,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Results are available for the last 24 h (analysis) and for the next 48 h (forecast).",
+            "startOffset": 30719,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 51087,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Indeed, due to its conceptual representation of the topography (elevation bands within massif), SAFRAN does not fully capture the local features of the wind field in alpine terrain.",
+            "startOffset": 50906,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53356,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 53355,
+                    "startOffset": 53306
+                },
+                "bb0160": {
+                    "endOffset": 53355,
+                    "startOffset": 53306
+                }
+            },
+            "secId": "s0075",
+            "sentence": "These regions are characterized by different wind and precipitation regimes compared to the French Alps due the proximity of the Atlantic ocean and the Mediterranean sea (Esteban et al., 2005; Scheffknecht et al., 2017).",
+            "startOffset": 53136,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 21345,
+            "parents": [],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 21344,
+                    "startOffset": 21301
+                },
+                "bb0035": {
+                    "endOffset": 21344,
+                    "startOffset": 21301
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Deposited snow is made of fine grains due to sublimation and rebounds on the snow surface during the transport (Clifton et al., 2006; Comola et al., 2017).",
+            "startOffset": 21190,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 21958,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "When reporting on blowing snow conditions in their bulletin, avalanche forecasters can rely on several sources of data.",
+            "startOffset": 21839,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30085,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 30083,
+                    "startOffset": 30064
+                }
+            },
+            "secId": "s0025",
+            "sentence": "In particular, wind speed and direction are taken from a specific module of SAFRAN that combines near-surface wind and free atmosphere wind to provide an estimation of the 10-m wind (Durand et al., 2001).",
+            "startOffset": 29881,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 34316,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Additional analysis of FlowCapt data was performed to remove some data which were considered suspicious.",
+            "startOffset": 34212,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 21544,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These fine grains present a high cohesion due to sintering and a layer of deposited snow may act as a slab if deposited on a weak layer made of faceted crystals, depth or surface hoar or fresh snow.",
+            "startOffset": 21346,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43313,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "On the contrary, SAFRAN overestimates wind speed at stations FBER and FBON (positive bias of 1.3 and 1.0 m s- 1 respectively) where the surrounding topography shelters the station from wind blowing from certain direction: north/north-west at FBER and south/south-east at FBON.",
+            "startOffset": 43037,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 46926,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "At stations where SAFRAN tends to underestimate wind speed (FMOR, FHUE and FCMB), run R3 significantly improves performance due to increases in POD.",
+            "startOffset": 46778,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 47633,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Therefore, the ability of the three versions of S2M-Sytron to simulate BSD with and without snowfall has been evaluated separately (Fig. 7).",
+            "startOffset": 47493,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 52732,
+            "parents": [],
+            "refoffsets": {
+                "bb0175": {
+                    "endOffset": 52701,
+                    "startOffset": 52674
+                }
+            },
+            "secId": "s0075",
+            "sentence": "NWP systems do not only provide information on mean wind speed but also include parameterizations of wind gust (e.g. Schreur and Geertsema, 2008) to derive maximum wind speed.",
+            "startOffset": 52557,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30939,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Fig. 2 gives an example of outputs of S2M-Sytron available to avalanche forecasters on February 9 2016 for the Vanoise massif (Fig. 3).",
+            "startOffset": 30804,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 40037,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "BSDs in the simulations correspond to days when S2M-Sytron simulates at least 4 consecutive hours of blowing snow.",
+            "startOffset": 39923,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 29880,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "As in S2M, Crocus including Sytron is driven by SAFRAN meteorological forcing.",
+            "startOffset": 29802,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 51580,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Therefore, due to limitations in the wind forcing, S2M-Sytron is not a tool that can be used for the prediction of the local spatial distribution of blowing snow quantities.",
+            "startOffset": 51407,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35641,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Therefore, all remaining wind speed data were adjusted to a standard 10-m wind above the snow surface using measured snow depth.",
+            "startOffset": 35513,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 50305,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The second sensitivity test (run R3) concerned the input wind speed.",
+            "startOffset": 50237,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 54012,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This paper describes the implementation of the blowing snow scheme Sytron into supplementary runs of the operational chain for avalanche hazard forecasting S2M used in the main French mountain ranges.",
+            "startOffset": 53812,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 30316,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Blowing snow occurrence and mass transport are simulated as described in Section 2.2 as a function of SAFRAN wind speed and simulated surface snow characteristics.",
+            "startOffset": 30153,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 32621,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The following subsections describe the data and methods used in this evaluation.",
+            "startOffset": 32541,
+            "title": "Data and methods"
+        },
+        {
+            "endOffset": 36515,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The SPC-S7 is an optical device detecting blowing snow particles with a mean diameter between 40 and 500 \u03bcm by their shadows on a photodiode.",
+            "startOffset": 36374,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 39826,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Run R3 aims at quantifying the impact of errors in the estimation of wind speed by SAFRAN on the occurrence of blowing snow.",
+            "startOffset": 39702,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 38788,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Wind speed and direction are taken from SAFRAN analysis as described in Section 2.3.",
+            "startOffset": 38704,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 22963,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 22821,
+                    "startOffset": 22796
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Wind measurements at automatic weather stations (AWS) deployed across the Swiss Alps are combined with outputs from the detailed snow model SNOWPACK (Bartelt and Lehning, 2002) running at the location of each AWS to determine the occurrence of blowing snow and estimate loading of lee slopes by wind-transported snow.",
+            "startOffset": 22646,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48023,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Run R1 captures 51% of BSDs with snowfall.",
+            "startOffset": 47981,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 45338,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "This improves the prediction of BSDs in run R2 resulting in higher POD and HSS than run R1.",
+            "startOffset": 45247,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 30152,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Wind direction is used to determine the windward and leeward side.",
+            "startOffset": 30086,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 38074,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "S2M-Sytron was used in its \u201cstation\u201d mode so that, for a given station, the SAFRAN meteorological forcing of the massif where the station is located is linearly interpolated at the exact elevation of the station.",
+            "startOffset": 37862,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 42963,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In particular, SAFRAN strongly underestimates wind speed (negative bias of 2.6 m s- 1) at station FMOR located along an east-west ridge where the wind field is associated with a strong crest speed-up.",
+            "startOffset": 42763,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 55590,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "So far, these models have only been used for research purposes over high-resolution grids (10\u2013250 m).",
+            "startOffset": 55489,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 21839,
+            "parents": [],
+            "refoffsets": {
+                "bb0125": {
+                    "endOffset": 21837,
+                    "startOffset": 21817
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Therefore, blowing snow events in alpine terrain are recognized as one of the major avalanche problems that need to be taken into account by avalanche forecasters (Mair and Nairz, 2010).",
+            "startOffset": 21653,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30718,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Outputs of the morning run are averaged at a 3-hour time step to provide avalanche forecasters with information on blowing snow occurrence and intensity for all the elevation bands and aspects in each massif.",
+            "startOffset": 30510,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 36902,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Because of snowfall and blowing snow events, the height of the SPC-S7 above the snow surface varied substantially during the winter season preventing any direct comparison between flux measurements stemming from the same sensor.",
+            "startOffset": 36674,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 38534,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Similarly to the operational implementation (Section 2.3), S2M-Sytron simulates wind-induced snow transport between the slopes of opposite aspect.",
+            "startOffset": 38388,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 25449,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 3 presents the automatic stations measuring blowing snow fluxes deployed across the French Alps and used to evaluate S2M-Sytron in terms of simulated blowing snow occurrence for events with and without concurrent snowfall.",
+            "startOffset": 25219,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38283,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 38165,
+                    "startOffset": 38141
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Eight virtual slopes are then considered around the station as in Lehning and Fierz (2008) (where only four slopes were considered) and a topographic correction is applied to the incoming shortwave radiation.",
+            "startOffset": 38075,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 22508,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, these types of networks are generally scarce and therefore provide only limited information on blowing snow conditions.",
+            "startOffset": 22380,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27608,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The so-called SAFRAN-SURFEX/Crocus-MEPRA (S2M) model chain has now been used operationally for over 15 years.",
+            "startOffset": 27499,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 39380,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 39379,
+                    "startOffset": 39305
+                },
+                "bb0080": {
+                    "endOffset": 39379,
+                    "startOffset": 39305
+                },
+                "bb0110": {
+                    "endOffset": 39379,
+                    "startOffset": 39305
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Indeed, the value of 6 m s- 1 for simultaneous occurrence of snowfall and ground snow transport used in run R1 can be considered as relatively high compared to typical threshold wind speeds (around 4 m s- 1) reported for fresh snow (e.g. Li and Pomeroy, 1997; Guyomarc\u2019h and M\u00e9rindol, 1998; Clifton et al., 2006).",
+            "startOffset": 39067,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 44302,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "This horizontal mass flux represents a part of the total blowing snow transport rate Ftot (kg m- 1 day- 1) which is the sum of the vertically-integrated snow transport in the saltation and the suspension layers.",
+            "startOffset": 44091,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 21652,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Local overload such as a skier, a snowmobile or a cornice fall can trigger the release of a slab avalanche.",
+            "startOffset": 21545,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 23707,
+            "parents": [],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 23706,
+                    "startOffset": 23665
+                },
+                "bb0100": {
+                    "endOffset": 23565,
+                    "startOffset": 23541
+                },
+                "bb0205": {
+                    "endOffset": 23706,
+                    "startOffset": 23665
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Similar to Lehning and Fierz (2008), Sytron uses information on surface snow conditions provided by the detailed snowpack model Crocus (Brun et al., 1992; Vionnet et al., 2012).",
+            "startOffset": 23530,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31341,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For this period, S2M-Sytron shows that westerly winds had been associated with blowing snow on February 8 and had led to snow accumulation on eastern slopes from 2400 m up to 3600 m. Another blowing snow event was forecast from 6 pm on February 9 and until 9 am on February 10.",
+            "startOffset": 31064,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 38387,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The slope value is set to 20\u00b0 to be representative of the typical topography found around the stations.",
+            "startOffset": 38284,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 44968,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Fig. 5 shows that the model captures well the occurrence of the main blowing snow events observed during winter 2015/2016 at Col du Lac Blanc.",
+            "startOffset": 44826,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 25881,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 5 contains a discussion of the main results of this study and Section 6 offers several concluding remarks.",
+            "startOffset": 25767,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43798,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Therefore, this site was used to compare the erosion fluxes simulated by the three configurations of S2M-Sytron with blowing snow fluxes measured with SPC as shown in Fig. 5.",
+            "startOffset": 43624,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 51264,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "For example, large deviations were found at stations located along ridges where the atmospheric flow is characterized by a strong crest speed-up (stations FMOR, FHUE and FCMB).",
+            "startOffset": 51088,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51911,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Future improvements in operational forecasting of local wind field and resulting blowing snow quantities will require a change in the representation of the topography.",
+            "startOffset": 51744,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 24875,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "They have never been used in the context of avalanche hazard forecasting.",
+            "startOffset": 24802,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43036,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Similar results are found at stations FCMB and FHUE located near crests.",
+            "startOffset": 42964,
+            "title": "Wind speed"
+        },
+        {
+            "endOffset": 27353,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 27064,
+                    "startOffset": 27024
+                },
+                "bb0205": {
+                    "endOffset": 27064,
+                    "startOffset": 27024
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The detailed snowpack model SURFEX/Crocus (hereafter referred as Crocus, Brun et al., 1992; Vionnet et al., 2012) computes the time evolution of the physical properties of the snowpack using SAFRAN input (air temperature and humidity, wind speed, incoming longwave and shortwave radiation, rainfall and snowfall amount) for a variety of slope and aspect situations within each massif and altitude band.",
+            "startOffset": 26951,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 46149,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Using observed wind speed, run R3 results in the highest HSS for all the sites (averaged HSS of 0.90), as well as the highest POD, except for FBER.",
+            "startOffset": 46002,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 46450,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Run R2 significantly improves POD at all stations compared to R1 and only slightly increases FAR at some stations, leading to the overall improvement of HSS at all stations.",
+            "startOffset": 46277,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 43623,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The experimental site of Col du Lac Blanc can be considered as a reference site for blowing snow measurements in the French Alps since the site is well maintained, equipped with Snow Particle Counters and regularly visited in wintertime.",
+            "startOffset": 43386,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 37581,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The 10-minute data were then averaged hourly and, similarly to the ISAW stations, each day was classified as a BSD if at least four consecutive hours with blowing snow occurrence were found.",
+            "startOffset": 37391,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 25104,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Since winter 2015/2016, the conceptual scheme Sytron has been deployed in S2M.",
+            "startOffset": 25026,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26464,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 26463,
+                    "startOffset": 26419
+                },
+                "bb0090": {
+                    "endOffset": 26463,
+                    "startOffset": 26419
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Numerical simulations of the physical properties of the snowpack on the ground are also available for a more comprehensive spatial coverage, including an assessment of its mechanical stability (Durand et al., 1999; Lafaysse et al., 2013).",
+            "startOffset": 26226,
+            "title": "Operational chain for avalanche hazard forecasting"
+        },
+        {
+            "endOffset": 23218,
+            "parents": [],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 23217,
+                    "startOffset": 23180
+                },
+                "bb0165": {
+                    "endOffset": 23217,
+                    "startOffset": 23180
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In this approach, SNOWPACK provides an estimation of the threshold wind speed for snow transport that depends on the simulated microstructure properties of surface snow (sphericity, coordination number, bond radius) (Schmidt, 1980; Lehning et al., 2000).",
+            "startOffset": 22964,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24589,
+            "parents": [],
+            "refoffsets": {
+                "bb0120": {
+                    "endOffset": 24443,
+                    "startOffset": 24420
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Except for the conceptual approach followed by MacDonald et al. (2010) where the topography is represented by hydrological response units, all the other models are based on a gridded representation of the topography.",
+            "startOffset": 24373,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28568,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Sytron has been recently implemented as an option in SURFEX/Crocus.",
+            "startOffset": 28501,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 47395,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Finally, at stations where SAFRAN tends to overestimate wind speed (namely FGIE, FBON and FBER), POD remains unchanged whereas FAR tends to decrease, leading to improved HSS for run R3.",
+            "startOffset": 47210,
+            "title": "Evaluation over the French Alps"
+        },
+        {
+            "endOffset": 34211,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0195": {
+                    "endOffset": 34210,
+                    "startOffset": 34185
+                }
+            },
+            "secId": "s0035",
+            "sentence": "A threshold value of 1 g m- 2 s- 1 was then applied at an hourly time step to remove non-significant blowing snow occurrence as in Trouvilliez et al. (2015).",
+            "startOffset": 34054,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 55850,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Their operational implementation over large mountainous regions to produce daily analysis and forecast is still a challenge due to the very high computational cost of the simulations and due to the difficulty of obtaining reliable high-resolution wind fields.",
+            "startOffset": 55591,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33489,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0025": {
+                    "endOffset": 33386,
+                    "startOffset": 33366
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Each ISAW station is equipped with two FlowCapt acoustic sensors (Chritin et al., 1999) to measure hourly blowing snow fluxes vertically integrated between 0\u20131 m and 1\u20132 m above the ground.",
+            "startOffset": 33300,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 38584,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Three configurations of S2M-Sytron were evaluated.",
+            "startOffset": 38534,
+            "title": "Model configuration"
+        },
+        {
+            "endOffset": 43835,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Evaluation results"
+                },
+                {
+                    "id": "s0060",
+                    "title": "Blowing snow occurrence"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Averaged daily fluxes are presented.",
+            "startOffset": 43799,
+            "title": "Point-scale evaluation at Col du Lac Blanc"
+        },
+        {
+            "endOffset": 51744,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "It is essentially relevant at the massif scale to help avalanche forecasters when they are preparing their daily avalanche bulletin for a given mountainous region.",
+            "startOffset": 51581,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28500,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 28499,
+                    "startOffset": 28479
+                }
+            },
+            "secId": "s0020",
+            "sentence": "These parameterizations are described in detail in Durand et al. (2001).",
+            "startOffset": 28428,
+            "title": "Blowing snow scheme Sytron"
+        },
+        {
+            "endOffset": 52119,
+            "parents": [],
+            "refoffsets": {
+                "bb0145": {
+                    "endOffset": 52065,
+                    "startOffset": 52032
+                }
+            },
+            "secId": "s0075",
+            "sentence": "The future system will rely on a distributed representation of the snowpack at sufficiently high resolution (100\u2013250 m, Revuelto et al., in review, 2017) combined with improved wind input at this resolution.",
+            "startOffset": 51912,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 33300,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Col du Lac Blanc (2720 m asl) is part of the CryObs-Clim observation network (https://cryobsclim.osug.fr/?lang=en).",
+            "startOffset": 33185,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 22379,
+            "parents": [],
+            "refoffsets": {
+                "bb0025": {
+                    "endOffset": 22311,
+                    "startOffset": 22291
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For example, in the Alps and the Pyrenees, governmental and private organizations have deployed stations equipped with FlowCapt acoustic sensors (Chritin et al., 1999), mainly for the avalanche protection of exposed roads and tunnels.",
+            "startOffset": 22145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50364,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Observed wind speed was used instead of SAFRAN wind speed.",
+            "startOffset": 50306,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 55488,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 55391,
+                    "startOffset": 55327
+                },
+                "bb0115": {
+                    "endOffset": 55391,
+                    "startOffset": 55327
+                },
+                "bb0215": {
+                    "endOffset": 55391,
+                    "startOffset": 55327
+                }
+            },
+            "secId": "s0080",
+            "sentence": "Progress towards the prediction of blowing snow quantities at the local scale will rely on distributed blowing snow models (e.g. Liston et al., 2007; Lehning et al., 2008; Vionnet et al., 2014) using a high-resolution input wind field and a fine scale representation of snowpack properties.",
+            "startOffset": 55198,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49108,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The first sensitivity test (run R2) concerned the wind-dependence of snow crystal shape during snowfall (dendricity and sphericity in Crocus formalism).",
+            "startOffset": 48956,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35288,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "ISAW stations also measure at a hourly time step snow depth (except at FPRA station) with a SR50 ultrasonic sensor and wind speed and direction with a Young wind monitor (at all stations).",
+            "startOffset": 35100,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 34053,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "First, blowing snow fluxes measured by the FlowCapt sensors were the log-law assumption is used to provide a averaged to get an hourly representative flux at each station.",
+            "startOffset": 33882,
+            "title": "Blowing snow measurements"
+        },
+        {
+            "endOffset": 49421,
+            "parents": [],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 49365,
+                    "startOffset": 49325
+                },
+                "bb0080": {
+                    "endOffset": 49181,
+                    "startOffset": 49125
+                },
+                "bb0155": {
+                    "endOffset": 49365,
+                    "startOffset": 49325
+                },
+                "bb0210": {
+                    "endOffset": 49181,
+                    "startOffset": 49125
+                }
+            },
+            "secId": "s0075",
+            "sentence": "As mentioned in Guyomarc\u2019h and M\u00e9rindol (1998) and Vionnet et al. (2013), this parameterization aims at representing the fact that, under strong wind conditions, snowflakes break upon collision with the snow surface (Sato et al., 2008; Comola et al., 2017) so that their properties differ from purely fresh snow.",
+            "startOffset": 49109,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30427,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "S2M-Sytron runs twice per day in the morning (06 UTC) and in the evening (18 UTC) and generates hourly outputs.",
+            "startOffset": 30316,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 31063,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Analysis and forecasting of blowing snow over the French mountain ranges"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This graphic shows information on blowing snow intensity and the corresponding wind velocity and direction (as wind barbs).",
+            "startOffset": 30940,
+            "title": "Operational implementation and diagnostic"
+        },
+        {
+            "endOffset": 54452,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "A specific visualization has been developed to help forecasters analyze model output and synthesize relevant information for their bulletin.",
+            "startOffset": 54312,
+            "title": "Conclusion"
+        }
+    ],
+    "docId": "S0165232X17303294",
+    "metadata": {
+        "asjc": [
+            "1900",
+            "1909"
+        ],
+        "authors": [
+            {
+                "email": "vincent.vionnet@usask.ca",
+                "first": "Vincent",
+                "initial": "V.",
+                "last": "Vionnet"
+            },
+            {
+                "email": null,
+                "first": "Gilbert",
+                "initial": "G.",
+                "last": "Guyomarc'h"
+            },
+            {
+                "email": null,
+                "first": "Matthieu",
+                "initial": "M.",
+                "last": "Lafaysse"
+            },
+            {
+                "email": null,
+                "first": "Florence",
+                "initial": "F.",
+                "last": "Naaim-Bouvet"
+            },
+            {
+                "email": null,
+                "first": "G\u00e9rald",
+                "initial": "G.",
+                "last": "Giraud"
+            },
+            {
+                "email": null,
+                "first": "Yannick",
+                "initial": "Y.",
+                "last": "Deliot"
+            }
+        ],
+        "doi": "10.1016/j.coldregions.2017.12.006",
+        "firstpage": "1",
+        "issn": "0165232X",
+        "keywords": [
+            "Avalanche hazard forecasting",
+            "Blowing snow",
+            "Mountains"
+        ],
+        "lastpage": "10",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "EART"
+        ],
+        "title": "Operational implementation and evaluation of a blowing snow scheme for avalanche hazard forecasting"
+    }
+}

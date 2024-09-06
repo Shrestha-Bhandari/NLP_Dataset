@@ -1,0 +1,4343 @@
+{
+    "abstract": "Scientific applications often contain large, computationally-intensive, and irregular parallel loops or tasks that exhibit stochastic behavior leading to load imbalance. Load imbalance often manifests during the execution of parallel scientific applications on large and complex high performance computing (HPC) systems. The extreme scale of HPC systems on the road to Exascale computing only exacerbates the loss in performance due to load imbalance. Dynamic loop self-scheduling (DLS) techniques are instrumental in improving the performance of scientific applications on HPC systems via load balancing. Selecting a DLS technique that results in the best performance for different problem and system sizes requires a large number of exploratory experiments. Currently, a theoretical model that can be used to predict the scheduling technique that yields the best performance for a given problem and system has not yet been identified. Therefore, simulation is the most appropriate approach for conducting such exploratory experiments in a reasonable amount of time. However, conducting realistic and trustworthy simulations of application performance under different configurations is challenging. This work devises an approach to realistically simulate computationally-intensive scientific applications that employ DLS and execute on HPC systems. The proposed approach minimizes the sources of uncertainty in the simulative experiments results by bridging the native and simulative experimental approaches. A new method is proposed to capture the variation of application performance between different native executions. Several approaches to represent the application tasks (or loop iterations) are compared to establish their influence on the simulative application performance. A novel simulation strategy is introduced that applies the proposed approach, which transforms a native application code into simulative code. The native and simulative performance of two computationally-intensive scientific applications that employ eight task scheduling techniques (static, nonadaptive dynamic, and adaptive dynamic) are compared to evaluate the realism of the proposed simulation approach. The comparison of the performance characteristics extracted from the native and simulative performance shows that the proposed simulation approach fully captured most of the performance characteristics of interest. This work shows and establishes the importance of simulations that realistically predict the performance of DLS techniques for different applications and system configurations.",
+    "bib_entries": {
+        "b1": null,
+        "b10": {
+            "authors": [
+                {
+                    "first": "Robert D.",
+                    "initial": "R.D.",
+                    "last": "Blumofe"
+                },
+                {
+                    "first": "Charles E.",
+                    "initial": "C.E.",
+                    "last": "Leiserson"
+                },
+                {
+                    "first": "R. D.",
+                    "initial": "R.D.",
+                    "last": "Blumofe"
+                },
+                {
+                    "first": "C. E.",
+                    "initial": "C.E.",
+                    "last": "Leiserson"
+                }
+            ],
+            "doi": "10.1145/324133.324234",
+            "firstpage": "720",
+            "issn": "00045411",
+            "lastpage": "748",
+            "pub_year": 1999,
+            "title": "Scheduling multithreaded computations by work stealing",
+            "volume": "46"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Peiyi",
+                    "initial": "P.",
+                    "last": "Tang"
+                },
+                {
+                    "first": "Pen Chung",
+                    "initial": "P.C.",
+                    "last": "Yew"
+                }
+            ],
+            "firstpage": "528",
+            "issn": "01903918",
+            "lastpage": "535",
+            "pub_year": 1986,
+            "title": "PROCESSOR SELF-SCHEDULING FOR MULTIPLE-NESTED PARALLEL LOOPS."
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Clyde P.",
+                    "initial": "C.P.",
+                    "last": "Kruskal"
+                },
+                {
+                    "first": "Alan",
+                    "initial": "A.",
+                    "last": "Weiss"
+                }
+            ],
+            "doi": "10.1109/TSE.1985.231547",
+            "firstpage": "1001",
+            "issn": "00985589",
+            "lastpage": "1016",
+            "pub_year": 1985,
+            "title": "ALLOCATING INDEPENDENT SUBTASKS ON PARALLEL PROCESSORS.",
+            "volume": "SE-11"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Constantine D.",
+                    "initial": "C.D.",
+                    "last": "Polychronopoulos"
+                },
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Kuck"
+                }
+            ],
+            "doi": "10.1109/TC.1987.5009495",
+            "firstpage": "1425",
+            "issn": "00189340",
+            "lastpage": "1439",
+            "pub_year": 1987,
+            "title": "Guided Self-Scheduling: A Practical Scheduling Scheme for Parallel Supercomputers",
+            "volume": "C-36"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Susan Flynn",
+                    "initial": "S.F.",
+                    "last": "Hummel"
+                },
+                {
+                    "first": "Edith",
+                    "initial": "E.",
+                    "last": "Schonberg"
+                },
+                {
+                    "first": "Lawrence E.",
+                    "initial": "L.E.",
+                    "last": "Flynn"
+                }
+            ],
+            "doi": "10.1145/135226.135232",
+            "firstpage": "90",
+            "issn": "00010782",
+            "lastpage": "101",
+            "pub_year": 1992,
+            "title": "Factoring: A Method for Scheduling Parallel Loops",
+            "volume": "35"
+        },
+        "b15": null,
+        "b16": {
+            "authors": [
+                {
+                    "first": "Ricolindo L.",
+                    "initial": "R.L.",
+                    "last": "Cari\u00f1o"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                }
+            ],
+            "doi": "10.1007/s11227-007-0148-y",
+            "firstpage": "41",
+            "issn": "09208542",
+            "lastpage": "63",
+            "pub_year": 2008,
+            "title": "Dynamic load balancing with adaptive factoring methods in scientific applications",
+            "volume": "44"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "David F.",
+                    "initial": "D.F.",
+                    "last": "Bacon"
+                },
+                {
+                    "first": "Susan L.",
+                    "initial": "S.L.",
+                    "last": "Graham"
+                },
+                {
+                    "first": "Oliver J.",
+                    "initial": "O.J.",
+                    "last": "Sharp"
+                }
+            ],
+            "doi": "10.1145/197405.197406",
+            "firstpage": "345",
+            "issn": "03600300",
+            "lastpage": "420",
+            "pub_year": 1994,
+            "title": "Compiler Transformations for High-Performance Computing",
+            "volume": "26"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                },
+                {
+                    "first": "Ricolindo L.",
+                    "initial": "R.L.",
+                    "last": "Cari\u00f1o"
+                }
+            ],
+            "firstpage": "66",
+            "issn": "10689613",
+            "lastpage": "80",
+            "pub_year": 2005,
+            "title": "Addressing the stochastic nature of scientific computations via dynamic loop scheduling",
+            "volume": "21"
+        },
+        "b19": null,
+        "b2": {
+            "authors": [
+                {
+                    "first": "Luka",
+                    "initial": "L.",
+                    "last": "Stanisic"
+                },
+                {
+                    "first": "Samuel",
+                    "initial": "S.",
+                    "last": "Thibault"
+                },
+                {
+                    "first": "Arnaud",
+                    "initial": "A.",
+                    "last": "Legrand"
+                },
+                {
+                    "first": "Brice",
+                    "initial": "B.",
+                    "last": "Videau"
+                },
+                {
+                    "first": "Jean Fran\u00e7ois",
+                    "initial": "J.F.",
+                    "last": "M\u00e9haut"
+                }
+            ],
+            "doi": "10.1002/cpe.3555",
+            "firstpage": "4075",
+            "issn": "15320626",
+            "lastpage": "4090",
+            "pub_year": 2015,
+            "title": "Faithful performance prediction of a dynamic task-based runtime system for heterogeneous multi-core architectures",
+            "volume": "27"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Velusamy"
+                }
+            ],
+            "doi": "10.1109/IPDPS.2002.1015661",
+            "firstpage": "87",
+            "lastpage": "98",
+            "pub_year": 2002,
+            "title": "Load balancing highly irregular computations with the adaptive factoring"
+        },
+        "b21": null,
+        "b22": {
+            "authors": [
+                {
+                    "first": "Anthony",
+                    "initial": "A.",
+                    "last": "Boulmier"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "White"
+                },
+                {
+                    "first": "Nabil",
+                    "initial": "N.",
+                    "last": "Abdennadher"
+                }
+            ],
+            "doi": "10.1109/CloudCom.2016.0047",
+            "firstpage": "230",
+            "issn": "23302194",
+            "lastpage": "236",
+            "pub_year": 2016,
+            "title": "Towards a cloud based decision support system for solar map generation",
+            "volume": "0"
+        },
+        "b23": {
+            "authors": [
+                {
+                    "first": "Ricolindo L.",
+                    "initial": "R.L.",
+                    "last": "Cari\u00f1o"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                }
+            ],
+            "firstpage": "249",
+            "issn": "18951767",
+            "lastpage": "261",
+            "pub_year": 2007,
+            "title": "A tool for a two-level dynamic load balancing strategy in scientific applications",
+            "volume": "8"
+        },
+        "b24": {
+            "authors": [
+                {
+                    "first": "Ahmed",
+                    "initial": "A.",
+                    "last": "Eleliemy"
+                },
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Mohammed"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                }
+            ],
+            "doi": "10.1109/HPCCWS.2017.00012",
+            "firstpage": "34",
+            "lastpage": "41",
+            "pub_year": 2018,
+            "title": "Efficient Generation of Parallel Spin-images Using Dynamic Loop Scheduling",
+            "volume": "2018-"
+        },
+        "b25": null,
+        "b26": {
+            "authors": [
+                {
+                    "first": "Ten H.",
+                    "initial": "T.H.",
+                    "last": "Tzen"
+                },
+                {
+                    "first": "Lionel M.",
+                    "initial": "L.M.",
+                    "last": "Ni"
+                }
+            ],
+            "doi": "10.1109/71.205655",
+            "firstpage": "87",
+            "issn": "10459219",
+            "lastpage": "98",
+            "pub_year": 1993,
+            "title": "Trapezoid Self-Scheduling: A Practical Scheduling Scheme for Parallel Compilers",
+            "volume": "4"
+        },
+        "b27": null,
+        "b28": {
+            "authors": [
+                {
+                    "first": "Shuai",
+                    "initial": "S.",
+                    "last": "Che"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Boyer"
+                },
+                {
+                    "first": "Jiayuan",
+                    "initial": "J.",
+                    "last": "Meng"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Tarjan"
+                },
+                {
+                    "first": "Jeremy W.",
+                    "initial": "J.W.",
+                    "last": "Sheaffer"
+                },
+                {
+                    "first": "Sang Ha",
+                    "initial": "S.H.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Kevin",
+                    "initial": "K.",
+                    "last": "Skadron"
+                }
+            ],
+            "doi": "10.1109/IISWC.2009.5306797",
+            "firstpage": "44",
+            "lastpage": "54",
+            "pub_year": 2009,
+            "title": "Rodinia: A benchmark suite for heterogeneous computing"
+        },
+        "b29": {
+            "authors": [
+                {
+                    "first": "Mahadevan",
+                    "initial": "M.",
+                    "last": "Balasubramaniam"
+                },
+                {
+                    "first": "Nitin",
+                    "initial": "N.",
+                    "last": "Sukhija"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                },
+                {
+                    "first": "Srishti",
+                    "initial": "S.",
+                    "last": "Srivastava"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2012.171",
+            "firstpage": "1343",
+            "lastpage": "1351",
+            "pub_year": 2012,
+            "title": "Towards the scalability of dynamic loop scheduling techniques via discrete event simulation"
+        },
+        "b3": null,
+        "b30": null,
+        "b31": null,
+        "b32": {
+            "authors": [
+                {
+                    "first": "Nitin",
+                    "initial": "N.",
+                    "last": "Sukhija"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                },
+                {
+                    "first": "Srishti",
+                    "initial": "S.",
+                    "last": "Srivastava"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2013.132",
+            "firstpage": "1429",
+            "lastpage": "1438",
+            "pub_year": 2013,
+            "title": "Evaluating the flexibility of dynamic loop scheduling on heterogeneous systems in the presence of fluctuating load using SimGrid"
+        },
+        "b33": {
+            "authors": [
+                {
+                    "first": "Nitin",
+                    "initial": "N.",
+                    "last": "Sukhija"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                }
+            ],
+            "doi": "10.1109/ISPDC.2015.29",
+            "firstpage": "194",
+            "lastpage": "203",
+            "pub_year": 2015,
+            "title": "Investigating the resilience of dynamic loop scheduling in heterogeneous computing systems"
+        },
+        "b34": {
+            "authors": [
+                {
+                    "first": "Franziska",
+                    "initial": "F.",
+                    "last": "Hoffeins"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                },
+                {
+                    "first": "Ioana",
+                    "initial": "I.",
+                    "last": "Banicescu"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2017.147",
+            "firstpage": "1579",
+            "lastpage": "1587",
+            "pub_year": 2017,
+            "title": "Examining the reproducibility of using dynamic loop scheduling techniques in scientific applications"
+        },
+        "b35": null,
+        "b36": null,
+        "b37": null,
+        "b38": null,
+        "b39": {
+            "authors": [
+                {
+                    "first": "C\u00e9dric",
+                    "initial": "C.",
+                    "last": "Augonnet"
+                },
+                {
+                    "first": "Samuel",
+                    "initial": "S.",
+                    "last": "Thibault"
+                },
+                {
+                    "first": "Raymond",
+                    "initial": "R.",
+                    "last": "Namyst"
+                },
+                {
+                    "first": "Pierre Andr\u00e9",
+                    "initial": "P.A.",
+                    "last": "Wacrenier"
+                }
+            ],
+            "doi": "10.1002/cpe.1631",
+            "firstpage": "187",
+            "issn": "15320626",
+            "lastpage": "198",
+            "pub_year": 2011,
+            "title": "StarPU: A unified platform for task scheduling on heterogeneous multicore architectures",
+            "volume": "23"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "Jeremiah J.",
+                    "initial": "J.J.",
+                    "last": "Wilke"
+                },
+                {
+                    "first": "Joseph P.",
+                    "initial": "J.P.",
+                    "last": "Kenny"
+                },
+                {
+                    "first": "Samuel",
+                    "initial": "S.",
+                    "last": "Knight"
+                },
+                {
+                    "first": "Sebastien",
+                    "initial": "S.",
+                    "last": "Rumley"
+                }
+            ],
+            "doi": "10.1007/978-3-319-92040-5_7",
+            "firstpage": "123",
+            "issn": "03029743",
+            "lastpage": "143",
+            "pub_year": 2018,
+            "title": "Compiler-assisted source-to-source skeletonization of application models for system simulation",
+            "volume": "10876"
+        },
+        "b40": {
+            "authors": [
+                {
+                    "first": "Rafael",
+                    "initial": "R.",
+                    "last": "Keller Tesser"
+                },
+                {
+                    "first": "Lucas",
+                    "initial": "L.",
+                    "last": "Mello Schnorr"
+                },
+                {
+                    "first": "Arnaud",
+                    "initial": "A.",
+                    "last": "Legrand"
+                },
+                {
+                    "first": "Fabrice",
+                    "initial": "F.",
+                    "last": "Dupros"
+                },
+                {
+                    "first": "Philippe",
+                    "initial": "P.",
+                    "last": "Olivier Alexandre Navaux"
+                }
+            ],
+            "doi": "10.1007/978-3-319-64203-1_14",
+            "firstpage": "192",
+            "issn": "03029743",
+            "lastpage": "205",
+            "pub_year": 2017,
+            "title": "Using simulation to evaluate and tune the performance of dynamic load balancing of an over-decomposed geophysics application",
+            "volume": "10417"
+        },
+        "b41": {
+            "authors": [
+                {
+                    "first": "Arun",
+                    "initial": "A.",
+                    "last": "Rodrigues"
+                },
+                {
+                    "first": "Keren",
+                    "initial": "K.",
+                    "last": "Bergman"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Bunde"
+                },
+                {
+                    "first": "Elliot",
+                    "initial": "E.",
+                    "last": "Cooper-Balis"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Ferreira"
+                },
+                {
+                    "first": "K. Scott",
+                    "initial": "K.S.",
+                    "last": "Hemmert"
+                },
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Barrett"
+                },
+                {
+                    "first": "Cassandra",
+                    "initial": "C.",
+                    "last": "Versaggi"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Hendry"
+                },
+                {
+                    "first": "Bruce",
+                    "initial": "B.",
+                    "last": "Jacob"
+                },
+                {
+                    "first": "Hyesoon",
+                    "initial": "H.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Vitus",
+                    "initial": "V.",
+                    "last": "Leung"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Levenhagen"
+                },
+                {
+                    "first": "Mitchelle",
+                    "initial": "M.",
+                    "last": "Rasquinha"
+                },
+                {
+                    "first": "Rolf",
+                    "initial": "R.",
+                    "last": "Riesen"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Rosenfeld"
+                },
+                {
+                    "first": "Maria",
+                    "initial": "M.",
+                    "last": "Del Carmen Ruiz Varela"
+                },
+                {
+                    "first": "Sudhakar",
+                    "initial": "S.",
+                    "last": "Yalamanchili"
+                }
+            ],
+            "doi": "10.4108/icst.simutools.2012.247848",
+            "firstpage": "190",
+            "lastpage": "195",
+            "pub_year": 2012,
+            "title": "Improvements to the structural simulation toolkit"
+        },
+        "b42": {
+            "authors": [
+                {
+                    "first": "Nicholas",
+                    "initial": "N.",
+                    "last": "Metropolis"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Ulam"
+                }
+            ],
+            "doi": "10.1080/01621459.1949.10483310",
+            "firstpage": "335",
+            "issn": "01621459",
+            "lastpage": "341",
+            "pmid": "18139350",
+            "pub_year": 1949,
+            "title": "The Monte Carlo Method",
+            "volume": "44"
+        },
+        "b43": {
+            "authors": [
+                {
+                    "first": "Luke",
+                    "initial": "L.",
+                    "last": "Bertot"
+                },
+                {
+                    "first": "St\u00e9phane",
+                    "initial": "S.",
+                    "last": "Genaud"
+                },
+                {
+                    "first": "Julien",
+                    "initial": "J.",
+                    "last": "Gossa"
+                }
+            ],
+            "doi": "10.1007/978-3-319-96983-1_29",
+            "firstpage": "404",
+            "issn": "03029743",
+            "lastpage": "416",
+            "pub_year": 2018,
+            "title": "Improving Cloud Simulation Using the Monte-Carlo Method",
+            "volume": "11014"
+        },
+        "b44": {
+            "authors": [
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Desprez"
+                },
+                {
+                    "first": "George S.",
+                    "initial": "G.S.",
+                    "last": "Markomanolis"
+                },
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Suter"
+                }
+            ],
+            "doi": "10.1109/SC.Companion.2012.64",
+            "firstpage": "446",
+            "lastpage": "455",
+            "pub_year": 2012,
+            "title": "Improving the accuracy and efficiency of time-independent trace replay"
+        },
+        "b45": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Browne"
+                },
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Dongarra"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Garner"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Ho"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Mucci"
+                }
+            ],
+            "doi": "10.1177/109434200001400303",
+            "firstpage": "189",
+            "issn": "10943420",
+            "lastpage": "204",
+            "pub_year": 2000,
+            "title": "Portable programming interface for performance evaluation on modern processors",
+            "volume": "14"
+        },
+        "b46": null,
+        "b47": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Skinner"
+                },
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Kramer"
+                }
+            ],
+            "doi": "10.1109/IISWC.2005.1526010",
+            "firstpage": "137",
+            "lastpage": "149",
+            "pub_year": 2005,
+            "title": "Understanding the causes of performance variability in HPC workloads",
+            "volume": "2005"
+        },
+        "b48": null,
+        "b49": null,
+        "b5": null,
+        "b50": null,
+        "b51": {
+            "authors": [
+                {
+                    "first": "Benoit B.",
+                    "initial": "B.B.",
+                    "last": "Mandelbrot"
+                }
+            ],
+            "doi": "10.1111/j.1749-6632.1980.tb29690.x",
+            "firstpage": "249",
+            "issn": "00778923",
+            "lastpage": "259",
+            "pub_year": 1980,
+            "title": "FRACTAL ASPECTS OF THE ITERATION OF z \u2192\u039bz(1\u2010 z) FOR COMPLEX \u039b AND z",
+            "volume": "357"
+        },
+        "b52": null,
+        "b53": null,
+        "b54": null,
+        "b55": null,
+        "b56": {
+            "authors": [
+                {
+                    "first": "Andy B.",
+                    "initial": "A.B.",
+                    "last": "Yoo"
+                },
+                {
+                    "first": "Morris A.",
+                    "initial": "M.A.",
+                    "last": "Jette"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Grondona"
+                }
+            ],
+            "doi": "10.1007/10968987_3",
+            "firstpage": "44",
+            "issn": "03029743",
+            "lastpage": "60",
+            "pub_year": 2003,
+            "title": "SLURM: Simple Linux Utility for Resource Management",
+            "volume": "2862"
+        },
+        "b6": {
+            "authors": [
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Mohammed"
+                },
+                {
+                    "first": "Ahmed",
+                    "initial": "A.",
+                    "last": "Eleliemy"
+                },
+                {
+                    "first": "Florina M.",
+                    "initial": "F.M.",
+                    "last": "Ciorba"
+                }
+            ],
+            "doi": "10.1109/HPCS.2018.00071",
+            "firstpage": "398",
+            "lastpage": "405",
+            "pub_year": 2018,
+            "title": "Performance reproduction and prediction of selected dynamic loop scheduling experiments"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Henri",
+                    "initial": "H.",
+                    "last": "Casanova"
+                },
+                {
+                    "first": "Arnaud",
+                    "initial": "A.",
+                    "last": "Giersch"
+                },
+                {
+                    "first": "Arnaud",
+                    "initial": "A.",
+                    "last": "Legrand"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Quinson"
+                },
+                {
+                    "first": "Fr\u00e9d\u00e9ric",
+                    "initial": "F.",
+                    "last": "Suter"
+                }
+            ],
+            "doi": "10.1016/j.jpdc.2014.06.008",
+            "firstpage": "2899",
+            "issn": "07437315",
+            "lastpage": "2917",
+            "pub_year": 2014,
+            "title": "Versatile, scalable, and accurate simulation of distributed applications and platforms",
+            "volume": "74"
+        },
+        "b8": {
+            "authors": [
+                {
+                    "first": "Hui",
+                    "initial": "H.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Sudarsan",
+                    "initial": "S.",
+                    "last": "Tandri"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Stumm"
+                },
+                {
+                    "first": "Kenneth C.",
+                    "initial": "K.C.",
+                    "last": "Sevcik"
+                }
+            ],
+            "doi": "10.1109/ICPP.1993.153",
+            "firstpage": "140",
+            "issn": "01903918",
+            "lastpage": "147",
+            "pub_year": 1993,
+            "title": "Locality and loop scheduling on numa multiprocessors",
+            "volume": "2"
+        },
+        "b9": {
+            "authors": [
+                {
+                    "first": "Robert D.",
+                    "initial": "R.D.",
+                    "last": "Blumofe"
+                },
+                {
+                    "first": "Charles E.",
+                    "initial": "C.E.",
+                    "last": "Leiserson"
+                }
+            ],
+            "doi": "10.1137/S0097539793259471",
+            "firstpage": "202",
+            "issn": "00975397",
+            "lastpage": "229",
+            "pub_year": 1998,
+            "title": "Space-efficient scheduling of multithreaded computations",
+            "volume": "27"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 45926,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 45816,
+                    "startOffset": 45812
+                }
+            },
+            "secId": "sec2",
+            "sentence": "AWF-C [16] is similar to AWF-B, however, the PE weights are updated after the execution of each chunk, instead of batch.",
+            "startOffset": 45806,
+            "title": "Background"
+        },
+        {
+            "endOffset": 45236,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 45176,
+                    "startOffset": 45172
+                },
+                "b16": {
+                    "endOffset": 45204,
+                    "startOffset": 45200
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The adaptive DLS techniques include adaptive weighted factoring [15] (AWF) and its variants [16] AWF-B, AWF-C, AWF-D, and AWF-E.",
+            "startOffset": 45108,
+            "title": "Background"
+        },
+        {
+            "endOffset": 59829,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 59751,
+                    "startOffset": 59747
+                },
+                "b6": {
+                    "endOffset": 59681,
+                    "startOffset": 59678
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "Dynamic nonadaptive techniques have previously been verified [6] by reproduction of the original experiments that introduced them [14] using the experimental verification approach illustrated by step 1 in Fig. 1.",
+            "startOffset": 59617,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 58322,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The measurement of short task execution times can be a source of measurement inaccuracies as such measurements are affected by the measurement overhead which is known as the probing effect.",
+            "startOffset": 58133,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 73391,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Two interfaces of the SimGrid toolkit are leveraged to realistically simulate the application performance with minimal effort.",
+            "startOffset": 73265,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 41050,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The last dimension introduces the simulation toolkit used in the present work.",
+            "startOffset": 40972,
+            "title": "Background"
+        },
+        {
+            "endOffset": 84425,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The performance of Mandelbrot with the adaptive techniques is degraded in general compared to STATIC and dynamic nonadaptive DLS techniques.",
+            "startOffset": 84285,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 46219,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "DLS in scientific applications.",
+            "startOffset": 46188,
+            "title": "Background"
+        },
+        {
+            "endOffset": 89301,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The simulator overestimated only the performance of AWF-B and AWF-D.",
+            "startOffset": 89233,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53076,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Therefore, the variability of task execution times was not considered explicitly.",
+            "startOffset": 52995,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50243,
+            "parents": [],
+            "refoffsets": {
+                "b34": {
+                    "endOffset": 50242,
+                    "startOffset": 50238
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Another research effort used the SG-MSG interface to reproduce certain experiments of DLS techniques [34].",
+            "startOffset": 50137,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53282,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Tasks execution times were estimated based on the average execution time benchmarked by StarPU.",
+            "startOffset": 53187,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50595,
+            "parents": [],
+            "refoffsets": {
+                "b35": {
+                    "endOffset": 50594,
+                    "startOffset": 50590
+                }
+            },
+            "secId": "sec3",
+            "sentence": "A similar approach of verifying the implementation of certain DLS techniques via reproduction was proposed using the SG-SD interface [35].",
+            "startOffset": 50457,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 60182,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 60073,
+                    "startOffset": 60069
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "To ensure that the implementation of the adaptive techniques adheres to their specification, the DLB_tool [23], a dynamic load balancing library developed by the authors of the adaptive techniques, is used in this work.",
+            "startOffset": 59963,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 47399,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "With the increase in processor core counts per compute node, advanced scheduling techniques, such as the class of self-scheduling mentioned earlier, are also needed at the thread-level.",
+            "startOffset": 47214,
+            "title": "Background"
+        },
+        {
+            "endOffset": 61665,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Communication links connect different PEs (cores and nodes) needs to reflect the native network topology, bandwidth and latency.",
+            "startOffset": 61537,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 49222,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The present work proposes a novel simulation approach of computationally-intensive applications by combining SG-SMPI and SG-MSG to achieve fast and accurate performance simulation with minimal code changes to the native application.",
+            "startOffset": 48990,
+            "title": "Background"
+        },
+        {
+            "endOffset": 84284,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "However, PSIA execution time with these techniques is slightly longer than the best (FAC, AWF-C, AWF-E).",
+            "startOffset": 84180,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 76150,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "To reflect the fact that network communications are nonblocking in the native miniHPC system, the FATPIPE is used to tell SimGrid that the communications on these links are nonblocking and is not shared, i.e., each host has all network bandwidth and shortest latency available all the time even in the case of all hosts are communicating at the same time.",
+            "startOffset": 75795,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 46188,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 46096,
+                    "startOffset": 46092
+                }
+            },
+            "secId": "sec2",
+            "sentence": "AWF-E [16] is similar to AWF-C, and takes into account also the scheduling overhead, similar to AWF-D.",
+            "startOffset": 46086,
+            "title": "Background"
+        },
+        {
+            "endOffset": 39707,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The performance of the two scientific applications is examined with four additional adaptive DLS techniques and four additional nonadaptive DLS techniques by employing an MPI-based load balancing library both, in native and simulative experiments (cf. Section 4.2).",
+            "startOffset": 39442,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47743,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 47551,
+                    "startOffset": 47547
+                },
+                "b13": {
+                    "endOffset": 47741,
+                    "startOffset": 47737
+                },
+                "b25": {
+                    "endOffset": 47461,
+                    "startOffset": 47457
+                },
+                "b26": {
+                    "endOffset": 47589,
+                    "startOffset": 47585
+                }
+            },
+            "secId": "sec2",
+            "sentence": "To this end, the GNU OpenMP runtime library was extended [25] (LaPeSD libGOMP) to support four additional DLS techniques, namely: fixed-size chunk [12] (FSC), trapezoid self-scheduling [26] TSS, FAC, and RANDOM (in terms of chunk sizes) besides the originally OpenMP scheduling techniques: STATIC, Dynamic, and Guided (equivalent to GSS [13]).",
+            "startOffset": 47400,
+            "title": "Background"
+        },
+        {
+            "endOffset": 41502,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 41382,
+                    "startOffset": 41379
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Static scheduling techniques, such as block, cyclic, and block-cyclic [8], divide and assign the loop iterations (or tasks) across the processing elements (PEs) before the application executes.",
+            "startOffset": 41309,
+            "title": "Background"
+        },
+        {
+            "endOffset": 51763,
+            "parents": [],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 51762,
+                    "startOffset": 51758
+                }
+            },
+            "secId": "sec3",
+            "sentence": "A combination of simulation and trace replay was used to guide the choice of the scheduling technique and the granularity of problem decomposition for a geophysics application to tune its performance [40].",
+            "startOffset": 51558,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45439,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It is designed for time-stepping applications.",
+            "startOffset": 45393,
+            "title": "Background"
+        },
+        {
+            "endOffset": 61839,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Nominal values for the PE computing speeds, the network bandwidth, and the network latency are added in the simulated HPC representation to obtain an initial representation.",
+            "startOffset": 61666,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 48251,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It provides application programming interfaces (APIs) to simulate various distributed computing systems.",
+            "startOffset": 48147,
+            "title": "Background"
+        },
+        {
+            "endOffset": 55367,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "A novel simulation method that combines the use of two SimGrid interfaces, namely SG-SMPI and SG-MSG, is introduced in Section 5.2, which enables the simulation of application performance with minimal code changes.",
+            "startOffset": 55153,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57908,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The TiT contains a trace of the application execution as a series of computation and communication events, with their corresponding amounts specified in terms of floating-pointing operations (FLOP) and bytes, respectively.",
+            "startOffset": 57686,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 52009,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This trace was then modified to represent different granularities of problem decomposition.",
+            "startOffset": 51918,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 84751,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The high variability and the rather short execution time of the Mandelbrot left no room for the adaptive techniques to learn the correct relative PE weights.",
+            "startOffset": 84594,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 81716,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Inspecting the native applications results in Fig. 6, one observes that STATIC degraded the performance of both PSIA and Mandelbrot due to load imbalance.",
+            "startOffset": 81562,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 54802,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Guidelines are proposed in Section 4 on how to estimate the tasks execution times and the system characteristics.",
+            "startOffset": 54689,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 41106,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Dynamic load balancing via dynamic loop self-scheduling.",
+            "startOffset": 41050,
+            "title": "Background"
+        },
+        {
+            "endOffset": 61536,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The PEs representation in simulation, needs to reflect the native configuration in terms of number of compute nodes and number of PEs per node.",
+            "startOffset": 61393,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 53501,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, depending on time measurements only may not be adequate for fine-grained tasks.",
+            "startOffset": 53413,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61073,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 60713,
+                    "startOffset": 60710
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "As previously investigated [5], the application and computing system representation cannot be seen as completely decoupled activities, i.e., representing a computing system must take into account the application characteristics as current simulators cannot simulate precisely all the complex characteristics of HPC systems to create a general, application-independent system representation.",
+            "startOffset": 60683,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 64467,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "To achieve realistic performance simulation, three factors that affect application performance need to be well represented.",
+            "startOffset": 64344,
+            "title": "Steps for realistic simulations"
+        },
+        {
+            "endOffset": 37489,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The simulative performance of the application obtained when employing different DLS technique is compared among different simulative experiments.",
+            "startOffset": 37344,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69453,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The DLB_tool is used for the self-scheduling of the parallel tasks of PSIA and Mandelbrot both in native and simulative executions.",
+            "startOffset": 69322,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 59136,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "However, feeding the simulator the exact FLOP count per task might result in misrepresenting the dynamic behavior in native executions of tasks where their execution time varies among the different execution instances.",
+            "startOffset": 58918,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 88997,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Table 2 summarizes seven performance features form the performance analysis of applications\u2019 performance with various scheduling techniques performed above in Section 5.3.",
+            "startOffset": 88826,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56808,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The proposed approach is generic and can be adapted for the systematic and realistic simulation of other classes of applications, e.g., data-intensive or communication-intensive applications, load balanced using other classes of algorithms.",
+            "startOffset": 56568,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 53614,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In addition, porting the StarPU runtime to a simulator interface is challenging and requires significant effort.",
+            "startOffset": 53502,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58593,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b45": {
+                    "endOffset": 58592,
+                    "startOffset": 58588
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "Instead of time measurements, the FLOP count per task can be measured using hardware counters, such as those exposed via the use of PAPI [45].",
+            "startOffset": 58451,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 80037,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Such changes in application behavior would have undesired consequences in the fidelity of the application representation in simulation.",
+            "startOffset": 79902,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 63005,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Section 5.2 offers details about the actual steps required for the calibration procedure described above.",
+            "startOffset": 62900,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 74619,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The scheduling overhead of different techniques is accounted for by the SG-SMPI, whereas the tasks execution time is accounted for in simulation by the SG-MSG.",
+            "startOffset": 74460,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 89232,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The comparison between the native and simulative performance analysis results shows that the simulations with FLOP file captured almost all the performance features that characterize the performance of the two applications under test.",
+            "startOffset": 88998,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 57685,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b44": {
+                    "endOffset": 57684,
+                    "startOffset": 57680
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "In addition, the SG-SMPI simulation produces a special type of text-based execution trace called time independent trace (TiT) [44].",
+            "startOffset": 57554,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 91127,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In this work, we show that it is possible to realistically simulate the performance of scientific applications on HPC systems.",
+            "startOffset": 91001,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 83108,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The FLOP per task was measured with PAPI counters and was written into a file with task id and FLOP count per task.",
+            "startOffset": 82993,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 91786,
+            "parents": [],
+            "refoffsets": {
+                "b37": {
+                    "endOffset": 91784,
+                    "startOffset": 91780
+                }
+            },
+            "secId": "sec6",
+            "sentence": "These guidelines help to achieve realistic simulations irrespective of the application type (e.g., communication- or computationally-intensive) and the simulation toolkit (e.g., Alea or GridSim [37]).",
+            "startOffset": 91586,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 86688,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "FAC and the adaptive DLS techniques show a constant parallel cost, while the parallel cost increases slightly with the increasing number of processing elements for mFSC and STATIC.",
+            "startOffset": 86508,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 50137,
+            "parents": [],
+            "refoffsets": {
+                "b33": {
+                    "endOffset": 50136,
+                    "startOffset": 50132
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Moreover, the resilience, understood as the robustness against PE failure, of these DLS techniques on a heterogeneous computing system was studied using the SG-MSG interface [33].",
+            "startOffset": 49958,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 47214,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 46762,
+                    "startOffset": 46758
+                },
+                "b13": {
+                    "endOffset": 46772,
+                    "startOffset": 46768
+                },
+                "b14": {
+                    "endOffset": 46782,
+                    "startOffset": 46778
+                },
+                "b15": {
+                    "endOffset": 46792,
+                    "startOffset": 46788
+                },
+                "b16": {
+                    "endOffset": 46941,
+                    "startOffset": 46937
+                },
+                "b21": {
+                    "endOffset": 46966,
+                    "startOffset": 46962
+                },
+                "b22": {
+                    "endOffset": 46993,
+                    "startOffset": 46989
+                },
+                "b23": {
+                    "endOffset": 47143,
+                    "startOffset": 47139
+                },
+                "b24": {
+                    "endOffset": 47213,
+                    "startOffset": 47209
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Nonadaptive and adaptive DLS techniques such as self-scheduling1  (SS) [11], GSS [13], FAC [14], AWF [15], and its variants, were used over the years to enhance applications, such as simulations of wave packet dynamics, automatic quadrature routines [16], N-Body simulations [21], solar map generation [22], an image denoising model, the simulation of a vector functional coefficient autoregressive (VFCAR) model for multivariate nonlinear time series [23], and a parallel spin-image algorithm from computer vision (PSIA) [24].",
+            "startOffset": 46585,
+            "title": "Background"
+        },
+        {
+            "endOffset": 87427,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "While the parallel costs are almost equal to the parallel costs of the native executions of PSIA, this is not the case for the Mandelbrot application.",
+            "startOffset": 87277,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 59616,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 59615,
+                    "startOffset": 59611
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "A number of dynamic loop self-scheduling (DLS) techniques have been proposed between the late 1980s and early 2000s, and efficiently used in scientific applications [18].",
+            "startOffset": 59446,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 36911,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the second perspective, the performance of the present native scheduling experiments on HPC systems is compared against that of the simulative experiments.",
+            "startOffset": 36753,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69695,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Workers request work from the master whenever they become idle, i.e., the self-scheduling work distribution.",
+            "startOffset": 69587,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 34059,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This significant amount of experiments may not always be feasible or practical, due to their associated time and costs.",
+            "startOffset": 33940,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33609,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The static and dynamic loop self-scheduling (DLS) techniques play an essential role in improving the performance of scientific applications.",
+            "startOffset": 33469,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84179,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "AWF-B and AWF-D improve the performance of PSIA also, compared to mFSC and GSS.",
+            "startOffset": 84100,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 80770,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The c.o.v. is calculated as the standard deviation of processes finishing times divided by their mean and indicates load imbalance as the variation in general between the processes finishing time.",
+            "startOffset": 80574,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 86980,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "The parallel cost of using STATIC is also almost constant but higher than that of using mFSC, GSS, and FAC.",
+            "startOffset": 86873,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 56567,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Fig. 2 shows these three main performance components and summarizes the proposed simulation approach, where each component is independently represented and verified to achieve realistic simulations.",
+            "startOffset": 56369,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 46458,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "They are mostly used at the process-level to balance the load between processes running on different PEs.",
+            "startOffset": 46353,
+            "title": "Background"
+        },
+        {
+            "endOffset": 79563,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Slurm exclusively allocates nodes to each job.",
+            "startOffset": 79517,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 73988,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "To speedup the SG-SMPI simulation, the computational tasks in the application are replaced with SG-MSG tasks.",
+            "startOffset": 73879,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 82415,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "FAC technique improves the performance of both applications and result in the lowest execution time and also load imbalance metrics.",
+            "startOffset": 82283,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 35247,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 35163,
+                    "startOffset": 35160
+                },
+                "b4": {
+                    "endOffset": 35246,
+                    "startOffset": 35243
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Several studies addressed the topic of application performance simulation for specific purposes, such as evaluating the performance of scheduling techniques under variable task execution times with a specific runtime system [3], or focusing on improving communications in large and distributed applications [4].",
+            "startOffset": 34936,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45392,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 45244,
+                    "startOffset": 45240
+                }
+            },
+            "secId": "sec2",
+            "sentence": "AWF [15] assigns a weight to each PE that represents its computing speed and adapts the relative PE weights during execution according to their performance.",
+            "startOffset": 45236,
+            "title": "Background"
+        },
+        {
+            "endOffset": 62709,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 62708,
+                    "startOffset": 62704
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "The above procedure is applicable for homogeneous and heterogeneous systems, where core speed estimation needs to be performed for each core type [46].",
+            "startOffset": 62558,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 69162,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 69161,
+                    "startOffset": 69157
+                }
+            },
+            "secId": "sec5.1",
+            "sentence": "The DLB_tool is an MPI-based dynamic load balancing library [23].",
+            "startOffset": 69097,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 34685,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 34684,
+                    "startOffset": 34681
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Simulation allows the study of application performance in controlled and reproducible environments [2].",
+            "startOffset": 34582,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69794,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Upon receiving a work request, the master calculates a chunk size based on the used DLS technique.",
+            "startOffset": 69696,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 66323,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "To evaluate the usefulness and effectiveness of the proposed approach, an important number of native and simulative experiments is performed.",
+            "startOffset": 66182,
+            "title": "Experimental evaluation and results"
+        },
+        {
+            "endOffset": 91469,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The proposed realistic simulation approach has been exemplified on two computationally-intensive scientific applications.",
+            "startOffset": 91348,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 92905,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Future work is planned to apply the proposed simulation approach to large and well-known performance benchmarks, such as the NAS suite, the SPEC suites, the RODINIA suite, and other scientific applications.",
+            "startOffset": 92699,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 36285,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The proposed realistic simulation approach is built upon three perspectives of comparison of the results of native and simulative experiments, which are also illustrated in Fig. 1:",
+            "startOffset": 36105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45641,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Therefore, it measures the performance of PEs during previous time-steps and updates the PEs relative weights after each time-step to balance the load according to the computing system\u2019s present state.",
+            "startOffset": 45440,
+            "title": "Background"
+        },
+        {
+            "endOffset": 34223,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 34222,
+                    "startOffset": 34219
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Simulation mitigates such costs and, therefore, it has been shown to be more appropriate for studying and improving the performance of scientific applications [2].",
+            "startOffset": 34060,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62899,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Similarly, a simple network benchmarking, such as a ping-pong test was used to estimate the real network links communication bandwidth and latency and insert these values in the simulation.",
+            "startOffset": 62710,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 40078,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 reviews recent related work and the various simulation approaches adopted therein.",
+            "startOffset": 39986,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41187,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "There are two main categories of loop scheduling techniques: static and dynamic.",
+            "startOffset": 41107,
+            "title": "Background"
+        },
+        {
+            "endOffset": 66446,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "These experiments have been designed as a factorial set of experiments which is described below and summarized in Table 1.",
+            "startOffset": 66324,
+            "title": "Experimental evaluation and results"
+        },
+        {
+            "endOffset": 58450,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In addition, the execution time per task is not guaranteed to be constant between different executions of the same application.",
+            "startOffset": 58323,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 49345,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The SG-MSG and SG-SD interfaces of SG were used to implement various DLS techniques.",
+            "startOffset": 49261,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 42628,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 42627,
+                    "startOffset": 42623
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For dependent tasks, several loop transformations, such as loop peeling, loop fission, loop fusion, and loop unrolling can be used to eliminate loop dependencies [17].",
+            "startOffset": 42461,
+            "title": "Background"
+        },
+        {
+            "endOffset": 59225,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To address this, a probability distribution is fitted to the measured tasks FLOP counts.",
+            "startOffset": 59137,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 47927,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 47892,
+                    "startOffset": 47888
+                },
+                "b28": {
+                    "endOffset": 47909,
+                    "startOffset": 47905
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The extended GNU runtime library that implements DLS was used to schedule loop iterations in computational benchmarks, such as the NAS parallel [27] and RODINIA [28] benchmark suites.",
+            "startOffset": 47744,
+            "title": "Background"
+        },
+        {
+            "endOffset": 38325,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 38186,
+                    "startOffset": 38183
+                }
+            },
+            "secId": "sec1",
+            "sentence": "(2) A novel simulation strategy of computationally-intensive applications by combining two interfaces of SimGrid [7] simulation toolkit (SMPI and MSG) to achieve fast and accurate performance simulation with minimal code changes to the native application.",
+            "startOffset": 38070,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52679,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 52678,
+                    "startOffset": 52675
+                },
+                "b41": {
+                    "endOffset": 52653,
+                    "startOffset": 52649
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The compiler-assisted native application source code transformation to a code skeleton suitable for structural simulation toolkit [41] (SST) was introduced [4].",
+            "startOffset": 52519,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 34582,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Attaining a high degree of trustworthiness eliminates such uncertainty for present and future more complex experiments.",
+            "startOffset": 34463,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33251,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore, scheduling and load balancing become crucial as increasing the number of PEs leads to increase in load imbalance and, consequently, to loss in performance.",
+            "startOffset": 33085,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36105,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 36104,
+                    "startOffset": 36101
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The coupling between the application and the computing system representation has been shown to yield a very close agreement between the native and the simulative experimental results, and to achieve realistic simulative performance predictions [5].",
+            "startOffset": 35857,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35856,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Several details of representing the application and the computing system characteristics in the simulation are presented and discussed, such as capturing the variability of native execution performance over multiple repetitions as well as calibrating and fine-tuning the simulated system representation for the execution of a specific application.",
+            "startOffset": 35509,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51557,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Realistic simulation approaches.",
+            "startOffset": 51525,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 83655,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The GSS performance is worse than that of mFSC, even though it has lower c.o.v. compared to mFSC for PSIA.",
+            "startOffset": 83549,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 51917,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "SG-SMPI was used to generate a time independent trace (TiT), a special type of execution trace, of the application with the finest problem decomposition.",
+            "startOffset": 51764,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 86428,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "In Fig. 9, the strong scaling behavior of the PSIA and Mandelbrot applications is shown for the native (subfigures (a) and (b)) and simulative executions (subfigures (c)\u2013(f)), respectively.",
+            "startOffset": 86239,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 58699,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The FLOP count obtained with PAPI is used to represent the amount of work in each task in the simulation.",
+            "startOffset": 58594,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 79745,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The nonblocking fat-tree network topology of miniHPC guarantees that nodes use the full bandwidth of the links, even if other applications are running on other nodes in the cluster.",
+            "startOffset": 79564,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 38861,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "(4) An experimental verification and validation of the use of the different SimGrid interfaces for representing the application\u2019s tasks characteristics to develop and test DLS techniques in the simulation.",
+            "startOffset": 38656,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80904,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "A high c.o.v. value represents high load imbalance and a low value (near zero) represents a nearly perfectly balanced load execution.",
+            "startOffset": 80771,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 54939,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Fine tuning the system representation to closely reflect the system performance for the execution of a certain application is essential.",
+            "startOffset": 54803,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 81982,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Although the value of c.o.v for GSS is lower than that of mFSC for PSIA, one can see that the performance of GSS is worse than mFSC.",
+            "startOffset": 81850,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 60478,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Connecting the DLB_tool to the simulation framework required minimal effort as detailed below in Section 5.2.",
+            "startOffset": 60369,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 41308,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The essential difference between static and dynamic loop scheduling is the time when the scheduling decisions are taken.",
+            "startOffset": 41188,
+            "title": "Background"
+        },
+        {
+            "endOffset": 83917,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The c.o.v. and max/mean values with FAC in both applications is almost the minimum.",
+            "startOffset": 83834,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 40971,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The second dimension discusses specific research efforts from the literature where DLS techniques enhanced the performance of various scientific applications.",
+            "startOffset": 40813,
+            "title": "Background"
+        },
+        {
+            "endOffset": 36753,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 36752,
+                    "startOffset": 36749
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Through the first perspective, the performance reported in the original publications, which introduced the most well-known, successful, and currently used DLS techniques from the past, is presently reproduced via simulation to verify the similarity in performance results between the current DLS techniques implementations and their original implementation [6].",
+            "startOffset": 36392,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43313,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In mFSC, the chunk size is fixed and plays a critical role in determining the performance of this technique.",
+            "startOffset": 43205,
+            "title": "Background"
+        },
+        {
+            "endOffset": 48146,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 47971,
+                    "startOffset": 47968
+                }
+            },
+            "secId": "sec2",
+            "sentence": "SimGrid [7] is a scientific simulation framework for the study of the behavior of large-scale distributed computing systems, such as, the Grid, the Cloud, and peer-to-peer (P2P) systems.",
+            "startOffset": 47960,
+            "title": "Background"
+        },
+        {
+            "endOffset": 45107,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "However, the adaptive techniques may result in significant scheduling overhead compared to the nonadaptive techniques and are, therefore, recommended in cases characterized by highly imbalanced execution.",
+            "startOffset": 44903,
+            "title": "Background"
+        },
+        {
+            "endOffset": 59371,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The simulator then draws samples from this distribution to represent the task FLOP counts during simulation as shown in the upper part of Fig. 2.",
+            "startOffset": 59226,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 74768,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The proposed approach results in a fast and accurate simulation of the application with minimal modifications to the native application source code.",
+            "startOffset": 74620,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 79516,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "refoffsets": {
+                "b56": {
+                    "endOffset": 79472,
+                    "startOffset": 79468
+                }
+            },
+            "secId": "sec5.3",
+            "sentence": "Each native experiment is submitted for execution as a single job to the Slurm [56] batch scheduler on dedicated miniHPC nodes.",
+            "startOffset": 79389,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 46584,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 46493,
+                    "startOffset": 46489
+                },
+                "b15": {
+                    "endOffset": 46480,
+                    "startOffset": 46476
+                },
+                "b20": {
+                    "endOffset": 46583,
+                    "startOffset": 46579
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For example, AWF [15] and FAC [14] were used to balance a load of a heat conduction application on an unstructured grid [20].",
+            "startOffset": 46459,
+            "title": "Background"
+        },
+        {
+            "endOffset": 48520,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "MetaSimGrid (hereafter, SG-MSG) and SimDag (hereafter, SG-SD) provide APIs for the simulation of computational problems expressed as independent tasks or task graphs, respectively.",
+            "startOffset": 48340,
+            "title": "Background"
+        },
+        {
+            "endOffset": 51101,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "It was shown that a holistic solution resulted in a better performance than focusing on improving the performance at each level solely.",
+            "startOffset": 50966,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 82925,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Two application representation approaches are employed for the experiments using SG-SMPI+SG-MSG.",
+            "startOffset": 82829,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 82129,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Fig. 6(e) shows, however, that the value of max/mean for GSS is higher than that of mFSC, which explains the large execution time in subfigure(a).",
+            "startOffset": 81983,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 87522,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "The Mandelbrot simulations show almost constant parallel costs for mFSC, GSS, FAC, and STATIC.",
+            "startOffset": 87428,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 52519,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "However, the process of trace modification to represent different decomposition is complex, limits the number of explored decompositions, and may result in inaccurate simulation results.",
+            "startOffset": 52333,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 32666,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The use of efficient loop scheduling techniques, from fully static to fully dynamic, in computationally-intensive applications is crucial for improving their performance on high performance computing (HPC) systems often degraded by load imbalance.",
+            "startOffset": 32419,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39244,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the present work, a new method to represent the computational effort in tasks is explored and tested (cf. Section 4.1).",
+            "startOffset": 39122,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57417,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For simple applications with one or two large loops or parallel blocks of tasks that dominate its performance, inspecting the application code is sufficient to understand the program flow.",
+            "startOffset": 57229,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 81562,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "When all processes, except for one, have similar finishing times, the c.o.v. is very low and hides the fact that the slowest process lags behind in execution, while the finishing time of this process is visible as a large value in max/mean metric.",
+            "startOffset": 81315,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 49957,
+            "parents": [],
+            "refoffsets": {
+                "b32": {
+                    "endOffset": 49956,
+                    "startOffset": 49952
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The flexibility, understood as the robustness against perturbations in the PE computing speed, of the same DLS techniques implemented using SG-MSG was also studied [32].",
+            "startOffset": 49788,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 74459,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "No modifications are needed for the DLB_tool in this approach.",
+            "startOffset": 74397,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 41908,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As a result, DLS techniques balance the execution of the loop iterations at the cost of increased overhead compared to the static techniques.",
+            "startOffset": 41767,
+            "title": "Background"
+        },
+        {
+            "endOffset": 53412,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Both average task execution time and generating pseudo-random numbers with the same average as task execution time were explored.",
+            "startOffset": 53283,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45715,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 45651,
+                    "startOffset": 45647
+                }
+            },
+            "secId": "sec2",
+            "sentence": "AWF-B [16] relieves the time-stepping requirement to learn the PE weights.",
+            "startOffset": 45641,
+            "title": "Background"
+        },
+        {
+            "endOffset": 41645,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the present work, block scheduling is considered and is denoted as STATIC.",
+            "startOffset": 41568,
+            "title": "Background"
+        },
+        {
+            "endOffset": 81849,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The high value of c.o.v and max/mean in both applications indicate the load imbalance with STATIC as shown in subfigures(c) and (d).",
+            "startOffset": 81717,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 40812,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The first dimension covers the relevant information concerning dynamic load balancing via dynamic loop self-scheduling techniques, specifically, the selected DLS techniques of the present work.",
+            "startOffset": 40619,
+            "title": "Background"
+        },
+        {
+            "endOffset": 39863,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The remainder of this manuscript is structured as follows.",
+            "startOffset": 39805,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58132,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To obtain the amount of work per task, time measurement of task execution time or the FLOP count can be used.",
+            "startOffset": 58023,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 86872,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "By contrast, an almost constant parallel cost of the Mandelbrot performance is obtained with mFSC, GSS, and FAC.",
+            "startOffset": 86760,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 50321,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Therein, a successful reproduction of the past DLS experiments was presented.",
+            "startOffset": 50244,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 78635,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The representation of the computing system can be verified by comparing the native and SG-SMPI simulative performance results.",
+            "startOffset": 78509,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 69891,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Then, the master sends the chunk size and the start index of the chunk to the requesting worker.",
+            "startOffset": 69795,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 42460,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                },
+                "b12": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                },
+                "b13": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                },
+                "b14": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                },
+                "b15": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                },
+                "b16": {
+                    "endOffset": 42459,
+                    "startOffset": 42452
+                }
+            },
+            "secId": "sec2",
+            "sentence": "DLS techniques consider independent tasks or loop iterations of applications [11\u201316].",
+            "startOffset": 42375,
+            "title": "Background"
+        },
+        {
+            "endOffset": 42696,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 42695,
+                    "startOffset": 42691
+                }
+            },
+            "secId": "sec2",
+            "sentence": "DLS techniques can be categorized as nonadaptive and adaptive [18].",
+            "startOffset": 42629,
+            "title": "Background"
+        },
+        {
+            "endOffset": 74866,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Hundreds to thousands of MPI ranks can be simulated using a single core on a single compute node.",
+            "startOffset": 74769,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 38450,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "(3) A realistic simulation of the performance of two scientific applications with several dynamic load balancing techniques.",
+            "startOffset": 38326,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61393,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "For the simulation of the performance of computationally-intensive applications with different DLS, two main components of systems need to be represented: (1) The PEs, their number, their computational speed; (2) The interconnection network between the PEs, the network bandwidth, the network latency, and the topology.",
+            "startOffset": 61074,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 45806,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It learns the PE weights from their performance in previous batches instead of time-steps.",
+            "startOffset": 45716,
+            "title": "Background"
+        },
+        {
+            "endOffset": 80574,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 80523,
+                    "startOffset": 80519
+                }
+            },
+            "secId": "sec5.3",
+            "sentence": "Two metrics are used to measure the load imbalance in both applications: (1) the coefficient of variation (c.o.v.) of the processes finishing times [14] and (2) max/mean of the processes finishing times.",
+            "startOffset": 80371,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 84593,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This poor performance of Mandelbrot with adaptive techniques is due to the high load imbalance as indicated by the c.o.v. and max/mean metrics in sub-figures(d and f).",
+            "startOffset": 84426,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 39441,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An additional scientific application is also included herein (cf. Section 5).",
+            "startOffset": 39364,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73808,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Lines in mint font color in Algorithm 1 show additions to simulate the application, lines in gray font color show the lines that need to be uncommented to revert to the native application code, and black lines denote unchanged code.",
+            "startOffset": 73576,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 69321,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 69320,
+                    "startOffset": 69316
+                }
+            },
+            "secId": "sec5.1",
+            "sentence": "The DLB_tool has been used to balance the load of scientific applications, such as image denoising and the statistical analysis of vector nonlinear time [23].",
+            "startOffset": 69163,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 42062,
+            "parents": [],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 42061,
+                    "startOffset": 42058
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Self-scheduling differs from work sharing, another related scheduling approach, wherein tasks are assigned onto PEs in predetermined sizes and order [9].",
+            "startOffset": 41909,
+            "title": "Background"
+        },
+        {
+            "endOffset": 86507,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "Considering the native executions of PSIA, all DLS techniques scale very well.",
+            "startOffset": 86429,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 56870,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The details of representing each component are provided next.",
+            "startOffset": 56809,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 33023,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The goal of using DLS is to optimize the performance of scientific applications in the presence of load imbalance caused by problem, algorithmic, and systemic characteristics.",
+            "startOffset": 32848,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48990,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The newly introduced SimGrid-S4U interface (hereafter,SG-S4U) currently supports most of the functionality of theSG-MSG interface with the purpose of also incorporating the functionality of the SG-SD interface over time.",
+            "startOffset": 48770,
+            "title": "Background"
+        },
+        {
+            "endOffset": 86759,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "The largest slope is induced by the execution using the GSS technique.",
+            "startOffset": 86689,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 43424,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "mFSC assigns a chunk size that results in a number of chunks that is similar to that of FAC (explained below).",
+            "startOffset": 43314,
+            "title": "Background"
+        },
+        {
+            "endOffset": 39363,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Methods to evaluate and represent variability in the system are also considered in the present work (cf. Section 4.3).",
+            "startOffset": 39245,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50781,
+            "parents": [],
+            "refoffsets": {
+                "b36": {
+                    "endOffset": 50685,
+                    "startOffset": 50681
+                },
+                "b37": {
+                    "endOffset": 50702,
+                    "startOffset": 50698
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The relation between batch and application level scheduling was studied in simulation [36], using Alea [37] for the batch level scheduling and SG-SD for the application level scheduling.",
+            "startOffset": 50595,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 78172,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "refoffsets": {
+                "b55": {
+                    "endOffset": 78030,
+                    "startOffset": 78026
+                }
+            },
+            "secId": "sec5.2",
+            "sentence": "Using the approach introduced in earlier work [55], the representation of the computing system can be verified in a separation of the application representation by using the SG-SMPI interface.",
+            "startOffset": 77980,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 37343,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the third comparison perspective, different representations of the same application or of the computing system characteristics are used in different simulations.",
+            "startOffset": 37179,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57229,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Two important aspects need to be clear to enable the representation of an application in simulation via abstraction: (1) The main application flow, i.e., initializations, branches, and communications between its parallel processes/threads; (2) The computational effort associated with each scheduled task.",
+            "startOffset": 56924,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 82829,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "However, for the Mandelbrot due to the high variability of its tasks execution times and short execution times, the adaptive techniques did not have enough time to estimate PE relative weights correctly and resulted in high execution time and high load imbalance metric values with high variability also.",
+            "startOffset": 82525,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 52878,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Special pragmas need to be inserted in the source code to simulate computations as certain delays, eliminate large unnecessary memory allocations in simulation, and handle global variable correctly.",
+            "startOffset": 52680,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 78371,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Both the native and simulative executions using SG-SMPI share the application\u2019s native code.",
+            "startOffset": 78279,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 80095,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "miniHPC runs the CentOS Linux version 7 operation system.",
+            "startOffset": 80038,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 40618,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This section presents and organizes the relevant background of the present work in three dimensions.",
+            "startOffset": 40518,
+            "title": "Background"
+        },
+        {
+            "endOffset": 93042,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The development of a tool to automatically transform the native application code into a simulative one is also envisioned in the future.",
+            "startOffset": 92906,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 33939,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Identifying the best scheduling strategy among the available DLS techniques for a given application requires intensive assessment and a large number of exploratory native experiments.",
+            "startOffset": 33756,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82524,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The adaptive DLS techniques improve the performance of PSIA and result in low load imbalance metrics as well.",
+            "startOffset": 82415,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 92698,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We believe that factors such as the application representation, scheduling, the computing system representation, and system variations, affect the realism of the simulations and deserve further investigation.",
+            "startOffset": 92490,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 55922,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "For the study of dynamic load balancing and task self-scheduling, the performance of different scheduling techniques relative to others is expected to be preserved between native and simulative experiments.",
+            "startOffset": 55716,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 37179,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 37178,
+                    "startOffset": 37175
+                }
+            },
+            "secId": "sec1",
+            "sentence": "This comparison typically enables one to verify and justify the level of the agreement between the results of the native and the simulative experiments, and to answer the question of \u201cHow realistic are the simulations of applications performance on HPC systems?\u201d [5].",
+            "startOffset": 36912,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38069,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The present work makes the following contributions: (1) An approach for simulating application performance with a high degree of trustworthiness while considering different sources of variability in application and computing system representations.",
+            "startOffset": 37821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46086,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 45936,
+                    "startOffset": 45932
+                }
+            },
+            "secId": "sec2",
+            "sentence": "AWF-D [16] is similar to AWF-B, where the scheduling overhead (time taken to assign a chunk of loop iterations) is taken into account in the weight calculation.",
+            "startOffset": 45926,
+            "title": "Background"
+        },
+        {
+            "endOffset": 82992,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The first approach is denoted as FLOP_file and is shown in Fig. 7.",
+            "startOffset": 82926,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 35508,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The present work gathers the authors\u2019 in-depth expertise in simulating scientific applications\u2019 performance to enable research studies on the effects and benefits of employing dynamic load balancing in computationally-intensive applications via self-scheduling.",
+            "startOffset": 35247,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39121,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 39106,
+                    "startOffset": 39103
+                },
+                "b6": {
+                    "endOffset": 39013,
+                    "startOffset": 39010
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The present work builds upon and extends own prior work [5,6], which focused on the experimental verification of DLS implementation via reproduction [6] and the experimental verification of application\u2019s performance simulation on HPC systems [5], respectively.",
+            "startOffset": 38861,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53186,
+            "parents": [],
+            "refoffsets": {
+                "b39": {
+                    "endOffset": 53087,
+                    "startOffset": 53083
+                }
+            },
+            "secId": "sec3",
+            "sentence": "StarPU [39] was ported to SG-MSG for the study of scheduling of tasks graphs on heterogeneous CPU/GPU systems.",
+            "startOffset": 53076,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 56272,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Preserving identical performance characteristics between native and simulation experiments is challenging due to the dynamic interactions between the three main components that affect the performance:",
+            "startOffset": 56072,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 41567,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The task division and assignment do not change during execution.",
+            "startOffset": 41503,
+            "title": "Background"
+        },
+        {
+            "endOffset": 41766,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Dynamic loop self-scheduling (DLS) techniques divide and self-schedule the tasks during the execution of the application.",
+            "startOffset": 41645,
+            "title": "Background"
+        },
+        {
+            "endOffset": 42896,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "During the application execution, the nonadaptive techniques calculate the number of iterations comprising a chunk based on certain parameters that can be obtained prior to the application execution.",
+            "startOffset": 42697,
+            "title": "Background"
+        },
+        {
+            "endOffset": 55152,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Reducing the differences between native and simulative experiments by using the same scheduling library in both native and simulative experiments ensures the same scheduling behavior in both types of experiments.",
+            "startOffset": 54940,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 74396,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "This allows to reduce the memory footprint of the simulation and the simulation of a large number of ranks on a single compute node.",
+            "startOffset": 74264,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 87843,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "However, in contrast to the non-adaptive DLS techniques, the parallel cost increases with the number of processing elements.",
+            "startOffset": 87719,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 83548,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "However, for STATIC with PSIA, the c.o.v and max/mean values are smaller than that of mFSC and GSS.",
+            "startOffset": 83449,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 38543,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The applications performance is analyzed based on native and simulative performance results.",
+            "startOffset": 38451,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70021,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The above process of work requests from workers and master assigns work to requesting workers repeats until the work is finished.",
+            "startOffset": 69892,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 50456,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The results were compared to experiments from the past available in the literature to verify the implementation of the DLS techniques.",
+            "startOffset": 50322,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 32847,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Dynamic loop self-scheduling (DLS) is an effective scheduling approach employed to improve computationally-intensive scientific applications performance via dynamic load balancing.",
+            "startOffset": 32667,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39985,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 presents the relevant background on dynamic load balancing via self-scheduling and the used simulation toolkit.",
+            "startOffset": 39864,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57553,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "If this is insufficient, tracing the application execution can reveal the main computation and communication blocks in the application.",
+            "startOffset": 57418,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 59962,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In this work, the range of studied DLS techniques is extended with four adaptive DLS techniques in addition to the nonadaptive ones.",
+            "startOffset": 59830,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 52236,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Traces that represent different decompositions were replayed with different scheduling techniques to identify the decomposition granularity and scheduling technique combination that results in improved application performance.",
+            "startOffset": 52010,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 83760,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "However, this is due to a single process lagging the execution of the PSIA as captured in sub-figure(e).",
+            "startOffset": 83656,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 40507,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 6 presents conclusions and an outline of the work envisioned for the future.",
+            "startOffset": 40423,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48339,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "SimGrid (hereafter, SG) provides four different APIs for different simulation purposes.",
+            "startOffset": 48252,
+            "title": "Background"
+        },
+        {
+            "endOffset": 55715,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The close agreement between both conclusions does not necessarily mean a close agreement between native and simulative application execution times.",
+            "startOffset": 55568,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 43060,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 43027,
+                    "startOffset": 43023
+                },
+                "b14": {
+                    "endOffset": 43053,
+                    "startOffset": 43049
+                },
+                "b19": {
+                    "endOffset": 42991,
+                    "startOffset": 42987
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The nonadaptive DLS techniques considered in this work include: modified fixed-size chunk [19] (mFSC), guided self-scheduling [13] (GSS), and factoring [14] (FAC).",
+            "startOffset": 42897,
+            "title": "Background"
+        },
+        {
+            "endOffset": 43616,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Upon a work request, the remaining loop iterations are divided by the total number of PEs.",
+            "startOffset": 43526,
+            "title": "Background"
+        },
+        {
+            "endOffset": 64601,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "In this section, we summarize the steps of the proposed realistic simulation approach and different methods to represent each factor.",
+            "startOffset": 64468,
+            "title": "Steps for realistic simulations"
+        },
+        {
+            "endOffset": 70213,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The two applications of interest are scheduled using the DLB_tool with eight different loop scheduling techniques ranging from static to dynamic, nonadaptive and adaptive as shown in Table 1.",
+            "startOffset": 70022,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 66706,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In addition, details of creating the performance simulation using SG and its interfaces and how the approach proposed in Section 4 is applied to realistically simulate the performance of two scientific computationally-intensive applications are also provided.",
+            "startOffset": 66447,
+            "title": "Experimental evaluation and results"
+        },
+        {
+            "endOffset": 76357,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "For the links that represent the memory communication, their sharing property is set to SHARED to represent possible delays that can occur if multiple cores are trying to access the memory at the same time.",
+            "startOffset": 76151,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 44902,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In highly irregular environments, the adaptive DLS techniques balance the execution of the loop iterations significantly better than the nonadaptive techniques.",
+            "startOffset": 44742,
+            "title": "Background"
+        },
+        {
+            "endOffset": 73575,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Algorithm 1 shows the changes needed in the native application code to transform it into the simulative application code using SG-SMPI+SG-MSG using the approach illustrated in Fig. 2.",
+            "startOffset": 73392,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 34935,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Realistically simulating application performance is, however, nontrivial.",
+            "startOffset": 34862,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39805,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "A novel strategy for simulating applications is also experimented in this work (cf. Section 5.2).",
+            "startOffset": 39708,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51221,
+            "parents": [],
+            "refoffsets": {
+                "b38": {
+                    "endOffset": 51184,
+                    "startOffset": 51180
+                }
+            },
+            "secId": "sec3",
+            "sentence": "SG was also used for the study of file management in large distributed systems [38] to improve applications performance.",
+            "startOffset": 51101,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 87718,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "Considering the adaptive DLS techniques, the parallel costs are not characterized by outliers as observed for the native executions.",
+            "startOffset": 87586,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 62141,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "To this end, core speeds are estimated to obtain more accurate simulation results due to the fact that applications do not execute at the theoretical peak performance.",
+            "startOffset": 61974,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 33084,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "HPC systems become larger on the road to Exascale computing.",
+            "startOffset": 33024,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37821,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Given that different simulations are expected to represent the same application and platform characteristics, this comparison allows a better assessment of the influence of application and/or system representation on the obtained simulative performance and the degree of agreement between the native and the simulative performance.",
+            "startOffset": 37490,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40422,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The design of the evaluation experiments, the practical steps of representing the scientific applications in simulation, the results of the native and simulative experimental results with various DLS techniques, as well as their comparisons are discussed in Section 5.",
+            "startOffset": 40154,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56072,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Preserving the expected behavior suffices to draw similar conclusions on the performance of DLS techniques between native and simulative experiments.",
+            "startOffset": 55923,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 58023,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Therefore, the TiT can be used to understand the application flow and to represent the application in simulations.",
+            "startOffset": 57909,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 87110,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "Using the adaptive DLS techniques results in poorer strong scaling, characterized by at least one outlier per adaptive technique.",
+            "startOffset": 86981,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 79901,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The application codes are compiled with the Intel compiler v. 17.0.1 without any compiler optimizations to prevent compiler from changing the applications.",
+            "startOffset": 79746,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 32418,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Scientific applications are complex, large, and contain irregular parallel loops (or tasks) that often exhibit stochastic behavior.",
+            "startOffset": 32287,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78278,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The SG-SMPI interface simulates the execution of native MPI codes on a simulated computing platform file.",
+            "startOffset": 78173,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 61973,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The second step is to fine tune this initial representation to reflect the \u201creal\u201d HPC performance in executing a certain application.",
+            "startOffset": 61840,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 44741,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The adaptive DLS techniques exploit, during execution, the latest information on the state of both the application and the system to predict the next sizes of the chunks of the iterations to be executed.",
+            "startOffset": 44538,
+            "title": "Background"
+        },
+        {
+            "endOffset": 49787,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The weak scalability of these DLS techniques was assessed in the presence of certain load imbalance sources (algorithmic and systemic).",
+            "startOffset": 49652,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 69096,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Dynamic load balancing.",
+            "startOffset": 69073,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 33468,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 33467,
+                    "startOffset": 33464
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Scheduling and load balancing, from operating system level to HPC batch scheduling level, in addition to minimizing the management overhead, are among the most important challenges on the road to Exascale systems [1].",
+            "startOffset": 33251,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82282,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This is an example where the c.o.v. alone hides the load imbalance resulting from a single process lagging the application execution as explained above.",
+            "startOffset": 82130,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 34861,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Realistic predictions based on trustworthy simulations can be used to design targeted native experiments with the ultimate goal of achieving optimized application performance.",
+            "startOffset": 34686,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40153,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The proposed simulation approach is introduced and discussed in Section 4.",
+            "startOffset": 40079,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91347,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The approach proposed for this purpose considers various factors that affect the applications performance on HPC systems: application representation, scheduling, computing system representation, and systemic variations.",
+            "startOffset": 91128,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 42374,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The former has the advantage of global scheduling information while the latter is more scalable at the cost of identifying overloaded PEs from which to steal work.",
+            "startOffset": 42211,
+            "title": "Background"
+        },
+        {
+            "endOffset": 52332,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The scheduling techniques were extracted from the Charm++ runtime to be used in the simulation.",
+            "startOffset": 52237,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55567,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A realistic performance simulation means that conclusions drawn from the simulative performance results are close to those drawn from the native performance results.",
+            "startOffset": 55402,
+            "title": "Approach for realistic simulations"
+        },
+        {
+            "endOffset": 66895,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Subsequently, the native and simulative performance results are compared using the second and the third step of the comparison approach illustrated in Fig. 1 and the results are discussed.",
+            "startOffset": 66707,
+            "title": "Experimental evaluation and results"
+        },
+        {
+            "endOffset": 62557,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 62556,
+                    "startOffset": 62553
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "This core speed is used in the simulated HPC representation to reflect the native core speed in processing the application tasks [5].",
+            "startOffset": 62424,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 83218,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This file is read by the simulator during the execution to account for the computational effort in each task.",
+            "startOffset": 83109,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 43525,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 43432,
+                    "startOffset": 43428
+                }
+            },
+            "secId": "sec2",
+            "sentence": "GSS [13] assigns chunks of decreasing sizes to reduce scheduling overhead and improve load balancing.",
+            "startOffset": 43424,
+            "title": "Background"
+        },
+        {
+            "endOffset": 49652,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 49474,
+                    "startOffset": 49470
+                },
+                "b12": {
+                    "endOffset": 49484,
+                    "startOffset": 49480
+                },
+                "b13": {
+                    "endOffset": 49494,
+                    "startOffset": 49490
+                },
+                "b14": {
+                    "endOffset": 49504,
+                    "startOffset": 49500
+                },
+                "b16": {
+                    "endOffset": 49617,
+                    "startOffset": 49613
+                },
+                "b29": {
+                    "endOffset": 49447,
+                    "startOffset": 49443
+                },
+                "b30": {
+                    "endOffset": 49538,
+                    "startOffset": 49534
+                },
+                "b31": {
+                    "endOffset": 49651,
+                    "startOffset": 49647
+                }
+            },
+            "secId": "sec3",
+            "sentence": "For instance, eight DLS techniques were implemented using the SG-MSG interface in the literature [29]: five nonadaptive, SS [11], FSC [12], GSS [13], FAC [14], and weighted factoring (WF) [30], and three adaptive techniques, adaptive weighted factoring (AWF-B,AWF-C) [16], and adaptive factoring (AF) [31].",
+            "startOffset": 49346,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 73878,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The SG-SMPI interface is used to execute the native application code.",
+            "startOffset": 73809,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 47959,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The selected simulation toolkit.",
+            "startOffset": 47927,
+            "title": "Background"
+        },
+        {
+            "endOffset": 49260,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Scheduling in simulation.",
+            "startOffset": 49235,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52994,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This approach was focused on the simulation for the study of communications and network in large computing systems.",
+            "startOffset": 52879,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 78508,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The difference between the native execution and the simulative SG-SMPI-based execution is the computing system representation component.",
+            "startOffset": 78372,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 54688,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In this work, a novel simulation approach is presented that considers the different factors that affect application performance.",
+            "startOffset": 54560,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 38655,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The performance comparison shows that simulations realistically captured key applications performance features.",
+            "startOffset": 38544,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51525,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The results showed that the dynamic scheduling of StarPU improves the performance even with irregular tasks execution times.",
+            "startOffset": 51401,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58917,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 58916,
+                    "startOffset": 58913
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "The FLOP count per task is found to be a more accurate measurement to represent computational effort per task than time measurements as well as resulting in constant values across different application executions [5].",
+            "startOffset": 58700,
+            "title": "Representing applications for realistic simulations"
+        },
+        {
+            "endOffset": 87585,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "These results are identical to those of the native executions.",
+            "startOffset": 87523,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 73264,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "A novel simulation approach is employed in this work.",
+            "startOffset": 73211,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 84099,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The adaptive techniques AWF-C and AWF-E improve the performance of PSIA and result in low parallel loop execution time, c.o.v., and max/mean almost similar to the FAC (the minimum).",
+            "startOffset": 83918,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 87276,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                },
+                {
+                    "id": "sec5.3",
+                    "title": "Experimental results"
+                }
+            ],
+            "secId": "sec5.3.1",
+            "sentence": "The strong scaling results for the first simulation approach, denoted as FLOP file, are shown in Fig. 9(c)\u2013(d) for the PSIA and Mandelbrot applications, respectively.",
+            "startOffset": 87110,
+            "title": "Strong scaling results"
+        },
+        {
+            "endOffset": 46352,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The DLS techniques have been used in several studies to improve the performance ofcomputationally-intensive scientific applications.",
+            "startOffset": 46220,
+            "title": "Background"
+        },
+        {
+            "endOffset": 69586,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The DLB_tool employs a master-worker execution model, where the master also acts as a worker when it is not serving worker requests.",
+            "startOffset": 69454,
+            "title": "Design of native and simulative experiments"
+        },
+        {
+            "endOffset": 74263,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Memory allocations of results and data in the native code are removed or commented in the simulation as they are not needed.",
+            "startOffset": 74139,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 60682,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Representing HPC systems in simulation involves representing different system components that contribute to the application performance in simulation.",
+            "startOffset": 60532,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 34462,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An important source of uncertainty in the performance results obtained via simulation is the degree of trustworthiness in the simulation, understood as the close quantitative and qualitative agreement with the native measured performance.",
+            "startOffset": 34224,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62423,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The sum of the total number of FLOP in all iterations is divided by the measured loop execution time to estimate the core processing speed.",
+            "startOffset": 62284,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 33755,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These techniques balance the assignment and the execution of independent tasks or loop iterations across the available processing elements (PEs).",
+            "startOffset": 33610,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91585,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "A set of guidelines are also introduced and discussed for how to represent applications and system characteristics.",
+            "startOffset": 91470,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 50965,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The two simulators were connected and used together to simulate the execution of multiple applications with various scheduling techniques at the batch level and the application level.",
+            "startOffset": 50782,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 83833,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The FAC technique results in improved performance for both applications.",
+            "startOffset": 83761,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 43204,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 43069,
+                    "startOffset": 43065
+                }
+            },
+            "secId": "sec2",
+            "sentence": "mFSC [19] groups iterations into chunks at each scheduling round to avoid the large overhead of single loop iterations being assigned at a time.",
+            "startOffset": 43060,
+            "title": "Background"
+        },
+        {
+            "endOffset": 83448,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Inspecting the first simulative performance results ( FLOP_file) in Fig. 7 reveals that STATIC degrades the performance of applications due to load imbalance as can be inferred from the load imbalance metrics in sub-figures(c-f).",
+            "startOffset": 83219,
+            "title": "Experimental results"
+        },
+        {
+            "endOffset": 60368,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "To minimize the differences between native and simulative executions, the DLB_tool load balancing library, is used to schedule the application tasks in native and simulative executions.",
+            "startOffset": 60183,
+            "title": "Implementing scheduling techniques for native and simulative experiments"
+        },
+        {
+            "endOffset": 48770,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The SimGrid-SMPI interface (hereafter, SG-SMPI) provides the functionality for the simulation of programs written using the message passing interface (MPI) and targets developers interested in the simulation and debugging of their parallel MPI codes.",
+            "startOffset": 48520,
+            "title": "Background"
+        },
+        {
+            "endOffset": 51400,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 51399,
+                    "startOffset": 51396
+                },
+                "b39": {
+                    "endOffset": 51331,
+                    "startOffset": 51327
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The effect of variability in task execution times on the makespan of applications scheduled using StarPU [39] on heterogeneous CPU/GPU systems was also studied in simulation [3].",
+            "startOffset": 51222,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62283,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Approach for realistic simulations"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The core speed is calculated by measuring the loop execution time in a sequential run to avoid any parallelization or communication overhead.",
+            "startOffset": 62142,
+            "title": "Representing native computing systems in simulation"
+        },
+        {
+            "endOffset": 74138,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Experimental evaluation and results"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The amount of work per SG-MSG task is either read from a file or drawn from a probability distribution according to the experimented simulation type.",
+            "startOffset": 73989,
+            "title": "Realistic simulations of scientific applications"
+        },
+        {
+            "endOffset": 42210,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 42120,
+                    "startOffset": 42116
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Self-scheduling is also different from work stealing [10] in that PEs request work from a central work queue as opposed to distributed work queues.",
+            "startOffset": 42063,
+            "title": "Background"
+        }
+    ],
+    "docId": "S0167739X19308830",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "ali.mohammed@unibas.ch",
+                "first": "Ali",
+                "initial": "A.",
+                "last": "Mohammed"
+            },
+            {
+                "email": "ahmed.eleliemy@unibas.ch",
+                "first": "Ahmed",
+                "initial": "A.",
+                "last": "Eleliemy"
+            },
+            {
+                "email": "florina.ciorba@unibas.ch",
+                "first": "Florina M.",
+                "initial": "F.M.",
+                "last": "Ciorba"
+            },
+            {
+                "email": "f.kasielke@gmx.de",
+                "first": "Franziska",
+                "initial": "F.",
+                "last": "Kasielke"
+            },
+            {
+                "email": "ioana@cse.msstate.edu",
+                "first": "Ioana",
+                "initial": "I.",
+                "last": "Banicescu"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.10.007",
+        "issn": "0167739X",
+        "keywords": [
+            "Dynamic load balancing",
+            "HPC benchmarking",
+            "High performance computing",
+            "Modeling and simulation",
+            "Modeling and simulation of HPC systems",
+            "Scientific applications",
+            "Self-scheduling"
+        ],
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "An approach for realistically simulating the performance of scientific applications on high performance computing systems"
+    }
+}

@@ -1,0 +1,2507 @@
+{
+    "abstract": "A variety of Reduced-Order Modelling (ROM) techniques have been developed for the Wave/Finite Element (WFE) Framework. However most of these techniques are not compatible with dynamic response computation or frequency-dependent problems. This paper introduces a new reduction strategy for the WFE method, enabling the computation of both the forced response and the complex dispersion curves of periodic structures modelled using large-sized finite element (FE) models. The method exploits the duality between Inverse and Direct Bloch formulations to build a reduced solution subspace, accounting for both propagating and evanescent behaviours, while ensuring high reduction factors. This reduction strategy therefore enables the resolution of a wider range of problems, including near/far field response computation in finite waveguides subjected to dynamic loadings, or vibroacoustic transmission/reflection problems. First, the method is used to compute dispersion curves and forced response in a duct. Then a large bi-stiffened structure is studied to evaluate the method's performances. The high frequency resolution provided by the proposed ROM allows us to explore a variety of propagation and guided resonances localization effects, hardly accessible otherwise. Furthermore, the considerable reduction factors enable fast wave dispersion analyses in large-scaled periodic structures, complex phononic crystals designs or locally resonant metamaterials.",
+    "author_highlights": [
+        {
+            "endOffset": 43071,
+            "sentence": "Direct Bloch wave analysis is performed with several orders of magnitude reduction of the computational effort.",
+            "startOffset": 42960
+        },
+        {
+            "endOffset": 43180,
+            "sentence": "The method significantly extends the WFE Framework capabilities to handle large complex periodic waveguides.",
+            "startOffset": 43072
+        },
+        {
+            "endOffset": 43269,
+            "sentence": "The proposed algorithm is robust in regards with evanescent modes and easy to implement.",
+            "startOffset": 43181
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Mao",
+                    "initial": "M.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Jiawei",
+                    "initial": "J.",
+                    "last": "Xiang"
+                },
+                {
+                    "first": "Yongteng",
+                    "initial": "Y.",
+                    "last": "Zhong"
+                }
+            ],
+            "doi": "10.1016/j.apacoust.2015.06.019",
+            "firstpage": "10",
+            "issn": "0003682X",
+            "lastpage": "17",
+            "pub_year": 2015,
+            "title": "The band gap and transmission characteristics investigation of local resonant quaternary phononic crystals with periodic coating",
+            "volume": "100"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Droz"
+                },
+                {
+                    "first": "Z.",
+                    "initial": "Z.",
+                    "last": "Zergoune"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Boukadia"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Bareille"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                }
+            ],
+            "doi": "10.1016/j.compstruct.2016.01.025",
+            "firstpage": "108",
+            "issn": "02638223",
+            "lastpage": "114",
+            "pub_year": 2016,
+            "title": "Vibro-acoustic optimisation of sandwich panels using the wave/finite element method",
+            "volume": "156"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "Q.",
+                    "initial": "Q.",
+                    "last": "Serra"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "De\u00fc"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2014.09.022",
+            "firstpage": "125",
+            "issn": "0022460X",
+            "lastpage": "146",
+            "pub_year": 2015,
+            "title": "Wave properties in poroelastic media using a Wave Finite Element Method",
+            "volume": "335"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "Ajit",
+                    "initial": "A.",
+                    "last": "Bhuddi"
+                },
+                {
+                    "first": "Marie Laure",
+                    "initial": "M.L.",
+                    "last": "Gobert"
+                },
+                {
+                    "first": "Jean Mathieu",
+                    "initial": "J.M.",
+                    "last": "Mencik"
+                }
+            ],
+            "doi": "10.1142/S0218396X15500113",
+            "issn": "0218396X",
+            "pub_year": 2015,
+            "title": "On the acoustic radiation of axisymmetric fluid-filled pipes using the wave finite element (WFE) method",
+            "volume": "23"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Parrinello"
+                },
+                {
+                    "first": "G. L.",
+                    "initial": "G.L.",
+                    "last": "Ghiringhelli"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2016.02.005",
+            "firstpage": "196",
+            "issn": "0022460X",
+            "lastpage": "209",
+            "pub_year": 2016,
+            "title": "Transfer matrix representation for periodic planar media",
+            "volume": "371"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Jean Loup",
+                    "initial": "J.L.",
+                    "last": "Christen"
+                },
+                {
+                    "first": "Mohamed",
+                    "initial": "M.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "Abdelmalek",
+                    "initial": "A.",
+                    "last": "Zine"
+                },
+                {
+                    "first": "Bernard",
+                    "initial": "B.",
+                    "last": "Troclet"
+                }
+            ],
+            "doi": "10.3813/AAA.919013",
+            "firstpage": "984",
+            "issn": "16101928",
+            "lastpage": "991",
+            "pub_year": 2016,
+            "title": "Wave finite element formulation of the acoustic transmission through complex infinite plates",
+            "volume": "102"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Waki"
+                },
+                {
+                    "first": "B. R.",
+                    "initial": "B.R.",
+                    "last": "Mace"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Brennan"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2009.06.005",
+            "firstpage": "92",
+            "issn": "0022460X",
+            "lastpage": "108",
+            "pub_year": 2009,
+            "title": "Numerical issues concerning the wave and finite element method for free and forced vibrations of waveguides",
+            "volume": "327"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "Claus C.",
+                    "initial": "C.C.",
+                    "last": "Claeys"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Sas"
+                },
+                {
+                    "first": "Wim",
+                    "initial": "W.",
+                    "last": "Desmet"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2014.03.019",
+            "firstpage": "3203",
+            "issn": "0022460X",
+            "lastpage": "3213",
+            "pub_year": 2014,
+            "title": "On the acoustic radiation efficiency of local resonance based stop band materials",
+            "volume": "333"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Junghwan",
+                    "initial": "J.",
+                    "last": "Kook"
+                },
+                {
+                    "first": "Jakob S.",
+                    "initial": "J.S.",
+                    "last": "Jensen"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2017.06.001",
+            "firstpage": "59",
+            "issn": "00207683",
+            "lastpage": "68",
+            "pub_year": 2017,
+            "title": "Topology optimization of periodic microstructures for enhanced loss factor using acoustic\u2013structure interaction",
+            "volume": "122-123"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Mencik"
+                }
+            ],
+            "doi": "10.1016/j.cma.2012.03.024",
+            "firstpage": "68",
+            "issn": "00457825",
+            "lastpage": "86",
+            "pub_year": 2012,
+            "title": "A model reduction strategy for computing the forced response of elastic waveguides using the wave finite element method",
+            "volume": "229-232"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Mencik"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Duhamel"
+                }
+            ],
+            "doi": "10.1016/j.finel.2015.03.003",
+            "firstpage": "1",
+            "issn": "0168874X",
+            "lastpage": "14",
+            "pub_year": 2015,
+            "title": "A wave-based model reduction technique for the description of the dynamic behavior of periodic structures involving arbitrary-shaped substructures and large-sized finite element models",
+            "volume": "101"
+        },
+        "bib2": null,
+        "bib20": {
+            "authors": [
+                {
+                    "first": "C. W.",
+                    "initial": "C.W.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "J. P.",
+                    "initial": "J.P.",
+                    "last": "Lain\u00e9"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "A. M.",
+                    "initial": "A.M.",
+                    "last": "Zine"
+                }
+            ],
+            "doi": "10.1016/j.compstruc.2015.03.006",
+            "firstpage": "145",
+            "issn": "00457949",
+            "lastpage": "162",
+            "pub_year": 2015,
+            "title": "Multi-scale modelling for two-dimensional periodic structures using a combined mode/wave based approach",
+            "volume": "154"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Droz"
+                },
+                {
+                    "first": "J. P.",
+                    "initial": "J.P.",
+                    "last": "Lain\u00e9"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Inqui\u00e9t\u00e9"
+                }
+            ],
+            "doi": "10.1016/j.compstruct.2014.03.017",
+            "firstpage": "134",
+            "issn": "02638223",
+            "lastpage": "144",
+            "pub_year": 2014,
+            "title": "A reduced formulation for the free-wave propagation analysis in composite structures",
+            "volume": "113"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Droz"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "J. P.",
+                    "initial": "J.P.",
+                    "last": "Lain\u00e9"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.11.003",
+            "firstpage": "285",
+            "issn": "0022460X",
+            "lastpage": "302",
+            "pub_year": 2016,
+            "title": "A hybrid wave-mode formulation for the vibro-acoustic analysis of 2D periodic structures",
+            "volume": "363"
+        },
+        "bib23": {
+            "authors": [
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Mead"
+                }
+            ],
+            "doi": "10.1016/0022-460X(73)90064-3",
+            "firstpage": "235",
+            "issn": "0022460X",
+            "lastpage": "260",
+            "pub_year": 1973,
+            "title": "A general theory of harmonic wave propagation in linear periodic systems with multiple coupling",
+            "volume": "27"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Denys J.",
+                    "initial": "D.J.",
+                    "last": "Mead"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2008.05.026",
+            "firstpage": "282",
+            "issn": "0022460X",
+            "lastpage": "304",
+            "pub_year": 2009,
+            "title": "The forced vibration of one-dimensional multi-coupled periodic structures: An application to finite element analysis",
+            "volume": "319"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Collet"
+                },
+                {
+                    "first": "K. A.",
+                    "initial": "K.A.",
+                    "last": "Cunefare"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                }
+            ],
+            "doi": "10.1177/1045389X08097902",
+            "firstpage": "787",
+            "issn": "1045389X",
+            "lastpage": "808",
+            "pub_year": 2009,
+            "title": "Wave motion optimization in periodically distributed shunted piezocomposite beam structures",
+            "volume": "20"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Waki"
+                },
+                {
+                    "first": "B. R.",
+                    "initial": "B.R.",
+                    "last": "Mace"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Brennan"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2009.01.006",
+            "firstpage": "737",
+            "issn": "0022460X",
+            "lastpage": "756",
+            "pub_year": 2009,
+            "title": "Free and forced vibrations of a tyre using a wave/finite element approach",
+            "volume": "323"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "W. J.",
+                    "initial": "W.J.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                }
+            ],
+            "doi": "10.1016/j.cma.2010.03.006",
+            "firstpage": "2099",
+            "issn": "00457825",
+            "lastpage": "2109",
+            "pub_year": 2010,
+            "title": "Wave propagation in mechanical waveguide with curved members using wave finite element solution",
+            "volume": "199"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "W. X.",
+                    "initial": "W.X.",
+                    "last": "Zhong"
+                },
+                {
+                    "first": "F. W.",
+                    "initial": "F.W.",
+                    "last": "Williams"
+                }
+            ],
+            "doi": "10.1006/jsvi.1995.0153",
+            "firstpage": "485",
+            "issn": "0022460X",
+            "lastpage": "501",
+            "pub_year": 1995,
+            "title": "On the direct solution of wave propagation for repetitive structures",
+            "volume": "181"
+        },
+        "bib29": {
+            "authors": [
+                {
+                    "first": "Olivier",
+                    "initial": "O.",
+                    "last": "Roy"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Vetterli"
+                }
+            ],
+            "firstpage": "606",
+            "issn": "22195491",
+            "lastpage": "610",
+            "pub_year": 2007,
+            "title": "The effective rank: A measure of effective dimensionality"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "Massimo",
+                    "initial": "M.",
+                    "last": "Ruzzene"
+                },
+                {
+                    "first": "Fabrizio",
+                    "initial": "F.",
+                    "last": "Scarpa"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Soranna"
+                }
+            ],
+            "doi": "10.1088/0964-1726/12/3/307",
+            "firstpage": "363",
+            "issn": "09641726",
+            "lastpage": "372",
+            "pub_year": 2003,
+            "title": "Wave beaming effects in two-dimensional cellular structures",
+            "volume": "12"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Massimo",
+                    "initial": "M.",
+                    "last": "Ruzzene"
+                },
+                {
+                    "first": "Fabrizio",
+                    "initial": "F.",
+                    "last": "Scarpa"
+                }
+            ],
+            "doi": "10.1177/1045389X03035515",
+            "firstpage": "443",
+            "issn": "1045389X",
+            "lastpage": "454",
+            "pub_year": 2003,
+            "title": "Control of wave propagation in sandwich beams with auxetic core",
+            "volume": "14"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Antonakakis"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Guenneau"
+                }
+            ],
+            "doi": "10.1088/1367-2630/15/10/103014",
+            "issn": "13672630",
+            "pub_year": 2013,
+            "title": "High-frequency homogenization of zero-frequency stop band photonic and phononic crystals",
+            "volume": "15"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Claude",
+                    "initial": "C.",
+                    "last": "Boutin"
+                },
+                {
+                    "first": "Fran\u00e7ois Xavier",
+                    "initial": "F.X.",
+                    "last": "Becot"
+                }
+            ],
+            "doi": "10.1016/j.wavemoti.2014.11.013",
+            "firstpage": "76",
+            "issn": "01652125",
+            "lastpage": "99",
+            "pub_year": 2015,
+            "title": "Theory and experiments on poro-acoustics with inner resonators",
+            "volume": "54"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Casadei"
+                },
+                {
+                    "first": "J. J.",
+                    "initial": "J.J.",
+                    "last": "Rimoli"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ruzzene"
+                }
+            ],
+            "doi": "10.1016/j.cma.2013.05.009",
+            "firstpage": "56",
+            "issn": "00457825",
+            "lastpage": "70",
+            "pub_year": 2013,
+            "title": "A geometric multiscale finite element method for the dynamic analysis of heterogeneous solids",
+            "volume": "263"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Mahmoud I.",
+                    "initial": "M.I.",
+                    "last": "Hussein"
+                },
+                {
+                    "first": "Gregory M.",
+                    "initial": "G.M.",
+                    "last": "Hulbert"
+                }
+            ],
+            "doi": "10.1016/j.finel.2005.11.002",
+            "firstpage": "602",
+            "issn": "0168874X",
+            "lastpage": "612",
+            "pub_year": 2006,
+            "title": "Mode-enriched dispersion models of periodic materials within a multiscale mixed finite element framework",
+            "volume": "42"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Z.",
+                    "initial": "Z.",
+                    "last": "Zergoune"
+                },
+                {
+                    "first": "M. N.",
+                    "initial": "M.N.",
+                    "last": "Ichchou"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Bareille"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Harras"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Benamar"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Troclet"
+                }
+            ],
+            "doi": "10.1016/j.compstruc.2016.11.017",
+            "firstpage": "227",
+            "issn": "00457949",
+            "lastpage": "237",
+            "pub_year": 2017,
+            "title": "Assessments of shear core effects on sound transmission loss through sandwich panels using a two-scale approach",
+            "volume": "182"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 70744,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In order to examine the convergence of the reduced model, 3 values of nf are tested from nf = 1 to a nf = 3, while nk = 3 and \u03b5 is fixed to a conservative 10\u22125 (see Section 3.3).",
+            "startOffset": 70566,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 68945,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The relative error on the real and imaginary part are evaluated separately.",
+            "startOffset": 68870,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 74911,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Noteworthy, the model size is reduced by a factor 15 and yields almost negligible computational effort per frequency, while results are in perfect agreement with the full model (see Fig. 9).",
+            "startOffset": 74721,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 47687,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore it is obvious that none of the above mentioned ROM strategies allows both an ultrafast computation of the dispersion curves and a further exploitation for coupling or forced response computation.",
+            "startOffset": 47482,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70965,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Results obtained from these three reduced models are compared with the full WFEM solution in Fig. 6 (on point force excitation) and in Fig. 7 (on the same cross-sectional location, at a 3 m distance from the excitation).",
+            "startOffset": 70745,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 69775,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Therefore, it can be emphasized that the level of accuracy obtained with the reduced model is comparable to the level of precision of the eigenvalue solver, which mean that the error introduced by the reduction process is virtually null.",
+            "startOffset": 69538,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 75773,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Bragg scattering is also correctly predicted using the reduced model, and can be observed on first-order waves starting from 2900 Hz (for k = 62.83 rad m-1), note that the first local resonances occur in the same bandwidth in this example.",
+            "startOffset": 75534,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 45790,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Remarkable achievements have been achieved on reduced-order modelling (ROM) strategies for wave-based methods and particularly for the wave finite element framework.",
+            "startOffset": 45625,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45148,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 45080,
+                    "startOffset": 45078
+                },
+                "bib13": {
+                    "endOffset": 45101,
+                    "startOffset": 45099
+                },
+                "bib14": {
+                    "endOffset": 45104,
+                    "startOffset": 45102
+                }
+            },
+            "secId": "sec1",
+            "sentence": "It was recently applied to perform fast design of periodic topologies with enhanced acoustic performances by computing local acoustic radiation [12] or transmission [13,14] problems in a variety periodic structures.",
+            "startOffset": 44933,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63045,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "If one is only interested in the response in the far field then nf can be chosen equal to 1 without any loss of accuracy.",
+            "startOffset": 62924,
+            "title": "Computation of the inverse solutions and k-space sampling"
+        },
+        {
+            "endOffset": 43746,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Their periodicity allows the computation of local wave dispersion characteristics such as stop-bands, local resonances, diffusion and spatial attenuation properties.",
+            "startOffset": 43581,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79742,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Eventually, as the method provides a fast direct computation of the band diagrams, it is hoped that this will help encompass the current numerical limitations of FE-based cellular structure optimization exploiting Bragg or local resonance stop-band effects.",
+            "startOffset": 79485,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 75851,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In total, 11 propagating waves can be distinguished on the dispersion curves.",
+            "startOffset": 75774,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 57235,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In order to address these issues, a new reduction method is proposed hereby, combining the advantages of inverse method (i.e. iterative solver and well-conditioned matrices) with a direct WFEM formulation able to tackle frequency-dependent FE models.",
+            "startOffset": 56985,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 46269,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Various ROM strategies have been developed for the WFEM, enabling fast wave analyses at different levels:",
+            "startOffset": 46164,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70379,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The forced response is computed in the same bandwidth [0\u2013500 Hz], while the FE model described above is used to describe the waveguide's unit-cell.",
+            "startOffset": 70232,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 54326,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "It has the advantage of improving the condition number of the eigenvalue problem by gathering the pairs of the simplectic eigenvalue problem into a eigenspace of dimension 2 and associating strongly evanescent waves with a strictly 0 eigenvalue instead of (0, \u221e) pairs.",
+            "startOffset": 54057,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 44144,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 44066,
+                    "startOffset": 44065
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Various methods were developed to predict wave dispersion characteristics in complex 1D or 2D periodic structures: homogenization techniques were proposed in Ref. [5] to compute high-frequency dispersion characteristics in phononic waveguides.",
+            "startOffset": 43901,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48203,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this paper a model order reduction strategy is developed for the wave/finite element framework, based on singular value decomposition of a discretized wave solution subset.",
+            "startOffset": 48028,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44267,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 44188,
+                    "startOffset": 44187
+                }
+            },
+            "secId": "sec1",
+            "sentence": "One can also cite the work Boutin et al. [6] on equivalent models for porous waveguides with embedded Helmoltz resonators.",
+            "startOffset": 44145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53964,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "It should be noted that bad conditioning can arise even when all the matrices are non-degenerate: this can be due to the presence of strongly evanescent waves and the limitations of machine precision.",
+            "startOffset": 53764,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 49963,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "First, a finite element model is obtained using an FE package, the mesh of the unit cell should respect periodicity conditions ensuring that primal assembly of the right and left interfaces of the unit cell is possible.",
+            "startOffset": 49744,
+            "title": "Review of the WFEM framework"
+        },
+        {
+            "endOffset": 70059,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 70056,
+                    "startOffset": 70054
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "The forced response is obtained from the wave basis computed above, using the WFE forced response framework (see Mencik [18]).",
+            "startOffset": 69933,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 69164,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Indeed, the imaginary parts of wavenumbers of propagating waves are several orders of magnitude below that of the real parts but still contain important information about the wave propagation dynamics of the structure.",
+            "startOffset": 68946,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 71695,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The dynamic response of the hollow beam exhibits a clear transition from low-to mid-frequency behaviours, where the modal density increases drastically above 100 Hz.",
+            "startOffset": 71530,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 62855,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Given that the inverse approach is a form of modal analysis, this can be directly compared to mode based model order reduction methods where it recommended to take modes up to n times the maximal frequency of interest as these modes still contribute to the response of the structure.",
+            "startOffset": 62572,
+            "title": "Computation of the inverse solutions and k-space sampling"
+        },
+        {
+            "endOffset": 68640,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This means that the frequency sampling can be considerably refined with negligible additional CPU effort.",
+            "startOffset": 68535,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 62571,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The parameter nf allows to incorporate the least evanescent wave modes by sampling them once they become propagative.",
+            "startOffset": 62454,
+            "title": "Computation of the inverse solutions and k-space sampling"
+        },
+        {
+            "endOffset": 56098,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Depending on frequency sampling, Gram-Schmidt algorithm can produce redundant projection basis and yield numerical noise, as well as an unnecessary large reduced basis.",
+            "startOffset": 55930,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 72672,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "When computing forced responses, the authors recommend to use a truncation criteria of nf = 3 to ensure convergence of the response at the point of excitation, while a value of nf = 1 or 2 is sufficient for accurate far field computations.",
+            "startOffset": 72433,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 73594,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Some sub-wavelength propagation features occurring in the mid-frequencies are further discussed, as it is emphasized that such high-resolution dispersion analyses are hardly achievable from existing WFEM formulations.",
+            "startOffset": 73377,
+            "title": "Validation 2: application to a stiffened plate"
+        },
+        {
+            "endOffset": 75269,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The propagating dispersion curves of the waveguide are filtered using the criteria |\u03bb| > 0.9 and a wavematching algorithm is used to identify wavetypes in the frequency range [0\u20135000 Hz].",
+            "startOffset": 75082,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 76484,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The deformed shapes of flexural waves' unit cells, computed close to their cut-on frequency are shown in Figs. 12\u201314.",
+            "startOffset": 76367,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 49555,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Conclusion are eventually drawn in Section 6.",
+            "startOffset": 49510,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50414,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "fL and fR representing the efforts on the right and left interface and \u03bb being the Floquet-Bloch propagation constant.",
+            "startOffset": 50296,
+            "title": "Review of the WFEM framework"
+        },
+        {
+            "endOffset": 56642,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In such cases, the reduced basis is not expected to allow accurate computation of the wave dispersion characteristics.",
+            "startOffset": 56524,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 57434,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "In addition to being more accurate and robust, this reduction strategy provides both propagating and evanescent solutions and is compatible with wave-based framework for forced response computation.",
+            "startOffset": 57236,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 73945,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The spacing between the stiffeners is 10 cm along the width and 5 cm along the propagation direction and hysteretic damping of \u03b7 = 10\u22124 is introduced.",
+            "startOffset": 73795,
+            "title": "Description of the stiffened structure"
+        },
+        {
+            "endOffset": 72432,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It compares the CPU time required to compute the FRF using the most conservative (largest model) case nf = 3 with the full model.",
+            "startOffset": 72303,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 76844,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "It should be mentioned that these waves are usually dispersive close to their cut-on frequency, as their group velocity is close to 0.",
+            "startOffset": 76710,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 77805,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This paper presents a model order reduction strategy for the Wave Finite Element (WFE) Framework.",
+            "startOffset": 77708,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49304,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The vibroacoustic behaviour of this periodic structure is commonly studied though wave-based approaches and requires the combination of the WFEM with a CMS technique.",
+            "startOffset": 49138,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79197,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This enables dynamic response analysis of finite structures with high accuracy, even when a large number of unit-cells is considered (3000 periods are used in the example of Section 4).",
+            "startOffset": 79012,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 68279,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "With a value of nf = 1 and nk = 3, a perfect agreement can be observed between full and reduced solutions, while the total computation time for 200 frequency samples is divided by 132.",
+            "startOffset": 68095,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 47145,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Combined with modal condensation techniques, this method provides the dispersion curves in complex periodic structures with up to 99% reduction of the computational effort.",
+            "startOffset": 46973,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77466,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This creates the possibility of a singular propagation feature, where a bandgap is present in the X direction, while propagation can occur in the main (Y) direction.",
+            "startOffset": 77301,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 68534,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As shown in Table 1 the reduced model enables a considerable reduction of the computation time per frequency (1/1444), while the reduction process itself takes only 38sec, which is comparable to the resolution of a single frequency (28sec per frequency).",
+            "startOffset": 68280,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 76947,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The waves shown above are all guided by the free edges of the structure.",
+            "startOffset": 76875,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 75534,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Therefore, the benefit of a refined frequency sampling becomes clearly visible between [4500\u20135000 Hz], where numerous veering-locking effects are observed in the dispersion curves.",
+            "startOffset": 75354,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 77992,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The reduction scheme is based on the computation of a small number of inverse Bloch problems, while a single direct Bloch computation is required to evaluate the k-space sampling values.",
+            "startOffset": 77806,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 55536,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The eigenvalue problem is then reduced from n cross-sectional DOF to a reduced number \u00f1 < < n of propagating wave contributions, hence providing considerable reduction of the computational costs associated with wave dispersion analyses.",
+            "startOffset": 55300,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 73794,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The considered waveguide is an aluminium plate of thickness e = 2 mm and width 40 cm stiffened using rectangular beams of height h = 10 mm and width ls = 5 mm.",
+            "startOffset": 73635,
+            "title": "Description of the stiffened structure"
+        },
+        {
+            "endOffset": 74019,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The FE model of a periodic unit-cell of the structure is shown in Fig. 8.",
+            "startOffset": 73946,
+            "title": "Description of the stiffened structure"
+        },
+        {
+            "endOffset": 46814,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 46679,
+                    "startOffset": 46677
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Condensation techniques have been introduced in the WFE framework (see Ref. [20]) to reduce the computational effort associated with the dynamic condensation of the inner degrees of freedom (DOF) of the unit-cells.",
+            "startOffset": 46600,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55789,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Gram-Schmidt Ortho-normalization is then used to create a projection matrix containing selected wave-shapes.",
+            "startOffset": 55681,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 46163,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 46072,
+                    "startOffset": 46070
+                },
+                "bib17": {
+                    "endOffset": 46160,
+                    "startOffset": 46158
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Reduction schemes are also crucial to enable fast design of complex structures (e.g. to create locally resonant behaviours, see Ref. [16] for example) or to implement topology optimization algorithms (see Kook and Jensen [17]).",
+            "startOffset": 45936,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48391,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The background on WFEM is reviewed in Section 2 and some numerical issues related to Bloch wave analysis are discussed.",
+            "startOffset": 48272,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48559,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 3 the proposed model order reduction scheme is described for the fast computation of propagating and evanescent waves based on singular value decomposition.",
+            "startOffset": 48392,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78676,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The reduction factor obtained is considerable (above 1000), taking into account the CMS and the reduction process.",
+            "startOffset": 78562,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 55680,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The reduced wave basis is formed using propagating eigenvectors filtered from a limited number of full solutions sampled on cut-on frequencies.",
+            "startOffset": 55537,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 67179,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The proposed reduction scheme is tested on a rectangular hollow beam of total length: l = 12 m, height h = 10 cm, width w = 40 cm, wall thickness e = 2 mm.",
+            "startOffset": 67024,
+            "title": "Presentation of the model"
+        },
+        {
+            "endOffset": 72918,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this second validation example the method is applied to an orthogonally stiffened panel, which therefore combines periodicity in the propagation direction with a higher cross-sectional complexity.",
+            "startOffset": 72719,
+            "title": "Validation 2: application to a stiffened plate"
+        },
+        {
+            "endOffset": 56523,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "A variety of frequency-dependent phenomena can occur far from selected frequency samples, or without the appearance of a cut-on frequency: one can cite wave conversions, localizations or other periodic effects.",
+            "startOffset": 56313,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 69359,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Noteworthy, the error introduced by the reduction process is always inferior to 10\u22125 for the real part and the spikes appearing close to the cut-on frequencies are due to near zeros wavenumbers.",
+            "startOffset": 69165,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 44758,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It has been used to study wave propagation and conduct vibroacoustic analyses in a wide range of continuous or periodic structures, as it exploits standard FE packages to model the waveguide's unit-cell.",
+            "startOffset": 44555,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62923,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The main difference, here, is the multiscale nature of the problem.",
+            "startOffset": 62856,
+            "title": "Computation of the inverse solutions and k-space sampling"
+        },
+        {
+            "endOffset": 62453,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "An iterative Arnoldi Algorithm is used to solve the inverse problem at each wavenumber sample in Sampk and retrieve propagating and evanescent wave-shapes up to the maximal frequency nf \u00d7 fmax.",
+            "startOffset": 62260,
+            "title": "Computation of the inverse solutions and k-space sampling"
+        },
+        {
+            "endOffset": 75353,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Note that wavematching algorithms are highly sensitive to the frequency resolution.",
+            "startOffset": 75270,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 76709,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In the case of 1D propagation in waveguides with finite cross-section, these waves are also called guided resonances and propagate along the direction (Y) while exhibiting a finite wavelength in the transverse direction (X).",
+            "startOffset": 76485,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 66996,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A comparison is proposed with the standard WFEM formulation, to provide discussion about computational costs and accuracy of the reduced model.",
+            "startOffset": 66853,
+            "title": "Validation 1: application to a hollow beam"
+        },
+        {
+            "endOffset": 55929,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Although this method can be used to perform a fast computation of propagating dispersion curves, it suffers from the following limitations:",
+            "startOffset": 55790,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 71530,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In a case were the far field is accurate but errors appear close to singularities, it is recommended to increase the value of nf to 2 or 3.",
+            "startOffset": 71391,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 48028,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This will enable a further use of the obtained solutions to predict the response to complex load cases or to perform fast diffusion analyses through finely meshed sub-structures.",
+            "startOffset": 47850,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46599,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This yields a better exploitation of the computed wave solutions to retrieve the harmonic response of a finite waveguide.",
+            "startOffset": 46478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72302,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "A detail of the computations realized is shown in Table 2.",
+            "startOffset": 72244,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 74721,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "A summary of the CPU effort for each step is detailed in Table 3 for both reduced and full WFEM dispersion analyses.",
+            "startOffset": 74605,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 49509,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The proposed reduction scheme is therefore applied to explore veering, locking and stopband effects produced by the stiffeners, with a frequency resolution that could not be achieved without ROM strategy.",
+            "startOffset": 49305,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50295,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Finally, Bloch periodicity conditions are applied on the unit cell namely: qR = \u03bbqL and fR = \u2212\u03bbfL.",
+            "startOffset": 50197,
+            "title": "Review of the WFEM framework"
+        },
+        {
+            "endOffset": 79011,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "It should also be mentioned that the error is negligible in the proposed method (below 10\u22125, almost the eigenvalue solver precision).",
+            "startOffset": 78878,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 66852,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The reduced formulation is therefore applied to compute dispersion curves and forced response of a hollow beam.",
+            "startOffset": 66741,
+            "title": "Validation 1: application to a hollow beam"
+        },
+        {
+            "endOffset": 43900,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 43897,
+                    "startOffset": 43894
+                },
+                "bib2": {
+                    "endOffset": 43897,
+                    "startOffset": 43894
+                },
+                "bib3": {
+                    "endOffset": 43897,
+                    "startOffset": 43894
+                },
+                "bib4": {
+                    "endOffset": 43897,
+                    "startOffset": 43894
+                }
+            },
+            "secId": "sec1",
+            "sentence": "This knowledge can then be used for the design and optimization of a broad range of engineered media with desirable dynamic behaviours (see Refs. [1\u20134]).",
+            "startOffset": 43747,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70232,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The beam is clamped on its left end (see Fig. 5a), while a punctual vertical load is applied on the right end, located on the center of the upper face, as shown in Fig. 5b.",
+            "startOffset": 70060,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 48777,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4, the reduction scheme is applied to a hollow beam, which is a typical case of continuous waveguide exhibiting multimodal behaviour when subjected to a point force excitation in the medium frequency range.",
+            "startOffset": 48560,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77595,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The propagation along 10 unit-cells (0.5 m) is shown in Figs. 15 and 16.",
+            "startOffset": 77523,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 69537,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The imaginary part is not as accurate at low frequency but stays below 10\u22125 after 40 Hz, again, this is because the imaginary wavenumber is near 0 for propagative waves at 0 Hz.",
+            "startOffset": 69360,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 71390,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It is emphasized that such results would not be obtained if an insufficient number of waveshapes are retained.",
+            "startOffset": 71280,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 70565,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It is noted that the use of a Bloch formulation already provides significant advantages, since a similar simulation using standard FE analysis would result in a 2.16 millions DOF model.",
+            "startOffset": 70380,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 47481,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Nonetheless, evanescent waves are crucial to describe the local dynamics at a waveguide's edges, or close to structural singularities (e.g. a coupling element, a point force excitation).",
+            "startOffset": 47295,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77697,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "At these frequencies, uni-directional propagation can be obtained due to the longitudinal stiffeners.",
+            "startOffset": 77596,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 73165,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The application of the Bloch theorem via a direct approach is particularly challenging in such structures, as the number of DOF becomes larger and Component Mode Synthesis (CMS) is needed to perform dynamic condensation of the periodic unit-cell.",
+            "startOffset": 72919,
+            "title": "Validation 2: application to a stiffened plate"
+        },
+        {
+            "endOffset": 74340,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Then, the proposed wave-based reduction scheme is applied to further reduce the model on its interfaces.",
+            "startOffset": 74236,
+            "title": "Description of the stiffened structure"
+        },
+        {
+            "endOffset": 79839,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The application to metamaterial design optimization will be the subject of forthcoming research.",
+            "startOffset": 79743,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 56985,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Such a reduction method, compatible with the forced response and wave diffusion framework is still missing in the literature.",
+            "startOffset": 56860,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 61233,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Proposed reduction scheme"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The obtained cut-on and cut-off frequencies and associated wave-shapes provide valuable information about band-gaps, Bragg aliasing and possible appearance of new propagating waves.",
+            "startOffset": 61052,
+            "title": "Computation of the cut-on frequencies for |\u03bb\u202f=\u202f1|"
+        },
+        {
+            "endOffset": 76366,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Cut-on frequencies of the out-of-plane waves are visible at 342 Hz, 925 Hz, 1800 Hz, 2633 Hz, 3757 Hz and 4817 Hz, and an additional cut-on is observed for in-plane motion at 2850 Hz.",
+            "startOffset": 76183,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 77522,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Such behaviours can be observed at 3470 Hz and 4010 Hz.",
+            "startOffset": 77467,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 45935,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Those are driven by the need to use refined unit-cell's finite element model when the wavelength are small compared with the unit-cell's length.",
+            "startOffset": 45791,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76183,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The shapes of the first-order waves (longitudinal, shear, torsional and flexural) are shown in Figs. 10 and 11 for a propagation along 0.5 m. Note that the plate behaves as an homogeneous structure in the considered bandwidth, as the wavelength is smaller than the stiffener's spacing in both propagating and transverse directions.",
+            "startOffset": 75852,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 69932,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The ROM strategy is now applied to compute the dynamic response of the 12 m long finite structure.",
+            "startOffset": 69834,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 67763,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The dispersion curves of propagating waves, computed using reduced and standard WFEM, are shown in Fig. 3 in the frequency range [0\u2013500 Hz], while an hysteretic damping of \u03b7 = 0.001 is introduced in the structure.",
+            "startOffset": 67550,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 47294,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, it is emphasized that only propagating and slightly decaying wave solutions can be derived from the wave expansion strategy mentioned above.",
+            "startOffset": 47145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53516,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "This quadratic eigenvalue problem is equivalent to Eq. (3) if and only if the matrix DRL (or DLR) can be inverted, which is not the case in practice.",
+            "startOffset": 53367,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 78562,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The collection of eigenvectors obtained at k-samples is then processed through a Singular Value Decomposition and truncated to build the reduced wave basis, which can then be used in a direct (frequency-dependent) approach.",
+            "startOffset": 78339,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 75081,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Noteworthy, all dispersion effects such as resonances, cut-on, veering and locking effects produced by backscattering waves are correctly described by the reduced model.",
+            "startOffset": 74912,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 44401,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 44313,
+                    "startOffset": 44312
+                },
+                "bib8": {
+                    "endOffset": 44315,
+                    "startOffset": 44314
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Multi-scale techniques were also developed [7,8] to model heterogeneous or periodic structures using limited macroscopic information.",
+            "startOffset": 44268,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74235,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "In order to allow fast dynamic condensation of the dynamic stiffness matrices, 31 fixed-interface modes are retained (until 10 \u00d7 the maximum frequency) in the CMS, to replace the inner DOF of the periodic unit-cell.",
+            "startOffset": 74020,
+            "title": "Description of the stiffened structure"
+        },
+        {
+            "endOffset": 45624,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 45519,
+                    "startOffset": 45517
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Indeed, computing the broadband dispersion diagram of complex periodic waveguides requires to solve numerous large, often ill-conditioned (see Waki et al. [15]) eigenvalue problems, whose size is related to the FE model used to describe the waveguide's unit-cell.",
+            "startOffset": 45361,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44554,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Recently, the wave finite element method (WFEM) based on Bloch theorem, has been the subject of high interest (see Section 2 for a detailed discussion).",
+            "startOffset": 44402,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71279,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It means that the reduced model remains valid close to the singularity (on force point and boundary condition), and on the far field (second point).",
+            "startOffset": 71131,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 66740,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section an application example is shown to evaluate the performances of the proposed method.",
+            "startOffset": 66640,
+            "title": "Validation 1: application to a hollow beam"
+        },
+        {
+            "endOffset": 49007,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Then, the forced response is computed in the finite structure, to highlight the method's performances in the forced WFEM framework.",
+            "startOffset": 48876,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44932,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 44876,
+                    "startOffset": 44874
+                },
+                "bib11": {
+                    "endOffset": 44900,
+                    "startOffset": 44898
+                },
+                "bib2": {
+                    "endOffset": 44930,
+                    "startOffset": 44929
+                },
+                "bib9": {
+                    "endOffset": 44873,
+                    "startOffset": 44872
+                }
+            },
+            "secId": "sec1",
+            "sentence": "One can cite applications of the WFEM to structures such as sandwich panels involving different core topologies [9,10], poroelastic media [11] or piezoelectric elements [2].",
+            "startOffset": 44759,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45360,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In order to further enable the development of novel acoustic or elastic meta-structures with optimized structural configurations, considerable challenges are still to be faced in terms of numerical methodologies.",
+            "startOffset": 45148,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53628,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "This leads to pairs of 0 and \u221e eigenvalues corresponding to eigenvectors located in the kernels of DRL and DLR.",
+            "startOffset": 53517,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 49137,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 5, the performances of the method are challenged for a full-scaled stiffened plate with an large unit-cell's FE model.",
+            "startOffset": 49008,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79484,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Additionally, since the contributions of the evanescent waves are still present in the reduced model it is possible to describe the displacement field close to singular loads and complex boundary conditions, or to study waves' interactions near a coupling element between two waveguides.",
+            "startOffset": 79197,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 67864,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The damping \u03b7 is defined as the ratio of the imaginary part over the real part of the Young Modulus.",
+            "startOffset": 67764,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 74604,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The dispersion curves were obtained using the standard WFEM formulation (201 frequency samples, 10 h computation) and using the proposed method (5001 frequency samples, 9min total computation).",
+            "startOffset": 74411,
+            "title": "Results and discussion of propagative behaviours in stiffened plates"
+        },
+        {
+            "endOffset": 78877,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 78795,
+                    "startOffset": 78793
+                },
+                "bib19": {
+                    "endOffset": 78798,
+                    "startOffset": 78796
+                }
+            },
+            "secId": "sec6",
+            "sentence": "In comparison, it is emphasized that the other direct Bloch-based reduction techniques available in the literature [18,19] usually provide one order of magnitude reduction of the computational effort.",
+            "startOffset": 78677,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 47849,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This work therefore aims at the development of a reduced formulation of the dispersion problem allowing the computation of both propagating and evanescent waves.",
+            "startOffset": 47688,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67304,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The beam is made of an homogeneous material of Young Modulus E = 200 GPa, Poisson ratio \u03bd = 0.3 and density \u03c1 = 7800 kg m-1.",
+            "startOffset": 67180,
+            "title": "Presentation of the model"
+        },
+        {
+            "endOffset": 48875,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The reduced model is used to compute wave dispersion characteristics and the approximation error.",
+            "startOffset": 48778,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77300,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "However, the 4th-order wave (cut-on at 1800 Hz) as the particularity of exhibiting a transverse wavelength comparable to the stiffeners' transverse spacing.",
+            "startOffset": 77144,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 72064,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In order to describe the dynamic behaviour of this waveguide, a high frequency resolution is required above 100 Hz, that would not be achievable using conventional FE methods nor standard forced WFEM formulation.",
+            "startOffset": 71852,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 49743,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The WFEM framework correspond to the application of Floquet-Bloch conditions on FE models of unit cells to compute the properties of waves in a periodic media.",
+            "startOffset": 49584,
+            "title": "Review of the WFEM framework"
+        },
+        {
+            "endOffset": 73376,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This application example is proposed to highlight the performances of the proposed reduction scheme in a context where Bragg scattering and locally resonant behaviours are encountered within the acoustic range.",
+            "startOffset": 73166,
+            "title": "Validation 2: application to a stiffened plate"
+        },
+        {
+            "endOffset": 55299,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 55165,
+                    "startOffset": 55163
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "For the direct approach, Droz et al. [21] developed a wave-based reduction strategy to compute propagating solutions of waveguides involving complex cross-sectional FE model.",
+            "startOffset": 55125,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 72243,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "A resolution of 20.000 frequency samples was possible using the reduced model (for a total of 19 min), while a similar WFEM computation would have required approximatively 160 h.",
+            "startOffset": 72065,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 50196,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Then, the degrees of freedom of the unit cell are separated in three groups: qL the degrees of freedom of the left interface, qI, the internal degrees of freedom of the unit cell and qR the degrees of freedom of the right interface.",
+            "startOffset": 49964,
+            "title": "Review of the WFEM framework"
+        },
+        {
+            "endOffset": 56312,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Its reduction hence requires an additional truncation criteria which may result in a lack of robustness of the method, especially when a large number of cut-on frequencies are located in the bandwidth of interest.",
+            "startOffset": 56099,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 54056,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 54054,
+                    "startOffset": 54052
+                }
+            },
+            "secId": "sec2.1",
+            "sentence": "A better formulation for the computation of eigenvalues was developed by Zhong et al. [28].",
+            "startOffset": 53965,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 68095,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Nine propagating waves can be observed, which are subjected to various veering and frequency-conversion effects, especially around 100 Hz, where a significant increase of the wavenumbers can be observed for the two flexural modes.",
+            "startOffset": 67865,
+            "title": "Performance of the method for dispersion analysis"
+        },
+        {
+            "endOffset": 46477,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 46370,
+                    "startOffset": 46368
+                },
+                "bib19": {
+                    "endOffset": 46373,
+                    "startOffset": 46371
+                }
+            },
+            "secId": "sec1",
+            "sentence": "A reduction strategy for computing the forced response for 1D waveguides was developed by Mencik [18,19], along with significant improvements on the computational efficiency and conditioning of the matrices.",
+            "startOffset": 46270,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53763,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "These solutions must be filtered out since they have no physical meaning and strongly degrade the condition of the eigenvalue problem.",
+            "startOffset": 53629,
+            "title": "Inverse and direct approach pros and cons"
+        },
+        {
+            "endOffset": 67498,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "A number of 48 elements are used in the Z-direction (height) and 12 are used in the Y-direction (width), for a total of 1440 DOF in the unit-cell.",
+            "startOffset": 67352,
+            "title": "Presentation of the model"
+        },
+        {
+            "endOffset": 48271,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The paper is organized into 6 sections including this introduction.",
+            "startOffset": 48204,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67351,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The periodic unit-cell is described in Fig. 2.",
+            "startOffset": 67305,
+            "title": "Presentation of the model"
+        },
+        {
+            "endOffset": 46972,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 46839,
+                    "startOffset": 46837
+                },
+                "bib22": {
+                    "endOffset": 46842,
+                    "startOffset": 46840
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Finally, Droz et al. [21,22] developed an interface reduction technique to replace also the periodic edge DOF by a reduced number of propagating Bloch waves.",
+            "startOffset": 46815,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78218,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "It is emphasized that an iterative eigenvalue solver should be used to benefit from reduced computational efforts both in the inverse Bloch problems and in the Component Mode Synthesis when periodic structures are considered.",
+            "startOffset": 77993,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 56731,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Finally, the method was created only aiming at predicting propagating dispersion curves.",
+            "startOffset": 56643,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 71851,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "It is worth mentioning that this transition is produced by the cut-on and veering effects observed at the same frequency on the dispersion curves (Fig. 3).",
+            "startOffset": 71696,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 43580,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An extensive research effort has been devoted to understand and analyse wave propagation in periodic structures, meta-materials and a broad range of lightweight structures over the past decade.",
+            "startOffset": 43387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56859,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Review of the WFEM framework"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Since evanescent waves are missing in the reduced model, the use of diffusion or forced computation framework is not available.",
+            "startOffset": 56732,
+            "title": "Modal-based, wave-based and hybrid reduction methods"
+        },
+        {
+            "endOffset": 71130,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Validation 1: application to a hollow beam"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Noteworthy, the reduced model provides highly accurate frequency responses in both cases, as no error can be observed and convergence is already obtained for nf = 1.",
+            "startOffset": 70965,
+            "title": "Performance of the method on a forced response framework"
+        },
+        {
+            "endOffset": 77143,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Validation 2: application to a stiffened plate"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Therefore, any modification of the boundary conditions would result in different dispersion properties, while a local excitation (as used in 4) is expected to generate multiple guided resonances.",
+            "startOffset": 76948,
+            "title": "Waveguiding along stiffeners"
+        },
+        {
+            "endOffset": 78338,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Since these eigenvalue problems are well-conditioned, the creation of a reduced model can be performed on large models.",
+            "startOffset": 78219,
+            "title": "Conclusion"
+        }
+    ],
+    "docId": "S0168874X18300258",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": null,
+                "first": "R\u00e9gis F.",
+                "initial": "R.F.",
+                "last": "Boukadia"
+            },
+            {
+                "email": "christophe.droz@gmail.com",
+                "first": "Christophe",
+                "initial": "C.",
+                "last": "Droz"
+            },
+            {
+                "email": null,
+                "first": "Mohamed N.",
+                "initial": "M.N.",
+                "last": "Ichchou"
+            },
+            {
+                "email": null,
+                "first": "Wim",
+                "initial": "W.",
+                "last": "Desmet"
+            }
+        ],
+        "doi": "10.1016/j.finel.2018.05.007",
+        "firstpage": "1",
+        "issn": "0168874X",
+        "keywords": [
+            "Bloch theorem",
+            "Evanescent waves",
+            "Forced response",
+            "Model reduction",
+            "Periodic structures",
+            "Wave finite element"
+        ],
+        "lastpage": "12",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "A Bloch wave reduction scheme for ultrafast band diagram and dynamic response computation in periodic structures"
+    }
+}

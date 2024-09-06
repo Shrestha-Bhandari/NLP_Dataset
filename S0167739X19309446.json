@@ -1,0 +1,3271 @@
+{
+    "abstract": "By effectively virtualizing operating systems and encapsulating necessary runtime contexts of software components and services, container technologies can significantly improve portability and efficiency for distributed application deployment. It flexibly extends virtual machine based cloud (Infrastructure-as-a-Service) as a much lighter virtual environment (container cluster) for agile application management. However, existing container management systems are not capable of handling concurrent requests efficiently, particularly for the underlying clusters with heterogeneous machines and the requested containers with multi-resource demands. In this paper, we propose an Enhanced Container Scheduler (ECSched) for efficiently scheduling concurrent container requests on heterogeneous clusters with multi-resource constraints. We formulate the container scheduling problem as a minimum cost flow problem (MCFP), and represent the container requirements using a specific graph data structure (flow network). ECSched affords flexibility in constructing the flow network based on a batch of concurrent requests, and performs the MCFP algorithm to schedule the concurrent requests in an online manner. We evaluate ECSched in different testbed clusters, and measure the scheduling overhead with large-scale simulations. The experimental results show that ECSched outperforms state-of-the-art container schedulers in container performance and resource efficiency, and only introduces a small and acceptable scheduling overhead in large-scale clusters.",
+    "author_highlights": [
+        {
+            "endOffset": 51615,
+            "sentence": "Container technologies can significantly improve portability and efficiency for distributed application deployment.",
+            "startOffset": 51500
+        },
+        {
+            "endOffset": 51714,
+            "sentence": "Existing container management systems are not capable of handling concurrent requests efficiently.",
+            "startOffset": 51616
+        },
+        {
+            "endOffset": 51831,
+            "sentence": "We identify the specific challenges in effectively handling concurrent container requests on heterogeneous clusters.",
+            "startOffset": 51715
+        },
+        {
+            "endOffset": 51959,
+            "sentence": "We propose a novel approach to address concurrent multi-resource container scheduling problem by using minimum-cost flow model.",
+            "startOffset": 51832
+        },
+        {
+            "endOffset": 52080,
+            "sentence": "We show that ECSched outperforms state-of-the-art container schedulers in container performance and resource efficiency.",
+            "startOffset": 51960
+        }
+    ],
+    "bib_entries": {
+        "b1": null,
+        "b10": {
+            "authors": [
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                },
+                {
+                    "first": "Arie",
+                    "initial": "A.",
+                    "last": "Taal"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Vlado",
+                    "initial": "V.",
+                    "last": "Stankovski"
+                },
+                {
+                    "first": "Ignacio Garcia",
+                    "initial": "I.G.",
+                    "last": "Vega"
+                },
+                {
+                    "first": "Francisco Jesus",
+                    "initial": "F.J.",
+                    "last": "Hidalgo"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Suciu"
+                },
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Ulisses"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Ferreira"
+                },
+                {
+                    "first": "Cees De",
+                    "initial": "C.D.",
+                    "last": "Laat"
+                }
+            ],
+            "doi": "10.1109/CCGrid.2015.73",
+            "firstpage": "1181",
+            "lastpage": "1184",
+            "pub_year": 2015,
+            "title": "A software workbench for interactive, time critical and highly self-adaptive cloud applications (SWITCH)"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Junchao",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "De Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1109/ISORC.2016.22",
+            "firstpage": "92",
+            "lastpage": "99",
+            "pub_year": 2016,
+            "title": "Fast and dynamic resource provisioning for quality critical cloud applications"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Kay",
+                    "initial": "K.",
+                    "last": "Ousterhout"
+                },
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Wendell"
+                },
+                {
+                    "first": "Matei",
+                    "initial": "M.",
+                    "last": "Zaharia"
+                },
+                {
+                    "first": "Ion",
+                    "initial": "I.",
+                    "last": "Stoica"
+                }
+            ],
+            "doi": "10.1145/2517349.2522716",
+            "firstpage": "69",
+            "lastpage": "84",
+            "pub_year": 2013,
+            "title": "Sparrow: Distributed, low latency scheduling"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Salman",
+                    "initial": "S.",
+                    "last": "Taherizadeh"
+                },
+                {
+                    "first": "Andrew C.",
+                    "initial": "A.C.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                },
+                {
+                    "first": "Vlado",
+                    "initial": "V.",
+                    "last": "Stankovski"
+                }
+            ],
+            "doi": "10.1016/j.jss.2017.10.033",
+            "firstpage": "19",
+            "issn": "01641212",
+            "lastpage": "38",
+            "pub_year": 2018,
+            "title": "Monitoring self-adaptive applications within edge computing frameworks: A state-of-the-art review",
+            "volume": "136"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Reiss"
+                },
+                {
+                    "first": "Alexey",
+                    "initial": "A.",
+                    "last": "Tumanov"
+                },
+                {
+                    "first": "Gregory R.",
+                    "initial": "G.R.",
+                    "last": "Ganger"
+                },
+                {
+                    "first": "Randy H.",
+                    "initial": "R.H.",
+                    "last": "Katz"
+                },
+                {
+                    "first": "Michael A.",
+                    "initial": "M.A.",
+                    "last": "Kozuch"
+                }
+            ],
+            "doi": "10.1145/2391229.2391236",
+            "pub_year": 2012,
+            "title": "Heterogeneity and dynamicity of clouds at scale: Google trace analysis"
+        },
+        "b15": null,
+        "b16": null,
+        "b17": {
+            "authors": [
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Lodi"
+                },
+                {
+                    "first": "Silvano",
+                    "initial": "S.",
+                    "last": "Martello"
+                },
+                {
+                    "first": "Daniele",
+                    "initial": "D.",
+                    "last": "Vigo"
+                }
+            ],
+            "doi": "10.1016/S0166-218X(01)00347-X",
+            "firstpage": "379",
+            "issn": "0166218X",
+            "lastpage": "396",
+            "pub_year": 2002,
+            "title": "Recent advances on two-dimensional bin packing problems",
+            "volume": "123"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Yasuhiro",
+                    "initial": "Y.",
+                    "last": "Ajiro"
+                },
+                {
+                    "first": "Atsuhiro",
+                    "initial": "A.",
+                    "last": "Tanaka"
+                }
+            ],
+            "pub_year": 2007,
+            "title": "Improving packing algorithms for server consolidation"
+        },
+        "b19": {
+            "authors": [
+                {
+                    "first": "Christina",
+                    "initial": "C.",
+                    "last": "Delimitrou"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Sanchez"
+                },
+                {
+                    "first": "Christos",
+                    "initial": "C.",
+                    "last": "Kozyrakis"
+                }
+            ],
+            "doi": "10.1145/2806777.2806779",
+            "firstpage": "97",
+            "lastpage": "110",
+            "pub_year": 2015,
+            "title": "Tarcil: Reconciling scheduling speed and quality in large shared clusters"
+        },
+        "b2": null,
+        "b20": null,
+        "b21": {
+            "authors": [
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Tordsson"
+                },
+                {
+                    "first": "Rub\u00e9n S.",
+                    "initial": "R.S.",
+                    "last": "Montero"
+                },
+                {
+                    "first": "Rafael",
+                    "initial": "R.",
+                    "last": "Moreno-Vozmediano"
+                },
+                {
+                    "first": "Ignacio M.",
+                    "initial": "I.M.",
+                    "last": "Llorente"
+                }
+            ],
+            "doi": "10.1016/j.future.2011.07.003",
+            "firstpage": "358",
+            "issn": "0167739X",
+            "lastpage": "367",
+            "pub_year": 2012,
+            "title": "Cloud brokering mechanisms for optimized placement of virtual machines across multiple providers",
+            "volume": "28"
+        },
+        "b22": {
+            "authors": [
+                {
+                    "first": "Weiming",
+                    "initial": "W.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Bo",
+                    "initial": "B.",
+                    "last": "Hong"
+                }
+            ],
+            "doi": "10.1109/UCC.2011.28",
+            "firstpage": "138",
+            "lastpage": "145",
+            "pub_year": 2011,
+            "title": "Towards profitable virtual machine placement in the data center"
+        },
+        "b23": null,
+        "b24": null,
+        "b25": null,
+        "b26": null,
+        "b27": {
+            "authors": [
+                {
+                    "first": "Ionel",
+                    "initial": "I.",
+                    "last": "Gog"
+                },
+                {
+                    "first": "Malte",
+                    "initial": "M.",
+                    "last": "Schwarzkop"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Gleave"
+                },
+                {
+                    "first": "Robert N.M.",
+                    "initial": "R.N.M.",
+                    "last": "Watson"
+                },
+                {
+                    "first": "Steven",
+                    "initial": "S.",
+                    "last": "Hand"
+                }
+            ],
+            "firstpage": "99",
+            "lastpage": "115",
+            "pub_year": 2016,
+            "title": "Firmament: Fast, centralized cluster scheduling at scale"
+        },
+        "b28": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Isard"
+                },
+                {
+                    "first": "Vijayan",
+                    "initial": "V.",
+                    "last": "Prabhakaran"
+                },
+                {
+                    "first": "Jon",
+                    "initial": "J.",
+                    "last": "Currey"
+                },
+                {
+                    "first": "Udi",
+                    "initial": "U.",
+                    "last": "Wieder"
+                },
+                {
+                    "first": "Kunal",
+                    "initial": "K.",
+                    "last": "Talwar"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Goldberg"
+                }
+            ],
+            "doi": "10.1145/1629575.1629601",
+            "firstpage": "261",
+            "lastpage": "276",
+            "pub_year": 2009,
+            "title": "Quincy: Fair scheduling for distributed computing clusters"
+        },
+        "b29": null,
+        "b3": null,
+        "b30": null,
+        "b31": {
+            "authors": [
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Edmonds"
+                },
+                {
+                    "first": "Richard M.",
+                    "initial": "R.M.",
+                    "last": "Karp"
+                }
+            ],
+            "doi": "10.1145/321694.321699",
+            "firstpage": "248",
+            "issn": "00045411",
+            "lastpage": "264",
+            "pub_year": 1972,
+            "title": "Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems",
+            "volume": "19"
+        },
+        "b32": {
+            "authors": [
+                {
+                    "first": "Andrew V.",
+                    "initial": "A.V.",
+                    "last": "Goldberg"
+                }
+            ],
+            "doi": "10.1006/jagm.1995.0805",
+            "firstpage": "1",
+            "issn": "01966774",
+            "lastpage": "29",
+            "pub_year": 1997,
+            "title": "An Efficient Implementation of a Scaling Minimum-Cost Flow Algorithm",
+            "volume": "22"
+        },
+        "b33": null,
+        "b34": {
+            "authors": [
+                {
+                    "first": "James B.",
+                    "initial": "J.B.",
+                    "last": "Orlin"
+                }
+            ],
+            "doi": "10.1287/opre.41.2.338",
+            "firstpage": "338",
+            "issn": "0030364X",
+            "lastpage": "350",
+            "pub_year": 1993,
+            "title": "Faster strongly polynomial minimum cost flow algorithm",
+            "volume": "41"
+        },
+        "b35": {
+            "authors": [
+                {
+                    "first": "Ilya",
+                    "initial": "I.",
+                    "last": "Baldin"
+                },
+                {
+                    "first": "Jeff",
+                    "initial": "J.",
+                    "last": "Chase"
+                },
+                {
+                    "first": "Yufeng",
+                    "initial": "Y.",
+                    "last": "Xin"
+                },
+                {
+                    "first": "Anirban",
+                    "initial": "A.",
+                    "last": "Mandal"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Ruth"
+                },
+                {
+                    "first": "Claris",
+                    "initial": "C.",
+                    "last": "Castillo"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Orlikowski"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Heermann"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Mills"
+                }
+            ],
+            "doi": "10.1007/978-3-319-33769-2_13",
+            "firstpage": "279",
+            "lastpage": "315",
+            "pub_year": 2016,
+            "title": "ExoGENI: A multi-domain infrastructure-as-a-service testbed"
+        },
+        "b36": null,
+        "b37": {
+            "authors": [
+                {
+                    "first": "Safraz",
+                    "initial": "S.",
+                    "last": "Rampersaud"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Grosu"
+                }
+            ],
+            "doi": "10.1109/TPDS.2016.2641937",
+            "firstpage": "2046",
+            "issn": "10459219",
+            "lastpage": "2059",
+            "pub_year": 2017,
+            "title": "Sharing-aware online virtual machine packing in heterogeneous resource clouds",
+            "volume": "28"
+        },
+        "b38": {
+            "authors": [
+                {
+                    "first": "Micha\u00ebl",
+                    "initial": "M.",
+                    "last": "Gabay"
+                },
+                {
+                    "first": "Sofia",
+                    "initial": "S.",
+                    "last": "Zaourar"
+                }
+            ],
+            "doi": "10.1007/s10479-015-1973-7",
+            "firstpage": "161",
+            "issn": "02545330",
+            "lastpage": "194",
+            "pub_year": 2016,
+            "title": "Vector bin packing with heterogeneous bins: application to the machine reassignment problem",
+            "volume": "242"
+        },
+        "b39": null,
+        "b4": null,
+        "b40": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Stillwell"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Schanzenbach"
+                },
+                {
+                    "first": "Frdric",
+                    "initial": "F.",
+                    "last": "Vivien"
+                },
+                {
+                    "first": "Henri",
+                    "initial": "H.",
+                    "last": "Casanova"
+                }
+            ],
+            "doi": "10.1016/j.jpdc.2010.05.006",
+            "firstpage": "962",
+            "issn": "07437315",
+            "lastpage": "974",
+            "pub_year": 2010,
+            "title": "Resource allocation algorithms for virtualized service hosting platforms",
+            "volume": "70"
+        },
+        "b41": {
+            "authors": [
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Jos\u00e9 A.B.",
+                    "initial": "J.A.B.",
+                    "last": "Fortes"
+                }
+            ],
+            "doi": "10.1109/GreenCom-CPSCom.2010.137",
+            "firstpage": "179",
+            "lastpage": "188",
+            "pub_year": 2010,
+            "title": "Multi-objective virtual machine placement in virtualized data center environments"
+        },
+        "b42": {
+            "authors": [
+                {
+                    "first": "Yongqiang",
+                    "initial": "Y.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "Haibing",
+                    "initial": "H.",
+                    "last": "Guan"
+                },
+                {
+                    "first": "Zhengwei",
+                    "initial": "Z.",
+                    "last": "Qi"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hou"
+                },
+                {
+                    "first": "Liang",
+                    "initial": "L.",
+                    "last": "Liu"
+                }
+            ],
+            "doi": "10.1016/j.jcss.2013.02.004",
+            "firstpage": "1230",
+            "issn": "00220000",
+            "lastpage": "1242",
+            "pub_year": 2013,
+            "title": "A multi-objective ant colony system algorithm for virtual machine placement in cloud computing",
+            "volume": "79"
+        },
+        "b43": {
+            "authors": [
+                {
+                    "first": "Md Hasanul",
+                    "initial": "M.H.",
+                    "last": "Ferdaus"
+                },
+                {
+                    "first": "Manzur",
+                    "initial": "M.",
+                    "last": "Murshed"
+                },
+                {
+                    "first": "Rodrigo N.",
+                    "initial": "R.N.",
+                    "last": "Calheiros"
+                },
+                {
+                    "first": "Rajkumar",
+                    "initial": "R.",
+                    "last": "Buyya"
+                }
+            ],
+            "doi": "10.1007/978-3-319-09873-9_26",
+            "firstpage": "306",
+            "issn": "03029743",
+            "lastpage": "317",
+            "pub_year": 2014,
+            "title": "Virtual machine consolidation in cloud data centers using ACO metaheuristic",
+            "volume": "8632"
+        },
+        "b44": {
+            "authors": [
+                {
+                    "first": "Zolt\u00e1n \u00c1d\u00e1m",
+                    "initial": "Z.\u00c1.",
+                    "last": "Mann"
+                }
+            ],
+            "doi": "10.1145/2797211",
+            "issn": "03600300",
+            "pub_year": 2015,
+            "title": "Allocation of virtual machines in cloud data centers-a survey of problem models and optimization algorithms",
+            "volume": "48"
+        },
+        "b45": {
+            "authors": [
+                {
+                    "first": "Haibo",
+                    "initial": "H.",
+                    "last": "Mi"
+                },
+                {
+                    "first": "Huaimin",
+                    "initial": "H.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Gang",
+                    "initial": "G.",
+                    "last": "Yin"
+                },
+                {
+                    "first": "Yangfan",
+                    "initial": "Y.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Dianxi",
+                    "initial": "D.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Yuan"
+                }
+            ],
+            "doi": "10.1109/SCC.2010.69",
+            "firstpage": "514",
+            "lastpage": "521",
+            "pub_year": 2010,
+            "title": "Online self-reconfiguration with performance guarantee for energy-efficient large-scale cloud computing data centers"
+        },
+        "b46": {
+            "authors": [
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "de Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1007/978-3-319-96983-1_26",
+            "firstpage": "365",
+            "issn": "03029743",
+            "lastpage": "377",
+            "pub_year": 2018,
+            "title": "ECSched: Efficient Container Scheduling on Heterogeneous Clusters",
+            "volume": "11014"
+        },
+        "b47": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Grandl"
+                },
+                {
+                    "first": "Srikanth",
+                    "initial": "S.",
+                    "last": "Kandula"
+                },
+                {
+                    "first": "Sriram",
+                    "initial": "S.",
+                    "last": "Rao"
+                },
+                {
+                    "first": "Aditya",
+                    "initial": "A.",
+                    "last": "Akella"
+                },
+                {
+                    "first": "Janardhan",
+                    "initial": "J.",
+                    "last": "Kulkarni"
+                }
+            ],
+            "firstpage": "81",
+            "lastpage": "97",
+            "pub_year": 2016,
+            "title": "GRAPHENE: Packing and dependency-aware scheduling for data-parallel clusters"
+        },
+        "b48": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Grandi"
+                },
+                {
+                    "first": "Mosharaf",
+                    "initial": "M.",
+                    "last": "Chowdhury"
+                },
+                {
+                    "first": "Aditya",
+                    "initial": "A.",
+                    "last": "Akella"
+                },
+                {
+                    "first": "Ganesh",
+                    "initial": "G.",
+                    "last": "Ananthanarayanan"
+                }
+            ],
+            "firstpage": "65",
+            "lastpage": "80",
+            "pub_year": 2016,
+            "title": "Altruistic scheduling in multi-resource clusters"
+        },
+        "b49": {
+            "authors": [
+                {
+                    "first": "Sangeetha Abdu",
+                    "initial": "S.A.",
+                    "last": "Jyothi"
+                },
+                {
+                    "first": "Carlo",
+                    "initial": "C.",
+                    "last": "Curino"
+                },
+                {
+                    "first": "Ishai",
+                    "initial": "I.",
+                    "last": "Menache"
+                },
+                {
+                    "first": "Shravan Matthur",
+                    "initial": "S.M.",
+                    "last": "Narayanamurthy"
+                },
+                {
+                    "first": "Alexey",
+                    "initial": "A.",
+                    "last": "Tumanov"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Yaniv"
+                },
+                {
+                    "first": "Ruslan",
+                    "initial": "R.",
+                    "last": "Mavlyutov"
+                },
+                {
+                    "first": "\u00cd\u00f1igo",
+                    "initial": "\u00cd.",
+                    "last": "Goiri"
+                },
+                {
+                    "first": "Subru",
+                    "initial": "S.",
+                    "last": "Krishnan"
+                },
+                {
+                    "first": "Janardhan",
+                    "initial": "J.",
+                    "last": "Kulkarni"
+                },
+                {
+                    "first": "Sriram",
+                    "initial": "S.",
+                    "last": "Rao"
+                }
+            ],
+            "firstpage": "117",
+            "lastpage": "134",
+            "pub_year": 2016,
+            "title": "Morpheus: Towards automated SLOs for enterprise clusters"
+        },
+        "b5": {
+            "authors": [
+                {
+                    "first": "Brendan",
+                    "initial": "B.",
+                    "last": "Burns"
+                },
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Grant"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Oppenheimer"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Brewer"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Wilkes"
+                }
+            ],
+            "doi": "10.1145/2890784",
+            "firstpage": "50",
+            "issn": "00010782",
+            "lastpage": "57",
+            "pub_year": 2016,
+            "title": "Borg, omega, and kubernetes",
+            "volume": "59"
+        },
+        "b50": {
+            "authors": [
+                {
+                    "first": "Xin",
+                    "initial": "X.",
+                    "last": "Xiao"
+                },
+                {
+                    "first": "Yuanchun",
+                    "initial": "Y.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Yuan",
+                    "initial": "Y.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "Qian",
+                    "initial": "Q.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1109/INFCOM.2009.5061967",
+            "firstpage": "603",
+            "issn": "0743166X",
+            "lastpage": "611",
+            "pub_year": 2009,
+            "title": "LayerP2P: A new data scheduling approach for layered streaming in heterogeneous networks"
+        },
+        "b51": null,
+        "b6": null,
+        "b7": null,
+        "b8": {
+            "authors": [
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Junchao",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Arie",
+                    "initial": "A.",
+                    "last": "Taal"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "de Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1007/978-3-319-64203-1_25",
+            "firstpage": "345",
+            "issn": "03029743",
+            "lastpage": "357",
+            "pub_year": 2017,
+            "title": "Deadline-aware deployment for time critical applications in clouds",
+            "volume": "10417"
+        },
+        "b9": {
+            "authors": [
+                {
+                    "first": "Junchao",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Arie",
+                    "initial": "A.",
+                    "last": "Taal"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Jianmin",
+                    "initial": "J.",
+                    "last": "Pang"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "de Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1016/j.future.2017.02.001",
+            "firstpage": "365",
+            "issn": "0167739X",
+            "lastpage": "375",
+            "pub_year": 2017,
+            "title": "Planning virtual infrastructures for time critical applications with multiple deadline constraints",
+            "volume": "75"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 87679,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In order to understand how much influence does it have on the container completion time, we compare the configuration with the number of 10, 50, 100 to the configuration with the number of 1 in this experiment.",
+            "startOffset": 87469,
+            "title": "Impact of concurrent scheduling"
+        },
+        {
+            "endOffset": 79718,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In order to understand the scheduling overhead of ECSched, we measure the algorithm runtime by performing large-scale simulations.",
+            "startOffset": 79588,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 59341,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The rest of the paper is organized as follows.",
+            "startOffset": 59295,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90882,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Overall, we believe that ECSched is effective and usable in practice.",
+            "startOffset": 90813,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 66836,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Fig. 3 shows a case flow network of tackling the container scheduling problem, but we only annotate the capacity on the edges in the figure.",
+            "startOffset": 66696,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 70660,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "If a machine is eligible for a container, it adds an edge from the container node to the machine node with a capacity of 1 unit.",
+            "startOffset": 70532,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 55211,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Meanwhile, with the adoption of cloud services and the scale of applications increase, modern cloud platforms have to deal with a large number of concurrent requests at the same time.",
+            "startOffset": 55028,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57723,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We formulate the container scheduling problem as aminimum-cost flow problem (MCFP) and represent the container requirements using a specific graph data structure (flow network).",
+            "startOffset": 57546,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56072,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 56021,
+                    "startOffset": 56014
+                },
+                "b18": {
+                    "endOffset": 56021,
+                    "startOffset": 56014
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Regarding the scheduling algorithms to the queue-based schedulers, variants of heuristic packing algorithms, such as Best-Fit Decreasing (BFD) and First-Fit Decreasing (FFD) [17,18], are often adopted to achieve practical solutions.",
+            "startOffset": 55840,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60028,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Then, we analyze different deployment requirements of container requests.",
+            "startOffset": 59955,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 70970,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 70943,
+                    "startOffset": 70939
+                }
+            },
+            "secId": "sec4.2.1",
+            "sentence": "In this work, we introduce two strategies which are inspired by vector bin packing algorithms: dot-product heuristic [29] and most-loaded heuristic.",
+            "startOffset": 70822,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 66176,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "By setting the corresponding capacity and transportation cost on the edges in the flow network, MCFP algorithms can find the optimal placement solution (mapping) that maximizes the total values for a batch of concurrent container requests.",
+            "startOffset": 65937,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 81647,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "ECSched-dp is based on dot-product heuristic; ECSched-ml is based on most-loaded heuristic.",
+            "startOffset": 81556,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 69240,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As the goal of the MCFP problem is to minimize the total cost of the flow over all edges, flexible assignment of the costs on the edges can make the MCFP algorithms return a placement solution which we desire for container scheduling.",
+            "startOffset": 69006,
+            "title": "Encoding deployment requirements"
+        },
+        {
+            "endOffset": 79123,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Implemention"
+                }
+            ],
+            "secId": "sec4.4.2",
+            "sentence": "Then, ECSched extract the container placements out of the optimal flow solution.",
+            "startOffset": 79043,
+            "title": "Placing requested containers"
+        },
+        {
+            "endOffset": 90381,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "When processing 300 containers concurrently, the ECSched responds in about 1.8 s for 1000-machine cluster and about 3.4 s for 5000-machine cluster.",
+            "startOffset": 90234,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 77540,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The Implemention of ECSched is based on a heartbeat mechanism.",
+            "startOffset": 77478,
+            "title": "Implemention"
+        },
+        {
+            "endOffset": 92832,
+            "parents": [],
+            "refoffsets": {
+                "b41": {
+                    "endOffset": 92722,
+                    "startOffset": 92718
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Xu et al. [41] presented a modified genetic algorithm to find global optimal solutions of virtual machine placement problem.",
+            "startOffset": 92708,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 92036,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In their empirical evaluations, it showed that the Dot-Product heuristic often outperforms FFD-based heuristics.",
+            "startOffset": 91924,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93950,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "And then, they used a standard solver to compute the optimal solution based on a cost model.",
+            "startOffset": 93858,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68866,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The solution corresponds to a placement solution: Container0 is not scheduled at this moment; Container1 is assigned to Machine0; Container2 is assigned to Machine1.",
+            "startOffset": 68701,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 55456,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "When considering the above requirements, it inevitably introduces new challenges to the container schedulers.",
+            "startOffset": 55347,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55560,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In recent years, container management and scheduling have attracted quite a lot of research attentions.",
+            "startOffset": 55457,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59467,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 2, we formulate the container scheduling problem, and analyze the deployment requirements of requested containers.",
+            "startOffset": 59342,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90044,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Compared to Swarm, the algorithm of Kubernetes is a bit complex, which has multiple predicated policies and priorities policies to filter and score machines.",
+            "startOffset": 89887,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 82046,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 82024,
+                    "startOffset": 82020
+                },
+                "b3": {
+                    "endOffset": 82045,
+                    "startOffset": 82042
+                }
+            },
+            "secId": "sec5.1",
+            "sentence": "We compare ECSched to the state-of-the-artscheduling algorithms implemented in two container orchestration systems: Google Kubernetes [16] and Docker Swarm [3].",
+            "startOffset": 81886,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 77707,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "On a heartbeat, ECSched first fetches a set of container requests to construct a flow network, and then performs the MCFP algorithm to place the requested containers.",
+            "startOffset": 77541,
+            "title": "Implemention"
+        },
+        {
+            "endOffset": 81875,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Unless otherwise specified, the maximum number of container requests that ECSched can fetch from the queue system on a heartbeat is 100.",
+            "startOffset": 81739,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 65493,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The objective of our work is thus to find a placement solution (mapping between the concurrent requests and the machines) that maximizes the total values at each moment.",
+            "startOffset": 65324,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 60083,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The notation used in the work is presented in Table 1.",
+            "startOffset": 60029,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 70308,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "After normalization, the vector of container resource demands becomes (CPU: 0.25, MEM: 0.5) and (CPU: 0.5, MEM: 0.25); the vector of machine resource capacities becomes (CPU: 1.0, MEM: 0.5) and (CPU: 0.5, MEM: 1.0), since the maximum number of CPU cores is 4 and the maximum capacity of memory is 4 GB in the cluster.",
+            "startOffset": 69991,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 63492,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "As existing queue-based schedulers process one container at a time, the other waiting requests cannot be considered in the decision-making phase.",
+            "startOffset": 63347,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 57329,
+            "parents": [],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 57284,
+                    "startOffset": 57277
+                },
+                "b21": {
+                    "endOffset": 57284,
+                    "startOffset": 57277
+                },
+                "b22": {
+                    "endOffset": 57328,
+                    "startOffset": 57324
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In the optimization of service placement or VM placement, the problem of scheduling a batch of concurrent requests can be usually formulated as an integer programming problem [20,21] or a mixed integer programming problem [22].",
+            "startOffset": 57102,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57545,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this paper, we propose an Enhanced Container Scheduler (ECSched) for efficiently scheduling concurrent container requests with multi-resource constraints on heterogeneous clusters.",
+            "startOffset": 57362,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75125,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "We then explain the MCFP algorithm that we implemented in ECSched.",
+            "startOffset": 75059,
+            "title": "MCFP algorithms"
+        },
+        {
+            "endOffset": 58611,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "we summarize our contributions as follows:",
+            "startOffset": 58569,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82994,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Finally, to evaluate scheduling overhead, we compute Algorithm Runtime of schedulers in different scenarios.",
+            "startOffset": 82886,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 68489,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Thus, if a path goes through a machine node, it corresponds to an assignment for the container.",
+            "startOffset": 68394,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 89778,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "We observe that the algorithm runtime of ECSched is highest while Swarm is lowest.",
+            "startOffset": 89696,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 79308,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Implemention"
+                }
+            ],
+            "secId": "sec4.4.2",
+            "sentence": "According to the placements, ECSched places the scheduled containers on the corresponding machines and puts the unscheduled containers back to the queue system for the next scheduling.",
+            "startOffset": 79124,
+            "title": "Placing requested containers"
+        },
+        {
+            "endOffset": 93470,
+            "parents": [],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 93469,
+                    "startOffset": 93462
+                },
+                "b47": {
+                    "endOffset": 93469,
+                    "startOffset": 93462
+                },
+                "b48": {
+                    "endOffset": 93469,
+                    "startOffset": 93462
+                },
+                "b49": {
+                    "endOffset": 93469,
+                    "startOffset": 93462
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Schedulers Many cluster schedulers have been proposed for different purposes [46\u201349].",
+            "startOffset": 93385,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 77745,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The details are explained as follows.",
+            "startOffset": 77708,
+            "title": "Implemention"
+        },
+        {
+            "endOffset": 65673,
+            "parents": [],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 65550,
+                    "startOffset": 65546
+                },
+                "b25": {
+                    "endOffset": 65609,
+                    "startOffset": 65602
+                },
+                "b26": {
+                    "endOffset": 65609,
+                    "startOffset": 65602
+                }
+            },
+            "secId": "sec3",
+            "sentence": "As MCFP is a well-studied problem in the past years [24], there are many effective and efficient algorithms [25,26] that have been proposed to solve the MCFP in a polynomial time.",
+            "startOffset": 65494,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 86701,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "These improvements are because ECSched leverages the MCFP algorithm to find a better placement solution for the concurrent container requests, which can lead to less resource fragmentation of machines.",
+            "startOffset": 86500,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 59783,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 6, we discuss the related work.",
+            "startOffset": 59741,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73384,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In the flow network, it is flexible to handle container affinity (co-located on the same machine) and machine affinity (located on a specific machine) by dynamically adjusting the edges in the flow network.",
+            "startOffset": 73178,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 53079,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 53008,
+                    "startOffset": 53005
+                },
+                "b7": {
+                    "endOffset": 53029,
+                    "startOffset": 53026
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Typically, Infrastructure as a Service (IaaS) offered by the cloud providers (e.g., Amazon EC2 [6], Microsoft Azure [7]) relies on the underlying Virtual Machines (VMs).",
+            "startOffset": 52910,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52910,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 52713,
+                    "startOffset": 52710
+                },
+                "b4": {
+                    "endOffset": 52738,
+                    "startOffset": 52735
+                },
+                "b5": {
+                    "endOffset": 52765,
+                    "startOffset": 52762
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Meanwhile, container orchestration platforms, such as Docker Swarm [3], Mesosphere Marathon [4], and Google Kubernetes [5], are emerging to provide container-based infrastructure for automating deployment, scaling, and management of containers on underlying clusters.",
+            "startOffset": 52643,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88682,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "To estimate the scheduling overhead, we perform large-scale simulations to measure the algorithm runtime of different schedulers.",
+            "startOffset": 88553,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 89600,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "We conduct this experiment on a dedicated server with Intel Xeon E5-2630 2.4 GHz CPU and 64 GB memory.",
+            "startOffset": 89498,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 68233,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "MCFP algorithms would optimally route the flow from the source to the sink without exceeding the capacity constraints on any edge.",
+            "startOffset": 68103,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 86396,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The CPU resources are highly competitive, and the utilization of CPU remains high during the experiments.",
+            "startOffset": 86291,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 79042,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Implemention"
+                }
+            ],
+            "secId": "sec4.4.2",
+            "sentence": "Next, ECSched would perform the MCFP algorithm (a variant of successive shortest path algorithm) to find an optimal flow solution over the flow network.",
+            "startOffset": 78890,
+            "title": "Placing requested containers"
+        },
+        {
+            "endOffset": 90233,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Nevertheless, ECSched can respond in sub-second time when the number of concurrent requests is less than 100.",
+            "startOffset": 90124,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 92707,
+            "parents": [],
+            "refoffsets": {
+                "b45": {
+                    "endOffset": 92528,
+                    "startOffset": 92524
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Mi et al. [45] proposed a genetic algorithm based approach, namely GABA, to adaptively self-reconfigure the virtual machines on large-scale clusters which is composed of heterogeneous machines.",
+            "startOffset": 92514,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57860,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the flow network, we propose a novel approach to encode the multi-resource demands and affinity requirements of requested containers.",
+            "startOffset": 57724,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63624,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Consequently, it is hard for a scheduler to achieve high-quality placements, since it makes a separate decision for each container.",
+            "startOffset": 63493,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 93597,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 93483,
+                    "startOffset": 93479
+                },
+                "b19": {
+                    "endOffset": 93499,
+                    "startOffset": 93495
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Sparrow [12] and Tarcil [19] are distributed schedulers developed for clusters that achieve a high throughput for short tasks.",
+            "startOffset": 93471,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 80305,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The cluster is composed of 10 VMs of \u201cXOMedium\u201d type (1-core CPU, 3 GB of memory), 10 VMs of \u201cXOLarge\u201d type (2-core CPU, 6 GB of memory) and 10 VMs of \u201cXOXLarge\u201d type (4-core CPU, 12 GB of memory).",
+            "startOffset": 80108,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 89024,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "In order to make the simulated cluster more heterogeneous, the configuration of each machine is chosen uniformly at random from 4 types of VM instances of ExoGENI experimental environment.",
+            "startOffset": 88836,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 69383,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Considering two deployment requirements as described in the previous section, we propose following methods to encode them in the flow network.",
+            "startOffset": 69241,
+            "title": "Encoding deployment requirements"
+        },
+        {
+            "endOffset": 68971,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Accordingly, the scheduler can successively perform MCFP algorithms to continuously schedule containers.",
+            "startOffset": 68867,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 92513,
+            "parents": [],
+            "refoffsets": {
+                "b41": {
+                    "endOffset": 92512,
+                    "startOffset": 92505
+                },
+                "b42": {
+                    "endOffset": 92512,
+                    "startOffset": 92505
+                },
+                "b43": {
+                    "endOffset": 92512,
+                    "startOffset": 92505
+                },
+                "b44": {
+                    "endOffset": 92512,
+                    "startOffset": 92505
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Metaheuristics In recent years, many metaheuristic techniques have become prevalent for the approximate solution of multi-objective optimization problems [41\u201344].",
+            "startOffset": 92351,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 89497,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "In order to fairly compare the algorithm runtime, we also implement the scheduling algorithm of Kubernetes and Swarm in Python, which is the same with ECSched.",
+            "startOffset": 89338,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 94515,
+            "parents": [],
+            "refoffsets": {
+                "b50": {
+                    "endOffset": 94413,
+                    "startOffset": 94409
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Xiao et al. [50] employed a minimum cost flow network model on the layered video streaming to achieve high throughput.",
+            "startOffset": 94397,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 88552,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "It would cause the overhead of ECSched to be higher than the others.",
+            "startOffset": 88484,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 90540,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 90489,
+                    "startOffset": 90485
+                }
+            },
+            "secId": "sec5.5",
+            "sentence": "Actually, compared to the average duration (740 s in our experiments) of the containers in the cluster [14], this overhead is relatively small and acceptable.",
+            "startOffset": 90382,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 70531,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "To construct the flow network, the scheduler checks whether the machines in the cluster have sufficient resources to place the requested containers.",
+            "startOffset": 70383,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 91711,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "They concluded that the first fit decreasing (FFD) heuristic that reasons on the sum of the resource demands of the tasks are the most effective.",
+            "startOffset": 91566,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68700,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For instance, all bold edges can be one possible solution returned by MCFP algorithms as shown in Fig. 3.",
+            "startOffset": 68595,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 87308,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Thus, ECSched can schedule up to 100 container requests at a time.",
+            "startOffset": 87242,
+            "title": "Impact of concurrent scheduling"
+        },
+        {
+            "endOffset": 52467,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By encapsulating runtime contexts of software components and services, containers significantly improve portability and efficiency for cloud application deployment.",
+            "startOffset": 52303,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52642,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 52609,
+                    "startOffset": 52606
+                },
+                "b2": {
+                    "endOffset": 52641,
+                    "startOffset": 52638
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Major cloud providers have provided container-based cloud services to cater for this popularity, such as Amazon Elastic Container Service [1] and Azure Container Service [2].",
+            "startOffset": 52468,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57101,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For the concurrent scheduling, as the scheduler has a global view of the entire workloads, it could schedule all the containers to the machines.",
+            "startOffset": 56957,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55685,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 55653,
+                    "startOffset": 55649
+                },
+                "b16": {
+                    "endOffset": 55684,
+                    "startOffset": 55680
+                },
+                "b3": {
+                    "endOffset": 55664,
+                    "startOffset": 55661
+                }
+            },
+            "secId": "sec1",
+            "sentence": "A queue-based scheduler is widely used in the orchestration platforms, such as Marathon [15], Swarm [3] and Kubernetes [16].",
+            "startOffset": 55561,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81738,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For the heartbeat mechanism, the scheduling interval is set to be 100 ms in the scheduler.",
+            "startOffset": 81648,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 57362,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 57361,
+                    "startOffset": 57357
+                }
+            },
+            "secId": "sec1",
+            "sentence": "However, those are NP-hard [23].",
+            "startOffset": 57330,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73104,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "An appropriate placement of containers can lead to lower network latency and better network utilization.",
+            "startOffset": 73000,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 56364,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 56187,
+                    "startOffset": 56180
+                },
+                "b19": {
+                    "endOffset": 56187,
+                    "startOffset": 56180
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Container-by-container scheduling has the advantage for making parallel decisions on distributed deployment [12,19], but it also has crucial limitations for achieving high-quality placements of the entire workloads (concurrent tasks), due to its lack of global view on the waiting containers.",
+            "startOffset": 56072,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93857,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In their flow network, the edge capacities and weights encode the demands of starvation-freedom, data locality, and fairness.",
+            "startOffset": 93732,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 75058,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In this section, we discuss two kinds of classical MCFP algorithms: cycle canceling algorithm and successive shortest path algorithm.",
+            "startOffset": 74925,
+            "title": "MCFP algorithms"
+        },
+        {
+            "endOffset": 53172,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Compared with VM-based infrastructure, container-based infrastructure has some new features.",
+            "startOffset": 53080,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86499,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Nevertheless, ECSched-dp still achieves higher resource utilization than Kubernetes in the peak hours.",
+            "startOffset": 86397,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 89252,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 89137,
+                    "startOffset": 89133
+                }
+            },
+            "secId": "sec5.5",
+            "sentence": "As hundreds of requests need to be processed per second in peak hours according to the Google cluster trace [14], we choose to submit 100, 200 and 300 concurrent container requests to the scheduler for testing at the same time.",
+            "startOffset": 89025,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 56956,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It is because Machine3 does not have enough resources to run Container3.",
+            "startOffset": 56884,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63321,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "Deployment requirements"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "Accordingly, the challenge for a scheduler is how to efficiently schedule the concurrent requests while satisfying all the deployment requirements of requested containers.",
+            "startOffset": 63150,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 92158,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "These studies focus on the packing problem with identical bins (i.e., machines), and consider each request independently.",
+            "startOffset": 92037,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 66987,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The flow network corresponds to an instantaneous status of the container cluster, while encoding a set of requested containers and clustered machines.",
+            "startOffset": 66837,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 65323,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "To simplify the problem, for each pair of a container request and a machine, we choose to use a scalar value to indicate the fitness level between them.",
+            "startOffset": 65171,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 74924,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "After constructing the flow network, the scheduler will perform MCFP algorithms to find the optimal routing solution with respect to the costs we have assigned.",
+            "startOffset": 74764,
+            "title": "MCFP algorithms"
+        },
+        {
+            "endOffset": 91283,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 91282,
+                    "startOffset": 91272
+                },
+                "b36": {
+                    "endOffset": 91282,
+                    "startOffset": 91272
+                },
+                "b37": {
+                    "endOffset": 91282,
+                    "startOffset": 91272
+                },
+                "b38": {
+                    "endOffset": 91282,
+                    "startOffset": 91272
+                },
+                "b39": {
+                    "endOffset": 91282,
+                    "startOffset": 91272
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Bin packing The problem of VM placement or consolidation which is similar to our problem is often formulated as vector bin packing problem, and various heuristics have been proposed for this problem [17,36\u201339].",
+            "startOffset": 91073,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 94702,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "However, they all cannot handle the requests with multi-resource demands.",
+            "startOffset": 94629,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 79407,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We implement ECSched with a container manager and a variant of MCFP algorithm in Python.",
+            "startOffset": 79319,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 86290,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "We observe that the requests we yielded are more CPU intensive.",
+            "startOffset": 86227,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 94396,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "They proposed some problem-specific optimizations for MCMF algorithms and can achieve low latency by solving the problem incrementally.",
+            "startOffset": 94261,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93385,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In contrast, we formulate the scheduling problem as a minimum cost flow problem, which can be solved in a polynomial time.",
+            "startOffset": 93263,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67058,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The overall structure of the flow network can be described as follows.",
+            "startOffset": 66988,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 69529,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "Providing multi-resource guarantee for each requested container is the primary objective of the container scheduling.",
+            "startOffset": 69412,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 91073,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The problem investigated in this chapter \u2013 container scheduling on heterogeneous clusters with multi-resource constraints \u2013 is related to a variety of research topics as follows.",
+            "startOffset": 90895,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93076,
+            "parents": [],
+            "refoffsets": {
+                "b42": {
+                    "endOffset": 92944,
+                    "startOffset": 92940
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Gao et al. [42] proposed a multi-objective ant colony system algorithm to find a set of Pareto solutions for the virtual machine placement problem.",
+            "startOffset": 92929,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 92351,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Different from them, we tackle the problem of scheduling concurrent requests on heterogeneous cluster and consider the requirements of container affinity and machine affinity at the same time.",
+            "startOffset": 92159,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61644,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "By analyzing the features of container-based infrastructure, a placement solution is desired to satisfy the following requirements.",
+            "startOffset": 61513,
+            "title": "Deployment requirements"
+        },
+        {
+            "endOffset": 90123,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Obviously, our algorithm is the most complicated one, and has higher overhead.",
+            "startOffset": 90045,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 53901,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "With these new features, container-based infrastructure imposes emerging and stringent requirements on container scheduling in order to provide performance guarantee for deployed applications.",
+            "startOffset": 53709,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63839,
+            "parents": [],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 63754,
+                    "startOffset": 63750
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In this work, we choose a graph-based approach to model the container scheduling problem as minimum cost flow problem (MCFP) [24], which can perform the container scheduling of concurrent requests at the same time.",
+            "startOffset": 63625,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 88835,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "We consider two cluster sizes in the simulation: 1000-machine cluster and 5000-machine cluster (largest cluster which Kubernetes can support currently).",
+            "startOffset": 88683,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 66548,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, we describe how to construct the specific graph data structure (flow network) of MCFP to solve the container scheduling problem, what MCFP algorithms to use, and how to build ECSched scheduler.",
+            "startOffset": 66338,
+            "title": "ECSched approach"
+        },
+        {
+            "endOffset": 70382,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "Next, the scheduler would construct the flow network as mentioned earlier.",
+            "startOffset": 70308,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 52302,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Container technologies effectively virtualize the operating system and are becoming increasingly popular in cloud computing.",
+            "startOffset": 52178,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58569,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To understand the scheduling overhead, we measure the algorithm runtime of ECSched and state-of-the-art container schedulers by performing large-scale simulations.",
+            "startOffset": 58406,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79747,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Cluster.",
+            "startOffset": 79739,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 87010,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Compared to state-of-the-art schedulers, scheduling a set of concurrent requests at the same time is an innovative advantage of ECSched.",
+            "startOffset": 86874,
+            "title": "Impact of concurrent scheduling"
+        },
+        {
+            "endOffset": 56717,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Fig. 1 shows an example of container-by-container scheduling and concurrent scheduling for three concurrent requests, where the resource demands of containers and the available resources of machines are depicted.",
+            "startOffset": 56505,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92928,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Their approach leverages a fuzzy-logic based evaluation for incorporating different objectives.",
+            "startOffset": 92833,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93262,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "However, these approaches often take minutes or even hours, particularly for large-scale clusters, to generate a placement solution, which would face difficulties for a online response.",
+            "startOffset": 93077,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 65170,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In this paper, we strive to schedule a batch of concurrent container requests efficiently at a moment.",
+            "startOffset": 65068,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 80573,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "After normalization, the capacity vectors of the machines in the homogeneous cluster are all: (CPU: 0.5, MEM: 0.5); the capacity vectors of the machines in the heterogeneous cluster are: (CPU: 0.25, MEM: 0.25), (CPU: 0.5, MEM: 0.5), and (CPU: 1, MEM: 1) respectively.",
+            "startOffset": 80306,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 87157,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "As described earlier, ECSched would fetch a certain number of container requests from the queue system to construct a flow network for scheduling.",
+            "startOffset": 87011,
+            "title": "Impact of concurrent scheduling"
+        },
+        {
+            "endOffset": 80107,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Considering the heterogeneity, we choose three types of VM configurations for the second cluster.",
+            "startOffset": 80010,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 91451,
+            "parents": [],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 91305,
+                    "startOffset": 91301
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Stillwell et al. [40] studied the resource allocation problem in shared hosting platforms for static workloads with machines which provide multiple types of resources.",
+            "startOffset": 91284,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 79587,
+            "parents": [],
+            "refoffsets": {
+                "b35": {
+                    "endOffset": 79484,
+                    "startOffset": 79480
+                }
+            },
+            "secId": "sec5",
+            "sentence": "In this section, we evaluate our ECSched in testbed clusters of ExoGENI [35] experimental environment to compare the scheduling quality with state-of-the-art container schedulers.",
+            "startOffset": 79408,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 59523,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 3, we discuss the minimum cost flow problem.",
+            "startOffset": 59468,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81509,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "ECSched.",
+            "startOffset": 81501,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 73177,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Thus, the location of containers is crucial for the overall performance.",
+            "startOffset": 73105,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 59740,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 5, we compare the performance of ECSched against that of state-of-the-art container schedulers through extensive experiments.",
+            "startOffset": 59604,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90812,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Users can dynamically adjust the maximum fetch number of ECSched to seek a best tradeoff for their workloads.",
+            "startOffset": 90703,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 55346,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 55254,
+                    "startOffset": 55250
+                }
+            },
+            "secId": "sec1",
+            "sentence": "By analyzing the Google cluster trace [14], the scheduler needs to make hundreds of task placement decisions per second in peak hours.",
+            "startOffset": 55212,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66695,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To map the container scheduling problem to the MCFP, we formulate the problem using a specific structure of flow networks.",
+            "startOffset": 66573,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 86839,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Overall, it demonstrates that the ECSched outperforms existing container schedulers in terms of resource efficiency on different cluster.",
+            "startOffset": 86702,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 59954,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this section, we first present the formulation of the containers scheduling problem.",
+            "startOffset": 59867,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 79897,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b35": {
+                    "endOffset": 79836,
+                    "startOffset": 79832
+                }
+            },
+            "secId": "sec5.1",
+            "sentence": "We create two different container clusters with 30 virtual machines (VM) in ExoGENI [35] which is a multi-domain Infrastructure-as-a-Service testbed.",
+            "startOffset": 79748,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 94260,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 94113,
+                    "startOffset": 94109
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Firmament [27], a centralized scheduler that can scale to over ten thousand machines at sub-second placement latency via a min-cost max-flow (MCMF) optimization.",
+            "startOffset": 94099,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93731,
+            "parents": [],
+            "refoffsets": {
+                "b28": {
+                    "endOffset": 93609,
+                    "startOffset": 93605
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Quincy [28], a fair cluster scheduler, models the fair scheduling problem as a minimum cost flow problem to schedule jobs into slots.",
+            "startOffset": 93598,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68393,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "A path of one MCFP solution first gets to a container node from the source node, and then reaches the sink node through a machine node or the unscheduled node.",
+            "startOffset": 68234,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 89886,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The algorithm of Swarm is a simple greedy search to place requested containers on the most loaded machines.",
+            "startOffset": 89779,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 94843,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Different from them, ECSched shows that how to encode multi-resource constraints and affinity requirements in the minimum cost flow problem.",
+            "startOffset": 94703,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 86226,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Figs. 11 and 12 show the details of ECSched-dp and Kubernetes for both clusters.",
+            "startOffset": 86146,
+            "title": "Comparison of resource efficiency"
+        },
+        {
+            "endOffset": 88483,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "As we model the scheduling problem as a MCFP, the scheduling algorithm in our scheduler is more complex than existing schedulers.",
+            "startOffset": 88354,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 59847,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 7, we summarize our results and present future work.",
+            "startOffset": 59784,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82886,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Additionally, we use Average Resource Utilization over the cluster to measure resource efficiency during experiments.",
+            "startOffset": 82769,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 82382,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Under multi-resource requirements, the default scheduler of Kubernetes tends to distribute pods (smallest deployable units in Kubernetes) evenly across the cluster to balance the overall resource usage, while the scheduler of Swarm tends to place containers on the most loaded machines to improve resource utilization over the cluster.",
+            "startOffset": 82047,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 58405,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To evaluate the scheduling quality, we compare the container performance and the resource efficiency of ECSched and state-of-the-art container schedulers in different testbed clusters.",
+            "startOffset": 58221,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69737,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "In order to make the values of different resources comparable to each other and easy to handle, we first normalize the resource number to be the fraction of the maximum capacity in the cluster independently.",
+            "startOffset": 69530,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 94098,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In contrast, we focus on the concurrent container requests with multi-resource demands and implement an appropriate MCFP algorithm for our problem.",
+            "startOffset": 93951,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 56883,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For the container-by-container scheduling, if we apply a simple scheduling algorithm (i.e., First come, first served), Container3 cannot be scheduled at this moment.",
+            "startOffset": 56718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65936,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This is because a solution of MCFP can be extracted as a mapping between the nodes in the flow network.",
+            "startOffset": 65833,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 68595,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Otherwise, if a path goes through an unscheduled node, it does not schedule the container at this moment.",
+            "startOffset": 68490,
+            "title": "Flow network structure"
+        },
+        {
+            "endOffset": 91923,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 91746,
+                    "startOffset": 91742
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Furthermore, Panigrahy et al. [29] systematically studied variants of the FFD algorithm that have been proposed for VM placement problems, and presented a different generalization of the classical FFD heuristic.",
+            "startOffset": 91712,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55839,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "All deployment requests first enter a queue; the scheduler fetches requests from the queue and processes one container (one pod in Kubernetes) at a time.",
+            "startOffset": 55686,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82449,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Both are queue-based schedulers, which process one unit at a time.",
+            "startOffset": 82383,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 87241,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "For the above experiments, we set the maximum number that ECSched can fetch to 100.",
+            "startOffset": 87158,
+            "title": "Impact of concurrent scheduling"
+        },
+        {
+            "endOffset": 94628,
+            "parents": [],
+            "refoffsets": {
+                "b51": {
+                    "endOffset": 94531,
+                    "startOffset": 94527
+                }
+            },
+            "secId": "sec6",
+            "sentence": "Cho et al. [51] leveraged the flow network model to solve the multiprocessor real-time task scheduling problems.",
+            "startOffset": 94516,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 91565,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "They proposed several kinds of vector bin packing algorithms and evaluated them over a wide range of simulations.",
+            "startOffset": 91452,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 89337,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Accordingly, we configure the ECSched with maximum fetch number of 100, 200 and 300.",
+            "startOffset": 89253,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 65832,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "If we can convert the container scheduling problem to the MCFP with a flow network, we could also solve the container scheduling problem in a polynomial time.",
+            "startOffset": 65674,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 66321,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Consequently, the question is how to convert the container scheduling problem to the MCFP, and what MCFP algorithm is used to solve the problem.",
+            "startOffset": 66177,
+            "title": "Minimum cost flow problem"
+        },
+        {
+            "endOffset": 81555,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "We implement two strategies in our scheduler.",
+            "startOffset": 81510,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 56504,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For instance, the scheduler makes a decision early for a requested container, which would restricts its choices for the waiting containers.",
+            "startOffset": 56365,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90702,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Considering the container performance we discussed in previous section, there thus is a tradeoff between the quality and the overhead when scheduling containers.",
+            "startOffset": 90541,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 89695,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Fig. 14 shows the results of the average algorithm runtime which we repeated one hundred times.",
+            "startOffset": 89600,
+            "title": "Overhead evaluation"
+        },
+        {
+            "endOffset": 58220,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In our implementation, ECSched first constructs the flow network based on a batch of concurrent requests, and then performs the MCFP algorithm to schedule the concurrent requests at the same time.",
+            "startOffset": 58024,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59603,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4, we present the design and implementation of our approach ECSched.",
+            "startOffset": 59524,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80009,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For the first cluster, we use 30 homogeneous VMs of \u201cXOLarge\u201d type (2-core CPU, 6 GB of memory) in the testbed.",
+            "startOffset": 79898,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 58023,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By analyzing the properties of different classical MCFP algorithms, we choose an appropriate variant of successive shortest path algorithm implemented in ECSched.",
+            "startOffset": 57861,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70821,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "The key challenge here is how to assign the costs on the edges to distinguish the quality (fitness level) of different mappings between containers and machines.",
+            "startOffset": 70661,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 81885,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Baselines.",
+            "startOffset": 81875,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 69990,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.1",
+            "sentence": "For instance, there are two requested containers with resource demands: (CPU: 1 core, MEM: 2 GB) and (CPU: 2 cores, MEM: 1 GB), and there are two machines in the cluster with resource capacities: (CPU: 4 cores, MEM: 2 GB) and (CPU: 2 cores, MEM: 4 GB).",
+            "startOffset": 69738,
+            "title": "Multi-resource guarantee"
+        },
+        {
+            "endOffset": 72999,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "It represents the demands of data communication or the location of data input.",
+            "startOffset": 72921,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 72920,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "ECSched approach"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Encoding deployment requirements"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "When submitting a deployment request, users can specify the affinities among the containers.",
+            "startOffset": 72828,
+            "title": "Affinity awareness"
+        },
+        {
+            "endOffset": 87468,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In this section, we configure the ECSched with the maximum fetch number of 1, 10, 50 and 100 to evaluate the container performance in different configurations.",
+            "startOffset": 87309,
+            "title": "Impact of concurrent scheduling"
+        }
+    ],
+    "docId": "S0167739X19309446",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "y.hu@uva.nl",
+                "first": "Yang",
+                "initial": "Y.",
+                "last": "Hu"
+            },
+            {
+                "email": "h.zhou@uva.nl",
+                "first": "Huan",
+                "initial": "H.",
+                "last": "Zhou"
+            },
+            {
+                "email": "delaat@uva.nl",
+                "first": "Cees",
+                "initial": "C.",
+                "last": "de Laat"
+            },
+            {
+                "email": "z.zhao@uva.nl",
+                "first": "Zhiming",
+                "initial": "Z.",
+                "last": "Zhao"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.08.025",
+        "firstpage": "562",
+        "issn": "0167739X",
+        "keywords": [
+            "Concurrent scheduling",
+            "Container",
+            "Heterogeneous cluster",
+            "Multi-resource constraints"
+        ],
+        "lastpage": "573",
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Concurrent container scheduling on heterogeneous clusters with multi-resource constraints"
+    }
+}

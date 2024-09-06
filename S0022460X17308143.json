@@ -1,0 +1,1765 @@
+{
+    "abstract": "The simulation model which examines the dynamic behavior of real structures needs to address the impact of uncertainty in both geometry and material parameters. This article investigates three-dimensional finite element models for structural dynamics problems with respect to both model and parameter uncertainties. The parameter uncertainties are determined via laboratory measurements on several beam-like samples. The parameters are then considered as random variables to the finite element model for exploring the uncertainty effects on the quality of the model outputs, i.e. natural frequencies. The accuracy of the output predictions from the model is compared with the experimental results. To this end, the non-contact experimental modal analysis is conducted to identify the natural frequency of the samples. The results show a good agreement compared with experimental data. Furthermore, it is demonstrated that geometrical uncertainties have more influence on the natural frequencies compared to material parameters and material uncertainties are about two times higher than geometrical uncertainties. This gives valuable insights for improving the finite element model due to various parameter ranges required in a modeling process involving uncertainty.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Roger G.",
+                    "initial": "R.G.",
+                    "last": "Ghanem"
+                }
+            ],
+            "doi": "10.1002/nme.2751",
+            "firstpage": "671",
+            "issn": "00295981",
+            "lastpage": "672",
+            "pub_year": 2009,
+            "title": "Uncertainty quantification in computational and prediction science",
+            "volume": "80"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Murty S.",
+                    "initial": "M.S.",
+                    "last": "Kompella"
+                },
+                {
+                    "first": "Robert J.",
+                    "initial": "R.J.",
+                    "last": "Bernhard"
+                }
+            ],
+            "doi": "10.4271/931272",
+            "issn": "01487191",
+            "pub_year": 1993,
+            "title": "Measurement of the statistical variation of structural-acoustic characteristics of automotive vehicles"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Li"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Ghanem"
+                }
+            ],
+            "doi": "10.1016/s0266-8920(97)00020-9",
+            "firstpage": "125",
+            "issn": "02668920",
+            "lastpage": "136",
+            "pub_year": 1998,
+            "title": "Adaptive polynomial chaos expansions applied to statistics of extremes in nonlinear random vibration",
+            "volume": "13"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lucor"
+                },
+                {
+                    "first": "C. H.",
+                    "initial": "C.H.",
+                    "last": "Su"
+                },
+                {
+                    "first": "G. E.",
+                    "initial": "G.E.",
+                    "last": "Karniadakis"
+                }
+            ],
+            "doi": "10.1002/nme.976",
+            "firstpage": "571",
+            "issn": "00295981",
+            "lastpage": "596",
+            "pub_year": 2004,
+            "title": "Generalized polynomial chaos and random oscillators",
+            "volume": "60"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sepahvand"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Hardtke"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2011.08.012",
+            "firstpage": "167",
+            "issn": "0022460X",
+            "lastpage": "179",
+            "pub_year": 2012,
+            "title": "Stochastic free vibration of orthotropic plates using generalized polynomial chaos expansion",
+            "volume": "331"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Beer"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Gier"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Hardtke"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Rennert"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Perret"
+                }
+            ],
+            "doi": "10.1006/jsvi.2001.4037",
+            "firstpage": "591",
+            "issn": "0022460X",
+            "lastpage": "615",
+            "pub_year": 2002,
+            "title": "Experimental verification of structural-acoustic modelling and design optimization",
+            "volume": "252"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sepahvand"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "doi": "10.1016/j.piutam.2013.01.001",
+            "firstpage": "4",
+            "issn": "22109838",
+            "lastpage": "17",
+            "pub_year": 2013,
+            "title": "On construction of uncertain material parameter using generalized polynomial chaos expansion from experimental data",
+            "volume": "6"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Hills"
+                },
+                {
+                    "first": "B. R.",
+                    "initial": "B.R.",
+                    "last": "Mace"
+                },
+                {
+                    "first": "N. S.",
+                    "initial": "N.S.",
+                    "last": "Ferguson"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2008.09.029",
+            "firstpage": "286",
+            "issn": "0022460X",
+            "lastpage": "304",
+            "pub_year": 2009,
+            "title": "Acoustic response variability in automotive vehicles",
+            "volume": "321"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Stache"
+                },
+                {
+                    "first": "Marcus",
+                    "initial": "M.",
+                    "last": "Guettler"
+                },
+                {
+                    "first": "Steffen",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.12.013",
+            "firstpage": "89",
+            "issn": "0022460X",
+            "lastpage": "101",
+            "pub_year": 2016,
+            "title": "A precise non-destructive damage identification technique of long and slender structures based on modal data",
+            "volume": "365"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sepahvand"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2014.09.011",
+            "firstpage": "172",
+            "issn": "08883270",
+            "lastpage": "181",
+            "pub_year": 2015,
+            "title": "Non-sampling inverse stochastic numerical-experimental identification of random elastic material parameters in composite plates",
+            "volume": "54"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Seon M.",
+                    "initial": "S.M.",
+                    "last": "Han"
+                },
+                {
+                    "first": "Haym",
+                    "initial": "H.",
+                    "last": "Benaroya"
+                },
+                {
+                    "first": "Timothy",
+                    "initial": "T.",
+                    "last": "Wei"
+                }
+            ],
+            "doi": "10.1006/jsvi.1999.2257",
+            "firstpage": "935",
+            "issn": "0022460X",
+            "lastpage": "988",
+            "pub_year": 1999,
+            "title": "Dynamics of transversely vibrating beams using four engineering theories",
+            "volume": "225"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Bernhard"
+                },
+                {
+                    "first": "F. A.",
+                    "initial": "F.A.",
+                    "last": "Milner"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Rabbiolo"
+                }
+            ],
+            "doi": "10.1016/S0895-7177(01)00090-5",
+            "firstpage": "657",
+            "issn": "08957177",
+            "lastpage": "675",
+            "pub_year": 2001,
+            "title": "Vibrations of a beam and related statistical properties",
+            "volume": "34"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Mesut",
+                    "initial": "M.",
+                    "last": "\u015eim\u015fek"
+                }
+            ],
+            "doi": "10.1016/j.nucengdes.2009.12.013",
+            "firstpage": "697",
+            "issn": "00295493",
+            "lastpage": "705",
+            "pub_year": 2010,
+            "title": "Fundamental frequency analysis of functionally graded beams by using different higher-order beam theories",
+            "volume": "240"
+        },
+        "bib21": null,
+        "bib22": null,
+        "bib23": null,
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Bonet"
+                },
+                {
+                    "first": "Richard D.",
+                    "initial": "R.D.",
+                    "last": "Wood"
+                }
+            ],
+            "doi": "10.1017/CBO9780511755446",
+            "firstpage": "1",
+            "lastpage": "318",
+            "pub_year": 2008,
+            "title": "Nonlinear continuum mechanics for finite element analysis, 2nd edition",
+            "volume": "9780521838702"
+        },
+        "bib25": null,
+        "bib26": null,
+        "bib27": {
+            "authors": [
+                {
+                    "first": "Zhiping",
+                    "initial": "Z.",
+                    "last": "Qiu"
+                },
+                {
+                    "first": "Suhuan",
+                    "initial": "S.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Hongbo",
+                    "initial": "H.",
+                    "last": "Jia"
+                }
+            ],
+            "doi": "10.1016/0045-7949(94)00444-8",
+            "firstpage": "221",
+            "issn": "00457949",
+            "lastpage": "227",
+            "pub_year": 1995,
+            "title": "The Rayleigh quotient iteration method for computing eigenvalue bounds of structures with bounded uncertain parameters",
+            "volume": "55"
+        },
+        "bib28": null,
+        "bib29": null,
+        "bib3": null,
+        "bib30": {
+            "authors": [
+                {
+                    "first": "Klaus Juergen",
+                    "initial": "K.J.",
+                    "last": "Bathe"
+                },
+                {
+                    "first": "Edward L.",
+                    "initial": "E.L.",
+                    "last": "Wilson"
+                }
+            ],
+            "firstpage": "1485",
+            "lastpage": "9433",
+            "pub_year": 1972,
+            "title": "LARGE EIGENVALUE PROBLEMS IN DYNAMIC ANALYSIS.",
+            "volume": "98"
+        },
+        "bib31": null,
+        "bib32": null,
+        "bib33": null,
+        "bib34": null,
+        "bib35": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Labuschagne"
+                },
+                {
+                    "first": "N. F.J.",
+                    "initial": "N.F.J.",
+                    "last": "van Rensburg"
+                },
+                {
+                    "first": "A. J.",
+                    "initial": "A.J.",
+                    "last": "van der Merwe"
+                }
+            ],
+            "doi": "10.1016/j.mcm.2008.06.006",
+            "firstpage": "20",
+            "issn": "08957177",
+            "lastpage": "30",
+            "pub_year": 2009,
+            "title": "Comparison of linear beam theories",
+            "volume": "49"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Langer"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sepahvand"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "firstpage": "2753",
+            "issn": "23119020",
+            "lastpage": "2758",
+            "pub_year": 2014,
+            "title": "Uncertainty quantification in analytical and finite element beam models using experimental data",
+            "volume": "2014-"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Langer"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sepahvand"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Krause"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "pub_year": 2014,
+            "title": "Experimentally uncertainty quantification in numerical and analytical beam models"
+        },
+        "bib38": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Langer"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Maeder"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Guist"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Krause"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Marburg"
+                }
+            ],
+            "doi": "10.1142/S0218396X17500254",
+            "issn": "0218396X",
+            "pub_year": 2017,
+            "title": "More Than Six Elements per Wavelength: The Practical Use of Structural Finite Element Models and Their Accuracy in Comparison with Experimental Results",
+            "volume": "25"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "H. Y.",
+                    "initial": "H.Y.",
+                    "last": "Hwang"
+                }
+            ],
+            "doi": "10.1006/jsvi.1997.1433",
+            "firstpage": "469",
+            "issn": "0022460X",
+            "lastpage": "479",
+            "pub_year": 1998,
+            "title": "Identification techniques of structure connection parameters using frequency response functions",
+            "volume": "212"
+        },
+        "bib5": null,
+        "bib6": null,
+        "bib7": null,
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Jong Sok",
+                    "initial": "J.S.",
+                    "last": "Sim"
+                },
+                {
+                    "first": "Zhiping",
+                    "initial": "Z.",
+                    "last": "Qiu"
+                },
+                {
+                    "first": "Xiaojun",
+                    "initial": "X.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2006.11.038",
+            "firstpage": "29",
+            "issn": "0022460X",
+            "lastpage": "45",
+            "pub_year": 2007,
+            "title": "Modal analysis of structures with uncertain-but-bounded parameters via interval analysis",
+            "volume": "303"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Robert P.",
+                    "initial": "R.P.",
+                    "last": "Broadwater"
+                },
+                {
+                    "first": "Hesham E.",
+                    "initial": "H.E.",
+                    "last": "Shaalan"
+                },
+                {
+                    "first": "Wolter J.",
+                    "initial": "W.J.",
+                    "last": "Fabrycky"
+                },
+                {
+                    "first": "Robert E.",
+                    "initial": "R.E.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1109/61.277680",
+            "firstpage": "59",
+            "issn": "08858977",
+            "lastpage": "67",
+            "pub_year": 1994,
+            "title": "Decision Evaluation With Interval Mathematics: A Power Distribution System Case Study",
+            "volume": "9"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 95266,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Second, the cross\u2013sectional area is assumed to be symmetric so that the neutral and centroidal axes coincide.",
+            "startOffset": 95157,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 100692,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "With the outcome of the sensitivity analysis known, small or even irrelevant uncertainties might be disregarded.",
+            "startOffset": 100580,
+            "title": "Disregarding irrelevant uncertainties"
+        },
+        {
+            "endOffset": 89515,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The systematic errors result from the deviation of the measurement equipment and the random errors are based on the measurements' standard deviation.",
+            "startOffset": 89366,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 101494,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Disregarding irrelevant uncertainties"
+                }
+            ],
+            "secId": "sec4.4.2",
+            "sentence": "Having determined a small relative deviation between the finite element model using mean parameter values and the experimental modal analysis, it is assumed that the uncertainty arising from the idealized free\u2013free boundary condition and gravity are negligible.",
+            "startOffset": 101233,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 100902,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Disregarding irrelevant uncertainties"
+                }
+            ],
+            "secId": "sec4.4.1",
+            "sentence": "As demonstrated in the last section, the determined uncertainties of both material and geometrical parameters should be included in the numerical models.",
+            "startOffset": 100749,
+            "title": "Uncertainties in material and geometrical parameters"
+        },
+        {
+            "endOffset": 74502,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 74501,
+                    "startOffset": 74498
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Uncertainty quantification (UQ) is described as the study of discrepancy between simulation and experimental results [1].",
+            "startOffset": 74381,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85252,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The modal parameters, such as eigenfrequencies, modal damping, and eigenvectors can be evaluated numerically using a curve\u2013fitting algorithm together with a decomposition scheme of the fitted polynomials.",
+            "startOffset": 85048,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 95463,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "But it is generally assumed that the Timoshenko theory possesses greater accuracy due to it's advanced underlying formulation.",
+            "startOffset": 95337,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 80434,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The continuum-based theories employ the Euler-Bernoulli and Timoshenko beam theory in the form of partial differential equations.",
+            "startOffset": 80305,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 91184,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Based on the performed experiments and the stated error propagations, Fig. 3 shows average values, standard deviations, and uncertainties of Poisson's ratio and Young's modulus for each specimen.",
+            "startOffset": 90989,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 94600,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Under certain conditions, the observed structure or its physical behavior can be idealized.",
+            "startOffset": 94509,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 79960,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The following section is important since it shows that in finite element modeling, if the mass and stiffness matrix uncertainties are small, the expected uncertainty range for a natural frequency under these deviations due to uncertainty will also be small.",
+            "startOffset": 79703,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89365,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In general, the uncertainty consists of systematic and random errors.",
+            "startOffset": 89296,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 106691,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The idealized boundary conditions are mapped sufficiently accurately within the experimental modal analysis.",
+            "startOffset": 106583,
+            "title": "Comparison with experimental results"
+        },
+        {
+            "endOffset": 74380,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Thus, it is essential to clarify the uncertainties involved both in the modeling and measurement process.",
+            "startOffset": 74275,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85516,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In an experimental modal analysis, the accuracy of the measurement is highly dependent on the precision of the measuring device and setup.",
+            "startOffset": 85378,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 92435,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, a guideline on constructing efficient and accurate numerical models is given based on the beam-like steel structure.",
+            "startOffset": 92302,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 80514,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 80513,
+                    "startOffset": 80506
+                },
+                "bib20": {
+                    "endOffset": 80513,
+                    "startOffset": 80506
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Detailed descriptions of these theories can be found in the literature [19,20].",
+            "startOffset": 80435,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 86865,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Two major advantages of the this excitation signal are, first, its continuity up to the first derivative, and second, its periodicity within the time block.",
+            "startOffset": 86709,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 92850,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "finding a compromise between accuracy and computational effort of the numerical model.",
+            "startOffset": 92764,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 79305,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 5, experimental and numerical results are compared.",
+            "startOffset": 79243,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92268,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As mentioned previously, both the averaged values and the measurement uncertainties are used as input parameters to the finite element analysis.",
+            "startOffset": 92124,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 86971,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Therefore, a continuous and sequential measurement is possible using a scanning laser Doppler vibrometer.",
+            "startOffset": 86866,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 85378,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In this paper, the impact of parameter uncertainty on the value of eigenfrequencies of a beam-like structure is investigated.",
+            "startOffset": 85253,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 79350,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finally, conclusions are drawn in Section 6.",
+            "startOffset": 79306,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81064,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The applied interval operations and the performed interval-based stochastic modal analysis is briefly presented in the following.",
+            "startOffset": 80935,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 86175,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In all experiments, free\u2013free boundary conditions were considered to match the simple simulation models.",
+            "startOffset": 86071,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 75065,
+            "parents": [],
+            "refoffsets": {
+                "bib2": {
+                    "endOffset": 75064,
+                    "startOffset": 75059
+                },
+                "bib3": {
+                    "endOffset": 75064,
+                    "startOffset": 75059
+                },
+                "bib4": {
+                    "endOffset": 75064,
+                    "startOffset": 75059
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In this regard, simple beam element models are commonly used in finite element method (FEM) studies to quantify the effect of parameter uncertainties, cf. [2\u20134].",
+            "startOffset": 74904,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101181,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Disregarding irrelevant uncertainties"
+                }
+            ],
+            "secId": "sec4.4.1",
+            "sentence": "A statement towards the already neglected uncertainties, e.g. straightness and flatness, surface roughness, and angle perpendicularity of the beam-like structures however is not possible.",
+            "startOffset": 100994,
+            "title": "Uncertainties in material and geometrical parameters"
+        },
+        {
+            "endOffset": 106977,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Furthermore, suspending the object at the nodal\u2013lines of the analyzed mode is not essential for precisely determining the structure's natural frequencies.",
+            "startOffset": 106823,
+            "title": "Comparison with experimental results"
+        },
+        {
+            "endOffset": 81139,
+            "parents": [],
+            "refoffsets": {
+                "bib27": {
+                    "endOffset": 81138,
+                    "startOffset": 81134
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For an in\u2013depth introduction to interval methods refer to Qiu et al. [27].",
+            "startOffset": 81065,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 94508,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "The physical behavior of general structures is described by partial differential equations for which analytical solutions seldom exist.",
+            "startOffset": 94373,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 86462,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, since the frequency of the corresponding rigid body motions was an order of magnitude smaller than the frequency of the first deflection shape, the influence of the boundary conditions on the first resonance frequency was disregarded.",
+            "startOffset": 86219,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 91304,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These measurement uncertainties then requires to consider input parameters in the finite element analysis as uncertain.",
+            "startOffset": 91185,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 86708,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In the experimental setup, the structure was attached to two elastic strings in an anechoic chamber, Fig. 2 and a microphone measured the sound pressure level in front of the loudspeaker, which excited the structure with a periodic chirp signal.",
+            "startOffset": 86463,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 95336,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 95335,
+                    "startOffset": 95331
+                }
+            },
+            "secId": "sec4.2.2",
+            "sentence": "A comprehensive study on various beam theories is given in Ref. [19].",
+            "startOffset": 95267,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 100993,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Disregarding irrelevant uncertainties"
+                }
+            ],
+            "secId": "sec4.4.1",
+            "sentence": "Even small errors in these parameters have a significant influence on the model's results.",
+            "startOffset": 100903,
+            "title": "Uncertainties in material and geometrical parameters"
+        },
+        {
+            "endOffset": 86071,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 86045,
+                    "startOffset": 86041
+                },
+                "bib32": {
+                    "endOffset": 86070,
+                    "startOffset": 86066
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Various standard measurement techniques have been recommended in Ewins [31] and ISO 7626-1:2011 [32].",
+            "startOffset": 85970,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 74274,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Accurate modeling and measurement of input parameters is the key to achieving reliable results which determine the dynamic behavior of real structures.",
+            "startOffset": 74123,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95056,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "For this reason the Timoshenko theory is formulated to cover this drawback.",
+            "startOffset": 94981,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 79069,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This paper is structured as follows: In Section 2, the theory of interval method and modal analysis are briefly explained.",
+            "startOffset": 78947,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95810,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In real-world problems this is almost never the case.",
+            "startOffset": 95757,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 86218,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "This is an idealization of the real setup.",
+            "startOffset": 86176,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 78947,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By dividing the model uncertainties into different categories and applying the interval method to each of them, the effect of specific uncertainties is presented.",
+            "startOffset": 78785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101608,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.4",
+                    "title": "Disregarding irrelevant uncertainties"
+                }
+            ],
+            "secId": "sec4.4.2",
+            "sentence": "A similar argument holds for the structural damping, since damping was not taken into account in the first place.",
+            "startOffset": 101495,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 87272,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Eigenfrequencies and associated mode shapes are identified by processing the FRFs with the post-processing tool ME'scope.",
+            "startOffset": 87151,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 85969,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "This means the structures can be excited by acoustic means, such as loudspeakers.",
+            "startOffset": 85888,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 96208,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Another error is introduced by neglecting structural damping in the numerical modeling process.",
+            "startOffset": 96113,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 96451,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "This is shown in the following section.",
+            "startOffset": 96412,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 89295,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Having the experimental setup, the next step is to quantify the total measurement uncertainty.",
+            "startOffset": 89201,
+            "title": "Experimental parameter identification method"
+        },
+        {
+            "endOffset": 80094,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In other words the range of uncertainty of one natural frequency is not expected to overlap with the expected range of it's neighbor.",
+            "startOffset": 79961,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85637,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Therefore, a suitable measurement technique is required to accurately record the excitation and the structural response.",
+            "startOffset": 85517,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 92915,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In the following, these aspects will be discussed in more detail.",
+            "startOffset": 92850,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 106582,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The numerical results only show slight deviations compared to experimental results.",
+            "startOffset": 106499,
+            "title": "Comparison with experimental results"
+        },
+        {
+            "endOffset": 85047,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "By performing an experimental modal analysis, it makes evaluation of modal parameters based on measured frequency response functions a reality.",
+            "startOffset": 84904,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 93130,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Steps (b) to (e) will be discussed from two different viewpoints: uncertainties in geometrical and material parameters and uncertainties in the modeling process, i.e. due to discretization and modeling assumptions.",
+            "startOffset": 92916,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 85802,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In order to examine the beam-like specimen, the structure is excited with a loudspeaker and the sound pressure is measured between the loudspeaker and the specimen.",
+            "startOffset": 85638,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 110242,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The study shows that the best choice regarding computational accuracy and effort is a regular mesh with 20\u2013node quadratic brick elements.",
+            "startOffset": 110105,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 94980,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "The Euler\u2013Bernoulli beam theory assumes no shear deflection and rotary inertia.",
+            "startOffset": 94901,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 79242,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The performed experimental modal analysis is presented in Section 3, whereas the parameter uncertainties and the results from numerical analysis are presented in Section 4.",
+            "startOffset": 79070,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80304,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Modeling structural beam vibrations is traditionally performed using the lumped model in a single degree\u2013of\u2013freedom (SDOF) or multi degree\u2013of\u2013freedom (MDOF) system.",
+            "startOffset": 80140,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 95922,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Errors arise due to the chosen discretization of the structure and the weak formulation of the Galerkin method.",
+            "startOffset": 95811,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 79586,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To the best of the authors knowledge this is an original documentation from the application of measured uncertainties, utilization of a finite element model towards a final uncertainty estimation of natural frequencies for a structure.",
+            "startOffset": 79351,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96112,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "In the present context, the idealized free\u2013free boundary conditions additionally introduce an error relative to the way that the beam-like structures are suspended in the measurement setup.",
+            "startOffset": 95923,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 95588,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "For real-life, general structures it is often valuable to revert to solving the underlying PDE via the finite element method.",
+            "startOffset": 95463,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 74604,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This involves identifying all sources of uncertainty and the solution's sensitivity to these sources.",
+            "startOffset": 74503,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95756,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Within the numerically based FEM, an exact solution can be only be found if the discretization and the chosen shape functions are able to represent the exact solution.",
+            "startOffset": 95589,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 96411,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "However, their effect can be determined by comparing the numerical results with a reference solution.",
+            "startOffset": 96310,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 110454,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Finally, and in general, it has been shown here that given the general uncertainties in the manufacturing process and their accurate identification, structural finite element models feature the highest accuracy.",
+            "startOffset": 110243,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 85887,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Note that this method is only applicable for lightweight sound-sensitive structures.",
+            "startOffset": 85803,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 94900,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Two well-known given model assumptions, Euler-Bernoulli and Timoshenko beam theories, are investigated.",
+            "startOffset": 94797,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 74903,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore, defining a simplified model that represents the desired properties of the real structure is crucial.",
+            "startOffset": 74792,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94796,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "The accuracy of the solution depends greatly on these assumptions.",
+            "startOffset": 94730,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 80793,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Regarding uncertainties, the stochastic finite element modeling uses various probabilistic and possibilistic methods.",
+            "startOffset": 80676,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 80675,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                },
+                "bib22": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                },
+                "bib23": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                },
+                "bib24": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                },
+                "bib25": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                },
+                "bib26": {
+                    "endOffset": 80661,
+                    "startOffset": 80654
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Additionally, the finite element method can be employed to analyze the structural beam vibrations employing different finite elements, cf. [21\u201326] for instance.",
+            "startOffset": 80515,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 106822,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Performing appropriate measurements, a modeling setup for external fields such as gravity can be omitted in finite element models.",
+            "startOffset": 106692,
+            "title": "Comparison with experimental results"
+        },
+        {
+            "endOffset": 87150,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Model description and experiments"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Time signals of all quantities are transferred into the frequency domain using Fast Fourier Transformation (FFT) and are further processed to obtain the FRF for each measurement.",
+            "startOffset": 86972,
+            "title": "Experimental modal analysis (EMA)"
+        },
+        {
+            "endOffset": 92610,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The guideline reads as follows:",
+            "startOffset": 92579,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 95156,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "First, the shear stress distribution across the cross section is assumed to be constant and linear.",
+            "startOffset": 95057,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 94729,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "For beam-like structures, several beam theories allowing a description in simplified partial differential equations (PDE) exist.",
+            "startOffset": 94601,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 80934,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Among them, the interval stochastic method is chosen for the analysis of the beam-like structure because of its straightforward application.",
+            "startOffset": 80794,
+            "title": "Interval stochastic method and modal analysis"
+        },
+        {
+            "endOffset": 96309,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Efficient finite element modeling"
+                },
+                {
+                    "id": "sec4.2",
+                    "title": "Identifying uncertainties"
+                }
+            ],
+            "secId": "sec4.2.2",
+            "sentence": "Uncertainties arising due to model assumptions and the mesh discretization are not easily quantified.",
+            "startOffset": 96208,
+            "title": "Uncertainties in the numerical modeling process"
+        },
+        {
+            "endOffset": 74791,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Since the variability of uncertainties for complex structures can be quite pronounced, their quantification involves costly computational efforts making it even unfeasible in most cases.",
+            "startOffset": 74605,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92578,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this context, two well known analytical beam theories, Euler-Bernoulli and Timoshenko, are considered together with a finite element model.",
+            "startOffset": 92436,
+            "title": "Efficient finite element modeling"
+        },
+        {
+            "endOffset": 110104,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Particularly with regard to complex geometries, three\u2013dimensional finite element models provide sufficient accuracy.",
+            "startOffset": 109988,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 79703,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The methods employed here can be easily transformed to real structures such as automobile engine-transmission units.",
+            "startOffset": 79587,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92665,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "defining physical dynamic behavior of the structure,",
+            "startOffset": 92613,
+            "title": "Efficient finite element modeling"
+        }
+    ],
+    "docId": "S0022460X17308143",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "P.Langer@tum.de",
+                "first": "P.",
+                "initial": "P.",
+                "last": "Langer"
+            },
+            {
+                "email": null,
+                "first": "K.",
+                "initial": "K.",
+                "last": "Sepahvand"
+            },
+            {
+                "email": null,
+                "first": "C.",
+                "initial": "C.",
+                "last": "Guist"
+            },
+            {
+                "email": null,
+                "first": "J.",
+                "initial": "J.",
+                "last": "B\u00e4r"
+            },
+            {
+                "email": null,
+                "first": "A.",
+                "initial": "A.",
+                "last": "Peplow"
+            },
+            {
+                "email": null,
+                "first": "S.",
+                "initial": "S.",
+                "last": "Marburg"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2017.11.042",
+        "firstpage": "294",
+        "issn": "0022460X",
+        "keywords": [
+            "Experimental modal analysis",
+            "Finite element modeling",
+            "Parameter identification",
+            "Structural vibration",
+            "Uncertainty quantification"
+        ],
+        "lastpage": "305",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Matching experimental and three dimensional numerical models for structural vibration problems with uncertainties"
+    }
+}

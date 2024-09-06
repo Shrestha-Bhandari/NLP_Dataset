@@ -1,0 +1,489 @@
+{
+    "abstract": "Many complex vacuum systems include edge-welded bellows. Their simulation in the molecular flow regime with a Test Particle Monte Carlo (TPMC) code, such as MolFlow+, can take considerable amounts of computing power and time. Therefore we investigated the change of the transmission probability of a bellow compared to a cylindrical tube in TPMC simulations. The results were used to develop an empirical model to simplify the geometry of a bellow in a TPMC model by replacing it with a cylindrical tube of extended length, consequently compensating the reduced conductance of the bellow. The simulated transmission probabilities of a variety of different bellow lengths have been used to fit the parameters of the model. Each bellow geometry simulated with MolFlow + comprised two cylindrical tubes, one at each end, and the central bellow section. The geometry of each bellow is described by two quantities. The first one is the total length of the geometry model normalized to the inner diameter of the bellow. The second one is the fraction of the bellow section with regard to the total length. Simulating a tube instead of a long bellow reduced the simulation time by a factor of up to 1000, while the error introduced through the replacement of the bellow with a cylindrical tube of modified length was in most cases negligible.",
+    "author_highlights": [
+        {
+            "endOffset": 33456,
+            "sentence": "Simulation of the transmission probability of edge-welded bellows (TPMC model).",
+            "startOffset": 33377
+        },
+        {
+            "endOffset": 33546,
+            "sentence": "Deduce a simplified empirical model to estimate the transmission probability of a bellow.",
+            "startOffset": 33457
+        },
+        {
+            "endOffset": 33645,
+            "sentence": "Apply the model to replace the complex bellow geometry in a TPMC simulation by a cylindrical tube.",
+            "startOffset": 33547
+        },
+        {
+            "endOffset": 33704,
+            "sentence": "Reduce the simulation time by several orders of magnitude.",
+            "startOffset": 33646
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Knudsen"
+                }
+            ],
+            "doi": "10.1002/andp.19093330106",
+            "firstpage": "75",
+            "issn": "00033804",
+            "lastpage": "130",
+            "pub_year": 1909,
+            "title": "Die Gesetze der Molekularstr\u00f6mung und der inneren Reibungsstr\u00f6mung der Gase durch R\u00f6hren",
+            "volume": "333"
+        },
+        "bib10": null,
+        "bib11": null,
+        "bib2": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "v. Smoluchowski"
+                }
+            ],
+            "doi": "10.1002/andp.19103381623",
+            "firstpage": "1559",
+            "issn": "00033804",
+            "lastpage": "1570",
+            "pub_year": 1910,
+            "title": "Zur kinetischen Theorie der Transpiration und Diffusion verd\u00fcnnter Gase",
+            "volume": "338"
+        },
+        "bib3": null,
+        "bib4": {
+            "authors": [
+                {
+                    "first": "A. S.",
+                    "initial": "A.S.",
+                    "last": "Berman"
+                }
+            ],
+            "doi": "10.1063/1.1702984",
+            "firstpage": "3356",
+            "issn": "00218979",
+            "pub_year": 1965,
+            "title": "Free molecule transmission probabilities",
+            "volume": "36"
+        },
+        "bib5": null,
+        "bib6": null,
+        "bib7": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Kersevan"
+                },
+                {
+                    "first": "J. L.",
+                    "initial": "J.L.",
+                    "last": "Pons"
+                }
+            ],
+            "doi": "10.1116/1.3153280",
+            "firstpage": "1017",
+            "issn": "07342101",
+            "lastpage": "1023",
+            "pub_year": 2009,
+            "title": "Introduction to MOLFLOW+: New graphical processing unit-based Monte Carlo code for simulating molecular flows and for calculating angular coefficients in the compute unified device architecture environment",
+            "volume": "27"
+        },
+        "bib8": null,
+        "bib9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 41579,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "TPMC simulations of edge-welded bellows"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The C++ code MolFlow+ is a TPMC program for the simulation of vacuum systems in the regime of molecular flow.",
+            "startOffset": 41470,
+            "title": "Introduction to MolFlow+"
+        },
+        {
+            "endOffset": 34920,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The increased number of hits of the walls inside the narrow bellow elements and the resulting longer trajectories until the particle leaves the bellow, add to the computation time, too.",
+            "startOffset": 34735,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60642,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This method can reduce the simulation time by several orders of magnitude, while preserving the statistical significance of the simulation.",
+            "startOffset": 60503,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33870,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Edge-welded bellows are important and common components of vacuum systems.",
+            "startOffset": 33796,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36001,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We proceed to describe the principal method and relevant parameters of our bellow simulations.",
+            "startOffset": 35907,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36649,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We complete the analysis with a proposal of a method for removing edge-welded bellows from vacuum simulations, therefore decreasing the time needed for a simulation, without losing the desired accuracy of the simulation.",
+            "startOffset": 36429,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41790,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "TPMC simulations of edge-welded bellows"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In the following, we only want to present the basic concepts of the program.",
+            "startOffset": 41714,
+            "title": "Introduction to MolFlow+"
+        },
+        {
+            "endOffset": 58697,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We have simulated the transmission probability W of edge-welded bellows for a wide range of design parameters with the TPMC code MolFlow+.",
+            "startOffset": 58559,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 41876,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "TPMC simulations of edge-welded bellows"
+                }
+            ],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 41874,
+                    "startOffset": 41873
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "A detailed description of the functionality of the software can be found in Ref. [9].",
+            "startOffset": 41791,
+            "title": "Introduction to MolFlow+"
+        },
+        {
+            "endOffset": 36428,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Additionally, we propose a new empirical model for the transmission probability of edge-welded bellows in dependence of their geometry parameters and analyze the increase in computation time when including edge-welded bellows in a vacuum simulation in comparison to a cylindrical tube.",
+            "startOffset": 36143,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41713,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "TPMC simulations of edge-welded bellows"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The program allows both for the import of CAD geometries as well as the creation of models of vacuum systems inside MolFlow + itself.",
+            "startOffset": 41580,
+            "title": "Introduction to MolFlow+"
+        },
+        {
+            "endOffset": 41324,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Before we describe the method and parameters of our bellow simulations, we first explain the basic concepts of the TPMC program MolFlow+.",
+            "startOffset": 41187,
+            "title": "TPMC simulations of edge-welded bellows"
+        },
+        {
+            "endOffset": 35569,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The paper is organized as follows.",
+            "startOffset": 35535,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58772,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "An empirical model was developed to describe the results in a concise way.",
+            "startOffset": 58698,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 47708,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Additionally, a procedure to remove edge-welded bellows from vacuum simulations is proposed, in order to save simulation time without introducing large errors due to the missing bellows.",
+            "startOffset": 47522,
+            "title": "Results of the simulations"
+        },
+        {
+            "endOffset": 57716,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "In long tubes the well known beaming effect is more pronounced than in bellows.",
+            "startOffset": 57637,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 47521,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, we report the results of the simulations of the different geometries introduced in the previous section.",
+            "startOffset": 47400,
+            "title": "Results of the simulations"
+        },
+        {
+            "endOffset": 57636,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The proposed substitution changes the angular distribution of the trajectories of the particles leaving the bellow.",
+            "startOffset": 57521,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 35293,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The aim of this paper is to provide an empirical formula for the transmission probability of edge-welded bellows of arbitrary length.",
+            "startOffset": 35160,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35159,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To our knowledge, empirical formulae for the transmission probabilities of edge-welded bellows have not been presented in the literature so far, while for the case of cylindrical tubes, empirical formulae for arbitrary tube lengths exist.",
+            "startOffset": 34921,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57962,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Therefore, this method is most accurate if the bellow connects to vacuum chambers with larger dimensions than the diameter of the bellow, where the beaming effect plays only a minor role in the subsequent distribution of the simulated particles.",
+            "startOffset": 57717,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 34734,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "When comparing a cylindrical tube with a bellow of the same length, the latter increases the amount of triangles needed easily by a few orders of magnitude, therefore increasing the computation time of the simulation considerably.",
+            "startOffset": 34504,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34247,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore, when aiming for a realistic simulation of a vacuum system, edge-welded bellows can not be neglected without a loss of accuracy of the simulation.",
+            "startOffset": 34091,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35535,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By using this formula, we propose a method for replacing edge-welded bellows with cylindrical tubes of appropriately adjusted length in vacuum simulations, which leads to a reduction of simulation time without a significant loss of accuracy.",
+            "startOffset": 35294,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35795,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Sec. 2, we shortly explain the dynamics of rarefied gases, present analytic formulae for transmission probabilities for cylindrical tubes as given in literature and extend the discussion to the case of edge-welded bellows.",
+            "startOffset": 35570,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58230,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Most TPMC simulations investigate the state of a vacuum system that has already reached equilibrium.",
+            "startOffset": 58130,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 35906,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Sec. 3, we give a short introduction to the TPMC software MolFlow + which is used for our TPMC simulations.",
+            "startOffset": 35796,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58362,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "However, if the dynamic development of the pressure over time is an issue, the proposed method should be used with a grain of salt.",
+            "startOffset": 58231,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 60502,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In an attempt to reduce the prohibitively long TPMC simulation times for long bellows, a method is proposed, where the empirical model is used to calculate the appropriate length of a cylindrical tube, which replaces the bellow in the TPMC model.",
+            "startOffset": 60256,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 34345,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "On the other hand, the inclusion of edge-welded bellows significantly complicates the simulation.",
+            "startOffset": 34248,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36142,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Sec. 4, we present the results of our simulations and discuss the dependence of the transmission probability on the bellow element angle.",
+            "startOffset": 36002,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34503,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In a typical Test Particle Monte Carlo (TPMC) vacuum simulation, the geometry of all components of the vacuum system is approximated e.g. by a triangle mesh.",
+            "startOffset": 34346,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58129,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Results of the simulations"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The transmission time through a tube is faster than the transmission time through a bellow, where the particles spend more time in the crevices of the bellow segments.",
+            "startOffset": 57962,
+            "title": "Replacement of a bellow with an adapted cylindrical tube"
+        },
+        {
+            "endOffset": 41443,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 41415,
+                    "startOffset": 41414
+                },
+                "bib8": {
+                    "endOffset": 41441,
+                    "startOffset": 41440
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The publicly available C++ code has been developed and maintained by R. Kersevan et al. [7] and is hosted by CERN [8].",
+            "startOffset": 41325,
+            "title": "TPMC simulations of edge-welded bellows"
+        },
+        {
+            "endOffset": 34090,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Due to multiple scattering of gas particles inside the bellow elements, the transmission probability of gas particles through a bellow can be significantly reduced in comparison to a cylindrical tube of the same length.",
+            "startOffset": 33871,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0042207X1831412X",
+    "metadata": {
+        "asjc": [
+            "2508",
+            "3104",
+            "3105"
+        ],
+        "authors": [
+            {
+                "email": "marcel.krause@kit.edu",
+                "first": "M.",
+                "initial": "M.",
+                "last": "Krause"
+            },
+            {
+                "email": "joachim.wolf@kit.edu",
+                "first": "J.",
+                "initial": "J.",
+                "last": "Wolf"
+            }
+        ],
+        "doi": "10.1016/j.vacuum.2018.11.049",
+        "firstpage": "402",
+        "issn": "0042207X",
+        "keywords": [
+            "Edge-welded bellow",
+            "Improved model",
+            "TPMC simulation",
+            "Transmission probability"
+        ],
+        "lastpage": "409",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "MATE",
+            "PHYS"
+        ],
+        "title": "Improved model for transmission probabilities of edge-welded bellows based on TPMC simulations"
+    }
+}

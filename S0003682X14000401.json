@@ -1,0 +1,1688 @@
+{
+    "abstract": "This paper considers source excitation strategies in finite difference time domain room acoustics simulations for auralization purposes. We demonstrate that FDTD simulations can be conducted to obtain impulse responses based on unit impulse excitation, this being the shortest, simplest and most efficiently implemented signal that might be applied. Single, rather than double, precision accuracy simulations might be implemented where memory use is critical but the consequence is a remarkably increased noise floor. Hard source excitation introduces a discontinuity in the simulated acoustic field resulting in a shift of resonant modes from expected values. Additive sources do not introduce such discontinuities, but instead result in a broadband offset across the frequency spectrum. Transparent sources address both of these issues and with unit impulse excitation the calculation of the compensation filters required to implement transparency is also simplified. However, both transparent and additive source excitation demonstrate solution growth problems for a bounded space. Any of these approaches might be used if the consequences are understood and compensated for, however, for room acoustics simulation the hard source is the least favorable due to the fundamental changes it imparts on the underlying geometry. These methods are further tested through the implementation of a directional sound source based on multiple omnidirectional point sources. \u00a9 2014 The Authors. Published by Elsevier Ltd.",
+    "bib_entries": {
+        "b0005": null,
+        "b0010": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Botteldoorena"
+                }
+            ],
+            "doi": "10.1121/1.413817",
+            "firstpage": "3302",
+            "issn": "00014966",
+            "lastpage": "3308",
+            "pub_year": 1995,
+            "title": "Finite-difference time-domain simulation of low-frequency room acoustic problems",
+            "volume": "98"
+        },
+        "b0015": {
+            "authors": [
+                {
+                    "first": "Damian T.",
+                    "initial": "D.T.",
+                    "last": "Murphy"
+                },
+                {
+                    "first": "Antti",
+                    "initial": "A.",
+                    "last": "Kelloniemi"
+                },
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Mullen"
+                },
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "Shelley"
+                }
+            ],
+            "doi": "10.1109/MSP.2007.323264",
+            "firstpage": "55",
+            "issn": "10535888",
+            "lastpage": "66",
+            "pub_year": 2007,
+            "title": "Acoustic modeling using the digital waveguide mesh",
+            "volume": "24"
+        },
+        "b0020": {
+            "authors": [
+                {
+                    "first": "Konrad",
+                    "initial": "K.",
+                    "last": "Kowalczyk"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Van Walstijn"
+                }
+            ],
+            "firstpage": "569",
+            "issn": "15494950",
+            "lastpage": "583",
+            "pub_year": 2008,
+            "title": "Modeling frequency-dependent boundaries as digital impedance filters in FDTD and K-DWM room acoustics simulations",
+            "volume": "56"
+        },
+        "b0025": {
+            "authors": [
+                {
+                    "first": "Konrad",
+                    "initial": "K.",
+                    "last": "Kowalczyk"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Van Walstijn"
+                },
+                {
+                    "first": "Damian",
+                    "initial": "D.",
+                    "last": "Murphy"
+                }
+            ],
+            "doi": "10.1109/TASL.2010.2051830",
+            "firstpage": "528",
+            "issn": "15587916",
+            "lastpage": "537",
+            "pub_year": 2011,
+            "title": "A phase grating approach to modeling surface diffusion in FDTD room acoustics simulations",
+            "volume": "19"
+        },
+        "b0030": {
+            "authors": [
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Sheaffer"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Van Walstijn"
+                },
+                {
+                    "first": "Bruno",
+                    "initial": "B.",
+                    "last": "Fazenda"
+                }
+            ],
+            "pub_year": 2012,
+            "title": "A physically-constrained source model for FDTD acoustic simulation"
+        },
+        "b0035": {
+            "authors": [
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Sheaffer"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Van Walstijn"
+                },
+                {
+                    "first": "Bruno",
+                    "initial": "B.",
+                    "last": "Fazenda"
+                }
+            ],
+            "doi": "10.1121/1.4836355",
+            "firstpage": "251",
+            "issn": "00014966",
+            "lastpage": "261",
+            "pmid": "24437765",
+            "pub_year": 2014,
+            "title": "Physical and numerical constraints in source modeling for finite difference simulation of room acoustics",
+            "volume": "135"
+        },
+        "b0040": {
+            "authors": [
+                {
+                    "first": "Matti",
+                    "initial": "M.",
+                    "last": "Karjalainen"
+                },
+                {
+                    "first": "Cumhur",
+                    "initial": "C.",
+                    "last": "Erkut"
+                }
+            ],
+            "doi": "10.1155/S1110865704401176",
+            "firstpage": "978",
+            "issn": "11108657",
+            "lastpage": "989",
+            "pub_year": 2004,
+            "title": "Digital waveguides versus finite difference structures: Equivalence and mixed modeling",
+            "volume": "2004"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Botts"
+                },
+                {
+                    "first": "Lauri",
+                    "initial": "L.",
+                    "last": "Savioja"
+                }
+            ],
+            "doi": "10.1109/ICASSP.2013.6637631",
+            "firstpage": "171",
+            "issn": "15206149",
+            "lastpage": "175",
+            "pub_year": 2013,
+            "title": "Integrating finite difference schemes for scalar and vector wave equations"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "John B.",
+                    "initial": "J.B.",
+                    "last": "Schneider"
+                },
+                {
+                    "first": "Christopher L.",
+                    "initial": "C.L.",
+                    "last": "Wagner"
+                },
+                {
+                    "first": "Shira L.",
+                    "initial": "S.L.",
+                    "last": "Broschat"
+                }
+            ],
+            "doi": "10.1121/1.421084",
+            "firstpage": "136",
+            "issn": "00014966",
+            "lastpage": "142",
+            "pub_year": 1998,
+            "title": "Implementation of transparent sources embedded in acoustic finite- difference time-domain grids",
+            "volume": "103"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Hyok",
+                    "initial": "H.",
+                    "last": "Jeong"
+                },
+                {
+                    "first": "Yiu Wai",
+                    "initial": "Y.W.",
+                    "last": "Lam"
+                }
+            ],
+            "doi": "10.1121/1.3652886",
+            "firstpage": "258",
+            "issn": "00014966",
+            "lastpage": "268",
+            "pub_year": 2012,
+            "title": "Source implementation to eliminate low-frequency artifacts in finite difference time domain room acoustic simulation",
+            "volume": "131"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Konrad",
+                    "initial": "K.",
+                    "last": "Kowalczyk"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Van Walstijn"
+                }
+            ],
+            "doi": "10.1109/TASL.2010.2045179",
+            "firstpage": "34",
+            "issn": "15587916",
+            "lastpage": "46",
+            "pub_year": 2011,
+            "title": "Room acoustics simulation using 3-D compact explicit FDTD schemes",
+            "volume": "19"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Lauri",
+                    "initial": "L.",
+                    "last": "Savioja"
+                },
+                {
+                    "first": "Vesa",
+                    "initial": "V.",
+                    "last": "V\u00e4lim\u00e4ki"
+                }
+            ],
+            "doi": "10.1109/89.824704",
+            "firstpage": "184",
+            "issn": "10636676",
+            "lastpage": "194",
+            "pub_year": 2000,
+            "title": "Reducing the dispersion error in the digital waveguide mesh using interpolation and frequency-warping techniques",
+            "volume": "8"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "Lauri",
+                    "initial": "L.",
+                    "last": "Savioja"
+                }
+            ],
+            "pub_year": 2010,
+            "title": "Real-time 3D finite-difference time-domain simulation of low- and mid-frequency room acoustics"
+        },
+        "b0075": {
+            "authors": [
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Southern"
+                },
+                {
+                    "first": "Damian",
+                    "initial": "D.",
+                    "last": "Murphy"
+                },
+                {
+                    "first": "Guilherme",
+                    "initial": "G.",
+                    "last": "Campos"
+                },
+                {
+                    "first": "Paulo",
+                    "initial": "P.",
+                    "last": "Dias"
+                }
+            ],
+            "firstpage": "1393",
+            "lastpage": "1403",
+            "pub_year": 2010,
+            "title": "Finite difference room acoustic modelling on a general purpose graphics processing unit",
+            "volume": "3"
+        },
+        "b0080": {
+            "authors": [
+                {
+                    "first": "Jos\u00e9 J.",
+                    "initial": "J.J.",
+                    "last": "L\u00f3pez"
+                },
+                {
+                    "first": "Diego",
+                    "initial": "D.",
+                    "last": "Carnicero"
+                },
+                {
+                    "first": "N\u00e9stor",
+                    "initial": "N.",
+                    "last": "Ferrando"
+                },
+                {
+                    "first": "Jos\u00e9",
+                    "initial": "J.",
+                    "last": "Escolano"
+                }
+            ],
+            "doi": "10.1016/j.mcm.2011.11.075",
+            "firstpage": "1822",
+            "issn": "08957177",
+            "lastpage": "1831",
+            "pub_year": 2013,
+            "title": "Parallelization of the finite-difference time-domain method for room acoustics modelling based on CUDA",
+            "volume": "57"
+        },
+        "b0085": {
+            "authors": [
+                {
+                    "first": "Craig J.",
+                    "initial": "C.J.",
+                    "last": "Webb"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Bilbao"
+                }
+            ],
+            "pub_year": 2012,
+            "title": "Binaural simulations using audio rate FDTD schemes and CUDA"
+        },
+        "b0090": {
+            "authors": [
+                {
+                    "first": "Zhixin",
+                    "initial": "Z.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Robertn C.",
+                    "initial": "R.C.",
+                    "last": "Maher"
+                }
+            ],
+            "doi": "10.1109/LSP.2007.916043",
+            "firstpage": "221",
+            "issn": "10709908",
+            "lastpage": "224",
+            "pub_year": 2008,
+            "title": "Analytical expression for impulse response between two nodes in 2-D rectangular digital waveguide mesh",
+            "volume": "15"
+        },
+        "b0095": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Leung"
+                },
+                {
+                    "first": "C. P.",
+                    "initial": "C.P.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Jacobi"
+                },
+                {
+                    "first": "T. G.",
+                    "initial": "T.G.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1121/1.388043",
+            "firstpage": "615",
+            "issn": "00014966",
+            "lastpage": "620",
+            "pub_year": 1982,
+            "title": "Resonance frequency shift of an acoustic chamber containing a rigid spherea)",
+            "volume": "72"
+        },
+        "b0100": {
+            "authors": [
+                {
+                    "first": "James B.",
+                    "initial": "J.B.",
+                    "last": "Mehl"
+                },
+                {
+                    "first": "Robert Nyden",
+                    "initial": "R.N.",
+                    "last": "Hill"
+                }
+            ],
+            "doi": "10.1121/1.397891",
+            "firstpage": "1841",
+            "issn": "00014966",
+            "lastpage": "1851",
+            "pub_year": 1989,
+            "title": "Acoustic Eigenfrequencies of Cavities With An Internal Obstacle: A Modified Perturbation Theory",
+            "volume": "85"
+        },
+        "b0105": {
+            "authors": [
+                {
+                    "first": "Jos\u00e9",
+                    "initial": "J.",
+                    "last": "Escolano"
+                },
+                {
+                    "first": "Jos\u00e9 J.",
+                    "initial": "J.J.",
+                    "last": "L\u00f3pez"
+                },
+                {
+                    "first": "Basilio",
+                    "initial": "B.",
+                    "last": "Pueo"
+                }
+            ],
+            "doi": "10.1121/1.2739113",
+            "firstpage": "EL256",
+            "issn": "00014966",
+            "lastpage": "EL262",
+            "pmid": "17552578",
+            "pub_year": 2007,
+            "title": "Directive sources in acoustic discrete-time domain simulations based on directivity diagrams",
+            "volume": "121"
+        },
+        "b0110": {
+            "authors": [
+                {
+                    "first": "H\u00fcseyin",
+                    "initial": "H.",
+                    "last": "Hacihabibo\u01e7lu"
+                },
+                {
+                    "first": "Banu",
+                    "initial": "B.",
+                    "last": "G\u00fcnel"
+                },
+                {
+                    "first": "Ahmet M.",
+                    "initial": "A.M.",
+                    "last": "Kondoz"
+                }
+            ],
+            "doi": "10.1109/TASL.2008.921759",
+            "firstpage": "934",
+            "issn": "15587916",
+            "lastpage": "946",
+            "pub_year": 2008,
+            "title": "Time-domain simulation of directive sources in 3-D digital waveguide mesh-based Acoustical models",
+            "volume": "16"
+        },
+        "b0115": {
+            "authors": [
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Southern"
+                },
+                {
+                    "first": "Damian",
+                    "initial": "D.",
+                    "last": "Murphy"
+                }
+            ],
+            "firstpage": "1126",
+            "lastpage": "1135",
+            "pub_year": 2009,
+            "title": "Low complexity directional sound sources for finite Difference Time Domain room acoustic models",
+            "volume": "3"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 50033,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The advantage here being that the unit impulse is the simplest to apply and also the shortest \u2013 and hence most efficient in terms of reducing overall simulation run-time, especially when compared to using longer form analytical signals (e.g. exponential sine sweep as commonly used in room acoustic measurement) or direct excitation with an anechoic audio signal.",
+            "startOffset": 49670,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 62552,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This results in frequency shifting of expected resonant modes.",
+            "startOffset": 62490,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 46066,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 45953,
+                    "startOffset": 45948
+                },
+                "b0035": {
+                    "endOffset": 45953,
+                    "startOffset": 45948
+                }
+            },
+            "secId": "s0005",
+            "sentence": "We also note that these different source models have different physical interpretations (see e.g. [6,7]) with different practical consequences as a result, and it is this latter point that is the focus of this paper.",
+            "startOffset": 45850,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62489,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 62488,
+                    "startOffset": 62484
+                }
+            },
+            "secId": "s0045",
+            "sentence": "The consequence is that a new set of perfectly reflecting boundary conditions are introduced in the neighborhood of the fixed point, determined by the spatial sampling interval, such that the original conditions, and hence solutions, for the otherwise empty space no longer hold in this region [20].",
+            "startOffset": 62190,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 51043,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The difference between these two is illustrated in Fig. 1b.",
+            "startOffset": 50984,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 44538,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this case, the disadvantage is that the pressure function at the source grid point no longer resembles the applied excitation function.",
+            "startOffset": 44400,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72609,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "In the best case scenario, no filtering should have to be applied either before or after simulation, with the IR obtained being the true system response appropriate for auralization or further analysis.",
+            "startOffset": 72407,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 42222,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this way, the signal observed at the receiver is analogous to a measurement microphone that acts as a scalar sensor of sound pressure.",
+            "startOffset": 42085,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59234,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 59233,
+                    "startOffset": 59226
+                },
+                "b0055": {
+                    "endOffset": 59233,
+                    "startOffset": 59226
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Transparent source excitation is stated as being the optimal method of obtaining the system response to a given excitation without introducing numerical artefacts caused by hard or soft approaches [10,11].",
+            "startOffset": 59029,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 62189,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 62103,
+                    "startOffset": 62099
+                }
+            },
+            "secId": "s0045",
+            "sentence": "This shows that the fixed grid point introduced when implementing hard source excitation not only introduces additional reflections, as identified in [10], but is also now evident as a perturbation in the resulting simulated acoustic field.",
+            "startOffset": 61949,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 42891,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 42889,
+                    "startOffset": 42886
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Typically however, although usually defined in terms of sound pressure, the discrete-time excitation signal itself can take any form such that it is sampled commensurate with the sampling rate of the FDTD grid used (see e.g. [8]).",
+            "startOffset": 42661,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44399,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The implementation is no more difficult than with a hard source, with the added advantage of no perturbation being added to the problem domain, and hence no additional numerical artefacts or reflected components.",
+            "startOffset": 44187,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63249,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "In this example, a 13.46 \u00d7 13.46 \u00d7 13.46 m cubic rectilinear grid with fupdate = 44,100 Hz, and boundaries set to be totally reflecting is defined.",
+            "startOffset": 63102,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 51134,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The observed difference is minimal and caused by the effects of finite precision accuracy.",
+            "startOffset": 51044,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 63102,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The soft source results in a broadband offset in both 2-D and 3-D simulation, as already observed in Section 4.1, and highlighted again for the 3-D case shown in Fig. 6.",
+            "startOffset": 62933,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 71006,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Furthermore it offers improvements over soft source excitation in that it does not result in an additional broadband offset in the obtained IRs.",
+            "startOffset": 70862,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 45422,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It therefore offers the benefits of a hard source in terms of how it couples the excitation signal into grid, but does not result in a perturbation in the problem domain.",
+            "startOffset": 45252,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45074,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 45051,
+                    "startOffset": 45048
+                },
+                "b0040": {
+                    "endOffset": 45073,
+                    "startOffset": 45070
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In addition, soft sources exhibit solution growth due to source\u2013boundary interaction effects [6], requiring further pre-or post-simulation conditioning to obtain a useful IR, e.g. differentiation of the original pressure-based signal [6], or pre-filtering [8].",
+            "startOffset": 44814,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59798,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The following test explores the implication of these source excitation methods on the modal frequencies observed from the associated impulse response.",
+            "startOffset": 59648,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 51234,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The same result can be found at all frequencies and for all source types (hard, soft, transparent).",
+            "startOffset": 51135,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 68740,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "This paper has discussed issues relating to source excitation in 2-D and 3-D FDTD room acoustics simulation, especially when considering impulse response measurement at single or across multiple grid points for the purposes of auralization.",
+            "startOffset": 68500,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 72098,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "For instance, if there are many receiver points, pre-filtering the unit impulse excitation to remove DC will deal with the solution growth problem and still deliver an output demonstrating a flat frequency response over the required audio bandwidth, removing the need for individual post-processing of each output signal.",
+            "startOffset": 71777,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 61543,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Note that changing the receiver position does not influence the resulting frequency shift, rather, as might be expected, it changes the relative amplitudes of the resonant peaks.",
+            "startOffset": 61365,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 65999,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Three tests are carried out with different spacings between the two excitation points, to ensure that the results are not influenced by the effective sampling density of the FDTD grid.",
+            "startOffset": 65815,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 69268,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "This might be a limiting factor for certain implementations where memory use is more critical (e.g. large, and/or real-time simulations with direct application of an input signal on a GPU),",
+            "startOffset": 69079,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 70626,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Although it has been shown in previous work that fixed grid points, as used with hard source excitation, can result in additional reflections being added to the overall result, this paper has raised the additional issue of frequency shifts in the observed modal response due to the perturbation in the simulated acoustic field introduced by the hard source.",
+            "startOffset": 70269,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 57279,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The first considers a simple bounded 3-D geometry and presents the impulse responses obtained under each excitation.",
+            "startOffset": 57163,
+            "title": "Comparison of source excitation methods"
+        },
+        {
+            "endOffset": 46477,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Similarly, we show by numerical examples that a hard source introduces error in detected modes, soft sources cause an offset in the received level, while a transparent source performs without these artefacts, thus making it an attractive choice (Section 3).",
+            "startOffset": 46220,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61949,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "In this case there is a significant shift in the frequency of the first two resonant modes (of the order of 4%), but this relative shift is not evident for the other modal frequencies presented.",
+            "startOffset": 61755,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 42660,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 42548,
+                    "startOffset": 42543
+                },
+                "b0035": {
+                    "endOffset": 42548,
+                    "startOffset": 42543
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To this end, different source signals have been proposed in the literature enabling appropriate control over this required bandwidth (see e.g. [6,7]), with single-point source directionality dependent on the propagation characteristics of the FDTD grid itself.",
+            "startOffset": 42400,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72245,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "However, with multiple source points, as used here in the directional source model, and fewer receivers, post-processing would be the best choice.",
+            "startOffset": 72099,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 49669,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Given that the FDTD equations are linear and time-invariant, as are the three given source types, it is therefore possible to use convolution to obtain the output for any given input signal based only on the measured impulse response.",
+            "startOffset": 49435,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 44813,
+            "parents": [],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 44570,
+                    "startOffset": 44566
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Ideally, as recommended in [11], the response should be measured at the source grid point and used to normalize the output at other grid points, with the suggestion that this is the reason why soft source excitation has not been extensively used in the acoustics literature.",
+            "startOffset": 44539,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66199,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "These correspond to two grid spacings (the excitation points are separated by one grid point), four grid spacings (points are separated by three grid points) and six grid spacings (five grid points).",
+            "startOffset": 66000,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 50807,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The receiver was located 2 m away from the sound source in the diagonal direction with respect to the grid, along which numerical dispersion effects are minimized for the direct sound path considered in this example relative to other wave propagation directions.",
+            "startOffset": 50545,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 66669,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "An array of 180 receivers is defined at a radial distance of 0.4 m (291 axial grid points) away from the central grid location between the two sources and the direct sound from the source is captured at each and windowed appropriately.",
+            "startOffset": 66434,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 67727,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "By increasing the grid spacing further the polar response obtained tends more towards the directivity characteristics of two omnidirectional sources, noting also that this method for obtaining a directional source is dependent as much as is possible on the coincident nature of the two excitation points.",
+            "startOffset": 67423,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 66876,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This source directivity test is repeated for hard, soft and transparent source excitation, and the resulting polar directivity plot for the octave bandwidth centered at 1 kHz is obtained as shown in Fig. 7.",
+            "startOffset": 66670,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 45251,
+            "parents": [],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 45114,
+                    "startOffset": 45110
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A transparent source, as defined in [10] is one that propagates the same signal as a hard source, but does not act as a signal scatterer (it is transparent to an incident wave).",
+            "startOffset": 45074,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46219,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "First, we demonstrate that a unit impulse is sufficient and good choice for an excitation signal, especially with double precision accuracy (Section 2).",
+            "startOffset": 46067,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49134,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In real room acoustic measurement a specific analytic excitation signal is used to obtain the impulse response of the space given that a perfect impulse cannot be applied.",
+            "startOffset": 48963,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 48498,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "However, we consider this scheme general enough to be applied here with any exceptions to this assumption explicitly noted in the text.",
+            "startOffset": 48363,
+            "title": "The finite difference time domain method in room acoustics simulation"
+        },
+        {
+            "endOffset": 73375,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Future work will develop further this transparent excitation directional source approach with a view to implementing arbitrary sound source directivities.",
+            "startOffset": 73221,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 59647,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This issue potentially becomes more critical in a bounded geometry, as used in a typical room simulation, where there are many reflections that result in a complex and diffuse soundfield.",
+            "startOffset": 59460,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 65272,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Note that all of these methods rely on correct wave interference effects to obtain the desired directional wavefront.",
+            "startOffset": 65155,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 68832,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "In particular the use of hard, soft and transparent source excitation have been considered.",
+            "startOffset": 68741,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 63831,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 6 shows the waterfall plot of the absolute magnitude difference between the impulse response obtained under transparent and soft source excitation for the receiver at 2 m distance.",
+            "startOffset": 63646,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 66289,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Hence the time delays are 2.8284 samples, 5.6568 samples and 8.4852 samples respectively.",
+            "startOffset": 66200,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 66433,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "An even number of grid spacings is used in each case so that the directional source can be located and defined by a single, central grid point.",
+            "startOffset": 66290,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 50412,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "By way of example, Fig. 1a shows a waterfall plot of one simulation, where a Hanning windowed 9-cycle sine wave excitation at 500 Hz was applied to a 2-D FDTD grid having fupdate = 44,100 Hz, resulting in a 1000 sample output.",
+            "startOffset": 50186,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 71371,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The use of unit impulse excitation implies that post-simulation filtering can easily condition the IR for particular situations, for instance to remove the effects of the solution growth problem as demonstrated in some of the examples presented, assuming that the numerical ceiling has not been reached that would otherwise result in clipping of the output signal.",
+            "startOffset": 71007,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67422,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This implies that the increased spacing between excitation points \u2013 or equivalently, a less dense grid \u2013 has no influence on the phase cancellation required to obtain the desired directivity and is related only to the nature of the source excitation.",
+            "startOffset": 67172,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 69078,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "It has been shown that double precision calculation is a key factor in miminizing finite precision numerical effects when obtaining an IR for convolution with an arbitrary audio input and important for maintaining a sufficiently low noise floor.",
+            "startOffset": 68833,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 48362,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 48361,
+                    "startOffset": 48354
+                },
+                "b0065": {
+                    "endOffset": 48361,
+                    "startOffset": 48354
+                }
+            },
+            "secId": "s0010",
+            "sentence": "It is worth noting that this simple scheme suffers from direction dependent dispersion error, the effects of which can be improved upon by using more advanced schemes with a larger stencil [12,13].",
+            "startOffset": 48165,
+            "title": "The finite difference time domain method in room acoustics simulation"
+        },
+        {
+            "endOffset": 62758,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 62757,
+                    "startOffset": 62753
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Such shifts have also been identified when single, small rigid obstacles that result in volume exclusion and wave scattering effects have been introduced into real-world rectangular acoustic chambers [19].",
+            "startOffset": 62553,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 57523,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The second case considers the modal frequencies that emerge in a 2-D bounded structure, and the third applies these techniques in a typical auralization application, where it is required to simulate the characteristics of a directional source.",
+            "startOffset": 57280,
+            "title": "Comparison of source excitation methods"
+        },
+        {
+            "endOffset": 46721,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, we demonstrate that hard sources have serious problems if they are to be used to create directive sources, instead, soft and transparent sources behave in an ideal manner and reproduce the directivity patterns as expected (Section 4).",
+            "startOffset": 46478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70861,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The transparent source has been verified as demonstrating the benefits of the hard source excitation, in that it correctly couples the excitation signal to the grid without the introduction of additional reflections or modal shifting.",
+            "startOffset": 70627,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 45849,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper contains several practical results that affect how FDTD simulations should be conducted with a special emphasis on these three excitation types.",
+            "startOffset": 45694,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63996,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Note that there is an overall magnitude error offset in the region of 4 dB across all frequencies after the initial wavefront has passed through the receiver point.",
+            "startOffset": 63832,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 43678,
+            "parents": [],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 43677,
+                    "startOffset": 43673
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, in doing this they disregard the underlying grid function, and for certain signals, this discontinuity between source function and grid function results in large, low frequency pressure ripples that can be observed at all other grid points [11].",
+            "startOffset": 43424,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62932,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Soft and transparent source excitations give equivalent results in terms of frequency, that are in agreement with the analytical case, but not in terms of relative amplitude.",
+            "startOffset": 62758,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 71628,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Finally, a simple directional source model has been implemented that is dependent on transparent excitation given that it relies on accurately timed wave interference effects obtained via two time-delayed, weighted and summed omnidirectional point sources.",
+            "startOffset": 71372,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 50544,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The waterfall plots have been produced using a 2048-point FFT and a sliding 128-point Hamming window with an overlap value of 0.75.",
+            "startOffset": 50413,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 63423,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "A source is located at the center of the grid and direct-sound only IRs obtained for distances along the 3-D diagonal axis such that dispersion error effects can be negated.",
+            "startOffset": 63250,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 73038,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Any of them might be used, if the consequences are well understood, and taken account of as appropriate.",
+            "startOffset": 72934,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 43821,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In addition to having little correlation with actual physical sound sources, hard sources also act as signal scatterers for any incident wave.",
+            "startOffset": 43679,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64168,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The peaks in the response are due to the limits of numerical accuracy when performing the difference operation between the time\u2013frequency responses for the individual IRs.",
+            "startOffset": 63997,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 61754,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "However, changing the source position does vary the output considerably, and this is demonstrated in Fig. 5b where the input position has been changed to (1.5, 2.0) and output point is maintained at (4.5, 3.0).",
+            "startOffset": 61544,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 59459,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 59253,
+                    "startOffset": 59249
+                }
+            },
+            "secId": "s0045",
+            "sentence": "In particular [10] explored how transparent excitation removes the additional reflected components caused by wavefronts incident on a hard source position that has been implemented by fixing a grid point to a specific value.",
+            "startOffset": 59235,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 50983,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This test case was compared to a simulation in which the 1000-point impulse response was computed first and then convolved with the 500 Hz sine wave applied in the first test.",
+            "startOffset": 50808,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 63645,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "For each source-receiver pairing a 1000 point impulse response is obtained (so that the effect of reflections from either the boundary or the hard source can be ignored) under hard, soft and transparent source excitation.",
+            "startOffset": 63424,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 49434,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 49262,
+                    "startOffset": 49258
+                }
+            },
+            "secId": "s0020",
+            "sentence": "In FDTD simulations a similar approach is adopted through the use of an appropriate time varying source function (see e.g. [11] for a recent summary) noting that for non-impulse like excitation, the time varying input signal should also be deconvolved from the output to obtain the impulse response.",
+            "startOffset": 49135,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 65154,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This method allows simple first-order microphone-like directivity to be simulated through the use of two time-delayed, weighted and summed omnidirectional point sources.",
+            "startOffset": 64985,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 71776,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Ultimately, the final choice of excitation signal will be dependent on the application, and post-filtering might not always be desirable or optimal.",
+            "startOffset": 71628,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67171,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Note that from Fig. 7, the hard source excitation (dashed dark gray line) does not result in the required cardioid directivity plot in any of the three grid spacing cases used, but there is good agreement between transparent (solid gray line) and soft (solid black line) sources in all examples.",
+            "startOffset": 66876,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 64771,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The excitation signals considered so far in this paper, due to the fact that they are applied at a single grid point only, have theoretically omnidirectional source behavior, limited only by the wave propagation characteristics of the FDTD grid.",
+            "startOffset": 64526,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 41820,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Generally, in such room acoustic simulations, a sound source is considered as a time-varying pressure signal applied to a single point on the FDTD grid.",
+            "startOffset": 41668,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44186,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "With a soft source, the driving excitation function is added (hence also additive source) to the numerical pressure value at the source grid point.",
+            "startOffset": 44039,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64357,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "When examining the difference between the transparent and hard source excitation, complete cancellation is observed verifying that the excitation methods are equivalent for this test case.",
+            "startOffset": 64169,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 43423,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "With a hard source, the pressure at the source grid point is determined by the driving excitation function alone, ideally coupling the signal into the grid, making them the simplest and easiest to implement.",
+            "startOffset": 43216,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72406,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "IR convolution with an arbitrary audio signal will also effectively remove the DC component, but windowing might be required to remove any truncation artefacts.",
+            "startOffset": 72246,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 43095,
+            "parents": [],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 42995,
+                    "startOffset": 42991
+                },
+                "b0055": {
+                    "endOffset": 43071,
+                    "startOffset": 43067
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The application and implementation of such a defined pressure-like signal has been characterized in [10], either as a hard source, additive source, also known as a soft source [11], or transparent source.",
+            "startOffset": 42891,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57162,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Three test cases are used to explore the practical application of hard, soft and transparent unit impulse source excitation.",
+            "startOffset": 57038,
+            "title": "Comparison of source excitation methods"
+        },
+        {
+            "endOffset": 44039,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 44038,
+                    "startOffset": 44035
+                }
+            },
+            "secId": "s0005",
+            "sentence": "As a consequence they become a discontinuity or perturbation in the medium, or can be considered as a sound radiating, perfectly reflecting boundary node with a size corresponding to the spatial sampling interval [6].",
+            "startOffset": 43822,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61364,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "From the example shown it is evident that hard source excitation (black solid line) does not give an exact correlation with the analytical modal frequencies as the soft and transparent source excitation cases do.",
+            "startOffset": 61152,
+            "title": "Modal analysis"
+        },
+        {
+            "endOffset": 73220,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "However, for room acoustics simulation the hard source is the least favorable, despite its relative simplicity, due to the fundamental changes it imparts on the underlying geometry.",
+            "startOffset": 73039,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 50185,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Source excitation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "If some other excitation is required, it can be applied post simulation by convolving the desired excitation signal with the obtained impulse response.",
+            "startOffset": 50034,
+            "title": "Choice of source signal and finite precision variable considerations"
+        },
+        {
+            "endOffset": 64984,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "refoffsets": {
+                "b0105": {
+                    "endOffset": 64923,
+                    "startOffset": 64916
+                },
+                "b0110": {
+                    "endOffset": 64923,
+                    "startOffset": 64916
+                },
+                "b0115": {
+                    "endOffset": 64983,
+                    "startOffset": 64979
+                }
+            },
+            "secId": "s0050",
+            "sentence": "A number of methods have been proposed in the literature to simulate the directional characteristics of a particular radiating object (see e.g. [21,22]) but the approach considered here is that presented in [23].",
+            "startOffset": 64772,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 72933,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Again it is noted that each of these source models have different physical interpretations, and as a consequence, demonstrate different characteristics.",
+            "startOffset": 72781,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 42084,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A receiver is defined as any other grid point where the numerical response to this source signal is measured, and for auralization purposes, receivers may be grouped individually (mono), as a pair (stereo), or as an array of points (multi-channel surround-sound).",
+            "startOffset": 41821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72780,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "It is with this goal in mind that this paper has explored some of the practical issues around source excitation and obtaining IRs in FDTD based room acoustics simulation.",
+            "startOffset": 72610,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 45694,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The disadvantage with such a source being that a compensation filter, required to remove the effect of the fixed grid point, must be computed prior to simulation, and that the excitation function itself becomes more complex \u2013 and computationally demanding \u2013 to implement.",
+            "startOffset": 45423,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42399,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Based on this concept, in order to obtain an IR, the sound source should ideally propagate omnidirectionally and demonstrate a flat frequency response over a defined bandwidth.",
+            "startOffset": 42223,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64525,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Comparison of source excitation methods"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Room acoustics simulation often requires the synthesis of a directional source to simulate examples of typical real world sound sources.",
+            "startOffset": 64389,
+            "title": "Directional source excitation"
+        },
+        {
+            "endOffset": 43215,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Each of these source types, hard, soft and transparent, differ in terms of their relative advantages and disadvantages.",
+            "startOffset": 43096,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0003682X14000401",
+    "metadata": {
+        "asjc": [
+            "3102"
+        ],
+        "authors": [
+            {
+                "email": "damian.murphy@york.ac.uk",
+                "first": "Damian T.",
+                "initial": "D.T.",
+                "last": "Murphy"
+            },
+            {
+                "email": "alex.southern@aalto.fi",
+                "first": "Alex",
+                "initial": "A.",
+                "last": "Southern"
+            },
+            {
+                "email": "lauri.savioja@aalto.fi",
+                "first": "Lauri",
+                "initial": "L.",
+                "last": "Savioja"
+            }
+        ],
+        "doi": "10.1016/j.apacoust.2014.02.010",
+        "firstpage": "6",
+        "issn": "0003682X",
+        "keywords": [
+            "Finite difference scheme",
+            "Room acoustic simulation"
+        ],
+        "lastpage": "14",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "PHYS"
+        ],
+        "title": "Source excitation strategies for obtaining impulse responses in finite difference time domain room acoustics simulation"
+    }
+}

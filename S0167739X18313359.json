@@ -1,0 +1,5369 @@
+{
+    "abstract": "A very common problem in GPU programming is that some combination of thread block dimensions and other code optimization parameters, like tiling or unrolling factors, results in dramatically better performance than other kernel configurations. To obtain highly-efficient kernels it is often required to search vast and discontinuous search spaces that consist of all possible combinations of values for all tunable parameters. This paper presents Kernel Tuner, an easy-to-use tool for testing and auto-tuning OpenCL, CUDA, and C kernels with support for many search optimization algorithms that accelerate the tuning process. This paper introduces the application of many new solvers and global optimization algorithms for auto-tuning GPU applications. We demonstrate that Kernel Tuner can be used in a wide range of application scenarios and drastically decreases the time spent tuning, e.g. tuning a GEMM kernel on AMD Vega Frontier Edition 71.2x faster than brute force search.",
+    "author_highlights": [
+        {
+            "endOffset": 44819,
+            "sentence": "Introduces and evaluates optimization algorithms for auto-tuning GPU applications.",
+            "startOffset": 44737
+        },
+        {
+            "endOffset": 44903,
+            "sentence": "Presents Kernel Tuner, an easy-to-use tool for testing and auto-tuning GPU kernels.",
+            "startOffset": 44820
+        },
+        {
+            "endOffset": 44990,
+            "sentence": "Demonstrates effectiveness of Basin Hopping to speedup the auto-tuning of GPU kernels.",
+            "startOffset": 44904
+        }
+    ],
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "Shane",
+                    "initial": "S.",
+                    "last": "Ryoo"
+                },
+                {
+                    "first": "Christopher I.",
+                    "initial": "C.I.",
+                    "last": "Rodrigues"
+                },
+                {
+                    "first": "Sam S.",
+                    "initial": "S.S.",
+                    "last": "Stone"
+                },
+                {
+                    "first": "Sara S.",
+                    "initial": "S.S.",
+                    "last": "Baghsorkhi"
+                },
+                {
+                    "first": "Sain Zee",
+                    "initial": "S.Z.",
+                    "last": "Ueng"
+                },
+                {
+                    "first": "John A.",
+                    "initial": "J.A.",
+                    "last": "Stratton"
+                },
+                {
+                    "first": "Wen Mei W.",
+                    "initial": "W.M.W.",
+                    "last": "Hwu"
+                }
+            ],
+            "doi": "10.1145/1356058.1356084",
+            "firstpage": "195",
+            "lastpage": "204",
+            "pub_year": 2008,
+            "title": "Program optimization space pruning for a multithreaded GPU"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "Yongpeng",
+                    "initial": "Y.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Mueller"
+                }
+            ],
+            "doi": "10.1145/2259016.2259037",
+            "firstpage": "155",
+            "lastpage": "164",
+            "pub_year": 2012,
+            "title": "Auto-generation and auto-tuning of 3D stencil codes on GPU clusters"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Azamat",
+                    "initial": "A.",
+                    "last": "Mametjanov"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Lowell"
+                },
+                {
+                    "first": "Ching Chen",
+                    "initial": "C.C.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Boyana",
+                    "initial": "B.",
+                    "last": "Norris"
+                }
+            ],
+            "doi": "10.1109/CLUSTER.2012.46",
+            "firstpage": "266",
+            "lastpage": "274",
+            "pub_year": 2012,
+            "title": "Autotuning stencil-based computations on GPUs"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Ben",
+                    "initial": "B.",
+                    "last": "Van Werkhoven"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Maassen"
+                },
+                {
+                    "first": "Henri E.",
+                    "initial": "H.E.",
+                    "last": "Bal"
+                },
+                {
+                    "first": "Frank J.",
+                    "initial": "F.J.",
+                    "last": "Seinstra"
+                }
+            ],
+            "doi": "10.1016/j.future.2013.09.003",
+            "firstpage": "14",
+            "issn": "0167739X",
+            "lastpage": "26",
+            "pub_year": 2014,
+            "title": "Optimizing convolution operations on GPUs using adaptive tiling",
+            "volume": "30"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Ansel"
+                },
+                {
+                    "first": "Shoaib",
+                    "initial": "S.",
+                    "last": "Kamil"
+                },
+                {
+                    "first": "Kalyan",
+                    "initial": "K.",
+                    "last": "Veeramachaneni"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Ragan-Kelley"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Bosboom"
+                },
+                {
+                    "first": "Una May",
+                    "initial": "U.M.",
+                    "last": "O'Reilly"
+                },
+                {
+                    "first": "Saman",
+                    "initial": "S.",
+                    "last": "Amarasinghe"
+                }
+            ],
+            "doi": "10.1145/2628071.2628092",
+            "firstpage": "303",
+            "issn": "1089795X",
+            "lastpage": "315",
+            "pub_year": 2014,
+            "title": "OpenTuner: An extensible framework for program autotuning"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "P. M.W.",
+                    "initial": "P.M.W.",
+                    "last": "Knijnenburg"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Kisuki"
+                },
+                {
+                    "first": "M. F.P.",
+                    "initial": "M.F.P.",
+                    "last": "O'Boyle"
+                }
+            ],
+            "doi": "10.1023/A:1020989410030",
+            "firstpage": "43",
+            "issn": "09208542",
+            "lastpage": "67",
+            "pub_year": 2003,
+            "title": "Combined selection of tile sizes and unroll factors using iterative compilation",
+            "volume": "24"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "Keith",
+                    "initial": "K.",
+                    "last": "Seymour"
+                },
+                {
+                    "first": "Haihang",
+                    "initial": "H.",
+                    "last": "You"
+                },
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Dongarra"
+                }
+            ],
+            "doi": "10.1109/CLUSTR.2008.4663803",
+            "firstpage": "421",
+            "issn": "15525244",
+            "lastpage": "429",
+            "pub_year": 2008,
+            "title": "A comparison of search heuristics for empirical code optimization",
+            "volume": "2008"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Prasanna",
+                    "initial": "P.",
+                    "last": "Balaprakash"
+                },
+                {
+                    "first": "Stefan M.",
+                    "initial": "S.M.",
+                    "last": "Wild"
+                },
+                {
+                    "first": "Paul D.",
+                    "initial": "P.D.",
+                    "last": "Hovland"
+                }
+            ],
+            "doi": "10.1016/j.procs.2011.04.234",
+            "firstpage": "2136",
+            "issn": "18770509",
+            "lastpage": "2145",
+            "pub_year": 2011,
+            "title": "Can search algorithms save large-scale automatic performance tuning?",
+            "volume": "4"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Jeff",
+                    "initial": "J.",
+                    "last": "Bilmes"
+                },
+                {
+                    "first": "Krste",
+                    "initial": "K.",
+                    "last": "Asanovic"
+                },
+                {
+                    "first": "Chee Whye",
+                    "initial": "C.W.",
+                    "last": "Chin"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Demmel"
+                }
+            ],
+            "firstpage": "340",
+            "lastpage": "347",
+            "pub_year": 1997,
+            "title": "Optimizing matrix multiply using PHiPAC: a portable, high-performance, ANSI C coding methodology"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Clint Whaley"
+                },
+                {
+                    "first": "Antoine",
+                    "initial": "A.",
+                    "last": "Petitet"
+                },
+                {
+                    "first": "Jack J.",
+                    "initial": "J.J.",
+                    "last": "Dongarra"
+                }
+            ],
+            "doi": "10.1016/S0167-8191(00)00087-9",
+            "firstpage": "3",
+            "issn": "01678191",
+            "lastpage": "35",
+            "pub_year": 2001,
+            "title": "Automated empirical optimizations of software and the ATLAS project",
+            "volume": "27"
+        },
+        "b19": {
+            "authors": [
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Vuduc"
+                },
+                {
+                    "first": "James W.",
+                    "initial": "J.W.",
+                    "last": "Demmel"
+                },
+                {
+                    "first": "Katherine A.",
+                    "initial": "K.A.",
+                    "last": "Yelick"
+                }
+            ],
+            "doi": "10.1088/1742-6596/16/1/071",
+            "firstpage": "521",
+            "issn": "17426588",
+            "lastpage": "530",
+            "pub_year": 2005,
+            "title": "OSKI: A library of automatically tuned sparse matrix kernels",
+            "volume": "16"
+        },
+        "b2": {
+            "authors": [
+                {
+                    "first": "Cedric",
+                    "initial": "C.",
+                    "last": "Nugteren"
+                },
+                {
+                    "first": "Valeriu",
+                    "initial": "V.",
+                    "last": "Codreanu"
+                }
+            ],
+            "doi": "10.1109/MCSoC.2015.10",
+            "firstpage": "195",
+            "lastpage": "202",
+            "pub_year": 2015,
+            "title": "CLTune: A Generic Auto-Tuner for OpenCL Kernels"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Frigo"
+                },
+                {
+                    "first": "Steven G.",
+                    "initial": "S.G.",
+                    "last": "Johnson"
+                }
+            ],
+            "doi": "10.1109/ICASSP.1998.681704",
+            "firstpage": "1381",
+            "issn": "15206149",
+            "lastpage": "1384",
+            "pub_year": 1998,
+            "title": "FFTW: An adaptive software architecture for the FFT",
+            "volume": "3"
+        },
+        "b21": {
+            "authors": [
+                {
+                    "first": "Ananta",
+                    "initial": "A.",
+                    "last": "Tiwari"
+                },
+                {
+                    "first": "Chun",
+                    "initial": "C.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Jacqueline",
+                    "initial": "J.",
+                    "last": "Chame"
+                },
+                {
+                    "first": "Mary",
+                    "initial": "M.",
+                    "last": "Hall"
+                },
+                {
+                    "first": "Jeffrey K.",
+                    "initial": "J.K.",
+                    "last": "Hollingsworth"
+                }
+            ],
+            "doi": "10.1109/IPDPS.2009.5161054",
+            "pub_year": 2009,
+            "title": "A scalable auto-tuning framework for compiler optimization"
+        },
+        "b22": {
+            "authors": [
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "P\u00fcschel"
+                },
+                {
+                    "first": "Jos\u00e9 M.F.",
+                    "initial": "J.M.F.",
+                    "last": "Moura"
+                },
+                {
+                    "first": "Jeremy R.",
+                    "initial": "J.R.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Padua"
+                },
+                {
+                    "first": "Manuela M.",
+                    "initial": "M.M.",
+                    "last": "Veloso"
+                },
+                {
+                    "first": "Bryan W.",
+                    "initial": "B.W.",
+                    "last": "Singer"
+                },
+                {
+                    "first": "Jianxin",
+                    "initial": "J.",
+                    "last": "Xiong"
+                },
+                {
+                    "first": "Franz",
+                    "initial": "F.",
+                    "last": "Franchetti"
+                },
+                {
+                    "first": "Aca",
+                    "initial": "A.",
+                    "last": "Ga\u010di\u0107"
+                },
+                {
+                    "first": "Yevgen",
+                    "initial": "Y.",
+                    "last": "Voronenko"
+                },
+                {
+                    "first": "Kang",
+                    "initial": "K.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Robert W.",
+                    "initial": "R.W.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Nicholas",
+                    "initial": "N.",
+                    "last": "Rizzolo"
+                }
+            ],
+            "doi": "10.1109/JPROC.2004.840306",
+            "firstpage": "232",
+            "issn": "00189219",
+            "lastpage": "273",
+            "pub_year": 2005,
+            "title": "SPIRAL: Code generation for DSP transforms",
+            "volume": "93"
+        },
+        "b23": {
+            "authors": [
+                {
+                    "first": "Akira",
+                    "initial": "A.",
+                    "last": "Nukada"
+                },
+                {
+                    "first": "Satoshi",
+                    "initial": "S.",
+                    "last": "Matsuoka"
+                }
+            ],
+            "doi": "10.1145/1654059.1654090",
+            "pub_year": 2009,
+            "title": "Auto-tuning 3-D FFT library for CUDA GPUs"
+        },
+        "b24": {
+            "authors": [
+                {
+                    "first": "Nezih",
+                    "initial": "N.",
+                    "last": "Yigitbasi"
+                },
+                {
+                    "first": "Theodore L.",
+                    "initial": "T.L.",
+                    "last": "Willke"
+                },
+                {
+                    "first": "Guangdeng",
+                    "initial": "G.",
+                    "last": "Liao"
+                },
+                {
+                    "first": "Dick",
+                    "initial": "D.",
+                    "last": "Epema"
+                }
+            ],
+            "doi": "10.1109/MASCOTS.2013.9",
+            "firstpage": "11",
+            "issn": "15267539",
+            "lastpage": "20",
+            "pub_year": 2013,
+            "title": "Towards machine learning-based auto-tuning of MapReduce"
+        },
+        "b25": {
+            "authors": [
+                {
+                    "first": "William F.",
+                    "initial": "W.F.",
+                    "last": "Ogilvie"
+                },
+                {
+                    "first": "Pavlos",
+                    "initial": "P.",
+                    "last": "Petoumenos"
+                },
+                {
+                    "first": "Zheng",
+                    "initial": "Z.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Hugh",
+                    "initial": "H.",
+                    "last": "Leather"
+                }
+            ],
+            "doi": "10.1145/2628071.2628128",
+            "firstpage": "481",
+            "issn": "1089795X",
+            "lastpage": "482",
+            "pub_year": 2014,
+            "title": "Active learning accelerated automatic heuristic construction for parallel program mapping"
+        },
+        "b26": {
+            "authors": [
+                {
+                    "first": "Prasanna",
+                    "initial": "P.",
+                    "last": "Balaprakash"
+                },
+                {
+                    "first": "Robert B.",
+                    "initial": "R.B.",
+                    "last": "Gramacy"
+                },
+                {
+                    "first": "Stefan M.",
+                    "initial": "S.M.",
+                    "last": "Wild"
+                }
+            ],
+            "doi": "10.1109/CLUSTER.2013.6702683",
+            "issn": "15525244",
+            "pub_year": 2013,
+            "title": "Active-learning-based surrogate models for empirical performance tuning"
+        },
+        "b27": {
+            "authors": [
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Bergstra"
+                },
+                {
+                    "first": "Nicolas",
+                    "initial": "N.",
+                    "last": "Pinto"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Cox"
+                }
+            ],
+            "doi": "10.1109/InPar.2012.6339587",
+            "pub_year": 2012,
+            "title": "Machine learning for predictive auto-tuning with boosted regression trees"
+        },
+        "b28": {
+            "authors": [
+                {
+                    "first": "Thomas L.",
+                    "initial": "T.L.",
+                    "last": "Falch"
+                },
+                {
+                    "first": "Anne C.",
+                    "initial": "A.C.",
+                    "last": "Elster"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2015.85",
+            "firstpage": "1231",
+            "lastpage": "1240",
+            "pub_year": 2015,
+            "title": "Machine Learning Based Auto-Tuning for Enhanced OpenCL Performance Portability"
+        },
+        "b29": {
+            "authors": [
+                {
+                    "first": "Rengan",
+                    "initial": "R.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Sunita",
+                    "initial": "S.",
+                    "last": "Chandrasekaran"
+                },
+                {
+                    "first": "Xiaonan",
+                    "initial": "X.",
+                    "last": "Tian"
+                },
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Chapman"
+                }
+            ],
+            "doi": "10.1007/978-3-319-41321-1_1",
+            "firstpage": "3",
+            "issn": "03029743",
+            "lastpage": "20",
+            "pub_year": 2016,
+            "title": "An analytical model-based auto-tuning framework for locality-aware loop scheduling",
+            "volume": "9697"
+        },
+        "b3": {
+            "authors": [
+                {
+                    "first": "Kyle",
+                    "initial": "K.",
+                    "last": "Spafford"
+                },
+                {
+                    "first": "Jeremy",
+                    "initial": "J.",
+                    "last": "Meredith"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Vetter"
+                }
+            ],
+            "doi": "10.1007/978-3-642-15291-7_26",
+            "firstpage": "275",
+            "issn": "03029743",
+            "lastpage": "286",
+            "pub_year": 2010,
+            "title": "Maestro: Data orchestration and tuning for OpenCL devices",
+            "volume": "6272"
+        },
+        "b30": {
+            "authors": [
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Price"
+                },
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "McIntosh-Smith"
+                }
+            ],
+            "doi": "10.1007/978-3-319-67630-2_38",
+            "firstpage": "538",
+            "issn": "03029743",
+            "lastpage": "556",
+            "pub_year": 2017,
+            "title": "Exploiting auto-tuning to analyze and improve performance portability on many-core architectures",
+            "volume": "10524"
+        },
+        "b31": null,
+        "b32": null,
+        "b33": null,
+        "b34": null,
+        "b35": null,
+        "b36": null,
+        "b37": {
+            "authors": [
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Wales"
+                },
+                {
+                    "first": "Jonathan P.K.",
+                    "initial": "J.P.K.",
+                    "last": "Doye"
+                }
+            ],
+            "doi": "10.1021/jp970984n",
+            "firstpage": "5111",
+            "issn": "10895639",
+            "lastpage": "5116",
+            "pub_year": 1997,
+            "title": "Global optimization by basin-hopping and the lowest energy structures of Lennard-Jones clusters containing up to 110 atoms",
+            "volume": "101"
+        },
+        "b38": {
+            "authors": [
+                {
+                    "first": "Rainer",
+                    "initial": "R.",
+                    "last": "Storn"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "Price"
+                }
+            ],
+            "doi": "10.1023/A:1008202821328",
+            "firstpage": "341",
+            "issn": "09255001",
+            "lastpage": "359",
+            "pub_year": 1997,
+            "title": "Differential Evolution - A Simple and Efficient Heuristic for Global Optimization over Continuous Spaces",
+            "volume": "11"
+        },
+        "b39": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Kirkpatrick"
+                },
+                {
+                    "first": "C. D.",
+                    "initial": "C.D.",
+                    "last": "Gelatt"
+                },
+                {
+                    "first": "M. P.",
+                    "initial": "M.P.",
+                    "last": "Vecchi"
+                }
+            ],
+            "doi": "10.1126/science.220.4598.671",
+            "firstpage": "671",
+            "issn": "00368075",
+            "lastpage": "680",
+            "pub_year": 1983,
+            "title": "Optimization by simulated annealing",
+            "volume": "220"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Lim"
+                },
+                {
+                    "first": "Boyana",
+                    "initial": "B.",
+                    "last": "Norris"
+                },
+                {
+                    "first": "Allen",
+                    "initial": "A.",
+                    "last": "Malony"
+                }
+            ],
+            "doi": "10.1109/ICPP.2017.61",
+            "firstpage": "523",
+            "issn": "01903918",
+            "lastpage": "532",
+            "pub_year": 2017,
+            "title": "Autotuning GPU Kernels via Static and Predictive Analysis"
+        },
+        "b40": null,
+        "b41": null,
+        "b42": {
+            "authors": [
+                {
+                    "first": "Xin She",
+                    "initial": "X.S.",
+                    "last": "Yang"
+                }
+            ],
+            "doi": "10.1007/978-3-642-04944-6_14",
+            "firstpage": "169",
+            "issn": "03029743",
+            "lastpage": "178",
+            "pub_year": 2009,
+            "title": "Firefly algorithms for multimodal optimization",
+            "volume": "5792"
+        },
+        "b43": null,
+        "b44": {
+            "authors": [
+                {
+                    "first": "B. Van",
+                    "initial": "B.V.",
+                    "last": "Werkhoven"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Maassen"
+                },
+                {
+                    "first": "F. J.",
+                    "initial": "F.J.",
+                    "last": "Seinstra"
+                },
+                {
+                    "first": "H. E.",
+                    "initial": "H.E.",
+                    "last": "Bal"
+                }
+            ],
+            "doi": "10.1109/CCGrid.2014.16",
+            "firstpage": "11",
+            "lastpage": "20",
+            "pub_year": 2014,
+            "title": "Performance models for CPU-GPU data transfers"
+        },
+        "b45": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Shimrat"
+                }
+            ],
+            "doi": "10.1145/368637.368653",
+            "firstpage": "434",
+            "issn": "00010782",
+            "pub_year": 1962,
+            "title": "Algorithm 112: Position of point relative to polygon",
+            "volume": "5"
+        },
+        "b46": null,
+        "b47": {
+            "authors": [
+                {
+                    "first": "Romulo",
+                    "initial": "R.",
+                    "last": "Goncalves"
+                },
+                {
+                    "first": "Tom",
+                    "initial": "T.",
+                    "last": "Van Tilburg"
+                },
+                {
+                    "first": "Kostis",
+                    "initial": "K.",
+                    "last": "Kyzirakos"
+                },
+                {
+                    "first": "Foteini",
+                    "initial": "F.",
+                    "last": "Alvanaki"
+                },
+                {
+                    "first": "Panagiotis",
+                    "initial": "P.",
+                    "last": "Koutsourakis"
+                },
+                {
+                    "first": "Ben",
+                    "initial": "B.",
+                    "last": "Van Werkhoven"
+                },
+                {
+                    "first": "Willem",
+                    "initial": "W.",
+                    "last": "Van Hage"
+                }
+            ],
+            "doi": "10.1145/2996913.2997005",
+            "pub_year": 2016,
+            "title": "A spatial column-store to triangulate the netherlands on the fly"
+        },
+        "b5": {
+            "authors": [
+                {
+                    "first": "Alessio",
+                    "initial": "A.",
+                    "last": "Sclocco"
+                },
+                {
+                    "first": "Henri E.",
+                    "initial": "H.E.",
+                    "last": "Bal"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Hessels"
+                },
+                {
+                    "first": "Joeri Van",
+                    "initial": "J.V.",
+                    "last": "Leeuwen"
+                },
+                {
+                    "first": "Rob V.Van",
+                    "initial": "R.V.V.",
+                    "last": "Nieuwpoort"
+                }
+            ],
+            "doi": "10.1109/IPDPS.2014.101",
+            "firstpage": "952",
+            "issn": "15302075",
+            "lastpage": "961",
+            "pub_year": 2014,
+            "title": "Auto-tuning dedispersion for many-core accelerators"
+        },
+        "b6": null,
+        "b7": null,
+        "b8": {
+            "authors": [
+                {
+                    "first": "Yinan",
+                    "initial": "Y.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Dongarra"
+                },
+                {
+                    "first": "Stanimire",
+                    "initial": "S.",
+                    "last": "Tomov"
+                }
+            ],
+            "doi": "10.1007/978-3-642-01970-8_89",
+            "firstpage": "884",
+            "issn": "03029743",
+            "lastpage": "892",
+            "pub_year": 2009,
+            "title": "A note on auto-tuning GEMM for GPUs",
+            "volume": "5544"
+        },
+        "b9": {
+            "authors": [
+                {
+                    "first": "Stanimire",
+                    "initial": "S.",
+                    "last": "Tomov"
+                },
+                {
+                    "first": "Rajib",
+                    "initial": "R.",
+                    "last": "Nath"
+                },
+                {
+                    "first": "Hatem",
+                    "initial": "H.",
+                    "last": "Ltaief"
+                },
+                {
+                    "first": "Jack",
+                    "initial": "J.",
+                    "last": "Dongarra"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2010.5470941",
+            "pub_year": 2010,
+            "title": "Dense linear algebra solvers for multicore with GPU accelerators"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 51893,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 51664,
+                    "startOffset": 51661
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Sclocco et al. [5] also used a code generator to generate OpenCL kernels for dedispersion varying the amount of work per thread in two dimensions, which is then auto-tuned along with the number of thread blocks to achieve near-optimal performance.",
+            "startOffset": 51646,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52181,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Auto-tuning techniques described in the literature are based on either performance models or empirical performance measurements.",
+            "startOffset": 52053,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 76918,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The average performance is consistently above that of the population, which means differential evolution is still better than randomly selecting configurations.",
+            "startOffset": 76758,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 52986,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 52929,
+                    "startOffset": 52925
+                },
+                "b12": {
+                    "endOffset": 52985,
+                    "startOffset": 52981
+                },
+                "b23": {
+                    "endOffset": 52942,
+                    "startOffset": 52938
+                },
+                "b5": {
+                    "endOffset": 52960,
+                    "startOffset": 52957
+                },
+                "b7": {
+                    "endOffset": 52869,
+                    "startOffset": 52866
+                },
+                "b8": {
+                    "endOffset": 52902,
+                    "startOffset": 52899
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Therefore, the empirical approach has been used by many to successfully auto-tune GPU applications, including sparse matrix\u2013vector multiplication [7], dense matrix multiplication [8], stencil computations [10], 3D FFT [23], dedispersion [5], and 2D convolution [12].",
+            "startOffset": 52720,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 77812,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In Fig. 4, the transparent dots show the results of individual runs whereas the opaque dots show the average performance of each search.",
+            "startOffset": 77676,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 57590,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "To support such use cases, the tuner allows the problem_size to contain the names of the tunable parameters.",
+            "startOffset": 57482,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 80940,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "We can see that using more than one stream improves performance.",
+            "startOffset": 80876,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 88740,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Fig. 9 shows the performance distributions for the different search strategies.",
+            "startOffset": 88661,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 79621,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The host code divides the kernel computation across a number of CUDA streams.",
+            "startOffset": 79544,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 60942,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b38": {
+                    "endOffset": 60879,
+                    "startOffset": 60875
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The differential evolution (DE) strategy uses differential evolution [38], a global optimization algorithm for continuous search spaces.",
+            "startOffset": 60806,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 46434,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 46410,
+                    "startOffset": 46403
+                },
+                "b11": {
+                    "endOffset": 46410,
+                    "startOffset": 46403
+                },
+                "b12": {
+                    "endOffset": 46433,
+                    "startOffset": 46429
+                },
+                "b7": {
+                    "endOffset": 46351,
+                    "startOffset": 46348
+                },
+                "b8": {
+                    "endOffset": 46380,
+                    "startOffset": 46375
+                },
+                "b9": {
+                    "endOffset": 46380,
+                    "startOffset": 46375
+                }
+            },
+            "secId": "sec1",
+            "sentence": "As such, auto-tuning has been used in many different GPU codes, including sparse matrix\u2013vector multiplication [7], matrix multiplication [8,9], stencil computations [10,11], and convolutions [12].",
+            "startOffset": 46238,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86672,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "An improvement of a factor of 71.2 over brute force search, which took about 753 s.",
+            "startOffset": 86589,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 53658,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As such, several studies have investigated the effectiveness of such optimization algorithms to accelerate the tuning process.",
+            "startOffset": 53532,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46980,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Auto-tuning is still far from mainstream in GPU application development.",
+            "startOffset": 46908,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87200,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 87199,
+                    "startOffset": 87195
+                }
+            },
+            "secId": "sec5.5",
+            "sentence": "The algorithm we use here is known as the crossing number algorithm, adapted from the C++ implementation by Dan Sunday [46].",
+            "startOffset": 87076,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 70711,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We have also included two more complex use cases for auto-tuning, one where we also tune the computation\u2013communication overlap for the convolution kernel, and an auto-tuned pipeline of kernels that together perform a parallel sum reduction.",
+            "startOffset": 70471,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 87408,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b47": {
+                    "endOffset": 87243,
+                    "startOffset": 87239
+                }
+            },
+            "secId": "sec5.5",
+            "sentence": "The kernel is used by Goncalves et al. [47] as part of a Spatial Database Management System to, for example, return all the points within the outline of a city or province, or all points that are on highways.",
+            "startOffset": 87200,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 72827,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For example, if the top of the vertical distribution of the whole search space is very narrow then only a few configurations result in high performance.",
+            "startOffset": 72675,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 94670,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Kernel Tuner is developed as open source software and we welcome contributions, for more information please visit our GitHub repository at http://github.com/benvanwerkhoven/kernel_tuner.",
+            "startOffset": 94484,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 91539,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "We tune the first kernel much in the same way as the previously discussed examples.",
+            "startOffset": 91456,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 62227,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The movements of the particles are balanced between three distinct forces pulling on each particle: (1) the particle\u2019s inertia, (2) the distance from the individual particle\u2019s best known position, and (3) the distance from the global best known position.",
+            "startOffset": 61973,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 75710,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In fact, out of the 1496 configurations in the search space, only six configurations result in a performance above 3800 GFLOP/s, with the two best performing configurations at 3999.2 and 4001.1 GFLOP/s.",
+            "startOffset": 75508,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 71684,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For each kernel configuration benchmarked, the averaged execution time over 7 kernel executions is used.",
+            "startOffset": 71580,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 62548,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b41": {
+                    "endOffset": 62498,
+                    "startOffset": 62494
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The Genetic Algorithm (GA) strategy uses a simple genetic algorithm [41] to find the best performing kernel configuration.",
+            "startOffset": 62426,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 91441,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The use of warp shuffle instructions for computing per block sums",
+            "startOffset": 91376,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 68893,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The function run_kernel returns a list of Numpy arrays with the output of the kernel, the order and types of this list match those of the kernel arguments (args).",
+            "startOffset": 68731,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 49220,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 5 evaluates the use of the tuner for a number of different applications, leading to the conclusions in Section 6.",
+            "startOffset": 49099,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76165,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "For some methods, such as Nelder\u2013Mead, BFGS, COBYLA, and SLSQP we even see that the top of the distribution is rather wide, meaning that there are multiple configurations with the same performance.",
+            "startOffset": 75968,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 54430,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 54328,
+                    "startOffset": 54324
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Balaprakash et al. [16] presented a modified Nelder\u2013Mead method with more promising results for auto-tuning CPU applications.",
+            "startOffset": 54305,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 84622,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The performance improvement of the strategies with regard to the duration of the tuning process over using the brute force strategy is significant.",
+            "startOffset": 84475,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 80438,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This way we are able to tune the number of streams in combination with the tunable parameters inside the kernel code.",
+            "startOffset": 80321,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 45594,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This is also true for many other code optimizations, such as tiling factors, vector data types, or partial loop unrolling, which introduce many more parameters that all have a set of possible values.",
+            "startOffset": 45395,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84068,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "All four methods are capable of finding the global optimum in multiple runs.",
+            "startOffset": 83992,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 58436,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "For a full overview of the user interface we defer the reader to the Kernel Tuner documentation pages.1",
+            "startOffset": 58333,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 91328,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The number of threads per block",
+            "startOffset": 91297,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 50121,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this paper, we limit our scope to auto-tuning of user-defined code parameterizations, which is more generic and allows, for example, to tune for entirely different implementations that solve the same problem.",
+            "startOffset": 49910,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48677,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The search space of a tunable kernel is the parameter space that is defined by all possible combinations of values for all tunable parameters.",
+            "startOffset": 48535,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62314,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These forces are weighted using user controlled parameters and are randomly perturbed.",
+            "startOffset": 62228,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 61255,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The reason to apply it to auto-tuning GPU programs is that differential evolution is capable of working with non-differentiable, nonlinear, and multimodal cost functions, and is known to have consistent convergence.",
+            "startOffset": 61040,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 75507,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "This means that only a very small number of kernel configurations results in very high performance.",
+            "startOffset": 75408,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 82278,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The CLBlast GEMM kernel can be tuned with many parameters, here we summarize the most important ones:",
+            "startOffset": 82177,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 49028,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 discusses the design and implementation of the tuner and how various features have been implemented.",
+            "startOffset": 48918,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91223,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The kernel contains the following parameterized code optimizations:",
+            "startOffset": 91156,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 51250,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The downside of this more flexible approach is that the programmer has to parameterize their code by hand.",
+            "startOffset": 51144,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 93183,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "Because the kernel is bandwidth limited the performance difference between the two is not that large, the best configuration for the pipeline achieves 287.52 GB/s, whereas the best configuration for the first kernel achieves 287.48 GB/s for the whole operation.",
+            "startOffset": 92922,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 72284,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The distribution of kernel configurations evaluated by a search strategy is shown vertically as a violin shape, where the average performance is marked by a white circle, surrounded by a box plot.",
+            "startOffset": 72088,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 51645,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 51440,
+                    "startOffset": 51437
+                }
+            },
+            "secId": "sec2",
+            "sentence": "This approach is used by Li et al. [8], who have implemented a code generator for the dense matrix multiplication (GEMM) kernel that is able to generate CUDA kernel code with specific tiling factors and with or without transposing submatrices.",
+            "startOffset": 51402,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 74050,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Loop unrolling when the filter size is known at compile time",
+            "startOffset": 73990,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 86313,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "It is interesting to see that the Powell and COBYLA solvers, used either directly or in combination with basin hopping, perform relatively well for the GEMM kernel on both the GTX Titan X as well as the AMD Vega.",
+            "startOffset": 86101,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 63699,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In a number of iterations the fireflies all attempt to move towards the global optimum.",
+            "startOffset": 63612,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 63611,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The attractiveness is based on the glow intensity of the firefly, in our case 1 over the measured execution time, and is stronger if the distance between the two fireflies is smaller.",
+            "startOffset": 63428,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 76312,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The basin hopping distributions in Fig. 3b show that five out of eight methods are capable of finding configurations with near-optimal performance.",
+            "startOffset": 76165,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 84474,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The best performing configuration found has a performance of 4675.3 GFLOP/s, which is at 76% of the theoretical peak performance of the GTX Titan X.",
+            "startOffset": 84326,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 94484,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We plan to use Kernel Tuner to perform a larger study with more kernels and a wider range of accelerators to get a better understanding of auto-tuning difficulty, performance portability, and the performance of different global optimization algorithms for the tuning problem.",
+            "startOffset": 94209,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 77676,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Therefore, we show the execution times of the tuning process against the performance of the best configuration found by the search in Fig. 4.",
+            "startOffset": 77535,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 55754,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Kernel Tuner exposes several functions to the user, run_kernel and tune_kernel are used primarily.",
+            "startOffset": 55656,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 67915,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "run_kernel takes care of allocating GPU memory, moving data from host memory to device memory, compiling the kernel, computing the grid dimensions based on the parameters, executing the kernel, copying the output data back to the host, and finally releasing all used resources.",
+            "startOffset": 67638,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 75175,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Fig. 3 shows the performance distributions of the kernel configurations benchmarked by the minimize, basin hopping, and differential evolution strategies.",
+            "startOffset": 75021,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 69862,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The tunable parameters of a kernel may also change the output is produced by the kernel.",
+            "startOffset": 69774,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 91779,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The tuner supports this by allowing the problem size to also be specified in terms of the tunable parameters.",
+            "startOffset": 91670,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 72434,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Each figure also shows the distribution of the whole search space, as benchmarked by the brute force strategy, as the rightmost violin in each graph.",
+            "startOffset": 72285,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 56579,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "arguments a list of arguments used to call the kernel",
+            "startOffset": 56526,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 78070,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Basin hopping combined with Powell performs really well for auto-tuning 2D Convolution on the GTX Titan X.",
+            "startOffset": 77964,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 61039,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "It is a population-based method, supporting several methods for creating new population members.",
+            "startOffset": 60943,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 63267,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b42": {
+                    "endOffset": 63183,
+                    "startOffset": 63179
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The Firefly Algorithm (FA) [42] is also inspired by a natural process, namely the behavior of a swarm of fireflies.",
+            "startOffset": 63152,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 78793,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Table 2 shows the average performance of the best performing configuration and the average runtime of the tuning process for the best performing combination of strategy and method.",
+            "startOffset": 78613,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 45242,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For every OpenCL or CUDA kernel, the application developer needs to decide what thread block dimensions to execute the kernel with.",
+            "startOffset": 45111,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92144,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "To support output verification in these situations, the tuner supports the option to pass custom output verification functions.",
+            "startOffset": 92017,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 85007,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The genetic algorithm also performs very good, as it consistently returns configurations with near-optimal performance in 78.7 s on average.",
+            "startOffset": 84867,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 48178,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Our evaluation demonstrates that the global optimization algorithms, including basin hopping, differential evolution, and the firefly algorithm implemented in Kernel Tuner can effectively accelerate the tuning process in a wide range of application scenarios.",
+            "startOffset": 47919,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87966,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "As such, GPU device memory is not used by this kernel, except for the vertices of the polygon, which are stored in constant memory.",
+            "startOffset": 87835,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 72674,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The violin plots convey a lot of information.",
+            "startOffset": 72629,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 56525,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "problem_size the size of the domain in up to three dimensions",
+            "startOffset": 56464,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 46158,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 46157,
+                    "startOffset": 46154
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Additionally, the best performing configuration may be different for different devices, and even for different input dimensions [6].",
+            "startOffset": 46026,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65913,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We have used these parameter settings for the evaluation of the different strategies in Section 5.",
+            "startOffset": 65815,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 60541,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The algorithm is stochastic, because it randomly perturbates the coordinates.",
+            "startOffset": 60464,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 89855,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "While basin hopping with Powell performs very well, with an average best performance of 558.63 MPoints/s in only 58.41 s on average, it did not find the optimal kernel configuration in any of the 32 runs.",
+            "startOffset": 89651,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 58788,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The default strategy is brute force, which simply iterates over the entire search space.",
+            "startOffset": 58700,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 64760,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This form of scaling is necessary for some algorithms that assume the search space is continuous and use various speed or position calculations to move to new candidate solutions.",
+            "startOffset": 64581,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 90023,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Basin hopping with COBYLA was able to find the global optimum in 9 out of 32 runs, resulting in an average best performance of 559.82 MPoints/s in 213.60 s on average.",
+            "startOffset": 89856,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 83919,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The distributions of most evolution methods follow that of the whole search space, which means that the selection criterion is not that different from random selection.",
+            "startOffset": 83751,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 48534,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The tunable parameters of a kernel are parameterized code optimizations that can take different values or can be turned on or off.",
+            "startOffset": 48404,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46799,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 46798,
+                    "startOffset": 46791
+                },
+                "b15": {
+                    "endOffset": 46798,
+                    "startOffset": 46791
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Because empirically testing all configurations in the parameter space is often unfeasible, generic auto-tuners often implement search optimization algorithms to speedup the tuning process [14,15].",
+            "startOffset": 46603,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92325,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "Therefore, the second kernel is tuned for different problem sizes.",
+            "startOffset": 92259,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 55224,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "At the top we have the kernel code and the Python script that calls the tuner, which are provided by the user.",
+            "startOffset": 55114,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 47294,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This is why we have created Kernel Tuner.",
+            "startOffset": 47253,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59209,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We will discuss how each strategy is implemented in the rest of this section.",
+            "startOffset": 59132,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 69774,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This enables developers to detect subtle interactions between parameters of different code optimizations that can result in unexpected behavior that only occur for specific combinations of parameters.",
+            "startOffset": 69574,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 77963,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The execution time and performance of the basin hopping and differential evolution strategies varies with the solver or evolution method that is used.",
+            "startOffset": 77813,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 93381,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "We have shown that Kernel Tuner can be used to tune a pipeline of kernels, however, demonstrating the possible effectiveness of pipeline tuning over kernel tuning is outside the scope of this work.",
+            "startOffset": 93184,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 60170,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This property is also what we expect to be present within the optimization search spaces when auto-tuning GPU kernels.",
+            "startOffset": 60052,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 93852,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The tuner supports a large number of optimization methods that aim to minimize the time spent tuning, as well as more advanced use cases, such as tuning pipelines and combined auto-tuning of parameters in host and device code.",
+            "startOffset": 93626,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 64971,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Some of the algorithms have trouble dealing with noisy functions.",
+            "startOffset": 64906,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 49337,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Auto-tuning has a long history of being used for generating and optimizing numerical libraries for CPUs.",
+            "startOffset": 49233,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55639,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The rest of this section describes the user interface, strategies, and runners and backends in more detail.",
+            "startOffset": 55532,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 60806,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Basin hopping can use any of the solvers supported by the minimize strategy and uses its own stopping criteria.",
+            "startOffset": 60695,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 69020,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Finally, numpy.allclose is used to compare two floating-point arrays: the GPU result and the result of a+b computed in Python.",
+            "startOffset": 68894,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 66129,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The sequential runner iterates over configurations selected by the strategy using a single sequential Python process.",
+            "startOffset": 66012,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 68639,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Fig. 2 shows an example of a unit test in Python to test a simple vector add kernel written in OpenCL.",
+            "startOffset": 68537,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 46908,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 46907,
+                    "startOffset": 46901
+                },
+                "b2": {
+                    "endOffset": 46907,
+                    "startOffset": 46901
+                }
+            },
+            "secId": "sec1",
+            "sentence": "However, most of these search algorithms have been shown to not be more effective than random search [2,16].",
+            "startOffset": 46800,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47252,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Generic auto-tuners should be easy to use, enable experimentation, and provide support for test-driven development of tunable GPU kernel code.",
+            "startOffset": 47110,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68459,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Python offers numerical libraries like Numpy and Scipy that are ideally suited for generating input data and computing a reference output that can be used to assert the kernel output against.",
+            "startOffset": 68268,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 77103,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Fig. 3d shows the results of the other four global optimization methods, Genetic Algorithm (GA), Particle Swarm Optimization (PSO), Firefly Algorithm (FA), and Simulated Annealing (SA).",
+            "startOffset": 76918,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 49909,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 49908,
+                    "startOffset": 49902
+                },
+                "b21": {
+                    "endOffset": 49845,
+                    "startOffset": 49838
+                },
+                "b22": {
+                    "endOffset": 49845,
+                    "startOffset": 49838
+                },
+                "b8": {
+                    "endOffset": 49908,
+                    "startOffset": 49902
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Research in auto-tuning can be grouped into two main categories: (1) auto-tuning compiler-generated code optimizations [21,22] and (2) auto-tuning user-defined code parameterizations [8,10].",
+            "startOffset": 49719,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 77381,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "So far we have looked at the performance of the kernel configurations that are evaluated while searching through the parameter space with different strategies.",
+            "startOffset": 77222,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 78974,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b44": {
+                    "endOffset": 78894,
+                    "startOffset": 78890
+                }
+            },
+            "secId": "sec5.3",
+            "sentence": "PCIe transfers can have a large impact on performance [44], because the PCIe bandwidth is much lower than the GPU device memory bandwidth.",
+            "startOffset": 78836,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 89473,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "This can also be seen in Fig. 10, where it is clear that many of the runs get stuck in a local minimum around 400 MPoints/s or find a configuration around 600 or near the global maximum at 749 MPoints/s.",
+            "startOffset": 89270,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 50907,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 50729,
+                    "startOffset": 50725
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For example, Zhang and Mueller [10] implemented stencil computations in CUDA and used auto-tuning to find the best performing thread block dimensions in combination with different schemes for using texture memory.",
+            "startOffset": 50694,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53394,
+            "parents": [],
+            "refoffsets": {
+                "b30": {
+                    "endOffset": 53393,
+                    "startOffset": 53389
+                }
+            },
+            "secId": "sec2",
+            "sentence": "A disadvantage of the empirical approach is that the tuning process itself can be very time consuming and may have to repeated for different input data sizes [30].",
+            "startOffset": 53231,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 71442,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The host system containing the AMD Vega FE consists of a dual 10-core 2.6 GHz (Intel Haswell E5-2660-v3) CPU, 64 GB memory, and a PCI-e 3.0 interconnect.",
+            "startOffset": 71289,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 65393,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Returning slightly different values for variables that are actually snapped to the same configuration will lead some of the search algorithms in the wrong direction or cause premature termination of the algorithm.",
+            "startOffset": 65180,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 81150,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The best performing configuration is different for different number of streams, showing that it is important to include the number of streams as a tunable parameter and consider it part of the parameter space.",
+            "startOffset": 80941,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 53840,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 53676,
+                    "startOffset": 53672
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Kisuki et al. [14] used random search, pyramid search, window search, a genetic algorithm, and simulated annealing for selecting tile sizes and unrolling factors in CPU applications.",
+            "startOffset": 53658,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49719,
+            "parents": [],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 49630,
+                    "startOffset": 49626
+                }
+            },
+            "secId": "sec2",
+            "sentence": "And FFTW [20] uses auto-tuning to generate optimized libraries for the Fast Fourier Transform on CPUs.",
+            "startOffset": 49617,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 71580,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "We have used Python 3.5.1, PyOpenCL 2018.1.1, OpenCL 1.2, GCC 4.9.3, CUDA 8.0, PyCUDA 2017.1, NVCC V8.0.44, Nvidia Driver Version 384.111.",
+            "startOffset": 71442,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 63152,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Mutation is applied by exchanging the value of a tunable parameter with a random value using a 0.1 probability.",
+            "startOffset": 63041,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 53231,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Kernel Tuner also utilizes the empirical performance benchmarking.",
+            "startOffset": 53165,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 83640,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "However, compared to 2D Convolution, there is less variance in the distributions of the methods, suggesting it is not as hard to find a near-optimal configuration.",
+            "startOffset": 83477,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 69451,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In fact, parameterized code optimizations may even include entirely different implementations of the same algorithm.",
+            "startOffset": 69335,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 56921,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The problem_size is used to determine the grid dimensions while benchmarking kernel configurations.",
+            "startOffset": 56822,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 85975,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The differential evolution strategy, while capable of returning near-optimal configurations, performs only slightly better than random.",
+            "startOffset": 85840,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 57113,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The grid divisors are, by default, the thread block dimensions.",
+            "startOffset": 57050,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 50693,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This flexibility enables application developers to parameterize their code and use auto-tuning to find the best performing implementation.",
+            "startOffset": 50555,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55999,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "run_kernel returns the output of the GPU kernel to the user as a list of Numpy arrays.",
+            "startOffset": 55913,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 64409,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Secondly, for all strategies except differential evolution, genetic algorithm, and simulated annealing, we map the points in every dimension to values between 0 and 1.",
+            "startOffset": 64242,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 62677,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Genetic algorithms are inspired by natural evolution processes and start from a number of randomly generated population members.",
+            "startOffset": 62549,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 86395,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Fig. 8 shows that the best performing kernel configuration runs at 6835.5 GFLOP/s.",
+            "startOffset": 86313,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 54770,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Because of the small number of search methods that have been shown to be effective for auto-tuning applications for CPUs and GPUs in the literature, we have implemented a large number of local and global optimization algorithms that have not been evaluated before, including basin hopping, differential evolution, and the firefly algorithm.",
+            "startOffset": 54430,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 88985,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Overall, we can see that many strategies struggle with this search space and either find configurations with performance around 400 MPoints/s or above of 500 MPoints/s with the average performance around or below that of the whole search space.",
+            "startOffset": 88741,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 64905,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Thirdly, there is some noise in our objective function as measuring the execution time of a kernel configuration comes its own measurement error.",
+            "startOffset": 64760,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 52325,
+            "parents": [],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 52324,
+                    "startOffset": 52317
+                },
+                "b25": {
+                    "endOffset": 52324,
+                    "startOffset": 52317
+                },
+                "b26": {
+                    "endOffset": 52324,
+                    "startOffset": 52317
+                },
+                "b27": {
+                    "endOffset": 52324,
+                    "startOffset": 52317
+                },
+                "b28": {
+                    "endOffset": 52324,
+                    "startOffset": 52317
+                }
+            },
+            "secId": "sec2",
+            "sentence": "There are several studies that have used machine learning techniques to automatically derive performance models for use in auto-tuners [24\u201328].",
+            "startOffset": 52182,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 92498,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "We can obtain the total execution time of the parallel sum reduction by joining the results from both kernels based on the number of thread blocks used in the first kernel.",
+            "startOffset": 92326,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 66709,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The C Functions implementation can actually call any compiler, typically NVCC or GCC is used.",
+            "startOffset": 66616,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 72087,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The results are shown using violin plots.",
+            "startOffset": 72046,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 90615,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "We use an example pipeline that implements a parallel sum reduction on the GPU.4",
+            "startOffset": 90535,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 72874,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For the strategies, we look at several things.",
+            "startOffset": 72828,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 57325,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, it is common for tunable parameters to influence the grid dimensions and therefore the user can supply grid divisor lists that contain the names of all tunable parameters that divide the grid dimension.",
+            "startOffset": 57114,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 59421,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The minimize strategy uses a solver to select kernel configurations for benchmarking and to detect convergence.",
+            "startOffset": 59310,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 73805,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The code optimizations include:",
+            "startOffset": 73774,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 75967,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "This is also reflected by the data in Fig. 3a, as we can see that no method reaches the global optimum.",
+            "startOffset": 75864,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 77222,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "All four methods are capable of finding the global optimum in multiple runs and consistently outperform random search.",
+            "startOffset": 77104,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 83144,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In total, the search space consists of 5788 legal kernel configurations, that will all be compiled and benchmarked when using the brute force strategy.",
+            "startOffset": 82993,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 54074,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 53860,
+                    "startOffset": 53856
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Seymour et al. [15] analyzed the effectiveness of random search, Nelder\u2013Mead simplex method, a genetic algorithm, simulated annealing, particle swarm optimization, and orthogonal search for auto-tuning matrix multiplications on CPUs.",
+            "startOffset": 53841,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 66615,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "PyCUDA and PyOpenCL are for tuning either CUDA or OpenCL kernels.",
+            "startOffset": 66550,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 76757,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Only four of the methods have found the global optimum and only in one of the 32 runs we have performed for each method in this experiment.",
+            "startOffset": 76618,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 72046,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Note that the total number of kernel configurations that are executed varies per run and depends on the combination of strategy and method, because the search algorithms detect convergence differently.",
+            "startOffset": 71845,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 91016,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The number of thread blocks is not linked to the input size, because all thread blocks combined iterate over the input.",
+            "startOffset": 90897,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 65590,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This ensures that already evaluated configurations always return the same value.",
+            "startOffset": 65510,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 65989,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "It is possible for the user of Kernel Tuner to supply different parameters.",
+            "startOffset": 65914,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 79461,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "As such, we can also auto-tune the number of streams that are used to overlap GPU computations with CPU\u2013GPU communication.",
+            "startOffset": 79339,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 70470,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For each kernel, we also evaluate the search strategies and all of their supported methods.",
+            "startOffset": 70379,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 79111,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "CUDA streams or OpenCL Command Queues can be used to separate the kernel computation into distinct streams that may execute in parallel.",
+            "startOffset": 78975,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 84172,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In particular the genetic algorithm performs well, as it found the global optimum in 22 out of 32 runs.",
+            "startOffset": 84069,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 57703,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The final positional argument is params, a Python dictionary that specifies the tunable parameters of the kernel.",
+            "startOffset": 57590,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 63884,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Most of the above solvers and optimization algorithms are intended for continuous spaces, while our kernel configurations are represented as discrete points in a multidimensional space.",
+            "startOffset": 63699,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 91375,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The use of vector data types for loading input",
+            "startOffset": 91329,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 48917,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 discusses related work.",
+            "startOffset": 48884,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80550,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The script to tune this kernel requires only minimal changes from the earlier discussed 2D convolution example.3",
+            "startOffset": 80438,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 50274,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Allowing the user to define and parameterize different code transformations is very important in the context of auto-tuning code for GPUs and many-cores.",
+            "startOffset": 50121,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 90896,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The first kernel runs with multiple thread blocks which compute thread block-wide partial sums.",
+            "startOffset": 90801,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 73026,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "For example, if the average and shape of a distribution are close to that of the whole search space then the solver is not outperforming random search.",
+            "startOffset": 72875,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 89100,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "On this particular problem the search strategies, except for basinhopping in some cases, do not outperform random.",
+            "startOffset": 88986,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 46521,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, the code performing the tuning of these applications is application specific.",
+            "startOffset": 46435,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56351,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Both functions take five required arguments:",
+            "startOffset": 56307,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 83750,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Fig. 5c shows that the differential evolution methods are all capable of finding a near-optimal configuration.",
+            "startOffset": 83640,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 56627,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "params a dictionary with the tunable parameters",
+            "startOffset": 56580,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 60051,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b37": {
+                    "endOffset": 59907,
+                    "startOffset": 59903
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The basin hopping (BS) strategy uses the basin hopping algorithm [37], which is a stochastic algorithm for finding the global minimum of a function in the presence of many local minima separated by large barriers.",
+            "startOffset": 59838,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 80320,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The number of streams is added to the tunable parameters.",
+            "startOffset": 80263,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 49098,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 4 discusses the impact the tuner has on software development.",
+            "startOffset": 49029,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57402,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "For some algorithms however, the grid dimensions can be selected arbitrarily.",
+            "startOffset": 57325,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 84325,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In Fig. 6 we can see that two of the basin hopping and the genetic algorithm strategies return a near-optimal performing kernel configuration on average.",
+            "startOffset": 84172,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 91942,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The amount of work performed by the first kernel depends on the number of thread blocks, because each thread block produces a single thread block-wide partial sum.",
+            "startOffset": 91779,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 74174,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Auto-tuning the tiling factor and thread block dimensions",
+            "startOffset": 74117,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 69334,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The goal of developing tunable kernels is to keep all options open and effectively maintain all possible instantiations of a code.",
+            "startOffset": 69204,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 94209,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In addition, the tuner is flexible enough to be used for more complex scenarios than just single kernel tuning, such as tuning for computation and communication overlap, and tuning pipelines of kernels.",
+            "startOffset": 94007,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 65179,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "More importantly, when an algorithm selects a variable close to a previously evaluated variable, causing the same configuration to be evaluated again, the result of the objective function should be the same.",
+            "startOffset": 64972,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 55055,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Kernel Tuner is designed to be extensible and to support many search and execution strategies.",
+            "startOffset": 54961,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 59131,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Other strategies implemented in the tuner are random sample, minimize, basin hopping, differential evolution, simulated annealing, particle swarm optimization, genetic algorithms, and the firefly algorithm.",
+            "startOffset": 58925,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 76617,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Fig. 3c shows the results for differential evolution, which do not vary that much per evolution method.",
+            "startOffset": 76514,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 90250,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Table 7 lists the performance of the best performing strategies and methods.",
+            "startOffset": 90174,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 66549,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "At the bottom of Fig. 1 the three backends are shown.",
+            "startOffset": 66496,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 87834,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Because all the input and output data is only used once, the kernel uses device-mapped host memory to transfer the data directly from main memory to the GPU.",
+            "startOffset": 87677,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 66496,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The runners are implemented on top of a high-level Device Interface, which wraps all the functionality for compiling and benchmarking into a single uniform interface.",
+            "startOffset": 66330,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 88400,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "It is also highly tunable and supports several different algorithmic variations that are parameterized, including whether or not to precompute the slopes of the polygon sides on the CPU.",
+            "startOffset": 88214,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 55114,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The software architecture of the tuner is shown in Fig. 1.",
+            "startOffset": 55056,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 79338,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Kernel Tuner supports combined auto-tuning of parameters in both host and device code.",
+            "startOffset": 79252,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 52437,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 52355,
+                    "startOffset": 52352
+                }
+            },
+            "secId": "sec2",
+            "sentence": "More recently, Lim et al. [4] presented a tuner based on annotated C code using static and predictive analysis.",
+            "startOffset": 52326,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52719,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 52718,
+                    "startOffset": 52713
+                },
+                "b8": {
+                    "endOffset": 52718,
+                    "startOffset": 52713
+                }
+            },
+            "secId": "sec2",
+            "sentence": "However, it can be difficult for model-based tuners to provide strong performance guarantees across different accelerator architectures and algorithms [8,3].",
+            "startOffset": 52562,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 86915,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Table 5 lists the performance of the best performing strategies and methods.",
+            "startOffset": 86839,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 89651,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Out of the all strategies evaluated, basin hopping and differential evolution show the best performance, even if they do not reliably return a near-optimal kernel configuration.",
+            "startOffset": 89474,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 57812,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "For each tunable parameter, specified as a key in the dictionary, it contains a list of all possible values.",
+            "startOffset": 57704,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 92016,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "As such, the number of output values varies across kernel configurations.",
+            "startOffset": 91943,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 90534,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The way we do this is simply by tuning the kernels individually and combining the results to obtain the total execution time for the pipeline.",
+            "startOffset": 90392,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 47658,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "With Kernel Tuner, programmers create simple Python scripts that specify: where the code is, how it should be called, and which tunable parameters the code supports.",
+            "startOffset": 47493,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60694,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "After perturbation a local minimization algorithm is used to find the new local minimum, which is then accepted or rejected based on the returned value.",
+            "startOffset": 60542,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 72509,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The width of a violin is relative to the distributions in the same figure.",
+            "startOffset": 72435,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 47492,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This paper presents Kernel Tuner, an easy-to-use tool for testing and auto-tuning CUDA, OpenCL, and C kernels with support for many search optimization algorithms that accelerate the tuning process.",
+            "startOffset": 47294,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62426,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The algorithm runs in iterations with the idea that the particle positions converge towards the global optimum.",
+            "startOffset": 62315,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 85210,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "We have also tuned the GEMM kernel with the same parameter space on an AMD Radeon Vega Frontier Edition, as shown in Fig. 7.",
+            "startOffset": 85086,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 75407,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "First of all, from the brute force data we see that the peak is very narrow.",
+            "startOffset": 75331,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 58332,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "tune_kernel also supports optional arguments that control the tuning process, for example to select different strategies and runners, choose the number of times kernels are executed during benchmarking (7 by default), impose search space restrictions, or control output verification performed during benchmarking.",
+            "startOffset": 58019,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 68537,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Moreover, tools like nosetests or pytest can be used to easily run the tests.",
+            "startOffset": 68460,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 88574,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Because the kernel is heterogeneous, performance is expressed in millions of points per second (MPoints/s).",
+            "startOffset": 88467,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 68268,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In a single function call, run_kernel executes the system under test and returns the output data, which can then be used to check the behavior of the system under test.",
+            "startOffset": 68100,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 83991,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Fig. 3d shows the results of the other four global optimization methods.",
+            "startOffset": 83919,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 58018,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Both run_kernel and tune_kernel are very flexible, and also support options for selecting the device and/or platform to tune on, selecting the compiler, compiler options, verbosity of the output, and so on.",
+            "startOffset": 57812,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 92258,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The amount of work performed by the second kernel depends on the number of thread blocks used in the first kernel.",
+            "startOffset": 92144,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 52053,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Because of the important role of code generators in auto-tuning, Kernel Tuner allows users to supply their code using both source files and/or code generators.",
+            "startOffset": 51894,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67307,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This section explains how Kernel Tuner enables test-driven development of tunable GPU code.",
+            "startOffset": 67216,
+            "title": "Impact on software development"
+        },
+        {
+            "endOffset": 76417,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "In addition, we see that there is also an increase in benchmarked configurations with lower performance.",
+            "startOffset": 76313,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 66891,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This backend was created to be able to tune C functions, but more importantly to tune C functions that also launch GPU kernels, enabling the combined tuning of host and device code.",
+            "startOffset": 66710,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 47792,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The tuner takes care of compiling and benchmarking the kernels and automates the search for the best performing kernel configuration.",
+            "startOffset": 47659,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62939,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In our case, individuals are kernel configurations and fitness is determined by measuring the kernel execution time.",
+            "startOffset": 62823,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 45876,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The process of automatically searching for the combination of parameter values that results in the best performance is known as auto-tuning.",
+            "startOffset": 45736,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55827,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "run_kernel simply compiles and executes a specific kernel configuration.",
+            "startOffset": 55755,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 79767,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "In this way, it is possible to overlap the data transfers from host to device with kernel execution, and with transfers from device back to host.",
+            "startOffset": 79622,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 85428,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Except for Powell and COBYLA, which are both capable of finding the global optimum.",
+            "startOffset": 85345,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 71151,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The host system containing the GTX Titan X consists of a dual 8-core 2.4 GHz (Intel Haswell E5-2630-v3) CPU, 64 GB memory, and a PCI-e 3.0 interconnect.",
+            "startOffset": 70999,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 75863,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The minimize strategy uses any of the supported solvers directly, without additional mitigation strategies, such as basin hopping, to avoid local minima.",
+            "startOffset": 75710,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 88466,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The complete search space consists of 8184 kernel configurations.",
+            "startOffset": 88401,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 48226,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this paper, we use the following terminology.",
+            "startOffset": 48178,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74116,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Reading input data through the read-only cache on supporting GPUs",
+            "startOffset": 74051,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 56209,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, instead of a specific kernel configuration, the user supplies the set of possible values for each tunable parameter of the kernel.",
+            "startOffset": 56070,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 63973,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We have applied several techniques to make these algorithms work for tuning GPU kernels.",
+            "startOffset": 63885,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 78612,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The same is true for the genetic algorithm and simulated annealing strategies, which both find increasingly better performing configurations at the cost of strongly increasing tuning times.",
+            "startOffset": 78423,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 64580,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "For some dimensions an even smaller interval may be used, to ensure that a single epsilon value can be used to change from one configuration to the next in any dimension.",
+            "startOffset": 64410,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 65670,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Table 1 provides an overview of the parameters used by each strategy by default.",
+            "startOffset": 65590,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 69178,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Note that the exact same Python code can be used to test a CUDA kernel, as the tuner automatically detects the kernel language and selects the right backend.",
+            "startOffset": 69021,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 92634,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "Because parallel sum reduction is a bandwidth-bound operation, we express performance in terms of the achieved memory bandwidth in GB/s.",
+            "startOffset": 92498,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 76514,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "However, the average performance of the benchmarked configurations is roughly in the same order.",
+            "startOffset": 76418,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 93490,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We have introduced Kernel Tuner, a Python-based tool for auto-tuning CUDA, OpenCL, and C kernels.",
+            "startOffset": 93393,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 59838,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We are using all solvers with their default parameter settings to avoid any bias towards specific kernels.",
+            "startOffset": 59732,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 70998,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The GTX Titan X of the Maxwell architecture features 3072 CUDA Cores at 1.08 GHz, and 12 GB of device memory with 336.48 GB/s peak memory bandwidth.",
+            "startOffset": 70850,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 73773,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 73772,
+                    "startOffset": 73768
+                }
+            },
+            "secId": "sec5.2",
+            "sentence": "In earlier work, we have implemented an optimized GPU-accelerated library for 2D convolution operations [12].",
+            "startOffset": 73664,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 87547,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "As such, the problem sizes expected for this application range in millions of points and polygons defined by several hundreds of vertices.",
+            "startOffset": 87409,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 66330,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b43": {
+                    "endOffset": 66246,
+                    "startOffset": 66242
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "Alternatively, the Noodles runner can be used, which is a parallel runner that uses the Noodles workflow engine [43] to parallelize the process of compiling and benchmarking the kernel configurations.",
+            "startOffset": 66130,
+            "title": "Runners and backends"
+        },
+        {
+            "endOffset": 86588,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The best performing strategy is basin hopping with the COBYLA solver, for which the best performing configuration achieved 6410.81 GFLOP/s on average, and was found in only 10.58 s on average.",
+            "startOffset": 86396,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 54175,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 54100,
+                    "startOffset": 54097
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Nugteren and Codreanu [2] implemented simulated annealing and particle swarm optimization in CLTune.",
+            "startOffset": 54075,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68099,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Note that this level of abstraction is significantly higher than using PyCuda or PyOpenCL directly, which is already more high-level than using CUDA or OpenCL directly from C and C++.",
+            "startOffset": 67916,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 73926,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Using padding in shared memory to avoid bank conflicts",
+            "startOffset": 73872,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 82992,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Together these tunable parameters describe a very large space of which many portions are restricted as well.",
+            "startOffset": 82884,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 53531,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Auto-tuning applications have therefore started to apply machine learning techniques and metaheuristics to reduce the time spent tuning.",
+            "startOffset": 53395,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48403,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Code optimizations are changes in the kernel code made by the programmer that aim to improve kernel performance, while optimization refers to the search performed by the tuner.",
+            "startOffset": 48227,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46025,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 46024,
+                    "startOffset": 46021
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For some GPU algorithms, there is a very small subset of outliers that yield substantially better performance than the rest of the search space [5].",
+            "startOffset": 45877,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62822,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Individuals with better fitness have a higher chance of producing offspring for the next generation, which happens using crossover and mutation.",
+            "startOffset": 62678,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 73871,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Using shared memory as a software managed cache",
+            "startOffset": 73824,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 91156,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The second kernel is launched with only one thread block to combine all the block-wide partial sums into a single sum for the entire input.",
+            "startOffset": 91017,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 45394,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "For most programs, there are many possible values for each dimension that do not violate program correctness, but may yield very different performance.",
+            "startOffset": 45243,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56069,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "tune_kernel has, for the most part, the same interface as run_kernel.",
+            "startOffset": 56000,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 54935,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "We have also implemented several global optimization algorithms for comparison, including simulated annealing, particle swarm optimization, and a genetic algorithm.",
+            "startOffset": 54771,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49616,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 49562,
+                    "startOffset": 49558
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The OSKI [19] library takes a similar approach for sparse matrices.",
+            "startOffset": 49549,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 92921,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "Table 6 shows the best performing kernel configurations when only considering the first kernel, and when taking both the first and the second kernel into account.",
+            "startOffset": 92759,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 64145,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "First of all, whenever a strategy selects a variable in a continuous multidimensional space, we snap that variable to the nearest kernel configuration in our problem space.",
+            "startOffset": 63973,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 71844,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Because several of the search algorithms are stochastic we have tuned each kernel 32 times and display the distribution of the data collected from all 32 runs.",
+            "startOffset": 71685,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 86100,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The global optimization methods, shown in Fig. 7d, all outperform random search and find near-optimal kernel configurations.",
+            "startOffset": 85976,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 59310,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Random sample, simply takes a random sample of the search space according to a user-defined fraction.",
+            "startOffset": 59209,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 70378,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We have included 2D Convolution, Matrix Multiplication (GEMM), and Point-in-Polygon as examples of CUDA, OpenCL, and heterogeneous (CUDA + C host code) kernels, respectively.",
+            "startOffset": 70204,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 87075,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b45": {
+                    "endOffset": 87074,
+                    "startOffset": 87070
+                }
+            },
+            "secId": "sec5.5",
+            "sentence": "Point-in-Polygon is a well-known problem for which multiple algorithms have been proposed over the years, some already as early as \u201960s [45].",
+            "startOffset": 86934,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 67215,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "However, we find that rather than being used at the very end of the development process, Kernel Tuner actually plays a central role in the development of tunable GPU code.",
+            "startOffset": 67044,
+            "title": "Impact on software development"
+        },
+        {
+            "endOffset": 73989,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Using different tiling factors for different filter dimensions",
+            "startOffset": 73927,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 80875,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Table 3 shows the best performing configuration for each number of streams.",
+            "startOffset": 80800,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 70203,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this evaluation, we present a selection of the applications for which we have used Kernel Tuner.",
+            "startOffset": 70104,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 85084,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Table 4 lists the performance of the best performing strategies and methods.",
+            "startOffset": 85008,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 64242,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "At this point, we check again whether any user-defined restrictions apply to that configuration.",
+            "startOffset": 64146,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 68730,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The code in Fig. 2 creates two small input arrays (a and b) and a zeroed output array (c).",
+            "startOffset": 68640,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 70093,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Therefore, the tuner supports the option of passing user-defined functions that perform the output verification during parameterized testing of tunable kernels.",
+            "startOffset": 69933,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 88661,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The input dimensions used are 20 million points and a polygon defined by 600 vertices.",
+            "startOffset": 88575,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 85659,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "However, when combined with basin hopping we can see that all methods are capable of finding near-optimal configurations, and in particular Powell and COBYLA have a high probability of returning near-optimal kernel configurations.",
+            "startOffset": 85429,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 55531,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The device function interface presents a single interface that is implemented by the different backends in the bottom layer.",
+            "startOffset": 55407,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 59731,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Note that all of these solvers have their own stopping criteria and decide on their own when the search process is terminated.",
+            "startOffset": 59605,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 63427,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The algorithm starts using a randomly initialized swarm of fireflies, which start to move towards other fireflies in the swarm that have higher attractiveness.",
+            "startOffset": 63268,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 65509,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Therefore, we cache the measured execution time of already evaluated configurations within a single tuning session.",
+            "startOffset": 65394,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 92759,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The results have been obtained with a problem size of 800 million single-precision floating-point values on the GTX Titan X.",
+            "startOffset": 92635,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 57049,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The tuner computes the grid dimensions by dividing the problem size in each dimension with the grid divisors in that dimension.",
+            "startOffset": 56922,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 78422,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Particle swarm optimization (PSO) is able to find even better performing configurations, with an average best performance of 3832.81 GFLOP/s, but also takes almost twice as long.",
+            "startOffset": 78244,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 88213,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The kernel is heterogeneous in the sense that it can use both the CPU and GPU for computations.",
+            "startOffset": 88118,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 56463,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "kernel_source one or more strings and/or functions",
+            "startOffset": 56413,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 55912,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "It also takes care of GPU memory allocations and copying to and from the GPU memory.",
+            "startOffset": 55828,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 67496,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Software testing and test-driven development are common software engineering practices that have yet to become mainstream in GPU application development.",
+            "startOffset": 67343,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 70849,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The performance results have been obtained using the NVidia GTX Titan X GPU and the AMD Radeon Vega Frontier Edition.",
+            "startOffset": 70732,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 84866,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "While a brute force search takes 1987.47 s, basin hopping with SLSQP, which consistently returns configurations with performance above of 4550 GFLOP/s, only takes 44.8 s, an improvement by a factor of 44.4 with regard to the time spent tuning.",
+            "startOffset": 84623,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 69932,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This is often the case when developing a pipeline of tunable kernels.",
+            "startOffset": 69863,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 77534,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "However, the time spent on tuning the kernel with a certain strategy, as well as the number of benchmarked configurations, is different for each method.",
+            "startOffset": 77382,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 93625,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The goal was to develop a comprehensive solution to the problem of auto-tuning GPU applications that is both flexible and easy to use.",
+            "startOffset": 93491,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 49459,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 49349,
+                    "startOffset": 49345
+                }
+            },
+            "secId": "sec2",
+            "sentence": "PHiPAC [17], introduced in 1997, used auto-tuning to automatically generate near-optimal code for matrix multiplications.",
+            "startOffset": 49338,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 69573,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "To this end, the tuner supports the option to verify the output of every kernel it compiles and benchmarks during tuning.",
+            "startOffset": 69452,
+            "title": "Developing tunable code"
+        },
+        {
+            "endOffset": 78243,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The performance of the best performing configuration is 3705.42 GFLOP/s on average, which took 119.19 s on average to find, an improvement of 31.7\u00d7 over brute force search.",
+            "startOffset": 78071,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 79543,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "We use the above 2D convolution kernel in combination with host code written in C.",
+            "startOffset": 79461,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 45736,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 45735,
+                    "startOffset": 45730
+                },
+                "b2": {
+                    "endOffset": 45735,
+                    "startOffset": 45730
+                },
+                "b3": {
+                    "endOffset": 45735,
+                    "startOffset": 45730
+                },
+                "b4": {
+                    "endOffset": 45735,
+                    "startOffset": 45730
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Considering all possible combinations of values for all different parameters can result in a very large and discontinuous search space [1\u20134].",
+            "startOffset": 45595,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61972,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 61852,
+                    "startOffset": 61848
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Particle Swarm Optimization (PSO) [40] uses a swarm of particles with randomly initialized positions to find the optimal position in a multidimensional space.",
+            "startOffset": 61814,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 94006,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The evaluation shows that the search strategies implemented in the tuner can drastically decrease the time spent tuning, compared to a brute force search.",
+            "startOffset": 93852,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 91669,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "An important difference however is that the total number of thread blocks that execute the kernel has become a tunable parameter.",
+            "startOffset": 91540,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 57481,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In these situations, the grid dimensions themselves become tunable parameters.",
+            "startOffset": 57403,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 63040,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Crossover is implemented such that two individuals crossover at a randomly selected crossover point.",
+            "startOffset": 62940,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 47918,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This paper introduces the application of many new solvers and global optimization algorithms for auto-tuning GPU applications.",
+            "startOffset": 47792,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50554,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Finding the best performing kernel configuration often means trading resource usage in some category for another, or between stages in the algorithm.",
+            "startOffset": 50405,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55295,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The strategies implement the search optimization to use during tuning.",
+            "startOffset": 55225,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 87677,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The parallelization we use here is that threads compute for one or more points whether they are inside or outside of the polygon.",
+            "startOffset": 87548,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 49548,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 49470,
+                    "startOffset": 49466
+                }
+            },
+            "secId": "sec2",
+            "sentence": "ATLAS [18] uses auto-tuning to implement highly-optimized dense linear algebra routines.",
+            "startOffset": 49460,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 55406,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The runners are responsible for compiling and benchmarking the kernel configurations selected by the strategy.",
+            "startOffset": 55296,
+            "title": "Design and implementation"
+        },
+        {
+            "endOffset": 65814,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These parameters are in most cases the default parameters that are recommended by the authors of the algorithm or in the literature in general.",
+            "startOffset": 65671,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 90800,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The reduction operation consists of two kernels.",
+            "startOffset": 90752,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 48836,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "A kernel configuration is a specific instance of the kernel within the search space, created by selecting a specific value for each of the tunable parameters.",
+            "startOffset": 48678,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59543,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "refoffsets": {
+                "b31": {
+                    "endOffset": 59470,
+                    "startOffset": 59466
+                },
+                "b32": {
+                    "endOffset": 59483,
+                    "startOffset": 59479
+                },
+                "b33": {
+                    "endOffset": 59492,
+                    "startOffset": 59488
+                },
+                "b34": {
+                    "endOffset": 59513,
+                    "startOffset": 59509
+                },
+                "b35": {
+                    "endOffset": 59526,
+                    "startOffset": 59522
+                },
+                "b36": {
+                    "endOffset": 59542,
+                    "startOffset": 59538
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Currently supported solvers are Nelder\u2013Mead [31], Powell [32], CG [33], BFGS, L-BFGS-B [34], COBYLA [35], and SLSQP [36].",
+            "startOffset": 59422,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 79252,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This way, communication in one stream can be overlapped with computation, and with communication in the opposite direction in other streams.",
+            "startOffset": 79112,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 46602,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 46601,
+                    "startOffset": 46593
+                },
+                "b2": {
+                    "endOffset": 46601,
+                    "startOffset": 46593
+                },
+                "b3": {
+                    "endOffset": 46601,
+                    "startOffset": 46593
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Therefore, several efforts have been made to create generic auto-tuners [2,3,13].",
+            "startOffset": 46521,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48883,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The rest of this paper is organized as follows.",
+            "startOffset": 48836,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56307,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In addition, many optional parameters can be passed to tune_kernel to control the tuning process.",
+            "startOffset": 56210,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 67043,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A typical use of auto-tuners is to tune a program towards a specific intended execution platform right before deployment.",
+            "startOffset": 66922,
+            "title": "Impact on software development"
+        },
+        {
+            "endOffset": 56412,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "kernel_name name of the kernel as a string",
+            "startOffset": 56370,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 60464,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "For example, a code optimization like tiling or partial loop unrolling could increase performance while also increasing resource usage, until a particular threshold is reached that reduces parallelism, due to the dynamic partitioning of resources on the GPU, and therefore reduces performance.",
+            "startOffset": 60171,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 85344,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Results from the minimize strategy (Fig. 7a) show that most of the solvers get stuck quickly in a local minimum if used in isolation.",
+            "startOffset": 85211,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 83476,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Fig. 5 presents the performance distributions of the kernel configurations visited by the different strategies for tuning the GEMM kernel on the GTX Titan X. Looking at the distribution of configurations evaluated by the brute force strategy, we again see a rather narrow peak towards configurations that have very good performance.",
+            "startOffset": 83144,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 46237,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "There is a clear need for auto-tuning in performance critical GPU applications.",
+            "startOffset": 46158,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50404,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "GPUs support different memory spaces that may be exploited by algorithms in different ways and at different stages in the kernel.",
+            "startOffset": 50275,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52562,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 52495,
+                    "startOffset": 52491
+                }
+            },
+            "secId": "sec2",
+            "sentence": "A similar model-based approach is taken by Xu et al. [29] to predict the best performing loop schedule for OpenACC programs.",
+            "startOffset": 52438,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 73204,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "In addition, we want the top of the distribution to be as high as that of the whole search space, meaning that high-performing kernel configurations are found during the search.",
+            "startOffset": 73027,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 75330,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "From these distributions we can learn a lot about which kernel configurations are selected for benchmarking during the search through the parameter space.",
+            "startOffset": 75176,
+            "title": "2D convolution"
+        },
+        {
+            "endOffset": 80800,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This way we are able to tune the number of streams in combination with the tunable parameters inside the kernel code.",
+            "startOffset": 80683,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 91296,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "The number of thread blocks (only in the first kernel)",
+            "startOffset": 91242,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 47109,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We believe this is because it is too hard and too much work to use the existing tools, which in turn have limited functionality.",
+            "startOffset": 46981,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59604,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "It is also possible for the user to supply their own solver.",
+            "startOffset": 59544,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 72629,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Note that random search should follow the distribution of the whole search space and is therefore not shown separately.",
+            "startOffset": 72510,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 51401,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As such, code generators are often used to generate the kernel code for a specific kernel configuration based on the tunable parameters of the kernel.",
+            "startOffset": 51251,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58699,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The strategies are responsible for selecting kernel configurations from the search space that will be compiled and benchmarked by the runners.",
+            "startOffset": 58557,
+            "title": "Strategies"
+        },
+        {
+            "endOffset": 67638,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Impact on software development"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Kernel Tuner allows programmers to implement unit tests for GPU kernels in a user-friendly manner, primarily through the run_kernel function.",
+            "startOffset": 67497,
+            "title": "Test-driven GPU code optimization"
+        },
+        {
+            "endOffset": 51144,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 50933,
+                    "startOffset": 50929
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Nukada and Matusuoka [23] have implemented an optimized 3D FFT library in CUDA using auto-tuning for selecting the best radix factors, the number of thread blocks, and different schemes for padding shared memory to avoid bank conflicts.",
+            "startOffset": 50908,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 90391,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.6",
+            "sentence": "This section demonstrates the capability of the tuner to auto-tune pipelines that consist of multiple kernels.",
+            "startOffset": 90281,
+            "title": "Tuning a pipeline of kernels"
+        },
+        {
+            "endOffset": 53164,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 53107,
+                    "startOffset": 53103
+                },
+                "b2": {
+                    "endOffset": 53123,
+                    "startOffset": 53120
+                },
+                "b3": {
+                    "endOffset": 53091,
+                    "startOffset": 53088
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Because of the general applicability of empirical tuning, many generic auto-tuners including Maestro [3], OpenTuner [13], and CLTune [2], use empirical performance benchmarking.",
+            "startOffset": 52987,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 54304,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "However, in these three studies the authors found that simply using random search was more effective than most other algorithms.",
+            "startOffset": 54176,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 88117,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "The benefit of this scheme is that all data transfers from host to device, as well as from device to host, are overlapped with computation on the GPU.",
+            "startOffset": 87967,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 90173,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "Combined with Powell or with COBYLA, basin hopping provides a speedup over brute force search, which took 14658.46 s, of 251\u00d7 or 68.6\u00d7, respectively.",
+            "startOffset": 90024,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 86838,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In terms of performance, the differential evolution strategy is also very competitive with performance and execution time close to that of basin hopping with COBYLA.",
+            "startOffset": 86673,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 89270,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.5",
+            "sentence": "This search space is particularly difficult, as only 22 (0.26%) of the configurations have performance higher than 700 MPoints/s, of which only 6 above of 710 MPoints/s.",
+            "startOffset": 89101,
+            "title": "Point-in-polygon"
+        },
+        {
+            "endOffset": 71288,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The AMD Radeon Vega Frontier Edition has 4096 stream processors at 1.60 GHz, 16 GB of memory with a peak memory bandwidth of 483.8 GB/s.",
+            "startOffset": 71152,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 81317,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Simply taking the best performing configuration when not using streams and use that kernel in a setting with multiple streams would not result in optimal performance.",
+            "startOffset": 81151,
+            "title": "Tuning communication\u2013computation overlap"
+        },
+        {
+            "endOffset": 85839,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Evaluation"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "The basin hopping strategy outperforms random search for each method tested, as the average performance of benchmarked configurations is higher than that of the whole search space.",
+            "startOffset": 85659,
+            "title": "Matrix multiplication (GEMM)"
+        },
+        {
+            "endOffset": 56822,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The kernel_source can be a string containing the code, or a filename of the file containing the code, or it can be function that generates the code based on the tunable parameters.",
+            "startOffset": 56642,
+            "title": "User interface"
+        },
+        {
+            "endOffset": 58925,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design and implementation"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This may seem inefficient, but for very simple kernels iterating over the whole search space can be done in a reasonable amount of time.",
+            "startOffset": 58789,
+            "title": "Strategies"
+        }
+    ],
+    "docId": "S0167739X18313359",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "b.vanwerkhoven@esciencecenter.nl",
+                "first": "Ben",
+                "initial": "B.",
+                "last": "van Werkhoven"
+            }
+        ],
+        "doi": "10.1016/j.future.2018.08.004",
+        "firstpage": "347",
+        "issn": "0167739X",
+        "keywords": [
+            "Auto-tuning",
+            "GPU computing",
+            "Parallel programming",
+            "Performance optimization",
+            "Software development"
+        ],
+        "lastpage": "358",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Kernel Tuner: A search-optimizing GPU code auto-tuner"
+    }
+}

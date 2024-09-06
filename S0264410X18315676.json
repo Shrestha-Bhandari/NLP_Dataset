@@ -1,0 +1,2135 @@
+{
+    "abstract": "Background and objectives: Over the last decades, medicinal regulations have been put into place and have considerably improved manufacturing practices. Nevertheless, safety issues may still arise. Using the simulation described in this manuscript, our aim is to develop adequate detection methods for manufacturing-related safety signals, especially in the context of biological products. Methods: Pharmaceutical companies record the entire batch genealogies, from seed batches over intermediates to final product (FP) batches. We constructed a hierarchical tree based on this genealogy information and linked it to the spontaneous safety data available for the FP batch numbers. The tree-based scan statistic (TBSS) was used on simulated data as a proof of concept to locate the source that may have subsequently generated an excess of specific adverse events (AEs) within the manufacturing steps, and to evaluate the method's adjustment for multiple testing. All calculations were performed with a customized program in SAS v9.2. Results: The TBSS generated a close to expected number of false positive signals, demonstrating that it adjusted for multiple testing. Overall, the method detected 71% of the simulated signals at the correct production step when a 6-fold increase in reports with AEs of interest (AEOI) was applied, and 31% when a 2-fold increase was applied. The relatively low detection performance may be attributed to the higher granularity associated with the lower levels of the hierarchy, leading to a lack of power and the stringent definition criteria that were applied for a true positive result. Conclusion: As a data-mining method for manufacturing-related safety signal detection, the TBSS may provide advantages over other disproportionality analyses (using batch information) but may benefit from complementary methods (not relaying on batch information). While the method warrants further refinement, it may improve safety signal detection and contribute to improvements in the quality of manufacturing processes.",
+    "author_highlights": [
+        {
+            "endOffset": 7736,
+            "sentence": "Tree-based scan statistic as a detection tool for production-related safety signals.",
+            "startOffset": 7652
+        },
+        {
+            "endOffset": 7811,
+            "sentence": "Controls the number of false positives by adjustment for multiple testing.",
+            "startOffset": 7737
+        },
+        {
+            "endOffset": 7893,
+            "sentence": "Vaccine-specific method performing well especially in higher hierarchical levels.",
+            "startOffset": 7812
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "Lionel",
+                    "initial": "L.",
+                    "last": "Van Holle"
+                },
+                {
+                    "first": "Ziad",
+                    "initial": "Z.",
+                    "last": "Zeinoun"
+                },
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Bauchau"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Verstraeten"
+                }
+            ],
+            "doi": "10.1002/pds.3226",
+            "firstpage": "603",
+            "issn": "10538569",
+            "lastpage": "610",
+            "pmid": "22383219",
+            "pub_year": 2012,
+            "title": "Using time-to-onset for detecting safety signals in spontaneous reports of adverse events following immunization: A proof of concept study",
+            "volume": "21"
+        },
+        "b0010": {
+            "authors": [
+                {
+                    "first": "Ola",
+                    "initial": "O.",
+                    "last": "Caster"
+                },
+                {
+                    "first": "Kristina",
+                    "initial": "K.",
+                    "last": "Juhlin"
+                },
+                {
+                    "first": "Sarah",
+                    "initial": "S.",
+                    "last": "Watson"
+                },
+                {
+                    "first": "G. Niklas",
+                    "initial": "G.N.",
+                    "last": "Nor\u00e9n"
+                }
+            ],
+            "doi": "10.1007/s40264-014-0204-5",
+            "firstpage": "617",
+            "issn": "01145916",
+            "lastpage": "628",
+            "pmid": "25052742",
+            "pub_year": 2014,
+            "title": "Improved statistical signal detection in pharmacovigilance by combining multiple strength-of-evidence aspects in vigiRank: Retrospective evaluation against emerging safety signals",
+            "volume": "37"
+        },
+        "b0015": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Harpaz"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Dumouchel"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Lependu"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Bauer-Mehren"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Ryan"
+                },
+                {
+                    "first": "N. H.",
+                    "initial": "N.H.",
+                    "last": "Shah"
+                }
+            ],
+            "doi": "10.1038/clpt.2013.24",
+            "firstpage": "539",
+            "issn": "00099236",
+            "lastpage": "546",
+            "pmid": "23571771",
+            "pub_year": 2013,
+            "title": "Performance of pharmacovigilance signal-detection algorithms for the FDA adverse event reporting system",
+            "volume": "93"
+        },
+        "b0020": {
+            "authors": [
+                {
+                    "first": "Lionel",
+                    "initial": "L.",
+                    "last": "Van Holle"
+                },
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Bauchau"
+                }
+            ],
+            "doi": "10.1007/s40264-014-0237-9",
+            "firstpage": "1047",
+            "issn": "01145916",
+            "lastpage": "1057",
+            "pmid": "25395263",
+            "pub_year": 2014,
+            "title": "Use of Logistic Regression to Combine Two Causality Criteria for Signal Detection in Vaccine Spontaneous Report Data",
+            "volume": "37"
+        },
+        "b0025": {
+            "authors": [
+                {
+                    "first": "Gianmario",
+                    "initial": "G.",
+                    "last": "Candore"
+                },
+                {
+                    "first": "Kristina",
+                    "initial": "K.",
+                    "last": "Juhlin"
+                },
+                {
+                    "first": "Katrin",
+                    "initial": "K.",
+                    "last": "Manlik"
+                },
+                {
+                    "first": "Bharat",
+                    "initial": "B.",
+                    "last": "Thakrar"
+                },
+                {
+                    "first": "Naashika",
+                    "initial": "N.",
+                    "last": "Quarcoo"
+                },
+                {
+                    "first": "Suzie",
+                    "initial": "S.",
+                    "last": "Seabroke"
+                },
+                {
+                    "first": "Antoni",
+                    "initial": "A.",
+                    "last": "Wisniewski"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Slattery"
+                }
+            ],
+            "doi": "10.1007/s40264-015-0289-5",
+            "firstpage": "577",
+            "issn": "01145916",
+            "lastpage": "587",
+            "pmid": "25899605",
+            "pub_year": 2015,
+            "title": "Comparison of statistical signal detection methods within and across spontaneous reporting databases",
+            "volume": "38"
+        },
+        "b0030": {
+            "authors": [
+                {
+                    "first": "W. Katherine",
+                    "initial": "W.K.",
+                    "last": "Yih"
+                },
+                {
+                    "first": "Judith C.",
+                    "initial": "J.C.",
+                    "last": "Maro"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Nguyen"
+                },
+                {
+                    "first": "Meghan A.",
+                    "initial": "M.A.",
+                    "last": "Baker"
+                },
+                {
+                    "first": "Carolyn",
+                    "initial": "C.",
+                    "last": "Balsbaugh"
+                },
+                {
+                    "first": "David V.",
+                    "initial": "D.V.",
+                    "last": "Cole"
+                },
+                {
+                    "first": "Inna",
+                    "initial": "I.",
+                    "last": "Dashevsky"
+                },
+                {
+                    "first": "Adamma",
+                    "initial": "A.",
+                    "last": "Mba-Jonas"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Kulldorff"
+                }
+            ],
+            "doi": "10.1093/aje/kwy023",
+            "firstpage": "1269",
+            "issn": "00029262",
+            "lastpage": "1276",
+            "pmid": "29860470",
+            "pub_year": 2018,
+            "title": "Assessment of Quadrivalent Human Papillomavirus Vaccine Safety Using the Self-Controlled Tree-Temporal Scan Statistic Signal-Detection Method in the Sentinel System",
+            "volume": "187"
+        },
+        "b0035": null,
+        "b0040": {
+            "authors": [
+                {
+                    "first": "J. Gordon",
+                    "initial": "J.G.",
+                    "last": "Frierson"
+                }
+            ],
+            "firstpage": "77",
+            "issn": "00440086",
+            "lastpage": "85",
+            "pmid": "20589188",
+            "pub_year": 2010,
+            "title": "The yellow fever vaccine: A history",
+            "volume": "83"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "Neal",
+                    "initial": "N.",
+                    "last": "Nathanson"
+                },
+                {
+                    "first": "Alexander D.",
+                    "initial": "A.D.",
+                    "last": "Langmuir"
+                }
+            ],
+            "firstpage": "109",
+            "issn": "00029262",
+            "lastpage": "140",
+            "pmid": "7598112",
+            "pub_year": 1995,
+            "title": "The cutter incident: Poliomyelitis following fobmaldehybe-inactivated poliovirus vaocination in the United States during the Spring of 1955: II. Relationship of poliomyelitis to Cutteb vaccine",
+            "volume": "142"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "Iain C.",
+                    "initial": "I.C.",
+                    "last": "MacDougall"
+                },
+                {
+                    "first": "Simon D.",
+                    "initial": "S.D.",
+                    "last": "Roger"
+                },
+                {
+                    "first": "Angel",
+                    "initial": "A.",
+                    "last": "De Francisco"
+                },
+                {
+                    "first": "David J.A.",
+                    "initial": "D.J.A.",
+                    "last": "Goldsmith"
+                },
+                {
+                    "first": "Huub",
+                    "initial": "H.",
+                    "last": "Schellekens"
+                },
+                {
+                    "first": "Hans",
+                    "initial": "H.",
+                    "last": "Ebbers"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "Jelkmann"
+                },
+                {
+                    "first": "G\u00e9rard",
+                    "initial": "G.",
+                    "last": "London"
+                },
+                {
+                    "first": "Nicole",
+                    "initial": "N.",
+                    "last": "Casadevall"
+                },
+                {
+                    "first": "Walter H.",
+                    "initial": "W.H.",
+                    "last": "H\u00f6rl"
+                },
+                {
+                    "first": "David M.",
+                    "initial": "D.M.",
+                    "last": "Kemeny"
+                },
+                {
+                    "first": "Carol",
+                    "initial": "C.",
+                    "last": "Pollock"
+                }
+            ],
+            "doi": "10.1038/ki.2011.500",
+            "firstpage": "727",
+            "issn": "00852538",
+            "lastpage": "732",
+            "pub_year": 2012,
+            "title": "Antibody-mediated pure red cell aplasia in chronic kidney disease patients receiving erythropoiesis-stimulating agents: New insights",
+            "volume": "81"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Katia",
+                    "initial": "K.",
+                    "last": "Boven"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Stryker"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Knight"
+                },
+                {
+                    "first": "Adrian",
+                    "initial": "A.",
+                    "last": "Thomas"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Van Regenmortel"
+                },
+                {
+                    "first": "David M.",
+                    "initial": "D.M.",
+                    "last": "Kemeny"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Power"
+                },
+                {
+                    "first": "Jerome",
+                    "initial": "J.",
+                    "last": "Rossert"
+                },
+                {
+                    "first": "Nicole",
+                    "initial": "N.",
+                    "last": "Casadevall"
+                }
+            ],
+            "doi": "10.1111/j.1523-1755.2005.00340.x",
+            "firstpage": "2346",
+            "issn": "00852538",
+            "lastpage": "2353",
+            "pmid": "15882278",
+            "pub_year": 2005,
+            "title": "The increased incidence of pure red cell aplasia with an Eprex formulation in uncoated rubber stopper syringes",
+            "volume": "67"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "James L.",
+                    "initial": "J.L.",
+                    "last": "Weaver"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Boyne"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Pang"
+                },
+                {
+                    "first": "Krishna",
+                    "initial": "K.",
+                    "last": "Chimalakonda"
+                },
+                {
+                    "first": "Kristina E.",
+                    "initial": "K.E.",
+                    "last": "Howard"
+                }
+            ],
+            "doi": "10.1016/j.taap.2015.06.009",
+            "firstpage": "246",
+            "issn": "0041008X",
+            "lastpage": "252",
+            "pmid": "26079829",
+            "pub_year": 2015,
+            "title": "Nonclinical evaluation of the potential for mast cell activation by an erythropoietin analog",
+            "volume": "287"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Charles L.",
+                    "initial": "C.L.",
+                    "last": "Bennett"
+                },
+                {
+                    "first": "Sony",
+                    "initial": "S.",
+                    "last": "Jacob"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Hymes"
+                },
+                {
+                    "first": "Len A.",
+                    "initial": "L.A.",
+                    "last": "Usvyat"
+                },
+                {
+                    "first": "Franklin W.",
+                    "initial": "F.W.",
+                    "last": "Maddux"
+                }
+            ],
+            "doi": "10.1056/NEJMc1400883",
+            "firstpage": "2055",
+            "issn": "00284793",
+            "lastpage": "2056",
+            "pmid": "24849101",
+            "pub_year": 2014,
+            "title": "Anaphylaxis and hypotension after administration of peginesatide",
+            "volume": "370"
+        },
+        "b0070": null,
+        "b0075": null,
+        "b0080": {
+            "authors": [
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Dumouchel"
+                },
+                {
+                    "first": "Nancy",
+                    "initial": "N.",
+                    "last": "Yuen"
+                },
+                {
+                    "first": "Nassrin",
+                    "initial": "N.",
+                    "last": "Payvandi"
+                },
+                {
+                    "first": "Wendy",
+                    "initial": "W.",
+                    "last": "Booth"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Rut"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Fram"
+                }
+            ],
+            "doi": "10.1080/10543406.2013.736809",
+            "firstpage": "161",
+            "issn": "10543406",
+            "lastpage": "177",
+            "pmid": "23331229",
+            "pub_year": 2013,
+            "title": "Automated method for detecting increases in frequency of spontaneous adverse event reports over time",
+            "volume": "23"
+        },
+        "b0085": {
+            "authors": [
+                {
+                    "first": "Eugne P.",
+                    "initial": "E.P.",
+                    "last": "Van Puijenbroek"
+                },
+                {
+                    "first": "Nancy",
+                    "initial": "N.",
+                    "last": "Broos"
+                },
+                {
+                    "first": "Kees",
+                    "initial": "K.",
+                    "last": "Van Grootheest"
+                }
+            ],
+            "doi": "10.2165/11539270-000000000-00000",
+            "firstpage": "1097",
+            "issn": "01145916",
+            "lastpage": "1108",
+            "pmid": "21077700",
+            "pub_year": 2010,
+            "title": "Monitoring adverse events of the vaccination campaign against influenza A (H1N1) in the Netherlands",
+            "volume": "33"
+        },
+        "b0090": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Purcell"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Barty"
+                }
+            ],
+            "doi": "10.2165/00002018-200225060-00005",
+            "firstpage": "415",
+            "issn": "01145916",
+            "lastpage": "421",
+            "pmid": "12071778",
+            "pub_year": 2002,
+            "title": "Statistical techniques for signal generation: The Australian experience",
+            "volume": "25"
+        },
+        "b0095": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Kulldorff"
+                },
+                {
+                    "first": "Zixing",
+                    "initial": "Z.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Walsh"
+                }
+            ],
+            "doi": "10.1111/1541-0420.00039",
+            "firstpage": "323",
+            "issn": "0006341X",
+            "lastpage": "331",
+            "pmid": "12926717",
+            "pub_year": 2003,
+            "title": "A tree-based scan statistic for database disease surveillance",
+            "volume": "59"
+        },
+        "b0100": {
+            "authors": [
+                {
+                    "first": "Dae Soon",
+                    "initial": "D.S.",
+                    "last": "Son"
+                },
+                {
+                    "first": "Dong Hyuk",
+                    "initial": "D.H.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Kyusang",
+                    "initial": "K.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Sin Ho",
+                    "initial": "S.H.",
+                    "last": "Jung"
+                },
+                {
+                    "first": "Taejin",
+                    "initial": "T.",
+                    "last": "Ahn"
+                },
+                {
+                    "first": "Eunjin",
+                    "initial": "E.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Insuk",
+                    "initial": "I.",
+                    "last": "Sohn"
+                },
+                {
+                    "first": "Jongsuk",
+                    "initial": "J.",
+                    "last": "Chung"
+                },
+                {
+                    "first": "Woongyang",
+                    "initial": "W.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Nam",
+                    "initial": "N.",
+                    "last": "Huh"
+                },
+                {
+                    "first": "Jae Won",
+                    "initial": "J.W.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1016/j.jbi.2014.12.010",
+            "firstpage": "355",
+            "issn": "15320464",
+            "lastpage": "362",
+            "pmid": "25555898",
+            "pub_year": 2015,
+            "title": "Practical approach to determine sample size for building logistic prediction models using high-throughput data",
+            "volume": "53"
+        },
+        "b0105": null,
+        "b0110": {
+            "authors": [
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Bate"
+                },
+                {
+                    "first": "S. J.W.",
+                    "initial": "S.J.W.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.1002/pds.1742",
+            "firstpage": "427",
+            "issn": "10538569",
+            "lastpage": "436",
+            "pmid": "19358225",
+            "pub_year": 2009,
+            "title": "Quantitative signal detection using spontaneous ADR reporting",
+            "volume": "18"
+        },
+        "b0115": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Kulldorff"
+                }
+            ],
+            "doi": "10.1111/1467-985X.00186",
+            "firstpage": "61",
+            "issn": "09641998",
+            "lastpage": "72",
+            "pub_year": 2001,
+            "title": "Prospective time periodic geographical disease surveillance using a scan statistic",
+            "volume": "164"
+        },
+        "b0120": {
+            "authors": [
+                {
+                    "first": "Ken",
+                    "initial": "K.",
+                    "last": "Kleinman"
+                },
+                {
+                    "first": "Ross",
+                    "initial": "R.",
+                    "last": "Lazarus"
+                },
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Platt"
+                }
+            ],
+            "doi": "10.1093/aje/kwh029",
+            "firstpage": "217",
+            "issn": "00029262",
+            "lastpage": "224",
+            "pmid": "14742279",
+            "pub_year": 2004,
+            "title": "A Generalized Linear Mixed Models Approach for Detecting Incident Clusters of Disease in Small Areas, with an Application to Biological Terrorism",
+            "volume": "159"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 18733,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In the first test scenario, 100 different versions of these datasets were included to evaluate the false positive rate (FPR) using either the TBSS or the reporting odds ratio (ROR), with the latter method allowing the estimation of the impact of multiple testing (Fig. 2A).",
+            "startOffset": 18460,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 12755,
+            "parents": [],
+            "refoffsets": {
+                "b0080": {
+                    "endOffset": 12754,
+                    "startOffset": 12750
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A commonly used safety signal detection method for manufacturing quality issues focuses on the time trending of adverse events (AEs) with the drawback of generating many false positive signals [16].",
+            "startOffset": 12557,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 21535,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "We propose the TBSS as a tool to scan safety data linked to batches from all hierarchical levels of the manufacturing of a vaccine, and to ultimately identify the most likely batch and level at which an excess of AEOI will have been generated.",
+            "startOffset": 21292,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 26728,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "While the TBSS was applied on the batch hierarchical data for only 1 vaccine in this work, the simultaneous analyses of data for more vaccines would include more safety information regarding batches shared across vaccines.",
+            "startOffset": 26506,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 16554,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Branches connect related leaves at the same node (final container batch), and each node in turn stems from an above branch and thus connects to a higher-level node, until it ultimately connects to the uppermost node (seed batch).",
+            "startOffset": 16325,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 27786,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "As a result, caution should be exercised when generalizing in this context, as the performance may also further depend on the respective chosen AEOI.",
+            "startOffset": 27637,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 26827,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "This approach could provide more power in detecting potential manufacturing-related safety issues.",
+            "startOffset": 26729,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 10962,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Thus, strict quality control monitoring is necessary to ensure that appropriate measures are rapidly taken when an unexpected incident impacts the final product\u2019s quality and safety.",
+            "startOffset": 10780,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 16765,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For the TBSS, the scanning windows were defined by all possible cuts on all branches of the tree.",
+            "startOffset": 16668,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 19236,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In the second test scenario, the sensitivity and positive predictive value of the TBSS method were assessed (Fig. 2B).",
+            "startOffset": 19118,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 16882,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Each cut defined a larger or smaller group of related batches that was evaluated with respect to the AEOI reporting.",
+            "startOffset": 16766,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 12557,
+            "parents": [],
+            "refoffsets": {
+                "b0070": {
+                    "endOffset": 12556,
+                    "startOffset": 12549
+                },
+                "b0075": {
+                    "endOffset": 12556,
+                    "startOffset": 12549
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Therefore, it remains essential to further improve passive reporting systems, and to develop adequate manufacturing-related detection methods for safety signals, especially for biological products [14,15].",
+            "startOffset": 12352,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29228,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It has not been assessed how fast an emerging signal can be detected using the TBSS.",
+            "startOffset": 29144,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 12351,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 12350,
+                    "startOffset": 12343
+                },
+                "b0065": {
+                    "endOffset": 12350,
+                    "startOffset": 12343
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Moreover, multi-use vial formulation of the erythropoietin analog peginesatide, which included phenol, led to severe anaphylactoid reactions with associated fatalities in 2012 [12,13].",
+            "startOffset": 12167,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 23250,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Our simulation method assured the same proportional increase for all cases through the multiplication of existing cases, but this approach also implied that FP batches without AEOI cases were not eligible for multiplication, which resulted in a lower detection probability of the upper level batch producing those FP batches.",
+            "startOffset": 22925,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 17815,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Therefore, all calculations were performed using a customized program in SAS v9.2.",
+            "startOffset": 17733,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 15077,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Therefore, as a true positive is lacking, the test could not be performed on \u201creal data\u201d.",
+            "startOffset": 14988,
+            "title": "Methodology"
+        },
+        {
+            "endOffset": 21975,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "If both the FP batch level and earlier steps are included, multiple testing will result in a higher number of false positives (as with the ROR).",
+            "startOffset": 21831,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 24505,
+            "parents": [],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 24504,
+                    "startOffset": 24500
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The calculated increased risk for this uppermost level batch may just highlight a lower than expected risk outside the cut as has been suggested by similar discussions regarding temporal scan tests [19].",
+            "startOffset": 24302,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 19498,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Only distinct batches were kept, and for each, the baseline safety data was increased by adding 100\u2013500% (using increments of 100%) of the existing redistributed reports with the AEOI.",
+            "startOffset": 19314,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 28317,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In addition, the impact of a manufacturing issue on the spontaneous reporting is an unknown factor, and the simulations performed (X2 to X6 increases) may not represent a realistic situation.",
+            "startOffset": 28126,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 30473,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "The implementation of this method is in its early stages and therefore warrants further refinement.",
+            "startOffset": 30374,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 26343,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The current application of the TBSS relies on a correct FP batch number, which is reported, on average, in 42% of spontaneous reports.",
+            "startOffset": 26209,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28443,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In the currently developed version of the TBSS, adjustment for confounders, such as country or time, has not been implemented.",
+            "startOffset": 28317,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 22142,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Applying the TBSS generated a close to expected number of false positive signals (7 versus 5 expected), demonstrating that it is indeed adjusted for multiple testing.",
+            "startOffset": 21976,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 13148,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the FP batch may not be the right level on which to perform the signal detection as it marks the end of the manufacturing cascade, while variability may be introduced during all processes over the course of its complex production.",
+            "startOffset": 12909,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30373,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "This method has the ability to locate the most probable source that might lead to an excess of AEOI in a hierarchical manufacturing structure, and to reduce the number of false positives by adjustment for multiple testing.",
+            "startOffset": 30151,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 20435,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "With the ROR method, a FPR of 100% was obtained (expected 2.5%) (Table 1).",
+            "startOffset": 20361,
+            "title": "Results"
+        },
+        {
+            "endOffset": 24591,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The TBSS was run on spontaneous safety data known to be compromised by underreporting.",
+            "startOffset": 24505,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 27026,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "However, this would be a computationally intensive task, and may introduce confounders due to the differences in the respective study populations who were administered with the vaccines of interest.",
+            "startOffset": 26828,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 14565,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this manuscript, we use the TBSS as a proof of concept based on simulated data to identify the manufacturing step at which a defect in the batch was most likely introduced, which subsequently generated an excess of AEs.",
+            "startOffset": 14343,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28816,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Proper evaluation is also warranted with respect to the different batches that are detected with equal likelihood, irrespective of the presence of a \u2018parent-child\u2019 link.",
+            "startOffset": 28647,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 24816,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "As a result, not all simulated FP batches had reported AEs, and many different simulated batches in the hierarchical tree were incorrectly considered to be identical by the method (even without a direct \u2018parent-child\u2019 link).",
+            "startOffset": 24592,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 24014,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "It remains questionable whether the uppermost level of hierarchical batch data should be included in the analysis.",
+            "startOffset": 23900,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 11724,
+            "parents": [],
+            "refoffsets": {
+                "b0045": {
+                    "endOffset": 11723,
+                    "startOffset": 11720
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 1955, the \u201cCutter incident\u201d, caused by vaccination with lots containing improperly inactivated poliomyelitis virus (Cutter Laboratories), led to more severe disease symptoms than those caused by the natural poliomyelitis virus, resulting in the paralysis of 200 children and 10 deaths [9].",
+            "startOffset": 11432,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 18071,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In order to perform independent validation of this SAS code with the TreeScan software v1.1, a simplified version of the manufacturing hierarchical tree was developed to maintain only \u2018one-to-many\u2019 relationships between higher-level and lower-level nodes.",
+            "startOffset": 17816,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 16067,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "\u201cAdministration site reactions\u201d, as per the Medical Dictionary for Regulatory Activities (MedDRA) high level group of terms (HLGT), was chosen as AEs of interest (AEOI), because this group of terms is well represented in the database, and represents one of the groups of AEOI for manufacturing-related safety signal detection.",
+            "startOffset": 15741,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 13215,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the DPA, different FP batches of the same product are compared.",
+            "startOffset": 13149,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24906,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "This mainly affected the buffer/media level, at which 78% of the batches were duplicates.",
+            "startOffset": 24817,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 22925,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Moreover, we achieved good sensitivity and positive predictive values using the TBSS, especially given the stringent definition criteria used for true positives.",
+            "startOffset": 22764,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 13388,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For instance, if several FP batches are affected by the same manufacturing defect, introduced at a shared bulk batch, the signal is less likely to be detected with the DPA.",
+            "startOffset": 13216,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20600,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "A comparison between the TBSS and ROR methods demonstrated a mean of 71.53 batches per simulation that may be signaling with the ROR, and 0.13 with the TBSS method.",
+            "startOffset": 20436,
+            "title": "Results"
+        },
+        {
+            "endOffset": 17494,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 17493,
+                    "startOffset": 17486
+                },
+                "b0105": {
+                    "endOffset": 17493,
+                    "startOffset": 17486
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The p-values were estimated by Monte-Carlo simulations, for which the number of cases with the AEOI for each FP batch of the random datasets were obtained from a multivariate hypergeometric distribution (Supplementary material S1) [20,21].",
+            "startOffset": 17255,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 29474,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "As a further refinement, the TBSS may be performed on MedDRA hierarchical data and batch hierarchical data simultaneously.",
+            "startOffset": 29352,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 29913,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In a more complex application and with proper adjustment for confounders, the TBSS may be applied for signal detection purpose on a hierarchical tree built from vaccines and their different components (i.e. adjuvant, excipients etc.) and may simultaneously scan the batch hierarchical vaccine data or even all 3, MedDRA, vaccine and batch information.",
+            "startOffset": 29562,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 14987,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Up to now, no proven link exists between manufacturing incidents of GSK vaccines and patient safety data; manufacturing-related safety signals detected using the DPA at the FP batch level could so far not be traced back to any manufacturing incident.",
+            "startOffset": 14737,
+            "title": "Methodology"
+        },
+        {
+            "endOffset": 29561,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In this scenario, more combinations will result in a computationally intense approach.",
+            "startOffset": 29475,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 25604,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Indeed, in a scenario where 2 different batches produce the same FP batch, 5% of a given batch may have been used to produce the FP batch, while 25% of the other batch may have contributed to it.",
+            "startOffset": 25409,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 11140,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 11059,
+                    "startOffset": 11056
+                }
+            },
+            "secId": "s0005",
+            "sentence": "While recalls of unsafe vaccine lots due to defective manufacturing processes are rare events [7], the wide-ranging consequences of production failures have been well documented.",
+            "startOffset": 10962,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 17042,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 17041,
+                    "startOffset": 17037
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The likelihood ratio (LR) was calculated for each cut under both the null hypothesis and the alternative hypothesis, and maximized over all possible cuts [19].",
+            "startOffset": 16883,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 12166,
+            "parents": [],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 12165,
+                    "startOffset": 12158
+                },
+                "b0055": {
+                    "endOffset": 12165,
+                    "startOffset": 12158
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For treatment of chronic kidney disease, a specific epoetin alfa formulation in uncoated rubber stopper syringes increased the incidence of pure red cell aplasia with a peak during 2002\u20132003 [10,11].",
+            "startOffset": 11967,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 22763,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Of note, this does not apply for the false positives, which were relatively uniformly distributed among all hierarchy levels.",
+            "startOffset": 22638,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 19117,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "False positives were defined as at least one signal (i.e. lower limit of the 95% CI > 1 for the ROR and p-value < 0.05 for the TBSS) per simulated safety-batch hierarchy at any location in the tree.",
+            "startOffset": 18919,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 17171,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The analysis was performed using the Bernoulli probability model and conditioned on the total number of cases reporting the AEOI.",
+            "startOffset": 17042,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 23683,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "To ensure that all important safety concerns are captured, all significant non-overlapping batches (p-value < 0.05) that are not related to each other by their genealogy could be evaluated.",
+            "startOffset": 23494,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30657,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Olivia Mahaux, Vincent Bauchau, Lionel Van Holle and Ziad Zeinoun hold shares in the GSK group of companies.",
+            "startOffset": 30549,
+            "title": "Conflict of interest"
+        },
+        {
+            "endOffset": 20360,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Seven false positives were obtained with the TBSS, while 5 were expected given the significance level of 0.05 used in the present analyses.",
+            "startOffset": 20221,
+            "title": "Results"
+        },
+        {
+            "endOffset": 26208,
+            "parents": [],
+            "refoffsets": {
+                "b0115": {
+                    "endOffset": 26126,
+                    "startOffset": 26122
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Until now, other methods, not relying on batch information, such as a temporal scan statistic [23] on vaccination periods are still needed to complement the batch signal detection.",
+            "startOffset": 26028,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 27434,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For instance, one might consider assessing the impact of loosening the true positive definition criteria used for the performance of the TBSS.",
+            "startOffset": 27292,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 25833,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Nevertheless, one may consider including chemicals and other material batches.",
+            "startOffset": 25755,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 13558,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To ensure that these defects are spotted, one could apply the DPA on all level batches, although many false positives would be generated as a result of multiple testing.",
+            "startOffset": 13389,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 17255,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Details about the likelihood formula can be found in the Supplementary material S1.",
+            "startOffset": 17172,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 21680,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "To our knowledge, this is the first application of the TBSS to detect safety issues potentially originating from the manufacturing of a vaccine.",
+            "startOffset": 21536,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 23361,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Furthermore, batches with a higher number of initial case reports were advantaged with this simulation method.",
+            "startOffset": 23251,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 14725,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Simulation was required to better control the size and location (within the hierarchy) of excess AEs, in the absence of actual 'true positives' in our records.",
+            "startOffset": 14566,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 15226,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Test scenario simulations were thus performed using real GSK vaccine batch genealogies and spontaneous safety data as part of a realistic framework.",
+            "startOffset": 15078,
+            "title": "Methodology"
+        },
+        {
+            "endOffset": 28926,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The TBSS is adjusting for the multiple testing resulting from the evaluation of all possible cuts of the tree.",
+            "startOffset": 28816,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 20102,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "A simulated batch detected by the method with a maximum LR and a p-value of <0.05 was considered to be a true positive, while a simulated TBSS-detected batch with a p-value < 0.05 that ranked second in terms of LR was considered to be a false negative.",
+            "startOffset": 19850,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 30150,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Using the TBSS, we have implemented a data-mining method for manufacturing-related safety signal detection that is specific and may thus provide major advantages over all other statistical methods relying on batch information.",
+            "startOffset": 29924,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 14045,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Surveillance may thus be performed without requiring preconceived ideas about the causative relationship between a specific element or group of elements of the tree, and the increased risk.",
+            "startOffset": 13856,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 22637,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The performance results of our model indicate that the higher levels of the batches\u2019 hierarchy are associated with a higher detection power as expected from the lower granularity of the safety data when grouped at those levels.",
+            "startOffset": 22410,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 18459,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Two different test scenarios were applied on this simulated safety batch hierarchical data.",
+            "startOffset": 18368,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 10638,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "While most of the detection methods focus on the product or active ingredients as being the source of variability, the origin of the safety issue may lie in the product manufacturing.",
+            "startOffset": 10455,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 18367,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "To obtain simulated datasets with the lowest possible pre-existing variability in the reporting of AEOI among FP batches, the link between safety data and manufacturing genealogy was broken, and the spontaneous reports were uniformly redistributed among the FP batches.",
+            "startOffset": 18098,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 26506,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Thus, in the GSK safety database, the spontaneous reporting system could still benefit from more awareness surrounding the importance of batch numbers\u2019 reporting.",
+            "startOffset": 26344,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28646,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Variations in the passive reporting system in different countries may result in an artificial excess of AEOI when data derived from several countries are pooled together, and no adjustment is performed.",
+            "startOffset": 28444,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 18918,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0110": {
+                    "endOffset": 18804,
+                    "startOffset": 18800
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The ROR (a measure of association between an exposure and outcome [22]) and associated confidence intervals (CI) were indeed calculated one by one for all the batches in the hierarchy.",
+            "startOffset": 18734,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 10454,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                },
+                "b0010": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                },
+                "b0015": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                },
+                "b0020": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                },
+                "b0025": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                },
+                "b0030": {
+                    "endOffset": 10453,
+                    "startOffset": 10448
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Post-marketing safety signal detection methods, particularly on spontaneous data, have been widely discussed [1\u20136].",
+            "startOffset": 10339,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20220,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The safety-batch hierarchical data consisted of 3660 vaccine batches spread over 7 hierarchy levels (Table 1).",
+            "startOffset": 20110,
+            "title": "Results"
+        },
+        {
+            "endOffset": 27963,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In the present analysis, a common event was compared to the total number of reports which resulted in a relatively high probability of the event under the null hypothesis (H0).",
+            "startOffset": 27787,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 13855,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The method adjusts for multiple testing which is inherent in the large number of potential combinations.",
+            "startOffset": 13751,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 17732,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The TreeScan software v1.1, available at that time, could not be used to perform the analyses due to the \u2018many-to-many\u2019 relationships between higher-level and lower-level nodes of the hierarchical tree described in the previous paragraph.",
+            "startOffset": 17494,
+            "title": "Tree-based scan statistic"
+        },
+        {
+            "endOffset": 23900,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "However, as the identification of all non-overlapping batches, or in particular the ones with a link with their genealogy would represent further challenges, this approach was not taken in the current test scenarios.",
+            "startOffset": 23684,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 23494,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "However, as an additional asset, the same intended strength of issue simulation was applied to batches from all hierarchical levels.",
+            "startOffset": 23362,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 25032,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "After removing the duplicates, the sensitivity increased on average by 17% for that level, without affecting the specificity.",
+            "startOffset": 24907,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 16640,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "When defining \u2018batch\u2019, we refer to all batches within the hierarchical tree (Fig. 1).",
+            "startOffset": 16555,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 15563,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Batch genealogies of 1 actual vaccine were used to construct a realistic hierarchical tree (as illustrated in Fig. 1) on which the TBSS was applied.",
+            "startOffset": 15415,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 25241,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Accordingly, an automated system should be developed to track the proportion of each batch used to produce subsequent batches, and ultimately the FP batches that are potentially associated with safety signals.",
+            "startOffset": 25032,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 22410,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Thus, the TBSS has major advantages over other conventional methods relying on batch numbers: it allows the evaluation of the complete manufacturing hierarchical data at once, the control for multiple testing and the approximate location of the excess AEOI reporting.",
+            "startOffset": 22143,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 13666,
+            "parents": [],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 13665,
+                    "startOffset": 13661
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The tree-based scan statistic (TBSS) may offer a possible solution to the challenges illustrated above [19].",
+            "startOffset": 13558,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27291,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "While the TBSS may serve as a powerful tool to locate the source batch in the manufacturing of a vaccine, which most likely causes an excess of AEOI cases, this method requires several refinements to allow for a broader application.",
+            "startOffset": 27059,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 15382,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The safety information was linked through the FP batch numbers (provided in the spontaneous reports) to manufacturing genealogies as illustrated in Fig. 1.",
+            "startOffset": 15227,
+            "title": "Methodology"
+        },
+        {
+            "endOffset": 16324,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "For each leaf, the FP batch in our case, information regarding the number of cases with the AEOI and the total number of reports were retrieved from the company\u2019s vaccine spontaneous safety database (restricted to case reports with valid FP batch numbers).",
+            "startOffset": 16068,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 11878,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Changes in medicinal regulations have considerably improved manufacturing practices, and no event of that dramatic scope has since occurred for vaccines.",
+            "startOffset": 11725,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26027,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "On the other hand, manufacturing issues may be related to buildings, machines and equipment which are not tracked as a batch but could affect the safety of a product for a given period of time.",
+            "startOffset": 25834,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29143,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "refoffsets": {
+                "b0120": {
+                    "endOffset": 29142,
+                    "startOffset": 29138
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For a signal detection purpose, those analyses may be repeated over time and adjustment for the multiple testing during the repeated analyses should be implemented in future TBSS as suggested by Kleinman et al. [24].",
+            "startOffset": 28927,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 15740,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The vaccine was selected as it possesses a relatively small amount of valid FP batch numbers reported in the spontaneous data, resulting in relatively simple batch genealogies.",
+            "startOffset": 15564,
+            "title": "The hierarchical tree variable"
+        },
+        {
+            "endOffset": 25408,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "This tracking information would allow for a better allocation of the batch in the manufacturing hierarchy, which will have most likely generated the potential signal.",
+            "startOffset": 25242,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 21281,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Overall, the positive predictive value ranged from 69% (for the X2 increase scenario; 157 true positives out of 229 positive results and thus 72 false positives) to 87% (for the X6 increase scenario; 352 true positives out of 403 positive results and thus 51 false positives).",
+            "startOffset": 21005,
+            "title": "Results"
+        },
+        {
+            "endOffset": 10779,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Unlike chemical products, complex biological preparations such as vaccines are more prone to variability during their manufacturing process.",
+            "startOffset": 10639,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 14169,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Pharmaceutical companies track and record the entire batch genealogies, from seed batches over intermediates to FP batches.",
+            "startOffset": 14046,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20696,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Sensitivity results using the simulated safety-batch hierarchical data are displayed in Table 2.",
+            "startOffset": 20600,
+            "title": "Results"
+        },
+        {
+            "endOffset": 21830,
+            "parents": [],
+            "refoffsets": {
+                "b0085": {
+                    "endOffset": 21829,
+                    "startOffset": 21822
+                },
+                "b0090": {
+                    "endOffset": 21829,
+                    "startOffset": 21822
+                }
+            },
+            "secId": "s0035",
+            "sentence": "From what has been reported so far, data-mining has only been performed at the FP batch level and not at earlier steps during the production [17,18].",
+            "startOffset": 21681,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30548,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "All authors are employed by the GSK group of companies.",
+            "startOffset": 30493,
+            "title": "Conflict of interest"
+        },
+        {
+            "endOffset": 29352,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It is presumed that consumption of some batches is initially required which might consequently result in a detection delay.",
+            "startOffset": 29229,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 14342,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This batch genealogy information can then be displayed in a hierarchical tree structure and be linked to spontaneous safety data that is available for the FP batch numbers.",
+            "startOffset": 14170,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25754,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The current application of the TBSS includes so called \u2018active-ingredient\u2019 batches, and thus already covers major aspects of manufacturing activities.",
+            "startOffset": 25604,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 28125,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "However, cases with AEOI may refer to a particular MedDRA preferred term, MedDRA HLGT or any other group of events with high variability in their H0 probability.",
+            "startOffset": 27964,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 21004,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Overall, 31% (157/499) of the simulated batches were correctly identified as most likely generating the excess AEOI when the number of AEOI was multiplied by 2, 52% (261/499) when multiplied by 3, 63% (312/499) when multiplied by 4, 67% (335/499) when multiplied by 5 and 71% (352/499) when multiplied by 6.",
+            "startOffset": 20697,
+            "title": "Results"
+        },
+        {
+            "endOffset": 12908,
+            "parents": [],
+            "refoffsets": {
+                "b0085": {
+                    "endOffset": 12907,
+                    "startOffset": 12900
+                },
+                "b0090": {
+                    "endOffset": 12907,
+                    "startOffset": 12900
+                }
+            },
+            "secId": "s0005",
+            "sentence": "As another option, final product (FP) batch numbers, as reported in the spontaneous data, are used to perform disproportionality analyses (DPA) [17,18].",
+            "startOffset": 12756,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 19849,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Batches without AEOI cases were excluded from the simulations.",
+            "startOffset": 19787,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 11284,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In 1942, human serum, which was used to stabilize yellow fever vaccine, proved to be contaminated with hepatitis B in a limited number of lots.",
+            "startOffset": 11141,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 19313,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For this purpose, 100 batches per hierarchical level were randomly selected.",
+            "startOffset": 19237,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 27512,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Furthermore, our performance results may also depend on the selected vaccine.",
+            "startOffset": 27435,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 24301,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "While the uppermost level batch data account for very few different batch numbers throughout the complete lifecycle of a vaccine, they are used to produce several different lower-level batches spanning over long manufacturing periods, and thus may include more than 50% of all the AEOI.",
+            "startOffset": 24015,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 11431,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 11430,
+                    "startOffset": 11427
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The vaccine was distributed among military recruits and resulted in cases of delayed jaundice, and a mortality rate of 3 per 1000 individuals [8].",
+            "startOffset": 11285,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 19786,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "When the increase had to be performed on higher levels of the hierarchy than the FP, the reports containing the AEOI for the FP batches produced from each randomly selected batch were increased by the same percentage, thus ensuring a uniform increase for the selected higher-level batch.",
+            "startOffset": 19499,
+            "title": "Simulated test scenarios"
+        },
+        {
+            "endOffset": 11966,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, safety issues continue to arise as exemplified by 2 incidences on biologicals.",
+            "startOffset": 11879,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27636,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Indeed, another vaccine may have a different number of FP and/or hierarchical levels and/or batches per hierarchical level.",
+            "startOffset": 27513,
+            "title": "Future refinements of the TBSS"
+        },
+        {
+            "endOffset": 13750,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "With the TBSS, the independent variable needs to be defined as a hierarchical tree.",
+            "startOffset": 13667,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0264410X18315676",
+    "metadata": {
+        "asjc": [
+            "1313",
+            "2400",
+            "2725",
+            "2739",
+            "3400"
+        ],
+        "authors": [
+            {
+                "email": "Olivia.x.mahaux@gsk.com",
+                "first": "Olivia",
+                "initial": "O.",
+                "last": "Mahaux"
+            },
+            {
+                "email": null,
+                "first": "Vincent",
+                "initial": "V.",
+                "last": "Bauchau"
+            },
+            {
+                "email": null,
+                "first": "Ziad",
+                "initial": "Z.",
+                "last": "Zeinoun"
+            },
+            {
+                "email": null,
+                "first": "Lionel",
+                "initial": "L.",
+                "last": "Van Holle"
+            }
+        ],
+        "doi": "10.1016/j.vaccine.2018.11.044",
+        "firstpage": "49",
+        "issn": "0264410X",
+        "keywords": [
+            "Data-mining",
+            "Manufacturing",
+            "Safety signal detection",
+            "Tree-based scan statistic"
+        ],
+        "lastpage": "55",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "BIOC",
+            "IMMU",
+            "MEDI",
+            "VETE"
+        ],
+        "title": "Tree-based scan statistic \u2013 Application in manufacturing-related safety signal detection"
+    }
+}

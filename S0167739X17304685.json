@@ -1,0 +1,4258 @@
+{
+    "abstract": "Inducing adaptive predictive models in real-time from high throughput data streams is one of the most challenging areas of Big Data Analytics. The fact that data streams may contain concept drifts (changes of the pattern encoded in the stream over time) and are unbounded, imposes unique challenges in comparison with predictive data mining from batch data. Several real-time predictive data stream algorithms exist, however, most approaches are not naturally parallel and thus limited in their scalability. This paper highlights the Micro-Cluster Nearest Neighbour (MC-NN) data stream classifier. MC-NN is based on statistical summaries of the data stream and a nearest neighbour approach, which makes MC-NN naturally parallel. In its serial version MC-NN is able to handle data streams, the data does not need to reside in memory and is processed incrementally. MC-NN is also able to adapt to concept drifts. This paper provides an empirical study on the serial algorithm's speed, adaptivity and accuracy. Furthermore, this paper discusses the new parallel implementation of MC-NN, its parallel properties and provides an empirical scalability study.",
+    "author_highlights": [
+        {
+            "endOffset": 92901,
+            "sentence": "A real-time data stream classifier adaptive to concept drift and robust to noise.",
+            "startOffset": 92820
+        },
+        {
+            "endOffset": 92968,
+            "sentence": "A parallel implementation of the real-time data stream classifier.",
+            "startOffset": 92902
+        },
+        {
+            "endOffset": 93051,
+            "sentence": "A discussion about using open source Big Data technologies for data stream mining.",
+            "startOffset": 92969
+        }
+    ],
+    "bib_entries": {
+        "br000005": null,
+        "br000010": {
+            "authors": [
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Babcock"
+                },
+                {
+                    "first": "Shivnath",
+                    "initial": "S.",
+                    "last": "Babu"
+                },
+                {
+                    "first": "Mayur",
+                    "initial": "M.",
+                    "last": "Datar"
+                },
+                {
+                    "first": "Rajeev",
+                    "initial": "R.",
+                    "last": "Motwani"
+                },
+                {
+                    "first": "Jennifer",
+                    "initial": "J.",
+                    "last": "Widom"
+                }
+            ],
+            "doi": "10.1145/543613.543615",
+            "firstpage": "1",
+            "lastpage": "16",
+            "pub_year": 2002,
+            "title": "Models and issues in data stream systems"
+        },
+        "br000015": {
+            "authors": [
+                {
+                    "first": "Mohamed Medhat",
+                    "initial": "M.M.",
+                    "last": "Gaber"
+                },
+                {
+                    "first": "Arkady",
+                    "initial": "A.",
+                    "last": "Zaslavsky"
+                },
+                {
+                    "first": "Shonali",
+                    "initial": "S.",
+                    "last": "Krishnaswamy"
+                }
+            ],
+            "doi": "10.1145/1083784.1083789",
+            "firstpage": "18",
+            "issn": "01635808",
+            "lastpage": "26",
+            "pub_year": 2005,
+            "title": "Mining data streams: A review",
+            "volume": "34"
+        },
+        "br000020": null,
+        "br000025": {
+            "authors": [
+                {
+                    "first": "Jo\u00e3o",
+                    "initial": "J.",
+                    "last": "Gam"
+                }
+            ],
+            "doi": "10.1201/EBK1439826119",
+            "firstpage": "1",
+            "lastpage": "235",
+            "pub_year": 2010,
+            "title": "Knowledge discovery from data streams"
+        },
+        "br000030": {
+            "authors": [
+                {
+                    "first": "Tomasz",
+                    "initial": "T.",
+                    "last": "Bujlow"
+                },
+                {
+                    "first": "Tahir",
+                    "initial": "T.",
+                    "last": "Riaz"
+                },
+                {
+                    "first": "Jens Myrup",
+                    "initial": "J.M.",
+                    "last": "Pedersen"
+                }
+            ],
+            "doi": "10.1109/ICCNC.2012.6167418",
+            "firstpage": "237",
+            "lastpage": "241",
+            "pub_year": 2012,
+            "title": "A method for classification of network traffic based on C5.0 machine learning algorithm"
+        },
+        "br000035": {
+            "authors": [
+                {
+                    "first": "Ambarish",
+                    "initial": "A.",
+                    "last": "Jadhav"
+                },
+                {
+                    "first": "Avinash",
+                    "initial": "A.",
+                    "last": "Jadhav"
+                },
+                {
+                    "first": "Pradeep",
+                    "initial": "P.",
+                    "last": "Jadhav"
+                },
+                {
+                    "first": "Prakash",
+                    "initial": "P.",
+                    "last": "Kulkarni"
+                }
+            ],
+            "doi": "10.1109/SNS-PCS.2013.6553828",
+            "firstpage": "22",
+            "lastpage": "27",
+            "pub_year": 2013,
+            "title": "A novel approach for the design of network intrusion detection system(NIDS)"
+        },
+        "br000040": {
+            "authors": [
+                {
+                    "first": "Addisson",
+                    "initial": "A.",
+                    "last": "Salazar"
+                },
+                {
+                    "first": "Gonzalo",
+                    "initial": "G.",
+                    "last": "Safont"
+                },
+                {
+                    "first": "Antonio",
+                    "initial": "A.",
+                    "last": "Soriano"
+                },
+                {
+                    "first": "Luis",
+                    "initial": "L.",
+                    "last": "Vergara"
+                }
+            ],
+            "doi": "10.1109/CCST.2012.6393560",
+            "firstpage": "207",
+            "issn": "10716572",
+            "lastpage": "212",
+            "pub_year": 2012,
+            "title": "Automatic credit card fraud detection based on non-linear signal processing"
+        },
+        "br000045": {
+            "authors": [
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Domingos"
+                },
+                {
+                    "first": "Geoff",
+                    "initial": "G.",
+                    "last": "Hulten"
+                }
+            ],
+            "doi": "10.1145/347090.347107",
+            "firstpage": "71",
+            "lastpage": "80",
+            "pub_year": 2000,
+            "title": "Mining high-speed data streams"
+        },
+        "br000050": null,
+        "br000055": {
+            "authors": [
+                {
+                    "first": "Jo\u00e3o",
+                    "initial": "J.",
+                    "last": "Gama"
+                },
+                {
+                    "first": "Petr",
+                    "initial": "P.",
+                    "last": "Kosina"
+                }
+            ],
+            "doi": "10.5591/978-1-57735-516-8/IJCAI11-213",
+            "firstpage": "1255",
+            "issn": "10450823",
+            "lastpage": "1260",
+            "pub_year": 2011,
+            "title": "Learning decision rules from data streams"
+        },
+        "br000060": {
+            "authors": [
+                {
+                    "first": "Yael",
+                    "initial": "Y.",
+                    "last": "Ben-Haim"
+                },
+                {
+                    "first": "Elad",
+                    "initial": "E.",
+                    "last": "Tom-Tov"
+                }
+            ],
+            "firstpage": "849",
+            "issn": "15324435",
+            "lastpage": "872",
+            "pub_year": 2010,
+            "title": "A streaming parallel decision tree algorithm",
+            "volume": "11"
+        },
+        "br000065": {
+            "authors": [
+                {
+                    "first": "Gianmarco",
+                    "initial": "G.",
+                    "last": "De Francisci Morales"
+                },
+                {
+                    "first": "Albert",
+                    "initial": "A.",
+                    "last": "Bifet"
+                }
+            ],
+            "firstpage": "149",
+            "issn": "15324435",
+            "lastpage": "153",
+            "pub_year": 2015,
+            "title": "SAMOA: Scalable advanced massive online analysis",
+            "volume": "16"
+        },
+        "br000070": {
+            "authors": [
+                {
+                    "first": "Artur",
+                    "initial": "A.",
+                    "last": "Andrzejak"
+                },
+                {
+                    "first": "Jo\u00e3o B\u00e1rtolo",
+                    "initial": "J.B.",
+                    "last": "Gomes"
+                }
+            ],
+            "doi": "10.1109/ICDMW.2012.102",
+            "firstpage": "402",
+            "lastpage": "407",
+            "pub_year": 2012,
+            "title": "Parallel concept drift detection with online Map-Reduce"
+        },
+        "br000075": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Tennant"
+                },
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Stahl"
+                },
+                {
+                    "first": "Jo\u00e3o B\u00e1rtolo",
+                    "initial": "J.B.",
+                    "last": "Gomes"
+                }
+            ],
+            "doi": "10.1007/978-3-319-23237-9_23",
+            "firstpage": "265",
+            "issn": "03029743",
+            "lastpage": "272",
+            "pub_year": 2015,
+            "title": "Fast adaptive real-time classification for data streams with concept drift",
+            "volume": "9258"
+        },
+        "br000080": {
+            "authors": [
+                {
+                    "first": "Jo\u00e3o",
+                    "initial": "J.",
+                    "last": "Gama"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Medas"
+                },
+                {
+                    "first": "Gladys",
+                    "initial": "G.",
+                    "last": "Castillo"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Rodrigues"
+                }
+            ],
+            "firstpage": "286",
+            "issn": "03029743",
+            "lastpage": "295",
+            "pub_year": 2004,
+            "title": "Learning with drift detection",
+            "volume": "3171"
+        },
+        "br000085": {
+            "authors": [
+                {
+                    "first": "Gordon J.",
+                    "initial": "G.J.",
+                    "last": "Ross"
+                },
+                {
+                    "first": "Niall M.",
+                    "initial": "N.M.",
+                    "last": "Adams"
+                },
+                {
+                    "first": "Dimitris K.",
+                    "initial": "D.K.",
+                    "last": "Tasoulis"
+                },
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Hand"
+                }
+            ],
+            "doi": "10.1016/j.patrec.2011.08.019",
+            "firstpage": "191",
+            "issn": "01678655",
+            "lastpage": "198",
+            "pub_year": 2012,
+            "title": "Exponentially weighted moving average charts for detecting concept drift",
+            "volume": "33"
+        },
+        "br000090": {
+            "authors": [
+                {
+                    "first": "Rodolfo C.",
+                    "initial": "R.C.",
+                    "last": "Cavalcante"
+                },
+                {
+                    "first": "Adriano L.I.",
+                    "initial": "A.L.I.",
+                    "last": "Oliveira"
+                }
+            ],
+            "doi": "10.1109/IJCNN.2015.7280721",
+            "pub_year": 2015,
+            "title": "An approach to handle concept drift in financial time series based on Extreme Learning Machines and explicit Drift Detection",
+            "volume": "2015-"
+        },
+        "br000095": null,
+        "br000100": {
+            "authors": [
+                {
+                    "first": "Corinna",
+                    "initial": "C.",
+                    "last": "Cortes"
+                },
+                {
+                    "first": "Vladimir",
+                    "initial": "V.",
+                    "last": "Vapnik"
+                }
+            ],
+            "doi": "10.1023/A:1022627411411",
+            "firstpage": "273",
+            "issn": "08856125",
+            "lastpage": "297",
+            "pub_year": 1995,
+            "title": "Support-Vector Networks",
+            "volume": "20"
+        },
+        "br000105": null,
+        "br000110": null,
+        "br000115": {
+            "authors": [
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Domingos"
+                },
+                {
+                    "first": "Geoff",
+                    "initial": "G.",
+                    "last": "Hulten"
+                }
+            ],
+            "doi": "10.1198/1061860032544",
+            "firstpage": "945",
+            "issn": "10618600",
+            "lastpage": "949",
+            "pub_year": 2003,
+            "title": "A General Framework for Mining Massive Data Streams",
+            "volume": "12"
+        },
+        "br000120": {
+            "authors": [
+                {
+                    "first": "Charu C.",
+                    "initial": "C.C.",
+                    "last": "Aggarwal"
+                },
+                {
+                    "first": "Jiawei",
+                    "initial": "J.",
+                    "last": "Han"
+                },
+                {
+                    "first": "Jianyong",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Philip S.",
+                    "initial": "P.S.",
+                    "last": "Yu"
+                }
+            ],
+            "firstpage": "81",
+            "lastpage": "92",
+            "pub_year": 2003,
+            "title": "A framework for clustering evolving data streams"
+        },
+        "br000125": {
+            "authors": [
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Domingos"
+                },
+                {
+                    "first": "Geoff",
+                    "initial": "G.",
+                    "last": "Hulten"
+                }
+            ],
+            "doi": "10.1145/347090.347107",
+            "firstpage": "71",
+            "lastpage": "80",
+            "pub_year": 2000,
+            "title": "Mining high-speed data streams"
+        },
+        "br000130": {
+            "authors": [
+                {
+                    "first": "Jianyong",
+                    "initial": "J.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1109/TKDE.2006.69",
+            "firstpage": "577",
+            "issn": "10414347",
+            "lastpage": "589",
+            "pub_year": 2006,
+            "title": "A framework for on-demand classification of evolving data streams",
+            "volume": "18"
+        },
+        "br000135": null,
+        "br000140": null,
+        "br000145": {
+            "authors": [
+                {
+                    "first": "Rajiv",
+                    "initial": "R.",
+                    "last": "Ranjan"
+                }
+            ],
+            "doi": "10.1109/MCC.2014.22",
+            "firstpage": "78",
+            "issn": "23256095",
+            "lastpage": "83",
+            "pub_year": 2014,
+            "title": "Streaming Big Data Processing in Datacenter Clouds",
+            "volume": "1"
+        },
+        "br000150": null,
+        "br000155": null,
+        "br000160": null,
+        "br000165": null,
+        "br000170": null,
+        "br000175": null,
+        "br000180": null,
+        "br000185": {
+            "authors": [
+                {
+                    "first": "Mayur",
+                    "initial": "M.",
+                    "last": "Datar"
+                },
+                {
+                    "first": "Aristides",
+                    "initial": "A.",
+                    "last": "Gionis"
+                },
+                {
+                    "first": "Piotr",
+                    "initial": "P.",
+                    "last": "Indyk"
+                },
+                {
+                    "first": "Rajeev",
+                    "initial": "R.",
+                    "last": "Motwani"
+                }
+            ],
+            "firstpage": "635",
+            "lastpage": "644",
+            "pub_year": 2002,
+            "title": "Maintaining stream statistics over sliding windows (extended abstract)",
+            "volume": "06-08-"
+        },
+        "br000190": null,
+        "br000195": {
+            "authors": [
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Nick Street"
+                },
+                {
+                    "first": "Yong Seog",
+                    "initial": "Y.S.",
+                    "last": "Kim"
+                }
+            ],
+            "firstpage": "377",
+            "lastpage": "382",
+            "pub_year": 2001,
+            "title": "A streaming ensemble algorithm (SEA) for large-scale classification"
+        },
+        "br000200": {
+            "authors": [
+                {
+                    "first": "Allan",
+                    "initial": "A.",
+                    "last": "Stisen"
+                },
+                {
+                    "first": "Henrik",
+                    "initial": "H.",
+                    "last": "Blunck"
+                },
+                {
+                    "first": "Sourav",
+                    "initial": "S.",
+                    "last": "Bhattacharya"
+                },
+                {
+                    "first": "Thor Siiger",
+                    "initial": "T.S.",
+                    "last": "Prentow"
+                },
+                {
+                    "first": "Mikkel Baun",
+                    "initial": "M.B.",
+                    "last": "Kj\u00e6rgaard"
+                },
+                {
+                    "first": "Anind",
+                    "initial": "A.",
+                    "last": "Dey"
+                },
+                {
+                    "first": "Tobias",
+                    "initial": "T.",
+                    "last": "Sonne"
+                },
+                {
+                    "first": "Mads M\u00f8ller",
+                    "initial": "M.M.",
+                    "last": "Jensen"
+                }
+            ],
+            "doi": "10.1145/2809695.2809718",
+            "firstpage": "127",
+            "lastpage": "140",
+            "pub_year": 2015,
+            "title": "Smart devices are different: Assessing and mitigating mobile sensing heterogeneities for activity recognition"
+        },
+        "br000205": null,
+        "br000210": null,
+        "br000215": null,
+        "br000220": null,
+        "br000225": null,
+        "br000230": null
+    },
+    "body_text": [
+        {
+            "endOffset": 143732,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "When a Samza node fails it is re-started by Hadoop as another job.",
+            "startOffset": 143666,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 97509,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Concluding remarks are provided in Section  5.",
+            "startOffset": 97463,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 126012,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "This paper is primarily concerned with the scalability of data in terms of Volume and Velocity, to this end the parallelism is not simply limited to the algorithm.",
+            "startOffset": 125849,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 143942,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "While batch processing can be processed in disjointed iterative sub-tasks, data stream mining requires that the data streams are processed in the order and speed that they are made available to the classifier.",
+            "startOffset": 143733,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 125486,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "Mappers are then distributed and executed concurrently on a computer cluster.",
+            "startOffset": 125409,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 137224,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Fig. 12 shows the overall reduction in processing time with both more Stream Generators and the use of more parallel processors.",
+            "startOffset": 137096,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 145184,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "For the purpose of this paper the Kafka nodes only kept messages for a maximum of 1 h.",
+            "startOffset": 145098,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 139892,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Overall, the pattern we can see is that the more MC-NN nodes that are used, the faster the processing of the 10 million data instances from the streams.",
+            "startOffset": 139740,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 139740,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Unfortunately, this is a case of there being no \u2018Magic Bullet\u2019 and certain data sets/streams will perform faster on different parallel configurations.",
+            "startOffset": 139590,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 117307,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000210": {
+                    "endOffset": 117306,
+                    "startOffset": 117302
+                }
+            },
+            "secId": "s000035",
+            "sentence": "A study of \u2018Prequential\u2019 data stream classification with drift detectors can be found in  [42].",
+            "startOffset": 117212,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 101646,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Samza containers bound to a data stream are static, they have access to all data passed through the underlying stream until they are stopped externally.",
+            "startOffset": 101494,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 139500,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "For example, instances sent to the same Mappers will be incorporated locally into the Micro-Clusters with little to no processing.",
+            "startOffset": 139370,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 98200,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "As the length and number of \u2018Concepts\u2019 is unknown the data stream must be monitored in real-time.",
+            "startOffset": 98103,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 101783,
+            "parents": [],
+            "refoffsets": {
+                "br000145": {
+                    "endOffset": 101782,
+                    "startOffset": 101778
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Other alternatives with similar functionality include: Apache Storm, Spark Streaming and Apache S4 \u2014 a comparison can be found in  [29].",
+            "startOffset": 101647,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 124185,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Hence, processing the HAR data set requires more Micro-Clusters compared with the other data streams used in this research.",
+            "startOffset": 124062,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 146172,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Adaptation and learning within the cluster is performed through the deletion of Micro-Clusters with a low participation.",
+            "startOffset": 146052,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 132211,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "refoffsets": {
+                "br000225": {
+                    "endOffset": 132120,
+                    "startOffset": 132116
+                }
+            },
+            "secId": "s000065",
+            "sentence": "Zookeeper   [45] is currently used as a distributed coordinator and Topic consumer offset manager by Kafka.",
+            "startOffset": 132104,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 122354,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Both Na\u00efve Bayes and the Hoffeding Tree classifiers suffer at the beginning of the data stream with a negative accuracy trend.",
+            "startOffset": 122228,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 122886,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "This leads to increased complexity and a high computational cost.",
+            "startOffset": 122821,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 132009,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "This batching is to highlight the performance of the algorithm, not the limitations of the hardware setup.",
+            "startOffset": 131903,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 109235,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "MC1 was created at time stamp 1 and was updated with instances at time stamps 4, 6, 8 and 10.",
+            "startOffset": 109142,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 140073,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "What can also be seen is that a larger number of Stream Generators is also beneficial, which can be explained by a more distributed data communication load between the MC-NN nodes.",
+            "startOffset": 139893,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 98482,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Typically, when a Drift Detector algorithm detects a concept drift (correctly or incorrectly) the current model is deleted and a new model is created.",
+            "startOffset": 98332,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 113154,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "Also the here presented real-time KNN and MC-NN algorithms were implemented within the MOA framework.",
+            "startOffset": 113053,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 145664,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "This research is motivated by the fact that very little work has been conducted on the development of real-time scalable parallel data stream classification, even though many applications with high throughput data streams exist.",
+            "startOffset": 145436,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 100684,
+            "parents": [],
+            "refoffsets": {
+                "br000120": {
+                    "endOffset": 100634,
+                    "startOffset": 100630
+                },
+                "br000130": {
+                    "endOffset": 100682,
+                    "startOffset": 100678
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Micro-Cluster based techniques aim to create a statistical summary in terms of feature values, value distribution and time-stamps of the data retrieved from the stream (CluStream[24], On Demand Classification of Data Streams  [26]).",
+            "startOffset": 100452,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 135703,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The total stream length was divided by the number of stream generators so that speed comparisons could be made upon a fixed stream length processed over different configurations.",
+            "startOffset": 135525,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 142942,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "This occurred due to Samza attempting to buffer the entire data stream in memory on a single node, leading to possible unpredictable errors with variable sized data streams and available memory on the nodes of the computational cluster.",
+            "startOffset": 142706,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 137599,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "It can be seen in Fig. 12, that MC-NN scales with respect to the number of MC-NN processing nodes utilised and the number of Stream Generators.",
+            "startOffset": 137456,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 141702,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The gradient reduction that can be seen in the figure can be explained by the fact that the physical limit of the network configuration was reached.",
+            "startOffset": 141554,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 97462,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "It further discusses issues and experiences in implementing real-time data processing algorithms.",
+            "startOffset": 97365,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135524,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Each stream generator was pre-configured to launch one of the data streams (SEA, HYP or HAR).",
+            "startOffset": 135431,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 138693,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "As the data is skewed in favour of one test instance to 10,000 training instances, the benefit of using parallel MC-NN can be seen.",
+            "startOffset": 138562,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 147614,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "The paper describes the use of these technologies for parallel data stream processing and highlights issues and experiences.",
+            "startOffset": 147490,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 131371,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Such techniques are for example: retaining a maximum number of messages (containing stream data instances) in memory, and using pointers for tracking data stream consumers (i.e. MC-NN\u2019s Mappers) to speed up the reading of data.",
+            "startOffset": 131144,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 141260,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "A significant gradient reduction can be seen with 7\u20139 Mappers with 8 senders.",
+            "startOffset": 141183,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 134145,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Each of the Mappers (Hadoop nodes in the cluster) was initialised with a Samza container connecting them to a specific partition (distributed sub-section) of a Kafka topic stream.",
+            "startOffset": 133966,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 136857,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "In addition to each Samza container joining to a specific Topic partition, a shared broadcast Topic was used for distributing the test instances to all Mappers at the same time as depicted in Fig. 9.",
+            "startOffset": 136658,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 120228,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "MC-NN is able to reach the same classification accuracy levels as Hoeffding Tree and Naive Bayes, whereas real-time KNN performs poorly.",
+            "startOffset": 120092,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 117211,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "Instead each training instance is used first for training and then as validation data to ascertain the predictive accuracy of the model prior to being incorporated into the model itself.",
+            "startOffset": 117025,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 116685,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 116597,
+                    "startOffset": 116594
+                },
+                "br000180": {
+                    "endOffset": 116684,
+                    "startOffset": 116680
+                }
+            },
+            "secId": "s000035",
+            "sentence": "MC-NN was compared against two state-of-the-art data stream classifiers, Hoeffding Trees  [9] and incremental Na\u00efve Bayes and against its predecessor real-time KNN classifier  [36].",
+            "startOffset": 116504,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 139369,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "It is to be expected that when attempting to classify such a data set, it would be more or less efficient when using different parallel configurations, as the data will be distributed differently using varying configurations.",
+            "startOffset": 139144,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 94386,
+            "parents": [],
+            "refoffsets": {
+                "br000020": {
+                    "endOffset": 94323,
+                    "startOffset": 94320
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The classifier is required to adapt to changes of concepts that can occur over time (known as concept drift  [4]), in order to keep an accurate classification model over time.",
+            "startOffset": 94211,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136115,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "A 10 million data instance stream was created in parallel across the Stream Generators.",
+            "startOffset": 136028,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 94676,
+            "parents": [],
+            "refoffsets": {
+                "br000025": {
+                    "endOffset": 94580,
+                    "startOffset": 94577
+                },
+                "br000030": {
+                    "endOffset": 94611,
+                    "startOffset": 94608
+                },
+                "br000035": {
+                    "endOffset": 94637,
+                    "startOffset": 94634
+                },
+                "br000040": {
+                    "endOffset": 94675,
+                    "startOffset": 94672
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The growing importance of data stream classification techniques is reflected through many commercial applications, such as: sensor networks; Internet traffic management and web log analysis  [5]; TCP/IP packet monitoring  [6]; intrusion detection  [7]; and credit card fraud detection  [8].",
+            "startOffset": 94386,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95784,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "However, VHDTs scalability is limited by the number of attributes, as the attributes are distributed evenly over the number of processors utilised.",
+            "startOffset": 95637,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100451,
+            "parents": [],
+            "refoffsets": {
+                "br000125": {
+                    "endOffset": 100449,
+                    "startOffset": 100445
+                }
+            },
+            "secId": "s000010",
+            "sentence": "The Hoeffding bound has been successfully used to create various data stream mining algorithms known as Very Fast Machine Learning (VFDT  [25]).",
+            "startOffset": 100307,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 139058,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "This can be explained by the fact that the HAR data set has been adapted to be a data stream.",
+            "startOffset": 138965,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 96007,
+            "parents": [],
+            "refoffsets": {
+                "br000070": {
+                    "endOffset": 95918,
+                    "startOffset": 95914
+                }
+            },
+            "secId": "s000005",
+            "sentence": "In addition there exists a parallel method for concept drift detection termed Online MapReduce Drift Detection Method (OMR-DDM)  [14], which makes use of the error rate of a collection of classifiers executed concurrently.",
+            "startOffset": 95785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 141916,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "For better readability the speedup shown in Figs. 15\u201317 is also shown in Table 6 as percentage improvement of runtime based on 3 Mappers.",
+            "startOffset": 141779,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 126106,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "The data stream generation, in addition to the classification methodology has been scaled-up.",
+            "startOffset": 126013,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 117024,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "Prequential testing deviates from traditional data mining predictive accuracy testing, as stream data cannot be divided beforehand into the classic groups of \u2018Train\u2019 and \u2018Test\u2019.",
+            "startOffset": 116847,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 123200,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Contrary to decision trees, MC-NN aims to retain its Micro-Clusters by updating their statistical properties.",
+            "startOffset": 123091,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 136028,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The reason for using odd numbers of Mappers for the parallelism is so that voting should have an outright winning classification.",
+            "startOffset": 135899,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 113052,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000190": {
+                    "endOffset": 113051,
+                    "startOffset": 113047
+                }
+            },
+            "secId": "s000035",
+            "sentence": "All synthetic data generators and algorithms evaluated in Section  3.2 were taken from the Massive Online Analysis (MOA) framework  [38].",
+            "startOffset": 112915,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 123737,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "In the results it can be seen that MC-NN outperforms its competitors in terms of accuracy.",
+            "startOffset": 123647,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 98331,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "An interesting area of research is the development of \u2018standalone\u2019 Concept Drift Detectors that monitor data streams in real-time.",
+            "startOffset": 98201,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 131645,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Multiple configurations of data producers and consumers can be created to best maximise the type of data throughput required by individual tasks.",
+            "startOffset": 131500,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 101337,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "In the pilot terminology a Samza job is an \u2018early bound\u2019 container that will process an unknown future workload.",
+            "startOffset": 101225,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 97256,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  3 describes the developed naturally parallel MC-NN algorithm and provides an empirical study comparing it with its serial competitors in terms of classification accuracy, adaptation to concept drifts and speed.",
+            "startOffset": 97037,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130614,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Samza was chosen as the stream processing engine because it has been designed with stream processing in mind, while Spark achieves stream processing through time based windowing of data objects.",
+            "startOffset": 130420,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 146911,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Parallelisation of MC-NN is achieved by distributing Micro-Clusters to computational nodes in a computer cluster.",
+            "startOffset": 146798,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 96310,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The statistical summary is structured in the form of a set of variance based Micro-Clusters (MCs).",
+            "startOffset": 96212,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 132104,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "As Kafka is a distributed system in itself it also requires some co-ordination and management.",
+            "startOffset": 132010,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 137872,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "In the setup used in the SEA experiments, 4 generators running in parallel sending their data to 3\u20135 Mappers seems to be the physical limit encountered in terms of network performance.",
+            "startOffset": 137688,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 138137,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "In Fig. 13 the time taken for processing 10 million instances reduces as both the number of Mappers and the stream generators increase.",
+            "startOffset": 138002,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 130419,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Spark had been considered as alternative to Samza for this research.",
+            "startOffset": 130351,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 97036,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper is organised as follows: Section  2 summaries some related work.",
+            "startOffset": 96961,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105442,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "As more labelled instances are received for learning they will change the distribution of the Micro-Clusters.",
+            "startOffset": 105333,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 93817,
+            "parents": [],
+            "refoffsets": {
+                "br000010": {
+                    "endOffset": 93816,
+                    "startOffset": 93811
+                },
+                "br000015": {
+                    "endOffset": 93816,
+                    "startOffset": 93811
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Regarding Velocity, data arriving at a very high speed challenges our computational hardware processing capabilities  [2,3].",
+            "startOffset": 93693,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97864,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "However, as data streams are inherently infinite in length, iterative processes cannot be used.",
+            "startOffset": 97769,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 143549,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "As Hadoop was primarily designed to process batch data in individual \u2018embarrassingly parallel\u2019 blocks, a failed task can simply be re-scheduled to be performed on another node.",
+            "startOffset": 143373,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 147267,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Classification is achieved through the use of a voting mechanism by each computational node.",
+            "startOffset": 147175,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 117790,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000215": {
+                    "endOffset": 117789,
+                    "startOffset": 117785
+                }
+            },
+            "secId": "s000035",
+            "sentence": "The Multinomial Na\u00efve Bayes version was used recently as an ensemble to win the 2014 data mining Kaggle competition  [43].",
+            "startOffset": 117668,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 146712,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "The results show that MC-NN has a similar or better overall classification accuracy compared with its competitors and better adaptability to concept drifts.",
+            "startOffset": 146556,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 127606,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "Utilising a computer cluster incurs communication and management overheads.",
+            "startOffset": 127531,
+            "title": "Training and adaptation"
+        },
+        {
+            "endOffset": 95636,
+            "parents": [],
+            "refoffsets": {
+                "br000065": {
+                    "endOffset": 95549,
+                    "startOffset": 95545
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Vertical Hoeffding Trees (VHDT)  [13] partition the stream instances in terms of attributes, to support parallel processing.",
+            "startOffset": 95512,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 141044,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "For both 4 and 8 Senders configurations we can see an increase of the speedup in relation to the number of Mappers used.",
+            "startOffset": 140924,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 94000,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper presents an algorithm that addresses the overlap of the Velocity and Volume aspects of Big Data Analytics through a parallel and adaptive real-time data stream classifier.",
+            "startOffset": 93818,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135006,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "refoffsets": {
+                "br000195": {
+                    "endOffset": 134873,
+                    "startOffset": 134869
+                }
+            },
+            "secId": "s000080",
+            "sentence": "The SEA data stream  [39], Hyperplane data stream and HAR data set were used in multiple configurations of stream generators and different numbers of Mappers.",
+            "startOffset": 134848,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 122124,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Fig. 6 shows the accuracy associated with experiments displayed in Table 3 for the Oscillating Hyperplane data stream over time for all 10 million data instances.",
+            "startOffset": 121962,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 138303,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "In the previous MC-NN experiments (Section  3.2.3), the Hyperplane generator stream can be efficiently classified with MC-NN with only a few Micro-Clusters required.",
+            "startOffset": 138138,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 123329,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Thus, continuous concept drifts naturally get absorbed by the model without additional computational cost for growing the model.",
+            "startOffset": 123201,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 127872,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "The instances in the batch are then distributed evenly inside the computer cluster across the individual Mappers (Fig. 8).",
+            "startOffset": 127750,
+            "title": "Training and adaptation"
+        },
+        {
+            "endOffset": 133110,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000075",
+            "sentence": "Creation and deletion of Micro-Clusters is controlled by counters and pointers to the available pool of computational resources at run-time.",
+            "startOffset": 132970,
+            "title": "Complexity of parallel MC-NN"
+        },
+        {
+            "endOffset": 136657,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "For each parallel Mapper configuration an equally parallel Kafka distributed Topic was created for the Samza containers to join to on a 1:1 basis.",
+            "startOffset": 136511,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 123905,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "However, it needs more time to process the data stream with a larger number of class labels (7), compared with the experiments on the SEA and Random Tree data streams.",
+            "startOffset": 123738,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 116846,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000205": {
+                    "endOffset": 116845,
+                    "startOffset": 116841
+                }
+            },
+            "secId": "s000035",
+            "sentence": "Each instance was tested upon the classifier to log the classifier\u2019s performance before being used for training: this is also know as Prequential testing  [41].",
+            "startOffset": 116686,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 147895,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "An empirical evaluation of the parallel MC-NN implementation utilising multiple data streams of varying attribute and class label sizes, shows that parallel MC-NN scales well with respect to the number of computational nodes utilised and the amount of Data Stream Generators used.",
+            "startOffset": 147615,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 98849,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Thus, both the data mining algorithm and the concept drift detector have to be computationally efficient in order not to hinder the computational performance.",
+            "startOffset": 98691,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 123475,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Data streams with only occasional drifts, such as the ones illustrated in Figs. 3 and 4 will not pose this challenge for data stream classifiers.",
+            "startOffset": 123330,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 143665,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Similarly, Samza \u2018masquerades\u2019 as a Hadoop job of unbounded length, only processing data when it becomes available.",
+            "startOffset": 143550,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 145097,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Accuracies and processing times are no longer comparable.",
+            "startOffset": 145040,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 135076,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "A brief description of the generators can be found in Section  3.2.2.",
+            "startOffset": 135007,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 144442,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Re-read the entire data stream (limited to Kafka logs).",
+            "startOffset": 144387,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 98102,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "\u2018Concepts\u2019 can be thought of as blocks of homogeneous/statistically similar data in a linear time frame.",
+            "startOffset": 97998,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 143372,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Data processing failures such as Hadoop node failures are handled by the Node Manager.",
+            "startOffset": 143286,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 99942,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "However, these techniques would require to re-train batch algorithms and thus may be too slow and impractical to use for data arriving at high speed.",
+            "startOffset": 99793,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 109141,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "For example, consider the two Micro-Clusters (MC1 and MC2) as depicted in Fig. 1.",
+            "startOffset": 109060,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 129911,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Hadoop is designed to process specific processing jobs with recursive/interactive access to all the data available (usually within the distributed file system).",
+            "startOffset": 129751,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 124683,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "However, it is more robust in terms of adaptation to concept drifts, especially complex continuous concept drifts.",
+            "startOffset": 124569,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 100991,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "However, Esper makes use of a centralised architecture that runs on a single node and keeps everything (states, operators, and so on) in memory (although support is provided for multi-threading).",
+            "startOffset": 100796,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 119158,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Figs. 3 and 4 illustrate the same experiments as listed in Table 2, however, the accuracy is displayed over time.",
+            "startOffset": 119045,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 95386,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Few attempts have been made to combine parallelism and real-time data stream classification.",
+            "startOffset": 95294,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99061,
+            "parents": [],
+            "refoffsets": {
+                "br000095": {
+                    "endOffset": 98986,
+                    "startOffset": 98982
+                },
+                "br000100": {
+                    "endOffset": 99017,
+                    "startOffset": 99013
+                },
+                "br000105": {
+                    "endOffset": 99032,
+                    "startOffset": 99028
+                }
+            },
+            "secId": "s000010",
+            "sentence": "The data mining algorithm used in conjunction with the drift detector does not need to be adaptive \u2014 batch algorithms such as C4.5  [19], Support Vector Machines  [20], N-Prism  [21], KNN, etc. can also be used.",
+            "startOffset": 98850,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 123646,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Table 4 summarises experiments of the use of MC-NN on the HAR data set.",
+            "startOffset": 123575,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 140923,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Fig. 16 shows the speedup of the algorithm on the HYP data set.",
+            "startOffset": 140860,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 97768,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "In each iteration the model is altered in order to better fit the concepts.",
+            "startOffset": 97693,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 117537,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "Na\u00efve Bayes and Hoffeding Tree classifiers were chosen as they are widely covered in the literature and often considered as the best all round classifiers in data stream mining, providing a benchmark for comparison and evaluation.",
+            "startOffset": 117307,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 96632,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "However, it is limited by the throughput of a single computational node.",
+            "startOffset": 96560,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134197,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Each node when idle, waits for a message to arrive.",
+            "startOffset": 134146,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 136341,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Training messages created were batched into individual 10 thousand blocks for the Kafka messaging streams.",
+            "startOffset": 136235,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 93412,
+            "parents": [],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 93199,
+                    "startOffset": 93196
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The 4 main aspects of Big Data are  [1]: data generated at a fast rate (Velocity), very large and potentially unknown data quantities (Volume), uncertainty in the data (Veracity) and different forms of data such as text, structured data etc. (Variety).",
+            "startOffset": 93160,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96095,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper proposes an inherently parallel adaptive data stream classifier termed MC-NN.",
+            "startOffset": 96007,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97364,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  4 discusses the parallel implementation of MC-NN and provides an empirical scalability evaluation.",
+            "startOffset": 97257,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98690,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Typically Concept Drift detectors work independently and concurrently from the underlying data mining algorithm (i.e. a classifier).",
+            "startOffset": 98558,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 144029,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "This is especially true when the data is generated from different sources in parallel.",
+            "startOffset": 143943,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 145896,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "MC-NN realises real-time adaptation of data stream statistics using a novel implementation of Micro-Cluster and a Nearest Neighbour classification approach.",
+            "startOffset": 145740,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 95511,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "However, the updating of SPDT classifier is not performed in parallel.",
+            "startOffset": 95441,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124844,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Moreover MC-NN is naturally parallel and thus has the advantage to be scaled up to high speed data streams as will be discussed on greater detail in Section  4.",
+            "startOffset": 124684,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 102089,
+            "parents": [],
+            "refoffsets": {
+                "br000155": {
+                    "endOffset": 101967,
+                    "startOffset": 101963
+                },
+                "br000160": {
+                    "endOffset": 102015,
+                    "startOffset": 102011
+                },
+                "br000165": {
+                    "endOffset": 102033,
+                    "startOffset": 102029
+                },
+                "br000170": {
+                    "endOffset": 102071,
+                    "startOffset": 102067
+                },
+                "br000175": {
+                    "endOffset": 102088,
+                    "startOffset": 102084
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Broadly speaking they can be split into three groups: Message Queue Systems, such as Kestrel and RabbitMQ  [31], Publish Subscribe Systems, such as Kafka  [32] and Kestrel  [33], and Log Systems, such as Flume  [34] and Scribe  [35].",
+            "startOffset": 101856,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 134848,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Each Reducer was also setup with a Samza container connected to a Kafka stream.",
+            "startOffset": 134769,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 144154,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "By restarting a Samza job within the Hadoop framework a decision must be made as to how data stream processing will proceed.",
+            "startOffset": 144030,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 134609,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "One of the nodes in the cluster was setup for Reducer jobs.",
+            "startOffset": 134550,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 147370,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "An architecture that allows the parallel processing of data streams has been realised and implemented.",
+            "startOffset": 147268,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97692,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "In the more general area of data mining an algorithm would iterate over the data several times in order to generate a model that fits the concepts (patterns) in the data.",
+            "startOffset": 97522,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 109318,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "MC2 was created at time stamp 7 and updated with instances at time stamps 8 and 9.",
+            "startOffset": 109236,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 130814,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "refoffsets": {
+                "br000160": {
+                    "endOffset": 130672,
+                    "startOffset": 130668
+                }
+            },
+            "secId": "s000065",
+            "sentence": "The message system used in the experiment was Kafka   [32], as publish subscribe systems can be manipulated more accurately for multiple stream configurations; such as different Hadoop configurations.",
+            "startOffset": 130614,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 134397,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Upon arrival of a message the node performs the required action (training, predicting, etc.) of the message and data, then forwards the results to another Kafka Output stream; as depicted in Fig. 10.",
+            "startOffset": 134198,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 135898,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The number of Mappers here controls the level of parallelism within the system.",
+            "startOffset": 135819,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 145312,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "This allowed any old data to be naturally flushed out of the system in a reasonable time, for other experiments to be executed.",
+            "startOffset": 145185,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 117667,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "Although dated, both are still widely used, as they often deliver an exceptional classification performance in many applications.",
+            "startOffset": 117538,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 142616,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "During experimentation the authors noticed a repeated node failure, leading to a re-submission for a sustained data stream to flow through this specific configuration.",
+            "startOffset": 142449,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 99204,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "This would require buffering enough data after the concept drift has occurred and then applying the batch data mining algorithm on the buffer.",
+            "startOffset": 99062,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 145039,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Only a subset of the data stream is processed by the new job.",
+            "startOffset": 144978,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 135430,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Two configurations of Stream Generators were created, 4 and 8 to send data in parallel to the Mappers.",
+            "startOffset": 135328,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 127530,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "Training of individual nodes only requires a single \u2018send\u2019 operation and no \u2018round trip\u2019 response time for returning predictions.",
+            "startOffset": 127401,
+            "title": "Training and adaptation"
+        },
+        {
+            "endOffset": 96806,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "A parallel implementation of MC-NN is presented, along with a critical appraisal of implementation mechanisms that can be used to support parallel analysis of real-time data.",
+            "startOffset": 96632,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99511,
+            "parents": [],
+            "refoffsets": {
+                "br000010": {
+                    "endOffset": 99481,
+                    "startOffset": 99478
+                },
+                "br000110": {
+                    "endOffset": 99510,
+                    "startOffset": 99506
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Further techniques exist to adapt non adaptive data mining algorithms to streaming data, such as sliding window  [2] and reservoir sampling  [22].",
+            "startOffset": 99365,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 131499,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "The original messages are retained within memory, while a secondary process thread is tasked with saving the data to hard disk.",
+            "startOffset": 131372,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 146051,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Loosely speaking, Micro-Clusters adapt quickly to concept drifts through splitting into new Micro-Clusters based on variance and misclassification errors.",
+            "startOffset": 145897,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 122692,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "For example, decision trees will adapt to a constantly changing concept by growing more subtrees from leaf nodes.",
+            "startOffset": 122579,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 130165,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Samza creates and launches processing jobs of unknown continuous duration within the Hadoop framework.",
+            "startOffset": 130063,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 129223,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "The architecture utilises multiple open source technologies to handle real-time data stream processing.",
+            "startOffset": 129120,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 99364,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "However, as mentioned earlier, batch algorithms typically require several passes through the data and thus may be too slow if data is arriving at a high speed.",
+            "startOffset": 99205,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 125408,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "Parallel MC-NN is implemented using the MapReduce parallel programming paradigm, which divides computational tasks into smaller subtasks implemented as Mappers.",
+            "startOffset": 125248,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 125617,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "The results of the Mappers are aggregated by Reducer components, which again can be executed concurrently in the computer cluster.",
+            "startOffset": 125487,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 139143,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The actual patterns encoded in the data that lead to the class labels are not known.",
+            "startOffset": 139059,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 146308,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "A Micro-Cluster is considered participating if it regularly absorbs new data instances by being correctly situated over a data pattern.",
+            "startOffset": 146173,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 94104,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In data stream classification a classifier is trained in real-time on incoming labelled data instances.",
+            "startOffset": 94001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99792,
+            "parents": [],
+            "refoffsets": {
+                "br000050": {
+                    "endOffset": 99703,
+                    "startOffset": 99699
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Reservoir sampling maintains an unbiased and representative fixed sized sample of the data instances retrieved from the stream, whereas sliding window based algorithms, such as G-eRules  [10], consider only the most recent instances from the stream to build the data mining model.",
+            "startOffset": 99512,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 138863,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "For example, as Mapper 1 receives one instance for training, Mapper 2 is free to receive the next training instance and performs its \u2018Training\u2019 process at the same time.",
+            "startOffset": 138694,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 109393,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "This example evaluates the Micro-Clusters\u2019 participation at time stamp 11.",
+            "startOffset": 109319,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 100795,
+            "parents": [],
+            "refoffsets": {
+                "br000135": {
+                    "endOffset": 100794,
+                    "startOffset": 100790
+                }
+            },
+            "secId": "s000010",
+            "sentence": "A number of systems exist to support parallel stream processing, the most notable of these include Esper  [27].",
+            "startOffset": 100684,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 132747,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000075",
+            "sentence": "The complexity definitions used in this section are given in Table 5.",
+            "startOffset": 132678,
+            "title": "Complexity of parallel MC-NN"
+        },
+        {
+            "endOffset": 134549,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "To stress test the scalability of the algorithm, multiple Stream Generators were instantiated, firing training and test data simultaneously to cluster.",
+            "startOffset": 134398,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 144858,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Kafka only retains messages for a pre-set period of time or until messages are overwritten on a \u2018rolling log\u2019 format of fixed hard disk size, whichever happens sooner.",
+            "startOffset": 144691,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 129750,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "refoffsets": {
+                "br000160": {
+                    "endOffset": 129749,
+                    "startOffset": 129745
+                }
+            },
+            "secId": "s000065",
+            "sentence": "The architecture is centred on the use of Hadoop, which was initially designed to work with files and batch processing on large parallel processing tasks (e.g. distributed file searching and word count problems), the later versions of Hadoop (2.0 \u2014 YARN) can accept data from different sources such as MPI and Kafka  [32].",
+            "startOffset": 129428,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 141471,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "For the HAR data set to be used as a data stream within the stream generators it was pre-loaded into memory before the data stream \u2018ran\u2019, otherwise there would have been costly IO operations from the hard disk.",
+            "startOffset": 141261,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 126641,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "Sections  4.1\u20134.3 highlight these three steps.",
+            "startOffset": 126595,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 97997,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "If left un-monitored, the algorithms would try to fit the concepts encoded on the whole stream and not account for \u2018Concept Drifts\u2019.",
+            "startOffset": 97865,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 120091,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "The results of MC-NN clearly show the lowest classification accuracy deterioration and almost recover instantly.",
+            "startOffset": 119979,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 144348,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "The original Kafka data stream does not know that the processing container failed, it simply keeps a running pointer of the last message in the linear stream that it gave to the processing job.",
+            "startOffset": 144155,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 101493,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "The key difference is that a pilot task is identified as an individual with its own workload to process, and therefore has no interaction with other tasks.",
+            "startOffset": 101338,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 119678,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "For the Random Tree results displayed in Fig. 4 it can be seen that Hoeffding Tree and Na\u00efve Bayes classifiers are clearly challenged with adapting to the concept drift (again between instances 10,000\u201311,000) as they need a long time to fully regain their previous classification accuracy level.",
+            "startOffset": 119383,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 129428,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Fig. 10 illustrates the general architecture of a typical MC-NN computer cluster node.",
+            "startOffset": 129342,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 126247,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "To accomplish this, multiple stream generators were introduced into the system to increase the velocity of data being processed in parallel.",
+            "startOffset": 126107,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 142705,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "The Samza container managing the 1 Mapper repeatedly failed within the Hadoop framework.",
+            "startOffset": 142617,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 135818,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "For each of the stream generator configurations 5 Mapper configurations were created and evaluated: 1,3,5,7 and 9.",
+            "startOffset": 135704,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 101224,
+            "parents": [],
+            "refoffsets": {
+                "br000150": {
+                    "endOffset": 101223,
+                    "startOffset": 101219
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Samza can be though of as a simplified \u2018pilot job\u2019  [30].",
+            "startOffset": 101167,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 100306,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Hoeffding based techniques aim to create and adapt data mining models based on a statistical upper bound on the probability that the so far received attribute values deviates from its expected value.",
+            "startOffset": 100107,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 101855,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "A number of messaging systems exist that Samza is capable of utilising.",
+            "startOffset": 101784,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 137687,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The results for 3\u20135 Mappers with 4 stream generators shows little reduction in runtime.",
+            "startOffset": 137600,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 146555,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "An empirical evaluation of MC-NN showed that it is competitive in terms of classification accuracy and adaptation to concept drifts with other existing popular data stream classifiers, i.e. Hoeffding Trees, adaptive Na\u00efve Bayes and real-time KNN.",
+            "startOffset": 146309,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 131007,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Kafka has low latency/high throughput message handling and is also configurable to have its internal data streams (known in Kafka as \u2018Topics\u2019) individually distributed in parallel as required.",
+            "startOffset": 130815,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 95294,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Nonetheless, their scalability is limited to the utilisation of one processing node at a time.",
+            "startOffset": 95200,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135226,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The cluster utilised had 16 physical worker nodes and 1 master node each with a quad core processor, giving a Hadoop virtual pool of 64 worker nodes.",
+            "startOffset": 135077,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 143176,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Most technologies utilise some strategy to deal with failures and data recovery.",
+            "startOffset": 143096,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 122820,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "As the Hyperplane streams are constantly changing, leaf nodes will receive conflicting data and thus the tree grows constantly.",
+            "startOffset": 122693,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 138359,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The results presented in Fig. 13 show the same pattern.",
+            "startOffset": 138304,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 112914,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000035",
+            "sentence": "For the evaluation of this serial MC-NN implementation, an \u2018Intel core\u2019 I5 processor with 8 Gb RAM was used.",
+            "startOffset": 112806,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 117913,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "refoffsets": {
+                "br000220": {
+                    "endOffset": 117844,
+                    "startOffset": 117840
+                }
+            },
+            "secId": "s000035",
+            "sentence": "Hoffeding Trees (VFDT) were recently adapted in  [44], to be used in a parallel forest executed within a GPU-based system.",
+            "startOffset": 117791,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 137034,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The training and test messages were created simultaneously in parallel within their own local Stream Generators, with 10 thousand training instances to 1 test message produced.",
+            "startOffset": 136858,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 136234,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "To highlight the parallel performance of the system \u2018batching\u2019 was utilised to reduce the latency communication costs.",
+            "startOffset": 136116,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 123575,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Hence, MC-NN shows a better performance on these more challenging constantly drifting data streams.",
+            "startOffset": 123476,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 136511,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The HAR data is looped instance by instance from each of the stream generators, to mimic the presence of a much larger (infinite) data stream for performance evaluation.",
+            "startOffset": 136342,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 141779,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "This is because, the 8 senders to 7\u20139 Mappers is approaching at a 1:1 ratio.",
+            "startOffset": 141703,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 143095,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Distributed/parallel technologies are well documented and aware of external and partial failures over clustered machines and partitioned/\u2018sharded\u2019 data.",
+            "startOffset": 142943,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 100106,
+            "parents": [],
+            "refoffsets": {
+                "br000115": {
+                    "endOffset": 100005,
+                    "startOffset": 100001
+                },
+                "br000120": {
+                    "endOffset": 100030,
+                    "startOffset": 100026
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Other techniques such as Hoeffding bound based techniques  [23] and Micro-Clusters  [24] have been used to create inherently adaptive data stream mining algorithms.",
+            "startOffset": 99942,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 144531,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Start a completely new job from this point and accept that the previous data was lost.",
+            "startOffset": 144445,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 93692,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Other aspects of Big Data have been added over the years, i.e.  Volatility, referring to how long the data is valid for, which is particularly relevant when referring to real-time data streams; and Value, referring to potential insights that can be derived by analysing the data.",
+            "startOffset": 93413,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 142448,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "From Figs. 12\u201314 it should be noted that there is no 1 Mapper configuration.",
+            "startOffset": 142372,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 144977,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Starting a new job from the point of failure makes the classification analysis with other configurations incomparable.",
+            "startOffset": 144859,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 133966,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The setup of the proposed MC-NN algorithm over the cluster was implemented in a traditional MapReduce setup, which is depicted in Fig. 11.",
+            "startOffset": 133828,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 96961,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "A scalability evaluation is also carried out, identifying insights, difficulties and solutions in implementing parallel real-time data stream classifiers.",
+            "startOffset": 96807,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129341,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Each node consists of a quad core machine running CentOS 5.",
+            "startOffset": 129282,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 130062,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "refoffsets": {
+                "br000140": {
+                    "endOffset": 129989,
+                    "startOffset": 129985
+                }
+            },
+            "secId": "s000065",
+            "sentence": "Samza   [28], is designed to enable Data Stream Processing over the Hadoop framework.",
+            "startOffset": 129977,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 138964,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "In Fig. 14 the time taken to process the data stream appears to be \u2018non-uniform\u2019 for using 7 Mappers.",
+            "startOffset": 138863,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 128168,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "Once a labelled training instance arrives at a Mapper, the Mapper\u2019s Micro-Clusters absorb the new data instance as it is described for serial MC-NN in Section  3.1 and subsequently may split into more Micro-Clusters or delete older less participating clusters in order to adapt to concept drifts.",
+            "startOffset": 127872,
+            "title": "Training and adaptation"
+        },
+        {
+            "endOffset": 109060,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "At any point in the data stream the Triangular Number (Eq. (2)) can be calculated for each Micro-Cluster.",
+            "startOffset": 108955,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 132876,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000075",
+            "sentence": "Extending the complexity analysis carried out in Section  3.2.1, our implementation scales with the available parallel hardware.",
+            "startOffset": 132748,
+            "title": "Complexity of parallel MC-NN"
+        },
+        {
+            "endOffset": 94210,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This classifier is then used in real-time to predict the class label of previously unseen data instances.",
+            "startOffset": 94105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 122579,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "This is due to the overlapping data values that are contradicting each other due to oscillation and thus the classifiers\u2019 inability to identify a fixed separation of classes without growing an overly large and complex model.",
+            "startOffset": 122355,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 135327,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The parallelisation was limited to 1 node per machine to stop data bottlenecks at the network level.",
+            "startOffset": 135227,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 145435,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "The development of a new parallel adaptive data stream classifier for data streams, termed MC-NN, is presented.",
+            "startOffset": 145324,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 131143,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Kafka can handle very long and fast streams due to fast communication and distribution by employing a number of low latency techniques.",
+            "startOffset": 131008,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 132969,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000075",
+            "sentence": "As stated earlier, the number of Micro-Clusters remains fixed at the Maximum number allowed.",
+            "startOffset": 132877,
+            "title": "Complexity of parallel MC-NN"
+        },
+        {
+            "endOffset": 125716,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "In the parallel MC-NN implementation each Mapper in the cluster computes its own MC-NN cluster set.",
+            "startOffset": 125617,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 137456,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Note that experiments with only 1 Mapper have been attempted, however, a data stream with 10 million data instances sent in parallel to a single node caused the Samza containers to re-initialise \u2014 forced by the management software.",
+            "startOffset": 137225,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 141182,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "An overall increase can be observed as the number of Mappers is increased.",
+            "startOffset": 141108,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 138561,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "By utilising the minimum number of Micro-Clusters possible to \u2018fit\u2019 a data pattern, the testing time of an instance should be unrelated to the number of Mappers (each taking the same time in parallel).",
+            "startOffset": 138360,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 96211,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The classifier is based on Nearest Neighbour (NN) classification and statistical summaries of the data and recency.",
+            "startOffset": 96096,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124442,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Overall the experiments in this section showed that MC-NN clearly outperforms its predecessor in terms of classification accuracy and computational efficiency.",
+            "startOffset": 124283,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 131902,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "In the following experiments in Section  4.5, 10,000 data instances were batched together in a message to reduce communications latency to experimentally \u2018stress\u2019 the cluster.",
+            "startOffset": 131727,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 95440,
+            "parents": [],
+            "refoffsets": {
+                "br000060": {
+                    "endOffset": 95429,
+                    "startOffset": 95425
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Parallel binning is used by the SPDT  [12] algorithm.",
+            "startOffset": 95387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105607,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "According to Algorithm 1 two scenarios are possible after the nearest Micro-Cluster has been identified when a new training instance is presented to the classifier:",
+            "startOffset": 105443,
+            "title": "Micro-Cluster based nearest neighbour"
+        },
+        {
+            "endOffset": 102249,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "The work presented in this paper develops an inherently parallel and adaptive data stream classifier that makes use of parallel stream processing technologies.",
+            "startOffset": 102090,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 126379,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "The authors believe this to be the norm of current and future data streams (e.g. tweets, status updates and automated sensor data).",
+            "startOffset": 126248,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 141107,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Fig. 17 shows the speedup of the algorithm on the HAR data set.",
+            "startOffset": 141044,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 141553,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "As each data instance was held in memory creating an instance was extremely fast.",
+            "startOffset": 141472,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 138002,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "This is because the use of 4 generators can saturate the network, limiting the size of data that can be forwarded to the Mappers.",
+            "startOffset": 137873,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 124283,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "However, as will be shown in Section  4.5 MC-NN can be parallelised and thus the runtime reduced.",
+            "startOffset": 124186,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 94811,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Due to high throughput of data and potentially infinite data streams, it is often not feasible to capture, store and process the data.",
+            "startOffset": 94677,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 122227,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "On this more challenging data stream, MC-NN(10) is stable and clearly outperforms all its competitors.",
+            "startOffset": 122125,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 125848,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "Predictions from individual Mappers are aggregated in Reducer nodes, which assign the final class label based on the majority vote.",
+            "startOffset": 125717,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 142101,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "The current implementation has been realised by combining a new classifier implementation with multiple Open Source technologies.",
+            "startOffset": 141972,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 132461,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Zookeeper keeps a parallel distributed synchronised file structure for parallel low latency data access, with single write operations directed to a \u2018leader node\u2019, responsible for forcing data propagation down to the available nodes for distribution.",
+            "startOffset": 132212,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 119382,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "For the SEA results displayed in Fig. 3 it can be seen that all classifiers achieve a relatively high accuracy at any time and only show a slight deterioration in accuracy during the concept drift (instances 10,000\u201311,000).",
+            "startOffset": 119159,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 142371,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "While Open Source technologies (namely, Hadoop, Samza and Kafka) have considerable advantages for reducing development time frames (and ensuring that the outcome can be shared with a large user community), their use and practical deployment is rarely complication free.",
+            "startOffset": 142102,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 143285,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "RAID disks, Hadoop\u2019s HDFS and Kafka use data replication, holding data in multiple locations simultaneously.",
+            "startOffset": 143177,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 145740,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "MC-NN is naturally parallel and has been implemented on a computer cluster.",
+            "startOffset": 145665,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 130350,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Instead of a traditional Hadoop job running until all data has been processed in synchronised Map/Reduce stages the Samza job awaits for data to arrive from an external message system.",
+            "startOffset": 130166,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 96422,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Micro-Clusters continuously adapt to concept drifts through absorbing new data instances (updating statistics).",
+            "startOffset": 96311,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125248,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "The underlying idea behind the parallel implementation is that each node in a computer cluster is training (updating) Micro-Clusters individually; and each computer node is computing its similarity to newly arrived labelled data instances.",
+            "startOffset": 125009,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 98557,
+            "parents": [],
+            "refoffsets": {
+                "br000080": {
+                    "endOffset": 98532,
+                    "startOffset": 98528
+                },
+                "br000085": {
+                    "endOffset": 98544,
+                    "startOffset": 98540
+                },
+                "br000090": {
+                    "endOffset": 98556,
+                    "startOffset": 98552
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Examples of Concept Drift detectors are DDM  [16], ECDD  [17] and ELM[18].",
+            "startOffset": 98483,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 124061,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "In the complexity analysis in Section  3.2.1 it was stated that the number of Micro-Clusters required is partially dependent on the number of class labels.",
+            "startOffset": 123906,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 139589,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Differing instances will cause more Micro-Cluster splitting and take more time to train.",
+            "startOffset": 139501,
+            "title": "Scalability results for the parallel MC-NN implementation"
+        },
+        {
+            "endOffset": 147069,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Adaptation and training is achieved by concurrently distributing training instances from the data stream evenly among the computational nodes in the cluster.",
+            "startOffset": 146912,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 101166,
+            "parents": [],
+            "refoffsets": {
+                "br000140": {
+                    "endOffset": 101129,
+                    "startOffset": 101125
+                },
+                "br000145": {
+                    "endOffset": 101165,
+                    "startOffset": 101161
+                }
+            },
+            "secId": "s000010",
+            "sentence": "However, if the continuous queries have a large window size and might require processing of a large number of data items/sec, Samza  [28] provides a better alternative  [29].",
+            "startOffset": 100992,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 119873,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "The real-time KNN classifiers also have a noticeable deterioration of their classification accuracy during the concept drift but recover much faster compared with Hoeffding Tree and Naive Bayes.",
+            "startOffset": 119679,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 129281,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "The cluster consists of 17 rack mounted physical servers.",
+            "startOffset": 129224,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 132595,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Future versions of Kafka are planned to phase out the use of Zookeeper and just utilise internal Topics for distributed coordination.",
+            "startOffset": 132462,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 131726,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "Multiple messages can be batched together to reduce the communications overhead.",
+            "startOffset": 131646,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 124568,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "MC-NN achieves a similar performance compared with well established data stream classifiers in terms of accuracy and runtime.",
+            "startOffset": 124443,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 125008,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "This section presents a parallel implementation of the MC-NN classifier highlighted and evaluated in Section  3.",
+            "startOffset": 124896,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 126594,
+            "parents": [],
+            "secId": "s000045",
+            "sentence": "The parallel MC-NN implementation can be described in three steps, the Micro-Cluster initialisation, the training/adaptation of Micro-Clusters and the prediction of newly arrived unlabelled data instances (testing).",
+            "startOffset": 126379,
+            "title": "Parallel MC-NN for scalability to fast data streams"
+        },
+        {
+            "endOffset": 134768,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                },
+                {
+                    "id": "s000070",
+                    "title": "Evaluation of the parallel MC-NN implementation"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "The data that the Reducers receive and process is much less than that of the Mappers, as their task is a simple aggregation of local predictions from Mappers.",
+            "startOffset": 134610,
+            "title": "Experimental setup"
+        },
+        {
+            "endOffset": 144383,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Here only 2 choices are available:",
+            "startOffset": 144349,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 144690,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "Re-reading the entire data stream will depend on the pre-set Kafka configurations and how long the data stream has been running for (perhaps, weeks or months).",
+            "startOffset": 144531,
+            "title": "Implementation, configuration and experimental issues"
+        },
+        {
+            "endOffset": 147174,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Each node then trains and adapts to concept drift in the same way as the serial implementation of MC-NN.",
+            "startOffset": 147070,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 147489,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "The architecture is based on integrating various distributed Open Source technologies such as Hadoop, Samza and Kafka.",
+            "startOffset": 147371,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 94975,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In the past two decades this has led to the development and publication of data stream classifiers that can analyse the data in real-time as it is being generated.",
+            "startOffset": 94812,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127749,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "The impact of these overheads can be reduced by batching data instances together in single messages when sending them to the computer cluster.",
+            "startOffset": 127607,
+            "title": "Training and adaptation"
+        },
+        {
+            "endOffset": 96559,
+            "parents": [],
+            "refoffsets": {
+                "br000075": {
+                    "endOffset": 96452,
+                    "startOffset": 96448
+                }
+            },
+            "secId": "s000005",
+            "sentence": "An empirical evaluation  [15] shows that the serial implementation of MC-NN is already very fast and robust to noise and concept drifts.",
+            "startOffset": 96423,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119978,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "However, they do not reach the same level of classification accuracy as Hoeffding Trees and Naive Bayes.",
+            "startOffset": 119874,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 120371,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "Given the fact that MC-NN is also fast and naturally parallelisable makes MC-NN the best performing classifier on the Random Tree data stream.",
+            "startOffset": 120229,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 146798,
+            "parents": [],
+            "secId": "s000095",
+            "sentence": "Furthermore, the results show shorter runtime of MC-NN compared with its competitors.",
+            "startOffset": 146713,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 129977,
+            "parents": [
+                {
+                    "id": "s000045",
+                    "title": "Parallel MC-NN for scalability to fast data streams"
+                }
+            ],
+            "secId": "s000065",
+            "sentence": "The cluster used for this evaluation hosted Hadoop version 2.6.0.",
+            "startOffset": 129912,
+            "title": "Computer cluster architecture for parallel scalable MC-NN"
+        },
+        {
+            "endOffset": 123090,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "Adaptive Micro-Cluster nearest neighbour data stream classification"
+                },
+                {
+                    "id": "s000025",
+                    "title": "Evaluation of MC-NN\u2019s adaptation to concept drifts and classification accuracy"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "A tree using the oscillating hyperplane will cause the tree to grow in multiple directions; whereas the rotating hyperplane will cause the tree to grow constantly one sided in the direction of the drift.",
+            "startOffset": 122887,
+            "title": "Results for serial MC-NN implementation"
+        },
+        {
+            "endOffset": 95199,
+            "parents": [],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 95041,
+                    "startOffset": 95038
+                },
+                "br000050": {
+                    "endOffset": 95057,
+                    "startOffset": 95053
+                },
+                "br000055": {
+                    "endOffset": 95096,
+                    "startOffset": 95092
+                }
+            },
+            "secId": "s000005",
+            "sentence": "For example, data stream classifiers such as Hoeffding Trees  [9], G-eRules  [10], Very Fast Decision Rules (VFDR)  [11] only need one pass through the data and thus train and adapt to concept drifts in real-time scenarios.",
+            "startOffset": 94976,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0167739X17304685",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "M.Tennant@pgr.reading.ac.uk",
+                "first": "Mark",
+                "initial": "M.",
+                "last": "Tennant"
+            },
+            {
+                "email": "F.T.Stahl@reading.ac.uk",
+                "first": "Frederic",
+                "initial": "F.",
+                "last": "Stahl"
+            },
+            {
+                "email": "RanaOF@cardiff.ac.uk",
+                "first": "Omer",
+                "initial": "O.",
+                "last": "Rana"
+            },
+            {
+                "email": "bartologjp@i2r.a-star.edu.sg",
+                "first": "Jo\u00e3o B\u00e1rtolo",
+                "initial": "J.B.",
+                "last": "Gomes"
+            }
+        ],
+        "doi": "10.1016/j.future.2017.03.026",
+        "firstpage": "187",
+        "issn": "0167739X",
+        "keywords": [
+            "Adaptation to concept drift",
+            "High velocity data streams",
+            "Parallel data stream classification"
+        ],
+        "lastpage": "199",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Scalable real-time classification of data streams with concept drift"
+    }
+}

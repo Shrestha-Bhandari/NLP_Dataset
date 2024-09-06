@@ -1,0 +1,2531 @@
+{
+    "abstract": "Electromagnetic-acoustic transducers (EMATs) consist of a magnet and a coil. They are advantageous in some non-destructive evaluation (NDE) applications because no direct contact with the specimen is needed to send and receive ultrasonic waves. However, EMATs commonly require excitation peak powers greater than 1\u00a0kW and therefore the driving electronics and the EMAT coils have to be bulky. This has hindered the development of EMAT phased arrays with characteristics similar to those of conventional piezoelectric phased arrays. Phased arrays are widely used in NDE because they offer superior defect characterization in comparison to single-element transducers. In this paper, we report a series of novel techniques and design elements that make it possible to construct an EMAT phased array that performs similarly to conventional piezoelectric arrays used in NDE. One of the key enabling features is the use of coded excitation to reduce the excitation peak power to less than 4.8\u00a0W (24 Vpp and 200\u00a0mA) so that racetrack coils with dimensions 3.2\u00d718mm2 can be employed. Moreover, these racetrack coils are laid out along their shortest dimension so that 1/3 of their area is overlapped. This helps to reduce the crosstalk between the coils, i.e., the array elements, to less than \u221215\u00a0dB. We show that an 8-element EMAT phased array operating at a central frequency of 1\u00a0MHz can be used to detect defects which have a width and a depth of 0.2 and 0.8\u00a0mm respectively and are located on the surface opposite to the array.",
+    "author_highlights": [
+        {
+            "endOffset": 41863,
+            "sentence": "The first low-power (24 Vpp and 200 mA), pulse-echo EMAT phased array is reported.",
+            "startOffset": 41781
+        },
+        {
+            "endOffset": 41948,
+            "sentence": "An 8-element array can image defects with a cross-section of 0.2 \u00d7 0.8 mm2 at 1 MHz.",
+            "startOffset": 41864
+        },
+        {
+            "endOffset": 42023,
+            "sentence": "Coil design enables crosstalk of ~\u221215 dB and a sub-wavelength array pitch.",
+            "startOffset": 41949
+        },
+        {
+            "endOffset": 42098,
+            "sentence": "Coils with sub-wavelength width mainly generate shear waves at ~60\u00b0 angle.",
+            "startOffset": 42024
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "R. B.",
+                    "initial": "R.B.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1016/B978-0-12-477919-8.50010-8",
+            "firstpage": "157",
+            "issn": "0893388X",
+            "lastpage": "200",
+            "pub_year": 1990,
+            "title": "Physical principles of measurements with emat transducers",
+            "volume": "19"
+        },
+        "b0010": {
+            "authors": [
+                {
+                    "first": "E. Roland",
+                    "initial": "E.R.",
+                    "last": "Dobbs"
+                }
+            ],
+            "doi": "10.1016/B978-0-12-477910-5.50008-8",
+            "firstpage": "127",
+            "issn": "0893388X",
+            "lastpage": "191",
+            "pub_year": 1973,
+            "title": "Electromagnetic Generation of Ultrasonic Waves",
+            "volume": "10"
+        },
+        "b0015": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Jian"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "R. S.",
+                    "initial": "R.S.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Morrison"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2006.05.123",
+            "firstpage": "e653",
+            "issn": "0041624X",
+            "lastpage": "e656",
+            "pub_year": 2006,
+            "title": "Coupling mechanism of an EMAT",
+            "volume": "44"
+        },
+        "b0020": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Boonsang"
+                },
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Dewhurst"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2005.01.003",
+            "firstpage": "512",
+            "issn": "0041624X",
+            "lastpage": "523",
+            "pub_year": 2005,
+            "title": "Signal enhancement in Rayleigh wave interactions using a laser-ultrasound/EMAT imaging system",
+            "volume": "43"
+        },
+        "b0025": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Jian"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Baillie"
+                },
+                {
+                    "first": "R. S.",
+                    "initial": "R.S.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Morrison"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Fan"
+                }
+            ],
+            "doi": "10.1063/1.2408644",
+            "issn": "00036951",
+            "pub_year": 2006,
+            "title": "Shear wave generation using a spiral electromagnetic acoustic transducer",
+            "volume": "89"
+        },
+        "b0030": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Jian"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Quirk"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Baillie"
+                }
+            ],
+            "doi": "10.1063/1.2756090",
+            "issn": "00218979",
+            "pub_year": 2007,
+            "title": "Effect on ultrasonic generation of a backplate in electromagnetic acoustic transducers",
+            "volume": "102"
+        },
+        "b0035": {
+            "authors": [
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Fan"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "R. S.",
+                    "initial": "R.S.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Jian"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2007.01.008",
+            "firstpage": "471",
+            "issn": "09638695",
+            "lastpage": "477",
+            "pub_year": 2007,
+            "title": "Ultrasonic surface wave propagation and interaction with surface defects on rail track head",
+            "volume": "40"
+        },
+        "b0040": {
+            "authors": [
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Kang"
+                },
+                {
+                    "first": "Shujuan",
+                    "initial": "S.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Tao",
+                    "initial": "T.",
+                    "last": "Jiang"
+                },
+                {
+                    "first": "Guofu",
+                    "initial": "G.",
+                    "last": "Zhai"
+                }
+            ],
+            "doi": "10.1143/JJAP.50.07HD01",
+            "issn": "00214922",
+            "pub_year": 2011,
+            "title": "Optimal design of lamb wave electromagnetic acoustic transducers for improving their excitation performance",
+            "volume": "50"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Kang"
+                },
+                {
+                    "first": "Steve",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "Kaican",
+                    "initial": "K.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Jingmin",
+                    "initial": "J.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2013.05.003",
+            "firstpage": "11",
+            "issn": "09638695",
+            "lastpage": "17",
+            "pub_year": 2013,
+            "title": "Enhancement of signal amplitude of surface wave EMATs based on 3-D simulation analysis and orthogonal test method",
+            "volume": "59"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Jian"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Dixon"
+                },
+                {
+                    "first": "K. T.V.",
+                    "initial": "K.T.V.",
+                    "last": "Grattan"
+                },
+                {
+                    "first": "R. S.",
+                    "initial": "R.S.",
+                    "last": "Edwards"
+                }
+            ],
+            "doi": "10.1016/j.sna.2006.01.048",
+            "firstpage": "296",
+            "issn": "09244247",
+            "lastpage": "304",
+            "pub_year": 2006,
+            "title": "A model for pulsed Rayleigh wave and optimal EMAT design",
+            "volume": "128"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "K. S.",
+                    "initial": "K.S.",
+                    "last": "Ho"
+                },
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Gan"
+                },
+                {
+                    "first": "D. R.",
+                    "initial": "D.R.",
+                    "last": "Billson"
+                },
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Hutchins"
+                }
+            ],
+            "doi": "10.1063/1.1899310",
+            "issn": "00346748",
+            "pub_year": 2005,
+            "title": "Application of pulse compression signal processing techniques to electromagnetic acoustic transducers for noncontact thickness measurements and imaging",
+            "volume": "76"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Bruce W.",
+                    "initial": "B.W.",
+                    "last": "Drinkwater"
+                },
+                {
+                    "first": "Paul D.",
+                    "initial": "P.D.",
+                    "last": "Wilcox"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2006.03.006",
+            "firstpage": "525",
+            "issn": "09638695",
+            "lastpage": "541",
+            "pub_year": 2006,
+            "title": "Ultrasonic arrays for non-destructive evaluation: A review",
+            "volume": "39"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "J\u00f8rgen Arendt",
+                    "initial": "J.A.",
+                    "last": "Jensen"
+                },
+                {
+                    "first": "Svetoslav Ivanov",
+                    "initial": "S.I.",
+                    "last": "Nikolov"
+                },
+                {
+                    "first": "Kim L\u00f8kke",
+                    "initial": "K.L.",
+                    "last": "Gammelmark"
+                },
+                {
+                    "first": "Morten H\u00f8gholm",
+                    "initial": "M.H.",
+                    "last": "Pedersen"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2006.07.017",
+            "firstpage": "e5",
+            "issn": "0041624X",
+            "lastpage": "e15",
+            "pmid": "16959281",
+            "pub_year": 2006,
+            "title": "Synthetic aperture ultrasound imaging",
+            "volume": "44"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Le Bourdais"
+                },
+                {
+                    "first": "Beno\u00eet",
+                    "initial": "B.",
+                    "last": "Marchand"
+                }
+            ],
+            "doi": "10.1063/1.4864933",
+            "firstpage": "1022",
+            "issn": "0094243X",
+            "lastpage": "1029",
+            "pub_year": 2014,
+            "title": "Development of electromagnetic acoustic transducer (EMAT) phased arrays for SFR inspection",
+            "volume": "1581"
+        },
+        "b0075": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Le Bourdais"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Le Poll\u00e9s"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Baqu\u00e9"
+                }
+            ],
+            "doi": "10.1109/ANIMMA.2015.7465510",
+            "pub_year": 2015,
+            "title": "Liquid sodium testing of in-house phased array EMAT transducer for L-wave applications"
+        },
+        "b0080": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Sawaragi"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Salzburger"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "H\u00fcbschen"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Enami"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Kirihigashi"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Tachibana"
+                }
+            ],
+            "doi": "10.1016/S0029-5493(99)00276-9",
+            "firstpage": "153",
+            "issn": "00295493",
+            "lastpage": "163",
+            "pub_year": 2000,
+            "title": "Improvement of SH-wave EMAT phased array inspection by new eight segment probes",
+            "volume": "198"
+        },
+        "b0085": {
+            "authors": [
+                {
+                    "first": "Huidong",
+                    "initial": "H.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "Borja",
+                    "initial": "B.",
+                    "last": "Lopez"
+                }
+            ],
+            "firstpage": "821",
+            "issn": "00255327",
+            "lastpage": "827",
+            "pub_year": 2010,
+            "title": "Development of single-channel and phased array electromagnetic acoustic transducers for austenitic weld testing",
+            "volume": "68"
+        },
+        "b0090": {
+            "authors": [
+                {
+                    "first": "Shujuan",
+                    "initial": "S.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Riliang",
+                    "initial": "R.",
+                    "last": "Su"
+                },
+                {
+                    "first": "Xiaoyang",
+                    "initial": "X.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Kang"
+                },
+                {
+                    "first": "Guofu",
+                    "initial": "G.",
+                    "last": "Zhai"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2013.2864",
+            "firstpage": "2657",
+            "issn": "08853010",
+            "lastpage": "2664",
+            "pub_year": 2013,
+            "title": "Numerical and experimental analysis of unidirectional meander-line coil electromagnetic acoustic transducers",
+            "volume": "60"
+        },
+        "b0095": {
+            "authors": [
+                {
+                    "first": "Samuel",
+                    "initial": "S.",
+                    "last": "Hill"
+                },
+                {
+                    "first": "Steve",
+                    "initial": "S.",
+                    "last": "Dixon"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2014.06.008",
+            "firstpage": "24",
+            "issn": "09638695",
+            "lastpage": "30",
+            "pub_year": 2014,
+            "title": "Localisation of defects with time and frequency measurements using pulsed arrays",
+            "volume": "67"
+        },
+        "b0100": {
+            "authors": [
+                {
+                    "first": "Julio",
+                    "initial": "J.",
+                    "last": "Isla"
+                },
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Cegla"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2016.2558467",
+            "firstpage": "1148",
+            "issn": "08853010",
+            "lastpage": "1160",
+            "pub_year": 2016,
+            "title": "Optimization of the bias magnetic field of shear wave EMATs",
+            "volume": "63"
+        },
+        "b0105": null,
+        "b0110": {
+            "authors": [
+                {
+                    "first": "Julio",
+                    "initial": "J.",
+                    "last": "Isla"
+                },
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Cegla"
+                }
+            ],
+            "doi": "10.1109/ULTSYM.2016.7728395",
+            "issn": "19485719",
+            "pub_year": 2016,
+            "title": "Coded excitation for low SNR pulse-echo systems: Enabling quasi-real-time low-power EMATs",
+            "volume": "2016-"
+        },
+        "b0115": {
+            "authors": [
+                {
+                    "first": "Julio",
+                    "initial": "J.",
+                    "last": "Isla"
+                },
+                {
+                    "first": "Frederic",
+                    "initial": "F.",
+                    "last": "Cegla"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2017.2661383",
+            "firstpage": "736",
+            "issn": "08853010",
+            "lastpage": "748",
+            "pmid": "28166492",
+            "pub_year": 2017,
+            "title": "Coded Excitation for Pulse-Echo Systems",
+            "volume": "64"
+        },
+        "b0120": {
+            "authors": [
+                {
+                    "first": "F. Joseph",
+                    "initial": "F.J.",
+                    "last": "Pompei"
+                },
+                {
+                    "first": "Shi Chang",
+                    "initial": "S.C.",
+                    "last": "Wooh"
+                }
+            ],
+            "doi": "10.1121/1.1460924",
+            "firstpage": "2040",
+            "issn": "00014966",
+            "lastpage": "2048",
+            "pmid": "12051424",
+            "pub_year": 2002,
+            "title": "Phased array element shapes for suppressing grating lobes",
+            "volume": "111"
+        },
+        "b0125": {
+            "authors": [
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Crowther"
+                }
+            ],
+            "doi": "10.1784/insi.46.9.525.40843",
+            "firstpage": "525",
+            "issn": "13542575",
+            "lastpage": "528",
+            "pub_year": 2004,
+            "title": "Practical experience of phased array technology for power station applications",
+            "volume": "46"
+        },
+        "b0130": {
+            "authors": [
+                {
+                    "first": "Yun Kyu",
+                    "initial": "Y.K.",
+                    "last": "An"
+                },
+                {
+                    "first": "Byeongjin",
+                    "initial": "B.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Hoon",
+                    "initial": "H.",
+                    "last": "Sohn"
+                }
+            ],
+            "doi": "10.1088/0964-1726/22/2/025022",
+            "issn": "09641726",
+            "pub_year": 2013,
+            "title": "Complete noncontact laser ultrasonic imaging for automated crack visualization in a plate",
+            "volume": "22"
+        },
+        "b0135": {
+            "authors": [
+                {
+                    "first": "Maria V.",
+                    "initial": "M.V.",
+                    "last": "Felice"
+                },
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Velichko"
+                },
+                {
+                    "first": "Paul D.",
+                    "initial": "P.D.",
+                    "last": "Wilcox"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2014.08.004",
+            "firstpage": "105",
+            "issn": "09638695",
+            "lastpage": "112",
+            "pub_year": 2014,
+            "title": "Accurate depth measurement of small surface-breaking cracks using an ultrasonic array post-processing technique",
+            "volume": "68"
+        },
+        "b0140": {
+            "authors": [
+                {
+                    "first": "Xingwang",
+                    "initial": "X.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "Vladimir",
+                    "initial": "V.",
+                    "last": "Vavilov"
+                }
+            ],
+            "doi": "10.1016/j.infrared.2013.08.003",
+            "firstpage": "149",
+            "issn": "13504495",
+            "lastpage": "156",
+            "pub_year": 2013,
+            "title": "Crack detection in aluminum parts by using ultrasound-excited infrared thermography",
+            "volume": "61"
+        },
+        "b0145": {
+            "authors": [
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Ye"
+                },
+                {
+                    "first": "Hak Joon",
+                    "initial": "H.J.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Sung Jin",
+                    "initial": "S.J.",
+                    "last": "Song"
+                },
+                {
+                    "first": "Sung Sik",
+                    "initial": "S.S.",
+                    "last": "Kang"
+                },
+                {
+                    "first": "Kyungcho",
+                    "initial": "K.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Myung Ho",
+                    "initial": "M.H.",
+                    "last": "Song"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2011.01.003",
+            "firstpage": "290",
+            "issn": "09638695",
+            "lastpage": "296",
+            "pub_year": 2011,
+            "title": "Model-based simulation of focused beam fields produced by a phased array ultrasonic transducer in dissimilar metal welds",
+            "volume": "44"
+        },
+        "b0150": {
+            "authors": [
+                {
+                    "first": "Zheng",
+                    "initial": "Z.",
+                    "last": "Fan"
+                },
+                {
+                    "first": "Alison F.",
+                    "initial": "A.F.",
+                    "last": "Mark"
+                },
+                {
+                    "first": "Michael J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "Philip J.",
+                    "initial": "P.J.",
+                    "last": "Withers"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2015.007018",
+            "firstpage": "1530",
+            "issn": "08853010",
+            "lastpage": "1543",
+            "pub_year": 2015,
+            "title": "Nonintrusive estimation of anisotropic stiffness maps of heterogeneous steel welds for the improvement of ultrasonic array inspection",
+            "volume": "62"
+        },
+        "b0155": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Wilbrand"
+                }
+            ],
+            "firstpage": "71",
+            "lastpage": "80",
+            "pub_year": 1983,
+            "title": "EMUS - PROBES FOR BULK WAVES AND RAYLEIGH WAVES. MODEL FOR SOUND FIELD AND EFFICIENCY CALCULATIONS."
+        },
+        "b0160": {
+            "authors": [
+                {
+                    "first": "Ansgar",
+                    "initial": "A.",
+                    "last": "Wilbrand"
+                }
+            ],
+            "firstpage": "671",
+            "issn": "07430760",
+            "lastpage": "680",
+            "pub_year": 1988,
+            "title": "Quantitative modeling and experimental analysis of the physical properties of electromagnetic-ultrasonic transducers",
+            "volume": "7"
+        },
+        "b0165": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Ribichini"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Cegla"
+                },
+                {
+                    "first": "P. B.",
+                    "initial": "P.B.",
+                    "last": "Nagy"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Cawley"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2011.08.007",
+            "firstpage": "32",
+            "issn": "09638695",
+            "lastpage": "38",
+            "pub_year": 2012,
+            "title": "Experimental and numerical evaluation of electromagnetic acoustic transducer performance on steel materials",
+            "volume": "45"
+        },
+        "b0170": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Ribichini"
+                },
+                {
+                    "first": "P. B.",
+                    "initial": "P.B.",
+                    "last": "Nagy"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Ogi"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2012.06.004",
+            "firstpage": "8",
+            "issn": "09638695",
+            "lastpage": "15",
+            "pub_year": 2012,
+            "title": "The impact of magnetostriction on the transduction of normal bias field EMATs",
+            "volume": "51"
+        },
+        "b0175": {
+            "authors": [
+                {
+                    "first": "K. J.",
+                    "initial": "K.J.",
+                    "last": "Langenberg"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Fellinger"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Marklein"
+                }
+            ],
+            "doi": "10.1007/BF01606421",
+            "firstpage": "59",
+            "issn": "09349847",
+            "lastpage": "81",
+            "pub_year": 1990,
+            "title": "On the nature of the so-called subsurface longitudinal wave and/or the surface longitudinal \"creeping\" wave",
+            "volume": "2"
+        },
+        "b0180": {
+            "authors": [
+                {
+                    "first": "Caroline",
+                    "initial": "C.",
+                    "last": "Holmes"
+                },
+                {
+                    "first": "Bruce W.",
+                    "initial": "B.W.",
+                    "last": "Drinkwater"
+                },
+                {
+                    "first": "Paul D.",
+                    "initial": "P.D.",
+                    "last": "Wilcox"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2005.04.002",
+            "firstpage": "701",
+            "issn": "09638695",
+            "lastpage": "711",
+            "pub_year": 2005,
+            "title": "Post-processing of the full matrix of ultrasonic transmit-receive array data for non-destructive evaluation",
+            "volume": "38"
+        },
+        "b0185": {
+            "authors": [
+                {
+                    "first": "Alan J.",
+                    "initial": "A.J.",
+                    "last": "Hunter"
+                },
+                {
+                    "first": "Bruce W.",
+                    "initial": "B.W.",
+                    "last": "Drinkwater"
+                },
+                {
+                    "first": "Paul D.",
+                    "initial": "P.D.",
+                    "last": "Wilcox"
+                }
+            ],
+            "doi": "10.1109/TUFFC.952",
+            "firstpage": "2450",
+            "issn": "08853010",
+            "lastpage": "2462",
+            "pmid": "19049924",
+            "pub_year": 2008,
+            "title": "The wavenumber algorithm for full-matrix imaging using an ultrasonic array",
+            "volume": "55"
+        },
+        "b0190": {
+            "authors": [
+                {
+                    "first": "Tanya",
+                    "initial": "T.",
+                    "last": "Chernyakova"
+                },
+                {
+                    "first": "Yonina",
+                    "initial": "Y.",
+                    "last": "Eldar"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2014.3032",
+            "firstpage": "1252",
+            "issn": "08853010",
+            "lastpage": "1267",
+            "pub_year": 2014,
+            "title": "Fourier-domain beamforming: The path to compressed ultrasound imaging",
+            "volume": "61"
+        },
+        "b0195": {
+            "authors": [
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Gan"
+                },
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Hutchins"
+                },
+                {
+                    "first": "D. R.",
+                    "initial": "D.R.",
+                    "last": "Billson"
+                },
+                {
+                    "first": "D. W.",
+                    "initial": "D.W.",
+                    "last": "Schindel"
+                }
+            ],
+            "doi": "10.1016/S0041-624X(00)00059-7",
+            "firstpage": "181",
+            "issn": "0041624X",
+            "lastpage": "194",
+            "pmid": "11349999",
+            "pub_year": 2001,
+            "title": "The use of broadband acoustic transducers and pulse-compression techniques for air-coupled ultrasonic imaging",
+            "volume": "39"
+        },
+        "b0200": {
+            "authors": [
+                {
+                    "first": "Lifang",
+                    "initial": "L.",
+                    "last": "Feng"
+                },
+                {
+                    "first": "Pingzhi",
+                    "initial": "P.",
+                    "last": "Fan"
+                },
+                {
+                    "first": "Xiaohu",
+                    "initial": "X.",
+                    "last": "Tang"
+                },
+                {
+                    "first": "Kok Keong",
+                    "initial": "K.K.",
+                    "last": "Loo"
+                }
+            ],
+            "doi": "10.1109/LSP.2008.919997",
+            "firstpage": "377",
+            "issn": "10709908",
+            "lastpage": "380",
+            "pub_year": 2008,
+            "title": "Generalized pairwise Z-complementary codes",
+            "volume": "15"
+        },
+        "b0205": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Garcia-Rodriguez"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Yaez"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Garcia-Hernandez"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Salazar"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Turo"
+                },
+                {
+                    "first": "J. A.",
+                    "initial": "J.A.",
+                    "last": "Chavez"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2010.07.005",
+            "firstpage": "677",
+            "issn": "09638695",
+            "lastpage": "686",
+            "pub_year": 2010,
+            "title": "Application of Golay codes to improve the dynamic range in ultrasonic Lamb waves air-coupled systems",
+            "volume": "43"
+        },
+        "b0210": {
+            "authors": [
+                {
+                    "first": "Prabhu",
+                    "initial": "P.",
+                    "last": "Rajagopal"
+                },
+                {
+                    "first": "Mickael",
+                    "initial": "M.",
+                    "last": "Drozdz"
+                },
+                {
+                    "first": "Elizabeth A.",
+                    "initial": "E.A.",
+                    "last": "Skelton"
+                },
+                {
+                    "first": "Michael J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "Richard V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1016/j.ndteint.2012.04.001",
+            "firstpage": "30",
+            "issn": "09638695",
+            "lastpage": "40",
+            "pub_year": 2012,
+            "title": "On the use of absorbing layers to simulate the propagation of elastic waves in unbounded isotropic media using commercially available Finite Element packages",
+            "volume": "51"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 71947,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Most of the distorted signals correspond to the cases where the same transmit and receive element are used; this is due to poor performance of the instrumentation, mainly caused by a slow recovery from saturation, which subsequently affects the performance of the sequences.",
+            "startOffset": 71673,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 57279,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 57278,
+                    "startOffset": 57274
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Experiments were not conducted over a steel sample because the probe housing was fabricated using a fragile polymer that could easily be broken if exposed to the magnetic forces between the ferromagnetic sample and the probe; however, these simulations are expected to be accurate according to [20].",
+            "startOffset": 56980,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 57632,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The radiation pattern of the individual coils was simulated in COMSOL Multiphysics 5.2 (COMSOL Inc., Massachusetts, USA) using the Solid Mechanics module.",
+            "startOffset": 57478,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 54490,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The dashed and continuous black curves correspond to the core-magnet arrangement over the aluminium and steel samples respectively.",
+            "startOffset": 54359,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 63972,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Longer sequences produce greater SNRs; however, in pulse-echo mode, long sequences cannot be used because the incoming waves from close reflectors are masked by the transmitted sequence.",
+            "startOffset": 63786,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 45674,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These designs are very convenient for their simplicity since only one active element or coil is required.",
+            "startOffset": 45569,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47995,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The outline of this paper is as follows.",
+            "startOffset": 47955,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54862,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The flux density is twice as large in the steel sample under the core compared to the aluminium sample; in pulse-echo mode, this corresponds to a 12-dB signal increase because the signals double on both transmission and reception.",
+            "startOffset": 54632,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 48338,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The source of the bias magnetic field and the radiation pattern of the racetrack coils are simulated using finite elements (FE) whereas the crosstalk between adjacent coils is measured.",
+            "startOffset": 48153,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45893,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the central beam of the ultrasonic radiation pattern is steered by changing the central frequency; this limits the resolution (i.e. the capacity of the system to resolve defects) and the steering capabilities.",
+            "startOffset": 45675,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49162,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "When alternating current passes through the coil, eddy currents are induced in the specimen beneath the coil.",
+            "startOffset": 49053,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 50225,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The bias magnetic field of the EMAT array is produced by a ferromagnetic core abutted by two magnets with like poles facing the core.",
+            "startOffset": 50092,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 56895,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "There is almost no difference between the measurements taken at the end and centre of the array, which implies that fringe effects are negligible.",
+            "startOffset": 56749,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 68214,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Moreover, the centre of the focal region that corresponds to the defect in Fig. 11a lies slightly below the original location of the defect.",
+            "startOffset": 68074,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 67336,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Eq. (1) is employed to produce a focused image using a regular spatial grid equivalent to 1/16 of the wavelength at 1 MHz and a wave velocity of 3.1 mm/s.",
+            "startOffset": 67182,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 48978,
+            "parents": [],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 48977,
+                    "startOffset": 48967
+                },
+                "b0155": {
+                    "endOffset": 48977,
+                    "startOffset": 48967
+                },
+                "b0160": {
+                    "endOffset": 48977,
+                    "startOffset": 48967
+                },
+                "b0165": {
+                    "endOffset": 48977,
+                    "startOffset": 48967
+                },
+                "b0170": {
+                    "endOffset": 48977,
+                    "startOffset": 48967
+                }
+            },
+            "secId": "s0010",
+            "sentence": "This is a reasonable and frequently made assumption, which has been shown to be valid in [20,31\u201334].",
+            "startOffset": 48878,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 60045,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In practice, an adequate separation of the sources is between 1/2 and 1 wavelength; at 1 MHz this corresponds to 1.6 and 3.2 mm respectively.",
+            "startOffset": 59904,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 54631,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The distribution of the flux components is similar in both cases with the maximum values appearing under the core and then decaying rapidly.",
+            "startOffset": 54491,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 48152,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "First, the design elements of the proposed EMAT array are discussed in detail, namely the ferromagnetic core-magnet arrangement and the layout of the coils.",
+            "startOffset": 47996,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74266,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "To enhance the signal further, a core-magnet arrangement is used to increase the bias magnetic field over the eddy currents; compared with a single magnet, the core-magnet arrangement can produce signals whose amplitudes are 10-dB greater.",
+            "startOffset": 74027,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 56980,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "In general, the 3D simulation fits the experimental measurements better than the 2D.",
+            "startOffset": 56896,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 56748,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The continuous red curve corresponds to 3D simulations and the dashed black curve to 2D simulations.",
+            "startOffset": 56648,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 47357,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This helps to reduce the crosstalk between the coils, i.e., the array elements, to less than \u221215 dB and creates a periodic pattern where the separation between the array elements, i.e., the array pitch is 2.1 mm.",
+            "startOffset": 47145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53831,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The colour scale corresponds to the absolute value of the flux density in Tesla (T), whereas black curves represent flux lines.",
+            "startOffset": 53704,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 53703,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The simulation results are shown in Fig. 4a and b for aluminium and steel respectively.",
+            "startOffset": 53616,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 60154,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "All these results also apply to aluminium samples, because aluminium and steel have similar wave velocities.",
+            "startOffset": 60046,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 73098,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 72757,
+                    "startOffset": 72753
+                }
+            },
+            "secId": "s0055",
+            "sentence": "According to [20], shear transducers, as the racetrack coils of the EMAT array, can generate/receive longitudinal modes due to the discontinuity of the traction forces on the surface of the specimen, and since the displacements that correspond to the longitudinal mode are aligned with the bias magnetic field, the longitudinal mode can propagate unaffected.",
+            "startOffset": 72740,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 72501,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The focal regions are slightly larger in Fig. 11b, which could be due to a narrower bandwidth or ringing of the transducer.",
+            "startOffset": 72378,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 75041,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The authors speculate that a low-power EMAT phased array as described in this paper might enable new types of inspection in hazardous environments where conventional high power equipment cannot be used because of the risk of explosion and non-contact measurements are required.",
+            "startOffset": 74764,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 47539,
+            "parents": [],
+            "refoffsets": {
+                "b0120": {
+                    "endOffset": 47538,
+                    "startOffset": 47534
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Considering a centre frequency of 1 MHz and shear-wave generation in aluminium or steel, this pitch is close to half a wavelength (\u22481.6 mm), as required to avoid grating lobes [24].",
+            "startOffset": 47358,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44391,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 44262,
+                    "startOffset": 44256
+                },
+                "b0045": {
+                    "endOffset": 44262,
+                    "startOffset": 44256
+                },
+                "b0050": {
+                    "endOffset": 44262,
+                    "startOffset": 44256
+                },
+                "b0055": {
+                    "endOffset": 44390,
+                    "startOffset": 44386
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, EMATs produce less intense signals in comparison to piezoelectric elements and therefore more attention to their design optimization is required [8\u201310] as well as the use of signal processing techniques, such as pulse-compression, to increase the signal-to-noise ratio (SNR) [11].",
+            "startOffset": 44102,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67809,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The authors confirmed that the focusing artifacts disappear when the distance between the two point loads of the elements or the frequency is reduced; this can be attributed to the effect of the side/grating lobes.",
+            "startOffset": 67595,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 66793,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Each element overlaps adjacent ones such that the array pitch is 2/3 of the element width.",
+            "startOffset": 66703,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 50070,
+            "parents": [],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 50069,
+                    "startOffset": 50065
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The ferromagnetic core is abutted by magnets with like poles facing the core to increase the magnetic flux density; the advantages of this configuration were discussed in [20].",
+            "startOffset": 49894,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 64278,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "When the SNR at the input of the receiver is low (e.g., below 0 dB), these sequences can be an order of magnitude faster than averaging.",
+            "startOffset": 64142,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 50383,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 50382,
+                    "startOffset": 50378
+                }
+            },
+            "secId": "s0015",
+            "sentence": "This configuration exploits two basic mechanisms to increase the bias magnetic field under the core: repulsion between magnets and low reluctance paths [20].",
+            "startOffset": 50226,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 63460,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Coded excitation has been in use for many decades to increase the SNR.",
+            "startOffset": 63390,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 54247,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The main difference between Fig. 4a and b is the increase in the flux density in the presence of the steel sample due to the existence of a lower reluctance path between the core and the ferromagnetic sample.",
+            "startOffset": 54039,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 59737,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "When the distance between the sources exceeds half a wavelength, the wave packets split in two; having more than one wave packet is not desirable because it deteriorates the resolution of the system and can lead to artifacts in the resulting focused image.",
+            "startOffset": 59481,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 67451,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Results are shown in Fig. 11a, where the back wall of the aluminium block is marked using a white horizontal line.",
+            "startOffset": 67337,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 48642,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This is followed by an experiment to corroborate the results.",
+            "startOffset": 48581,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51404,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The core-magnet arrangement was simulated in COMSOL Multiphysics 5.2 (COMSOL Inc., Massachusetts, USA) using the Magnetic Field (No Current) interface of the AC/DC module model library.",
+            "startOffset": 51219,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 51135,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The height of the core (21 mm) and the dimensions of the magnets (cross section 20 \u00d7 10 mm2) were chosen by the authors as a good compromise between the intensity of the bias magnetic field and the overall volume of the array.",
+            "startOffset": 50909,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 45568,
+            "parents": [],
+            "refoffsets": {
+                "b0080": {
+                    "endOffset": 45567,
+                    "startOffset": 45560
+                },
+                "b0085": {
+                    "endOffset": 45567,
+                    "startOffset": 45560
+                },
+                "b0090": {
+                    "endOffset": 45567,
+                    "startOffset": 45560
+                },
+                "b0095": {
+                    "endOffset": 45567,
+                    "startOffset": 45560
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The majority of EMAT designs which have been reported so far where the ultrasonic beam can be electrically steered or deflected consist of a magnet on top of a meander coil [16\u201319].",
+            "startOffset": 45387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44680,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 44679,
+                    "startOffset": 44675
+                }
+            },
+            "secId": "s0005",
+            "sentence": "EMAT phased arrays would be advantageous in general over standard monolithic transducers because, as any ultrasonic phased array, they can generate different electrically-controlled ultrasonic fields and rapidly visualise the internal structure of the specimen through focused images [12].",
+            "startOffset": 44391,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64141,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It consists in introducing receive intervals within a sequence.",
+            "startOffset": 64078,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 72377,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The focused image is shown in Fig. 11b. Overall, the focal regions of interest, namely the defect and the back wall, match well with the simulations in Fig. 11a despite the fact that signals from some transmit-receive pairs were discarded; this also indicates that crosstalk is sufficiently low, as expected from the results of Fig. 8.",
+            "startOffset": 72042,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 68562,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "These head waves travel faster, which causes the downward shift effect of the focal point.",
+            "startOffset": 68472,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 64077,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "refoffsets": {
+                "b0105": {
+                    "endOffset": 64076,
+                    "startOffset": 64069
+                },
+                "b0110": {
+                    "endOffset": 64076,
+                    "startOffset": 64069
+                },
+                "b0115": {
+                    "endOffset": 64076,
+                    "startOffset": 64069
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Recently, the authors proposed a technique whereby long sequences can be used in pulse-echo mode [21\u201323].",
+            "startOffset": 63972,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 73423,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The rest of the artifacts in Fig. 11b are believed to be associated with the transmit-receive switching functionality of the electronics and its low recovery from saturation, which affect the performance of the sequences.",
+            "startOffset": 73202,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 53924,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 53897,
+                    "startOffset": 53893
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The distribution of the field is similar to that observed in [20] for the axisymmetric case.",
+            "startOffset": 53832,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 71569,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As a result, the overall image SNR is greater than 33 dB.",
+            "startOffset": 71512,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 43881,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 43880,
+                    "startOffset": 43875
+                },
+                "b0010": {
+                    "endOffset": 43880,
+                    "startOffset": 43875
+                },
+                "b0015": {
+                    "endOffset": 43880,
+                    "startOffset": 43875
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Electromagnetic-acoustic transducers (EMATs) consist of a magnet and coil and do not require mechanical contact with the specimen under test [1\u20133].",
+            "startOffset": 43734,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48580,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Then, the performance of a 1-MHz, 8-channel EMAT array in detecting a surface crack is simulated using FE.",
+            "startOffset": 48474,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68471,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This is because in Eq. (1) the array elements are assumed to radiate cylindrical shear waves; however, head waves (see Fig. 7c) predominate in this region with respect to the shear waves due the orientation of the array elements with respect to the defect.",
+            "startOffset": 68215,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 67527,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Both the back wall and the slot in the back wall can be clearly identified.",
+            "startOffset": 67452,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 45189,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 45110,
+                    "startOffset": 45103
+                },
+                "b0065": {
+                    "endOffset": 45110,
+                    "startOffset": 45103
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This is mainly because the array elements have to be smaller than a wavelength at the central frequency, typically less than 5 mm in the frequency range from 0.5 to 2 MHz, in order for the array to perform satisfactorily [12,13], and these smaller elements cannot withstand driving powers in excess of 1 kW.",
+            "startOffset": 44882,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44101,
+            "parents": [],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 44100,
+                    "startOffset": 44095
+                },
+                "b0025": {
+                    "endOffset": 44100,
+                    "startOffset": 44095
+                },
+                "b0030": {
+                    "endOffset": 44100,
+                    "startOffset": 44095
+                },
+                "b0035": {
+                    "endOffset": 44100,
+                    "startOffset": 44095
+                }
+            },
+            "secId": "s0005",
+            "sentence": "EMATs are widely used in non-destructive evaluation (NDE) to speed up the inspection process because ultrasonic couplant is not required and coatings thinner than a couple of millimetres do not need to be removed [4\u20137].",
+            "startOffset": 43882,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51769,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "In our case, a two-dimensional model is a good approximation because the core-magnet arrangement is larger in the active direction of the array, i.e., the direction on which the coils are laid out, with respect to the other direction.",
+            "startOffset": 51535,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 71672,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "All of the recorded signals were visually inspected and 12 out of 64 were found to be highly distorted.",
+            "startOffset": 71569,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 73201,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The use of a ferrite core could reduce the eddy currents and attenuated the waves in the core further.",
+            "startOffset": 73099,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 54038,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The field is concentrated beneath the core, where the field lines are perpendicular to the surface of the sample.",
+            "startOffset": 53925,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 70801,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The EMAT array is placed over a 30-mm-thick aluminium block that has a slot on the back wall as shown in Fig. 12; the slot cross-section is 0.2-mm wide and 0.8-mm high.",
+            "startOffset": 70633,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 45386,
+            "parents": [],
+            "refoffsets": {
+                "b0070": {
+                    "endOffset": 45334,
+                    "startOffset": 45327
+                },
+                "b0075": {
+                    "endOffset": 45334,
+                    "startOffset": 45327
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Because of the above reason, there is virtually no literature on bulk-wave EMAT phased arrays, albeit for an 8-element system reported in [14,15], whose performance in detecting defects is unclear.",
+            "startOffset": 45189,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47754,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 47741,
+                    "startOffset": 47734
+                },
+                "b0125": {
+                    "endOffset": 47741,
+                    "startOffset": 47734
+                }
+            },
+            "secId": "s0005",
+            "sentence": "We will show that these racetrack coils generate shear waves similarly to many conventional piezoelectric arrays which are mounted on a wedge to convert the wave mode from longitudinal to shear [12,25], see Fig. 1.",
+            "startOffset": 47540,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67594,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Focusing artifacts also appear at the right-hand side of Fig. 11a.",
+            "startOffset": 67528,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 71511,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The superposition of the different channels when using Eq. (1) to produce the focused image also has an averaging effect equivalent to a 9-dB-SNR increase for 8 channels.",
+            "startOffset": 71341,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 47144,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Coils are laid out so that they are offset along their shortest dimension and overlap by 1/3 of their area.",
+            "startOffset": 47037,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57826,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The eddy currents induced by the coils were approximated as two line sources of opposite phase; a two-dimensional simulation suffices because the racetrack shape of the coil is long and narrow.",
+            "startOffset": 57633,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 50643,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The width of the core defines the active regions of the coils, and also the focusing capabilities in the passive dimension, i.e., the dimension where there is no electronic beam steering; the width of the passive dimension is commonly referred to as elevation.",
+            "startOffset": 50383,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 49854,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Each coil constitutes an element of the array so that the array equivalent pitch, i.e., the separation between adjacent coils, is 2/3 of the coil width.",
+            "startOffset": 49702,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 70886,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The horizontal distance from the closest coil of the array to the defect is 22.5 mm.",
+            "startOffset": 70802,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 72739,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Several artifacts can be seen in Fig. 11b, for example, the semicircle-like artifact that is closer to the array, which is suspected to have been produced by the generation of longitudinal modes inside the ferromagnetic core of the array.",
+            "startOffset": 72501,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 49052,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "EMATs based on the Lorentz force consist of a permanent magnet and a coil.",
+            "startOffset": 48978,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 66702,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Each element (coil) of the EMAT array is simulated as two point loads separated by 3.2 mm (roughly the wavelength of the shear waves at 1 MHz in aluminium) which exert tangential forces of opposite phase on the surface of the aluminium block as in Fig. 7.",
+            "startOffset": 66447,
+            "title": "Simulations"
+        },
+        {
+            "endOffset": 71021,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The signals from all of the 64 transmit-receive coil pairs are recorded after transmitting the coded sequence one element at the time.",
+            "startOffset": 70887,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 49334,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The eddy currents interact with the bias magnetic field from the EMAT magnet and generate Lorentz force components normal to the eddy currents and the bias magnetic field.",
+            "startOffset": 49163,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 49701,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The coils of the array are laid out in an overlapping pattern under a ferromagnetic core.",
+            "startOffset": 49612,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 56647,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The results are given in Fig. 6, where the circle and square markers correspond to measurements taken on the edge and centre of the core, respectively.",
+            "startOffset": 56496,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 57477,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The radiation pattern of an array is determined by its elements, in our case the racetrack coils, or more precisely the path of the eddy currents induced by them.",
+            "startOffset": 57315,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 51219,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 51186,
+                    "startOffset": 51182
+                }
+            },
+            "secId": "s0015",
+            "sentence": "A study of such a compromise was presented in [20] for axisymmetric configurations.",
+            "startOffset": 51136,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 63785,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "refoffsets": {
+                "b0195": {
+                    "endOffset": 63784,
+                    "startOffset": 63777
+                },
+                "b0200": {
+                    "endOffset": 63784,
+                    "startOffset": 63777
+                },
+                "b0205": {
+                    "endOffset": 63784,
+                    "startOffset": 63777
+                }
+            },
+            "secId": "s0040",
+            "sentence": "The result of the cross-correlation is a compressed version of the transmitted sequence that has a greater SNR [39\u201341].",
+            "startOffset": 63666,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 44881,
+            "parents": [],
+            "refoffsets": {
+                "b0015": {
+                    "endOffset": 44824,
+                    "startOffset": 44821
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, the fact that EMATs are inherently poor transmitters and receivers and therefore have to be excited using powers in excess of 1 kW [3] has hindered the development of bulk-wave phased arrays.",
+            "startOffset": 44681,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48473,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 3, the synthetic focusing algorithm is recalled as well as the coded excitation with receive intervals for pulse-echo mode.",
+            "startOffset": 48339,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63588,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It works by transmitting a long chain of bursts, where the polarity of the bursts is alternated according to a binary sequence.",
+            "startOffset": 63461,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 48877,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In this paper, we assume that the Lorentz force is the dominant transduction mechanism; however, other transduction mechanisms exist, such as magnetostriction in ferromagnetic materials.",
+            "startOffset": 48691,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 75264,
+            "parents": [],
+            "secId": "s9000",
+            "sentence": "Readers who are interested in accessing data associated with this paper are referred to www.imperial.ac.uk/non-destructiveevaluation where either the data or details of how to obtain the data can be found.",
+            "startOffset": 75059,
+            "title": "Data accessibility"
+        },
+        {
+            "endOffset": 72042,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The distorted signals were discarded and the rest used in Eq. (1) to obtain the focused image.",
+            "startOffset": 71948,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 49561,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "On reception, the incoming shear waves interact with the bias magnetic field and generate currents in the specimen, which induce a voltage across the coil terminals.",
+            "startOffset": 49396,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 47955,
+            "parents": [],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 47925,
+                    "startOffset": 47916
+                },
+                "b0130": {
+                    "endOffset": 47925,
+                    "startOffset": 47916
+                },
+                "b0135": {
+                    "endOffset": 47925,
+                    "startOffset": 47916
+                },
+                "b0140": {
+                    "endOffset": 47925,
+                    "startOffset": 47916
+                },
+                "b0145": {
+                    "endOffset": 47954,
+                    "startOffset": 47947
+                },
+                "b0150": {
+                    "endOffset": 47954,
+                    "startOffset": 47947
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Such configurations can be used to detect small surface cracks (e.g., width and a depth of 0.2 and 0.8 mm respectively) that can be produced by material fatigue [4,26\u201328] and to inspect welds [29,30].",
+            "startOffset": 47755,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48678,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, the conclusions are drawn.",
+            "startOffset": 48643,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63665,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Digital processing techniques"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Then, the received signal is cross-correlated with the transmitted sequence.",
+            "startOffset": 63589,
+            "title": "Coded excitation"
+        },
+        {
+            "endOffset": 49395,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "These force components generate shear waves in the specimen.",
+            "startOffset": 49335,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 71340,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The amplitude of the received echoes is in the order of 0.5 mV and the root-mean-square value of the noise is 2 mV (both after a 60-dB amplification); this corresponds to an SNR of roughly \u221212 and 24 dB at the receiver input and after cross-correlating the digitised signals with the transmitted sequence respectively.",
+            "startOffset": 71022,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 47036,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A novel contribution of this paper is the detailed study of the radiation pattern of racetrack coils as the array elements and the coil layout.",
+            "startOffset": 46893,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49893,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The real prototype is shown in Fig. 3.",
+            "startOffset": 49855,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 59903,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In general, the distance between the line sources, i.e., the width of the coil, poses a trade-off between ease of construction and the distortion of the wave packet.",
+            "startOffset": 59738,
+            "title": "Radiation pattern of single coils"
+        },
+        {
+            "endOffset": 49611,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A sketch of the proposed array is shown in Fig. 2.",
+            "startOffset": 49561,
+            "title": "Array design"
+        },
+        {
+            "endOffset": 54358,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "A detailed distribution of the normal components of the field at the surface of the samples is given in Fig. 5.",
+            "startOffset": 54247,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 50908,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "A 15-mm core width was selected to match the common elevations encountered in commercial arrays, which are normally between 10 and 20 mm for 1 MHz probes (e.g., see array probe models 2L8-DGS1 or 1.5L16-A4 from Olympus Scientific Solutions Americas Inc., MA, USA).",
+            "startOffset": 50644,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 74026,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "By using coded sequences with receive intervals, it was possible to sufficiently enhance the SNR so that ultrasonic waves could be generated and received from the small and weak EMAT coils, while keeping the injected power low enough so that the delicate coils were not damaged.",
+            "startOffset": 73748,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 51534,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Array design"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "A symmetric (two-dimensional) model was employed as shown in Fig. 4; the axis of symmetry is on the left-hand side of the figure.",
+            "startOffset": 51405,
+            "title": "Bias magnetic field"
+        },
+        {
+            "endOffset": 68748,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This aberration could be fixed using a more sophisticated focusing algorithm since the radiation pattern of the individual elements is known, but that is out of the scope of this paper.",
+            "startOffset": 68563,
+            "title": "Simulations"
+        }
+    ],
+    "docId": "S0041624X16302785",
+    "metadata": {
+        "asjc": [
+            "3102"
+        ],
+        "authors": [
+            {
+                "email": "j.isla13@imperial.ac.uk",
+                "first": "J.",
+                "initial": "J.",
+                "last": "Isla"
+            },
+            {
+                "email": "f.cegla@imperial.ac.uk",
+                "first": "F.",
+                "initial": "F.",
+                "last": "Cegla"
+            }
+        ],
+        "doi": "10.1016/j.ultras.2017.02.009",
+        "firstpage": "1",
+        "issn": "0041624X",
+        "keywords": [
+            "Coded sequences",
+            "EMAT",
+            "Low-SNR",
+            "Material inspection",
+            "NDE",
+            "Pulse-compression",
+            "Ultrasonic arrays"
+        ],
+        "lastpage": "9",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "PHYS"
+        ],
+        "title": "EMAT phased array: A feasibility study of surface crack detection"
+    }
+}

@@ -1,0 +1,3338 @@
+{
+    "abstract": "A number of highly-threaded, many-core architectures hide memory-access latency by low-overhead context switching among a large number of threads. The speedup of a program on these machines depends on how well the latency is hidden. If the number of threads were infinite, theoretically, these machines could provide the performance predicted by the PRAM analysis of these programs. However, the number of threads per processor is not infinite, and is constrained by both hardware and algorithmic limits. In this paper, we introduce the Threaded Many-core Memory (TMM) model which is meant to capture the important characteristics of these highly-threaded, many-core machines. Since we model some important machine parameters of these machines, we expect analysis under this model to provide a more fine-grained and accurate performance prediction than the PRAM analysis. We analyze 4 algorithms for the classic all pairs shortest paths problem under this model. We find that even when two algorithms have the same PRAM performance, our model predicts different performance for some settings of machine parameters. For example, for dense graphs, the dynamic programming algorithm and Johnson's algorithm have the same performance in the PRAM model. However, our model predicts different performance for large enough memory-access latency and validates the intuition that the dynamic programming algorithm performs better on these machines. We validate several predictions made by our model using empirical measurements on an instantiation of a highly-threaded, many-core machine, namely the NVIDIA GTX 480. \u00a9 2013 The Authors. Published by Elsevier B.V. All rights reserved.",
+    "author_highlights": [
+        {
+            "endOffset": 127614,
+            "sentence": "We design a memory model to analyze algorithms for highly-threaded many-core systems.",
+            "startOffset": 127529
+        },
+        {
+            "endOffset": 127702,
+            "sentence": "The model captures significant factors of performance: work, span, and memory accesses.",
+            "startOffset": 127615
+        },
+        {
+            "endOffset": 127789,
+            "sentence": "We show the model is better than PRAM by applying both to 4 shortest paths algorithms.",
+            "startOffset": 127703
+        },
+        {
+            "endOffset": 127872,
+            "sentence": "Empirical performance is effectively predicted by our model in many circumstances.",
+            "startOffset": 127790
+        },
+        {
+            "endOffset": 127960,
+            "sentence": "It is the first formalized asymptotic model helpful for algorithm design on many-cores.",
+            "startOffset": 127873
+        }
+    ],
+    "bib_entries": {
+        "br000005": {
+            "authors": [
+                {
+                    "first": "Dan A.",
+                    "initial": "D.A.",
+                    "last": "Alcantara"
+                },
+                {
+                    "first": "Andrei",
+                    "initial": "A.",
+                    "last": "Sharf"
+                },
+                {
+                    "first": "Fatemeh",
+                    "initial": "F.",
+                    "last": "Abbasinejad"
+                },
+                {
+                    "first": "Shubhabrata",
+                    "initial": "S.",
+                    "last": "Sengupta"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Mitzenmacher"
+                },
+                {
+                    "first": "John D.",
+                    "initial": "J.D.",
+                    "last": "Owens"
+                },
+                {
+                    "first": "Nina",
+                    "initial": "N.",
+                    "last": "Amenta"
+                }
+            ],
+            "doi": "10.1145/1661412.1618500",
+            "firstpage": "154",
+            "issn": "07300301",
+            "lastpage": "154",
+            "pub_year": 2009,
+            "title": "Real-time parallel hashing on the GPU",
+            "volume": "28"
+        },
+        "br000010": {
+            "authors": [
+                {
+                    "first": "Naga K.",
+                    "initial": "N.K.",
+                    "last": "Govindaraju"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Larsen"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Gray"
+                },
+                {
+                    "first": "Dinesh",
+                    "initial": "D.",
+                    "last": "Manocha"
+                }
+            ],
+            "doi": "10.1145/1188455.1188549",
+            "pub_year": 2006,
+            "title": "A memory model for scientific algorithms on graphics processors"
+        },
+        "br000015": {
+            "authors": [
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Roger D.",
+                    "initial": "R.D.",
+                    "last": "Chamberlain"
+                },
+                {
+                    "first": "Jeremy D.",
+                    "initial": "J.D.",
+                    "last": "Buhler"
+                },
+                {
+                    "first": "Mark A.",
+                    "initial": "M.A.",
+                    "last": "Franklin"
+                }
+            ],
+            "doi": "10.1109/ICPP.2011.27",
+            "firstpage": "522",
+            "issn": "01903918",
+            "lastpage": "531",
+            "pub_year": 2011,
+            "title": "Bloom filter performance on graphics engines"
+        },
+        "br000020": {
+            "authors": [
+                {
+                    "first": "Nadathur",
+                    "initial": "N.",
+                    "last": "Satish"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Harris"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Garland"
+                }
+            ],
+            "doi": "10.1109/IPDPS.2009.5161005",
+            "pub_year": 2009,
+            "title": "Designing efficient sorting algorithms for manycore gpus"
+        },
+        "br000025": {
+            "authors": [
+                {
+                    "first": "Jee W.",
+                    "initial": "J.W.",
+                    "last": "Choi"
+                },
+                {
+                    "first": "Amik",
+                    "initial": "A.",
+                    "last": "Singh"
+                },
+                {
+                    "first": "Richard W.",
+                    "initial": "R.W.",
+                    "last": "Vuduc"
+                }
+            ],
+            "doi": "10.1145/1837853.1693471",
+            "firstpage": "115",
+            "issn": "15232867",
+            "lastpage": "125",
+            "pub_year": 2010,
+            "title": "Model-driven autotuning of sparse matrix-vector multiply on GPUs",
+            "volume": "45"
+        },
+        "br000030": {
+            "authors": [
+                {
+                    "first": "Vasily",
+                    "initial": "V.",
+                    "last": "Volkov"
+                },
+                {
+                    "first": "James W.",
+                    "initial": "J.W.",
+                    "last": "Demmel"
+                }
+            ],
+            "doi": "10.1109/SC.2008.5214359",
+            "pub_year": 2008,
+            "title": "Benchmarking GPUs to tune dense linear algebra"
+        },
+        "br000035": {
+            "authors": [
+                {
+                    "first": "Yao",
+                    "initial": "Y.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Cohen"
+                },
+                {
+                    "first": "John D.",
+                    "initial": "J.D.",
+                    "last": "Owens"
+                }
+            ],
+            "doi": "10.1145/1837853.1693472",
+            "firstpage": "127",
+            "issn": "15232867",
+            "lastpage": "136",
+            "pub_year": 2010,
+            "title": "Fast tridiagonal solvers on the GPU",
+            "volume": "45"
+        },
+        "br000040": {
+            "authors": [
+                {
+                    "first": "Weiguo",
+                    "initial": "W.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Bertil",
+                    "initial": "B.",
+                    "last": "Schmidt"
+                },
+                {
+                    "first": "Gerrit",
+                    "initial": "G.",
+                    "last": "Voss"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "M\u00fcller-Wittig"
+                }
+            ],
+            "doi": "10.1109/TPDS.2007.1069",
+            "firstpage": "1270",
+            "issn": "10459219",
+            "lastpage": "1281",
+            "pub_year": 2007,
+            "title": "Streaming algorithms for biological sequence alignment on GPUs",
+            "volume": "18"
+        },
+        "br000045": {
+            "authors": [
+                {
+                    "first": "Yongchao",
+                    "initial": "Y.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Bertil",
+                    "initial": "B.",
+                    "last": "Schmidt"
+                },
+                {
+                    "first": "Douglas L.",
+                    "initial": "D.L.",
+                    "last": "Maskell"
+                }
+            ],
+            "doi": "10.1186/1756-0500-3-93",
+            "issn": "17560500",
+            "pub_year": 2010,
+            "title": "CUDASW++2.0: Enhanced Smith-Waterman protein database search on CUDA-enabled GPUs based on SIMT and virtualized SIMD abstractions",
+            "volume": "3"
+        },
+        "br000050": {
+            "authors": [
+                {
+                    "first": "Sungpack",
+                    "initial": "S.",
+                    "last": "Hong"
+                },
+                {
+                    "first": "Sang Kyun",
+                    "initial": "S.K.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Tayo",
+                    "initial": "T.",
+                    "last": "Oguntebi"
+                },
+                {
+                    "first": "Kunle",
+                    "initial": "K.",
+                    "last": "Olukotun"
+                }
+            ],
+            "doi": "10.1145/2038037.1941590",
+            "firstpage": "267",
+            "issn": "15232867",
+            "lastpage": "276",
+            "pub_year": 2011,
+            "title": "Accelerating CUDA graph algorithms at maximum warp",
+            "volume": "46"
+        },
+        "br000055": {
+            "authors": [
+                {
+                    "first": "Gary J.",
+                    "initial": "G.J.",
+                    "last": "Katz"
+                },
+                {
+                    "first": "Joseph T.",
+                    "initial": "J.T.",
+                    "last": "Kider"
+                }
+            ],
+            "firstpage": "47",
+            "lastpage": "55",
+            "pub_year": 2008,
+            "title": "All-pairs shortest-paths for large graphs on the GPU"
+        },
+        "br000060": {
+            "authors": [
+                {
+                    "first": "Kazuya",
+                    "initial": "K.",
+                    "last": "Matsumoto"
+                },
+                {
+                    "first": "Naohito",
+                    "initial": "N.",
+                    "last": "Nakasato"
+                },
+                {
+                    "first": "Stanislav G.",
+                    "initial": "S.G.",
+                    "last": "Sedukhin"
+                }
+            ],
+            "doi": "10.1109/HPCC.2011.28",
+            "firstpage": "145",
+            "lastpage": "152",
+            "pub_year": 2011,
+            "title": "Blocked all-pairs shortest paths algorithm for hybrid CPU-GPU system"
+        },
+        "br000065": {
+            "authors": [
+                {
+                    "first": "Duane",
+                    "initial": "D.",
+                    "last": "Merrill"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Garland"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Grimshaw"
+                }
+            ],
+            "doi": "10.1145/2370036.2145832",
+            "firstpage": "117",
+            "issn": "15232867",
+            "lastpage": "127",
+            "pub_year": 2012,
+            "title": "Scalable gpu graph traversal",
+            "volume": "47"
+        },
+        "br000070": {
+            "authors": [
+                {
+                    "first": "Shuai",
+                    "initial": "S.",
+                    "last": "Che"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Boyer"
+                },
+                {
+                    "first": "Jiayuan",
+                    "initial": "J.",
+                    "last": "Meng"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Tarjan"
+                },
+                {
+                    "first": "Jeremy W.",
+                    "initial": "J.W.",
+                    "last": "Sheaffer"
+                },
+                {
+                    "first": "Kevin",
+                    "initial": "K.",
+                    "last": "Skadron"
+                }
+            ],
+            "doi": "10.1016/j.jpdc.2008.05.014",
+            "firstpage": "1370",
+            "issn": "07437315",
+            "lastpage": "1380",
+            "pub_year": 2008,
+            "title": "A performance study of general-purpose applications on graphics processors using CUDA",
+            "volume": "68"
+        },
+        "br000075": {
+            "authors": [
+                {
+                    "first": "Yao",
+                    "initial": "Y.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "John D.",
+                    "initial": "J.D.",
+                    "last": "Owens"
+                }
+            ],
+            "doi": "10.1109/HPCA.2011.5749745",
+            "firstpage": "382",
+            "issn": "15300897",
+            "lastpage": "393",
+            "pub_year": 2011,
+            "title": "A quantitative performance analysis model for GPU architectures"
+        },
+        "br000080": {
+            "authors": [
+                {
+                    "first": "Sara S.",
+                    "initial": "S.S.",
+                    "last": "Baghsorkhi"
+                },
+                {
+                    "first": "Matthieu",
+                    "initial": "M.",
+                    "last": "Delahaye"
+                },
+                {
+                    "first": "Sanjay J.",
+                    "initial": "S.J.",
+                    "last": "Patel"
+                },
+                {
+                    "first": "William D.",
+                    "initial": "W.D.",
+                    "last": "Gropp"
+                },
+                {
+                    "first": "Wen Mei W.",
+                    "initial": "W.M.W.",
+                    "last": "Hwu"
+                }
+            ],
+            "doi": "10.1145/1837853.1693470",
+            "firstpage": "105",
+            "issn": "15232867",
+            "lastpage": "114",
+            "pub_year": 2010,
+            "title": "An adaptive performance modeling tool for GPU architectures",
+            "volume": "45"
+        },
+        "br000085": {
+            "authors": [
+                {
+                    "first": "Sunpyo",
+                    "initial": "S.",
+                    "last": "Hong"
+                },
+                {
+                    "first": "Hyesoon",
+                    "initial": "H.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1145/1555754.1555775",
+            "firstpage": "152",
+            "issn": "10636897",
+            "lastpage": "163",
+            "pub_year": 2009,
+            "title": "An analytical model for a gpu architecture with memory-level and thread-level parallelism awareness"
+        },
+        "br000090": {
+            "authors": [
+                {
+                    "first": "Victor W.",
+                    "initial": "V.W.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Changkyu",
+                    "initial": "C.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Jatin",
+                    "initial": "J.",
+                    "last": "Chhugani"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Deisher"
+                },
+                {
+                    "first": "Daehyun",
+                    "initial": "D.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Anthony D.",
+                    "initial": "A.D.",
+                    "last": "Nguyen"
+                },
+                {
+                    "first": "Nadathur",
+                    "initial": "N.",
+                    "last": "Satish"
+                },
+                {
+                    "first": "Mikhail",
+                    "initial": "M.",
+                    "last": "Smelyanskiy"
+                },
+                {
+                    "first": "Srinivas",
+                    "initial": "S.",
+                    "last": "Chennupaty"
+                },
+                {
+                    "first": "Per",
+                    "initial": "P.",
+                    "last": "Hammarlund"
+                },
+                {
+                    "first": "Ronak",
+                    "initial": "R.",
+                    "last": "Singhal"
+                },
+                {
+                    "first": "Pradeep",
+                    "initial": "P.",
+                    "last": "Dubey"
+                }
+            ],
+            "doi": "10.1145/1815961.1816021",
+            "firstpage": "451",
+            "issn": "10636897",
+            "lastpage": "460",
+            "pub_year": 2010,
+            "title": "Debunking the 100X GPU vs. CPU Myth: An evaluation of throughput computing on CPU and GPU"
+        },
+        "br000095": {
+            "authors": [
+                {
+                    "first": "Weiguo",
+                    "initial": "W.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "M\u00fcller-Wittig"
+                },
+                {
+                    "first": "Bertil",
+                    "initial": "B.",
+                    "last": "Schmidt"
+                }
+            ],
+            "doi": "10.1109/ICPP.2007.67",
+            "issn": "01903918",
+            "pub_year": 2007,
+            "title": "Performance predictions for general-purpose computation on GPUs"
+        },
+        "br000100": {
+            "authors": [
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Roger D.",
+                    "initial": "R.D.",
+                    "last": "Chamberlain"
+                }
+            ],
+            "doi": "10.1109/ASAP.2012.19",
+            "firstpage": "24",
+            "issn": "10636862",
+            "lastpage": "31",
+            "pub_year": 2012,
+            "title": "A performance model for memory bandwidth constrained applications on graphics engines"
+        },
+        "br000105": null,
+        "br000110": {
+            "authors": [
+                {
+                    "first": "Alok",
+                    "initial": "A.",
+                    "last": "Aggarwal"
+                },
+                {
+                    "first": "Jeffrey S.",
+                    "initial": "J.S.",
+                    "last": "Vitter"
+                }
+            ],
+            "doi": "10.1145/48529.48535",
+            "firstpage": "1116",
+            "issn": "00010782",
+            "lastpage": "1127",
+            "pub_year": 1988,
+            "title": "The Input/Output Complexity of Sorting and Related Problems",
+            "volume": "31"
+        },
+        "br000115": {
+            "authors": [
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Frigo"
+                },
+                {
+                    "first": "Charles E.",
+                    "initial": "C.E.",
+                    "last": "Leiserson"
+                },
+                {
+                    "first": "Harald",
+                    "initial": "H.",
+                    "last": "Prokop"
+                },
+                {
+                    "first": "Sridhar",
+                    "initial": "S.",
+                    "last": "Ramachandran"
+                }
+            ],
+            "firstpage": "285",
+            "issn": "02725428",
+            "lastpage": "297",
+            "pub_year": 1999,
+            "title": "Cache-oblivious algorithms"
+        },
+        "br000120": null,
+        "br000125": {
+            "authors": [
+                {
+                    "first": "Alok",
+                    "initial": "A.",
+                    "last": "Aggarwal"
+                },
+                {
+                    "first": "Bowen",
+                    "initial": "B.",
+                    "last": "Alpern"
+                },
+                {
+                    "first": "Ashok K.",
+                    "initial": "A.K.",
+                    "last": "Chandra"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Snir"
+                }
+            ],
+            "firstpage": "305",
+            "issn": "07349025",
+            "lastpage": "314",
+            "pub_year": 1987,
+            "title": "MODEL FOR HIERARCHICAL MEMORY."
+        },
+        "br000130": {
+            "authors": [
+                {
+                    "first": "Bowen",
+                    "initial": "B.",
+                    "last": "Alpern"
+                },
+                {
+                    "first": "Larry",
+                    "initial": "L.",
+                    "last": "Carter"
+                },
+                {
+                    "first": "Ted",
+                    "initial": "T.",
+                    "last": "Selker"
+                }
+            ],
+            "firstpage": "107",
+            "lastpage": "113",
+            "pub_year": 1990,
+            "title": "Visualizing computer memory architectures"
+        },
+        "br000135": {
+            "authors": [
+                {
+                    "first": "Alok",
+                    "initial": "A.",
+                    "last": "Aggarwal"
+                },
+                {
+                    "first": "Ashok K.",
+                    "initial": "A.K.",
+                    "last": "Chandra"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Snir"
+                }
+            ],
+            "doi": "10.1109/sfcs.1987.31",
+            "firstpage": "204",
+            "issn": "02725428",
+            "lastpage": "216",
+            "pub_year": 1987,
+            "title": "HIERARCHICAL MEMORY WITH BLOCK TRANSFER."
+        },
+        "br000140": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Alpern"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Carter"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Feig"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Selker"
+                }
+            ],
+            "doi": "10.1007/BF01185206",
+            "firstpage": "72",
+            "issn": "01784617",
+            "lastpage": "109",
+            "pub_year": 1994,
+            "title": "The uniform memory hierarchy model of computation",
+            "volume": "12"
+        },
+        "br000145": {
+            "authors": [
+                {
+                    "first": "Jeffery Scott",
+                    "initial": "J.S.",
+                    "last": "Vitter"
+                },
+                {
+                    "first": "Mark H.",
+                    "initial": "M.H.",
+                    "last": "Nodine"
+                }
+            ],
+            "doi": "10.1006/jpdc.1993.1008",
+            "firstpage": "107",
+            "issn": "07437315",
+            "lastpage": "114",
+            "pub_year": 1993,
+            "title": "Large-scale sorting in uniform memory hierarchies",
+            "volume": "17"
+        },
+        "br000150": {
+            "authors": [
+                {
+                    "first": "Steven",
+                    "initial": "S.",
+                    "last": "Fortune"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Wyllie"
+                }
+            ],
+            "firstpage": "114",
+            "lastpage": "118",
+            "pub_year": 1978,
+            "title": "PARALLELISM IN RANDOM ACCESS MACHINES."
+        },
+        "br000155": null,
+        "br000160": {
+            "authors": [
+                {
+                    "first": "Uzi",
+                    "initial": "U.",
+                    "last": "Vishkin"
+                },
+                {
+                    "first": "George C.",
+                    "initial": "G.C.",
+                    "last": "Caragea"
+                },
+                {
+                    "first": "Bryant C.",
+                    "initial": "B.C.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1201/9781420011296",
+            "firstpage": "5",
+            "lastpage": "5-60",
+            "pub_year": 2007,
+            "title": "Models for advancing pram and other algorithms into parallel programs for a PRAM-on-chip platform"
+        },
+        "br000165": {
+            "authors": [
+                {
+                    "first": "Alexey L.",
+                    "initial": "A.L.",
+                    "last": "Lastovetsky"
+                }
+            ],
+            "doi": "10.1145/226060.226064",
+            "firstpage": "13",
+            "issn": "03621340",
+            "lastpage": "20",
+            "pub_year": 1996,
+            "title": "mpC: A Multi-Paradigm Programming Language for Massively Parallel Computers",
+            "volume": "31"
+        },
+        "br000170": {
+            "authors": [
+                {
+                    "first": "Leslie G.",
+                    "initial": "L.G.",
+                    "last": "Valiant"
+                }
+            ],
+            "doi": "10.1145/79173.79181",
+            "firstpage": "103",
+            "issn": "00010782",
+            "lastpage": "111",
+            "pub_year": 1990,
+            "title": "A Bridging Model for Parallel Computation",
+            "volume": "33"
+        },
+        "br000175": {
+            "authors": [
+                {
+                    "first": "J. S.",
+                    "initial": "J.S.",
+                    "last": "Vitter"
+                },
+                {
+                    "first": "E. A.M.",
+                    "initial": "E.A.M.",
+                    "last": "Shriver"
+                }
+            ],
+            "doi": "10.1007/BF01185207",
+            "firstpage": "110",
+            "issn": "01784617",
+            "lastpage": "147",
+            "pub_year": 1994,
+            "title": "Algorithms for parallel memory, I: Two-level memories",
+            "volume": "12"
+        },
+        "br000180": {
+            "authors": [
+                {
+                    "first": "Lars",
+                    "initial": "L.",
+                    "last": "Arge"
+                },
+                {
+                    "first": "Michael T.",
+                    "initial": "M.T.",
+                    "last": "Goodrich"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Nelson"
+                },
+                {
+                    "first": "Nodari",
+                    "initial": "N.",
+                    "last": "Sitchinava"
+                }
+            ],
+            "doi": "10.1145/1378533.1378573",
+            "firstpage": "197",
+            "lastpage": "206",
+            "pub_year": 2008,
+            "title": "Fundamental parallel algorithms for private-cache chip multiprocessors"
+        },
+        "br000185": {
+            "authors": [
+                {
+                    "first": "Guy E.",
+                    "initial": "G.E.",
+                    "last": "Blelloch"
+                },
+                {
+                    "first": "Rezaul A.",
+                    "initial": "R.A.",
+                    "last": "Chowdhury"
+                },
+                {
+                    "first": "Phillip B.",
+                    "initial": "P.B.",
+                    "last": "Gibbons"
+                },
+                {
+                    "first": "Vijaya",
+                    "initial": "V.",
+                    "last": "Ramachandran"
+                },
+                {
+                    "first": "Shimin",
+                    "initial": "S.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Kozuch"
+                }
+            ],
+            "firstpage": "501",
+            "lastpage": "510",
+            "pub_year": 2008,
+            "title": "Provably good multicore cache performance for divide-and-conquer algorithms"
+        },
+        "br000190": {
+            "authors": [
+                {
+                    "first": "Guy E.",
+                    "initial": "G.E.",
+                    "last": "Blelloch"
+                },
+                {
+                    "first": "Jeremy T.",
+                    "initial": "J.T.",
+                    "last": "Fineman"
+                },
+                {
+                    "first": "Phillip B.",
+                    "initial": "P.B.",
+                    "last": "Gibbons"
+                },
+                {
+                    "first": "Harsha Vardhan",
+                    "initial": "H.V.",
+                    "last": "Simhadri"
+                }
+            ],
+            "doi": "10.1145/1989493.1989553",
+            "firstpage": "355",
+            "lastpage": "366",
+            "pub_year": 2011,
+            "title": "Scheduling irregular parallel computations on hierarchical caches"
+        },
+        "br000195": {
+            "authors": [
+                {
+                    "first": "Rezaul Alam",
+                    "initial": "R.A.",
+                    "last": "Chowdhury"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Silvestri"
+                },
+                {
+                    "first": "Brandon",
+                    "initial": "B.",
+                    "last": "Blakeley"
+                },
+                {
+                    "first": "Vijaya",
+                    "initial": "V.",
+                    "last": "Ramachandran"
+                }
+            ],
+            "doi": "10.1109/IPDPS.2010.5470354",
+            "pub_year": 2010,
+            "title": "Oblivious algorithms for multicores and network of processors"
+        },
+        "br000200": null,
+        "br000205": {
+            "authors": [
+                {
+                    "first": "Rezaul Alam",
+                    "initial": "R.A.",
+                    "last": "Chowdhury"
+                },
+                {
+                    "first": "Vijaya",
+                    "initial": "V.",
+                    "last": "Ramachandran"
+                }
+            ],
+            "doi": "10.1145/1248377.1248392",
+            "firstpage": "71",
+            "lastpage": "80",
+            "pub_year": 2007,
+            "title": "The cache-oblivious gaussian elimination paradigm: Theoretical framework, parallelization and experimental evaluation"
+        },
+        "br000210": {
+            "authors": [
+                {
+                    "first": "Rezaul Alam",
+                    "initial": "R.A.",
+                    "last": "Chowdhury"
+                },
+                {
+                    "first": "Vijaya",
+                    "initial": "V.",
+                    "last": "Ramachandran"
+                }
+            ],
+            "doi": "10.1145/1378533.1378574",
+            "firstpage": "207",
+            "lastpage": "216",
+            "pub_year": 2008,
+            "title": "Cache-efficient dynamic programming algorithms for multicores"
+        },
+        "br000215": {
+            "authors": [
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Kunal",
+                    "initial": "K.",
+                    "last": "Agrawal"
+                },
+                {
+                    "first": "Roger D.",
+                    "initial": "R.D.",
+                    "last": "Chamberlain"
+                }
+            ],
+            "doi": "10.1109/ICPADS.2012.54",
+            "firstpage": "339",
+            "issn": "15219097",
+            "lastpage": "347",
+            "pub_year": 2012,
+            "title": "A memory access model for highly-threaded many-core architectures"
+        },
+        "br000220": {
+            "authors": [
+                {
+                    "first": "Michael A.",
+                    "initial": "M.A.",
+                    "last": "Bender"
+                },
+                {
+                    "first": "Seth",
+                    "initial": "S.",
+                    "last": "Gilbert"
+                },
+                {
+                    "first": "Jeremy T.",
+                    "initial": "J.T.",
+                    "last": "Fineman"
+                },
+                {
+                    "first": "Bradley C.",
+                    "initial": "B.C.",
+                    "last": "Kuszmaul"
+                }
+            ],
+            "doi": "10.1145/1073970.1074009",
+            "firstpage": "228",
+            "lastpage": "237",
+            "pub_year": 2005,
+            "title": "Concurrent cache-oblivious B-trees"
+        },
+        "br000225": {
+            "authors": [
+                {
+                    "first": "Naga K.",
+                    "initial": "N.K.",
+                    "last": "Govindaraju"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Larsen"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Gray"
+                },
+                {
+                    "first": "Dinesh",
+                    "initial": "D.",
+                    "last": "Manocha"
+                }
+            ],
+            "doi": "10.1145/1188455.1188549",
+            "pub_year": 2006,
+            "title": "A memory model for scientific algorithms on graphics processors"
+        },
+        "br000230": {
+            "authors": [
+                {
+                    "first": "Shane",
+                    "initial": "S.",
+                    "last": "Ryoo"
+                },
+                {
+                    "first": "Christopher I.",
+                    "initial": "C.I.",
+                    "last": "Rodrigues"
+                },
+                {
+                    "first": "Sam S.",
+                    "initial": "S.S.",
+                    "last": "Stone"
+                },
+                {
+                    "first": "Sara S.",
+                    "initial": "S.S.",
+                    "last": "Baghsorkhi"
+                },
+                {
+                    "first": "Sain Zee",
+                    "initial": "S.Z.",
+                    "last": "Ueng"
+                },
+                {
+                    "first": "John A.",
+                    "initial": "J.A.",
+                    "last": "Stratton"
+                },
+                {
+                    "first": "Wen Mei W.",
+                    "initial": "W.M.W.",
+                    "last": "Hwu"
+                }
+            ],
+            "doi": "10.1145/1356058.1356084",
+            "firstpage": "195",
+            "lastpage": "204",
+            "pub_year": 2008,
+            "title": "Program optimization space pruning for a multithreaded GPU"
+        },
+        "br000235": {
+            "authors": [
+                {
+                    "first": "Kishore",
+                    "initial": "K.",
+                    "last": "Kothapalli"
+                },
+                {
+                    "first": "Rishabh",
+                    "initial": "R.",
+                    "last": "Mukherjee"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Suhail Rehman"
+                },
+                {
+                    "first": "Suryakant",
+                    "initial": "S.",
+                    "last": "Patidar"
+                },
+                {
+                    "first": "P. J.",
+                    "initial": "P.J.",
+                    "last": "Narayanan"
+                },
+                {
+                    "first": "Kannan",
+                    "initial": "K.",
+                    "last": "Srinathan"
+                }
+            ],
+            "doi": "10.1109/HIPC.2009.5433179",
+            "firstpage": "463",
+            "lastpage": "472",
+            "pub_year": 2009,
+            "title": "A performance prediction model for the CUDA GPGPU platform"
+        },
+        "br000240": {
+            "authors": [
+                {
+                    "first": "Jaewoong",
+                    "initial": "J.",
+                    "last": "Sim"
+                },
+                {
+                    "first": "Aniruddha",
+                    "initial": "A.",
+                    "last": "Dasgupta"
+                },
+                {
+                    "first": "Hyesoon",
+                    "initial": "H.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Vuduc"
+                }
+            ],
+            "doi": "10.1145/2145816.2145819",
+            "firstpage": "11",
+            "lastpage": "21",
+            "pub_year": 2012,
+            "title": "A performance analysis framework for identifying potential benefits in GPGPU applications"
+        },
+        "br000245": {
+            "authors": [
+                {
+                    "first": "Yooseong",
+                    "initial": "Y.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Aviral",
+                    "initial": "A.",
+                    "last": "Shrivastava"
+                }
+            ],
+            "firstpage": "128",
+            "issn": "0738100X",
+            "lastpage": "133",
+            "pub_year": 2011,
+            "title": "CuMAPz: A tool to analyze memory access patterns in CUDA"
+        },
+        "br000250": {
+            "authors": [
+                {
+                    "first": "Arun Kumar",
+                    "initial": "A.K.",
+                    "last": "Parakh"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Balakrishnan"
+                },
+                {
+                    "first": "Kolin",
+                    "initial": "K.",
+                    "last": "Paul"
+                }
+            ],
+            "doi": "10.1109/IPDPSW.2012.328",
+            "firstpage": "2384",
+            "lastpage": "2393",
+            "pub_year": 2012,
+            "title": "Performance estimation of GPUs with cache"
+        },
+        "br000255": null,
+        "br000260": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Alverson"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Callahan"
+                },
+                {
+                    "first": "Allan",
+                    "initial": "A.",
+                    "last": "Porterfield"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Cummings"
+                },
+                {
+                    "first": "Burton",
+                    "initial": "B.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Koblenz"
+                }
+            ],
+            "firstpage": "1",
+            "lastpage": "6",
+            "pub_year": 1990,
+            "title": "Tera computer system"
+        },
+        "br000265": null,
+        "br000270": {
+            "authors": [
+                {
+                    "first": "Donald B.",
+                    "initial": "D.B.",
+                    "last": "Johnson"
+                }
+            ],
+            "doi": "10.1145/321992.321993",
+            "firstpage": "1",
+            "issn": "00045411",
+            "lastpage": "13",
+            "pub_year": 1977,
+            "title": "Efficient Algorithms for Shortest Paths in Sparse Networks",
+            "volume": "24"
+        },
+        "br000275": {
+            "authors": [
+                {
+                    "first": "E. W.",
+                    "initial": "E.W.",
+                    "last": "Dijkstra"
+                }
+            ],
+            "doi": "10.1007/BF01386390",
+            "firstpage": "269",
+            "issn": "0029599X",
+            "lastpage": "271",
+            "pub_year": 1959,
+            "title": "A note on two problems in connexion with graphs",
+            "volume": "1"
+        },
+        "br000280": null,
+        "br000285": null
+    },
+    "body_text": [
+        {
+            "endOffset": 135206,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This model explicitly models the large number of threads per processor and the memory latency to slow memory.",
+            "startOffset": 135097,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 190470,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Therefore, TMM is a model well-suited to compare algorithms and decide which one to implement under particular environments.",
+            "startOffset": 190346,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 135096,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In this work, we propose the Threaded Many-core Memory (TMM) model that captures the performance characteristics of these highly-threaded, many-core machines.",
+            "startOffset": 134938,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136490,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In particular, it can distinguish between algorithms that have the same PRAM analysis, but one may be better at hiding latency than another with a bounded number of threads.",
+            "startOffset": 136317,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 188328,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "However, from Section  5.2, for a small number of threads/core working on a dense graph, the TMM model predicts that dynamic programming may be better.",
+            "startOffset": 188177,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 147882,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "A large slow global memory is shared by all the core groups.",
+            "startOffset": 147822,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 191793,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "In this case, the algorithms should perform well under all settings of parameters, allowing us to apply the model at any two levels and get the same results.",
+            "startOffset": 191636,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 191206,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "While in this paper we assume that it is global memory vs. memory local to core groups, in principle, it can be any two levels of fast and slow memory.",
+            "startOffset": 191055,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 148755,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Since this characteristic of using high-bandwidth transfers in order to counter high latencies is common to most many-core machines (and even most multi-core machines), the TMM model captures the chunk size as one of its parameters.",
+            "startOffset": 148523,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 131945,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "All of these models capture particular capabilities and properties of the respective target machines, namely shared memory machines or distributed memory machines.",
+            "startOffset": 131782,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 148960,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Cores on a single core group execute in synchronous style where groups of threads execute in lock-step.",
+            "startOffset": 148857,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 144501,
+            "parents": [],
+            "refoffsets": {
+                "br000230": {
+                    "endOffset": 144501,
+                    "startOffset": 144497
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Ryoo et al.  [46]",
+            "startOffset": 144484,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 129973,
+            "parents": [],
+            "refoffsets": {
+                "br000105": {
+                    "endOffset": 129909,
+                    "startOffset": 129905
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The most fundamental model that is used to analyze sequential algorithms is the Random Access Machine (RAM) model  [21], which we teach undergraduates in their first algorithms class.",
+            "startOffset": 129790,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 189038,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "As a result, we predict that Johnson\u2019s runtime will flip to be the better one if given sufficient threads.",
+            "startOffset": 188932,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 132507,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "On multi-core machines, context switch cost is high, and most models nominally assume that only one (or a small constant number of) thread(s) are running on each machine and this thread blocks when there is a memory access.",
+            "startOffset": 132284,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 133379,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Therefore, if there are enough threads, we should, in principle, be able to use PRAM algorithms on such machines, since we can ignore the effect of memory transfers which is exactly what PRAM model does.",
+            "startOffset": 133176,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134390,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Fig. 1 shows the performance of this application, varying the number of threads per processor core, for two distinct GPUs.",
+            "startOffset": 134268,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137241,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "However, we are interested in the interplay between the farthest level, since the latencies are the largest at that level, and therefore have the biggest impact on the performance.",
+            "startOffset": 137061,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 188931,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "Its runtime is still benefiting by increasing the threads/core.",
+            "startOffset": 188868,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 190641,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "To our knowledge, this is the first attempt to formalize the analysis of algorithms for highly-threaded, many-core computers using a formal model and asymptotic analysis.",
+            "startOffset": 190471,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 190754,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "One obvious direction is to design more algorithms under the TMM model.",
+            "startOffset": 190683,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 133894,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In this paper, we attempt to characterize these properties of algorithms.",
+            "startOffset": 133821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134267,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The problem is embarrassingly parallel, each set membership test is independent of every other membership test.",
+            "startOffset": 134156,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 144791,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "They do not, however, consider memory latency and multiple conflicting performance indicators.",
+            "startOffset": 144697,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 175289,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000125",
+            "sentence": "Our model therefore allows us to do two things.",
+            "startOffset": 175242,
+            "title": "Influence of graph size"
+        },
+        {
+            "endOffset": 170758,
+            "parents": [],
+            "secId": "s000105",
+            "sentence": "In this section, we will compare the running times of the various algorithms and see what interesting things this analysis tells us.",
+            "startOffset": 170626,
+            "title": "Comparison of the various algorithms"
+        },
+        {
+            "endOffset": 189509,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "The model analyzes the significant factors that affect performance on many-core machines.",
+            "startOffset": 189420,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 132153,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "While superficially highly-threaded, many-core machines such as GPUs are shared memory machines, their characteristics are very different from traditional multi-core or multiprocessor shared memory machines.",
+            "startOffset": 131946,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130642,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Therefore, it better captures the fact that modern machines have memory hierarchies and exploiting spatial and temporal locality on these machines can lead to better performance.",
+            "startOffset": 130464,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 189644,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "In particular, it requires the work and depth (like PRAM algorithms), but also requires the analysis of the number of memory accesses.",
+            "startOffset": 189510,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 170625,
+            "parents": [],
+            "secId": "s000105",
+            "sentence": "Therefore, the model provides more nuance in the analysis of these algorithms for the highly-threaded, many-core machines than the PRAM model.",
+            "startOffset": 170483,
+            "title": "Comparison of the various algorithms"
+        },
+        {
+            "endOffset": 138521,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  2 presents related work.",
+            "startOffset": 138488,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 183289,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "With sufficient number of threads, the performance converges to the PRAM performance and only depends on the problem size and the number of processors.",
+            "startOffset": 183138,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 139225,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Finally, Section  8 concludes.",
+            "startOffset": 139195,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 191415,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "One way to do this is to design a \u201cparameter-oblivious\u201d model where algorithms do not know the machine parameters.",
+            "startOffset": 191301,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 175733,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000125",
+            "sentence": "We will draw more insights of this type in the next section.",
+            "startOffset": 175673,
+            "title": "Influence of graph size"
+        },
+        {
+            "endOffset": 191635,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "And matrix multiplication in the dynamic programming can easily be made parameter-oblivious.",
+            "startOffset": 191543,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 144180,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Their model incorporates the relationship between problem size and performance, but only targets their biosequence application.",
+            "startOffset": 144053,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 188867,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "At that point (32 threads/core), dynamic programming has already been in the PRAM range with stable performance since 16 threads/core, while Johnson\u2019s has not.",
+            "startOffset": 188708,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 149317,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Note that this architecture abstraction ignores a number of details about the physical machine, including thread grouping, scheduling, etc.",
+            "startOffset": 149178,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 129271,
+            "parents": [],
+            "refoffsets": {
+                "br000080": {
+                    "endOffset": 129169,
+                    "startOffset": 129162
+                },
+                "br000085": {
+                    "endOffset": 129169,
+                    "startOffset": 129162
+                },
+                "br000090": {
+                    "endOffset": 129169,
+                    "startOffset": 129162
+                },
+                "br000095": {
+                    "endOffset": 129169,
+                    "startOffset": 129162
+                },
+                "br000100": {
+                    "endOffset": 129169,
+                    "startOffset": 129162
+                }
+            },
+            "secId": "s000005",
+            "sentence": "While there is a lot of folk wisdom on how to design good algorithms for these highly-threaded machines, in addition to a significant body of work on performance analysis  [16\u201320], there are no systematic theoretical models to analyze the performance of programs on these machines.",
+            "startOffset": 128990,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 144205,
+            "parents": [],
+            "refoffsets": {
+                "br000225": {
+                    "endOffset": 144205,
+                    "startOffset": 144201
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Govindaraju et al.  [45]",
+            "startOffset": 144181,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 133055,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Highly-threaded many-cores are explicitly designed to hide memory latency; if a thread stalls on a memory operation, some other thread can be scheduled in its place.",
+            "startOffset": 132890,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137000,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In particular, we model a slow global memory and fast local memory shared by one core group.",
+            "startOffset": 136908,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 138903,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  5 provides the lessons learned from this model; in particular, we see that algorithms that have the same PRAM performance have different performance in the TMM model since they are better at hiding memory latency with fewer threads.",
+            "startOffset": 138662,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 139005,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  6 continues the discussion of lessons learned, concentrating on the effects of problem size.",
+            "startOffset": 138904,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 145054,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "They propose a simple yet efficient solution combining several well-known parallel computation models: PRAM, BSP, QRQW, but they do not model global memory coalescing.",
+            "startOffset": 144887,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 146298,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "also design a tool to estimate GPU memory performance by collecting performance-critical parameters.",
+            "startOffset": 146198,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 181954,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000150",
+            "sentence": "As a typical highly-threaded, many-core machine, it also features a 1.5 GB global memory and 16 kB/48 kB of configurable on-chip shared memory per multiprocessor, which can be accessed with latency significantly lower than the global memory.",
+            "startOffset": 181713,
+            "title": "Experimental Setup"
+        },
+        {
+            "endOffset": 188707,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "In addition, for the dense graph, the figure also shows the intersection between the runtime curves of the two algorithms.",
+            "startOffset": 188585,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 138487,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper is organized as follows.",
+            "startOffset": 138452,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135635,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We do not try to model the Intel Xeon Phi, due to its limited use of threading for latency hiding.",
+            "startOffset": 135537,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 141822,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "offer a new parallel machine model called LogP based on BSP, characterizing a parallel machine by four parameters: number of processors, communication bandwidth, delay, and overhead.",
+            "startOffset": 141640,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 130056,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This model assumes that all operations, including memory accesses, take unit time.",
+            "startOffset": 129974,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 148015,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Registers and local on-chip memory are the fastest to access, while accessing the global memory may potentially take 100s of cycles.",
+            "startOffset": 147883,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 144886,
+            "parents": [],
+            "refoffsets": {
+                "br000235": {
+                    "endOffset": 144885,
+                    "startOffset": 144881
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Kothapalli et al. are the first to define a general GPU analytical performance model in  [47].",
+            "startOffset": 144792,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 189419,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "In this paper, we present a memory access model, called the Threaded Many-core Memory (TMM) model, that is well suited for modern highly-threaded, many-core systems that employ many threads and fast context switching to hide memory latency.",
+            "startOffset": 189179,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 135773,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In contrast, its approach to hide memory latency is primarily based on strided memory access patterns associated with vector computation.",
+            "startOffset": 135636,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130773,
+            "parents": [],
+            "refoffsets": {
+                "br000115": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000120": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000125": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000130": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000135": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000140": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                },
+                "br000145": {
+                    "endOffset": 130772,
+                    "startOffset": 130765
+                }
+            },
+            "secId": "s000005",
+            "sentence": "There are also a number of other models that consider the memory access costs of sequential algorithms in different ways  [23\u201329].",
+            "startOffset": 130643,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 183137,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "The TMM model indicates that when the number of threads is small, the performance of algorithms depends on the number of threads.",
+            "startOffset": 183008,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 147053,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "The model should abstract away the details of particular implementations so as to be applicable to many instantiations of these machines, while being particular enough to model the performance of algorithms on these machines with reasonable accuracy.",
+            "startOffset": 146803,
+            "title": "TMM model"
+        },
+        {
+            "endOffset": 142184,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "But this model assumes that processors are interconnected via sharing of internal memory.",
+            "startOffset": 142095,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 141619,
+            "parents": [],
+            "refoffsets": {
+                "br000170": {
+                    "endOffset": 141434,
+                    "startOffset": 141430
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Quite different to PRAM, the Bulk-Synchronous Parallel (BSP) model  [34] attempts to bridge theory and practice by allowing processors to work asynchronously, and it models latency and limited bandwidth for distributed memory machines without shared memory.",
+            "startOffset": 141362,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 146802,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "The TMM model is meant to model the asymptotic performance of algorithms on highly-threaded, many-core machines.",
+            "startOffset": 146690,
+            "title": "TMM model"
+        },
+        {
+            "endOffset": 145341,
+            "parents": [],
+            "refoffsets": {
+                "br000080": {
+                    "endOffset": 145341,
+                    "startOffset": 145337
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Meantime, Baghsorkhi et al.  [16]",
+            "startOffset": 145308,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 142094,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "present a two-level memory model and give a realistic treatment of parallel block transfers in parallel machines.",
+            "startOffset": 141981,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 135980,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "If the latency of transfers from slow memory to fast memory is small, or if the number of threads per processor is infinite, then this model generally provides the same analysis results as the PRAM analysis.",
+            "startOffset": 135773,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130250,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "While this model is a good predictor of performance on computationally intensive programs, it does not properly capture the important characteristics of the memory hierarchy of modern machines.",
+            "startOffset": 130057,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136907,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In addition, it also models the machine as having only 2 levels of memory.",
+            "startOffset": 136833,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 141361,
+            "parents": [],
+            "refoffsets": {
+                "br000150": {
+                    "endOffset": 141240,
+                    "startOffset": 141236
+                }
+            },
+            "secId": "s000010",
+            "sentence": "In the parallel case, although widely used, the PRAM  [30] model is unrealistic because it assumes all processors work synchronously and that interprocessor communication is free.",
+            "startOffset": 141182,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 144322,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "propose a cache model for efficiently implementing three memory intensive scientific applications with nested loops.",
+            "startOffset": 144206,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 134155,
+            "parents": [],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 134154,
+                    "startOffset": 134151
+                }
+            },
+            "secId": "s000005",
+            "sentence": "To motivate this enterprise and to understand the importance of high thread counts on highly-threaded, many-core machines, let us consider a simple application that performs Bloom filter set membership tests on an input stream of biosequence data on GPUs  [3].",
+            "startOffset": 133895,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 183372,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "We verify this result using both the dynamic programming and Johnson\u2019s algorithms.",
+            "startOffset": 183290,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 181712,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000150",
+            "sentence": "The experiments are carried out on an NVIDIA GTX 480, which has 15 multiprocessors, each with 32 cores.",
+            "startOffset": 181609,
+            "title": "Experimental Setup"
+        },
+        {
+            "endOffset": 128234,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Highly-threaded, many-core devices such as GPUs have gained popularity in the last decade; both NVIDIA and AMD manufacture general purpose GPUs that fall in this category.",
+            "startOffset": 128063,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 144483,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "It is helpful for applications with 2D-block representations while choosing an appropriate block size by estimating cache misses, but is not completely general.",
+            "startOffset": 144323,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 176060,
+            "parents": [],
+            "secId": "s000130",
+            "sentence": "In particular, some algorithms can take advantage of smaller problems better than others, since they can use fast local memory more effectively.",
+            "startOffset": 175916,
+            "title": "Effect of problem size"
+        },
+        {
+            "endOffset": 188102,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "It is interesting to compare the dynamic programming algorithm and Johnson\u2019s algorithm with arrays, since the PRAM and the TMM model differ in predicting the relative performance of these algorithms.",
+            "startOffset": 187903,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 143920,
+            "parents": [],
+            "refoffsets": {
+                "br000095": {
+                    "endOffset": 143920,
+                    "startOffset": 143916
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Liu et al.  [19]",
+            "startOffset": 143904,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 128989,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "These devices appear to be here to stay.",
+            "startOffset": 128949,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 147821,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Highly-threaded, many-core architectures typically consist of a number of core groups, each containing a number of processors (or cores),1 a fixed number of registers, and a fixed quantity of fast local on-chip memory shared within a core group.",
+            "startOffset": 147534,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 136832,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We also assume that the hardware provides 0-cost and perfect scheduling between threads.",
+            "startOffset": 136744,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 175844,
+            "parents": [],
+            "secId": "s000130",
+            "sentence": "In Section  5, we explored the asymptotic insights that can be drawn from the TMM model.",
+            "startOffset": 175756,
+            "title": "Effect of problem size"
+        },
+        {
+            "endOffset": 147534,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "The most important high-level characteristic of highly-threaded, many-core architectures is that they provide a large number of hardware threads and use fast and low-overhead context-switching in order to hide the memory access latency from slow global memory.",
+            "startOffset": 147274,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 145961,
+            "parents": [],
+            "refoffsets": {
+                "br000075": {
+                    "endOffset": 145737,
+                    "startOffset": 145733
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Zhang and Owens  [15] present a quantitative performance model that characterizes an application\u2019s performance as being primarily bounded by one of three potential limits: instruction pipeline, shared memory accesses, and global memory accesses.",
+            "startOffset": 145716,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 146554,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "All of these efforts are mainly focused on the practical calibrated performance models.",
+            "startOffset": 146467,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 138557,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  3 describes the TMM model.",
+            "startOffset": 138522,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 139556,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "We then review recent work on algorithms and performance analysis of GPUs which are the most common current instantiations of highly-threaded, many-core machines.",
+            "startOffset": 139394,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 137711,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We compare the analysis from this model with the PRAM analysis of these 4 algorithms to gain intuition about the usefulness of both our model and the PRAM model for analyzing performance of algorithms on highly-threaded, many-core machines.",
+            "startOffset": 137471,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 145715,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "The model can determine data access patterns, branch divergence, and control flow patterns only for a restricted class of kernels on traditional GPU architectures.",
+            "startOffset": 145552,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 135536,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Typical examples of such machines include both NVIDIA and AMD/ATI GPUs and the YarcData uRiKA system.",
+            "startOffset": 135435,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 146180,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "The framework does a good job in performance diagnostics on case studies of real codes.",
+            "startOffset": 146093,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 139393,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "We first review the work on abstract models of computations for both sequential and parallel machines.",
+            "startOffset": 139291,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 143869,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "While there has not been much work on abstract machine models for highly-threaded, many-core machines, there has been a lot of recent work on designing calibrated performance models for particular instantiations of these machines such as NVIDIA GPUs.",
+            "startOffset": 143619,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 146092,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "develop a performance analysis framework that consists of an analytical model and profiling tools.",
+            "startOffset": 145994,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 191300,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "We would like to extend it to multi-level hierarchies which are becoming increasingly common.",
+            "startOffset": 191207,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 129789,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Over the years, computer scientists have designed various models to capture important aspects of the machines that we use.",
+            "startOffset": 129667,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129448,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We are interested in analyzing and characterizing performance of algorithms on these highly-threaded, many-core machines in a more abstract, algorithmic, and systematic manner.",
+            "startOffset": 129272,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 138271,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Following the formal analysis, we assess the utility of the model by comparing empirically measured performance on an individual machine to that predicted by the model.",
+            "startOffset": 138103,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136646,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This model is a high-level model meant to be generally applicable to a number of machines which allow a large number of threads with fast context switching.",
+            "startOffset": 136490,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 190050,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "We find that algorithms with the same PRAM performance can have different TMM performance under certain machine parameter settings.",
+            "startOffset": 189919,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 172940,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000110",
+            "sentence": "Let us consider a few examples:",
+            "startOffset": 172909,
+            "title": "Influence of machine parameters"
+        },
+        {
+            "endOffset": 191542,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Other than the dynamic programming algorithm, all of the algorithms presented in this paper are, in fact, parameter-oblivious.",
+            "startOffset": 191416,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 176145,
+            "parents": [],
+            "secId": "s000130",
+            "sentence": "In this section, we explore the insights that the TMM model provides in these cases.",
+            "startOffset": 176061,
+            "title": "Effect of problem size"
+        },
+        {
+            "endOffset": 189918,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "We analyzed 4 shortest paths algorithms in the TMM model and compared the analysis with the PRAM analysis.",
+            "startOffset": 189812,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 128883,
+            "parents": [],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 128760,
+                    "startOffset": 128755
+                },
+                "br000010": {
+                    "endOffset": 128760,
+                    "startOffset": 128755
+                },
+                "br000015": {
+                    "endOffset": 128760,
+                    "startOffset": 128755
+                },
+                "br000020": {
+                    "endOffset": 128760,
+                    "startOffset": 128755
+                },
+                "br000025": {
+                    "endOffset": 128783,
+                    "startOffset": 128778
+                },
+                "br000030": {
+                    "endOffset": 128783,
+                    "startOffset": 128778
+                },
+                "br000035": {
+                    "endOffset": 128783,
+                    "startOffset": 128778
+                },
+                "br000040": {
+                    "endOffset": 128811,
+                    "startOffset": 128806
+                },
+                "br000045": {
+                    "endOffset": 128811,
+                    "startOffset": 128806
+                },
+                "br000050": {
+                    "endOffset": 128838,
+                    "startOffset": 128831
+                },
+                "br000055": {
+                    "endOffset": 128838,
+                    "startOffset": 128831
+                },
+                "br000060": {
+                    "endOffset": 128838,
+                    "startOffset": 128831
+                },
+                "br000065": {
+                    "endOffset": 128838,
+                    "startOffset": 128831
+                },
+                "br000070": {
+                    "endOffset": 128882,
+                    "startOffset": 128875
+                },
+                "br000075": {
+                    "endOffset": 128882,
+                    "startOffset": 128875
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Researchers have designed algorithms to solve many interesting problems for these devices, such as GPU sorting or hashing [1\u20134], linear algebra  [5\u20137], dynamic programming  [8,9], graph algorithms  [10\u201313], and many other classic algorithms  [14,15].",
+            "startOffset": 128633,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 144052,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "describe a general performance model that predicts the performance of a biosequence database scanning application fairly precisely.",
+            "startOffset": 143921,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 145993,
+            "parents": [],
+            "refoffsets": {
+                "br000240": {
+                    "endOffset": 145993,
+                    "startOffset": 145989
+                }
+            },
+            "secId": "s000010",
+            "sentence": "More recently, Sim et al.  [48]",
+            "startOffset": 145962,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 136204,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This model can help us pick such algorithms.",
+            "startOffset": 136160,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 185914,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "The dependence on graph density is explored further in Fig. 5.",
+            "startOffset": 185852,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 141960,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "It reflects the convergence towards systems formed by a collection of computers connected by a communication network via message passing.",
+            "startOffset": 141823,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 185995,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "Here, the runtime is plotted vs. number of graph edges for varying threads/core.",
+            "startOffset": 185915,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 133517,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "However, the number of threads required to reach the point where one gets PRAM performance depends on both the algorithm and the hardware.",
+            "startOffset": 133379,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 132733,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Therefore, many models consider the number of memory transfers from slow memory to fast memory as a performance measure, and algorithms are designed to minimize these, since memory transfers take a significant amount of time.",
+            "startOffset": 132508,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 146680,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "No attempts have been made to develop an asymptotic theoretical model applicable to a wide range of highly-threaded machines.",
+            "startOffset": 146555,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 132283,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The most important distinction between the multi-cores and highly-threaded, many-core machines is the number of threads per core.",
+            "startOffset": 132154,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 145307,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "propose another analytical model to capture the cost of memory operations by counting the number of parallel memory requests in terms of memory-warp parallelism (MWP) and computation-warp parallelism (CWP).",
+            "startOffset": 145101,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 149177,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "The abstract architecture is shown in Fig. 2.",
+            "startOffset": 149132,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 175672,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000125",
+            "sentence": "For small problem sizes, the asymptotically worse algorithm may in fact be better because it interacts better with the machine.",
+            "startOffset": 175545,
+            "title": "Influence of graph size"
+        },
+        {
+            "endOffset": 190855,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Ideally, this model can help us come up with new algorithms for highly-threaded, many-core machines.",
+            "startOffset": 190755,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 139290,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "In this section, we briefly review the related work.",
+            "startOffset": 139238,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 148522,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "The chunk can either be a cache line from hardware managed caches, or an explicitly-managed combined read from multiple threads.",
+            "startOffset": 148394,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 186115,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000155",
+            "sentence": "The linear relationship predicted by the last term of Eq. (21) (for dense graphs) is illustrated clearly in the figure.",
+            "startOffset": 185996,
+            "title": "Effect of the number of threads"
+        },
+        {
+            "endOffset": 179615,
+            "parents": [],
+            "secId": "s000145",
+            "sentence": "This evaluation is a proof-of-concept that the model successfully predicts performance on one example of a highly-threaded, many-core machine.",
+            "startOffset": 179473,
+            "title": "Empirical investigation"
+        },
+        {
+            "endOffset": 179472,
+            "parents": [],
+            "secId": "s000145",
+            "sentence": "In this section, we conduct experiments to understand the extent of the applicability of our model in explaining the performance of algorithms on a real machine.",
+            "startOffset": 179311,
+            "title": "Empirical investigation"
+        },
+        {
+            "endOffset": 138103,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In particular, we compare these algorithms and find specific relationships between hardware parameters (latency, fast memory size, limits on number of threads) under which some algorithms are better than others even if they have the same PRAM cost.",
+            "startOffset": 137855,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 175915,
+            "parents": [],
+            "secId": "s000130",
+            "sentence": "However, the TMM model can also inform insights based on problem size.",
+            "startOffset": 175845,
+            "title": "Effect of problem size"
+        },
+        {
+            "endOffset": 186257,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000160",
+            "sentence": "In highly-threaded, many-core machines, access to local memory is faster than access to slow global memory.",
+            "startOffset": 186150,
+            "title": "Effect of fast local memory size"
+        },
+        {
+            "endOffset": 190187,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "In addition, for certain problem sizes which fit in local memory, algorithms which are faster on PRAM may be slower under the TMM model.",
+            "startOffset": 190051,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 145100,
+            "parents": [],
+            "refoffsets": {
+                "br000085": {
+                    "endOffset": 145100,
+                    "startOffset": 145096
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Using a different approach, Hong et al.  [17]",
+            "startOffset": 145055,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 190682,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "There are many directions of future work.",
+            "startOffset": 190641,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 141980,
+            "parents": [],
+            "refoffsets": {
+                "br000175": {
+                    "endOffset": 141980,
+                    "startOffset": 141976
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Vitter et al.  [35]",
+            "startOffset": 141961,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 168547,
+            "parents": [
+                {
+                    "id": "s000040",
+                    "title": "Analysis of all pairs shortest paths algorithms using the TMM model"
+                }
+            ],
+            "refoffsets": {
+                "br000280": {
+                    "endOffset": 168546,
+                    "startOffset": 168539
+                },
+                "br000285": {
+                    "endOffset": 168546,
+                    "startOffset": 168539
+                }
+            },
+            "secId": "s000090",
+            "sentence": "The algorithm is given in Algorithm 2  [56,57].",
+            "startOffset": 168500,
+            "title": "n iterations of Bellman\u2013Ford algorithm"
+        },
+        {
+            "endOffset": 191054,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "In addition, our current model only incorporates 2 levels of memory hierarchy.",
+            "startOffset": 190976,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 179754,
+            "parents": [],
+            "secId": "s000145",
+            "sentence": "It is not meant to be an exhaustive empirical study of the model\u2019s applicability for all instances of highly-threaded, many-core machines.",
+            "startOffset": 179616,
+            "title": "Empirical investigation"
+        },
+        {
+            "endOffset": 134642,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "For both machines, the pattern is quite similar, at low thread counts, the performance increases (roughly linearly) with the number of threads, up until a transition region, after which the performance no longer increases with increasing thread count.",
+            "startOffset": 134391,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 172759,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000110",
+            "sentence": "As the table shows, the limits on machine parameters to get linear speedup are different for different algorithms.",
+            "startOffset": 172645,
+            "title": "Influence of machine parameters"
+        },
+        {
+            "endOffset": 134938,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Once sufficient threads are present, the PRAM model adequately describes the performance of the application and increasing the number of threads no longer helps.",
+            "startOffset": 134777,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 175544,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000125",
+            "sentence": "Second, if we also consider the problem size,then we can do more.",
+            "startOffset": 175479,
+            "title": "Influence of graph size"
+        },
+        {
+            "endOffset": 139194,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  7 shows performance measurements for a pair of the APSP algorithms executing on a commercial GPU, illustrating correspondence between model predictions and empirical measurements.",
+            "startOffset": 139006,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 186509,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000160",
+            "sentence": "In this experiment we verify the effect of this fast memory size on algorithm performance.",
+            "startOffset": 186419,
+            "title": "Effect of fast local memory size"
+        },
+        {
+            "endOffset": 129666,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Theoretical analysis relies upon models that represent underlying assumptions; if a model does not capture the important aspects of target machines and programs, then the analysis is not predictive of real performance.",
+            "startOffset": 129448,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137060,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In practice, these machines may have many levels of memory.",
+            "startOffset": 137001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 172908,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000110",
+            "sentence": "Therefore, even when two algorithms have the same PRAM performance, their performance on highly-threaded, many-core machines may vary significantly.",
+            "startOffset": 172760,
+            "title": "Influence of machine parameters"
+        },
+        {
+            "endOffset": 135434,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Note that while we motivate this model for highly-threaded many-core machines with synchronous computations, in principle, it can be used in any system which has fast context switching and enough threads to hide memory latency.",
+            "startOffset": 135207,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 133820,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Since no highly-threaded, many-core machine allows an infinite number of threads, it is important to understand both (1) how many threads does a particular algorithm need to achieve PRAM performance, and (2) how does an algorithm perform when it has fewer threads than required to get PRAM performance?",
+            "startOffset": 133518,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 144696,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "summarize five categories of optimization mechanisms, and use two metrics to prune the GPU performance optimization space by 98% via computing the utilization and efficiency of GPU applications.",
+            "startOffset": 144502,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 175478,
+            "parents": [
+                {
+                    "id": "s000105",
+                    "title": "Comparison of the various algorithms"
+                }
+            ],
+            "secId": "s000125",
+            "sentence": "First, for a particular machine, given two algorithms which are asymptotically similar, we can pick the more appropriate algorithm for that particular machine given its machine parameters.",
+            "startOffset": 175290,
+            "title": "Influence of graph size"
+        },
+        {
+            "endOffset": 190345,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Further, we implemented a pair of the algorithms and showed empirical performance is effectively predicted by the TMM model under a variety of circumstances.",
+            "startOffset": 190188,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 136018,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "It, however, provides more intuition.",
+            "startOffset": 135981,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 148149,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "The TMM model models these machines as having a memory hierarchy with two levels of memory: slow global memory and fast local memory.",
+            "startOffset": 148016,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 190975,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Empirical validation of the TMM model across a wider number of physical machines and manufacturers is also worth doing.",
+            "startOffset": 190856,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 189167,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "The peak performance of Johnson\u2019s being better than that of dynamic programming is consistent with what the PRAM model predicts.",
+            "startOffset": 189039,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 132889,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In contrast, highly-threaded, many-core machines are explicitly designed to have a large number of threads per core and a fast context switching mechanism.",
+            "startOffset": 132734,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 145551,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "measure performance factors in isolation and later combine them to model the overall performance via workflow graphs so that the interactive effects between different performance factors are modeled correctly.",
+            "startOffset": 145342,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 136159,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "(1) Ideally, we want to get the PRAM performance for algorithms using the fewest number of threads possible, since threads do have overhead.",
+            "startOffset": 136019,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 189811,
+            "parents": [],
+            "secId": "s000170",
+            "sentence": "Using these three values, we can properly order algorithms from slow to fast for many different settings of machine parameters on highly-threaded, many-core machines.",
+            "startOffset": 189645,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 136743,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Therefore, it abstracts away many implementation details of either the machine or the algorithm.",
+            "startOffset": 136647,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 141639,
+            "parents": [],
+            "refoffsets": {
+                "br000165": {
+                    "endOffset": 141639,
+                    "startOffset": 141635
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Culler et al.  [33]",
+            "startOffset": 141620,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 136316,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "(2) It also captures the reality of when memory latency is large and the number of threads is large but finite.",
+            "startOffset": 136205,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 188176,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000165",
+            "sentence": "The PRAM model predicts that Johnson\u2019s algorithm should always be better.",
+            "startOffset": 188103,
+            "title": "Comparison between the dynamic programming and Johnson\u2019s algorithms"
+        },
+        {
+            "endOffset": 128948,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "These projects generally report impressive gains in performance.",
+            "startOffset": 128884,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134776,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "While the location of the transition region is different for distinct GPU models, this general pattern is found in many applications.",
+            "startOffset": 134643,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 146466,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "present a model to estimate both computation time by precisely counting instructions and memory access time by a method to generate address traces.",
+            "startOffset": 146319,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 147231,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "In this section, we will describe the important characteristics of these highly-threaded, many-core architectures and our model for analyzing algorithms for these architectures.",
+            "startOffset": 147054,
+            "title": "TMM model"
+        },
+        {
+            "endOffset": 168499,
+            "parents": [
+                {
+                    "id": "s000040",
+                    "title": "Analysis of all pairs shortest paths algorithms using the TMM model"
+                }
+            ],
+            "secId": "s000090",
+            "sentence": "This is another all pairs shortest paths algorithm that uses a single-source Bellman\u2013Ford algorithm as a subroutine.",
+            "startOffset": 168383,
+            "title": "n iterations of Bellman\u2013Ford algorithm"
+        },
+        {
+            "endOffset": 128632,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The important distinction between these machines and traditional multi-core machines is that these devices provide a large number of low-overhead hardware threads with low-overhead context switching between them; this fast context-switch mechanism is used to hide the memory access latency of transferring data from slow large (and often global) memory to fast, small (and typically local) memory.",
+            "startOffset": 128235,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137470,
+            "parents": [],
+            "refoffsets": {
+                "br000215": {
+                    "endOffset": 137469,
+                    "startOffset": 137465
+                }
+            },
+            "secId": "s000005",
+            "sentence": "We analyze 4 classic algorithms for the problem of computing All Pairs Shortest Paths (APSP) on a weighted graph in the TMM model  [43].",
+            "startOffset": 137334,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 143903,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "We review some of that work here.",
+            "startOffset": 143870,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 152883,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "The TMM model is a high-level abstract model, meant to be applicable to many instantiations of hardware platforms that feature a large number of threads with fast context switching and a hierarchical memory subsystem of at least two levels with a large memory latency gap in between.",
+            "startOffset": 152600,
+            "title": "TMM model applicability"
+        },
+        {
+            "endOffset": 179918,
+            "parents": [],
+            "secId": "s000145",
+            "sentence": "We implemented two all-pairs shortest paths algorithms: the dynamic programming using matrix multiplication and Johnson\u2019s algorithm using arrays, on an NVIDIA GPU.",
+            "startOffset": 179755,
+            "title": "Empirical investigation"
+        },
+        {
+            "endOffset": 149131,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "When a thread group executing on a core group stalls on a slow memory access, in theory, a context switch occurs and another thread group is scheduled on that core group.",
+            "startOffset": 148961,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 152984,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "Typical examples of this set include NVIDIA GPUs, AMD/ATI GPUs, and the uRiKA machine from YarcData.",
+            "startOffset": 152884,
+            "title": "TMM model applicability"
+        },
+        {
+            "endOffset": 138452,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "For two of the APSP algorithms, we illustrate the impact of various individual parameters on performance, showing the effectiveness of the model at predicting measured performance.",
+            "startOffset": 138272,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130463,
+            "parents": [],
+            "refoffsets": {
+                "br000110": {
+                    "endOffset": 130321,
+                    "startOffset": 130317
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Aggarwal and Vitter proposed the Disk Access Machine (DAM) model  [22] which counts the number of memory transfers from slow to fast memory instead of simply counting the number of memory accesses by the program.",
+            "startOffset": 130251,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 146197,
+            "parents": [],
+            "refoffsets": {
+                "br000245": {
+                    "endOffset": 146197,
+                    "startOffset": 146193
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Kim et al.  [49]",
+            "startOffset": 146181,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 148856,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "These architectures support a large number of hardware threads, much larger than the number of cores.",
+            "startOffset": 148755,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 137334,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We expect that the model can be extended to also model other levels of the memory hierarchy.",
+            "startOffset": 137242,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 133175,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In principle, the number of memory transfers does not matter as long as there are enough threads to hide their latency.",
+            "startOffset": 133056,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137854,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Our results validate the intuition that this model can provide more information than the PRAM model for the large latency, finite thread case.",
+            "startOffset": 137712,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 138661,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Section  4 provides the 4 shortest paths algorithms and their analysis in both the PRAM and TMM models.",
+            "startOffset": 138558,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 148393,
+            "parents": [
+                {
+                    "id": "s000015",
+                    "title": "TMM model"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "In addition, on most highly-threaded, many-core machines, data is transferred from slow to fast memory in chunks; instead of just transferring one word at a time, the hardware tries to transfer a large number of words during a memory transfer.",
+            "startOffset": 148150,
+            "title": "Highly-threaded, many-core architectures"
+        },
+        {
+            "endOffset": 146318,
+            "parents": [],
+            "refoffsets": {
+                "br000250": {
+                    "endOffset": 146318,
+                    "startOffset": 146314
+                }
+            },
+            "secId": "s000010",
+            "sentence": "Parakh et al.  [50]",
+            "startOffset": 146299,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 186418,
+            "parents": [
+                {
+                    "id": "s000145",
+                    "title": "Empirical investigation"
+                }
+            ],
+            "secId": "s000160",
+            "sentence": "Among our shortest paths algorithms, only the dynamic programming algorithm makes use of the local memory and the running time depends on this fast memory size.",
+            "startOffset": 186258,
+            "title": "Effect of fast local memory size"
+        },
+        {
+            "endOffset": 170482,
+            "parents": [],
+            "secId": "s000105",
+            "sentence": "As our analysis of shortest paths algorithms indicates, the TMM model allows us to take the unique properties of highly-threaded, many-core architectures into consideration while analyzing the algorithms.",
+            "startOffset": 170278,
+            "title": "Comparison of the various algorithms"
+        }
+    ],
+    "docId": "S0167739X13001349",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "lin.ma@cse.wustl.edu",
+                "first": "Lin",
+                "initial": "L.",
+                "last": "Ma"
+            },
+            {
+                "email": null,
+                "first": "Kunal",
+                "initial": "K.",
+                "last": "Agrawal"
+            },
+            {
+                "email": null,
+                "first": "Roger D.",
+                "initial": "R.D.",
+                "last": "Chamberlain"
+            }
+        ],
+        "doi": "10.1016/j.future.2013.06.020",
+        "firstpage": "202",
+        "issn": "0167739X",
+        "keywords": [
+            "All Pairs Shortest Paths (APSP)",
+            "Highly-threaded many-core",
+            "Memory access model",
+            "PRAM",
+            "TMM"
+        ],
+        "lastpage": "215",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "A memory access model for highly-threaded many-core architectures"
+    }
+}

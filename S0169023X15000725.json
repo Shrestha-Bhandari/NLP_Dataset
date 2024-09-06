@@ -1,0 +1,4406 @@
+{
+    "abstract": "The automatic extraction of temporal information from written texts is pivotal for many Natural Language Processing applications such as question answering, text summarisation and information retrieval. It allows to filter information and infer temporal flows of events. This paper presents ManTIME, a general domain temporal expression identification and normalisation system, and systematically explores the impact of different features and training corpora on the performance. The identification phase combines the use of conditional random fields along with a post-processing pipeline, whereas the normalisation phase is carried out using NorMA, an open-source rule-based temporal normaliser. We investigate the performance variation with respect to different feature types. Specifically, we show that the use of WordNet-based features in the identification task negatively affects the overall performance, and that there is no statistically significant difference in the results based on gazetteers, shallow parsing and propositional noun phrases labels on top of the morpho-lexical features. We also show that the use of silver data (alone or in addition to the human-annotated ones) does not improve the performance. We evaluate six combinations of training data and post-processing pipeline with respect to the TempEval-3 benchmark test set. The best run achieved 0.95 (precision), 0.85 (recall) and 0.90 (F\u03b2=1) in the identification phase. Normalisation accuracies are 0.86 (for type attribute) and 0.77 (for value attribute). The proposed approach ranked 3rd in the TempEval-3 challenge (task A) as the best performing machine learning-based system among 21 participants.",
+    "bib_entries": {
+        "bb0005": null,
+        "bb0010": null,
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Verhagen"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Gaizauskas"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Schilder"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Hepple"
+                },
+                {
+                    "first": "Graham",
+                    "initial": "G.",
+                    "last": "Katz"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Pustejovsky"
+                }
+            ],
+            "firstpage": "75",
+            "lastpage": "80",
+            "pub_year": 2007,
+            "title": "SemEval-2007 task 15: TempEval temporal relation identification"
+        },
+        "bb0020": {
+            "authors": [
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Verhagen"
+                },
+                {
+                    "first": "Roser",
+                    "initial": "R.",
+                    "last": "Sauri"
+                },
+                {
+                    "first": "Tommaso",
+                    "initial": "T.",
+                    "last": "Caselli"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Pustejovsky"
+                }
+            ],
+            "firstpage": "57",
+            "lastpage": "62",
+            "pub_year": 2010,
+            "title": "SemEval-2010 task 13: TempEval-2"
+        },
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "Naushad",
+                    "initial": "N.",
+                    "last": "UzZaman"
+                },
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "Leon",
+                    "initial": "L.",
+                    "last": "Derczynski"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Verhagen"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Allen"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Pustejovsky"
+                }
+            ],
+            "firstpage": "1",
+            "lastpage": "9",
+            "pub_year": 2013,
+            "title": "SemEval-2013 task 1: TEMPEVAL-3: Evaluating time expressions, events, and temporal relations",
+            "volume": "2"
+        },
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "G\u00e9rard",
+                    "initial": "G.",
+                    "last": "Becher"
+                },
+                {
+                    "first": "Fran\u00e7oise",
+                    "initial": "F.",
+                    "last": "Clerin-Debart"
+                },
+                {
+                    "first": "Patrice",
+                    "initial": "P.",
+                    "last": "Enjalbert"
+                }
+            ],
+            "doi": "10.1109/TIME.1998.674128",
+            "firstpage": "29",
+            "lastpage": "36",
+            "pub_year": 1998,
+            "title": "A model for time granularity in natural language"
+        },
+        "bb0035": null,
+        "bb0040": null,
+        "bb0045": null,
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Naushad",
+                    "initial": "N.",
+                    "last": "UzZaman"
+                },
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Allen"
+                }
+            ],
+            "doi": "10.1109/ICSC.2012.34",
+            "firstpage": "79",
+            "lastpage": "82",
+            "pub_year": 2012,
+            "title": "Evaluating temporal information understanding with temporal question answering"
+        },
+        "bb0055": {
+            "authors": [
+                {
+                    "first": "Bernhard E.",
+                    "initial": "B.E.",
+                    "last": "Boser"
+                },
+                {
+                    "first": "Isabelle M.",
+                    "initial": "I.M.",
+                    "last": "Guyon"
+                },
+                {
+                    "first": "Vladimir N.",
+                    "initial": "V.N.",
+                    "last": "Vapnik"
+                }
+            ],
+            "firstpage": "144",
+            "lastpage": "152",
+            "pub_year": 1992,
+            "title": "Training algorithm for optimal margin classifiers"
+        },
+        "bb0060": null,
+        "bb0065": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Ahn"
+                },
+                {
+                    "first": "Joris",
+                    "initial": "J.",
+                    "last": "Van Rantwijk"
+                },
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "De Rijke"
+                }
+            ],
+            "firstpage": "420",
+            "lastpage": "427",
+            "pub_year": 2007,
+            "title": "A cascaded machine learning approach to interpreting temporal expressions"
+        },
+        "bb0070": {
+            "authors": [
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "Estela",
+                    "initial": "E.",
+                    "last": "Saquete"
+                },
+                {
+                    "first": "Borja",
+                    "initial": "B.",
+                    "last": "Navarro"
+                }
+            ],
+            "firstpage": "284",
+            "lastpage": "291",
+            "pub_year": 2010,
+            "title": "TIPSem (English and Spanish): Evaluating CRFs and semantic roles in TempEval-2"
+        },
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "Estela",
+                    "initial": "E.",
+                    "last": "Saquete"
+                },
+                {
+                    "first": "Borja",
+                    "initial": "B.",
+                    "last": "Navarro-Colorado"
+                }
+            ],
+            "doi": "10.1016/j.ipm.2012.05.005",
+            "firstpage": "179",
+            "issn": "03064573",
+            "lastpage": "197",
+            "pub_year": 2013,
+            "title": "Applying semantic knowledge to the automatic processing of temporal expressions and events in natural language",
+            "volume": "49"
+        },
+        "bb0080": null,
+        "bb0085": {
+            "authors": [
+                {
+                    "first": "Xiao",
+                    "initial": "X.",
+                    "last": "Ling"
+                },
+                {
+                    "first": "Daniel S.",
+                    "initial": "D.S.",
+                    "last": "Weld"
+                }
+            ],
+            "firstpage": "1385",
+            "lastpage": "1390",
+            "pub_year": 2010,
+            "title": "Temporal information extraction",
+            "volume": "3"
+        },
+        "bb0090": {
+            "authors": [
+                {
+                    "first": "Claire",
+                    "initial": "C.",
+                    "last": "Grover"
+                },
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Tobin"
+                },
+                {
+                    "first": "Beatrice",
+                    "initial": "B.",
+                    "last": "Alex"
+                },
+                {
+                    "first": "Kate",
+                    "initial": "K.",
+                    "last": "Byrne"
+                }
+            ],
+            "firstpage": "333",
+            "lastpage": "336",
+            "pub_year": 2010,
+            "title": "Edinburgh-LTG: TempEval-2 system description"
+        },
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "Naushad",
+                    "initial": "N.",
+                    "last": "UzZaman"
+                },
+                {
+                    "first": "James F.",
+                    "initial": "J.F.",
+                    "last": "Allen"
+                }
+            ],
+            "doi": "10.1142/S1793351X10001097",
+            "firstpage": "487",
+            "issn": "1793351X",
+            "lastpage": "508",
+            "pub_year": 2010,
+            "title": "Event and temporal expression extraction from raw text: First step towards a temporally aware system",
+            "volume": "4"
+        },
+        "bb0100": {
+            "authors": [
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "Leon",
+                    "initial": "L.",
+                    "last": "Derczynski"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Gaizauskas"
+                },
+                {
+                    "first": "Estela",
+                    "initial": "E.",
+                    "last": "Saquete"
+                }
+            ],
+            "firstpage": "3044",
+            "lastpage": "3051",
+            "pub_year": 2012,
+            "title": "TIMEN: An open temporal expression normalisation resource"
+        },
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "Gabor",
+                    "initial": "G.",
+                    "last": "Angeli"
+                },
+                {
+                    "first": "Christopher D.",
+                    "initial": "C.D.",
+                    "last": "Manning"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Jurafsky"
+                }
+            ],
+            "firstpage": "446",
+            "lastpage": "455",
+            "pub_year": 2012,
+            "title": "Parsing time: Learning to interpret time expressions"
+        },
+        "bb0110": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Saquete"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Mu\u00f1oz"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Mart\u00ednez-Barco"
+                }
+            ],
+            "doi": "10.1016/j.datak.2005.05.011",
+            "firstpage": "70",
+            "issn": "0169023X",
+            "lastpage": "89",
+            "pub_year": 2006,
+            "title": "Event ordering using TERSEO system",
+            "volume": "58"
+        },
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Saquete"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Ferr\u00e1ndez"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Ferr\u00e1ndez"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Mart\u00ednez-Barco"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Mu\u00f1oz"
+                }
+            ],
+            "doi": "10.1016/j.ins.2008.05.002",
+            "firstpage": "3319",
+            "issn": "00200255",
+            "lastpage": "3332",
+            "pub_year": 2008,
+            "title": "Combining automatic acquisition of knowledge with machine learning approaches for multilingual temporal recognition and normalization",
+            "volume": "178"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "Nathanael",
+                    "initial": "N.",
+                    "last": "Chambers"
+                }
+            ],
+            "firstpage": "73",
+            "lastpage": "77",
+            "pub_year": 2013,
+            "title": "NavyTime: Event and time ordering from raw text",
+            "volume": "2"
+        },
+        "bb0125": {
+            "authors": [
+                {
+                    "first": "Jannik",
+                    "initial": "J.",
+                    "last": "Strotgen"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Gertz"
+                }
+            ],
+            "firstpage": "321",
+            "lastpage": "324",
+            "pub_year": 2010,
+            "title": "HeidelTime: High quality rule-based extraction and normalization of temporal expressions"
+        },
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "Angel X.",
+                    "initial": "A.X.",
+                    "last": "Chang"
+                },
+                {
+                    "first": "Christopher D.",
+                    "initial": "C.D.",
+                    "last": "Manning"
+                }
+            ],
+            "firstpage": "3735",
+            "lastpage": "3740",
+            "pub_year": 2012,
+            "title": "SUTIME: A library for recognizing and normalizing time expressions"
+        },
+        "bb0135": {
+            "authors": [
+                {
+                    "first": "\u00d6zlem",
+                    "initial": "O.",
+                    "last": "Uzuner"
+                },
+                {
+                    "first": "Brett R.",
+                    "initial": "B.R.",
+                    "last": "South"
+                },
+                {
+                    "first": "Shuying",
+                    "initial": "S.",
+                    "last": "Shen"
+                },
+                {
+                    "first": "Scott L.",
+                    "initial": "S.L.",
+                    "last": "DuVall"
+                }
+            ],
+            "doi": "10.1136/amiajnl-2011-000203",
+            "firstpage": "552",
+            "issn": "10675027",
+            "lastpage": "556",
+            "pmid": "21685143",
+            "pub_year": 2011,
+            "title": "2010 i2b2/VA challenge on concepts, assertions, and relations in clinical text",
+            "volume": "18"
+        },
+        "bb0140": {
+            "authors": [
+                {
+                    "first": "Weiyi",
+                    "initial": "W.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Anna",
+                    "initial": "A.",
+                    "last": "Rumshisky"
+                },
+                {
+                    "first": "Ozlem",
+                    "initial": "O.",
+                    "last": "Uzuner"
+                }
+            ],
+            "doi": "10.1136/amiajnl-2013-001628",
+            "firstpage": "806",
+            "issn": "10675027",
+            "lastpage": "813",
+            "pmid": "23564629",
+            "pub_year": 2013,
+            "title": "Evaluating temporal relations in clinical text: 2012 i2b2 Challenge",
+            "volume": "20"
+        },
+        "bb0145": {
+            "authors": [
+                {
+                    "first": "Aleksandar",
+                    "initial": "A.",
+                    "last": "Kova\u010devi\u0107"
+                },
+                {
+                    "first": "Azad",
+                    "initial": "A.",
+                    "last": "Dehghan"
+                },
+                {
+                    "first": "Michele",
+                    "initial": "M.",
+                    "last": "Filannino"
+                },
+                {
+                    "first": "John A.",
+                    "initial": "J.A.",
+                    "last": "Keane"
+                },
+                {
+                    "first": "Goran",
+                    "initial": "G.",
+                    "last": "Nenadic"
+                }
+            ],
+            "doi": "10.1136/amiajnl-2013-001625",
+            "firstpage": "859",
+            "issn": "10675027",
+            "lastpage": "866",
+            "pmid": "23605114",
+            "pub_year": 2013,
+            "title": "Combining rules and machine learning for extraction of temporal expressions and events from clinical narratives",
+            "volume": "20"
+        },
+        "bb0150": null,
+        "bb0155": null,
+        "bb0160": null,
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "Eun Young",
+                    "initial": "E.Y.",
+                    "last": "Ha"
+                },
+                {
+                    "first": "Alok",
+                    "initial": "A.",
+                    "last": "Baikadi"
+                },
+                {
+                    "first": "Carlyle",
+                    "initial": "C.",
+                    "last": "Licata"
+                },
+                {
+                    "first": "James C.",
+                    "initial": "J.C.",
+                    "last": "Lester"
+                }
+            ],
+            "firstpage": "341",
+            "lastpage": "344",
+            "pub_year": 2010,
+            "title": "NCSU: Modeling temporal relations with Markov logic and lexical ontology"
+        },
+        "bb0170": {
+            "authors": [
+                {
+                    "first": "Hector",
+                    "initial": "H.",
+                    "last": "Llorens"
+                },
+                {
+                    "first": "Borja",
+                    "initial": "B.",
+                    "last": "Navarro"
+                },
+                {
+                    "first": "Estela",
+                    "initial": "E.",
+                    "last": "Saquete"
+                }
+            ],
+            "firstpage": "219",
+            "issn": "13138502",
+            "lastpage": "224",
+            "pub_year": 2009,
+            "title": "Using semantic networks to identify temporal expressions from semantic roles"
+        },
+        "bb0175": null,
+        "bb0180": {
+            "authors": [
+                {
+                    "first": "Chris D.",
+                    "initial": "C.D.",
+                    "last": "Paice"
+                }
+            ],
+            "doi": "10.1145/101306.101310",
+            "firstpage": "56",
+            "issn": "01635840",
+            "lastpage": "61",
+            "pub_year": 1990,
+            "title": "Another Stemmer",
+            "volume": "24"
+        },
+        "bb0185": {
+            "authors": [
+                {
+                    "first": "M. F.",
+                    "initial": "M.F.",
+                    "last": "Porter"
+                }
+            ],
+            "doi": "10.1108/eb046814",
+            "firstpage": "130",
+            "issn": "00330337",
+            "lastpage": "137",
+            "pub_year": 1980,
+            "title": "An algorithm for suffix stripping",
+            "volume": "14"
+        },
+        "bb0190": {
+            "authors": [
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Rigo"
+                },
+                {
+                    "first": "Alberto",
+                    "initial": "A.",
+                    "last": "Lavelli"
+                }
+            ],
+            "doi": "10.1109/TIME.2011.13",
+            "firstpage": "163",
+            "lastpage": "170",
+            "pub_year": 2011,
+            "title": "MulTiSEX - A multi language timex sequential extractor"
+        },
+        "bb0195": null,
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "Pawe\u0142",
+                    "initial": "P.",
+                    "last": "Mazur"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Dale"
+                }
+            ],
+            "firstpage": "201",
+            "lastpage": "208",
+            "pub_year": 2011,
+            "title": "LTIMEX: Representing the local semantics of temporal expressions"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 46481,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Model 1 showed a slightly better F\u03b2 = 1 score, which corroborated our choice.",
+            "startOffset": 46404,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 49466,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "/O\u201d should be converted into \u201cThree/B days/I ago/I.",
+            "startOffset": 49415,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 31202,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For example, the following expressions fall in this category: \u201c21st July 1985\u201d, \u201c31/04/2011 at 12 o'clock\u201d or \u201cMartin Luther King's day 2013\u201d.",
+            "startOffset": 31060,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37210,
+            "parents": [],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 37044,
+                    "startOffset": 37037
+                },
+                "bb0140": {
+                    "endOffset": 37044,
+                    "startOffset": 37037
+                },
+                "bb0145": {
+                    "endOffset": 37044,
+                    "startOffset": 37037
+                },
+                "bb0150": {
+                    "endOffset": 37044,
+                    "startOffset": 37037
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Recently, temporal information extraction aroused increasing interest in the medical domain [27\u201330], where temporal information can be used to automatically extract patient clinical histories or temporal cause\u2013effect relations with respect to particular treatments.",
+            "startOffset": 36945,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40686,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In addition to the labelling (or tagging) scheme (BI, BIO, BIOE or BIOEU1) and the topology of the factor graph, the effectiveness of using CRFs mainly depends on the quality of features.",
+            "startOffset": 40347,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 32410,
+            "parents": [],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 32249,
+                    "startOffset": 32246
+                },
+                "bb0035": {
+                    "endOffset": 32339,
+                    "startOffset": 32336
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Early attempts of automatically annotating temporal expressions in texts started in late 1990s [6], and aroused an increasing interest with the proposal of a temporal annotation scheme [7], mainly aiming at enhancing performance of question answering systems.",
+            "startOffset": 32151,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31745,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, anaphoric expressions are a particular case of deictic expressions for which the utterance time varies according to the temporal expressions previously mentioned in the text.",
+            "startOffset": 31562,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59604,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Those errors are due to the CRF model which discarded such words with very high confidence.",
+            "startOffset": 59513,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 38499,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "We tackled the identification problem as a sequencing labelling task leading to the choice of CRFs.",
+            "startOffset": 38400,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 37532,
+            "parents": [],
+            "refoffsets": {
+                "bb0140": {
+                    "endOffset": 37356,
+                    "startOffset": 37352
+                }
+            },
+            "secId": "s0010",
+            "sentence": "More specifically, the results from i2b2 2012 [28] show that the identification accuracies range from 0.84 to 0.90, whereas normalisation accuracies rage from 0.54 to 0.73 (for value) and 0.72 to 0.89 for (for type attribute).",
+            "startOffset": 37306,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46985,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Although the CRF-based labeller already provided reasonable performance on the training data, equally balanced in terms of precision and recall, we focussed on boosting the baseline performance through a post-processing pipeline composed of three modules, which aimed to adjust the CRF-predicted labels.",
+            "startOffset": 46682,
+            "title": "A posteriori label adjustment pipeline"
+        },
+        {
+            "endOffset": 57074,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As expected, the post-processing pipeline boosted the performance of both precision and recall.",
+            "startOffset": 56979,
+            "title": "Results"
+        },
+        {
+            "endOffset": 45933,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This is mainly due to the sparseness of the labels: many tokens do not have any associated WordNet sense.",
+            "startOffset": 45828,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 48812,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Therefore, the application of this module forces the prior probabilities extracted from the human-annotated data.",
+            "startOffset": 48699,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 59306,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "It appears that wrong tokenisation is the major cause of the difference between strict and lenient performance.",
+            "startOffset": 59195,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 38676,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "We trained the system using both human-annotated data and silver data (see Section 4.1) in order to investigate the potential contribution of different types of annotated data.",
+            "startOffset": 38500,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 43940,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "refoffsets": {
+                "bb0175": {
+                    "endOffset": 43939,
+                    "startOffset": 43935
+                }
+            },
+            "secId": "s0110",
+            "sentence": "are known in linguistics to be characterised by having antonyms, whereas the rest of temporal expression words typically do not [35].",
+            "startOffset": 43807,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 44871,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This allowed us to select the model that provides the highest F\u03b2 = 1 score among the four proposed.",
+            "startOffset": 44772,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 44463,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The 93 features mentioned above have been combined in four different models combining the following types of features:",
+            "startOffset": 44345,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 33909,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "ManTIME uses 93 features of 4 types, which have been engineered following a systematic review of the scientific literature in temporal information extraction.",
+            "startOffset": 33751,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35929,
+            "parents": [],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 35777,
+                    "startOffset": 35773
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Llorens et al. [20] extended this architecture making it community-driven: Internet users are allowed to candidate new rules to be integrated in a central rule repository.",
+            "startOffset": 35758,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49091,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "This leads to possibly inconsistent sequences of labels.",
+            "startOffset": 49035,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 34871,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 34804,
+                    "startOffset": 34797
+                },
+                "bb0075": {
+                    "endOffset": 34804,
+                    "startOffset": 34797
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Llorens et al. [14,15] successively added semantic features using a similar architecture.",
+            "startOffset": 34782,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 35757,
+            "parents": [],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 35651,
+                    "startOffset": 35647
+                }
+            },
+            "secId": "s0010",
+            "sentence": "UzZaman and Allen [19] developed TRIOS, an open-source rule-based normaliser, focussing on type and value attributes prediction.",
+            "startOffset": 35629,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52486,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "For example, some of the rules are used to normalise expressions of festivity dates such as \u201cQueen's birthday\u201d or \u201cSaint Patrick's day\u201d.",
+            "startOffset": 52350,
+            "title": "Post-manipulation rules"
+        },
+        {
+            "endOffset": 59072,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "For example, in \u201cearly 2012.\u201d",
+            "startOffset": 59043,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 34781,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 34620,
+                    "startOffset": 34617
+                },
+                "bb0055": {
+                    "endOffset": 34688,
+                    "startOffset": 34684
+                },
+                "bb0060": {
+                    "endOffset": 34730,
+                    "startOffset": 34726
+                },
+                "bb0065": {
+                    "endOffset": 34780,
+                    "startOffset": 34776
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Ahn et al. [2] used morphological features with support vector machines (SVM) [11] and conditional random fields (CRFs) [12] showing a notable improvement in performance [13].",
+            "startOffset": 34606,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 35628,
+            "parents": [],
+            "refoffsets": {
+                "bb0090": {
+                    "endOffset": 35530,
+                    "startOffset": 35526
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Grover et al. [18], for example, used regular expression-based rules on top of a pre-existing identification system.",
+            "startOffset": 35512,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 44771,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "We performed an extensive evaluation by repeating the experiments a number of times and assessing whether there is any statistical difference among the models.",
+            "startOffset": 44612,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 42976,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "We used the following gazetteers: male and female names4 along with world festivity names.5",
+            "startOffset": 42813,
+            "title": "Gazetteers"
+        },
+        {
+            "endOffset": 57978,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Therefore, the effect should be taken with caution.",
+            "startOffset": 57927,
+            "title": "Results"
+        },
+        {
+            "endOffset": 50745,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Two attributes are particularly important in this respect: type and value.",
+            "startOffset": 50671,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 59760,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "These results suggest that reducing the complexity of the CRFs factor graph (see Section 3.1.1) and using a better tokeniser may lead to better performance.",
+            "startOffset": 59604,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 63195,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We do not suggest that some of the features experimented with here will produce the same effects in a different NER task.",
+            "startOffset": 63074,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 63643,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "Somewhat surprisingly, the use of the label adjustment pipeline, originally introduced mainly to be used with models trained on silver data, proved its efficacy with the gold data too.",
+            "startOffset": 63459,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 64128,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "Furthermore, we found out that the use of silver data does not improve the performance, although we consider the benchmark test set arguably too small to made this conclusion generalisable.",
+            "startOffset": 63939,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 31059,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A timex is fully-qualified when it unambiguously refers to a precise interval or point in the time domain.",
+            "startOffset": 30953,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47340,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "We therefore aimed to design a module that would make predictions less strict and in some cases have the effect of changing the most likely label (mainly expected to bring an improvement in terms of recall).",
+            "startOffset": 47133,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 57285,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 6 shows the results.",
+            "startOffset": 57260,
+            "title": "Results"
+        },
+        {
+            "endOffset": 64354,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "We believe that it can be improved from many aspects, including:",
+            "startOffset": 64290,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 42430,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "A total of 61 morpho-lexical features have been engineered.",
+            "startOffset": 42371,
+            "title": "Morpho-lexical"
+        },
+        {
+            "endOffset": 49378,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "We found that, among the possible corrections (B-I or I-B), B-I applies to most cases (i.e. the first token has been most often incorrectly annotated).",
+            "startOffset": 49227,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 55770,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The results are shown in Table 7 where the overall score is computed by Formula (8).",
+            "startOffset": 55686,
+            "title": "Results"
+        },
+        {
+            "endOffset": 48074,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "From the CRF-based labeller we extracted, for each token, the internal conditional probability of each label.",
+            "startOffset": 47965,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 62969,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "It does not mean that there is not a different way of using WordNet which may positively contributing to the temporal expression identification.",
+            "startOffset": 62825,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 53870,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Table 6 summarises the main characteristics of each corpus.",
+            "startOffset": 53811,
+            "title": "Data"
+        },
+        {
+            "endOffset": 40955,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "These features belong to the following four disjoint categories.",
+            "startOffset": 40891,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 32573,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 32447,
+                    "startOffset": 32444
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Following the work of Ahn et al. [2], the temporal expression extraction task is now conventionally divided into two main steps: identification and normalisation.",
+            "startOffset": 32411,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53810,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This corpus is much larger than the gold ones, although its annotations are not as reliable.",
+            "startOffset": 53718,
+            "title": "Data"
+        },
+        {
+            "endOffset": 60949,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The major source of error (18/33 cases: 55%) remains the normalisation of partially extracted temporal expressions (e.g., \u201c100\u201d instead \u201c100 days\u201d, or \u201ca mere 24\u201d instead \u201ca mere 24 hours\u201d).",
+            "startOffset": 60759,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 63073,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "Also, the feature analysis is meant to be relevant only in the temporal information extraction context.",
+            "startOffset": 62970,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 53498,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "These two corpora have been used for training purposes as opposed to a human-annotated corpus, TempEval-3 benchmark, which has been used as a test set.",
+            "startOffset": 53347,
+            "title": "Data"
+        },
+        {
+            "endOffset": 30952,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 30911,
+                    "startOffset": 30908
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Temporal expressions can be of three different types [2]: fully-qualified, deictic and anaphoric.",
+            "startOffset": 30855,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41434,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "refoffsets": {
+                "bb0160": {
+                    "endOffset": 41433,
+                    "startOffset": 41429
+                }
+            },
+            "secId": "s0095",
+            "sentence": "For lemma and POS tags we use TreeTagger [32].",
+            "startOffset": 41388,
+            "title": "Morpho-lexical"
+        },
+        {
+            "endOffset": 53152,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The human-annotated data come from two existing corpora: AQUAINT and TimeBank.8",
+            "startOffset": 53073,
+            "title": "Data"
+        },
+        {
+            "endOffset": 55685,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Six different experimental settings have been evaluated as combinations of different training sets (gold, silver, gold&silver) with or without the application of label adjustment pipeline.",
+            "startOffset": 55497,
+            "title": "Results"
+        },
+        {
+            "endOffset": 52141,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "Examples of those are duration expressions (e.g. \u201c3-year\u201d, \u201c3-day\u201d), frequency expressions (e.g. \u201cevery half an hour\u201d, \u201cevery two days\u201d) or period expressions (e.g. \u201c'90s\u201d, \u201ceighties\u201d).",
+            "startOffset": 51956,
+            "title": "Extension rules"
+        },
+        {
+            "endOffset": 56863,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The a posteriori label adjustment pipeline showed the highest precision when applied to the silver data only.",
+            "startOffset": 56754,
+            "title": "Results"
+        },
+        {
+            "endOffset": 58945,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "This is due to a very high confidence from the CRF module.",
+            "startOffset": 58887,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 58026,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The normalisation task proved to be challenging.",
+            "startOffset": 57978,
+            "title": "Results"
+        },
+        {
+            "endOffset": 39179,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 39178,
+                    "startOffset": 39174
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Because of this trade-off, we developed a post-processing pipeline on top of the CRFs sequence labeller to boost the identification performance, similarly to the approach proposed by Adafre and de Rijke [31].",
+            "startOffset": 38971,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 33200,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 33199,
+                    "startOffset": 33196
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The normalisation task is usually focussed on predicting the two main temporal expressions attributes: type of the temporal expression (e.g. SET, DURATION, DATE or TIME) and its full value according to the ISO-8601 format [9].",
+            "startOffset": 32974,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49758,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "We also merged adjacent expressions such as B-B or I-B, because different temporal expressions are always divided at least by a symbol or a punctuation character (e.g. \u201cWednesday/B morning/B\u201d becomes \u201cWednesday/B morning/I\u201d, \u201c21st/B November/I 1990/B\u201d becomes \u201c21st/B November/I 1990/I\u201d).",
+            "startOffset": 49470,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 50253,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "Using the pipeline always leads to an improvement in performance, with the BIO fixer component as the major contributor.",
+            "startOffset": 50133,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 51908,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "The extension rules are new rules that cover temporal expressions not handled by TRIOS.",
+            "startOffset": 51821,
+            "title": "Extension rules"
+        },
+        {
+            "endOffset": 54055,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Each annotated temporal expression carries its type and value attributes.",
+            "startOffset": 53982,
+            "title": "Data"
+        },
+        {
+            "endOffset": 39295,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Below we describe the CRF-based labeller, the model selection and the post-processing pipeline components in detail.",
+            "startOffset": 39179,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 52958,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "In particular, we describe the data, the evaluation metrics and the results.",
+            "startOffset": 52882,
+            "title": "Experiments and results"
+        },
+        {
+            "endOffset": 59935,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "False negatives (missed temporal expressions) are also connected to the low frequency of some types of expression in the training data: \u201c15:00GMT Saturday\u201d, \u201ca mere 24 hours\u201d.",
+            "startOffset": 59760,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 32693,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the former step, the effort is concentrated on how to detect the right boundary of temporal expressions in the text.",
+            "startOffset": 32574,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57926,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The limited size of the TempEval-3 benchmark test set, on which this analysis is based, might not be enough to explain this behaviour.",
+            "startOffset": 57792,
+            "title": "Results"
+        },
+        {
+            "endOffset": 30616,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For example, in a sentence like \u201cThe Prime Minister said yesterday that the reform promoted three months ago has been very successful.\u201d,",
+            "startOffset": 30480,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48577,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "This module changes the predicted label to the most likely one based on the a priori probabilities from the gold data only.",
+            "startOffset": 48454,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 56978,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In this case, the pipeline acted as a reinforcement of the human-annotated data, helping improving the boundaries.",
+            "startOffset": 56864,
+            "title": "Results"
+        },
+        {
+            "endOffset": 39410,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Temporal expression identification can be seen as a Named Entity Recognition (NER) problem.",
+            "startOffset": 39319,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 53346,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Both data sets have been revised by the TempEval-3 organizers in order to fix erroneous annotations.",
+            "startOffset": 53246,
+            "title": "Data"
+        },
+        {
+            "endOffset": 59084,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "and \u201c2007.\u201d",
+            "startOffset": 59073,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 60758,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "A total of 33 temporal expressions have been correctly identified but wrongly normalised (VALUE).",
+            "startOffset": 60661,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 49034,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "Although CRFs are designed to handle sequences, they assign labels token-by-token.",
+            "startOffset": 48952,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 38110,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Each step of the architecture will be illustrated in detail in the next sections.",
+            "startOffset": 38029,
+            "title": "System architecture"
+        },
+        {
+            "endOffset": 57715,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "False positives are always \u2018I\u2019 labels, which are then propagated by the next component in the pipeline, BIO-fixer, by adding a \u2018B\u2019 label to the previous tokens.",
+            "startOffset": 57555,
+            "title": "Results"
+        },
+        {
+            "endOffset": 58175,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Among the correctly typed temporal expressions, there was still about 10% for which an incorrect value is provided (value ranges from 0.76 to 0.78).",
+            "startOffset": 58027,
+            "title": "Results"
+        },
+        {
+            "endOffset": 60397,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "In five cases (4%), the system correctly annotates expressions missed by the human annotators (e.g., \u201cthe next decade\u201d or \u201cevery morning\u201d).",
+            "startOffset": 60258,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 58886,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Those expressions have been wrongly classified and the post-processing pipeline has not been able to discard them from the predictions.",
+            "startOffset": 58751,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 35149,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 35082,
+                    "startOffset": 35078
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Ling and Weld [17] tried Markov Logic Network in order to extract temporal relations.",
+            "startOffset": 35064,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 44565,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Model 3: Morpho-lexical + gazetteers",
+            "startOffset": 44529,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 44085,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "We hypothesized that such piece of information should have been integrated to help the machine learning model to highlight temporal expressions.",
+            "startOffset": 43941,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 62140,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "In summary, the contributions of this paper are:",
+            "startOffset": 62092,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 46350,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In order to get an educated estimation of the Precision/Recall performance of the selected model in the wild, we then trained it on the entire training set and tested it against the test set.",
+            "startOffset": 46159,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 47533,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "For each token, we thus average the conditional probabilities from the trained CRF model with the prior probabilities extracted from the gold data only (see Section 4.1 for details about data).",
+            "startOffset": 47340,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 57791,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This explains the slight downward trend visible in the last step of Fig. 6.",
+            "startOffset": 57716,
+            "title": "Results"
+        },
+        {
+            "endOffset": 61619,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In another case, the expression \u201ca decade\u201d was normalised with \u201cP10Y\u201d instead of the more correct \u201cP1E\u201d.",
+            "startOffset": 61515,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 36243,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "To the best of our knowledge, their system is the only piece of research that diverges from rule-based approaches, although the performance is noticeably lower.",
+            "startOffset": 36083,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 38400,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The identification phase concerns the detection of temporal expressions in the text and the effort is concentrated on predicting their correct boundary or span.",
+            "startOffset": 38240,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 48936,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Through repeated empirical experiments on a small sub-set of the training data, we found an optimal threshold value (0.87).",
+            "startOffset": 48813,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 30855,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Timexes elicit a natural binding between the language and the time domain, making it possible to represent such language expressions as a time point, interval or set.",
+            "startOffset": 30689,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49944,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "We performed an extensive evaluation of the possible label adjustment pipeline configurations, which has been carried out with 5\u00d710-fold cross validation (as described in Section 3.1.2).",
+            "startOffset": 49758,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 43424,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "For each token we use the number of senses associated to the word, the first two most common senses, the first four lemmas, the first four entailments for verbs, antonyms, hypernyms and hyponyms.",
+            "startOffset": 43229,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 32848,
+            "parents": [],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 32847,
+                    "startOffset": 32844
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the normalisation step, the aim is to interpret and represent the temporal meaning of each pre-identified expression often using the TimeML format [8].",
+            "startOffset": 32694,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56570,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The training of the system by using the gold data only combined with the use of the label adjustment pipeline proved to be the best overall result, although not leading to the highest normalisation accuracy.",
+            "startOffset": 56363,
+            "title": "Results"
+        },
+        {
+            "endOffset": 47706,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "The probabilities have been estimated using frequencies.",
+            "startOffset": 47650,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 34392,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We consider different training scenarios: silver data alone or in combination with gold data, using or not using the a posteriori label adjustment pipeline.",
+            "startOffset": 34236,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44528,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Model 2: Morpho-lexical + syntactic",
+            "startOffset": 44493,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 48454,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "However, some of these tokens might have been erroneously labelled as \u2018O\u2019 by the CRF labeller.",
+            "startOffset": 48360,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 61912,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This paper has presented a novel architecture for temporal information extraction (identification and normalisation) of texts from general domain with an extensive feature type selection.",
+            "startOffset": 61725,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 62065,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "We also described the results with respect to the TempEval-3 benchmark test set and the error analysis for both identification and normalisation phases.",
+            "startOffset": 61913,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 62824,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "This conclusion, although statistically significant, is necessarily limited by the fact that the features analysis strictly depends on the way previous work has used WordNet.",
+            "startOffset": 62650,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 58641,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The system correctly identified the majority of temporal expressions annotated in the test set, and incorrect annotations are mainly due to specific limitations of the system in addition to some issues in the gold standard data.",
+            "startOffset": 58413,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 46403,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The results for all the models are shown in Table 4.",
+            "startOffset": 46351,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 49226,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "For the BIO labelling scheme, the only possible source of inconsistency is the sequence O-I, as there should be a \u2018B\u2019 in between them.",
+            "startOffset": 49092,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 62495,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "The results indicate the key importance of morpho-lexical features to the detriment of syntactic features, as well as gazetteer and WordNet-related ones.",
+            "startOffset": 62342,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 31561,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Typical deictic temporal expressions include \u201ctoday\u201d, \u201cyesterday\u201d, \u201clast Sunday\u201d and \u201ctwo months ago\u201d.",
+            "startOffset": 31459,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43638,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "refoffsets": {
+                "bb0165": {
+                    "endOffset": 43637,
+                    "startOffset": 43630
+                },
+                "bb0170": {
+                    "endOffset": 43637,
+                    "startOffset": 43630
+                }
+            },
+            "secId": "s0110",
+            "sentence": "We note that this group of features constitutes an extension of those previously used in the field [33,34].",
+            "startOffset": 43531,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 44325,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "All the experiments have been carried out using CRF++7 with parameters C = 1, \u03b7 = 0.0001 and \u21132-regularization function.",
+            "startOffset": 44171,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 46159,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "By virtue of this analysis, we opted for the smallest feature set, Model 1, which has two positive consequences: to help mitigate overfitting due to the smaller feature space, and reducing the computational cost of the system.",
+            "startOffset": 45933,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 47965,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "For example, P(B|Monday) = 0.97, P(I|Monday) = 0.03 and P(O|the) = 0.95.",
+            "startOffset": 47893,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 54809,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The strict matching considers a predicted boundary correct only if it strictly matches the gold boundary, whereas the lenient matching considers a predicted boundary correct as long as it overlaps with the gold one.",
+            "startOffset": 54594,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 64808,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "Using the rules from the normaliser in order to enhance the accuracy of the identification phase: discarding identified expressions not recognised by the normaliser (false positives reduction) and adding expressions recognised by the normaliser but ignored by in the identification phase (increment of true positives).",
+            "startOffset": 64490,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 30479,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 30478,
+                    "startOffset": 30475
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A temporal expression, also called timex, refers to any natural language phrase denoting a temporal entity such as an interval or a time point [1].",
+            "startOffset": 30332,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35063,
+            "parents": [],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 35013,
+                    "startOffset": 35010
+                },
+                "bb0080": {
+                    "endOffset": 34890,
+                    "startOffset": 34886
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Poveda et al. [16] introduced a sophisticated semi-supervised approach which particularly helped to improve the recall, while Mani et al. [7] used rules learned by a decision tree classifier.",
+            "startOffset": 34872,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45342,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Table 3 shows the post-hoc ANOVA analysis and Fig. 3 shows the box-plot comparison of the models (F\u03b2 = 1 measure).",
+            "startOffset": 45228,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 51955,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "Such rules are matched before the TRIOS' ones.",
+            "startOffset": 51909,
+            "title": "Extension rules"
+        },
+        {
+            "endOffset": 60257,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "In three cases (2%) out of a total of 138 temporal expressions, the errors are due to questionable human annotations in the test set: \u201cdigital\u201d alone (in the expression \u201cdigital age\u201d), \u201ctenure\u201d and \u201csecond term\u201d.",
+            "startOffset": 60045,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 49470,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "/O\u201d.",
+            "startOffset": 49466,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 52349,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The post-manipulation rules are mainly used to validate the syntax of the predicted value attribute and to normalise frozen expressions transformed by the previous groups of rules.",
+            "startOffset": 52169,
+            "title": "Post-manipulation rules"
+        },
+        {
+            "endOffset": 31974,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Research in temporal expression extraction aims at investigating novel and effective approaches to extraction of temporal information from texts.",
+            "startOffset": 31829,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38203,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "For training and testing we mainly used the TempEval-3 datasets as explained in Section 4.1.",
+            "startOffset": 38111,
+            "title": "System architecture"
+        },
+        {
+            "endOffset": 50883,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The second one expresses the ISO-8601 representation of each expression.",
+            "startOffset": 50811,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 43471,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "Each of them is defined as a separate feature.",
+            "startOffset": 43425,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 52609,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "Overall, NorMA extends TRIOS with 40 new rules: 16 pre-processing rules, 20 extension rules, and 4 post-manipulation rules.",
+            "startOffset": 52486,
+            "title": "Post-manipulation rules"
+        },
+        {
+            "endOffset": 53981,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Every document has been annotated using the TimeML standard and released with its document creation time (DCT).",
+            "startOffset": 53870,
+            "title": "Data"
+        },
+        {
+            "endOffset": 59512,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "In few cases, the system excluded modifiers (e.g., \u201clate\u201d in \u201clate last July\u201d) or signals (e.g., \u201cevery\u201d in \u201cevery morning\u201d) at the beginning (or at the end) of the expressions, leading to false negatives.",
+            "startOffset": 59307,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 34235,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 34234,
+                    "startOffset": 34230
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Such resources are large automatically generated datasets, which have been created by merging the annotations provided by three state-of-the-art temporal extraction systems [10].",
+            "startOffset": 34057,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36702,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 36525,
+                    "startOffset": 36521
+                },
+                "bb0115": {
+                    "endOffset": 36701,
+                    "startOffset": 36697
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Saquete et al. [22], for example, produced a seminal work proposing a multi-lingual dictionary-based architecture for event ordering, which successively extended into a non-monolithic system [23].",
+            "startOffset": 36506,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43530,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "A total of 23 WordNet-based features have been engineered.",
+            "startOffset": 43472,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 45450,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The analysis is statistically significant (p = 0.0054 with ANOVA test) and provides two important outcomes:",
+            "startOffset": 45343,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 42655,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "Both are extracted using the shallow parsing software MBSP3 and represented in the BIO format.",
+            "startOffset": 42509,
+            "title": "Syntactic"
+        },
+        {
+            "endOffset": 57141,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Still, we note the best improvement with the human-annotated data.",
+            "startOffset": 57075,
+            "title": "Results"
+        },
+        {
+            "endOffset": 38028,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The general system architecture is depicted in Fig. 2.",
+            "startOffset": 37974,
+            "title": "System architecture"
+        },
+        {
+            "endOffset": 56273,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "All the settings showed high precision (strict ranging from 0.76 to 0.82, lenient ranging from 0.87 to 0.92) and reasonable coverage (strict ranging from 0.63 to 0.70, lenient ranging from 0.79 to 0.85) in the identification stage.",
+            "startOffset": 56042,
+            "title": "Results"
+        },
+        {
+            "endOffset": 33751,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We evaluated ManTIME on the latest TempEval-3 official benchmark data, achieving 0.95 precision, 0.85 recall and 0.90 F\u03b2=1 in the identification phase with normalisation accuracies of 0.86 (for type attribute) and 0.77 (for value attribute).",
+            "startOffset": 33510,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47827,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "The list of tokens taken into account has been restricted to those appearing within temporal expressions at least twice.",
+            "startOffset": 47707,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 51547,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "This set of rules has been introduced to turn recognised temporal expressions into a more suitable form for normalisation.",
+            "startOffset": 51425,
+            "title": "Pre-processing rules"
+        },
+        {
+            "endOffset": 37806,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "While a number of architectures, features and datasets are used for temporal expression extraction, we are not aware of any systematic studies on the types of features that are beneficial for temporal expression extraction, as the effect of different types of training data.",
+            "startOffset": 37532,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 34525,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The identification step in temporal expression extraction is usually tackled by using machine learning-based approaches.",
+            "startOffset": 34405,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50132,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "All the differences among the settings are statistically significant (measured with ANOVA test).",
+            "startOffset": 50036,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 31829,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Examples of this category are \u201cthat year\u201d, \u201cthe same week\u201d or \u201cthe previous month\u201d.",
+            "startOffset": 31746,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38970,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Although the silver data has the advantage of being far larger than the human-annotated data (666 K words vs. 95 K, see Table 6 in Section 4.1), our hypothesis is that manually-annotated corpora are more accurate (i.e. less noisy), and for this reason are still important in the training phase.",
+            "startOffset": 38676,
+            "title": "Temporal expression identification"
+        },
+        {
+            "endOffset": 41662,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "Further, boolean features are included, indicating if the word is lower-case, alphabetic, alphanumeric, titled, capitalized, an acronym (capitalized with dots), number, decimal number, stop-word or has an \u2018s\u2019 as last character.",
+            "startOffset": 41435,
+            "title": "Morpho-lexical"
+        },
+        {
+            "endOffset": 47649,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "For each token w in the gold data, we extracted the conditional probability P(L|w), where L = {` B ', ` I ', ` O '}.",
+            "startOffset": 47533,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 64926,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "refoffsets": {
+                "bb0200": {
+                    "endOffset": 64925,
+                    "startOffset": 64921
+                }
+            },
+            "secId": "s0090",
+            "sentence": "Our other future work will focus on the investigation of local semantics representation for temporal expressions [40].",
+            "startOffset": 64808,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 30689,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "the phrases \u201cyesterday\u201d and \u201cthree months ago\u201d are temporal expressions.",
+            "startOffset": 30617,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50428,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "The optimal pipeline configuration provides a 2.76% averaged statistically significant increment (with respect to the strict F\u03b2=1 scores of the CRF model) and is composed of:",
+            "startOffset": 50254,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 57463,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The probabilistic correction module negatively affects the performance (making less strict predictions) although its output is then corrected by the use of the BIO fixer module.",
+            "startOffset": 57286,
+            "title": "Results"
+        },
+        {
+            "endOffset": 58332,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The analysis of the predicted annotations against the gold ones allows us to pinpoint errors both in identification and normalisation phase.",
+            "startOffset": 58192,
+            "title": "Error analysis"
+        },
+        {
+            "endOffset": 62649,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "In particular, while syntactic and gazetteer-related features do not affect the performance, WordNet-related features appear not to have positive impact.",
+            "startOffset": 62496,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 45228,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The training set has been shuffled 5 times, and for each of these, the 10-fold cross validation technique has been applied.",
+            "startOffset": 45105,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 37305,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In the medical domain, the normalisation phase proved to be harder than in the general domain.",
+            "startOffset": 37211,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 37973,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 37927,
+                    "startOffset": 37924
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The approach proposed in this paper adopts the dichotomy between identification and normalisation [2], and therefore it consists of two components.",
+            "startOffset": 37826,
+            "title": "System architecture"
+        },
+        {
+            "endOffset": 62341,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We conducted an extensive evaluation of the feature space and training configurations, which, to the best of our knowledge, has never been done before in the context of temporal expression extraction.",
+            "startOffset": 62141,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 32973,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It provides a specification for representing temporal expressions, events and temporal relations (see an example in Fig. 1).",
+            "startOffset": 32849,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61333,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In eight cases (24%), the normaliser failed to correctly distinguish between dates and durations (e.g., \u201cthe 99th day\u201d was normalised as a duration of 99 days, instead of a precise day), whereas in five (15%) it failed to detect the right orientation in time (future or past), leading to the choice of a wrong year (e.g., \u201cearly August\u201d normalised as \u201c2013-08\u201d instead of \u201c2012-08\u201d).",
+            "startOffset": 60950,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 35511,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The second step in temporal expression extraction is the normalisation, which is typically accomplished using rule-based approaches.",
+            "startOffset": 35379,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57554,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The threshold-based label switcher introduces an equal number of false and true positives.",
+            "startOffset": 57464,
+            "title": "Results"
+        },
+        {
+            "endOffset": 42812,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "The matching of sub-expressions with gazetteer entries is also represented in the BIO format because gazetteers include multi-token entries.",
+            "startOffset": 42672,
+            "title": "Gazetteers"
+        },
+        {
+            "endOffset": 51400,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Our normalisation system, called NorMA (depicted in Fig. 5), is composed of three modules: pre-processing rules, extension rules and post-manipulation rules.",
+            "startOffset": 51243,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 61713,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In both cases the normaliser provided the right value, although these were considered errors.",
+            "startOffset": 61620,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 49415,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "For example, \u201cThree/O days/I ago/I .",
+            "startOffset": 49379,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 43806,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "In particular, we note that temporal signals (which typically indicate the presence of temporal expressions nearby in text, e.g. \u2018She slept for just [4 hours] timex.\u2019)",
+            "startOffset": 43639,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 31458,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the case of deictic expressions, inferring the binding with the time domain necessarily requires to take into account the time of utterance (when the document was written or when the speech was given, often referred to as document creation time (DCT)).",
+            "startOffset": 31203,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39572,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "From this perspective, it is naturally approached as a sequence labelling task, for which we decided to use the linear chain conditional random fields (LC-CRFs).",
+            "startOffset": 39411,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 43215,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "A total of seven gazetteer-based features have been engineered.",
+            "startOffset": 43152,
+            "title": "Gazetteers"
+        },
+        {
+            "endOffset": 49981,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "The results are presented in Fig. 4.",
+            "startOffset": 49945,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 50810,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The first one can be either \u2018DATE\u2019, \u2018TIME\u2019, \u2018DURATION\u2019 or \u2018SET\u2019.",
+            "startOffset": 50746,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 33509,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The normalisation phase is carried out by using a set of rules.",
+            "startOffset": 33446,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50035,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "The first configuration corresponds to the CRFs only.",
+            "startOffset": 49982,
+            "title": "BIO fixer"
+        },
+        {
+            "endOffset": 43151,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "We also used U.S. cities, nationalities and country names from the NLTK6 corpora.",
+            "startOffset": 43052,
+            "title": "Gazetteers"
+        },
+        {
+            "endOffset": 52804,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "refoffsets": {
+                "bb0195": {
+                    "endOffset": 52803,
+                    "startOffset": 52799
+                }
+            },
+            "secId": "s0135",
+            "sentence": "The system has already been proven to provide statistically better performance with respect to TRIOS and consequently state-of-the-art performance against the TempEval-2 benchmark test set [39].",
+            "startOffset": 52610,
+            "title": "Post-manipulation rules"
+        },
+        {
+            "endOffset": 53717,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 53626,
+                    "startOffset": 53622
+                },
+                "bb0075": {
+                    "endOffset": 53701,
+                    "startOffset": 53697
+                },
+                "bb0095": {
+                    "endOffset": 53716,
+                    "startOffset": 53712
+                }
+            },
+            "secId": "s0050",
+            "sentence": "In addition, for training we used the TempEval-3 silver corpus, which has been made by merging, through an ad-hoc algorithm [10], three state-of-the-art temporal extraction systems: TIPSem, TipSEM-B [15] and TRIOS [19].",
+            "startOffset": 53498,
+            "title": "Data"
+        },
+        {
+            "endOffset": 36366,
+            "parents": [],
+            "refoffsets": {
+                "bb0025": {
+                    "endOffset": 36365,
+                    "startOffset": 36362
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Recent TempEval-3 normalisation accuracies ranged from 0.68 to 0.86 (for value) and 0.86 to 0.94 (for type attribute) [5].",
+            "startOffset": 36244,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58387,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "We analysed the errors in the experimental setting #4.",
+            "startOffset": 58333,
+            "title": "Error analysis"
+        },
+        {
+            "endOffset": 33977,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We explore what categories of feature provide the best performance.",
+            "startOffset": 33910,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47132,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "We noticed that the CRF-based labeller tends to assign labels with high confidence even for ambiguous tokens.",
+            "startOffset": 47023,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 34605,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A variety of features has been used such as morphological and dictionary-based.",
+            "startOffset": 34526,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50983,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 50982,
+                    "startOffset": 50978
+                }
+            },
+            "secId": "s0045",
+            "sentence": "The proposed temporal expression normalisation approach is based on rules and it extends TRIOS [19].",
+            "startOffset": 50883,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 56754,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Somewhat surprisingly, the use of the silver data did not improve the performance, neither when used alone nor in addition to the gold data (regardless of the label adjustment usage).",
+            "startOffset": 56571,
+            "title": "Results"
+        },
+        {
+            "endOffset": 63458,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We have also investigated the contribution of different possible configurations.",
+            "startOffset": 63378,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 45104,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "All the data provided by TempEval-3 (see Table 6), except for the TempEval-3 official benchmark test set, have been merged, shuffled at sentence level (seed = 490) and split into two sets: 80% as a training set and 20% as a test set.",
+            "startOffset": 44871,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 60045,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "We also noticed cases of false negatives due to rare surrounding morphological contexts in the training data.",
+            "startOffset": 59936,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 63938,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "The experiments also proved its use to be promising for both precision and recall enhancement.",
+            "startOffset": 63844,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 53066,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "Also the findings of the error analysis are presented in order to investigate the system annotation errors.",
+            "startOffset": 52959,
+            "title": "Experiments and results"
+        },
+        {
+            "endOffset": 44171,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "All the features used in the experiments are presented in Tables 1 and 2 with details.",
+            "startOffset": 44085,
+            "title": "WordNet"
+        },
+        {
+            "endOffset": 63377,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We designed and built an automatic a posteriori label adjustment pipeline on top of the CRF module which we show to provide statistically significant positive impact on the results.",
+            "startOffset": 63196,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 34056,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We also investigate the role that silver training data have on the performance.",
+            "startOffset": 33977,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48210,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "An example is given in Table 5.",
+            "startOffset": 48179,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 57259,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "We also investigated the contribution of each component in the label adjustment pipeline with respect to the test set.",
+            "startOffset": 57141,
+            "title": "Results"
+        },
+        {
+            "endOffset": 42508,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "Chunks and prepositional noun phrases belong to this category.",
+            "startOffset": 42446,
+            "title": "Syntactic"
+        },
+        {
+            "endOffset": 65042,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "This representation provides a way to separate the temporal expressions' semantics from the contextual information.",
+            "startOffset": 64927,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 50670,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 50669,
+                    "startOffset": 50666
+                }
+            },
+            "secId": "s0045",
+            "sentence": "The normalisation phase aims to interpret and represent the temporal meaning of each pre-identified expression using the TimeML format [8].",
+            "startOffset": 50531,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 42370,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "Additionally, there are phonetic features and ones specifically crafted to handle temporal expressions in the form of regular expression matching: cardinal and ordinal numbers, times (e.g., \u201c10:54 am\u201d, \u201c1 o'clock\u201d, \u201c15:19\u201d), temporal periods (e.g., \u201cmorning\u201d, \u201cnoon\u201d, \u201cnightfall\u201d), day of the week, seasons, past references (e.g., \u201cago\u201d, \u201crecent\u201d, \u201cbefore\u201d), present references (e.g., \u201ccurrent\u201d, \u201cnow\u201d), future references (e.g., \u201ctomorrow\u201d, \u201clater\u201d, \u201cahead\u201d), temporal signals (e.g., \u201csince\u201d, \u201cduring\u201d), fuzzy quantifiers (e.g., \u201cabout\u201d, \u201cfew\u201d, \u201csome\u201d), modifiers (e.g., \u201capproximately\u201d, \u201cin the middle\u201d, \u201cat the end\u201d), temporal adverbs (e.g., \u201cdaily\u201d, \u201cearlier\u201d), adjectives, conjunctions and prepositions.",
+            "startOffset": 41663,
+            "title": "Morpho-lexical"
+        },
+        {
+            "endOffset": 45827,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "refoffsets": {
+                "bb0190": {
+                    "endOffset": 45826,
+                    "startOffset": 45822
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The set of WordNet-based features negatively affects the overall classification performance, as already noticed in the literature [38].",
+            "startOffset": 45692,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 36082,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 35948,
+                    "startOffset": 35944
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Angeli et al. [21] proposed a method to learn interpreting temporal representations through the use of a compositional grammar for temporal expressions.",
+            "startOffset": 35930,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48179,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "The two probabilities (from the gold data and the CRF) were then averaged for every label of each token.",
+            "startOffset": 48075,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 64289,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "The a posteriori label adjustment pipeline proved to be promising and it constitutes, de facto, a novel approach to temporal expression extraction.",
+            "startOffset": 64142,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 64489,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "Using the N most likely predicted sequences from the CRFs-based labeller in order to discriminate the most ambiguous/difficult tokens.",
+            "startOffset": 64355,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 46639,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The models used for the final evaluation of the TempEval-3 benchmark data have been trained using all the data, except for the ones in the benchmark data set.",
+            "startOffset": 46481,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 52881,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "In this section we present the experiments performed.",
+            "startOffset": 52828,
+            "title": "Experiments and results"
+        },
+        {
+            "endOffset": 51801,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "\u2192 \u2018every Friday morning\u2019).",
+            "startOffset": 51775,
+            "title": "Pre-processing rules"
+        },
+        {
+            "endOffset": 51774,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Normalisation"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "Some examples from this rule set are: determiners removal (e.g., \u201cthe day after\u201d \u2192 \u2018day after\u2019), misspelling correction (e.g., \u201cwendsday\u201d \u2192 \u2018Wednesday\u2019), and lower-case and trimming transformation (e.g., \u201cevery Friday mornin.\u201d",
+            "startOffset": 51548,
+            "title": "Pre-processing rules"
+        },
+        {
+            "endOffset": 54593,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "refoffsets": {
+                "bb0025": {
+                    "endOffset": 54592,
+                    "startOffset": 54589
+                }
+            },
+            "secId": "s0055",
+            "sentence": "Precision, Recall and F\u03b2 = 1 measures are computed according to two different definitions of matching: strict and lenient, following TempEval-3 [5].",
+            "startOffset": 54445,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 47892,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "This process allowed us to obtain the prior label probabilities.",
+            "startOffset": 47828,
+            "title": "Probabilistic correction module"
+        },
+        {
+            "endOffset": 44612,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Model 4: Morpho-lexical + gazetteers + WordNet",
+            "startOffset": 44566,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 48359,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Some tokens have a high a priori probability of being part of a temporal expression (e.g., \u201cMonday\u201d or \u201ctoday\u201d).",
+            "startOffset": 48247,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 59194,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "the full stop should have been removed, whereas \u201c2009\u20132010\u201d should have been split in three different tokens.",
+            "startOffset": 59085,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 60661,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The normalisation error analysis has been carried out on the correctly identified temporal expressions and it consists of checking whether the content of the value and type attributes are equal to the ones provided by the human annotators.",
+            "startOffset": 60422,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 35379,
+            "parents": [],
+            "refoffsets": {
+                "bb0025": {
+                    "endOffset": 35243,
+                    "startOffset": 35240
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Recently, the results from the last temporal information extraction challenge, TempEval-3 [5], show the identification performance ranges from 0.81 to 0.90 in terms of lenient F\u03b2=1 measure (from 0.70 to 0.83 for strict matching).",
+            "startOffset": 35150,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45690,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "There is no statistically significant difference among the first three models (see Table 3), despite the presence of apparently important and computationally expensive information such as chunks, prepositional noun phrases and gazetteers.",
+            "startOffset": 45452,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 48698,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0035",
+                    "title": "A posteriori label adjustment pipeline"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "This is triggered only when the prior probability of a certain label in the gold data is greater than a given threshold.",
+            "startOffset": 48578,
+            "title": "Threshold-based label switcher"
+        },
+        {
+            "endOffset": 33445,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this article we introduce ManTIME, a temporal expressions extraction system, where the identification uses machine learning on an extensive set of features and an a posteriori label adjustment pipeline, which further improves the performance.",
+            "startOffset": 33200,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58750,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Examples of false positives (incorrectly recognised expressions) due to the CRF model are \u201cof flu\u201d and \u201cand\u201d.",
+            "startOffset": 58641,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 56363,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This indicates the fact that the system has partially generalised from the training data.",
+            "startOffset": 56274,
+            "title": "Results"
+        },
+        {
+            "endOffset": 65274,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "To aid replicability of this work, the source code of the entire system, the machine learning pre-trained models, the statistical validation details and an online demo are available at: http://www.cs.man.ac.uk/~filannim/mantime.html",
+            "startOffset": 65042,
+            "title": "Future work"
+        },
+        {
+            "endOffset": 32151,
+            "parents": [],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 32010,
+                    "startOffset": 32005
+                },
+                "bb0020": {
+                    "endOffset": 32010,
+                    "startOffset": 32005
+                },
+                "bb0025": {
+                    "endOffset": 32010,
+                    "startOffset": 32005
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Several scientific challenges [3\u20135] have been organized over the years, providing human-annotated data as gold standard to evaluate performance of the state-of-the-art systems.",
+            "startOffset": 31975,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36505,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "There are also monolithic temporal expression extraction systems, in which there is no separation between identification and normalisation.",
+            "startOffset": 36366,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63843,
+            "parents": [
+                {
+                    "id": "s0080",
+                    "title": "Conclusions"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We provided an extensive statistical analysis on the a posteriori label adjustment pipeline which sheds light on the contribution of each pipeline component in isolation and in the context of others.",
+            "startOffset": 63644,
+            "title": "Summary of contributions"
+        },
+        {
+            "endOffset": 36945,
+            "parents": [],
+            "refoffsets": {
+                "bb0120": {
+                    "endOffset": 36731,
+                    "startOffset": 36727
+                },
+                "bb0125": {
+                    "endOffset": 36751,
+                    "startOffset": 36747
+                },
+                "bb0130": {
+                    "endOffset": 36858,
+                    "startOffset": 36854
+                }
+            },
+            "secId": "s0010",
+            "sentence": "More recently, NavyTime [24] and HeidelTime [25] proposed a set of hand-crafted rules combined with an ad-hoc rule selection algorithm, whereas SUTime [26] used a deterministic rule-based system built on top of the Stanford Core NLP pipeline.",
+            "startOffset": 36703,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 41290,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Feature engineering"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "This set includes the token, its lemma, stem, character pattern (e.g., \u201cJan-2003\u201d is represented as \u2018Ccc-dddd\u2019), collapsed pattern (e.g., \u201cJan-2003\u201d: \u2018Cc-d\u2019), first three characters, last three characters, upper first character, word without letters, word without letters or numbers, verb tense and word polarity.2",
+            "startOffset": 40976,
+            "title": "Morpho-lexical"
+        },
+        {
+            "endOffset": 44492,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Model 1: Morpho-lexical only",
+            "startOffset": 44464,
+            "title": "Model selection"
+        },
+        {
+            "endOffset": 59042,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "We noticed a significant amount of partial errors mainly due to errors in the tokenization phase.",
+            "startOffset": 58945,
+            "title": "Identification errors"
+        },
+        {
+            "endOffset": 61514,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Error analysis"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "We found only one (3%) possibly wrongly annotated temporal expression in the benchmark test set, i.e. for the expression \u201c20th Century\u201d, a value \u201c19\u201d was provided instead of \u201c19XX\u201d.",
+            "startOffset": 61333,
+            "title": "Normalisation errors"
+        },
+        {
+            "endOffset": 40890,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Temporal expression identification"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "ManTIME relies on 93 features, which have been collected as a result of a systematic review of the literature in temporal information extraction we conducted with the aim of explore feature contributions.",
+            "startOffset": 40686,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 51243,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "System architecture"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "TRIOS' input is the temporal expression and the utterance time (document creation time) and its rules have the form of dictionary-driven regular expressions in a switch architecture: the activation of one of them excludes the activation of the remaining ones.",
+            "startOffset": 50984,
+            "title": "Normalisation"
+        },
+        {
+            "endOffset": 56042,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "We point out that the setting #4 was submitted as an official submission for the TempEval-3 challenge (Task A identification and normalisation of temporal expressions) and has been ranked 5th out of 21 submitted runs, as the best performing machine learning-based system.",
+            "startOffset": 55771,
+            "title": "Results"
+        }
+    ],
+    "docId": "S0169023X15000725",
+    "metadata": {
+        "asjc": [
+            "1802"
+        ],
+        "authors": [
+            {
+                "email": "filannim@cs.man.ac.uk",
+                "first": "Michele",
+                "initial": "M.",
+                "last": "Filannino"
+            },
+            {
+                "email": null,
+                "first": "Goran",
+                "initial": "G.",
+                "last": "Nenadic"
+            }
+        ],
+        "doi": "10.1016/j.datak.2015.09.002",
+        "firstpage": "19",
+        "issn": "0169023X",
+        "keywords": [
+            "Data mining",
+            "Mining methods and algorithms",
+            "Text mining"
+        ],
+        "lastpage": "33",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "DECI"
+        ],
+        "title": "Temporal expression extraction with extensive feature type selection and a posteriori label adjustment"
+    }
+}

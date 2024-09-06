@@ -1,0 +1,4843 @@
+{
+    "abstract": "We describe our Multiscale Computing Patterns software for High Performance Multiscale Computing. Following a short review of Multiscale Computing Patterns, this paper introduces the Multiscale Computing Patterns Software, which consists of description, optimisation and execution components. First, the description component translates the task graph, representing a multiscale simulation, to a particular type of multiscale computing pattern. Second, the optimisation component selects and applies algorithms to find the most suitable mapping between submodels and available HPC resources. Third, the execution component which a middleware layer maps submodels to the number and type of physical resources based on the suggestions emanating from the optimisation part together with infrastructure-specific metrics such as queueing time and resource availability. The main purpose of the Multiscale Computing Patterns software is to leverage the Multiscale Computing Patterns to simplify and automate the execution of complex multiscale simulations on high performance computers, and to provide both application-specific and pattern-specific performance optimisation. We test the performance and the resource usage for three multiscale models, which are expressed in terms of two Multiscale Computing Patterns. In doing so, we demonstrate how the software automates resource selection and load balancing, and delivers performance benefits from both the end-user and the HPC system level perspectives.",
+    "author_highlights": [
+        {
+            "endOffset": 34873,
+            "sentence": "We introduce the idea of the Multiscale Computing Patterns (MCP).",
+            "startOffset": 34808
+        },
+        {
+            "endOffset": 34944,
+            "sentence": "We present the MCP software for High Performance Multiscale Computing.",
+            "startOffset": 34874
+        },
+        {
+            "endOffset": 35025,
+            "sentence": "To simplify and automate the execution of complex multiscale simulations on HPC.",
+            "startOffset": 34945
+        },
+        {
+            "endOffset": 35114,
+            "sentence": "Also to provide both application-specific and pattern-specific performance optimisation.",
+            "startOffset": 35026
+        },
+        {
+            "endOffset": 35201,
+            "sentence": "We test the performance and the resource usage for three multiscale models (two MCPs).",
+            "startOffset": 35115
+        },
+        {
+            "endOffset": 35282,
+            "sentence": "We demonstrate how the software automates resource selection and load balancing.",
+            "startOffset": 35202
+        }
+    ],
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "Alfons",
+                    "initial": "A.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Bastien",
+                    "initial": "B.",
+                    "last": "Chopard"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1098/rsta.2013.0377",
+            "issn": "1364503X",
+            "pub_year": 2014,
+            "title": "Multiscale modelling and simulation: A position paper",
+            "volume": "372"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Borgdorff"
+                },
+                {
+                    "first": "M. Ben",
+                    "initial": "M.B.",
+                    "last": "Belgacem"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Bona-Casas"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Fazendeiro"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Hoenen"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Mizeranschi"
+                },
+                {
+                    "first": "J. L.",
+                    "initial": "J.L.",
+                    "last": "Suter"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Coster"
+                },
+                {
+                    "first": "P. V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Dubitzky"
+                },
+                {
+                    "first": "A. G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Strand"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Chopard"
+                }
+            ],
+            "doi": "10.1098/rsta.2013.0407",
+            "issn": "1364503X",
+            "pmid": "24982258",
+            "pub_year": 2014,
+            "title": "Performance of distributed multiscale simulations",
+            "volume": "372"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "James L.",
+                    "initial": "J.L.",
+                    "last": "Suter"
+                },
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1002/adma.201403361",
+            "firstpage": "966",
+            "issn": "09359648",
+            "lastpage": "984",
+            "pub_year": 2015,
+            "title": "Chemically specifi C multiscale modeling of clay-polymer nanocomposites reveals intercalation dynamics, tactoid self-assembly and emergent materials properties",
+            "volume": "27"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Hill"
+                }
+            ],
+            "doi": "10.1038/nmat2247",
+            "firstpage": "680",
+            "issn": "14761122",
+            "lastpage": "682",
+            "pub_year": 2008,
+            "title": "Nuclear energy for the future",
+            "volume": "7"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Delgado-Buscalioni"
+                },
+                {
+                    "first": "P. V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "firstpage": "467041",
+            "issn": "1063651X",
+            "lastpage": "4670413",
+            "pub_year": 2003,
+            "title": "Continuum-particle hybrid coupling for mass, momentum, and energy transfers in unsteady fluid flow",
+            "volume": "67"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Simon F.",
+                    "initial": "S.F.",
+                    "last": "Portegies Zwart"
+                },
+                {
+                    "first": "Stephen L.W.",
+                    "initial": "S.L.W.",
+                    "last": "McMillan"
+                },
+                {
+                    "first": "Arjen",
+                    "initial": "A.",
+                    "last": "Van Elteren"
+                },
+                {
+                    "first": "F. Inti",
+                    "initial": "F.I.",
+                    "last": "Pelupessy"
+                },
+                {
+                    "first": "Nathan",
+                    "initial": "N.",
+                    "last": "De Vries"
+                }
+            ],
+            "doi": "10.1016/j.cpc.2012.09.024",
+            "firstpage": "456",
+            "issn": "00104655",
+            "lastpage": "468",
+            "pub_year": 2013,
+            "title": "Multi-physics simulations using a hierarchical interchangeable software interface",
+            "volume": "184"
+        },
+        "b15": null,
+        "b16": {
+            "authors": [
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Gaston"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Newman"
+                },
+                {
+                    "first": "Glen",
+                    "initial": "G.",
+                    "last": "Hansen"
+                },
+                {
+                    "first": "Damien",
+                    "initial": "D.",
+                    "last": "Lebrun-Grandi\u00e9"
+                }
+            ],
+            "doi": "10.1016/j.nucengdes.2009.05.021",
+            "firstpage": "1768",
+            "issn": "00295493",
+            "lastpage": "1778",
+            "pub_year": 2009,
+            "title": "MOOSE: A parallel computational framework for coupled systems of nonlinear equations",
+            "volume": "239"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Peter M.A.",
+                    "initial": "P.M.A.",
+                    "last": "Sloot"
+                },
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1093/bib/bbp038",
+            "firstpage": "142",
+            "issn": "14675463",
+            "lastpage": "152",
+            "pmid": "20028713",
+            "pub_year": 2010,
+            "title": "Multi-scale modelling in computational biomedicine",
+            "volume": "11"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Lorenz"
+                },
+                {
+                    "first": "Jean Luc",
+                    "initial": "J.L.",
+                    "last": "Falcone"
+                },
+                {
+                    "first": "Bastien",
+                    "initial": "B.",
+                    "last": "Chopard"
+                }
+            ],
+            "firstpage": "922",
+            "issn": "03029743",
+            "lastpage": "930",
+            "pub_year": 2007,
+            "title": "Towards a complex automata framework for multi-scale modeling: Formalism and the scale separation map",
+            "volume": "4487"
+        },
+        "b19": {
+            "authors": [
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Alfonso",
+                    "initial": "A.",
+                    "last": "Caiazzo"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Lorenz"
+                },
+                {
+                    "first": "Jean Luc",
+                    "initial": "J.L.",
+                    "last": "Falcone"
+                },
+                {
+                    "first": "Bastien",
+                    "initial": "B.",
+                    "last": "Chopard"
+                }
+            ],
+            "doi": "10.1007/978-3-642-12203-3-3",
+            "firstpage": "29",
+            "issn": "18600832",
+            "lastpage": "57",
+            "pub_year": 2010,
+            "title": "Complex automata: Multi-scale modeling with coupled cellular automata",
+            "volume": "2010"
+        },
+        "b2": {
+            "authors": [
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Lorenz"
+                },
+                {
+                    "first": "Jean Luc",
+                    "initial": "J.L.",
+                    "last": "Falcone"
+                },
+                {
+                    "first": "Bastien",
+                    "initial": "B.",
+                    "last": "Chopard"
+                }
+            ],
+            "doi": "10.1615/IntJMultCompEng.v5.i6.60",
+            "firstpage": "491",
+            "issn": "15431649",
+            "lastpage": "502",
+            "pub_year": 2007,
+            "title": "Toward a complex automata formalism for MultiScale modeling",
+            "volume": "5"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Borgdorff"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mamonski"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Bosak"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ben Belgacem"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Chopard"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "P. V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                },
+                {
+                    "first": "A. G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1016/j.jocs.2014.04.004",
+            "firstpage": "719",
+            "issn": "18777503",
+            "lastpage": "731",
+            "pub_year": 2014,
+            "title": "Distributed multiscale computing with MUSCLE 2, the Multiscale Coupling Library and Environment",
+            "volume": "5"
+        },
+        "b21": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Piontek"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Bosak"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ci\u017cnicki"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Grabowski"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Kopta"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Kulczewski"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Szejnfeld"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                }
+            ],
+            "doi": "10.1007/s10723-016-9384-9",
+            "firstpage": "559",
+            "issn": "15707873",
+            "lastpage": "573",
+            "pub_year": 2016,
+            "title": "Development of Science Gateways Using QCG \u2014 Lessons Learned from the Deployment on Large Scale Distributed and HPC Infrastructures",
+            "volume": "14"
+        },
+        "b22": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Knap"
+                },
+                {
+                    "first": "C. E.",
+                    "initial": "C.E.",
+                    "last": "Spear"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Borodin"
+                },
+                {
+                    "first": "K. W.",
+                    "initial": "K.W.",
+                    "last": "Leiter"
+                }
+            ],
+            "doi": "10.1088/0957-4484/26/43/434004",
+            "issn": "09574484",
+            "pub_year": 2015,
+            "title": "Advancing a distributed multi-scale computing framework for large-scale high-throughput discovery in materials science",
+            "volume": "26"
+        },
+        "b23": {
+            "authors": [
+                {
+                    "first": "Saad",
+                    "initial": "S.",
+                    "last": "Alowayyed"
+                },
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                },
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1016/j.jocs.2017.07.004",
+            "firstpage": "15",
+            "issn": "18777503",
+            "lastpage": "25",
+            "pub_year": 2017,
+            "title": "Multiscale computing in the exascale era",
+            "volume": "22"
+        },
+        "b24": {
+            "authors": [
+                {
+                    "first": "Bartosz",
+                    "initial": "B.",
+                    "last": "Bosak"
+                },
+                {
+                    "first": "Piotr",
+                    "initial": "P.",
+                    "last": "Kopta"
+                },
+                {
+                    "first": "Krzysztof",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "Tomasz",
+                    "initial": "T.",
+                    "last": "Piontek"
+                },
+                {
+                    "first": "Mariusz",
+                    "initial": "M.",
+                    "last": "Mam\u00f3nski"
+                }
+            ],
+            "firstpage": "34",
+            "issn": "03029743",
+            "lastpage": "53",
+            "pub_year": 2014,
+            "title": "New qoscosgrid middleware capabilities and its integration with european e-infrastructure",
+            "volume": "8500"
+        },
+        "b25": {
+            "authors": [
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "Agastya P.",
+                    "initial": "A.P.",
+                    "last": "Bhati"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Suter"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Hetherington"
+                },
+                {
+                    "first": "Stefan J.",
+                    "initial": "S.J.",
+                    "last": "Zasada"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1016/j.cpc.2016.05.020",
+            "firstpage": "375",
+            "issn": "00104655",
+            "lastpage": "385",
+            "pub_year": 2016,
+            "title": "FabSim: Facilitating computational research through automation on large-scale and distributed e-infrastructures",
+            "volume": "207"
+        },
+        "b26": null,
+        "b27": null,
+        "b28": {
+            "authors": [
+                {
+                    "first": "Krzysztof",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "Jarek",
+                    "initial": "J.",
+                    "last": "Nabrzyski"
+                },
+                {
+                    "first": "Ariel",
+                    "initial": "A.",
+                    "last": "Oleksiak"
+                },
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "W\u0119glarz"
+                }
+            ],
+            "doi": "10.1007/s10951-008-0058-8",
+            "firstpage": "371",
+            "issn": "10946136",
+            "lastpage": "379",
+            "pub_year": 2008,
+            "title": "A multicriteria approach to two-level hierarchy scheduling in grids",
+            "volume": "11"
+        },
+        "b29": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Oleksiak"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Pia\u0327tek"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Piontek"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Przybyszewski"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "W\u0229glarz"
+                }
+            ],
+            "doi": "10.1016/j.simpat.2013.08.007",
+            "firstpage": "135",
+            "issn": "1569190X",
+            "lastpage": "151",
+            "pub_year": 2013,
+            "title": "DCworms - A tool for simulation of energy efficiency in distributed computing infrastructures",
+            "volume": "39"
+        },
+        "b3": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Chopard"
+                },
+                {
+                    "first": "Joris",
+                    "initial": "J.",
+                    "last": "Borgdorff"
+                },
+                {
+                    "first": "A. G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1098/rsta.2013.0378",
+            "issn": "1364503X",
+            "pub_year": 2014,
+            "title": "A framework for multi-scale modelling",
+            "volume": "372"
+        },
+        "b30": null,
+        "b31": {
+            "authors": [
+                {
+                    "first": "Bartosz",
+                    "initial": "B.",
+                    "last": "Bosak"
+                },
+                {
+                    "first": "Jacek",
+                    "initial": "J.",
+                    "last": "Komasa"
+                },
+                {
+                    "first": "Piotr",
+                    "initial": "P.",
+                    "last": "Kopta"
+                },
+                {
+                    "first": "Krzysztof",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "Mariusz",
+                    "initial": "M.",
+                    "last": "Mamo\u0144ski"
+                },
+                {
+                    "first": "Tomasz",
+                    "initial": "T.",
+                    "last": "Piontek"
+                }
+            ],
+            "doi": "10.1007/978-3-642-28267-6_4",
+            "firstpage": "40",
+            "issn": "03029743",
+            "lastpage": "55",
+            "pub_year": 2012,
+            "title": "New capabilities in QosCosGrid middleware for advanced Job management, advance reservation and co-allocation of computing resources - Quantum chemistry application use case",
+            "volume": "7136"
+        },
+        "b32": null,
+        "b33": null,
+        "b34": {
+            "authors": [
+                {
+                    "first": "G. L.",
+                    "initial": "G.L.",
+                    "last": "Falchetto"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Coster"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Coelho"
+                },
+                {
+                    "first": "B. D.",
+                    "initial": "B.D.",
+                    "last": "Scott"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Figini"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Kalupin"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Nardon"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Nowak"
+                },
+                {
+                    "first": "L. L.",
+                    "initial": "L.L.",
+                    "last": "Alves"
+                },
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "Artaud"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Basiuk"
+                },
+                {
+                    "first": "Jo\u00e3o P.S.",
+                    "initial": "J.P.S.",
+                    "last": "Bizarro"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Boulbe"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Dinklage"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Farina"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Faugeras"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Ferreira"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Figueiredo"
+                },
+                {
+                    "first": "Ph",
+                    "initial": "P.",
+                    "last": "Huynh"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Imbeaux"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Ivanova-Stanik"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Jonsson"
+                },
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Klingshirn"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Konz"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Kus"
+                },
+                {
+                    "first": "N. B.",
+                    "initial": "N.B.",
+                    "last": "Marushchenko"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Owsiak"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Poli"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Peysson"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Reimer"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Signoret"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Sauter"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Stankiewicz"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Strand"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Voitsekhovitch"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Westerhof"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Zok"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Zwingmann"
+                }
+            ],
+            "doi": "10.1088/0029-5515/54/9/099501",
+            "issn": "00295515",
+            "pub_year": 2014,
+            "title": "Erratum: The European Integrated Tokamak Modelling (ITM) effort: Achievements and first physics results (Nuclear Fusion (2014) 54 (043018))",
+            "volume": "54"
+        },
+        "b35": null,
+        "b36": null,
+        "b37": {
+            "authors": [
+                {
+                    "first": "G\u00e1bor",
+                    "initial": "G.",
+                    "last": "Z\u00e1vodszky"
+                },
+                {
+                    "first": "Britt",
+                    "initial": "B.",
+                    "last": "van Rooij"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Azizi"
+                },
+                {
+                    "first": "Alfons",
+                    "initial": "A.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.3389/fphys.2017.00563",
+            "issn": "1664042X",
+            "pub_year": 2017,
+            "title": "Cellular level in-silico modeling of blood rheology with an improved material model for red blood cells",
+            "volume": "8"
+        },
+        "b38": null,
+        "b39": {
+            "authors": [
+                {
+                    "first": "G\u00e1bor",
+                    "initial": "G.",
+                    "last": "Zavodszky"
+                },
+                {
+                    "first": "Britt",
+                    "initial": "B.",
+                    "last": "Van Rooij"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Azizi"
+                },
+                {
+                    "first": "Saad",
+                    "initial": "S.",
+                    "last": "Alowayyed"
+                },
+                {
+                    "first": "Alfons",
+                    "initial": "A.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1016/j.procs.2017.05.084",
+            "firstpage": "159",
+            "issn": "18770509",
+            "lastpage": "165",
+            "pub_year": 2017,
+            "title": "Hemocell: A high-performance microscopic cellular library",
+            "volume": "108"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "Joris",
+                    "initial": "J.",
+                    "last": "Borgdorff"
+                },
+                {
+                    "first": "Jean Luc",
+                    "initial": "J.L.",
+                    "last": "Falcone"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Lorenz"
+                },
+                {
+                    "first": "Carles",
+                    "initial": "C.",
+                    "last": "Bona-Casas"
+                },
+                {
+                    "first": "Bastien",
+                    "initial": "B.",
+                    "last": "Chopard"
+                },
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1016/j.jpdc.2012.12.011",
+            "firstpage": "465",
+            "issn": "07437315",
+            "lastpage": "483",
+            "pub_year": 2013,
+            "title": "Foundations of distributed multiscale computing: Formalization, specification, and analysis",
+            "volume": "73"
+        },
+        "b40": null,
+        "b41": {
+            "authors": [
+                {
+                    "first": "Agastya P.",
+                    "initial": "A.P.",
+                    "last": "Bhati"
+                },
+                {
+                    "first": "Shunzhou",
+                    "initial": "S.",
+                    "last": "Wan"
+                },
+                {
+                    "first": "David W.",
+                    "initial": "D.W.",
+                    "last": "Wright"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1021/acs.jctc.6b00979",
+            "firstpage": "210",
+            "issn": "15499618",
+            "lastpage": "222",
+            "pmid": "27997169",
+            "pub_year": 2017,
+            "title": "Rapid, accurate, precise, and reliable relative free energy prediction using ensemble based thermodynamic integration",
+            "volume": "13"
+        },
+        "b42": {
+            "authors": [
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Peter M.A.",
+                    "initial": "P.M.A.",
+                    "last": "Sloot"
+                }
+            ],
+            "firstpage": "245",
+            "issn": "03029743",
+            "lastpage": "254",
+            "pub_year": 2005,
+            "title": "Introducing Grid Speedup \u0393: A scalability metric for parallel applications on the grid",
+            "volume": "3470"
+        },
+        "b5": {
+            "authors": [
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "Stefan J.",
+                    "initial": "S.J.",
+                    "last": "Zasada"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1109/MCSE.2013.47",
+            "firstpage": "34",
+            "issn": "15219615",
+            "lastpage": "43",
+            "pub_year": 2014,
+            "title": "Survey of multiscale and multiphysics applications and communities",
+            "volume": "16"
+        },
+        "b6": {
+            "authors": [
+                {
+                    "first": "Hannan",
+                    "initial": "H.",
+                    "last": "Tahir"
+                },
+                {
+                    "first": "Carles",
+                    "initial": "C.",
+                    "last": "Bona-Casas"
+                },
+                {
+                    "first": "Andrew James",
+                    "initial": "A.J.",
+                    "last": "Narracott"
+                },
+                {
+                    "first": "Javaid",
+                    "initial": "J.",
+                    "last": "Iqbal"
+                },
+                {
+                    "first": "Julian",
+                    "initial": "J.",
+                    "last": "Gunn"
+                },
+                {
+                    "first": "Patricia",
+                    "initial": "P.",
+                    "last": "Lawford"
+                },
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                }
+            ],
+            "doi": "10.1098/rsif.2014.0022",
+            "issn": "17425689",
+            "pmid": "24621816",
+            "pub_year": 2014,
+            "title": "Endothelial repair process and its relevance to longitudinal neointimal tissue patterns: Comparing histology with in silico modelling",
+            "volume": "11"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Groen"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Borgdorff"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Bona-Casas"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Hetherington"
+                },
+                {
+                    "first": "R. W.",
+                    "initial": "R.W.",
+                    "last": "Nash"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Zasada"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Saverchenko"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mamonski"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Kurowski"
+                },
+                {
+                    "first": "M. O.",
+                    "initial": "M.O.",
+                    "last": "Bernabeu"
+                },
+                {
+                    "first": "A. G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "P. V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "doi": "10.1098/rsfs.2012.0087",
+            "issn": "20428898",
+            "pub_year": 2013,
+            "title": "Flexible composition and execution of high performance, high fidelity multiscale biomedical simulations",
+            "volume": "3"
+        },
+        "b8": {
+            "authors": [
+                {
+                    "first": "Alfons G.",
+                    "initial": "A.G.",
+                    "last": "Hoekstra"
+                },
+                {
+                    "first": "Saad",
+                    "initial": "S.",
+                    "last": "Alowayyed"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Lorenz"
+                },
+                {
+                    "first": "Natalia",
+                    "initial": "N.",
+                    "last": "Melnikova"
+                },
+                {
+                    "first": "Lampros",
+                    "initial": "L.",
+                    "last": "Mountrakis"
+                },
+                {
+                    "first": "Britt",
+                    "initial": "B.",
+                    "last": "Van Rooij"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Svitenkov"
+                },
+                {
+                    "first": "Gabor",
+                    "initial": "G.",
+                    "last": "Zavodszky"
+                },
+                {
+                    "first": "Pavel",
+                    "initial": "P.",
+                    "last": "Zun"
+                }
+            ],
+            "doi": "10.1098/rsta.2016.0146",
+            "issn": "1364503X",
+            "pmid": "27698036",
+            "pub_year": 2016,
+            "title": "Towards the virtual artery: A multiscale model for vascular physiology at the physics-chemistry-biology interface",
+            "volume": "374"
+        },
+        "b9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 75793,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Then, FabSim compatible YaML file (shown in Appendix G) are used to assist the completion of matrix.xml and multiscale.xml.",
+            "startOffset": 75670,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 50133,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "One file, matrix.xml, is shown in Listing 1 in Appendix A and contains templated information from the submodel definitions.",
+            "startOffset": 50010,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 50757,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "A single node type represents a set of nearly identical nodes in terms of hardware configuration (e.g. processor type).",
+            "startOffset": 50638,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 44580,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The Heterogeneous Multiscale Computing (HMC) pattern(Fig. 1(c)) represents the typical form of macro-micro coupling, where the numerical solver at the macro-scale level requires input from multiple micro scale model instantiations (for instance to compute a spatially varying quantity, such as for example a constitutive equation, say a viscosity in a flow problem).",
+            "startOffset": 44214,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 78469,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The remainder of the replicas are run on Eagle (again in \u201cbatches\u201d of up to 12 jobs).",
+            "startOffset": 78384,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 81787,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For blood flow, our approach enabled the use of double the resources otherwise accessible.",
+            "startOffset": 81697,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 66828,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "An example of benchmark data on scaling of the primary submodel for two types of nodes is shown in Fig. 3.",
+            "startOffset": 66722,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 42531,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The structure of our paper is as follows.",
+            "startOffset": 42490,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56207,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "QCG delivers a set of ready to use components that can be installed and managed at each site, irrespective of the internal policies or local queueing systems.",
+            "startOffset": 56049,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 57598,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In doing so it takes into account the current and historical load on e-infrastructure resources, including both the occupancy of the actual resources and the queue lengths.",
+            "startOffset": 57426,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 67519,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Currently, the Pattern-Driven Planner proposes three optimal plans that minimise the cost, and an example of such plans is shown in Appendix F. Currently, these plans are drafted based on the measurements of runs performed manually by the application designer.",
+            "startOffset": 67259,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 50879,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The node types should be defined based on knowledge gathered a priori by the middleware from the infrastructure provider.",
+            "startOffset": 50758,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 60742,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b31": {
+                    "endOffset": 60578,
+                    "startOffset": 60574
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "We incorporated a modified version of existing workflow mechanisms [31], eliminating the need to transfer data between subsequent tasks executed on the same resource, and simplifying the execution of workflows in parameter sweep tasks.",
+            "startOffset": 60507,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 64173,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b34": {
+                    "endOffset": 64172,
+                    "startOffset": 64168
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "Our targeted fusion application simulates the time evolution of a plasma\u2019s 1D profiles (for instance electron temperature) in the tokamak core with a transport code, while under the influence of anomalous transport coefficients computed by a 3D turbulence code and periodic 2D equilibrium reconstruction [34].",
+            "startOffset": 63864,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 75894,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "BAC currently does not use a coupling library (such as MUSCLE), so no additional files are required.",
+            "startOffset": 75794,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 81994,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Lastly, for binding affinity calculations, our approach serves to abstract away the choice as to whether the replicas should all run on one and the same computer or be distributed across multiple computers.",
+            "startOffset": 81788,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 36158,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It is self-evident that any high-fidelity multiscale model must employ substantial high performance computing resources, since the individual single scale models comprising it themselves have to run on such machines.",
+            "startOffset": 35942,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47423,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Based on these results, a constrained optimisation is performed resulting in a small set of the most suitable execution scenarios which are passed to the execution component.",
+            "startOffset": 47249,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 48240,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 48167,
+                    "startOffset": 48163
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The task graph is expressed in the form of a highly adaptable textual description (xMML, see [20]) which is used to detect motifs (repetitive submodels and dependencies).",
+            "startOffset": 48070,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 74948,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b25": {
+                    "endOffset": 74703,
+                    "startOffset": 74699
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "BAC previously used the FabSim [25] tool extensively to perform simulation runs and, therefore, we have added an option to the Translation service to allow the matrix.xml and multiscale.xml files to be completed (as much as possible) through reading of FabSim configuration files.",
+            "startOffset": 74668,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 79023,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "It is clear there is a limitation to this model; it will only be realistic if the time spent in the queue is very short.",
+            "startOffset": 78903,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 55878,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Second, once an optimal plan has been selected, this component needs to ensure the efficient and reliable execution of the application within the distributed heterogeneous infrastructure.",
+            "startOffset": 55691,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 80992,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We demonstrated its usage and added-value for three different types of multiscale applications: fusion and cell based blood flow simulation, both as examples of Extreme Scaling, and binding affinity calculation as an example for Replica Computing.",
+            "startOffset": 80745,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 70183,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "These goals require an extensive amount of computing resources, as well as intelligent and highly optimised coupling approaches.",
+            "startOffset": 70055,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 82282,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The Multiscale Computing Patterns software maintains a separation of concerns in three areas.",
+            "startOffset": 82189,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 72982,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The procedure for replica computing is similar to that for Extreme Scaling (Section 4.1).",
+            "startOffset": 72893,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 46441,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The Multiscale Computing Patterns software consists of three parts: (1) the Description Part, where the user describes the multiscale application, (2) the Optimisation Part, where the software predicts and optimises the application performance, (3) and the Execution Part, where the application is deployed using an underlying resource allocation service (in our case the QCG middleware).",
+            "startOffset": 46053,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 68555,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "For fusion, the time of the primary model spent in waiting for the auxiliaries is not that large, as shown in Table 3, so no additional actions are required, and, therefore, the resource usage is high.",
+            "startOffset": 68354,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 60506,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Specifically, to allow efficient execution of the Replica Computing Pattern applications, we have incorporated two additional QCG mechanisms: workflows and job arrays.",
+            "startOffset": 60339,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 63863,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Therefore, having a robust multiscale computing scheme to study this interaction has become a vital goal in the fusion community.",
+            "startOffset": 63734,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 57425,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The QCG Pattern-aware Scheduler (which is part of QCG Broker) calculates which of the plans provided by the Pattern Driven Planner is optimal with respect to the objectives of all involved stakeholders.",
+            "startOffset": 57223,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 44005,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This can be done using load balancing while ensuring minimal communication between primary and auxiliaries.",
+            "startOffset": 43898,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 45740,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "All replicas execute independently of each other.",
+            "startOffset": 45691,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 42310,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Three examples of using Multiscale Computing Patterns software are illustrated and examples of cost functions are worked out, showing that a wide range of variables for Multi-Objective Optimisation algorithms can be chosen.",
+            "startOffset": 42087,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42843,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finally, we provide a discussion and conclusion in Section 5.",
+            "startOffset": 42782,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70445,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "With further improvements, we envision that these patterns can efficiently handle future exascale calculations involving ITER and gyrokinetic simulations.",
+            "startOffset": 70291,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 81508,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In the current implementation, each of the demonstrated applications highlights specific strengths of our software approach.",
+            "startOffset": 81384,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 54445,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The importance of the alternatives here is to give the Execution component the freedom to choose from a set of resources with comparable performance per submodel depending on the availability of these resources as well as on the variation in queue times.",
+            "startOffset": 54191,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 79535,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The output file description to the execution component is unified among all computing patterns as described in Section 3.3.",
+            "startOffset": 79412,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 66900,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Multiscale.xml contains information related to the coupled application.",
+            "startOffset": 66829,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 77081,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the simplest cost-function, where we consider only time to solution, all replicas would be run concurrently on the node with the shortest running time per replica.",
+            "startOffset": 76915,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 45049,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The HMC manager has some control over the number of micro-scale models, by preventing redundant calculations (by storing results of previous microscale simulations in a HMC database and where possible extracting results from the database, e.g. by interpolations between results obtained earlier), and spawning extra micro-scale models, when necessary.",
+            "startOffset": 44698,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 54074,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Based on performance results from the Performance Estimator, the Pattern-Driven Planner groups types of nodes into classes depending on the similarity of performance figures, type of computing pattern and cost criteria (e.g efficiency, makespan time, energy usage, resource usage, \u2026) computed as cost function.",
+            "startOffset": 53764,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 79864,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "By running 8 replicas on SuperMUC and the rest on Eagle we reach the least time-to-completion.",
+            "startOffset": 79770,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 44214,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The serial auxiliary model can give rise to strong underutilisation of available resources (e.g. if it does not scale to a large number of cores), and special mechanisms to handle such situation are required.",
+            "startOffset": 44006,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 38572,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Although their framework has, to our knowledge, not yet been applied outside the domain of materials science for which it was originally created, the authors do propose a general conceptual framework that could be adopted for use in other disciplines.",
+            "startOffset": 38321,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67769,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Finally, the job script from the Pattern-Driven Planner is submitted to the QCG.",
+            "startOffset": 67689,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 75566,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Additional information specific to for the Translation service (and not required by FabSim) can also be added to this file, including restrictions on the submodel (GPU/CPU compatibility, max/min number of cores, etc.).",
+            "startOffset": 75348,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 58018,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Here, the time to completion is calculated by adding the predicted queueing time (predicted by Queue Time Prediction Service to QCG) and execution time (provided by the optimisation component).",
+            "startOffset": 57825,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 82465,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This is the part that is most \u2018visible\u2019 to the application users and developers.",
+            "startOffset": 82385,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 72843,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1860",
+            "sentence": "We are currently realising such more advanced features of the MCP software.",
+            "startOffset": 72768,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 58796,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The QCG Pattern-aware Scheduler relies on a plugin-like architecture to gather all required information (see dashed boxes in the Execution component of Fig. 2).",
+            "startOffset": 58636,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 73938,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The underlying computational method is based on classical molecular dynamics (MD).",
+            "startOffset": 73856,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 81696,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For the fusion application, the software abstracts the complication of HPC and chooses the most appropriate number of cores to obtain the required cost criteria (i.e. time to completion).",
+            "startOffset": 81509,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 35754,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 35753,
+                    "startOffset": 35748
+                },
+                "b3": {
+                    "endOffset": 35753,
+                    "startOffset": 35748
+                },
+                "b4": {
+                    "endOffset": 35753,
+                    "startOffset": 35748
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In this approach, a multiscale model is constructed by combining, or coupling, a collection of single-scale submodels, each of which captures processes on a distinct space and time scale; see e.g. [2\u20134].",
+            "startOffset": 35551,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50372,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The main software tool within the Optimisation component is the Pattern-Driven Planner.",
+            "startOffset": 50285,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 73855,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Rapid and accurate calculation of binding free energies is of major concern in drug discovery and personalised medicine.",
+            "startOffset": 73735,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 35941,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 35940,
+                    "startOffset": 35933
+                },
+                "b11": {
+                    "endOffset": 35903,
+                    "startOffset": 35896
+                },
+                "b12": {
+                    "endOffset": 35916,
+                    "startOffset": 35912
+                },
+                "b13": {
+                    "endOffset": 35940,
+                    "startOffset": 35933
+                },
+                "b5": {
+                    "endOffset": 35835,
+                    "startOffset": 35832
+                },
+                "b6": {
+                    "endOffset": 35862,
+                    "startOffset": 35857
+                },
+                "b7": {
+                    "endOffset": 35862,
+                    "startOffset": 35857
+                },
+                "b8": {
+                    "endOffset": 35862,
+                    "startOffset": 35857
+                },
+                "b9": {
+                    "endOffset": 35877,
+                    "startOffset": 35871
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Multiscale modelling is widely used in most areas of science and engineering [5], such as biomedicine [6\u20138], fusion [9,10], material science [10,11], energy [12] and engineering [10,13].",
+            "startOffset": 35755,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50469,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This tool requires input from both the Translation service as well as the Node Description List.",
+            "startOffset": 50373,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 67689,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The next stage will be to enhance the Performance Estimator such that it can benchmark on-the-fly and interpolate on settings for which no performance data is available.",
+            "startOffset": 67520,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 37851,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Fourth, we deploy and execute the multiscale application on a set of computational resources.",
+            "startOffset": 37758,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48657,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "This includes information on submodel-specific dependencies, and the resource requirements for each submodel (e.g., mandatory use of GPU-architectures, or a minimal memory requirement per core).",
+            "startOffset": 48463,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 52220,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Single Scale Performance Model captures the scalability of submodels with respect to problem sizes and number of processors.",
+            "startOffset": 52092,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 73434,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The Translation service detects the presence of this tag, identifies that the RC pattern is required and that the associated cost function in the Multiscale Computing Patterns software should be invoked.",
+            "startOffset": 73231,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 55094,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Here, the output file holds information about the kernels and corresponding helpers, the classes of node types and a set of allocation plan.",
+            "startOffset": 54954,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 57824,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The Pattern-aware Scheduler can perform this optimisation with respect to required cost criteria, either a single time to completion criterion or a combination of two criteria, total energy expenditure and time to completion.",
+            "startOffset": 57599,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 73085,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The starting point for all RC pattern applications is the task graph, via an xMML textual description.",
+            "startOffset": 72983,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 42086,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Moreover, the execution component deploys and executes the application, with all of its submodels on the target resources.",
+            "startOffset": 41964,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51013,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The second layer contains the Pattern-Driven Planner and the Performance Estimator components.",
+            "startOffset": 50919,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 67853,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "QCG selects one of three plans and starts the simulation on the system(s) involved.",
+            "startOffset": 67770,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 43156,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Fig. 1 shows the generic task graphs for all three computing patterns.",
+            "startOffset": 43086,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 49751,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "We present an example of the reuse of FabSim information within this context as part of the Binding Affinity application described in Section 4.2.",
+            "startOffset": 49605,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 57223,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In addition, the Pattern Driven Planner provides plans that are likely to be optimal from a user perspective, but have not yet incorporated the constraints imposed by the presence of other workloads in the e-infrastructure environment.",
+            "startOffset": 56988,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 46551,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "We present the components of the Multiscale Computing Patterns software, and their interrelations, in Fig. 2.",
+            "startOffset": 46442,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 47049,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The MMSF xMML description file was extended for Replica Computing to accommodate the notation of the number of replicas.",
+            "startOffset": 46929,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 49487,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "This component is designed such that existing known machine configurations from FabSim (machines.yml) can be directly reused in the context.",
+            "startOffset": 49347,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 64755,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The turbulence code is the primary submodel in this application because it requires the vast majority of the computational power compared to the other submodels.",
+            "startOffset": 64594,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 78902,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This assumes that all replicas take the same time (the shortest time-to-completion from our benchmarking), that all the replicas are independent (no communication) and that each \u201cbatch\u201d runs directly after the other.",
+            "startOffset": 78686,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 79685,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Fig. 7 shows timings of test BAC runs.",
+            "startOffset": 79647,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 52400,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Performance Estimator, in turn, relies among others on the Single Scale Performance Model to obtain, interpolate and/or calculate performance results for the multiscale model.",
+            "startOffset": 52221,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 83284,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The developer can choose the optimisation criteria required.",
+            "startOffset": 83224,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 58938,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "For example, the scheduler uses the Queue time metrics plug-in to get precise knowledge about the expected queue time on available resources.",
+            "startOffset": 58797,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 41282,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The MCP software architecture consists of a description component, an optimisation component and an execution component.",
+            "startOffset": 41162,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56048,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 55976,
+                    "startOffset": 55972
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The execution component is mainly provisioned using the QCG environment2  [24], a mature middleware system deployed in many HPC centres across Europe.",
+            "startOffset": 55878,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 40001,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 40000,
+                    "startOffset": 39996
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Those developers should take care of the scale bridging mechanisms and the efficiency of the single scale models, while the challenges of execution within a High Performance Computing (HPC) environment should be addressed through a generic layer added to MMSF that we call Multiscale Computing Patterns (MCPs) [23].",
+            "startOffset": 39686,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59173,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Similarly, we are planning to implement an Energy metrics plug-in and combine it with the QCG Pattern-aware scheduler.",
+            "startOffset": 59055,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 75145,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This demonstrates the potential versatility of our MCP approach, which should enable relatively straightforward integration with existing multiscale execution environment as, in this case, FabSim.",
+            "startOffset": 74949,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 45929,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This is the main difference with HMC.",
+            "startOffset": 45892,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 45690,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Both static and dynamic flavours of RC are considered in Fig. 1((d), (e)).",
+            "startOffset": 45616,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 41162,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 41161,
+                    "startOffset": 41157
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Here, we mainly integrate these MCPs with MMSF to increase the effectiveness by means of which we can develop, deploy and execute multiscale simulations on existing petascale and emerging exascale resources [23].",
+            "startOffset": 40950,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47817,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The Description component (top layer in Fig. 2) contains an architecture-agnostic definition of the multiscale application, and its main requirements.",
+            "startOffset": 47667,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 49083,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "This includes input parameters, the required environment modules and resource limits for the overall simulation (all submodels and coupling library).",
+            "startOffset": 48934,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 55690,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The selection pertains to the mapping of computational kernels to a specific set of physical resources of defined types, taking into account the (sometimes conflicting) requirements of users and resource providers.",
+            "startOffset": 55476,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 76192,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Following the procedure outlined for the ES pattern, the user passes matrix.xml and multiscale.xml to the Optimisation component.",
+            "startOffset": 76063,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 46004,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "On the other hand, HMC and RC are similar in terms of load balance issues.",
+            "startOffset": 45930,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 36835,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 36715,
+                    "startOffset": 36706
+                },
+                "b18": {
+                    "endOffset": 36715,
+                    "startOffset": 36706
+                },
+                "b19": {
+                    "endOffset": 36715,
+                    "startOffset": 36706
+                },
+                "b3": {
+                    "endOffset": 36715,
+                    "startOffset": 36706
+                }
+            },
+            "secId": "sec1",
+            "sentence": "We have previously developed the Multiscale Modelling and Simulation Framework (MMSF) [3,17\u201319], which provides a theoretical and methodological framework for constructing multiscale simulations in four main stages.",
+            "startOffset": 36620,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72418,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 72417,
+                    "startOffset": 72413
+                }
+            },
+            "secId": "d1e1860",
+            "sentence": "This mechanism was coordinated using wait/notify semantics [10].",
+            "startOffset": 72354,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 37553,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An important property of MUSCLE2 is the separation of concerns that it affords.",
+            "startOffset": 37474,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74413,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This is due to the intrinsic sensitivity of MD to the initial conditions, since the dynamics is chaotic.",
+            "startOffset": 74309,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 46682,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The logical description and the complete set of requirements of a multiscale application is collected in the description component.",
+            "startOffset": 46551,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 64283,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The transport, turbulence, and equilibrium codes are submodels developed separately and are well-benchmarked.",
+            "startOffset": 64174,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 47895,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "It builds on concepts from the Multiscale Modelling and Simulation Framework.",
+            "startOffset": 47818,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 69509,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "One way to speed-up the simulation is to run auxiliary submodels in parallel when possible, which is theoretically the case for the timescale-less equilibrium submodel.",
+            "startOffset": 69341,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 73230,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "A \u201cmultiplicity\u201d tag in the \u201cinstance\u201d node of the xMML description indicates that multiple instances (replicas) are required for that submodel.",
+            "startOffset": 73086,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 83586,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this work, we have assembled a range of powerful functionalities for optimising and deploying multiscale applications on large scale HPC infrastructures operating at the multi-petascale, and presented an application-agnostic approach which reduces the development effort required for these purposes.",
+            "startOffset": 83284,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 37757,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Moreover, required adaptations are minimal on the level of a submodel in order for it to be incorporated into a multiscale model implemented with MUSCLE2.",
+            "startOffset": 37603,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38032,
+            "parents": [],
+            "refoffsets": {
+                "b21": {
+                    "endOffset": 37969,
+                    "startOffset": 37965
+                },
+                "b4": {
+                    "endOffset": 38031,
+                    "startOffset": 38028
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Developers and users can run different submodels on different machines [4], using for example the QCG middleware [21], a paradigm that we call Distributed Multiscale Computing [4].",
+            "startOffset": 37852,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43897,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Assuming that developers have implemented the primary model efficiently, the main aim is to reach a minimal interference between primary and auxiliaries.",
+            "startOffset": 43744,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 65081,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "This text file (shown in Appendix B) contains the list of submodels involved, time and space scales and input/output data of each submodel, and coupling between submodel pairs through their respective input/output data.",
+            "startOffset": 64862,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 69284,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Therefore, improving efficiency becomes essential as future simulations require more computing time.",
+            "startOffset": 69184,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 66611,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "In the current implementation, the Translation service is a python script which, as a result, creates two template xml files: matrix.xml and multiscale.xml.",
+            "startOffset": 66455,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 69183,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "However, the fusion plasma in this particular example needs approximately 4000 iterations to reach equilibrium state.",
+            "startOffset": 69066,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 50009,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Currently, the translation tool is application specific, and produces two xml files as output.",
+            "startOffset": 49915,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 41557,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the description component the software uses the task graph of the specific multiscale model, in combination with auxiliary information (e.g., definitions of single-scale models), to identify the type of pattern and create input definitions for the optimisation component.",
+            "startOffset": 41283,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37131,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Single scale models and couplings are presented within a Scale Separation Map, allowing us to describe and compare multiscale models on a conceptual level.",
+            "startOffset": 36976,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38320,
+            "parents": [],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 38048,
+                    "startOffset": 38044
+                },
+                "b23": {
+                    "endOffset": 38274,
+                    "startOffset": 38270
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Knap et al. [22] have previously proposed a distributed multiscale computing framework that supports the on-demand execution of microscale models coupled to a macroscale model (very similar to one of the computing patterns we proposed in [23]), using large scale supercomputing resources.",
+            "startOffset": 38032,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53613,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Architecture Modelling software is established to provide predictions for existing machines, but also for non-existing emerging exascale configurations.",
+            "startOffset": 53457,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 78201,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "To illustrate how this could be coordinated, let us take the hypothetical situation that there is also a 12 job limit on concurrent jobs running on Eagle to mimic the workload.",
+            "startOffset": 78025,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 35550,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 35549,
+                    "startOffset": 35546
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Multiscale modelling & simulation has become a well-established way to study complex phenomena that encompass multiple space and time scales [1].",
+            "startOffset": 35405,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37602,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Submodels are not aware of any other components.",
+            "startOffset": 37554,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74482,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Therefore, BAC is an ideal example of the replica computing pattern.",
+            "startOffset": 74414,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 80744,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We have introduced and described the Multiscale Computing Patterns software, which extends the Multiscale Modelling and Simulation Framework to enable high performance multiscale computing based on three generic patterns.",
+            "startOffset": 80523,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 77582,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For example, on SuperMUC machine, the maximum number of jobs that can be run concurrently on the thin nodes in the \u201cgeneral\u201d queue is 8, while there are no restrictions on the Eagle machine.",
+            "startOffset": 77392,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 61054,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In the Replica Computing Pattern these sets of subtasks can be scheduled by the middleware to be executed on various clusters, thereby balancing the overall load on the infrastructure.",
+            "startOffset": 60870,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 43743,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Therefore, the efficiency of this type of multiscale models is highly dependent on the efficiency of the primary model and the primary\u2013auxiliary interactions.",
+            "startOffset": 43585,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 64861,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The starting point in the description component of the software is to compose a task graph in xMML format.",
+            "startOffset": 64755,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 68854,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The entire run was completed in approximately 11.1 h, or 22733 core hours.",
+            "startOffset": 68780,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 56632,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 56631,
+                    "startOffset": 56624
+                },
+                "b21": {
+                    "endOffset": 56631,
+                    "startOffset": 56624
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "In addition, QCG provides support for advance reservation, co-allocation and workflows, enabling the execution management of multi-kernel applications, with both cyclic and acyclic dependencies, on a distributed e-Infrastructure [20,21].",
+            "startOffset": 56395,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 45232,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Typically, the number of micro-scale models will be very large and a single microscale run may require substantial computing resources and, hence, dominate computing and energy cost.",
+            "startOffset": 45050,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 54190,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Then, using multi-objective optimisation, the tool will generate a small number of alternative execution scenarios.",
+            "startOffset": 54075,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 62364,
+            "parents": [],
+            "refoffsets": {
+                "b32": {
+                    "endOffset": 62212,
+                    "startOffset": 62208
+                },
+                "b33": {
+                    "endOffset": 62277,
+                    "startOffset": 62273
+                }
+            },
+            "secId": "sec4",
+            "sentence": "All performance figures presented are measured at two supercomputers that participated in the studies, namely SuperMUC [32] (Tier-0 HPC from Leibniz-Rechenzentrum, Germany), and Eagle [33] (Polish national grid clusters from Poznan Supercomputing and Network Center, Poland).",
+            "startOffset": 62089,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 62088,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In addition, details of the required steps and various code snippets at each level of the software stack are presented from the perspective of the application developer.",
+            "startOffset": 61919,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 45891,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "If a replica (i.e. a simulation) fails, the RC patterns affords some level of fault tolerance, taking into account maintaining the overall statistics.",
+            "startOffset": 45741,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 48070,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The description component consists of a task graph, submodel definitions, simulation and middleware parameters and user information, all feeding into the Translation Service.",
+            "startOffset": 47896,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 48462,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Submodel definitions contain all the information required for a single-scale model to run.",
+            "startOffset": 48372,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 65332,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Besides visual representations, the jMML tool can turn the content from a task graph into a skeleton configuration for MUSCLE2.",
+            "startOffset": 65205,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 68353,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Also note that the speedup of the primary model is super-linear because the efficiency was calculated with 64 cores instead of one core, which may lead to latency hiding.",
+            "startOffset": 68183,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 36620,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 36510,
+                    "startOffset": 36499
+                },
+                "b14": {
+                    "endOffset": 36362,
+                    "startOffset": 36358
+                },
+                "b15": {
+                    "endOffset": 36381,
+                    "startOffset": 36377
+                },
+                "b16": {
+                    "endOffset": 36469,
+                    "startOffset": 36465
+                },
+                "b17": {
+                    "endOffset": 36510,
+                    "startOffset": 36499
+                },
+                "b18": {
+                    "endOffset": 36510,
+                    "startOffset": 36499
+                },
+                "b19": {
+                    "endOffset": 36510,
+                    "startOffset": 36499
+                },
+                "b20": {
+                    "endOffset": 36619,
+                    "startOffset": 36615
+                },
+                "b3": {
+                    "endOffset": 36510,
+                    "startOffset": 36499
+                }
+            },
+            "secId": "sec1",
+            "sentence": "These range from domain-specific frameworks such as AMUSE [14] and OASIS-MCT [15] to solver-specific frameworks such as the MOOSE framework for finite-element codes [16] and fully generic frameworks [1,3,17\u201319] encompassing related coupling tools such as the Multiscale Coupling Library and Environment 2 (MUSCLE2) [20].",
+            "startOffset": 36300,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51903,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Execution component will then select the optimal execution plan based on chosen specified cost criteria (time to completion, energy consumption), by taking into account additional information only available to the middleware (e.g. estimated queueing time, live information on availability of resources, etc.).",
+            "startOffset": 51590,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 64593,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Such simulation is essentially multiscale in time, and corresponds to the ES computing pattern depicted in Fig. 1(b).",
+            "startOffset": 64476,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 61259,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Job arrays not only help to reduce the management complexity of all tasks executed separately, but increase the overall throughput of the system and decreases the total time to completion of a simulation.",
+            "startOffset": 61055,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 67258,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Next, the outputs of the Translation service (matrix.xml and multiscale.xml) are passed on to the Pattern-Driven Planner, which in turn generates an XML job script for the selected middleware (the QCG).",
+            "startOffset": 67056,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 42490,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The idea is that Multiscale Computing Patterns software will automatically detect which cost functions and algorithms to select based on the type of pattern and user requirements.",
+            "startOffset": 42311,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56800,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Deploying multiscale simulations on production e-infrastructures gives rise to a number of challenges that are difficult to anticipate prior to the execution component.",
+            "startOffset": 56632,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 75347,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For example, it uses the machines.yml configuration file from FabSim, which lists the configuration settings of submodels on remote resources (e.g., location of libraries and required execution flags).",
+            "startOffset": 75146,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 76700,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "First, there is an obvious trade-off between the number of replicas that must be executed, the minimum number of cores that one single replica needs, and the total number of cores available for the overall job.",
+            "startOffset": 76490,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 40684,
+            "parents": [],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 40575,
+                    "startOffset": 40571
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In addition to the generic task graph, an MCP contains performance information about single scale models, an XML-based specification of the multiscale application named xMML [20], and a set of algorithms and heuristics used to combine this into input files for the execution environment.",
+            "startOffset": 40397,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39685,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Our intention is that these challenges are handled in a generic way, as far as possible avoiding the imposition of that burden on the developers of multiscale applications.",
+            "startOffset": 39513,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44697,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Thus, the number of micro-scale models is dynamic and largely dependent on the dynamic evolution of the macro-model.",
+            "startOffset": 44581,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 65529,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 65528,
+                    "startOffset": 65524
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "The designer of the coupled application can implement submodels as MUSCLE2 kernels and other simulation parameters (either global or specific to a kernel) into the MUSCLE2 configuration file [20].",
+            "startOffset": 65333,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 81383,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The third computing pattern, Heterogeneous Multiscale Computing, will be implemented, discussed and demonstrated in future work.",
+            "startOffset": 81255,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 41759,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the optimisation component, the software selects and applies a set of optimisation algorithms to identify a range of efficient mappings of the submodels in the application to specific HPC resources.",
+            "startOffset": 41558,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51589,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Given the specific MCP and all other available information, the Pattern-Driven Planner performs a constrained optimisation against these cost functions, and provides a selection of particularly suitable execution scenarios to the Execution component.",
+            "startOffset": 51339,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 76306,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Unlike the ES pattern, the user does not need to specify the required number of cores for the overall simulation.",
+            "startOffset": 76193,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 50919,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Table 1 shows an example of node types.",
+            "startOffset": 50880,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 60184,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "QCG Job Controller contains a set of specific adaptations to address the requirements for efficiently executing high performance multiscale simulations using high-end e-Infrastructures.",
+            "startOffset": 59999,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 65204,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 65177,
+                    "startOffset": 65174
+                },
+                "b20": {
+                    "endOffset": 65132,
+                    "startOffset": 65128
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "If desired, the user can deploy the jMML tool [20] to generate the task graph from the xMML [2] (displayed in Appendix D).",
+            "startOffset": 65082,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 36975,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "First, we model multiscale phenomena as collections of single-scale submodels then decide on which models interact with each other and how.",
+            "startOffset": 36836,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69670,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "This idea is preliminary and its validation is necessary before such transformation is added as a possible optimisation technique in the Pattern-Driven Planner.",
+            "startOffset": 69510,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 67021,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "These two templates are pre-filled with information from the xMML file and can be completed by the application designer.",
+            "startOffset": 66901,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 49914,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "These three pieces of information are then supplied to a translation service, which merges and converts them into a format suitable for the optimisation component.",
+            "startOffset": 49751,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 58636,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 58635,
+                    "startOffset": 58625
+                },
+                "b28": {
+                    "endOffset": 58635,
+                    "startOffset": 58625
+                },
+                "b29": {
+                    "endOffset": 58635,
+                    "startOffset": 58625
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "Through its direct integration with the QCG environment, the Pattern-aware Scheduler accounts for the multi-kernel nature of multiscale application and the fact that each kernel may behave differently in the context of performance and energy-usage when executed on different resource types [26,28,29].",
+            "startOffset": 58335,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 45488,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "These replicas are not part of an overarching structure like HMC, but are spawned in the initial step.",
+            "startOffset": 45386,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 51338,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Then, it uses this information to compute required cost functions (e.g efficiency, throughput, energy usage, or a combination) on available resources.",
+            "startOffset": 51188,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 69871,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The ultimate goal for the fusion application is to use a more sophisticated turbulence model, namely replacing the gyrofluid model with a gyrokinetic model, to simulate plasma in the core of a tokamak.",
+            "startOffset": 69670,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 61918,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Applications for HMC are currently under development.",
+            "startOffset": 61865,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 68051,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "For the fusion application, and in general for most ES applications, it is more sensible to select a plan in which all submodels run on a single site, for auxiliaries do not require much resources.",
+            "startOffset": 67854,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 76063,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "However, in the future we foresee hybrid MCPs, where each replica could for instance be a full-blown ES by itself, and then such additional information would be needed.",
+            "startOffset": 75895,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 55475,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "First, it needs to select the best allocation plan from the plans provided by the optimisation component.",
+            "startOffset": 55370,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 56987,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "For example, the user objective for an immediate job start, e.g. through means of advance reservation, needs to be harmonised with the provider\u2019s objective for high resource utilisation.",
+            "startOffset": 56801,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 68652,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "In particular, QCG selects the thin nodes in SuperMUC to run the fusion simulation (see Table 3).",
+            "startOffset": 68555,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 72576,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1860",
+            "sentence": "By doing so, we doubled the resource usage efficiency by reducing the wasted cores to 887 and 152 core hours for primary and auxiliaries models respectively.",
+            "startOffset": 72419,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 45615,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Then, simulations and data processing per replica take place.",
+            "startOffset": 45554,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 66226,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The MCP software has features that relieve these burdens from the user by automatically selecting the best configuration for a given performance metric, as described in further detail in the remainder of this subsection.",
+            "startOffset": 66006,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 74625,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "BAC consists of a workflow where, within each replica, the output from one submodel (NAMD) is used as input to the next submodel (AmberTools).",
+            "startOffset": 74483,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 78024,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As an example, if we have two RC applications which require 40 and 80 replicas respectively, the Pattern-Driven Planner needs to calculate which is faster: running all replicas at one supercomputer SuperMUC (while taking into account the constraint of concurrently running 8 jobs per user) or distributing the jobs among different hosts, for example, across SuperMUC and Eagle, using the functionality in QCG to run across multiple resources.",
+            "startOffset": 77582,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 52091,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Measurements and Architecture Modelling components respectively store and calculate submodel performance information as a function of the chosen number of cores/nodes and problem size.",
+            "startOffset": 51903,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 83642,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We plan to release the software described here shortly.",
+            "startOffset": 83587,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 69065,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Among the three submodels, the primary submodel (a turbulence code based on gyrofluid theory) took about 17 s per iteration, while the transport and equilibrium auxiliary submodels took 1 and 3 s, respectively.",
+            "startOffset": 68855,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 81254,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We implemented and demonstrated the Extreme Scaling and Replica Computing computing patterns.",
+            "startOffset": 81161,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 43372,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The Extreme Scaling (ES) pattern represents a type of multiscale model where one primary single-scale model is coupled to a set of serial and/or parallel auxiliary models on any scale as shown in Fig. 1((a) and (b)).",
+            "startOffset": 43156,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 53764,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This allows users to assess how MCPs could optimally benefit from such hypothetical machines, or contribute in co-evolution of such new architectures.",
+            "startOffset": 53614,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 39089,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Our \u201cLego-based\u201d philosophy for the construction and execution of multiscale applications relies on single scale submodels and their interactions, and results in more degrees of freedom for both programming and executing a multiscale simulation.",
+            "startOffset": 38844,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40949,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this paper, we report on the design and implementation of the MCP software, and present the first results of executing multiscale simulations using MCPs, including discussions on the added value of using such solutions for High Performance Multiscale Computing.",
+            "startOffset": 40685,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79646,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "QCG also have the ability to distribute replicas to the intended machines and gather the results in one place.",
+            "startOffset": 79536,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 59624,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "We present several key fragments of the this extended description in Appendix F. Here, all jobs described using a patternTopology element will be processed using the new scheduling engine.",
+            "startOffset": 59436,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 72257,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1860",
+            "sentence": "This is due to the large waiting times of both primary and serial auxiliaries in the naive scheduling, which means wasting 1122 cores hours (1.08 h per core) for primary and 1755 (12.5 h per core) for auxiliary models by doing nothing but waiting.",
+            "startOffset": 72010,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 43584,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The primary model1  is compute intensive, energy hungry, and highly scalable, whereas the auxiliary models are not.",
+            "startOffset": 43373,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 63552,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Nuclear fusion has the potential to produce clean and carbon-free energy, as physicists hope to demonstrate with ITER, which is a tokamak device that uses magnetic fields to confine plasma.",
+            "startOffset": 63363,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 72009,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1860",
+            "sentence": "Table 3 shows that the resource usage for running this application is 0.35.",
+            "startOffset": 71934,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 66454,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The task graph is submitted and parsed by the Translation service along with other specifics provided by the developer, such as additional submodel definitions, details on middleware, simulation parameters, and user information.",
+            "startOffset": 66226,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 65856,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "An example of the fusion application\u2019s configuration file, which is written as a ruby script, is displayed in Appendix C. Note that at this stage, the user can directly connect to a cluster where all executables, libraries and input data are present, and write an ad-hoc script to be submitted to the local batch queue system.",
+            "startOffset": 65530,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 83912,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Generic approaches to High Performance Multiscale Computing are highly sought after across scientific disciplines, and indeed we have already begun propagating the first elements of our approach to other application domains such as astrophysics and materials modelling.",
+            "startOffset": 83643,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 59841,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Based on the result of the QCG Pattern-aware Scheduler, the QCG Job Controller module prepares the execution environment by transferring input data and starting the job submission to one or more distributed resources.",
+            "startOffset": 59624,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 66005,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "However, the burden of manually adjusting the configuration and selecting the optimal cluster lies on the user every time wants to run a simulation.",
+            "startOffset": 65857,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 75669,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This allows submodel information to be reused if it is required for different multiscale applications.",
+            "startOffset": 75567,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 83223,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This modular implementation helps multiscale model developers to concentrate on optimising the single scale models of which the application is comprised, without needing to go into details about the HPC machines.",
+            "startOffset": 83011,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 45385,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the Replica Computing (RC) pattern a large number of copies of tera- and/or peta-scale simulations are needed to produce statistically robust results.",
+            "startOffset": 45232,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 54953,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The exact output of the Pattern-Driven Planner to the Execution component will be several allocation plans and other requirements, as described in the next section, to run multiscale application.",
+            "startOffset": 54758,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 76385,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This is decided by the Performance Estimator by calculating the cost function.",
+            "startOffset": 76307,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 55369,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The responsibility for the execution component is twofold.",
+            "startOffset": 55311,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 62403,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Further details are listed in Table 2.",
+            "startOffset": 62365,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 79274,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Otherwise, the time to completion could be very different to that predicted in Fig. 6, and we could envisage the most efficient split in replicas across resources being completely changed if the queueing times are very different across the resources.",
+            "startOffset": 79024,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 59435,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "As the new brokering module uses new types of input parameters to specify the requirements of the MCPs, we have extended the job description interface and revised several internal schemas used to exchange information between the components in QCG-Broker service.",
+            "startOffset": 59173,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 61661,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, we present three exemplar applications from different scientific domains (one from Fusion research and two from biomedicine, being cell based blood flow modelling and the Binding Affinity Calculator BAC) to demonstrate the capabilities practical usage of the MCP software, and the benefits in terms of application performance.",
+            "startOffset": 61318,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 78383,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In Fig. 6, we show the time to completion as a function of the number of \u201cbatches\u201d running on SuperMUC, where a \u201cbatch\u201d is defined as a set of 8 concurrent running jobs on SuperMUC.",
+            "startOffset": 78202,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 48372,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The task graph is also needed to observe workflow related issues such as the expected frequency of communication between submodels.",
+            "startOffset": 48241,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 76489,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Finding a cost function for RC that will generate resource allocation plans is different to that for ES.",
+            "startOffset": 76385,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 77391,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Most supercomputers have a limit on the number of jobs that can be run or queued at any moment in time per user.",
+            "startOffset": 77279,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 68182,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 68181,
+                    "startOffset": 68177
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "In that case, we should only care about serialisation due to serial auxiliary models and how that could impact the execution [23].",
+            "startOffset": 68052,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 41963,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Lastly, the execution component is a middleware layer which identifies the optimal mapping of submodels to the available resources, taking additionally into account queueing times and resource occupancy.",
+            "startOffset": 41760,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48850,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 48744,
+                    "startOffset": 48740
+                },
+                "b25": {
+                    "endOffset": 48849,
+                    "startOffset": 48845
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The description component may rely on previously developed tools such as MAD/MaMe [24], and can already leverage existing configuration information from the FabSim automation environment [25].",
+            "startOffset": 48658,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 77279,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "However, there are several constraints that the Performance Estimator must also consider such as queue constraints (number of concurrent jobs, time limitations node availability and queueing time).",
+            "startOffset": 77082,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 70290,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The Multiscale Computing Patterns software have demonstrated initial success with a smaller-scale problem.",
+            "startOffset": 70184,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 81161,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In addition, these multiscale models are based on different coupling approaches, including MUSCLE2, as well as coupling using scripts and the FabSim automation toolkit.",
+            "startOffset": 80993,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 51187,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Pattern-Driven Planner component collects measurements and/or predictions of performance of submodels, under various execution scenarios, from the Performance Estimator.",
+            "startOffset": 51014,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 37256,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 37255,
+                    "startOffset": 37249
+                },
+                "b18": {
+                    "endOffset": 37255,
+                    "startOffset": 37249
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Second, we specify the single scale models, their couplings and interactions using the Multiscale Modelling Language [1,18].",
+            "startOffset": 37132,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42781,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4, we provide by way of proof of concept three examples of the use of the Multiscale Computing Patterns software.",
+            "startOffset": 42657,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82189,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This automated scheduling approach, which recommends execution across two resources, delivers a time-to-completion speedup of 1.2 compared to the scheduling of all replicas on a single resource.",
+            "startOffset": 81995,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 60338,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Both the QCG-Broker interface and the core capabilities of the service components have been extended to support a range of pattern-based multiscale jobs.",
+            "startOffset": 60185,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 72767,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1860",
+            "sentence": "By implementing more advanced load balancing algorithms and selecting the right number of cores for the primary and auxiliary models, we can increase the resource usage efficiency even more.",
+            "startOffset": 72577,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 73502,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The Translation service uses submodel definitions in separate files.",
+            "startOffset": 73434,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 79769,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In these studies, we run 10 replicas across two supercomputers, SuperMUC and Eagle.",
+            "startOffset": 79686,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 43032,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this section, we discuss the concept of Multiscale Computing Patterns and express the MCPs as generic task graphs.",
+            "startOffset": 42915,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 55265,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Listing 4 in Appendix A shows the template of the node classes and allocation plans parts.",
+            "startOffset": 55175,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 70054,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "In addition, the ability to simulate plasma of a much larger volume would be necessary to understand possible instabilities that could destroy plasma confinement in the ITER tokamak.",
+            "startOffset": 69872,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 40257,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 40147,
+                    "startOffset": 40143
+                }
+            },
+            "secId": "sec1",
+            "sentence": "We defined MCPs as \u201chigh-level call sequences that exploit the functional decomposition of multiscale models in terms of single scale models\u201d [23], and distinguished three patterns: Extreme Scaling, Heterogeneous Multiscale Computing and Replica Computing.",
+            "startOffset": 40001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43085,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 43084,
+                    "startOffset": 43080
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For full details, we refer to Alowayyed et al. [23].",
+            "startOffset": 43033,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 49346,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 49253,
+                    "startOffset": 49249
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Also, this component holds all information needed to compose the multiscale simulation (e.g. using MUSCLE2) and to execute the simulation (e.g. using QCG Middleware [26]) using (distributed) HPC infrastructures such as the Experiment Execution Environment (EEE).",
+            "startOffset": 49084,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 50637,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The node description list is updated regularly to reflect the current status of available nodes in the targeted supercomputers, and contains information of node types.",
+            "startOffset": 50470,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 39512,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To efficiently execute multiscale applications on high-end HPC machines, a number of challenges have to be addressed, such as load balance (providing resources to each of the single scale models), fault tolerance (sometimes instantiations of single scale models may fail) and energy awareness (depending on properties of single scale models, potentially also in combination with load balancing, energy aware optimisation).",
+            "startOffset": 39090,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55174,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The allocation plan is a specific mapping of the multiscale model to resources.",
+            "startOffset": 55095,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 47248,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The optimisation component determines which MCP optimisation applies, collects required performance figures, and calculates the relevant metrics (e.g. parallel efficiency, throughput, energy usage).",
+            "startOffset": 47050,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 69340,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "The current simulation couples the submodels in series.",
+            "startOffset": 69285,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 76852,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The performance data for RC uses the minimum time per replica for different node types in different hosts, as shown in Fig. 5 for a single BAC replica.",
+            "startOffset": 76701,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 46767,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This part relies on concepts from the Multiscale Modelling and Simulation Framework.",
+            "startOffset": 46683,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 59999,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b30": {
+                    "endOffset": 59998,
+                    "startOffset": 59994
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The resources in our e-infrastructure are made accessible to QCG Job Controller using services implementing the Basic Execution Service (BES) interface [30].",
+            "startOffset": 59842,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 74668,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 74667,
+                    "startOffset": 74660
+                },
+                "b41": {
+                    "endOffset": 74667,
+                    "startOffset": 74660
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "For more information, we refer to [40,41].",
+            "startOffset": 74626,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 76914,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This data is collected in the Single Scale Performance Model.",
+            "startOffset": 76853,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 47643,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The role of the execution component is to select the best allocation plan, based on the availability of the requested resources and cost criteria (time to complete, energy usage), and to start and monitor the execution.",
+            "startOffset": 47424,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 58334,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In the energy optimisation case, QCG Scheduler firstly selects a set of candidate plans which finish according to the QCG time to completion prediction in the requested period of time and then it selects an optimal plan with the minimal total energy expenditure (calculated and given by the optimisation component).",
+            "startOffset": 58019,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 52669,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "For example, this could be achieved by interpolating between performance results of adjacent problem sizes in the multiscale model and/or, relying on performance models, to predict the performance using a core count for which no measured values have yet been obtained.",
+            "startOffset": 52401,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 63733,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b34": {
+                    "endOffset": 63732,
+                    "startOffset": 63726
+                },
+                "b9": {
+                    "endOffset": 63732,
+                    "startOffset": 63726
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "However, the grand challenge of long-term plasma confinement requires the understanding of interactions between very small-scale turbulence and large scale plasma behaviour [9,34].",
+            "startOffset": 63553,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 67056,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "An example is given in Appendix E.",
+            "startOffset": 67022,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 72353,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 72352,
+                    "startOffset": 72348
+                }
+            },
+            "secId": "d1e1860",
+            "sentence": "To solve this, we interleave two different instantiations with each other, as proposed in [23].",
+            "startOffset": 72258,
+            "title": "Cell based blood flow simulation"
+        },
+        {
+            "endOffset": 54590,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We will enhance this component to extend the patterns with capabilities to also consider issues related to energy awareness and fault-tolerance.",
+            "startOffset": 54446,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 54758,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "All in all, for each pattern we will formulate constrained optimisation problems that as output will deliver alternative execution profiles to the Execution component.",
+            "startOffset": 54591,
+            "title": "Optimisation component"
+        },
+        {
+            "endOffset": 82656,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The Optimisation component is focused on performance aspects, and provides a number of optimisation criterion based on the type of the multiscale computing pattern and the required criteria.",
+            "startOffset": 82466,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 37473,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 37471,
+                    "startOffset": 37467
+                },
+                "b20": {
+                    "endOffset": 37366,
+                    "startOffset": 37362
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Third, we convert these definition to a fully implemented multiscale model, currently relying on MUSCLE2 [20] (although the concepts of the MMSF can also be applied to other coupling environments such as AMUSE [14]).",
+            "startOffset": 37257,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56394,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "To fulfil expectations and objectives of both users and resource providers, QCG features and extendable brokering service which allows for customised brokering algorithms and strategies.",
+            "startOffset": 56208,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 83010,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Finally, the Execution component integrates a range of functionalities from the underlying e-infrastructure, and uses the information from the Description and Optimisation components to create and run execution scenarios, each optimised either for minimal time to completion, or minimal energy consumption (given a fixed time to completion requirement).",
+            "startOffset": 82657,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 49604,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Similarly, user-specific information can be directly reused from existing FabSim configurations (machines_user.yml).",
+            "startOffset": 49488,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 74085,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "These MD simulations are coupled to the molecular mechanics Poisson\u2013Boltzmann surface area (MMPBSA) method to calculate the binding free energies.",
+            "startOffset": 73939,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 38844,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This resonates with our vision of generic multiscale computing environments, where a separation of concerns is achieved between multiscale modelling & simulation on the one hand, and deploying and executing a multiscale simulation in a given HPC environment on the other.",
+            "startOffset": 38573,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59054,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This plug-in is integrated with external resource-level components, in this case the Queue-time Estimation service.",
+            "startOffset": 58939,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 40396,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Each of these patterns is described using a generic task graph that aids in understanding how to best map these patterns to HPC resources.",
+            "startOffset": 40258,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66721,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "Matrix.xml contains information related to single scale submodels, such as measurements of their performance.",
+            "startOffset": 66612,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 74308,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For purposes of reliability, ensembles of replica MD calculations are performed for each method, and we have found that about 25 of these are required per MD simulation in order to guarantee reproducibility of predictions.",
+            "startOffset": 74086,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 46928,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "It is helpful to facilitate the work of the end user and provide a single input mechanism for all multiscale applications, as well as detecting the type of MCP.",
+            "startOffset": 46768,
+            "title": "Design of multiscale computing patterns software"
+        },
+        {
+            "endOffset": 68779,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "d1e1778",
+            "sentence": "A production run with 1000 iterations using 2048 cores was completed successfully using the software scheme described earlier.",
+            "startOffset": 68653,
+            "title": "Fusion application"
+        },
+        {
+            "endOffset": 79412,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The estimation of queueing time will be investigated and to incorporated into the middleware in the future (as described in Section 3.3).",
+            "startOffset": 79275,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 42656,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We describe the MCPs in Section 2, and introduce the Multiscale Computing Patterns software and its components in Section 3.",
+            "startOffset": 42532,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50260,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The other file, multiscale.xml shown in Listing 2 (Appendix A), has information from the simulation and middleware parameters.",
+            "startOffset": 50134,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 60869,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The job arrays functionality allows a set of independent tasks to be run on a resource and be considered as a single QCG task.",
+            "startOffset": 60743,
+            "title": "Resource allocation and execution component"
+        },
+        {
+            "endOffset": 82384,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The top layer, the Description component, represents the logical description of the multiscale model.",
+            "startOffset": 82283,
+            "title": "Discussion and conclusions"
+        },
+        {
+            "endOffset": 61864,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Our applications are mapped to two different computing patterns, with Fusion and cell based blood flow modelling mapped to the Extreme Scaling (ES) pattern and BAC to the Replica Computing (RC) pattern.",
+            "startOffset": 61662,
+            "title": "Applications of the multiscale computing patterns software"
+        },
+        {
+            "endOffset": 73734,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 73593,
+                    "startOffset": 73589
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "To illustrate this, we describe the process for the Binding Affinity Calculator (BAC) [40], an automated molecular simulation based free energy calculation workflow tool, which we use to calculate ligand-protein binding affinities.",
+            "startOffset": 73503,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 78685,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Fig. 6 shows we estimate that for 40 replicas, the shortest time to completion is for 2 \u201cbatches\u201d to be run on SuperMUC, while for 80 replicas, the minimum time to completion is for 4 \u201cbatches\u201d to be run on SuperMUC.",
+            "startOffset": 78469,
+            "title": "Replica computing (binding affinity calculator)"
+        },
+        {
+            "endOffset": 36299,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In addition to specific multiscale applications, a number of tools and frameworks which assist in multiscale computing have been established.",
+            "startOffset": 36158,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45553,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this step, the parameter space for parameter sweeping is set.",
+            "startOffset": 45489,
+            "title": "Multiscale computing patterns and high performance multiscale computing"
+        },
+        {
+            "endOffset": 48933,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Design of multiscale computing patterns software"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "All the simulation and middleware parameters are collected in a separate component.",
+            "startOffset": 48850,
+            "title": "Description component"
+        },
+        {
+            "endOffset": 64475,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Applications of the multiscale computing patterns software"
+                }
+            ],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 64474,
+                    "startOffset": 64471
+                }
+            },
+            "secId": "d1e1778",
+            "sentence": "These submodels share a common data interface and are embedded into MUSCLE2 as kernels, which allows for straightforward coupling through a simple and configurable script as described in [9].",
+            "startOffset": 64284,
+            "title": "Fusion application"
+        }
+    ],
+    "docId": "S0167739X18300669",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "S.A.Alowayyed@uva.nl",
+                "first": "S.",
+                "initial": "S.",
+                "last": "Alowayyed"
+            },
+            {
+                "email": null,
+                "first": "T.",
+                "initial": "T.",
+                "last": "Piontek"
+            },
+            {
+                "email": null,
+                "first": "J. L.",
+                "initial": "J.L.",
+                "last": "Suter"
+            },
+            {
+                "email": null,
+                "first": "O.",
+                "initial": "O.",
+                "last": "Hoenen"
+            },
+            {
+                "email": null,
+                "first": "D.",
+                "initial": "D.",
+                "last": "Groen"
+            },
+            {
+                "email": null,
+                "first": "O.",
+                "initial": "O.",
+                "last": "Luk"
+            },
+            {
+                "email": null,
+                "first": "B.",
+                "initial": "B.",
+                "last": "Bosak"
+            },
+            {
+                "email": null,
+                "first": "P.",
+                "initial": "P.",
+                "last": "Kopta"
+            },
+            {
+                "email": null,
+                "first": "K.",
+                "initial": "K.",
+                "last": "Kurowski"
+            },
+            {
+                "email": null,
+                "first": "O.",
+                "initial": "O.",
+                "last": "Perks"
+            },
+            {
+                "email": null,
+                "first": "K.",
+                "initial": "K.",
+                "last": "Brabazon"
+            },
+            {
+                "email": null,
+                "first": "V.",
+                "initial": "V.",
+                "last": "Jancauskas"
+            },
+            {
+                "email": null,
+                "first": "D.",
+                "initial": "D.",
+                "last": "Coster"
+            },
+            {
+                "email": null,
+                "first": "P. V.",
+                "initial": "P.V.",
+                "last": "Coveney"
+            },
+            {
+                "email": "A.G.Hoekstra@uva.nl",
+                "first": "A. G.",
+                "initial": "A.G.",
+                "last": "Hoekstra"
+            }
+        ],
+        "doi": "10.1016/j.future.2018.08.045",
+        "firstpage": "335",
+        "issn": "0167739X",
+        "keywords": [
+            "Distributed computing",
+            "High performance computing",
+            "Model coupling",
+            "Modelling methodology",
+            "Multiscale computing"
+        ],
+        "lastpage": "346",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Patterns for High Performance Multiscale Computing"
+    }
+}

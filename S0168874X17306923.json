@@ -1,0 +1,2038 @@
+{
+    "abstract": "In this study, we address the computational modeling of biological soft tissue growth, focusing on the development of epithelial tissues. The formulation of the corresponding constitutive growth law using non-linear continuum mechanics and its implementation within a total-Lagrangian-type finite element method are described. In describing the growth law, we use multiplicative decomposition of the deformation gradient into a growth part and an elastic part. We propose two surface growth deformation gradients; isotropic surface growth and anisotropic surface growth with relative shrinkage in the principal direction of maximum stress at the initial state. We first apply our laws to a hollow thick-walled hemiellipsoid that idealizes a structure generally observed in the early development of epithelial tissues. Our simulation shows the following: (i) under isotropic surface growth, the hemiellipsoid becomes sphere-like, i.e., the ratio between the longest and shortest axial length tends to 1; (ii) in contrast, under anisotropic surface growth, the tissue elongates and flattens, i.e., the ratio between the longest and shortest axial length is enhanced. These results motivate us to apply the latter growth law to the realistic example of a vertebrate limb bud, which shows similar elongation and flattening during development. As expected, our numerical simulation succeeded in reproducing the essential aspects of morphological change in the limb bud, providing a new hypothesis for the vertebrate limb development.",
+    "author_highlights": [
+        {
+            "endOffset": 62445,
+            "sentence": "Mechanical model of the development of hollow epithelial tissues.",
+            "startOffset": 62380
+        },
+        {
+            "endOffset": 62533,
+            "sentence": "Anisotropic surface growth model that depends on the direction of the principal stress.",
+            "startOffset": 62446
+        },
+        {
+            "endOffset": 62642,
+            "sentence": "The essential aspects of shape change in developing epithelial tissues was captured with our proposed model.",
+            "startOffset": 62534
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Larry A.",
+                    "initial": "L.A.",
+                    "last": "Taber"
+                }
+            ],
+            "doi": "10.1115/1.3005109",
+            "firstpage": "487",
+            "issn": "00036900",
+            "lastpage": "545",
+            "pub_year": 1995,
+            "title": "Biomechanics of growth, remodeling, and morphogenesis",
+            "volume": "48"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Maas"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Himpel"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Menzel"
+                }
+            ],
+            "doi": "10.1007/s10237-006-0062-x",
+            "firstpage": "321",
+            "issn": "16177959",
+            "lastpage": "331",
+            "pmid": "17119902",
+            "pub_year": 2007,
+            "title": "Computational modeling of arterial wall growth : AAAttempts towards patient-specific simulations based on computer tomography",
+            "volume": "6"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Socci"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Pennati"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Gervaso"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Vena"
+                }
+            ],
+            "doi": "10.1007/s10237-006-0047-9",
+            "firstpage": "177",
+            "issn": "16177959",
+            "lastpage": "188",
+            "pmid": "16767451",
+            "pub_year": 2007,
+            "title": "An axisymmetric computational model of skin expansion and growth",
+            "volume": "6"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "Adri\u00e1n",
+                    "initial": "A.",
+                    "last": "Buganza Tepole"
+                },
+                {
+                    "first": "Christopher",
+                    "initial": "C.",
+                    "last": "Joseph Ploch"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Wong"
+                },
+                {
+                    "first": "Arun K.",
+                    "initial": "A.K.",
+                    "last": "Gosain"
+                },
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1016/j.jmps.2011.05.004",
+            "firstpage": "2177",
+            "issn": "00225096",
+            "lastpage": "2190",
+            "pub_year": 2011,
+            "title": "Growing skin: A computational model for skin expansion in reconstructive surgery",
+            "volume": "59"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Alexander M.",
+                    "initial": "A.M.",
+                    "last": "Z\u00f6llner"
+                },
+                {
+                    "first": "Adrian",
+                    "initial": "A.",
+                    "last": "Buganza Tepole"
+                },
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1016/j.jtbi.2011.12.022",
+            "firstpage": "166",
+            "issn": "00225193",
+            "lastpage": "175",
+            "pmid": "22227432",
+            "pub_year": 2012,
+            "title": "On the biomechanics and mechanobiology of growing skin",
+            "volume": "297"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Wilco",
+                    "initial": "W.",
+                    "last": "Kroon"
+                },
+                {
+                    "first": "Tammo",
+                    "initial": "T.",
+                    "last": "Delhaas"
+                },
+                {
+                    "first": "Theo",
+                    "initial": "T.",
+                    "last": "Arts"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Bovendeerd"
+                }
+            ],
+            "doi": "10.1007/s10237-008-0136-z",
+            "firstpage": "301",
+            "issn": "16177959",
+            "lastpage": "309",
+            "pmid": "18758835",
+            "pub_year": 2009,
+            "title": "Computational modeling of volumetric soft tissue growth: Application to the cardiac left ventricle",
+            "volume": "8"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "M. K.",
+                    "initial": "M.K.",
+                    "last": "Rausch"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Dam"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "G\u00f6ktepe"
+                },
+                {
+                    "first": "O. J.",
+                    "initial": "O.J.",
+                    "last": "Abilez"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1007/s10237-010-0275-x",
+            "firstpage": "799",
+            "issn": "16177959",
+            "lastpage": "811",
+            "pmid": "21188611",
+            "pub_year": 2011,
+            "title": "Computational modeling of growth: Systemic and pulmonary hypertension in the heart",
+            "volume": "10"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "Alexander M.",
+                    "initial": "A.M.",
+                    "last": "Z\u00f6llner"
+                },
+                {
+                    "first": "Oscar J.",
+                    "initial": "O.J.",
+                    "last": "Abilez"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "B\u00f6l"
+                },
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0045661",
+            "issn": "19326203",
+            "pmid": "23049683",
+            "pub_year": 2012,
+            "title": "Stretching Skeletal Muscle: Chronic Muscle Lengthening through Sarcomerogenesis",
+            "volume": "7"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Tuomas",
+                    "initial": "T.",
+                    "last": "Tallinen"
+                },
+                {
+                    "first": "Jun Young",
+                    "initial": "J.Y.",
+                    "last": "Chung"
+                },
+                {
+                    "first": "Fran\u00e7ois",
+                    "initial": "F.",
+                    "last": "Rousseau"
+                },
+                {
+                    "first": "Nadine",
+                    "initial": "N.",
+                    "last": "Girard"
+                },
+                {
+                    "first": "Julien",
+                    "initial": "J.",
+                    "last": "Lef\u00e8vre"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Mahadevan"
+                }
+            ],
+            "doi": "10.1038/nphys3632",
+            "firstpage": "588",
+            "issn": "17452473",
+            "lastpage": "593",
+            "pub_year": 2016,
+            "title": "On the growth and form of cortical convolutions",
+            "volume": "12"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Vito",
+                    "initial": "V.",
+                    "last": "Conte"
+                },
+                {
+                    "first": "Jos\u00e9 J.",
+                    "initial": "J.J.",
+                    "last": "Mu\u00f1oz"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Miodownik"
+                }
+            ],
+            "doi": "10.1016/j.jmbbm.2007.10.002",
+            "firstpage": "188",
+            "issn": "17516161",
+            "lastpage": "198",
+            "pmid": "19627783",
+            "pub_year": 2008,
+            "title": "A 3D finite element model of ventral furrow invagination in the Drosophila melanogaster embryo",
+            "volume": "1"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Thierry",
+                    "initial": "T.",
+                    "last": "Savin"
+                },
+                {
+                    "first": "Natasza A.",
+                    "initial": "N.A.",
+                    "last": "Kurpios"
+                },
+                {
+                    "first": "Amy E.",
+                    "initial": "A.E.",
+                    "last": "Shyer"
+                },
+                {
+                    "first": "Patricia",
+                    "initial": "P.",
+                    "last": "Florescu"
+                },
+                {
+                    "first": "Haiyi",
+                    "initial": "H.",
+                    "last": "Liang"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Mahadevan"
+                },
+                {
+                    "first": "Clifford J.",
+                    "initial": "C.J.",
+                    "last": "Tabin"
+                }
+            ],
+            "doi": "10.1038/nature10277",
+            "firstpage": "57",
+            "issn": "00280836",
+            "lastpage": "63",
+            "pmid": "21814276",
+            "pub_year": 2011,
+            "title": "On the growth and form of the gut",
+            "volume": "476"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Garikipati"
+                },
+                {
+                    "first": "E. M.",
+                    "initial": "E.M.",
+                    "last": "Arruda"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Grosh"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Narayanan"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Calve"
+                }
+            ],
+            "doi": "10.1016/j.jmps.2004.01.004",
+            "firstpage": "1595",
+            "issn": "00225096",
+            "lastpage": "1625",
+            "pub_year": 2004,
+            "title": "A continuum treatment of growth in biological tissue: The coupling of mass transport and mechanics",
+            "volume": "52"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Claudio",
+                    "initial": "C.",
+                    "last": "Collinet"
+                },
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Rauzi"
+                },
+                {
+                    "first": "Pierre Fran\u00e7ois",
+                    "initial": "P.F.",
+                    "last": "Lenne"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Lecuit"
+                }
+            ],
+            "doi": "10.1038/ncb3226",
+            "firstpage": "1247",
+            "issn": "14657392",
+            "lastpage": "1258",
+            "pmid": "26389664",
+            "pub_year": 2015,
+            "title": "Local and tissue-scale forces drive oriented junction growth during tissue extension",
+            "volume": "17"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "Asako",
+                    "initial": "A.",
+                    "last": "Shindo"
+                },
+                {
+                    "first": "John B.",
+                    "initial": "J.B.",
+                    "last": "Wallingford"
+                }
+            ],
+            "doi": "10.1126/science.1243126",
+            "firstpage": "649",
+            "issn": "00368075",
+            "lastpage": "652",
+            "pmid": "24503851",
+            "pub_year": 2014,
+            "title": "PCP and septins compartmentalize cortical actomyosin to direct collective cell movement",
+            "volume": "343"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Sevan",
+                    "initial": "S.",
+                    "last": "Hopyan"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Sharpe"
+                },
+                {
+                    "first": "Yingzi",
+                    "initial": "Y.",
+                    "last": "Yang"
+                }
+            ],
+            "doi": "10.1002/dvdy.22601",
+            "firstpage": "1054",
+            "issn": "10588388",
+            "lastpage": "1062",
+            "pmid": "21384474",
+            "pub_year": 2011,
+            "title": "Budding behaviors: Growth of the limb as a model of morphogenesis",
+            "volume": "240"
+        },
+        "bib23": {
+            "authors": [
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Ede"
+                },
+                {
+                    "first": "J. T.",
+                    "initial": "J.T.",
+                    "last": "Law"
+                }
+            ],
+            "doi": "10.1038/221244a0",
+            "firstpage": "244",
+            "issn": "00280836",
+            "lastpage": "248",
+            "pmid": "5812579",
+            "pub_year": 1969,
+            "title": "Computer simulation of vertebrate limb morphogenesis",
+            "volume": "221"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Yoshihiro",
+                    "initial": "Y.",
+                    "last": "Morishita"
+                },
+                {
+                    "first": "Atsushi",
+                    "initial": "A.",
+                    "last": "Kuroiwa"
+                },
+                {
+                    "first": "Takayuki",
+                    "initial": "T.",
+                    "last": "Suzuki"
+                }
+            ],
+            "doi": "10.1242/dev.109728",
+            "firstpage": "1672",
+            "issn": "09501991",
+            "lastpage": "1683",
+            "pmid": "25858459",
+            "pub_year": 2015,
+            "title": "Quantitative analysis of tissue deformation dynamics reveals three characteristic growth modes and globally aligned anisotropic tissue deformation during chick limb development",
+            "volume": "142"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Takayuki",
+                    "initial": "T.",
+                    "last": "Suzuki"
+                },
+                {
+                    "first": "Yoshihiro",
+                    "initial": "Y.",
+                    "last": "Morishita"
+                }
+            ],
+            "doi": "10.1016/j.gde.2017.04.005",
+            "firstpage": "108",
+            "issn": "0959437X",
+            "lastpage": "114",
+            "pmid": "28502890",
+            "pub_year": 2017,
+            "title": "A quantitative approach to understanding vertebrate limb morphogenesis at the macroscopic tissue level",
+            "volume": "45"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Menzel"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Steinmann"
+                }
+            ],
+            "doi": "10.1007/s00466-003-0463-y",
+            "firstpage": "71",
+            "issn": "01787675",
+            "lastpage": "88",
+            "pub_year": 2003,
+            "title": "Computational modeling of growth. A critical review, a classification of concepts and two new consistent approaches",
+            "volume": "32"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Himpel"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Menzel"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Steinmann"
+                }
+            ],
+            "firstpage": "119",
+            "issn": "15261492",
+            "lastpage": "134",
+            "pub_year": 2005,
+            "title": "Computational modelling of isotropic multiplicative growth",
+            "volume": "8"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "V. A.",
+                    "initial": "V.A.",
+                    "last": "Lubarda"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Hoger"
+                }
+            ],
+            "doi": "10.1016/S0020-7683(02)00352-9",
+            "firstpage": "4627",
+            "issn": "00207683",
+            "lastpage": "4664",
+            "pub_year": 2002,
+            "title": "On the mechanics of solids with a growing mass",
+            "volume": "39"
+        },
+        "bib29": {
+            "authors": [
+                {
+                    "first": "Stephen M.",
+                    "initial": "S.M.",
+                    "last": "Klisch"
+                },
+                {
+                    "first": "Timothy J.",
+                    "initial": "T.J.",
+                    "last": "Van Dyke"
+                },
+                {
+                    "first": "Anne",
+                    "initial": "A.",
+                    "last": "Hoger"
+                }
+            ],
+            "doi": "10.1177/108128650100600601",
+            "firstpage": "551",
+            "issn": "10812865",
+            "lastpage": "575",
+            "pub_year": 2001,
+            "title": "A theory of volumetric growth for compressible elastic biological materials",
+            "volume": "6"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Ambrosi"
+                },
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Ateshian"
+                },
+                {
+                    "first": "E. M.",
+                    "initial": "E.M.",
+                    "last": "Arruda"
+                },
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Cowin"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Dumais"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Goriely"
+                },
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Holzapfel"
+                },
+                {
+                    "first": "J. D.",
+                    "initial": "J.D.",
+                    "last": "Humphrey"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Kemkemer"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Olberding"
+                },
+                {
+                    "first": "L. A.",
+                    "initial": "L.A.",
+                    "last": "Taber"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Garikipati"
+                }
+            ],
+            "doi": "10.1016/j.jmps.2010.12.011",
+            "firstpage": "863",
+            "issn": "00225096",
+            "lastpage": "883",
+            "pub_year": 2011,
+            "title": "Perspectives on biological growth and remodeling",
+            "volume": "59"
+        },
+        "bib30": {
+            "authors": [
+                {
+                    "first": "Marcelo",
+                    "initial": "M.",
+                    "last": "Epstein"
+                },
+                {
+                    "first": "G\u00e9rard A.",
+                    "initial": "G.A.",
+                    "last": "Maugin"
+                }
+            ],
+            "doi": "10.1016/S0749-6419(99)00081-9",
+            "firstpage": "951",
+            "issn": "07496419",
+            "lastpage": "978",
+            "pub_year": 2000,
+            "title": "Thermomechanics of volumetric growth in uniform bodies",
+            "volume": "16"
+        },
+        "bib31": null,
+        "bib32": null,
+        "bib33": {
+            "authors": [
+                {
+                    "first": "Yoshihiro",
+                    "initial": "Y.",
+                    "last": "Morishita"
+                },
+                {
+                    "first": "Ken Ichi",
+                    "initial": "K.I.",
+                    "last": "Hironaka"
+                },
+                {
+                    "first": "Sang Woo",
+                    "initial": "S.W.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Takashi",
+                    "initial": "T.",
+                    "last": "Jin"
+                },
+                {
+                    "first": "Daisuke",
+                    "initial": "D.",
+                    "last": "Ohtsuka"
+                }
+            ],
+            "doi": "10.1038/s41467-017-00023-7",
+            "issn": "20411723",
+            "pmid": "28465614",
+            "pub_year": 2017,
+            "title": "Reconstructing 3D deformation dynamics for curved epithelial sheet morphogenesis from positional data of sparsely-labeled cells",
+            "volume": "8"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Holzapfel"
+                },
+                {
+                    "first": "R. W.",
+                    "initial": "R.W.",
+                    "last": "Ogden"
+                }
+            ],
+            "doi": "10.1007/3-540-31184-X",
+            "firstpage": "1",
+            "lastpage": "522",
+            "pub_year": 2006,
+            "title": "Mechanics of biological tissue"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "Viktor",
+                    "initial": "V.",
+                    "last": "Hamburger"
+                },
+                {
+                    "first": "Howard L.",
+                    "initial": "H.L.",
+                    "last": "Hamilton"
+                }
+            ],
+            "doi": "10.1002/jmor.1050880104",
+            "firstpage": "49",
+            "issn": "03622525",
+            "lastpage": "92",
+            "pmid": "24539719",
+            "pub_year": 1951,
+            "title": "A series of normal stages in the development of the chick embryo",
+            "volume": "88"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Boehm"
+                },
+                {
+                    "first": "Henrik",
+                    "initial": "H.",
+                    "last": "Westerberg"
+                },
+                {
+                    "first": "Gaja",
+                    "initial": "G.",
+                    "last": "Lesnicar-Pucko"
+                },
+                {
+                    "first": "Sahdia",
+                    "initial": "S.",
+                    "last": "Raja"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Rautschka"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Cotterell"
+                },
+                {
+                    "first": "Jim",
+                    "initial": "J.",
+                    "last": "Swoger"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Sharpe"
+                }
+            ],
+            "doi": "10.1371/journal.pbio.1000420",
+            "issn": "15449173",
+            "pmid": "20644711",
+            "pub_year": 2010,
+            "title": "The role of spatially controlled cell proliferation in limb bud morphogenesis",
+            "volume": "8"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "J. G.",
+                    "initial": "J.G.",
+                    "last": "Barnett"
+                },
+                {
+                    "first": "R. G.",
+                    "initial": "R.G.",
+                    "last": "Holly"
+                },
+                {
+                    "first": "C. R.",
+                    "initial": "C.R.",
+                    "last": "Ashmore"
+                }
+            ],
+            "firstpage": "C39",
+            "issn": "03636143",
+            "lastpage": "C46",
+            "pmid": "6156603",
+            "pub_year": 1980,
+            "title": "Stretch-induced growth in chicken wing muscles: Biochemical and morphological characterization",
+            "volume": "8"
+        },
+        "bib38": {
+            "authors": [
+                {
+                    "first": "Manuel K.",
+                    "initial": "M.K.",
+                    "last": "Rausch"
+                },
+                {
+                    "first": "Frederick A.",
+                    "initial": "F.A.",
+                    "last": "Tibayan"
+                },
+                {
+                    "first": "Neil B.",
+                    "initial": "N.B.",
+                    "last": "Ingels"
+                },
+                {
+                    "first": "D. Craig",
+                    "initial": "D.C.",
+                    "last": "Miller"
+                },
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1007/s10439-013-0813-7",
+            "firstpage": "2171",
+            "issn": "00906964",
+            "lastpage": "2180",
+            "pmid": "23636575",
+            "pub_year": 2013,
+            "title": "Mechanics of the mitral annulus in chronic ischemic cardiomyopathy",
+            "volume": "41"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Gareth Wyn",
+                    "initial": "G.W.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "S. Jonathan",
+                    "initial": "S.J.",
+                    "last": "Chapman"
+                }
+            ],
+            "doi": "10.1137/080731785",
+            "firstpage": "52",
+            "issn": "00361445",
+            "lastpage": "118",
+            "pub_year": 2012,
+            "title": "Modeling growth in biological materials",
+            "volume": "54"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Kuhl"
+                }
+            ],
+            "doi": "10.1016/j.jmbbm.2013.10.009",
+            "firstpage": "529",
+            "issn": "17516161",
+            "lastpage": "543",
+            "pmid": "24239171",
+            "pub_year": 2014,
+            "title": "Growing matter: A review of growth in living systems",
+            "volume": "29"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Edward K.",
+                    "initial": "E.K.",
+                    "last": "Rodriguez"
+                },
+                {
+                    "first": "Anne",
+                    "initial": "A.",
+                    "last": "Hoger"
+                },
+                {
+                    "first": "Andrew D.",
+                    "initial": "A.D.",
+                    "last": "McCulloch"
+                }
+            ],
+            "doi": "10.1016/0021-9290(94)90021-3",
+            "firstpage": "455",
+            "issn": "00219290",
+            "lastpage": "467",
+            "pmid": "8188726",
+            "pub_year": 1994,
+            "title": "Stress-dependent finite growth in soft elastic tissues",
+            "volume": "27"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "E. H.",
+                    "initial": "E.H.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1115/1.3564580",
+            "firstpage": "1",
+            "issn": "00218936",
+            "lastpage": "6",
+            "pub_year": 1964,
+            "title": "Elastic-plastic deformation at finite strains",
+            "volume": "36"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "E. A.",
+                    "initial": "E.A.",
+                    "last": "De Souza Neto"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Peri\u0107"
+                },
+                {
+                    "first": "D. R.J.",
+                    "initial": "D.R.J.",
+                    "last": "Owen"
+                }
+            ],
+            "doi": "10.1002/9780470694626",
+            "firstpage": "1",
+            "lastpage": "791",
+            "pub_year": 2008,
+            "title": "Computational Methods for Plasticity: Theory and Applications"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Menzel"
+                }
+            ],
+            "doi": "10.1007/s10237-006-0061-y",
+            "firstpage": "303",
+            "issn": "16177959",
+            "lastpage": "320",
+            "pmid": "17149642",
+            "pub_year": 2007,
+            "title": "A fibre reorientation model for orthotropic multiplicative growth : CCConfigurational driving stresses, kinematics-based reorientation, and algorithmic aspects",
+            "volume": "6"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 66448,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Such simulations have succeeded in reproducing similar morphologies to those observed during development.",
+            "startOffset": 66343,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68657,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Given the above considerations, here we focus on the growth of the epithelium that previously has received little attention as a determining component in limb-specific morphogenesis.",
+            "startOffset": 68475,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96927,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "In a future work, we will generalize our constitutive growth law (anisotropic growth law) such that it properly includes the current stress distribution or its history.",
+            "startOffset": 96759,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 95328,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 95323,
+                    "startOffset": 95321
+                },
+                "bib38": {
+                    "endOffset": 95326,
+                    "startOffset": 95324
+                }
+            },
+            "secId": "sec7",
+            "sentence": "In mature tissues such as skeletal muscle and heart valves, mechanically-driven fiber growth has been proposed and able to explain many physiological/pathological phenomena [16,38].",
+            "startOffset": 95147,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 78060,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Methods III: implementation in the finite element method"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In the quasi-static state, the weak-form equations of the initial/boundary value problem of the balance law of linear momentum with respect to the initial configuration are expressed as the following variational problem.",
+            "startOffset": 77840,
+            "title": "Weak-form equation of balance of linear momentum and its linearization"
+        },
+        {
+            "endOffset": 73621,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Methods I: constitutive law for the growth"
+                }
+            ],
+            "secId": "sec2.6",
+            "sentence": "From the above considerations, the constitutive law for the growth is defined as the following initial-value problem:",
+            "startOffset": 73504,
+            "title": "Constitutive initial-value problem"
+        },
+        {
+            "endOffset": 95571,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Using this hypothesis, some mathematical models have been proposed and examined.",
+            "startOffset": 95491,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 66006,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Unlike the growth of mature soft tissues, such as the enlargement (hypertrophy) of arterial walls and cardiac muscles or, the formation of tumors (tumorigenesis), developing tissues grow in such a way that they build highly reproducible morphologies specific to the corresponding organs such as the limbs, brain and intestine.",
+            "startOffset": 65680,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86257,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Numerical analysis"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Linear systems and eigenvalue problems are solved using LAPACK routines (included in the Intel Math Kernel Library).",
+            "startOffset": 86141,
+            "title": "Conditions for the numerical analysis"
+        },
+        {
+            "endOffset": 63549,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 63543,
+                    "startOffset": 63542
+                },
+                "bib3": {
+                    "endOffset": 63547,
+                    "startOffset": 63544
+                },
+                "bib4": {
+                    "endOffset": 63547,
+                    "startOffset": 63544
+                },
+                "bib5": {
+                    "endOffset": 63547,
+                    "startOffset": 63544
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The past two decades have seen a considerable amount of biomechanical research concerning growth, remodeling and morphogenesis [1,3\u20135].",
+            "startOffset": 63414,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77682,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section, we describe the implementation of the constitutive law and balance law of linear momentum discussed in Sections 2 and 3 into the FEM.",
+            "startOffset": 77532,
+            "title": "Methods III: implementation in the finite element method"
+        },
+        {
+            "endOffset": 95834,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Therefore, an alternative mathematical model that captures morphologies similar to the limb bud is required.",
+            "startOffset": 95726,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 96563,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "To simplify the computation, we considered anisotropic growth regulated by the distribution of the initial stress.",
+            "startOffset": 96449,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 96758,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "As shown in Appendix B, it was confirmed that there is no significant difference in the direction of principal stress when the material grows at most 2 to 3 times compared to the initial volume.",
+            "startOffset": 96564,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 74225,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In this section, we derive the balance law of linear momentum with the growth.",
+            "startOffset": 74147,
+            "title": "Methods II: balance law of linear momentum"
+        },
+        {
+            "endOffset": 86140,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Numerical analysis"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "In the finite element approximation, 8-node isoparametric hexahedral finite elements are used.",
+            "startOffset": 86046,
+            "title": "Conditions for the numerical analysis"
+        },
+        {
+            "endOffset": 96449,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Currently, this assumption can be verified, at least locally (i.e., not the entire limb bud), using experimental methods such as laser ablation whereby the direction of maximum principal stress is specified, and by using advanced microscopic techniques, such as confocal or two-photon microscopy, the rearrangement of cells can be visualized.",
+            "startOffset": 96107,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 69397,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Throughout this paper, the term growth is defined as the process by which a material changes actively in form with the addition/subtraction of mass without changing its mechanical properties.",
+            "startOffset": 69206,
+            "title": "Methods I: constitutive law for the growth"
+        },
+        {
+            "endOffset": 74362,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the growth process the material time derivative of the mass does not vanish, in contrast to a conventional mass-conserving continuum.",
+            "startOffset": 74226,
+            "title": "Methods II: balance law of linear momentum"
+        },
+        {
+            "endOffset": 92846,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The following are the supplementary data related to this article:",
+            "startOffset": 92781,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 66700,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In addition to the morphological change primarily driven by external load or determined by boundary conditions, recent observations of developing tissues have shown that most cells are more or less motile and frequently change their relative position.",
+            "startOffset": 66449,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87758,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "The discretization and Dirichlet boundary conditions are depicted in Fig. 2 (right).",
+            "startOffset": 87674,
+            "title": "Example 1: growth of the thick-walled hollow hemiellipsoid"
+        },
+        {
+            "endOffset": 95490,
+            "parents": [],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 95488,
+                    "startOffset": 95486
+                }
+            },
+            "secId": "sec7",
+            "sentence": "In regard to limb development, one hypothesis for the mechanism is that longitudinal growth is driven by the production of mass at the tip of the structure [22].",
+            "startOffset": 95329,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 90487,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "As a possible mechanism for the unidirectional elongation, we examine here the following scenario.",
+            "startOffset": 90389,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 67121,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Based on these background studies, here, we examine the effects of stress-dependent active and anisotropic growth on the morphology of developing tissues.",
+            "startOffset": 66967,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90729,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "In this scenario, the internal pressure originates from the growth of mesenchyme.",
+            "startOffset": 90648,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 74592,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "These three quantities are required for the derivation of the balance law of linear momentum.",
+            "startOffset": 74499,
+            "title": "Methods II: balance law of linear momentum"
+        },
+        {
+            "endOffset": 92781,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Supplementary video related to this article can be found at https://doi.org/10.1016/j.finel.2018.03.001.",
+            "startOffset": 92677,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 97634,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "It is quite difficult from experiments alone to examine how the morphology of biological tissues is determined.",
+            "startOffset": 97523,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 63135,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 63133,
+                    "startOffset": 63130
+                },
+                "bib2": {
+                    "endOffset": 63133,
+                    "startOffset": 63130
+                },
+                "bib3": {
+                    "endOffset": 63133,
+                    "startOffset": 63130
+                }
+            },
+            "secId": "sec1",
+            "sentence": "These processes include the addition/subtraction of mass through the cell growth and death, active deformation via cell rearrangement, and changes in mechanical properties in response to surrounding mechano-chemical environments [1\u20133].",
+            "startOffset": 62900,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64924,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 64920,
+                    "startOffset": 64919
+                },
+                "bib3": {
+                    "endOffset": 64922,
+                    "startOffset": 64921
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Due to the complicated molecular and cellular responses which affect growth, there has been no agreement on which mechanical variables, such as stress or strain, are suitable for modeling this growth [1,3].",
+            "startOffset": 64718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90647,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The epithelium (sac-like outer component of the bud) grows actively in a direction-dependent manner in response to the stress induced by the internal pressure.",
+            "startOffset": 90488,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 65141,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "At present, the continuum mechanical approach to the study of growth is at the stage in which constitutive laws that could explain individual growth process in each species or tissue can be proposed and demonstrated.",
+            "startOffset": 64925,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74498,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Next, we define the pseudo mass density.",
+            "startOffset": 74458,
+            "title": "Methods II: balance law of linear momentum"
+        },
+        {
+            "endOffset": 68474,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 68451,
+                    "startOffset": 68449
+                },
+                "bib25": {
+                    "endOffset": 68454,
+                    "startOffset": 68452
+                }
+            },
+            "secId": "sec1",
+            "sentence": "However, it has been shown that the mesenchymally-biased-growth model can not fully explain the observed, in that the quantified deformation pattern that occurs during chick limb development is quite different from the pattern expected based on the model (see Refs. [24,25] for more details).",
+            "startOffset": 68182,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87011,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In this section, several numerical examples are presented to illustrate the constitutive law and its implementation into the FEM as described above.",
+            "startOffset": 86863,
+            "title": "Results"
+        },
+        {
+            "endOffset": 63670,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Among these processes, soft tissue growth has attracted much attention from researchers of many different subject areas.",
+            "startOffset": 63550,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90388,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 90236,
+                    "startOffset": 90234
+                },
+                "bib36": {
+                    "endOffset": 90239,
+                    "startOffset": 90237
+                }
+            },
+            "secId": "sec6.2",
+            "sentence": "Especially, from the previous quantitative studies [24,36], it is known that the limb elongation is not realized due to the spatial difference of growth speed in mesenshyme (the inner component of the bud).",
+            "startOffset": 90182,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 67688,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Under this law, we show that the hemiellipsoid elongates along its semi-major axis and collapses along its semi-minor axis, which leads to the elongation and oblateness of the epithelial tissue.",
+            "startOffset": 67494,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63863,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "First, this interest can be attributed to the availability of new information pertaining to the mechanical aspects of biological soft tissues resulting from advances in measurement techniques.",
+            "startOffset": 63671,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64717,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "While the multiplicative decomposition of the deformation gradient has become a standard approach to growth modeling, identifying the appropriate types of growth deformation gradients suitable for focal phenomena is not an easy task.",
+            "startOffset": 64484,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95725,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 95720,
+                    "startOffset": 95718
+                },
+                "bib25": {
+                    "endOffset": 95723,
+                    "startOffset": 95721
+                }
+            },
+            "secId": "sec7",
+            "sentence": "However, while simulations using those models could reproduce the tissue elongation, the expected deformation pattern differed from the observed [24,25].",
+            "startOffset": 95572,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 90181,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 90176,
+                    "startOffset": 90174
+                },
+                "bib25": {
+                    "endOffset": 90179,
+                    "startOffset": 90177
+                }
+            },
+            "secId": "sec6.2",
+            "sentence": "As stated in the introduction, how the limb specific morphology is constructed is a still open question [24,25].",
+            "startOffset": 90069,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 88075,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "This internal pressure is chosen to be equal to the vein pressure which ranges from 0 to 10 [mmHg] so that it does not significantly affect the overall shape in the initial configuration.",
+            "startOffset": 87888,
+            "title": "Example 1: growth of the thick-walled hollow hemiellipsoid"
+        },
+        {
+            "endOffset": 65582,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In contrast, compared to the mechanical study of growth in mature soft tissues, the mechanical study of embryonic tissue development, as another example of growth, is a relatively young field.",
+            "startOffset": 65390,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68181,
+            "parents": [],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 68176,
+                    "startOffset": 68174
+                },
+                "bib23": {
+                    "endOffset": 68179,
+                    "startOffset": 68177
+                }
+            },
+            "secId": "sec1",
+            "sentence": "To illustrate the mechanism of how the limb bud elongates, researchers have proposed several hypotheses especially focused on the spatially-biased growth of its inner component (the mesenchyme), enveloped by its outer component (the epithelium) [22,23].",
+            "startOffset": 67928,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66835,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This is especially true in the development of epithelial tissues, where this behavior is known as cell rearrangement or intercalation.",
+            "startOffset": 66701,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64004,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Second, increasing computing power, which enables more realistic simulations, has made such a complicated nonlinear problem more accessible.",
+            "startOffset": 63864,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93040,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Finite element simulation of the chick limb development under Rule 2 (Eq. (5.5)).",
+            "startOffset": 92959,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 67493,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As an example, we apply our proposed law to a hollow thick-walled hemiellipsoid which is an idealized structure generally observed in the early development of epitherlal tissues.",
+            "startOffset": 67315,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69503,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this section, a constitutive law for the growth is formulated in the framework of continuum mechanics.",
+            "startOffset": 69398,
+            "title": "Methods I: constitutive law for the growth"
+        },
+        {
+            "endOffset": 97863,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "As performed in this study, mathematical modeling, numerical analysis, and simulation of the biological phenomena can be useful methods or tools for identifying the mechanical laws governing growth, remodeling and morphogenesis.",
+            "startOffset": 97635,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 66121,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Thus far, in mechanical studies of the developing tissues, instability and buckling analysis has been a hot issue.",
+            "startOffset": 66007,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63280,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "While such processes are not generally observed in engineering materials, they often characterize the mechanical behavior of biological tissues.",
+            "startOffset": 63136,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96106,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "In this model we assume that cells are actively rearranged perpendicular to the direction of maximum principal stress, although this assumption needs to be confirmed experimentally.",
+            "startOffset": 95925,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 64200,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "From a mechanical perspective, a continuum mechanics approach has been widely adopted for the analysis of soft tissue growth; the main issue being how to formulate the constitutive law of growth.",
+            "startOffset": 64005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66967,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 66962,
+                    "startOffset": 66960
+                },
+                "bib21": {
+                    "endOffset": 66965,
+                    "startOffset": 66963
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Moreover, experimental studies have suggested a relationship between such cellular behaviors and the stress within tissues [20,21].",
+            "startOffset": 66836,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74457,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Hence, we begin by defining the time rates of mass change per unit initial and current volume.",
+            "startOffset": 74363,
+            "title": "Methods II: balance law of linear momentum"
+        },
+        {
+            "endOffset": 92943,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Finite element simulation of the chick limb development under Rule 1 (Eq. (5.4)).",
+            "startOffset": 92862,
+            "title": "Example 2: application to the development of the chick limb bud"
+        },
+        {
+            "endOffset": 62899,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Biological tissues are continuously undergoing processes of growth, remodeling and morphogenesis.",
+            "startOffset": 62802,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65679,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The limited research in this area might be attributed to the complexities of developing tissues.",
+            "startOffset": 65583,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87135,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The examples we use are in application to the development of biological soft tissue with a thick-walled sac-like structure.",
+            "startOffset": 87012,
+            "title": "Results"
+        },
+        {
+            "endOffset": 68818,
+            "parents": [],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 68813,
+                    "startOffset": 68811
+                },
+                "bib27": {
+                    "endOffset": 68816,
+                    "startOffset": 68814
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For the methodology, we adopt the multiplicative decomposition of the deformation gradient similar to that used in previous works on mature soft tissues [26,27].",
+            "startOffset": 68657,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63414,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "By undergoing growth, remodeling and morphogenesis, biological tissues can appropriately achieve their specific shapes and functions.",
+            "startOffset": 63281,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87673,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "Because of the symmetry of the tri-axial hemiellipsoid, only a quarter of the structure is analyzed.",
+            "startOffset": 87573,
+            "title": "Example 1: growth of the thick-walled hollow hemiellipsoid"
+        },
+        {
+            "endOffset": 95924,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "We proposed a new mechanical model in which the initial stress drives anisotropic growth.",
+            "startOffset": 95835,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 95146,
+            "parents": [],
+            "refoffsets": {
+                "bib37": {
+                    "endOffset": 95144,
+                    "startOffset": 95142
+                },
+                "bib5": {
+                    "endOffset": 95141,
+                    "startOffset": 95140
+                }
+            },
+            "secId": "sec7",
+            "sentence": "From a continuum mechanics approach, the elongation or the longitudinal growth of biological tissues (growth that takes place along a particular direction) is assumed to be controlled by a unidirectional mechanism such as fiber stretch [5,37].",
+            "startOffset": 94903,
+            "title": "Discussion and conclusion"
+        },
+        {
+            "endOffset": 69163,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The corresponding constitutive initial/boundary-value problem is formulated to be suitable for the conventional total-Lagrangian-type FEM and the comprehensive description of this methodology is detailed in a general setting.",
+            "startOffset": 68938,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67927,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As a realistic biological application, we apply this law to the early development of the chick limb bud which is characterized by the structural change described above, i.e., the elongation along one axis and flattening along another axis.",
+            "startOffset": 67688,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87887,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "As Neumann boundary conditions, the hollow thick-walled hemiellipsoid is subjected to a constant internal pressure of 1.0 [kPa].",
+            "startOffset": 87759,
+            "title": "Example 1: growth of the thick-walled hollow hemiellipsoid"
+        },
+        {
+            "endOffset": 97931,
+            "parents": [],
+            "secId": "sec8",
+            "sentence": "This work was supported by KAKENHI grant no. 16KT0081 for YM.",
+            "startOffset": 97870,
+            "title": "Funding"
+        },
+        {
+            "endOffset": 64483,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 64400,
+                    "startOffset": 64399
+                },
+                "bib7": {
+                    "endOffset": 64479,
+                    "startOffset": 64478
+                },
+                "bib8": {
+                    "endOffset": 64481,
+                    "startOffset": 64480
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In constructing the constitutive law, growth is characterized as the addition/subtraction of mass by multiplicative decomposition of the deformation gradient into a growth part and an elastic part [6], as introduced in the context of the finite-strain elastoplasticity theory [7,8].",
+            "startOffset": 64201,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67314,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In describing the growth law, i.e., constitutive growth law, we assume that cell rearrangement actively occurs within a preferable direction determined by the directions of principal stresses.",
+            "startOffset": 67122,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65390,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib11": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib12": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib13": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib14": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib15": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib16": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                },
+                "bib9": {
+                    "endOffset": 65388,
+                    "startOffset": 65384
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Until now, the growth of various types of mature soft tissues, such as the arterial wall, skin, heart, and muscle, have been studied and appropriate constitutive laws have been established based on continuum mechanics and numerical analysis [9\u201316].",
+            "startOffset": 65142,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66342,
+            "parents": [],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 66340,
+                    "startOffset": 66335
+                },
+                "bib18": {
+                    "endOffset": 66340,
+                    "startOffset": 66335
+                },
+                "bib19": {
+                    "endOffset": 66340,
+                    "startOffset": 66335
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For example, the patterns of the brain gyri, the gastrulation process, and the development of periodic looping structures such as the intestine have been simulated based on the buckling of hyperelastic materials [17\u201319].",
+            "startOffset": 66122,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77767,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "We apply standard nonlinear finite-element techniques formulated in Lagrangian form.",
+            "startOffset": 77683,
+            "title": "Methods III: implementation in the finite element method"
+        },
+        {
+            "endOffset": 68937,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We formulate two growth deformation gradient tensors and simulate the phenomena using the finite element method (FEM).",
+            "startOffset": 68819,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86045,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Numerical analysis"
+                }
+            ],
+            "secId": "sec5.4",
+            "sentence": "Finite element analysis is conducted using an in-house research code developed for analyzing nonlinear geometric and material problems with growth.",
+            "startOffset": 85898,
+            "title": "Conditions for the numerical analysis"
+        }
+    ],
+    "docId": "S0168874X17306923",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "naoki.kida@riken.jp",
+                "first": "Naoki",
+                "initial": "N.",
+                "last": "Kida"
+            },
+            {
+                "email": "morishita@cdb.riken.jp",
+                "first": "Yoshihiro",
+                "initial": "Y.",
+                "last": "Morishita"
+            }
+        ],
+        "doi": "10.1016/j.finel.2018.03.001",
+        "firstpage": "49",
+        "issn": "0168874X",
+        "keywords": [
+            "Anisotropic surface growth",
+            "Biological soft tissue",
+            "Constitutive initial-value problem",
+            "Finite element analysis",
+            "Limb development"
+        ],
+        "lastpage": "60",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "Continuum mechanical modeling of developing epithelial tissues with anisotropic surface growth"
+    }
+}

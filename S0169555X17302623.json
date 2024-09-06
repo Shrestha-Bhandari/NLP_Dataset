@@ -1,0 +1,4595 @@
+{
+    "abstract": "This article presents a method of object-based image analysis (OBIA) for landslide delineation and landslide-related change detection from multi-temporal satellite images. It uses both spatial and spectral information on landslides, through spectral analysis, shape analysis, textural measurements using a gray-level co-occurrence matrix (GLCM), and fuzzy logic membership functionality. Following an initial segmentation step, particular combinations of various information layers were investigated to generate objects. This was achieved by applying multi-resolution segmentation to IRS-1D, SPOT-5, and ALOS satellite imagery in sequential steps of feature selection and object classification, and using slope and flow direction derivatives from a digital elevation model together with topographically-oriented gray level co-occurrence matrices. Fuzzy membership values were calculated for 11 different membership functions using 20 landslide objects from a landslide training data. Six fuzzy operators were used for the final classification and the accuracies of the resulting landslide maps were compared. A Fuzzy Synthetic Evaluation (FSE) approach was adapted for validation of the results and for an accuracy assessment using the landslide inventory database. The FSE approach revealed that the AND operator performed best with an accuracy of 93.87% for 2005 and 94.74% for 2011, closely followed by the MEAN Arithmetic operator, while the OR and AND (*) operators yielded relatively low accuracies. An object-based change detection was then applied to monitor landslide-related changes that occurred in northern Iran between 2005 and 2011. Knowledge rules to detect possible landslide-related changes were developed by evaluating all possible landslide-related objects for both time steps.",
+    "bib_entries": {
+        "bb0005": {
+            "authors": [
+                {
+                    "first": "Jesus",
+                    "initial": "J.",
+                    "last": "Aguirre-Guti\u00e9rrez"
+                },
+                {
+                    "first": "Arie C.",
+                    "initial": "A.C.",
+                    "last": "Seijmonsbergen"
+                },
+                {
+                    "first": "Joost F.",
+                    "initial": "J.F.",
+                    "last": "Duivenvoorden"
+                }
+            ],
+            "doi": "10.1016/j.apgeog.2011.10.010",
+            "firstpage": "29",
+            "issn": "01436228",
+            "lastpage": "37",
+            "pub_year": 2012,
+            "title": "Optimizing land cover classification accuracy for change detection, a combined pixel-based and object-based approach in a mountainous area in Mexico",
+            "volume": "34"
+        },
+        "bb0010": {
+            "authors": [
+                {
+                    "first": "Beliz",
+                    "initial": "B.",
+                    "last": "Aksoy"
+                },
+                {
+                    "first": "Murat",
+                    "initial": "M.",
+                    "last": "Ercanoglu"
+                }
+            ],
+            "doi": "10.1016/j.cageo.2011.05.010",
+            "firstpage": "87",
+            "issn": "00983004",
+            "lastpage": "98",
+            "pub_year": 2012,
+            "title": "Landslide identification and classification by object-based image analysis and fuzzy logic: An example from the Azdavay region (Kastamonu, Turkey)",
+            "volume": "38"
+        },
+        "bb0015": null,
+        "bb0020": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Barlow"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "S. E.",
+                    "initial": "S.E.",
+                    "last": "Franklin"
+                }
+            ],
+            "doi": "10.5589/m03-018",
+            "firstpage": "510",
+            "issn": "07038992",
+            "lastpage": "517",
+            "pub_year": 2003,
+            "title": "Detecting translational landslide scars using segmentation of Landsat ETM+ and DEM data in the northern Cascade Mountains, British Columbia",
+            "volume": "29"
+        },
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Barlow"
+                },
+                {
+                    "first": "Steven",
+                    "initial": "S.",
+                    "last": "Franklin"
+                },
+                {
+                    "first": "Yvonne",
+                    "initial": "Y.",
+                    "last": "Martin"
+                }
+            ],
+            "doi": "10.14358/PERS.72.6.687",
+            "firstpage": "687",
+            "issn": "00991112",
+            "lastpage": "692",
+            "pub_year": 2006,
+            "title": "High spatial resolution satellite imagery, DEM derivatives, and image segmentation for the detection of mass wasting processes",
+            "volume": "72"
+        },
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "Ursula C.",
+                    "initial": "U.C.",
+                    "last": "Benz"
+                }
+            ],
+            "doi": "10.1109/36.752221",
+            "firstpage": "1023",
+            "issn": "01962892",
+            "lastpage": "1037",
+            "pub_year": 1999,
+            "title": "Supervised fuzzy analysis of single- and multichannel sar data",
+            "volume": "37"
+        },
+        "bb0035": {
+            "authors": [
+                {
+                    "first": "Ursula C.",
+                    "initial": "U.C.",
+                    "last": "Benz"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Hofmann"
+                },
+                {
+                    "first": "Gregor",
+                    "initial": "G.",
+                    "last": "Willhauck"
+                },
+                {
+                    "first": "Iris",
+                    "initial": "I.",
+                    "last": "Lingenfelder"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "Heynen"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2003.10.002",
+            "firstpage": "239",
+            "issn": "09242716",
+            "lastpage": "258",
+            "pub_year": 2004,
+            "title": "Multi-resolution, object-oriented fuzzy analysis of remote sensing data for GIS-ready information",
+            "volume": "58"
+        },
+        "bb0040": null,
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2009.06.004",
+            "firstpage": "2",
+            "issn": "09242716",
+            "lastpage": "16",
+            "pub_year": 2010,
+            "title": "Object based image analysis for remote sensing",
+            "volume": "65"
+        },
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                },
+                {
+                    "first": "Bakhtiar",
+                    "initial": "B.",
+                    "last": "Feizizadeh"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "H\u00f6lbling"
+                }
+            ],
+            "doi": "10.1109/JSTARS.2014.2350036",
+            "firstpage": "4806",
+            "issn": "19391404",
+            "lastpage": "4817",
+            "pub_year": 2014,
+            "title": "Object-based image analysis and digital terrain analysis for locating landslides in the Urmia Lake basin, Iran",
+            "volume": "7"
+        },
+        "bb0060": {
+            "authors": [
+                {
+                    "first": "Kun Shan",
+                    "initial": "K.S.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Melba M.",
+                    "initial": "M.M.",
+                    "last": "Crawford"
+                },
+                {
+                    "first": "Paolo",
+                    "initial": "P.",
+                    "last": "Gamba"
+                },
+                {
+                    "first": "James S.",
+                    "initial": "J.S.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.1109/TGRS.2007.899144",
+            "firstpage": "1515",
+            "issn": "01962892",
+            "lastpage": "1518",
+            "pub_year": 2007,
+            "title": "Guest editorial introduction for the special issue on remote sensing for major disaster prevention, monitoring, and assessment",
+            "volume": "45"
+        },
+        "bb0065": {
+            "authors": [
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Ciampalini"
+                },
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Raspini"
+                },
+                {
+                    "first": "Silvia",
+                    "initial": "S.",
+                    "last": "Bianchini"
+                },
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Frodella"
+                },
+                {
+                    "first": "Federica",
+                    "initial": "F.",
+                    "last": "Bardi"
+                },
+                {
+                    "first": "Daniela",
+                    "initial": "D.",
+                    "last": "Lagomarsino"
+                },
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Di Traglia"
+                },
+                {
+                    "first": "Sandro",
+                    "initial": "S.",
+                    "last": "Moretti"
+                },
+                {
+                    "first": "Chiara",
+                    "initial": "C.",
+                    "last": "Proietti"
+                },
+                {
+                    "first": "Paola",
+                    "initial": "P.",
+                    "last": "Pagliara"
+                },
+                {
+                    "first": "Roberta",
+                    "initial": "R.",
+                    "last": "Onori"
+                },
+                {
+                    "first": "Angelo",
+                    "initial": "A.",
+                    "last": "Corazza"
+                },
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Duro"
+                },
+                {
+                    "first": "Giuseppe",
+                    "initial": "G.",
+                    "last": "Basile"
+                },
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Casagli"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2015.01.029",
+            "firstpage": "103",
+            "issn": "0169555X",
+            "lastpage": "118",
+            "pub_year": 2015,
+            "title": "Remote sensing as tool for development of landslide databases: The case of the Messina Province (Italy) geodatabase",
+            "volume": "249"
+        },
+        "bb0070": null,
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "Alexis",
+                    "initial": "A.",
+                    "last": "Comber"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Fisher"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Brunsdon"
+                },
+                {
+                    "first": "Abdulhakim",
+                    "initial": "A.",
+                    "last": "Khmag"
+                }
+            ],
+            "doi": "10.1016/j.rse.2012.09.005",
+            "firstpage": "237",
+            "issn": "00344257",
+            "lastpage": "246",
+            "pub_year": 2012,
+            "title": "Spatial analysis of remote sensing image classification accuracy",
+            "volume": "127"
+        },
+        "bb0080": {
+            "authors": [
+                {
+                    "first": "Russell G.",
+                    "initial": "R.G.",
+                    "last": "Congalton"
+                }
+            ],
+            "doi": "10.1016/0034-4257(91)90048-B",
+            "firstpage": "35",
+            "issn": "00344257",
+            "lastpage": "46",
+            "pub_year": 1991,
+            "title": "A review of assessing the accuracy of classifications of remotely sensed data",
+            "volume": "37"
+        },
+        "bb0085": null,
+        "bb0090": null,
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2006.04.013",
+            "firstpage": "330",
+            "issn": "0169555X",
+            "lastpage": "344",
+            "pub_year": 2006,
+            "title": "Automated classification of landform elements using object-based image analysis",
+            "volume": "81"
+        },
+        "bb0100": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Eisank"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.03.003",
+            "firstpage": "183",
+            "issn": "0169555X",
+            "lastpage": "189",
+            "pub_year": 2011,
+            "title": "Object representations at multiple scales from digital elevation models",
+            "volume": "129"
+        },
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Eisank"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.12.001",
+            "firstpage": "21",
+            "issn": "0169555X",
+            "lastpage": "33",
+            "pub_year": 2012,
+            "title": "Automated object-based classification of topography from SRTM data",
+            "volume": "141-142"
+        },
+        "bb0110": {
+            "authors": [
+                {
+                    "first": "Iryna",
+                    "initial": "I.",
+                    "last": "Dronova"
+                },
+                {
+                    "first": "Peng",
+                    "initial": "P.",
+                    "last": "Gong"
+                },
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1016/j.rse.2011.07.006",
+            "firstpage": "3220",
+            "issn": "00344257",
+            "lastpage": "3236",
+            "pub_year": 2011,
+            "title": "Object-based analysis and change detection of major wetland cover types and their classification uncertainty during the low water period at Poyang Lake, China",
+            "volume": "115"
+        },
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "Didier",
+                    "initial": "D.",
+                    "last": "Dubois"
+                },
+                {
+                    "first": "Francesc",
+                    "initial": "F.",
+                    "last": "Esteva"
+                },
+                {
+                    "first": "Llu\u00eds",
+                    "initial": "L.",
+                    "last": "Godo"
+                },
+                {
+                    "first": "Henri",
+                    "initial": "H.",
+                    "last": "Prade"
+                }
+            ],
+            "doi": "10.1016/S1874-5857(07)80009-4",
+            "firstpage": "325",
+            "issn": "18745857",
+            "lastpage": "449",
+            "pub_year": 2007,
+            "title": "Fuzzy-set based logics - an history-oriented presentation of their main developments",
+            "volume": "8"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "Bakhtiar",
+                    "initial": "B.",
+                    "last": "Feizizadeh"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1007/s11069-012-0463-3",
+            "firstpage": "2105",
+            "issn": "0921030X",
+            "lastpage": "2128",
+            "pub_year": 2013,
+            "title": "GIS-multicriteria decision analysis for landslide susceptibility mapping: Comparing three methods for the Urmia lake basin, Iran",
+            "volume": "65"
+        },
+        "bb0125": {
+            "authors": [
+                {
+                    "first": "Bakhtiar",
+                    "initial": "B.",
+                    "last": "Feizizadeh"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1080/09640568.2011.646964",
+            "firstpage": "1",
+            "issn": "09640568",
+            "lastpage": "23",
+            "pub_year": 2013,
+            "title": "Land suitability analysis for Tabriz County, Iran: A multi-criteria evaluation approach using GIS",
+            "volume": "56"
+        },
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "Bakhtiar",
+                    "initial": "B.",
+                    "last": "Feizizadeh"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1080/13658816.2013.869821",
+            "firstpage": "610",
+            "issn": "13658816",
+            "lastpage": "638",
+            "pub_year": 2014,
+            "title": "An uncertainty and sensitivity analysis approach for GIS-based multicriteria landslide susceptibility mapping",
+            "volume": "28"
+        },
+        "bb0135": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Feizizadeh"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Nazmfar"
+                },
+                {
+                    "first": "M. H.",
+                    "initial": "M.H.",
+                    "last": "Rezaei Moghaddam"
+                }
+            ],
+            "firstpage": "319",
+            "issn": "17356865",
+            "lastpage": "336",
+            "pub_year": 2013,
+            "title": "Landslide susceptibility mapping for the Urmia lake basin, Iran: A multi- criteria evaluation approach using GIS",
+            "volume": "7"
+        },
+        "bb0140": {
+            "authors": [
+                {
+                    "first": "Igor V.",
+                    "initial": "I.V.",
+                    "last": "Florinsky"
+                }
+            ],
+            "doi": "10.1177/030913339802200102",
+            "firstpage": "33",
+            "issn": "03091333",
+            "lastpage": "60",
+            "pub_year": 1998,
+            "title": "Combined analysis of digital terrain models and remotely sensed data in landscape investigations",
+            "volume": "22"
+        },
+        "bb0145": {
+            "authors": [
+                {
+                    "first": "Ashish",
+                    "initial": "A.",
+                    "last": "Ghosh"
+                },
+                {
+                    "first": "Saroj K.",
+                    "initial": "S.K.",
+                    "last": "Meher"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Uma Shankar"
+                }
+            ],
+            "doi": "10.1016/j.patcog.2007.08.002",
+            "firstpage": "961",
+            "issn": "00313203",
+            "lastpage": "971",
+            "pub_year": 2008,
+            "title": "A novel fuzzy classifier based on product aggregation operator",
+            "volume": "41"
+        },
+        "bb0150": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Gong"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Pu"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Chen"
+                }
+            ],
+            "firstpage": "1249",
+            "issn": "00991112",
+            "lastpage": "1260",
+            "pub_year": 1996,
+            "title": "Mapping ecological land systems and classification uncertainties from digital elevation and forest-cover data using neural networks",
+            "volume": "62"
+        },
+        "bb0155": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Gopal"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Woodcock"
+                }
+            ],
+            "firstpage": "181",
+            "lastpage": "188",
+            "pub_year": 1994,
+            "title": "Theory and methods for accuracy assessment of thematic maps using fuzzy sets",
+            "volume": "60"
+        },
+        "bb0160": {
+            "authors": [
+                {
+                    "first": "Pece V.",
+                    "initial": "P.V.",
+                    "last": "Gorsevski"
+                },
+                {
+                    "first": "Katerina R.",
+                    "initial": "K.R.",
+                    "last": "Donevska"
+                },
+                {
+                    "first": "Cvetko D.",
+                    "initial": "C.D.",
+                    "last": "Mitrovski"
+                },
+                {
+                    "first": "Joseph P.",
+                    "initial": "J.P.",
+                    "last": "Frizado"
+                }
+            ],
+            "doi": "10.1016/j.wasman.2011.09.023",
+            "firstpage": "287",
+            "issn": "0956053X",
+            "lastpage": "296",
+            "pmid": "22030279",
+            "pub_year": 2012,
+            "title": "Integrating multi-criteria evaluation techniques with geographic information systems for landfill site selection: A case study using ordered weighted average",
+            "volume": "32"
+        },
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "Fausto",
+                    "initial": "F.",
+                    "last": "Guzzetti"
+                },
+                {
+                    "first": "Alessandro Cesare",
+                    "initial": "A.C.",
+                    "last": "Mondini"
+                },
+                {
+                    "first": "Mauro",
+                    "initial": "M.",
+                    "last": "Cardinali"
+                },
+                {
+                    "first": "Federica",
+                    "initial": "F.",
+                    "last": "Fiorucci"
+                },
+                {
+                    "first": "Michele",
+                    "initial": "M.",
+                    "last": "Santangelo"
+                },
+                {
+                    "first": "Kang Tsung",
+                    "initial": "K.T.",
+                    "last": "Chang"
+                }
+            ],
+            "doi": "10.1016/j.earscirev.2012.02.001",
+            "firstpage": "42",
+            "issn": "00128252",
+            "lastpage": "66",
+            "pub_year": 2012,
+            "title": "Landslide inventory maps: New tools for an old problem",
+            "volume": "112"
+        },
+        "bb0170": {
+            "authors": [
+                {
+                    "first": "Geoffrey J.",
+                    "initial": "G.J.",
+                    "last": "Hay"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                },
+                {
+                    "first": "Danielle J.",
+                    "initial": "D.J.",
+                    "last": "Marceau"
+                },
+                {
+                    "first": "Andr\u00e9",
+                    "initial": "A.",
+                    "last": "Bouchard"
+                }
+            ],
+            "doi": "10.1016/S0924-2716(02)00162-4",
+            "firstpage": "327",
+            "issn": "09242716",
+            "lastpage": "345",
+            "pub_year": 2003,
+            "title": "A comparison of three image-object methods for the multiscale analysis of landscape structure",
+            "volume": "57"
+        },
+        "bb0180": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Hofmann"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                },
+                {
+                    "first": "Josef",
+                    "initial": "J.",
+                    "last": "Strobl"
+                }
+            ],
+            "doi": "10.1080/01431161.2010.523727",
+            "firstpage": "7359",
+            "issn": "01431161",
+            "lastpage": "7381",
+            "pub_year": 2011,
+            "title": "Quantifying the robustness of fuzzy rule sets in object-based image analysis",
+            "volume": "32"
+        },
+        "bb0185": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Hofmann"
+                },
+                {
+                    "first": "Josef",
+                    "initial": "J.",
+                    "last": "Strobl"
+                },
+                {
+                    "first": "Ainura",
+                    "initial": "A.",
+                    "last": "Nazarkulova"
+                }
+            ],
+            "doi": "10.3390/rs3061088",
+            "firstpage": "1088",
+            "issn": "20724292",
+            "lastpage": "1103",
+            "pub_year": 2011,
+            "title": "Mapping green spaces in Bishkek-how reliable can spatial analysis be?",
+            "volume": "3"
+        },
+        "bb0190": null,
+        "bb0195": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "H\u00f6lbling"
+                },
+                {
+                    "first": "Petra",
+                    "initial": "P.",
+                    "last": "F\u00fcreder"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Antolini"
+                },
+                {
+                    "first": "Francesca",
+                    "initial": "F.",
+                    "last": "Cigna"
+                },
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Casagli"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Lang"
+                }
+            ],
+            "doi": "10.3390/rs4051310",
+            "firstpage": "1310",
+            "issn": "20724292",
+            "lastpage": "1336",
+            "pub_year": 2012,
+            "title": "A semi-automated object-based approach for landslide detection validated by persistent scatterer interferometry measures and landslide inventories",
+            "volume": "4"
+        },
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "Masroor",
+                    "initial": "M.",
+                    "last": "Hussain"
+                },
+                {
+                    "first": "Dongmei",
+                    "initial": "D.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Angela",
+                    "initial": "A.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "Hui",
+                    "initial": "H.",
+                    "last": "Wei"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Stanley"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2013.03.006",
+            "firstpage": "91",
+            "issn": "09242716",
+            "lastpage": "106",
+            "pub_year": 2013,
+            "title": "Change detection from remotely sensed images: From pixel-based to object-based approaches",
+            "volume": "80"
+        },
+        "bb0210": {
+            "authors": [
+                {
+                    "first": "Andrea S.",
+                    "initial": "A.S.",
+                    "last": "Laliberte"
+                },
+                {
+                    "first": "Albert",
+                    "initial": "A.",
+                    "last": "Rango"
+                },
+                {
+                    "first": "Kris M.",
+                    "initial": "K.M.",
+                    "last": "Havstad"
+                },
+                {
+                    "first": "Jack F.",
+                    "initial": "J.F.",
+                    "last": "Paris"
+                },
+                {
+                    "first": "Reldon F.",
+                    "initial": "R.F.",
+                    "last": "Beck"
+                },
+                {
+                    "first": "Rob",
+                    "initial": "R.",
+                    "last": "McNeely"
+                },
+                {
+                    "first": "Amalia L.",
+                    "initial": "A.L.",
+                    "last": "Gonzalez"
+                }
+            ],
+            "doi": "10.1016/j.rse.2004.07.011",
+            "firstpage": "198",
+            "issn": "00344257",
+            "lastpage": "210",
+            "pub_year": 2004,
+            "title": "Object-oriented image analysis for mapping shrub encroachment from 1937 to 2003 in southern New Mexico",
+            "volume": "93"
+        },
+        "bb0215": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Lang"
+                }
+            ],
+            "firstpage": "3",
+            "issn": "18632351",
+            "lastpage": "27",
+            "pub_year": 2008,
+            "title": "Object-based image analysis for remote sensing applications: Modeling reality \u2013 dealing with complexity"
+        },
+        "bb0220": {
+            "authors": [
+                {
+                    "first": "Ping",
+                    "initial": "P.",
+                    "last": "Lu"
+                },
+                {
+                    "first": "Andr\u00e9",
+                    "initial": "A.",
+                    "last": "Stumpf"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Casagli"
+                }
+            ],
+            "doi": "10.1109/LGRS.2010.2101045",
+            "firstpage": "701",
+            "issn": "1545598X",
+            "lastpage": "705",
+            "pub_year": 2011,
+            "title": "Object-oriented change detection for landslide rapid mapping",
+            "volume": "8"
+        },
+        "bb0225": null,
+        "bb0230": {
+            "authors": [
+                {
+                    "first": "Tapas R.",
+                    "initial": "T.R.",
+                    "last": "Martha"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                }
+            ],
+            "issn": "16821750",
+            "pub_year": 2010,
+            "title": "Segment optimisation for object-based landslide detection",
+            "volume": "38"
+        },
+        "bb0235": {
+            "authors": [
+                {
+                    "first": "Tapas R.",
+                    "initial": "T.R.",
+                    "last": "Martha"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Jetten"
+                },
+                {
+                    "first": "Cees J.",
+                    "initial": "C.J.",
+                    "last": "van Westen"
+                },
+                {
+                    "first": "K. Vinod",
+                    "initial": "K.V.",
+                    "last": "Kumar"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2009.10.004",
+            "firstpage": "24",
+            "issn": "0169555X",
+            "lastpage": "36",
+            "pub_year": 2010,
+            "title": "Characterising spectral, spatial and morphometric properties of landslides for semi-automatic detection using object-oriented methods",
+            "volume": "116"
+        },
+        "bb0240": {
+            "authors": [
+                {
+                    "first": "Tapas R.",
+                    "initial": "T.R.",
+                    "last": "Martha"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Cees J.",
+                    "initial": "C.J.",
+                    "last": "van Westen"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Jetten"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Vinod Kumar"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2011.11.004",
+            "firstpage": "105",
+            "issn": "09242716",
+            "lastpage": "119",
+            "pub_year": 2012,
+            "title": "Object-oriented analysis of multi-temporal panchromatic images for creation of historical landslide inventories",
+            "volume": "67"
+        },
+        "bb0245": {
+            "authors": [
+                {
+                    "first": "Gregory J.",
+                    "initial": "G.J.",
+                    "last": "McDermid"
+                },
+                {
+                    "first": "Steven E.",
+                    "initial": "S.E.",
+                    "last": "Franklin"
+                }
+            ],
+            "doi": "10.1016/0034-4257(94)90059-0",
+            "firstpage": "57",
+            "issn": "00344257",
+            "lastpage": "71",
+            "pub_year": 1994,
+            "title": "Spectral, spatial, and geomorphometric variables for the remote sensing of slope processes",
+            "volume": "49"
+        },
+        "bb0250": null,
+        "bb0255": null,
+        "bb0260": {
+            "authors": [
+                {
+                    "first": "R. G.",
+                    "initial": "R.G.",
+                    "last": "Pontius"
+                },
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Cheuk"
+                }
+            ],
+            "doi": "10.1080/13658810500391024",
+            "firstpage": "1",
+            "issn": "13658816",
+            "lastpage": "30",
+            "pub_year": 2006,
+            "title": "A generalized cross-tabulation matrix to compare soft-classified maps at multiple resolutions",
+            "volume": "20"
+        },
+        "bb0265": null,
+        "bb0270": {
+            "authors": [
+                {
+                    "first": "Imane",
+                    "initial": "I.",
+                    "last": "Sebari"
+                },
+                {
+                    "first": "Dong Chen",
+                    "initial": "D.C.",
+                    "last": "He"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2013.02.006",
+            "firstpage": "171",
+            "issn": "09242716",
+            "lastpage": "184",
+            "pub_year": 2013,
+            "title": "Automatic fuzzy object-based analysis of VHSR images for urban objects extraction",
+            "volume": "79"
+        },
+        "bb0275": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Soeters"
+                },
+                {
+                    "first": "Cornelis J.",
+                    "initial": "C.J.",
+                    "last": "Van Westen"
+                }
+            ],
+            "firstpage": "129",
+            "issn": "0360859X",
+            "lastpage": "177",
+            "pub_year": 1996,
+            "title": "Slope instability recognition, analysis, and zonation",
+            "volume": "247"
+        },
+        "bb0280": {
+            "authors": [
+                {
+                    "first": "Stephen V.",
+                    "initial": "S.V.",
+                    "last": "Stehman"
+                }
+            ],
+            "doi": "10.1016/S0034-4257(99)00090-5",
+            "firstpage": "35",
+            "issn": "00344257",
+            "lastpage": "45",
+            "pub_year": 2000,
+            "title": "Practical implications of design-based sampling inference for thematic map accuracy assessment",
+            "volume": "72"
+        },
+        "bb0285": {
+            "authors": [
+                {
+                    "first": "Stephen V.",
+                    "initial": "S.V.",
+                    "last": "Stehman"
+                }
+            ],
+            "doi": "10.1007/s10109-006-0022-0",
+            "firstpage": "209",
+            "issn": "14355930",
+            "lastpage": "226",
+            "pub_year": 2006,
+            "title": "Design, analysis, and inference for studies comparing thematic accuracy of classified remotely sensed data: A special case of map comparison",
+            "volume": "8"
+        },
+        "bb0290": {
+            "authors": [
+                {
+                    "first": "Andr\u00e9",
+                    "initial": "A.",
+                    "last": "Stumpf"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                }
+            ],
+            "doi": "10.1016/j.rse.2011.05.013",
+            "firstpage": "2564",
+            "issn": "00344257",
+            "lastpage": "2577",
+            "pub_year": 2011,
+            "title": "Object-oriented mapping of landslides using Random Forests",
+            "volume": "115"
+        },
+        "bb0295": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "van Asselen"
+                },
+                {
+                    "first": "A. C.",
+                    "initial": "A.C.",
+                    "last": "Seijmonsbergen"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2006.01.037",
+            "firstpage": "309",
+            "issn": "0169555X",
+            "lastpage": "320",
+            "pub_year": 2006,
+            "title": "Expert-driven semi-automated geomorphological mapping for a mountainous area using a laser DTM",
+            "volume": "78"
+        },
+        "bb0300": {
+            "authors": [
+                {
+                    "first": "Miet",
+                    "initial": "M.",
+                    "last": "Van Den Eeckhaut"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Jean",
+                    "initial": "J.",
+                    "last": "Poesen"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Herv\u00e1s"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2012.05.024",
+            "firstpage": "30",
+            "issn": "0169555X",
+            "lastpage": "42",
+            "pub_year": 2012,
+            "title": "Object-oriented identification of forested landslides with derivatives of single pulse LiDAR data",
+            "volume": "173-174"
+        },
+        "bb0305": {
+            "authors": [
+                {
+                    "first": "Curtis E.",
+                    "initial": "C.E.",
+                    "last": "Woodcock"
+                },
+                {
+                    "first": "Sucharita",
+                    "initial": "S.",
+                    "last": "Gopal"
+                }
+            ],
+            "doi": "10.1080/136588100240895",
+            "firstpage": "153",
+            "issn": "13658816",
+            "lastpage": "172",
+            "pub_year": 2000,
+            "title": "Fuzzy set theory and thematic maps: Accuracy assessment and area estimation",
+            "volume": "14"
+        },
+        "bb0310": {
+            "authors": [
+                {
+                    "first": "L. A.",
+                    "initial": "L.A.",
+                    "last": "Zadeh"
+                }
+            ],
+            "doi": "10.1016/S0019-9958(65)90241-X",
+            "firstpage": "338",
+            "issn": "00199958",
+            "lastpage": "353",
+            "pub_year": 1965,
+            "title": "Fuzzy sets",
+            "volume": "8"
+        },
+        "bb0315": {
+            "authors": [
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Troy"
+                }
+            ],
+            "doi": "10.1080/01431160701469065",
+            "firstpage": "3119",
+            "issn": "01431161",
+            "lastpage": "3135",
+            "pub_year": 2008,
+            "title": "An object-oriented approach for analysing and characterizing urban landscape at the parcel level",
+            "volume": "29"
+        },
+        "bb9000": {
+            "authors": [
+                {
+                    "first": "Christophe",
+                    "initial": "C.",
+                    "last": "Marsala"
+                },
+                {
+                    "first": "Bernadette",
+                    "initial": "B.",
+                    "last": "Bouchon-Meunier"
+                }
+            ],
+            "doi": "10.1016/j.fss.2015.08.021",
+            "firstpage": "252",
+            "issn": "01650114",
+            "lastpage": "259",
+            "pub_year": 2015,
+            "title": "Fuzzy data mining and management of interpretable and subjective information",
+            "volume": "281"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 61468,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In order to address the uncertainty and vagueness, we used fuzzy classification methods based on the six operators which are discussed in section \u201cMembership value analysis\u201d.",
+            "startOffset": 61294,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 37327,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "OBIA allows users to apply local variations to analysis.",
+            "startOffset": 37271,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77104,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Our results provide a first step towards an improved understanding of fuzzy logic operators in OBIA.",
+            "startOffset": 77004,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 39785,
+            "parents": [],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 39783,
+                    "startOffset": 39690
+                },
+                "bb0035": {
+                    "endOffset": 39783,
+                    "startOffset": 39690
+                },
+                "bb0040": {
+                    "endOffset": 39783,
+                    "startOffset": 39690
+                },
+                "bb0170": {
+                    "endOffset": 39783,
+                    "startOffset": 39690
+                },
+                "bb0180": {
+                    "endOffset": 39783,
+                    "startOffset": 39690
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It can thus deal with uncertainty and vagueness inherent to classification of spatial entities (Bezdek and Pals, 1992; Benz, 1999; Hay et al., 2003; Benz et al., 2004; Hofmann et al., 2011a).",
+            "startOffset": 39594,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55146,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Thus, only those feature-space spanning properties that are clearly necessary are used for class descriptions.",
+            "startOffset": 55036,
+            "title": "Fuzzy propositions on object properties"
+        },
+        {
+            "endOffset": 39158,
+            "parents": [],
+            "refoffsets": {
+                "bb0310": {
+                    "endOffset": 39157,
+                    "startOffset": 39145
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The term \u2018fuzzy logic\u2019 emerged from the development of fuzzy set theory by Zadeh (1965).",
+            "startOffset": 39070,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60989,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The choice of features was based on literature as well as the highest membership values.",
+            "startOffset": 60901,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 69602,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Fig. 9 shows the results of the object-based landslide change detection between 2005 and 2011.",
+            "startOffset": 69508,
+            "title": "Results"
+        },
+        {
+            "endOffset": 73754,
+            "parents": [],
+            "refoffsets": {
+                "bb0255": {
+                    "endOffset": 73752,
+                    "startOffset": 73735
+                }
+            },
+            "secId": "s0075",
+            "sentence": "It should be noted that fuzzy sets and fuzzy operators are the subjects and verbs of fuzzy logic (Nedeljkovic, 2004).",
+            "startOffset": 73637,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 42488,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "We used these physical characteristics for detecting landslides using OBIA techniques.",
+            "startOffset": 42402,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 51329,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The class of each object is described by a fuzzy rule that expresses the relationship between the class and the properties that describe it.",
+            "startOffset": 51189,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 68631,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The best performance landslide map for 2005 was obtained through the AND operator, which yielded an FSE accuracy of 93.87%.",
+            "startOffset": 68508,
+            "title": "Results"
+        },
+        {
+            "endOffset": 79469,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The information provided by these maps will assist planners and engineers in analyzing landslide behavior with the objective of reducing future losses due to landslides through prevention, mitigation, and avoidance.",
+            "startOffset": 79254,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 44800,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 44798,
+                    "startOffset": 44784
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The first step is the segmentation or subdivision of images into image primitives that demarcate the boundaries of relevant features, on different scales if necessary, resulting in homogeneous objects that reduce the noise inherent to pixel-based analysis and facilitate a multi-scale analysis (Blaschke, 2010).",
+            "startOffset": 44489,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 63746,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In the second step an FSE for thematic map accuracy was performed by weighting per class Difference category values in order to obtain a single accuracy value.",
+            "startOffset": 63587,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 69819,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Our research has focused on fuzzy classification methods and techniques.",
+            "startOffset": 69747,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 36866,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "OBIA integrates spatial and spectral characteristics and partitions remote sensing imagery and other data into meaningful objects.",
+            "startOffset": 36736,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38348,
+            "parents": [],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 38247,
+                    "startOffset": 38177
+                },
+                "bb0220": {
+                    "endOffset": 38346,
+                    "startOffset": 38300
+                },
+                "bb0235": {
+                    "endOffset": 38247,
+                    "startOffset": 38177
+                },
+                "bb0240": {
+                    "endOffset": 38247,
+                    "startOffset": 38177
+                },
+                "bb0290": {
+                    "endOffset": 38247,
+                    "startOffset": 38177
+                },
+                "bb0300": {
+                    "endOffset": 38346,
+                    "startOffset": 38300
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It has been employed for semi-automated landslide identification from airborne and satellite data (e.g. Barlow et al., 2003; Martha et al., 2010, 2012; Stumpf and Kerle, 2011) including multitemporal ones for change detection (Lu et al., 2011; Van Den Eeckhaut et al., 2012).",
+            "startOffset": 38073,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41609,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper describes the application of fuzzy rule sets and their membership functions, and investigates the influence of the choice of fuzzy operators on the detection and assessment of landslide-related changes in the northern part of Iran between 2005 and 2011.",
+            "startOffset": 41345,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70742,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "In fuzzy OBIA each object class membership value represents the likelihood of the object belonging to that particular class according to the membership function derived from training data or selected by experts.",
+            "startOffset": 70531,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46501,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This process generates the building blocks of OBIA, and the quality of the target object delineation directly influences the accuracy of the subsequent image classification.",
+            "startOffset": 46328,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 41999,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A landslide inventory for this area is available from the Ministry of Natural Resources (MNR), East Azerbaijan Province, Iran.",
+            "startOffset": 41873,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 67040,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The first step of this approach involved the creation of layers containing landslide objects, which are necessary for a change detection analysis.",
+            "startOffset": 66894,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 65681,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0265": {
+                    "endOffset": 65679,
+                    "startOffset": 65658
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Likewise, the contribution from Very High Error (VHE) observations is zero because in these situations the map class is associated with very high error (Sarmento et al., 2008).",
+            "startOffset": 65505,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 63371,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Accordingly, FSE values for each sample and their respective confidence ratings were used to calibrate overall and per class accuracy estimates for the classified maps in a two-step process.",
+            "startOffset": 63181,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 67474,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Actual landslide changes were determined to have occurred if the same object had different identities in the 2005 and 2011 data sets.",
+            "startOffset": 67341,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 42636,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "However, the detection also depends on many other factors such as the typology, frequency, and size of landslides as well as land cover and relief.",
+            "startOffset": 42489,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 77627,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The level of classification accuracy calculated using FSE indicates that fuzzy logic can be satisfactorily used for object-based image classification and that such an integrated framework has the potential to produce more accurate results.",
+            "startOffset": 77388,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 58861,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Tables 2 and 3 represent the mean membership values for the 42 features considered.",
+            "startOffset": 58778,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 48651,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The segmentation was repeated for five scales (5, 7, 8, 9 and 10) with the same shape factor (0.3) and compactness factor (0.5).",
+            "startOffset": 48523,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 45567,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Our methodology consisted of three stages.",
+            "startOffset": 45525,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 78842,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "We would like to emphasize that the resulting landslide prediction maps were not produced only for the sake of comparisons between the fuzzy membership functions and operators, but the depicted landslide locations will also be submitted to the keepers of the landslide inventory database.",
+            "startOffset": 78554,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 71854,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Such overlapping results in some objects that have non-zero membership values being assigned to alternative classes.",
+            "startOffset": 71738,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 66057,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0200": {
+                    "endOffset": 66049,
+                    "startOffset": 66029
+                }
+            },
+            "secId": "s0065",
+            "sentence": "Object-based change detection (OBCD) is defined as a \u201cprocess of identifying differences in geographic objects at different moments using OBIA\u201d (Hussain et al., 2013, p.99).",
+            "startOffset": 65884,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 45017,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 45015,
+                    "startOffset": 44961
+                },
+                "bb0300": {
+                    "endOffset": 45015,
+                    "startOffset": 44961
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The second step is rule-based or sample-based classification of the segments using the spectral, textural, morphometric, and contextual features of landslides (Dr\u0103gu\u0163 and Eisank, 2011; Van Den Eeckhaut et al., 2012).",
+            "startOffset": 44801,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 67185,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "These objects were derived from the six maps produced for 2005 and the six maps produced for 2011, using the different fuzzy operators (Fig. 6).",
+            "startOffset": 67041,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 47638,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 47636,
+                    "startOffset": 47600
+                },
+                "bb0235": {
+                    "endOffset": 47636,
+                    "startOffset": 47600
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Considering the complexity of landslide characteristics such as variations in land cover and size as well as their differences in illumination and spectral behavior on remote sensing images, it can be difficult to delineate each individual landslide as a single object (Martha et al., 2010; Lu et al., 2011).",
+            "startOffset": 47330,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 51096,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In a fuzzy-OBIA approach, the features of each object can be described by a fuzzy proposition and treated as a fuzzy set characterized by a membership function.",
+            "startOffset": 50936,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 78173,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Our research has mainly focused on unraveling the capability of each fuzzy operator but our future work will also include a combination of fuzzy operators for landslide delineation.",
+            "startOffset": 77992,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64971,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "We aimed to convert these qualitative values into quantitative values that would allow the user to easily evaluate the thematic quality of the maps.",
+            "startOffset": 64823,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 72804,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "If the maximum membership degree of a class is below the chosen threshold, no classification is performed in order to ensure minimum reliability.",
+            "startOffset": 72659,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 67340,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "In the second step, knowledge rules were developed to detect landslide changes by evaluating all landslide objects that were identified in the first step.",
+            "startOffset": 67186,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 57258,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "refoffsets": {
+                "bb9000": {
+                    "endOffset": 57256,
+                    "startOffset": 57223
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Thus P(A) corresponds to the possibility that A is true and N(A) is the certainty that A is true (Marsala and Bouchon-Meunier, 2003).",
+            "startOffset": 57125,
+            "title": "Membership value analysis"
+        },
+        {
+            "endOffset": 64067,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The confidence is estimated on the basis of the proportion of sample observations that match the reference data and their respective confidence ratings.",
+            "startOffset": 63915,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 64409,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In contrast, there is a very reduced classification confidence (VRCC) if ICR attains 50%.",
+            "startOffset": 64320,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 54839,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Particular classes are usually defined based on both a particular property and several fuzzy sets in which the membership functions for each property are combined by the fuzzy-logic operators AND and OR.",
+            "startOffset": 54636,
+            "title": "Fuzzy propositions on object properties"
+        },
+        {
+            "endOffset": 36735,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 36733,
+                    "startOffset": 36694
+                },
+                "bb0105": {
+                    "endOffset": 36733,
+                    "startOffset": 36694
+                }
+            },
+            "secId": "s0005",
+            "sentence": "During the last decade, object-based image analysis (OBIA) has gained prominence in remote sensing because it may overcome weaknesses of per-pixel analysis such as the neglect of geometric and contextual information (Blaschke, 2010; Dr\u0103gu\u0163 and Eisank, 2012).",
+            "startOffset": 36477,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46163,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Fig. 2 presents the methodology of the semi-automated process.",
+            "startOffset": 46101,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 64319,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 64317,
+                    "startOffset": 64270
+                },
+                "bb0265": {
+                    "endOffset": 64317,
+                    "startOffset": 64270
+                }
+            },
+            "secId": "s0060",
+            "sentence": "According to the Difference function there is a very high classification confidence (VHCC) for an observation matching the reference data, and if the interpretation confidence rating (ICR) attains 90% (Gopal and Woodcock, 1994; Sarmento et al., 2008).",
+            "startOffset": 64068,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 73342,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "According to the results, the accuracy of a fuzzy classification can be significantly improved by selecting an appropriate operator.",
+            "startOffset": 73210,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63914,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 63912,
+                    "startOffset": 63865
+                },
+                "bb0265": {
+                    "endOffset": 63912,
+                    "startOffset": 63865
+                }
+            },
+            "secId": "s0060",
+            "sentence": "The Difference function aims to evaluate the per class confidence in the classification and the magnitudes of errors (Gopal and Woodcock, 1994; Sarmento et al., 2008).",
+            "startOffset": 63747,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 65215,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This allowed overall and per class accuracy estimations for the maps using the proportions of the weighted sum of sample observations in each Difference category per map class.",
+            "startOffset": 65039,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 44488,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0215": {
+                    "endOffset": 44486,
+                    "startOffset": 44476
+                }
+            },
+            "secId": "s0020",
+            "sentence": "OBIA basically relies on two interrelated methodological steps (Lang, 2008).",
+            "startOffset": 44412,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 50193,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Fig. 3 shows two examples of typical landslides in the study area.",
+            "startOffset": 50127,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 38854,
+            "parents": [],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 38852,
+                    "startOffset": 38806
+                },
+                "bb0025": {
+                    "endOffset": 38852,
+                    "startOffset": 38806
+                },
+                "bb0235": {
+                    "endOffset": 38852,
+                    "startOffset": 38806
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Object-based image classification describes landslide-diagnostic features based on expert knowledge to accurately detect landslides (Barlow et al., 2003, 2006; Martha et al., 2010).",
+            "startOffset": 38673,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40489,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Object attributes are consequently described by fuzzy propositions and treated as fuzzy sets characterized by a membership function.",
+            "startOffset": 40357,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49982,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The full list of feature properties is represented in Table 1.",
+            "startOffset": 49920,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 66164,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "We used a classified objects change detection (COCD) approach for change detection analysis of landslides.",
+            "startOffset": 66058,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 36476,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 36474,
+                    "startOffset": 36429
+                },
+                "bb0195": {
+                    "endOffset": 36474,
+                    "startOffset": 36429
+                },
+                "bb0235": {
+                    "endOffset": 36384,
+                    "startOffset": 36365
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Satellite imagery permits cost-effective assessment of extensive landslide-affected areas (Martha et al., 2010) and construction of landslide inventories (H\u00f6lbling et al., 2012; Ciamalini et al., 2015).",
+            "startOffset": 36274,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68990,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The MEGW operator yielded relatively poor results (86.18%) compared to the other operators.",
+            "startOffset": 68899,
+            "title": "Results"
+        },
+        {
+            "endOffset": 73440,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Our research demonstrated a way how to identify the most effective and beneficial fuzzy operator.",
+            "startOffset": 73343,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 76503,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "We conclude that these results can help to develop OBIA approaches.",
+            "startOffset": 76436,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 58693,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The membership function of each class is represented by a singleton.",
+            "startOffset": 58625,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 60900,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "We took into account spectral, textural, geometric, and contextual related features for the classification.",
+            "startOffset": 60793,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 47329,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 47327,
+                    "startOffset": 47301
+                }
+            },
+            "secId": "s0025",
+            "sentence": "It also involves a user-defined weighting based on shape compactness and smoothness (eCognition Developer, 2011).",
+            "startOffset": 47216,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 37270,
+            "parents": [],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 37268,
+                    "startOffset": 37184
+                },
+                "bb0235": {
+                    "endOffset": 37268,
+                    "startOffset": 37184
+                },
+                "bb0295": {
+                    "endOffset": 37268,
+                    "startOffset": 37184
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In this regard, OBIA provides a platform suitable for the integration of thematic data such as elevation data (Dr\u0103gu\u0163 and Blaschke, 2006; Van Asselen and Seijmonsbergen, 2006; Martha et al., 2010).",
+            "startOffset": 37073,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39069,
+            "parents": [],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 39067,
+                    "startOffset": 39046
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Fuzzy rule or logic is based on fuzzy set theory to make approximate deductions (Hofmann et al., 2011a).",
+            "startOffset": 38965,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41344,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 41116,
+                    "startOffset": 41094
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Blaschke et al. (2014) demonstrated the potential of spectral attributes (e.g. brightness, and the normalized difference vegetation index: NDVI) and spatial properties (e.g. results from GLCM textural analysis) for landslide delineation through OBIA.",
+            "startOffset": 41094,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49069,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In subsequent steps, smaller image objects were merged into larger ones based on the chosen scale, color, and shape parameters, to define the growth in heterogeneity between adjacent image objects.",
+            "startOffset": 48872,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 40864,
+            "parents": [],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 40862,
+                    "startOffset": 40843
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The satisfaction degree of a class rule is determined according to the membership degrees of the attribute (Sebari and He, 2013).",
+            "startOffset": 40735,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38964,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Among object-based image classification methods, fuzzy rule based ones have become important in recent years.",
+            "startOffset": 38855,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43340,
+            "parents": [],
+            "refoffsets": {
+                "bb0130": {
+                    "endOffset": 43284,
+                    "startOffset": 43255
+                }
+            },
+            "secId": "s0010",
+            "sentence": "We also used a 10-m resolution DEM derived from a 1:25,000 scale topographic map for our previous research (Feizizadeh and Blaschke, 2014), to extract morphometric characteristic of landslides.",
+            "startOffset": 43147,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 36273,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 36271,
+                    "startOffset": 36240
+                },
+                "bb0225": {
+                    "endOffset": 36271,
+                    "startOffset": 36240
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Multi-temporal satellite imagery is suitable for generating landslide inventories and detecting changes (Chen et al., 2007; Martha, 2011).",
+            "startOffset": 36135,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69216,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The maps produced using the MGE and MAR operators yielded the next best performances (93.32% and 93.07%, respectively).",
+            "startOffset": 69097,
+            "title": "Results"
+        },
+        {
+            "endOffset": 63586,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 63585,
+                    "startOffset": 63560
+                }
+            },
+            "secId": "s0060",
+            "sentence": "The first step involved calculating the classification confidence or the magnitude of error for each sample observation, on the basis of the Difference fuzzy function which is proposed by Gopal and Woodcock (1994).",
+            "startOffset": 63372,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 44411,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Building on these findings, we developed a research methodology based on the integration of GIS-functionality with remote sensing data for landslide mapping and change detection analysis.",
+            "startOffset": 44224,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 75837,
+            "parents": [],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 75835,
+                    "startOffset": 75811
+                }
+            },
+            "secId": "s0075",
+            "sentence": "There is therefore no need to provide the expert with the actual mapped category for each test site (Woodcock and Gopal, 2000).",
+            "startOffset": 75710,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 42774,
+            "parents": [],
+            "refoffsets": {
+                "bb0230": {
+                    "endOffset": 42772,
+                    "startOffset": 42750
+                }
+            },
+            "secId": "s0010",
+            "sentence": "A DEM and derivatives such as slope and flow direction is therefore critical for successful landslide detection (Martha and Kerle, 2010).",
+            "startOffset": 42637,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 72451,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "As discussed in Section 3.5, in order to use the classification results to produce standard maps (e.g. landslide maps), the fuzzy results need to be translated back into crisp values (\u201cdefuzzification\u201d).",
+            "startOffset": 72248,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 75376,
+            "parents": [],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 75374,
+                    "startOffset": 75350
+                }
+            },
+            "secId": "s0075",
+            "sentence": "This allows the experts to acknowledge any existing heterogeneity or ambiguity in the map classes (Woodcock and Gopal, 2000).",
+            "startOffset": 75251,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 79253,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The Results of this study will therefore also be provided to the relevant East Azerbaijan authorities responsible for risk management.",
+            "startOffset": 79119,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65038,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The approach that we adopted involved an FSE of Difference values.",
+            "startOffset": 64972,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 59576,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fig. 4 shows the variability in the obtained sample-based membership values.",
+            "startOffset": 59500,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 46100,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In the third stage an object-based change detection was performed in order to map landslide-related change.",
+            "startOffset": 45993,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 75111,
+            "parents": [],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 75109,
+                    "startOffset": 75085
+                }
+            },
+            "secId": "s0075",
+            "sentence": "The rating system uses a linguistic scale, based on the premise that experts most often use linguistic constructs to describe map accuracy (Woodcock and Gopal, 2000).",
+            "startOffset": 74945,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 52198,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Accordingly, we used fuzzy rule sets for dealing with uncertainty and vagueness and to examine the advantages of this approach.",
+            "startOffset": 52071,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 62271,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 62269,
+                    "startOffset": 62250
+                }
+            },
+            "secId": "s0060",
+            "sentence": "An accuracy assessment provides measures of the reliability of the classified data and the degree to which they are correct (Comber et al., 2012).",
+            "startOffset": 62125,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 62814,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In our research the Fuzzy Synthetic Evaluation (FSE) approach was adapted to compute the accuracy of classifications.",
+            "startOffset": 62697,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 67992,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The knowledge rules for \u2018no change\u2019 were structured as follows: \u201cIf \u2018class name\u2019 in the combined classification layer of 2005 \u2018class name\u2019 in the combined classification layer of 2011, then \u2018no change\u2019 is recorded\u201d.",
+            "startOffset": 67777,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 63180,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0250": {
+                    "endOffset": 63100,
+                    "startOffset": 63091
+                }
+            },
+            "secId": "s0060",
+            "sentence": "We used 109 known landslide locations recorded during field surveys (MNR, 2010) to assess the accuracy of the 12 maps derived using different fuzzy operators.",
+            "startOffset": 63022,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 64634,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0265": {
+                    "endOffset": 64632,
+                    "startOffset": 64611
+                }
+            },
+            "secId": "s0060",
+            "sentence": "As with the classification confidence, the amount of error increases as ICR increases (Sarmento et al., 2008).",
+            "startOffset": 64524,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 73043,
+            "parents": [],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 73041,
+                    "startOffset": 73026
+                }
+            },
+            "secId": "s0075",
+            "sentence": "As this output removes the rich measures of uncertainty of the fuzzy classification, this step should be only performed if it is really necessary, and then as late as possible in the whole information extraction process (Lu et al., 2011).",
+            "startOffset": 72805,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 41872,
+            "parents": [],
+            "refoffsets": {
+                "bb0120": {
+                    "endOffset": 41870,
+                    "startOffset": 41814
+                },
+                "bb0135": {
+                    "endOffset": 41870,
+                    "startOffset": 41814
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Landslides are common in this basin due to unstable slopes in complex geology and tectonic settings (Feizizadeh and Blaschke, 2013a; Feizizadeh et al., 2013a).",
+            "startOffset": 41713,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 43859,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "A review of object-based landslide delineation in previous studies has revealed the increasing complexity of landslide classification.",
+            "startOffset": 43725,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 46900,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 46898,
+                    "startOffset": 46881
+                }
+            },
+            "secId": "s0025",
+            "sentence": "MRS is a bottom-up region-growing segmentation that merges the most similar adjacent pixels or regions as long as the internal heterogeneity of the resulting object does not exceed a user-defined threshold (Benz et al., 2004).",
+            "startOffset": 46674,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 45701,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In the first stage, all required datasets were prepared and geometric and atmospheric corrections were applied to the satellite data.",
+            "startOffset": 45568,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 46673,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 46560,
+                    "startOffset": 46538
+                },
+                "bb0045": {
+                    "endOffset": 46671,
+                    "startOffset": 46657
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Multi-resolution segmentation (MRS; Baatz and Sch\u00e4pe, 2000) is one of the most frequently used algorithms for image segmentation in earth science studies (Blaschke, 2010).",
+            "startOffset": 46502,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 50521,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 50519,
+                    "startOffset": 50494
+                }
+            },
+            "secId": "s0030",
+            "sentence": "They also exhibit clear vegetational contrasts with their surroundings such as light toned scarps (Aksoy and Ercanoglu, 2012).",
+            "startOffset": 50395,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 73209,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "However, since fuzzy classification employs several membership functions, it is possible to analyze membership functions for obtaining the highest membership values.",
+            "startOffset": 73044,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 77218,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This study demonstrates the efficacy of the FSE approach for assessing the accuracy of fuzzy based classification.",
+            "startOffset": 77104,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 43679,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Our semi-automated approach was developed in Cognition Network Language (CNL), a modular programming language available within the eCognition software (Trimble Geospatial).",
+            "startOffset": 43507,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 38072,
+            "parents": [],
+            "refoffsets": {
+                "bb0165": {
+                    "endOffset": 37854,
+                    "startOffset": 37802
+                },
+                "bb0190": {
+                    "endOffset": 38070,
+                    "startOffset": 38021
+                },
+                "bb0195": {
+                    "endOffset": 38070,
+                    "startOffset": 38021
+                },
+                "bb0300": {
+                    "endOffset": 37854,
+                    "startOffset": 37802
+                }
+            },
+            "secId": "s0005",
+            "sentence": "OBIA is also promising for mapping landslides (Guzzetti et al., 2012; Van Den Eeckhaut et al., 2012) and has considerable potential for monitoring landslide-prone areas since spectral, spatial, contextual, and morphological parameters can all be taken into account (H\u00f6lbling and F\u00fcreder, 2011; H\u00f6lbling et al., 2012).",
+            "startOffset": 37755,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48379,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Landslide inventory data were also included to improve the segmentation process and obtain a suitable scale parameter.",
+            "startOffset": 48261,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 71024,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 71022,
+                    "startOffset": 71002
+                },
+                "bb0150": {
+                    "endOffset": 70957,
+                    "startOffset": 70940
+                }
+            },
+            "secId": "s0075",
+            "sentence": "Classification uncertainty can therefore be represented by objects that have relatively high membership values for more than one class, or do not have a sufficiently high membership for any class (Gong et al., 1996), which are referred to as \u2018fuzzy objects\u2019 (Dronova et al., 2011).",
+            "startOffset": 70743,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 72075,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 72073,
+                    "startOffset": 72053
+                }
+            },
+            "secId": "s0075",
+            "sentence": "They show that objects may also be fuzzy in this respect when the boundaries between different cover types fall within an object or when two or more cover types are \u2018mixed\u2019 at finer spatial scales (Dronova et al., 2011).",
+            "startOffset": 71855,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 60184,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fig. 5 shows the membership values calculated using fuzzy operators.",
+            "startOffset": 60116,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 74862,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "FSE involves comparing the map label assigned to each sample site with an evaluation provided by an expert.",
+            "startOffset": 74755,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 75500,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "A blind testing procedure is also used, meaning the expert has no previous knowledge of the map data when assessing a site.",
+            "startOffset": 75377,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48522,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For this goal, each level of segmentation were performed twice with consecutively smaller increments for obtaining a suitable scale parameter.",
+            "startOffset": 48380,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 61554,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Two classes were used in the classification: \u201cpossible landslide\u201d and \u201cno-landslide\u201d.",
+            "startOffset": 61469,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 75709,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The expert is not limited to a single match for each site, is not bound to find a perfect match for each site, and needs to evaluate all map categories at each test site using the linguistic membership scale.",
+            "startOffset": 75501,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 77003,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This applies to the choice of both the fuzzy operators and the parameters used.",
+            "startOffset": 76924,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 39593,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 39591,
+                    "startOffset": 39566
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Fuzzy set theory replaces the two strict logical statements \u20180\u2019 (not a member) and \u20181\u2019 (member) with a continuous membership range [0, 1] (Aksoy and Ercanoglu, 2012).",
+            "startOffset": 39427,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45992,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In the second stage the fuzzy rule based classification and thresholding were developed in order to identify and delineate landslides.",
+            "startOffset": 45858,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 76298,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "We carried out fuzzy such classifications for landslide delineation and tested the resulting maps against a landslide inventory dataset.",
+            "startOffset": 76162,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 40224,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A fuzzy rule based classification generates membership functions, and subsequently \u2018degrees of truth\u2019 attributed to each parameter.",
+            "startOffset": 40093,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64523,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Table 5 shows the different confidence levels for Difference fuzzy functions, depending on the map class and ICR.",
+            "startOffset": 64410,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 64822,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Difference function values are presented for each category.",
+            "startOffset": 64763,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 40356,
+            "parents": [],
+            "refoffsets": {
+                "bb0115": {
+                    "endOffset": 40354,
+                    "startOffset": 40314
+                },
+                "bb0270": {
+                    "endOffset": 40354,
+                    "startOffset": 40314
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In OBIA, the degrees of truth relate to individual extracted objects rather than pixels (Dubois et al., 2007; Sebari and He, 2013).",
+            "startOffset": 40225,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73939,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Using different operators will naturally result in different accuracies, and hence defining the right or most appropriate trade-off value is an important issue for accuracy assessment.",
+            "startOffset": 73755,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 66362,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "This approach performs OBIA on multi-temporal images to extract objects and classify them independently.",
+            "startOffset": 66258,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 68507,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The results of the FSE based accuracy assessment for fuzzy operators are presented in Table 6 and Figs. 7 and 8.",
+            "startOffset": 68395,
+            "title": "Results"
+        },
+        {
+            "endOffset": 60115,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 60113,
+                    "startOffset": 60088
+                }
+            },
+            "secId": "s0050",
+            "sentence": "Our fuzzy membership functions were applied through six operators: \u201cand (min)\u201d (abbreviation = AND), \u201cor (max)\u201d (OR), \u201cmean (geometric)\u201d (MGE), \u201cmean (arithmetic)\u201d (MAR), \u201cmean (geom.weighted)\u201d (MGWE) and \u201cand (\u204e)\u201d (ALP), where AND and ALP refer to logical intersection and return the minimum of the fuzzy values, OR refers to logical union and returns the maximum of the fuzzy values, MAR and MGE return the arithmetic and geometric means, and MGWE returns the geometrically weighted mean of the fuzzy values (Aksoy and Ercanoglu, 2012).",
+            "startOffset": 59577,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 60792,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The mean fuzzy membership was analyzed to select the most effective and beneficial features for the fuzzy rule based classification.",
+            "startOffset": 60660,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 50126,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0120": {
+                    "endOffset": 50124,
+                    "startOffset": 50061
+                },
+                "bb0125": {
+                    "endOffset": 50124,
+                    "startOffset": 50061
+                },
+                "bb0135": {
+                    "endOffset": 50124,
+                    "startOffset": 50061
+                }
+            },
+            "secId": "s0030",
+            "sentence": "As mentioned before, most landslides in the study area are rotational slides (Feizizadeh and Blaschke, 2013a, 2013b; Feizizadeh et al., 2013a).",
+            "startOffset": 49983,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 65883,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "After landladies maps were produced and assessed, the object-based change detection analysis was performed to detect landslides that occurred between 2005 and 2011.",
+            "startOffset": 65719,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 68310,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Fig. 6 shows 12 maps that were produced for 2005 and 2012 on the basis of the membership functions and operators, expressing the possibility of objects belonging to the \u201cpossible landslide\u201d class.",
+            "startOffset": 68114,
+            "title": "Results"
+        },
+        {
+            "endOffset": 45159,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This process is usually cyclic, with objects being re-shaped or new objects created within the process by the different classification steps.",
+            "startOffset": 45018,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 73636,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The overall accuracies obtained from the FSE analyses revealed that the AND, MGE, and MAR operators performed satisfactorily, while the OR, ALP and MGEW operators yielded relatively poor results.",
+            "startOffset": 73441,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 72248,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "In a multiscale segmentation and classification approach, this can usually be attributed to a non-perfect initial segmentation or an ambiguous choice of segmentation level.",
+            "startOffset": 72076,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 76003,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "We conclude that this study has demonstrated that FSE is able to identify extremely well the relative accuracies resulting from the use of different fuzzy operators.",
+            "startOffset": 75838,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 77387,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "To the best of our knowledge, the FSE approach has not previously been implemented in OBIA, but our results clearly show that OBIA can benefit from such an integration.",
+            "startOffset": 77219,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 62696,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 62694,
+                    "startOffset": 62670
+                }
+            },
+            "secId": "s0060",
+            "sentence": "These conventional measures, however, are unsuitable for accuracy assessment of fuzzy classification (Woodcock and Gopal, 2000).",
+            "startOffset": 62568,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 47215,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Segmentation using eCognition is based on a scale factor, which is the heterogeneity threshold for the spectral information or color.",
+            "startOffset": 47082,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 79118,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "However, the landslide locations classified by fuzzy-OBIA in this study refer to possible areas where landslides may occur and are therefore similar to maps produced as a result of direct mapping by expert geoscientists or geomorphologists when assessing landslide potential.",
+            "startOffset": 78843,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 66638,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The classification algorithms used in OBCD incorporate both spectral and spatial information, together with derived factors such as textural analysis.",
+            "startOffset": 66488,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 65349,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In order to estimate the overall accuracy, we used the whole map classification as an auxiliary variable in the estimation procedure.",
+            "startOffset": 65216,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 40092,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 39989,
+                    "startOffset": 39974
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Blaschke (2010) indicated that fuzzy rule based OBIA classifications were more precise than per-pixel classifications.",
+            "startOffset": 39974,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44223,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 44221,
+                    "startOffset": 44185
+                },
+                "bb0235": {
+                    "endOffset": 44221,
+                    "startOffset": 44185
+                }
+            },
+            "secId": "s0020",
+            "sentence": "While earlier approaches were largely restricted to using the digital number values from multispectral bands, subsequent approaches have made use of, for example, NDVI, various textural indices, DEM derivatives, additional vector layers from other sources (e.g., for flow accumulation and stream networks), and shadow masks (Martha et al., 2010; Lu et al., 2011).",
+            "startOffset": 43860,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 68796,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The second best performance was obtained from the classification using the fuzzy MEG operator (FSE accuracy: 93.32%), closely followed by the MAR operator (93.67%).",
+            "startOffset": 68632,
+            "title": "Results"
+        },
+        {
+            "endOffset": 61063,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Table 4 shows the features considered and their mathematical backgrounds.",
+            "startOffset": 60990,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 63021,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0260": {
+                    "endOffset": 63019,
+                    "startOffset": 62996
+                },
+                "bb0265": {
+                    "endOffset": 62858,
+                    "startOffset": 62836
+                }
+            },
+            "secId": "s0060",
+            "sentence": "The FSE, proposed by Sarmento et al. (2008), aims to combine the matches and non-matches between a fuzzy based classified map and a reference map such as a landslide inventory map (Pontius and Cheuk, 2006).",
+            "startOffset": 62815,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 39426,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Fuzzy sets have functions expressing their degree of membership, which is a mathematical approach for quantifying uncertain elements.",
+            "startOffset": 39293,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45524,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "A similar classification was then performed for the ALOS and GIS data in 2011 in order to identify landslides that had occurred in the intervening period and to monitor changes to previously identified landslides.",
+            "startOffset": 45311,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 47986,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "We used MRS for the initial segmentation, parameterized according to the specific requirements for event-based rapid mapping of landslides and incorporated into a multi-scale optimization routine.",
+            "startOffset": 47790,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 64762,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Table 6 presents the error magnitudes according to the potential demand class and alternative class, as well as the ICR values.",
+            "startOffset": 64635,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 40980,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, a fuzzy approach can use many different membership functions and fuzzy operators to combine the functions.",
+            "startOffset": 40865,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59499,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 59497,
+                    "startOffset": 59478
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The shape is specific to each property (Sebari and He, 2013).",
+            "startOffset": 59438,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 49211,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "A larger scale parameter usually results in larger image objects, since it allows a greater heterogeneity of pixel values within each object.",
+            "startOffset": 49070,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 76624,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The integration of OBIA for landslide delineation with landslide change detection analysis requires further development.",
+            "startOffset": 76504,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 74313,
+            "parents": [],
+            "refoffsets": {
+                "bb0120": {
+                    "endOffset": 74311,
+                    "startOffset": 74257
+                },
+                "bb0160": {
+                    "endOffset": 74311,
+                    "startOffset": 74257
+                }
+            },
+            "secId": "s0075",
+            "sentence": "Technically speaking the AND operator is an aggregate operator that represents the MIN risk decision-making, while other operators such as the OR operator represent the MAX risk decision-making in a strategy space with different level of trade-offs as well (Gorsevski et al., 2012, Feizizadeh and Blaschke, 2013a).",
+            "startOffset": 73999,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 67574,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 67572,
+                    "startOffset": 67542
+                }
+            },
+            "secId": "s0065",
+            "sentence": "This process was automated based on the knowledge rules developed (Aguirre Guti\u00e9rrez et al., 2012).",
+            "startOffset": 67475,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 73998,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Our results indicated that the AND operate performed best.",
+            "startOffset": 73940,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 69096,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "For the 2011 landslide maps the fuzzy AND operator again yielded the best results (FSE accuracy: 94.74%).",
+            "startOffset": 68991,
+            "title": "Results"
+        },
+        {
+            "endOffset": 51668,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The uncertainties in object-based landslide delineation reflect boundaries of objects and with fuzziness in the definition of map classes, with the possibility of an object belonging to more than one classes.",
+            "startOffset": 51460,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 48871,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 48870,
+                    "startOffset": 48854
+                }
+            },
+            "secId": "s0025",
+            "sentence": "In each step the result from the previous cycle became the sub-object level, and a number of objects were merged according to the next larger scale factor to create a super-object level as suggested by Lu et al. (2011).",
+            "startOffset": 48652,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 59437,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The shapes of membership functions are defined using information collected during the modeling step, related to the mathematical formulations and threshold values of the attributes.",
+            "startOffset": 59256,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 77775,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "As mentioned in Section 5, limitations in the number of spectral bands and discriminating features may cause overlaps between membership functions.",
+            "startOffset": 77628,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 41712,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The study area is a part of the Lake Urmia basin in north-western Iran (Fig. 1).",
+            "startOffset": 41632,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 77991,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Future research should focus on applying fuzzy rule based classifications to hyper spectral satellite images in order to analyze the effect that introducing additional bands has on improving classification accuracy.",
+            "startOffset": 77776,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 50394,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 50392,
+                    "startOffset": 50337
+                },
+                "bb0275": {
+                    "endOffset": 50392,
+                    "startOffset": 50337
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The rotational slides display abrupt changes in slope morphology, with concavity in the depletion zone and convexity in the accumulation zone (Soeters and van Westen, 1996; Aksoy and Ercanoglu, 2012).",
+            "startOffset": 50194,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 69736,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Table 7 details the statistical results of delineated landslides and changes that occurred from 2005 to 2011 for all fuzzy operators.",
+            "startOffset": 69603,
+            "title": "Results"
+        },
+        {
+            "endOffset": 71737,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This overlapping was very obvious when we calculated membership values from a panchromatic IRS-Id satellite image.",
+            "startOffset": 71623,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48134,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "MRS requires weightings of different input layers (bands), and a scale parameter of the maximum permitted heterogeneity within individual segments.",
+            "startOffset": 47987,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 71436,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "In an \u2018ideal\u2019 scenario (e.g. if training data and discriminating features allow a perfect separation of classes) such cutoff values should be very close to zero.",
+            "startOffset": 71275,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 50624,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For the fuzzy logic membership approach, we selected 20 training samples from the landslide inventory.",
+            "startOffset": 50522,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 70530,
+            "parents": [],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 70528,
+                    "startOffset": 70504
+                }
+            },
+            "secId": "s0075",
+            "sentence": "However, soft classification based on membership values is considered to be a major advantage of the fuzzy approach, leading to a wide range of possible membership levels for objects, from full membership in one class to varying memberships of all classes (Woodcock and Gopal, 2000).",
+            "startOffset": 70247,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 71622,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 71620,
+                    "startOffset": 71600
+                }
+            },
+            "secId": "s0075",
+            "sentence": "However, in real world situations and in particular when the numbers of spectral bands and discriminating features are limited, a membership function may overlap (Dronova et al., 2011).",
+            "startOffset": 71437,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 40607,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The membership degree of an object for a particular attribute is determined by the value of the considered attribute.",
+            "startOffset": 40490,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62103,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 61985,
+                    "startOffset": 61959
+                }
+            },
+            "secId": "s0055",
+            "sentence": "A threshold of 0.5 was used to assign an object to a class (eCognition Developer, 2011): objects with values \u2265 0.5 were assigned as landslides, while those with lower values were considered no-landslides.",
+            "startOffset": 61899,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 55035,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For the AND operator the degree of membership is usually given by the property with the lowest degree of membership, and for the OR operator by the property with the highest degree of membership.",
+            "startOffset": 54840,
+            "title": "Fuzzy propositions on object properties"
+        },
+        {
+            "endOffset": 59255,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "These mean membership values were calculated using the 20 landslide objects chosen as sample data, through 11 membership functions: larger than, smaller than, larger than (Boolean, crisp), smaller than (Boolean, crisp), larger than (linear), smaller than (linear), linear range (triangle), linear range (triangle inverted), singleton (exactly one value), approximate Gaussian, and about range.",
+            "startOffset": 58862,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 61800,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "For this, the maximum membership degree of the fuzzy rule based classifications was used.",
+            "startOffset": 61711,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 67776,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The knowledge rules for change were structured as follows: \u201cIf \u2018class name\u2019 in combined classification layer 2005s\u2018class name\u2019 in combined classification layer 2011, then \u2018change\u2019 to that cover class\u201d.",
+            "startOffset": 67575,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 61293,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 61291,
+                    "startOffset": 61196
+                },
+                "bb0195": {
+                    "endOffset": 61291,
+                    "startOffset": 61196
+                },
+                "bb0235": {
+                    "endOffset": 61291,
+                    "startOffset": 61196
+                },
+                "bb0240": {
+                    "endOffset": 61291,
+                    "startOffset": 61196
+                },
+                "bb0290": {
+                    "endOffset": 61291,
+                    "startOffset": 61196
+                }
+            },
+            "secId": "s0055",
+            "sentence": "Most of them are related to threshold values of parameters such as brightness, NDVI, mean curvature, slope, and GLCM textural (e.g. Martha et al., 2010, 2012; Stumpf and Kerle, 2011; H\u00f6lbling et al., 2012; Blaschke et al., 2014).",
+            "startOffset": 61064,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 76161,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The objective of this research was to investigate the influences that different membership functions have on OBIA fuzzy rule based classifications.",
+            "startOffset": 76014,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 40734,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Each class is described by a fuzzy rule that expresses the relationship between the class and the properties that describe it.",
+            "startOffset": 40608,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50935,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 50933,
+                    "startOffset": 50908
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Fuzzy classification systems are well suited to handling sources of vagueness in information extraction using remote sensing (Aksoy and Ercanoglu, 2012).",
+            "startOffset": 50782,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 75250,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The ratings and scores are obtained through linguistic values used to estimate the membership value of each map class at each sample site.",
+            "startOffset": 75112,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 41093,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Although selecting appropriate functions and fuzzy operators is crucial, their effects have rarely been studied.",
+            "startOffset": 40981,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58777,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 58775,
+                    "startOffset": 58756
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The membership degree is a real value in the interval [0, 1] (Sebari and He, 2013).",
+            "startOffset": 58694,
+            "title": "Fuzzy rules on object classes"
+        },
+        {
+            "endOffset": 43506,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A combination of features from each data layer was then used in a knowledge and object-based approach to detect landslides in rugged terrain of the Lake Urmia basin.",
+            "startOffset": 43341,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 47081,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0290": {
+                    "endOffset": 47079,
+                    "startOffset": 47057
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The segmentation results depend on the data characteristics such as spatial resolution, the number of bands, image quantization, and scene characteristics (Stumpf and Kerle, 2011).",
+            "startOffset": 46901,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 37755,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 37753,
+                    "startOffset": 37704
+                },
+                "bb0210": {
+                    "endOffset": 37753,
+                    "startOffset": 37704
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Therefore, OBIA is similar to the visutal interpretation of aerial photos to some extent (Laliberte et al., 2004; Aksoy and Ercanoglu, 2012).",
+            "startOffset": 37614,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47789,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 47787,
+                    "startOffset": 47751
+                },
+                "bb0235": {
+                    "endOffset": 47787,
+                    "startOffset": 47751
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Over-segmentation and under-segmentation can, however, be reduced by using a multi-scale optimization approach (Martha et al., 2010; Lu et al., 2011).",
+            "startOffset": 47639,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 61710,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Since the fuzzy values from the classification represent a range of values between [0, 1], these need to be categorized to produce standard landslide maps.",
+            "startOffset": 61555,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 74754,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "In order to deal with this issue we used an FSE approach to obtain an overall accuracy assessment of fuzzy classifications.",
+            "startOffset": 74631,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51188,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The membership degree of each object is determined according to the value of its attribute.",
+            "startOffset": 51097,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 49576,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This study presents a new approach of landslide detection using the membership functionality offered by fuzzy set theory together with \u2018rule based classification\u2019 utilizing spectral, shape, and textural features while for the latter gray-level co-occurrence matrices (GLCM) were calculated for objects rather than for pixels.",
+            "startOffset": 49251,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 66257,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "COCD is the most commonly used OBCD methodology that allows the creation of a change matrix.",
+            "startOffset": 66165,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 76923,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 76824,
+                    "startOffset": 76752
+                },
+                "bb0050": {
+                    "endOffset": 76824,
+                    "startOffset": 76752
+                },
+                "bb0230": {
+                    "endOffset": 76824,
+                    "startOffset": 76752
+                }
+            },
+            "secId": "s0080",
+            "sentence": "Previous researchers have demonstrated the capabilities of OBIA and fuzzy rule based classification for landslide delineation (Martha and Kerle, 2010; Aksoy and Ercanoglu, 2012; Blaschke et al., 2014) but a better understanding of the factors contributing to classification uncertainty is required.",
+            "startOffset": 76625,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 78553,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The Results of this research demonstrate that OBIA can be used to efficiently delineate landslides, update landslide inventories, and monitor landslide behavior.",
+            "startOffset": 78392,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 74944,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "At each site the expert assigns a qualitative rating for each possible map label.",
+            "startOffset": 74863,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 48260,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "We attempted MRS using spectral and spatial information for landslides by integrating the satellite images with the GIS data.",
+            "startOffset": 48135,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 51460,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 51458,
+                    "startOffset": 51439
+                }
+            },
+            "secId": "s0035",
+            "sentence": "The satisfaction degree of a class rule is determined according to the membership degrees of the properties (Sebari and He, 2013).",
+            "startOffset": 51330,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 62406,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The cross tabulation of classified data against reference data is commonly known as the error matrix (or confusion/validation matrix).",
+            "startOffset": 62272,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 68113,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "As outlined in Section 3.5, the fuzzy rule based classifications were performed by employing six fuzzy-operators.",
+            "startOffset": 68000,
+            "title": "Results"
+        },
+        {
+            "endOffset": 69315,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The accuracy achieved using the OR operator was 92.11%, and that using the ALP operator was 90.3%.",
+            "startOffset": 69217,
+            "title": "Results"
+        },
+        {
+            "endOffset": 42401,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 42399,
+                    "startOffset": 42346
+                },
+                "bb0125": {
+                    "endOffset": 42399,
+                    "startOffset": 42346
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Field observations and data in the landslide inventory indicate that most landslides can be categorized as rotational slides and occurred at elevations above 1600 m on slopes steeper than 7%, within agricultural and pastoral areas (Feizizadeh and Blaschke, 2013b; Blaschke et al., 2014).",
+            "startOffset": 42114,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 57413,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "By using these two measures, the imprecision and the uncertainty of the object extraction process is quantified and consequently its quality is estimated.",
+            "startOffset": 57259,
+            "title": "Membership value analysis"
+        },
+        {
+            "endOffset": 50725,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The selection of proper training samples is one of the key steps in fuzzy rule based classification.",
+            "startOffset": 50625,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 45857,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Relevant geometric and thematic editing was carried out on the original topographic maps in order to create a DEM and derive slope and flow direction data.",
+            "startOffset": 45702,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 52070,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 52068,
+                    "startOffset": 52047
+                }
+            },
+            "secId": "s0035",
+            "sentence": "In order to deal with the issue of uncertainties, fuzzy rules are used for steering and controlling processes or assigning objects to fuzzy sets (Hofmann et al., 2011a).",
+            "startOffset": 51901,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 76435,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The results indicate that the accuracies of fuzzy rule based classifications are significantly affected by the choice of fuzzy operator.",
+            "startOffset": 76299,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 68898,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The OR operator yielded an FSE accuracy of 91.98% and the ALP operator yielded an accuracy of 89.45%.",
+            "startOffset": 68797,
+            "title": "Results"
+        },
+        {
+            "endOffset": 37072,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It bridges remote sensing and GIS while assessing characteristics of the objects through spatial, spectral and temporal scales so as to ultimately generating new geographic information in GIS-ready format.",
+            "startOffset": 36867,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43146,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "We used semi-automated fuzzy rule based classification to delineate landslides through change detection analysis, for which we used a multispectral SPOT-5 satellite image with 10 m resolution taken on 05 May 2005, an IRS-1D P6 panchromatic satellite image with 5.8 m resolution on 21 May 2005, and a multispectral ALOS satellite image with 10 m resolution on 12 May 2011.",
+            "startOffset": 42775,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 42113,
+            "parents": [],
+            "refoffsets": {
+                "bb0250": {
+                    "endOffset": 42111,
+                    "startOffset": 42102
+                }
+            },
+            "secId": "s0010",
+            "sentence": "It includes records of 109 landslide events whose GPS coordinates were recorded during field surveys (MNR, 2010).",
+            "startOffset": 42000,
+            "title": "Study area and dataset"
+        },
+        {
+            "endOffset": 49919,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 49917,
+                    "startOffset": 49831
+                },
+                "bb0050": {
+                    "endOffset": 49917,
+                    "startOffset": 49831
+                },
+                "bb0220": {
+                    "endOffset": 49917,
+                    "startOffset": 49831
+                },
+                "bb0235": {
+                    "endOffset": 49917,
+                    "startOffset": 49831
+                }
+            },
+            "secId": "s0030",
+            "sentence": "A total of 42 features (23 from the 2005 data and 19 from the 2011 data) were selected for landslide detection and delineation, based on information from literature and by taking into account the physical characteristics of landslides in the study area (Martha et al., 2010; Lu et al., 2011; Aksoy and Ercanoglu, 2012; Blaschke et al., 2014).",
+            "startOffset": 49577,
+            "title": "Selection of sample data and features"
+        },
+        {
+            "endOffset": 37613,
+            "parents": [],
+            "refoffsets": {
+                "bb0315": {
+                    "endOffset": 37611,
+                    "startOffset": 37592
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In particular, OBIA can utilize expert knowledge in the classification process (Zhou and Troy, 2008).",
+            "startOffset": 37512,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70246,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "It should be noted that fuzzy classification can generally be performed in a number of different ways, such as using fuzzy classifiers, softening the output of hard classifications (e.g. with the maximum likelihood technique), or using neural network approaches.",
+            "startOffset": 69984,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51900,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 51898,
+                    "startOffset": 51879
+                }
+            },
+            "secId": "s0035",
+            "sentence": "However, the benefits of object-based landslide delineation include the ability to express the membership degrees of objects for different classes and the uncertainty related to the objects extraction process (Sebari and He, 2013).",
+            "startOffset": 51669,
+            "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+        },
+        {
+            "endOffset": 62567,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 62565,
+                    "startOffset": 62502
+                },
+                "bb0080": {
+                    "endOffset": 62565,
+                    "startOffset": 62502
+                },
+                "bb0085": {
+                    "endOffset": 62565,
+                    "startOffset": 62502
+                }
+            },
+            "secId": "s0060",
+            "sentence": "It provides measures including the overall accuracy, user's accuracy, and producer's accuracy (Congalton, 1991; Congalton and Green, 1999; Comber et al., 2012).",
+            "startOffset": 62407,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 74630,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 74628,
+                    "startOffset": 74588
+                },
+                "bb0280": {
+                    "endOffset": 74628,
+                    "startOffset": 74588
+                },
+                "bb0285": {
+                    "endOffset": 74628,
+                    "startOffset": 74588
+                }
+            },
+            "secId": "s0075",
+            "sentence": "Accuracy assessments for fuzzy classifications may refer to the appropriateness of the information conveyed by the error matrix, which can be limited due to variations in specific local conditions such as error distributions occur and heteroscedastic residual distributions (Stehman, 2000, 2006; Comber et al., 2012).",
+            "startOffset": 74313,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 78392,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Future work will also address the integration of fuzzy rule based classification with aggregation operators in decision making using the Dempster Shafer Theory, in order to visualize the spatial uncertainty of results.",
+            "startOffset": 78174,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 66487,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The classified objects are then compared on the basis of both geometry and class membership, for a detailed change analysis.",
+            "startOffset": 66363,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 37511,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It incorporates both spectral information such as pixel values, tone, and color and spatial information such as object size, shape, pattern, and associations with neighboring objects.",
+            "startOffset": 37328,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39292,
+            "parents": [],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 39290,
+                    "startOffset": 39271
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Fuzzy logic allows the use of membership functions and the degree of truth attributed to each extracted object (Sebari and He, 2013).",
+            "startOffset": 39159,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66893,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "We used the landslide objects from the 2005 images as a baseline for the COCD approach and assigned changes to the 2011 image.",
+            "startOffset": 66767,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 69507,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "After this validation step, an object-based change detection analysis was applied to monitor landslides changes from 2005 to 2011.",
+            "startOffset": 69377,
+            "title": "Results"
+        },
+        {
+            "endOffset": 71274,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The definition of \u2018fuzziness\u2019 depends on the membership function cutoff value, i.e. the objects assigned to a primary class are considered fuzzy if their membership to at least one secondary or alternative class exceeds some cutoff membership value.",
+            "startOffset": 71025,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65504,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The maximum contribution to the accuracies of the classes comes from the VHCC observations, because they imply absolute confidence in the classifications.",
+            "startOffset": 65350,
+            "title": "Accuracy assessment"
+        },
+        {
+            "endOffset": 38672,
+            "parents": [],
+            "refoffsets": {
+                "bb0140": {
+                    "endOffset": 38670,
+                    "startOffset": 38605
+                },
+                "bb0235": {
+                    "endOffset": 38670,
+                    "startOffset": 38605
+                },
+                "bb0245": {
+                    "endOffset": 38670,
+                    "startOffset": 38605
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Bridging remote sensing and GIS through OBIA techniques by means of integrating satellite images with other datasets such as Digital Elevation Models (DEMs) and their derivatives can produce better results than stand-alone approaches to landslide mapping (McDermid and Franklin, 1994; Florinsky, 1998; Martha et al., 2010).",
+            "startOffset": 38349,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45310,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In order to use change detection to identify landslides, we first performed fuzzy rule based classification for the IRS-ID, SPOT, and GIS data in 2005.",
+            "startOffset": 45159,
+            "title": "Landslide recognition: workflow"
+        },
+        {
+            "endOffset": 69376,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The MEGW operator again yielded the poorest result (88.12%).",
+            "startOffset": 69316,
+            "title": "Results"
+        },
+        {
+            "endOffset": 55373,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Fuzzy logic in OBIA and object-based landslide mapping"
+                }
+            ],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 55371,
+                    "startOffset": 55325
+                },
+                "bb0090": {
+                    "endOffset": 55371,
+                    "startOffset": 55325
+                }
+            },
+            "secId": "s0040",
+            "sentence": "The resulting degree of membership or the degree of fulfilling the classification conditions assigned to each object can be used to quantify the reliability of a classification (Benz et al., 2004; Definiens Developer 7, 2007).",
+            "startOffset": 55147,
+            "title": "Fuzzy propositions on object properties"
+        },
+        {
+            "endOffset": 61898,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "If the maximum membership degree of a class is below a threshold, no classification is performed.",
+            "startOffset": 61801,
+            "title": "Fuzzy rule based classification and assigning objects to landslides"
+        },
+        {
+            "endOffset": 46327,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0225": {
+                    "endOffset": 46325,
+                    "startOffset": 46313
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Image segmentation is an important process in OBIA that groups spectrally and spatially homogenous pixels into coherent objects (Martha, 2011).",
+            "startOffset": 46184,
+            "title": "Image segmentation"
+        },
+        {
+            "endOffset": 72658,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This can be achieved by choosing the maximum membership degree of the fuzzy classification as a crisp class assignment, which is a commonly used approach for defuzzification of fuzzy classification results.",
+            "startOffset": 72452,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39973,
+            "parents": [],
+            "refoffsets": {
+                "bb0145": {
+                    "endOffset": 39900,
+                    "startOffset": 39882
+                },
+                "bb0185": {
+                    "endOffset": 39971,
+                    "startOffset": 39929
+                },
+                "bb0270": {
+                    "endOffset": 39971,
+                    "startOffset": 39929
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Several approaches have been proposed for establishing fuzzy classification from numerical data (Ghosh et al., 2008) including those with OBIA (Sebari and He, 2013; Hofmann et al., 2011b).",
+            "startOffset": 39785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66766,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "bb0200": {
+                    "endOffset": 66764,
+                    "startOffset": 66744
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The COCD results are strongly dependent on the performance and accuracy of the classification algorithm (Hussain et al., 2013).",
+            "startOffset": 66639,
+            "title": "Landslide change detection analysis"
+        },
+        {
+            "endOffset": 68394,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In order to validate the results the FSE approach was applied to obtain ICR values.",
+            "startOffset": 68311,
+            "title": "Results"
+        },
+        {
+            "endOffset": 69983,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "We aimed to calculate fuzzy membership for selected features and to apply fuzzy rules to objects while using different operators within the classification process.",
+            "startOffset": 69820,
+            "title": "Discussion"
+        }
+    ],
+    "docId": "S0169555X17302623",
+    "metadata": {
+        "asjc": [
+            "1904"
+        ],
+        "authors": [
+            {
+                "email": "Feizizadeh@Tabrizu.ac.ir",
+                "first": "Bakhtiar",
+                "initial": "B.",
+                "last": "Feizizadeh"
+            },
+            {
+                "email": null,
+                "first": "Thomas",
+                "initial": "T.",
+                "last": "Blaschke"
+            },
+            {
+                "email": null,
+                "first": "Dirk",
+                "initial": "D.",
+                "last": "Tiede"
+            },
+            {
+                "email": null,
+                "first": "Mohammad Hossein Rezaei",
+                "initial": "M.H.R.",
+                "last": "Moghaddam"
+            }
+        ],
+        "doi": "10.1016/j.geomorph.2017.06.002",
+        "firstpage": "240",
+        "issn": "0169555X",
+        "keywords": [
+            "Change detection",
+            "Environmental monitoring",
+            "Fuzzy rule based classification",
+            "Iran",
+            "Landslide delineation",
+            "Object-based image analysis"
+        ],
+        "lastpage": "254",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "EART"
+        ],
+        "title": "Evaluating fuzzy operators of an object-based image analysis for detecting landslides and their changes"
+    }
+}

@@ -1,0 +1,1803 @@
+{
+    "abstract": "This article presents a method for determination of dynamic reaction forces in knuckle boom cranes. The method is based on the dynamic modelling procedure, which is an extension of Kane's equations of motion. An efficient formulation is used, where the link velocities and angular velocities are given in terms of the link twists, which makes it straightforward to describe the partial velocities and partial angular velocities as joint lines given as screws in Pl\u00fccker coordinates. The method is presented in a systematic and general manner and is applicable for spatial crane-like manipulators with passive rotary joints and piston actuators. We propose a procedure for the substitution of the actual actuator wrenches with an equivalent set of wrenches applied on the actuator supports, which leads to an efficient procedure for the determination of reaction forces in passive joints. The application of screw theory to dynamic modelling and force analysis leads to an elegant and geometrically meaningful formulation. The method is implemented for a knuckle boom crane and simulation results are provided. The determined reaction forces can be used in mechanical problems as structural integrity calculations and fatigue lifetime prediction, as well as in control problems involving dry friction.",
+    "author_highlights": [
+        {
+            "endOffset": 59386,
+            "sentence": "A procedure for force analysis of a knuckle boom crane with the included inertia of cylinders.",
+            "startOffset": 59292
+        },
+        {
+            "endOffset": 59496,
+            "sentence": "Implementation of screws in Plucker coordinates and screw transformations for kinematic and dynamic modeling.",
+            "startOffset": 59387
+        },
+        {
+            "endOffset": 59604,
+            "sentence": "General and systematic methodology applicable for robotic manipulator arms actuated by prismatic actuators.",
+            "startOffset": 59497
+        },
+        {
+            "endOffset": 59705,
+            "sentence": "A detailed implementation example and simulation results for reaction forces in passive link joints.",
+            "startOffset": 59605
+        }
+    ],
+    "bib_entries": {
+        "bib0001": {
+            "authors": [
+                {
+                    "first": "Liyana",
+                    "initial": "L.",
+                    "last": "Ramli"
+                },
+                {
+                    "first": "Z.",
+                    "initial": "Z.",
+                    "last": "Mohamed"
+                },
+                {
+                    "first": "Auwalu M.",
+                    "initial": "A.M.",
+                    "last": "Abdullahi"
+                },
+                {
+                    "first": "H. I.",
+                    "initial": "H.I.",
+                    "last": "Jaafar"
+                },
+                {
+                    "first": "Izzuddin M.",
+                    "initial": "I.M.",
+                    "last": "Lazim"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2017.03.015",
+            "firstpage": "1",
+            "issn": "08883270",
+            "lastpage": "23",
+            "pub_year": 2017,
+            "title": "Control strategies for crane systems: A comprehensive review",
+            "volume": "95"
+        },
+        "bib0002": {
+            "authors": [
+                {
+                    "first": "Eihab M.",
+                    "initial": "E.M.",
+                    "last": "Abdel-Rahman"
+                },
+                {
+                    "first": "Ali H.",
+                    "initial": "A.H.",
+                    "last": "Nayfeh"
+                },
+                {
+                    "first": "Ziyad N.",
+                    "initial": "Z.N.",
+                    "last": "Masoud"
+                }
+            ],
+            "doi": "10.1177/1077546303009007007",
+            "firstpage": "863",
+            "issn": "10775463",
+            "lastpage": "908",
+            "pub_year": 2003,
+            "title": "Dynamics and control of cranes: A review",
+            "volume": "9"
+        },
+        "bib0003": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Linjama"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Virvalo"
+                }
+            ],
+            "doi": "10.1243/0959651991540340",
+            "firstpage": "11",
+            "issn": "09596518",
+            "lastpage": "22",
+            "pub_year": 1999,
+            "title": "Low-order dynamic model for flexible hydraulic cranes",
+            "volume": "213"
+        },
+        "bib0004": {
+            "authors": [
+                {
+                    "first": "Riccardo",
+                    "initial": "R.",
+                    "last": "Bianchi"
+                },
+                {
+                    "first": "Guido F.",
+                    "initial": "G.F.",
+                    "last": "Ritelli"
+                },
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Vacca"
+                }
+            ],
+            "doi": "10.1177/0959651817692485",
+            "firstpage": "199",
+            "issn": "09596518",
+            "lastpage": "212",
+            "pub_year": 2017,
+            "title": "Payload oscillation reduction in load-handling machines: A frequency-based approach",
+            "volume": "231"
+        },
+        "bib0005": {
+            "authors": [
+                {
+                    "first": "Morten K.",
+                    "initial": "M.K.",
+                    "last": "Bak"
+                },
+                {
+                    "first": "Michael R.",
+                    "initial": "M.R.",
+                    "last": "Hansen"
+                }
+            ],
+            "doi": "10.4173/mic.2013.4.1",
+            "firstpage": "157",
+            "issn": "03327353",
+            "lastpage": "174",
+            "pub_year": 2013,
+            "title": "Analysis of offshore knuckle boom Crane-Part One: Modeling and parameter identication",
+            "volume": "34"
+        },
+        "bib0006": {
+            "authors": [
+                {
+                    "first": "Geir Ole",
+                    "initial": "G.O.",
+                    "last": "Tysse"
+                },
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                }
+            ],
+            "doi": "10.4173/mic.2018.2.1",
+            "firstpage": "45",
+            "issn": "03327353",
+            "lastpage": "60",
+            "pub_year": 2018,
+            "title": "Dynamic interaction of a heavy crane and a ship in wave motion",
+            "volume": "39"
+        },
+        "bib0007": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Agostini"
+                },
+                {
+                    "first": "Gordon G.",
+                    "initial": "G.G.",
+                    "last": "Parker"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "Groom"
+                },
+                {
+                    "first": "Hanspeter",
+                    "initial": "H.",
+                    "last": "Schaub"
+                },
+                {
+                    "first": "Rush D.",
+                    "initial": "R.D.",
+                    "last": "Robinett"
+                }
+            ],
+            "doi": "10.1109/ACC.2002.1023983",
+            "firstpage": "2298",
+            "issn": "07431619",
+            "lastpage": "2304",
+            "pub_year": 2002,
+            "title": "Command shaping and closed-loop control interactions for a ship crane",
+            "volume": "3"
+        },
+        "bib0008": {
+            "authors": [
+                {
+                    "first": "Eleonor D.",
+                    "initial": "E.D.",
+                    "last": "Stoenescu"
+                },
+                {
+                    "first": "Dan B.",
+                    "initial": "D.B.",
+                    "last": "Marghitu"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2003.11.001",
+            "firstpage": "431",
+            "issn": "0094114X",
+            "lastpage": "443",
+            "pub_year": 2004,
+            "title": "Effect of prismatic joint inertia on dynamics of kinematic chains",
+            "volume": "39"
+        },
+        "bib0009": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Song"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Cai"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1243/0959651991540467",
+            "firstpage": "157",
+            "issn": "09596518",
+            "lastpage": "161",
+            "pub_year": 1999,
+            "title": "Robust friction compensation for precise and smooth position regulation",
+            "volume": "213"
+        },
+        "bib0010": {
+            "authors": [
+                {
+                    "first": "K. D.",
+                    "initial": "K.D.",
+                    "last": "Papakostas"
+                },
+                {
+                    "first": "S. G.",
+                    "initial": "S.G.",
+                    "last": "Mouroutsos"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Porter"
+                }
+            ],
+            "firstpage": "423",
+            "issn": "09596518",
+            "lastpage": "433",
+            "pub_year": 1998,
+            "title": "Genetic design of dynamically optimal robotic manipulators",
+            "volume": "212"
+        },
+        "bib0011": null,
+        "bib0012": {
+            "authors": [
+                {
+                    "first": "J. Y.S.",
+                    "initial": "J.Y.S.",
+                    "last": "Luh"
+                },
+                {
+                    "first": "M. W.",
+                    "initial": "M.W.",
+                    "last": "Walker"
+                },
+                {
+                    "first": "R. P.C.",
+                    "initial": "R.P.C.",
+                    "last": "Paul"
+                }
+            ],
+            "doi": "10.1115/1.3149599",
+            "firstpage": "69",
+            "issn": "00220434",
+            "lastpage": "76",
+            "pub_year": 1980,
+            "title": "On-line computational scheme for mechanical manipulators",
+            "volume": "102"
+        },
+        "bib0013": null,
+        "bib0014": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "\u0160alini\u0107"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Bo\u0161kovi\u0107"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Nikoli\u0107"
+                }
+            ],
+            "doi": "10.1016/j.autcon.2014.03.024",
+            "firstpage": "56",
+            "issn": "09265805",
+            "lastpage": "62",
+            "pub_year": 2014,
+            "title": "Dynamic modelling of hydraulic excavator motion using Kane's equations",
+            "volume": "44"
+        },
+        "bib0015": {
+            "authors": [
+                {
+                    "first": "S. K.",
+                    "initial": "S.K.",
+                    "last": "Agrawal"
+                }
+            ],
+            "doi": "10.1115/1.2919276",
+            "firstpage": "833",
+            "issn": "10500472",
+            "lastpage": "838",
+            "pub_year": 1993,
+            "title": "Multibody dynamics: A formulation using kane\u2019s method and dual vectors",
+            "volume": "115"
+        },
+        "bib0016": {
+            "authors": [
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Angeles"
+                },
+                {
+                    "first": "Sang Koo",
+                    "initial": "S.K.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1115/1.3173642",
+            "firstpage": "243",
+            "issn": "00218936",
+            "lastpage": "244",
+            "pub_year": 1988,
+            "title": "The formulation of dynamical equations of holonomic mechanical systems using a natural orthogonal complement",
+            "volume": "55"
+        },
+        "bib0017": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Angeles"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Ma"
+                }
+            ],
+            "doi": "10.1177/027836498800700504",
+            "firstpage": "32",
+            "issn": "02783649",
+            "lastpage": "47",
+            "pub_year": 1988,
+            "title": "Dynamic simulation of n-axis serial robotic manipulators using a natural orthogonal complement",
+            "volume": "7"
+        },
+        "bib0018": {
+            "authors": [
+                {
+                    "first": "Subir Kumar",
+                    "initial": "S.K.",
+                    "last": "Saha"
+                }
+            ],
+            "doi": "10.1109/70.563652",
+            "firstpage": "301",
+            "issn": "1042296X",
+            "lastpage": "304",
+            "pub_year": 1997,
+            "title": "A decomposition of the manipulator inertia matrix",
+            "volume": "13"
+        },
+        "bib0019": {
+            "authors": [
+                {
+                    "first": "S. K.",
+                    "initial": "S.K.",
+                    "last": "Saha"
+                }
+            ],
+            "doi": "10.1115/1.2791809",
+            "firstpage": "986",
+            "issn": "00218936",
+            "lastpage": "996",
+            "pub_year": 1999,
+            "title": "Dynamics of serial multibody systems using the decoupled natural orthogonal complement matrices",
+            "volume": "66"
+        },
+        "bib0020": {
+            "authors": [
+                {
+                    "first": "Slavi\u0161a",
+                    "initial": "S.",
+                    "last": "\u0160alinic"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2011.06.006",
+            "firstpage": "1796",
+            "issn": "0094114X",
+            "lastpage": "1810",
+            "pub_year": 2011,
+            "title": "Determination of joint reaction forces in a symbolic form in rigid multibody systems",
+            "volume": "46"
+        },
+        "bib0021": {
+            "authors": [
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Dhanaraj"
+                },
+                {
+                    "first": "Anand M.",
+                    "initial": "A.M.",
+                    "last": "Sharan"
+                }
+            ],
+            "doi": "10.1016/0094-114X(94)E0005-5",
+            "firstpage": "749",
+            "issn": "0094114X",
+            "lastpage": "764",
+            "pub_year": 1995,
+            "title": "Efficient modeling of rigid link robot dynamic problems with friction",
+            "volume": "30"
+        },
+        "bib0022": {
+            "authors": [
+                {
+                    "first": "R. L.",
+                    "initial": "R.L.",
+                    "last": "Huston"
+                }
+            ],
+            "doi": "10.1023/A:1009868500311",
+            "firstpage": "381",
+            "issn": "13845640",
+            "lastpage": "389",
+            "pub_year": 1999,
+            "title": "Constraint Forces and Undetermined Multipliers in Constrained Multibody Systems",
+            "volume": "3"
+        },
+        "bib0023": {
+            "authors": [
+                {
+                    "first": "G. R.",
+                    "initial": "G.R.",
+                    "last": "Pennock"
+                },
+                {
+                    "first": "A. T.",
+                    "initial": "A.T.",
+                    "last": "Yang"
+                }
+            ],
+            "doi": "10.1115/1.3267340",
+            "firstpage": "28",
+            "issn": "07380666",
+            "lastpage": "34",
+            "pub_year": 1983,
+            "title": "DYNAMIC ANALYSIS OF A MULTI-RIGID-BODY OPEN-CHAIN SYSTEM.",
+            "volume": "105"
+        },
+        "bib0024": {
+            "authors": [
+                {
+                    "first": "Filipe",
+                    "initial": "F.",
+                    "last": "Marques"
+                },
+                {
+                    "first": "Ant\u00f3nio P.",
+                    "initial": "A.P.",
+                    "last": "Souto"
+                },
+                {
+                    "first": "Paulo",
+                    "initial": "P.",
+                    "last": "Flores"
+                }
+            ],
+            "doi": "10.1007/s11044-016-9530-y",
+            "firstpage": "385",
+            "issn": "13845640",
+            "lastpage": "419",
+            "pub_year": 2017,
+            "title": "On the constraints violation in forward dynamics of multibody systems",
+            "volume": "39"
+        },
+        "bib0025": {
+            "authors": [
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Wojtyra"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2009.07.008",
+            "firstpage": "2265",
+            "issn": "0094114X",
+            "lastpage": "2278",
+            "pub_year": 2009,
+            "title": "Joint reactions in rigid body mechanisms with dependent constraints",
+            "volume": "44"
+        },
+        "bib0026": {
+            "authors": [
+                {
+                    "first": "Carmine M.",
+                    "initial": "C.M.",
+                    "last": "Pappalardo"
+                },
+                {
+                    "first": "Domenico",
+                    "initial": "D.",
+                    "last": "Guida"
+                }
+            ],
+            "doi": "10.1007/s00419-017-1317-y",
+            "firstpage": "419",
+            "issn": "09391533",
+            "lastpage": "451",
+            "pub_year": 2018,
+            "title": "On the Lagrange multipliers of the intrinsic constraint equations of rigid multibody mechanical systems",
+            "volume": "88"
+        },
+        "bib0027": {
+            "authors": [
+                {
+                    "first": "Alfonso",
+                    "initial": "A.",
+                    "last": "Callejo"
+                },
+                {
+                    "first": "Farnood",
+                    "initial": "F.",
+                    "last": "Gholami"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "Enzenh\u00f6fer"
+                },
+                {
+                    "first": "J\u00f3zsef",
+                    "initial": "J.",
+                    "last": "K\u00f6vecses"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2017.06.001",
+            "firstpage": "310",
+            "issn": "0094114X",
+            "lastpage": "325",
+            "pub_year": 2017,
+            "title": "Unique minimum norm solution to redundant reaction forces in multibody systems",
+            "volume": "116"
+        },
+        "bib0028": {
+            "authors": [
+                {
+                    "first": "Peyman",
+                    "initial": "P.",
+                    "last": "Karimi Eskandary"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Angeles"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2017.09.006",
+            "firstpage": "119",
+            "issn": "0094114X",
+            "lastpage": "129",
+            "pub_year": 2018,
+            "title": "The dynamics of a parallel Sch\u00f6nflies-motion generator",
+            "volume": "119"
+        },
+        "bib0029": {
+            "authors": [
+                {
+                    "first": "Peyman",
+                    "initial": "P.",
+                    "last": "Karimi Eskandary"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Angeles"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2018.01.011",
+            "firstpage": "361",
+            "issn": "0094114X",
+            "lastpage": "370",
+            "pub_year": 2018,
+            "title": "The translating \u03a0-joint: Design and applications",
+            "volume": "122"
+        },
+        "bib0030": {
+            "authors": [
+                {
+                    "first": "Andrej",
+                    "initial": "A.",
+                    "last": "Cibicik"
+                },
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                }
+            ],
+            "doi": "10.1109/CoDIT.2018.8394867",
+            "firstpage": "233",
+            "lastpage": "240",
+            "pub_year": 2018,
+            "title": "Determination of constraint forces for an offshore crane on a moving base"
+        },
+        "bib0031": {
+            "authors": [
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Wojtyra"
+                }
+            ],
+            "doi": "10.1007/s11044-016-9535-6",
+            "firstpage": "337",
+            "issn": "13845640",
+            "lastpage": "361",
+            "pub_year": 2017,
+            "title": "Modeling of static friction in closed-loop kinematic chains\u2014Uniqueness and parametric sensitivity problems",
+            "volume": "39"
+        },
+        "bib0032": {
+            "authors": [
+                {
+                    "first": "Janusz",
+                    "initial": "J.",
+                    "last": "Fra\u0327czek"
+                },
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Wojtyra"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2010.11.003",
+            "firstpage": "312",
+            "issn": "0094114X",
+            "lastpage": "334",
+            "pub_year": 2011,
+            "title": "On the unique solvability of a direct dynamics problem for mechanisms with redundant constraints and Coulomb friction in joints",
+            "volume": "46"
+        },
+        "bib0033": null,
+        "bib0034": {
+            "authors": [
+                {
+                    "first": "Liu",
+                    "initial": "L.",
+                    "last": "Yanzhu"
+                }
+            ],
+            "doi": "10.1007/BF02487718",
+            "firstpage": "165",
+            "issn": "05677718",
+            "lastpage": "174",
+            "pub_year": 1988,
+            "title": "Screw-matrix method in dynamics of multibody systems",
+            "volume": "4"
+        },
+        "bib0035": null,
+        "bib0036": {
+            "authors": [
+                {
+                    "first": "Haitao",
+                    "initial": "H.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Tian",
+                    "initial": "T.",
+                    "last": "Huang"
+                },
+                {
+                    "first": "Andr\u00e9s",
+                    "initial": "A.",
+                    "last": "Kecskem\u00e9thy"
+                },
+                {
+                    "first": "Derek G.",
+                    "initial": "D.G.",
+                    "last": "Chetwynd"
+                },
+                {
+                    "first": "Qing",
+                    "initial": "Q.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2016.11.011",
+            "firstpage": "126",
+            "issn": "0094114X",
+            "lastpage": "138",
+            "pub_year": 2017,
+            "title": "Force/motion transmissibility analyses of redundantly actuated and overconstrained parallel manipulators",
+            "volume": "109"
+        },
+        "bib0037": {
+            "authors": [
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                },
+                {
+                    "first": "Jan Richard",
+                    "initial": "J.R.",
+                    "last": "Sagli"
+                }
+            ],
+            "doi": "10.1177/027836499301200404",
+            "firstpage": "366",
+            "issn": "02783649",
+            "lastpage": "379",
+            "pub_year": 1993,
+            "title": "Coordination of motion in a spacecraft/manipulator system",
+            "volume": "12"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 92851,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "Mechanical and inertial properties of the bodies in the model are according to Tables 1 and 2.",
+            "startOffset": 92757,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 82859,
+            "parents": [
+                {
+                    "id": "sec0009",
+                    "title": "Reaction forces"
+                },
+                {
+                    "id": "sec0011",
+                    "title": "Equivalent cylinder wrenches"
+                }
+            ],
+            "secId": "sec0012",
+            "sentence": "The mathematical model of the cylinder adapted in this work is invariant with the type of primary actuation source (i.e. hydraulic oil, mechanical actuation, etc).",
+            "startOffset": 82696,
+            "title": "Axial reactions"
+        },
+        {
+            "endOffset": 66835,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The lines of the joints are arranged as the columns of the projection matrices.",
+            "startOffset": 66756,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67749,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The dynamical formulation does not require inclusion of constraint equations, and it leads to a minimal set of ODE\u2019s.",
+            "startOffset": 67632,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93833,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "The detailed implementation of the method was demonstrated for a specific case of a knuckle boom crane, where the reaction forces for three joints of the crane were determined.",
+            "startOffset": 93657,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 66755,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Then the partial velocities and the partial angular velocities will be given as screws describing lines in Pl\u00fccker coordinates, which can be transformed using screw transformations.",
+            "startOffset": 66574,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67631,
+            "parents": [],
+            "refoffsets": {
+                "bib0006": {
+                    "endOffset": 67510,
+                    "startOffset": 67504
+                },
+                "bib0030": {
+                    "endOffset": 67510,
+                    "startOffset": 67504
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In this paper we extend the results of [6,30] to serial-parallel mechanisms with rotary joints and prismatic piston actuators with application to knuckle boom cranes.",
+            "startOffset": 67465,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62968,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This type of actuation is typically used when the requirements for the load capacity are high.",
+            "startOffset": 62874,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64383,
+            "parents": [],
+            "refoffsets": {
+                "bib0011": {
+                    "endOffset": 64382,
+                    "startOffset": 64378
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "It is well established that the dynamics of serial manipulators can be modelled with Lagrangian mechanics, which gives valuable insight into the properties of the equations of motion and into the energy of the system [11].",
+            "startOffset": 64161,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73068,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Twists can be used both for deriving the free-body dynamics and for defining the velocity constraints between the manipulator links.",
+            "startOffset": 72936,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 63881,
+            "parents": [],
+            "refoffsets": {
+                "bib0009": {
+                    "endOffset": 63880,
+                    "startOffset": 63877
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The reaction forces may be of interest in the analysis of a crane, as they can be used to model joint friction [9].",
+            "startOffset": 63766,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68485,
+            "parents": [],
+            "refoffsets": {
+                "bib0031": {
+                    "endOffset": 68484,
+                    "startOffset": 68477
+                },
+                "bib0032": {
+                    "endOffset": 68484,
+                    "startOffset": 68477
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Reaction forces can be used in mechanical design of mechanisms as well as in control and modelling problems involving dry friction [31,32].",
+            "startOffset": 68346,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79104,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "A general part of such manipulator is given in Fig. 4.",
+            "startOffset": 79050,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 64738,
+            "parents": [],
+            "refoffsets": {
+                "bib0012": {
+                    "endOffset": 64586,
+                    "startOffset": 64582
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "This can be implemented as a recursive Newton\u2013Euler formulation [12], which is used for the inverse dynamics problem, where the generalized forces are computed given the position, velocity and acceleration of the joints.",
+            "startOffset": 64518,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63244,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Crane operations in the offshore and maritime industries are of great importance, and require precise and safe motion of crane payloads.",
+            "startOffset": 63108,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65789,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 65788,
+                    "startOffset": 65784
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Kane\u2019s method can also be used to bring the forces of constraint into evidence by introducing auxiliary generalized speeds and the corresponding auxiliary partial velocities and auxiliary partial angular velocities [13].",
+            "startOffset": 65569,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82586,
+            "parents": [
+                {
+                    "id": "sec0009",
+                    "title": "Reaction forces"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "In this section we derive a set of cylinder wrenches applied at the cylinder supports, which is equivalent to the initial set of wrenches applied at the COGs.",
+            "startOffset": 82428,
+            "title": "Equivalent cylinder wrenches"
+        },
+        {
+            "endOffset": 68532,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The rest of this paper is organized as follows.",
+            "startOffset": 68485,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91807,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The crane is controlled by the PD controller with gravity compensation.",
+            "startOffset": 91736,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 65256,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Both the recursive Newton\u2013Euler scheme and Kane\u2019s equations of motion rely on the elimination of the forces of constraint.",
+            "startOffset": 65134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66099,
+            "parents": [],
+            "refoffsets": {
+                "bib0024": {
+                    "endOffset": 66021,
+                    "startOffset": 66014
+                },
+                "bib0025": {
+                    "endOffset": 66021,
+                    "startOffset": 66014
+                },
+                "bib0026": {
+                    "endOffset": 66021,
+                    "startOffset": 66014
+                },
+                "bib0027": {
+                    "endOffset": 66021,
+                    "startOffset": 66014
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The dynamic formulation using Lagrange multipliers [24\u201327] also allows the determination of constraint forces between the system bodies.",
+            "startOffset": 65963,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66275,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In this paper we present a formulation of Kane\u2019s equations of motion where the partial velocities and the partial angular velocities are described in terms of the joint twists.",
+            "startOffset": 66099,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92756,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The time histories of the generalized speeds (see Fig. 8) were used as input velocities for the ANSYS model.",
+            "startOffset": 92648,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 64895,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 64826,
+                    "startOffset": 64822
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Another method based on the Newton-Euler formulation is Kane\u2019s equations of motion [13], which can be used to derive the equations of motion in closed form.",
+            "startOffset": 64739,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83308,
+            "parents": [
+                {
+                    "id": "sec0009",
+                    "title": "Reaction forces"
+                },
+                {
+                    "id": "sec0011",
+                    "title": "Equivalent cylinder wrenches"
+                }
+            ],
+            "secId": "sec0012",
+            "sentence": "In such mathematical model, where there is no mechanical constraints along the longitudinal axis, the axial inertial force on the piston will be fully transferred to the piston support and the axial inertial force on the barrel will be fully transferred to the barrel support.",
+            "startOffset": 83032,
+            "title": "Axial reactions"
+        },
+        {
+            "endOffset": 66573,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Link twists are conveniently derived using screw transformations, which gives a clear geometric interpretation of every step in the derivation.",
+            "startOffset": 66430,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92995,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The results from ANSYS are shown with a \u201c\u2022\u201d symbol in the graphs, while the results obtained by (69), (71) and (73) are shown with solid lines.",
+            "startOffset": 92852,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 79479,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "Each cylinder k consists of a barrel bk and a piston pk, which have lengths lbk, lpk and masses mbk, mpk respectively.",
+            "startOffset": 79361,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 79049,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "In this section we will derive the equations of motion in a general manner, such that the procedure can be implemented for a crane-like manipulator with arbitrary number of links.",
+            "startOffset": 78870,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 80569,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "The necessary screw reference transformation matrices Uij (19) are derived using position vectors pij, which are specified in Fig. 4.",
+            "startOffset": 80436,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 79360,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "Each rigid Link k has a length lk, a mass mk and a distance dk from the COG (centre of gravity) to the origin of Frame k, which is a body-fixed frame.",
+            "startOffset": 79210,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 63611,
+            "parents": [],
+            "refoffsets": {
+                "bib0006": {
+                    "endOffset": 63610,
+                    "startOffset": 63605
+                },
+                "bib0007": {
+                    "endOffset": 63610,
+                    "startOffset": 63605
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Alternatively, in theoretical modelling and control studies it may be assumed that the crane is actuated by the joint torques [6,7].",
+            "startOffset": 63479,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79590,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "A distance dbk is measured from the COG of a barrel bk to the origin of Frame bk, which is a body-fixed frame.",
+            "startOffset": 79480,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 92357,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The reaction forces and moments in Joint 2, given in the coordinates of Frame 2 are shown in Fig. 11 and 12.",
+            "startOffset": 92249,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 67956,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The problem of the closed kinematic loops is solved by the substitution of the actual actuator wrenches applied at the centres of gravity with an equivalent set of wrenches applied at the actuator supports.",
+            "startOffset": 67750,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68238,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Spatial mechanisms can be modelled by combination of links with the actuated rotational joints and the rotational joints actuated by cylinders.",
+            "startOffset": 68095,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72935,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 72906,
+                    "startOffset": 72902
+                },
+                "bib0016": {
+                    "endOffset": 72855,
+                    "startOffset": 72851
+                },
+                "bib0030": {
+                    "endOffset": 72881,
+                    "startOffset": 72877
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "A dynamical model of a serial-link manipulator can be derived by, firstly, defining free-body dynamics of every Link k and, secondly, deriving the constrained equation of motion using the NOC [16], projection matrices [30], partial velocities [13] or other similar approaches.",
+            "startOffset": 72659,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 66429,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This is equivalent to the NOC formulation, with the advantage that the formulation to a larger extent is directly related to the geometry of the problem.",
+            "startOffset": 66276,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92139,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The values of the generalized coordinates and the generalized speeds during the simulation are given in Figs. 7 and 8.",
+            "startOffset": 92021,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 68583,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Section 2 presents the preliminaries to this work.",
+            "startOffset": 68533,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68345,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The method is also applicable for serial-link manipulators, where the substitution of wrenches is omitted.",
+            "startOffset": 68239,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82676,
+            "parents": [
+                {
+                    "id": "sec0009",
+                    "title": "Reaction forces"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "The initial cylinder wrenches for the barrel and the piston are derived by (49) and (50).",
+            "startOffset": 82587,
+            "title": "Equivalent cylinder wrenches"
+        },
+        {
+            "endOffset": 63357,
+            "parents": [],
+            "refoffsets": {
+                "bib0001": {
+                    "endOffset": 63356,
+                    "startOffset": 63351
+                },
+                "bib0002": {
+                    "endOffset": 63356,
+                    "startOffset": 63351
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Therefore the field of modelling and control of cranes has been widely studied in the research literature [1,2].",
+            "startOffset": 63245,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75581,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "The method of auxiliary generalized speeds for determination of reaction forces can be efficiently implemented using twists for a serial manipulator.",
+            "startOffset": 75432,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 83031,
+            "parents": [
+                {
+                    "id": "sec0009",
+                    "title": "Reaction forces"
+                },
+                {
+                    "id": "sec0011",
+                    "title": "Equivalent cylinder wrenches"
+                }
+            ],
+            "secId": "sec0012",
+            "sentence": "That is the cylinder is actuated by a point force applied on the piston along the longitudinal zpk axis and the opposite force of the same magnitude applied on the barrel.",
+            "startOffset": 82860,
+            "title": "Axial reactions"
+        },
+        {
+            "endOffset": 91914,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "As the control scheme is not the goal of this work, we will not go into the details of the control scheme.",
+            "startOffset": 91808,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 94036,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "The magnitudes of the reaction forces showed good agreement with the values obtained by the independent dynamic analysis in ANSYS.",
+            "startOffset": 93906,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 73234,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Twists can be linked to the screw notations and can be transformed using screw transformations while retaining the geometrical meaning of mathematical manipulations.",
+            "startOffset": 73069,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 93354,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "We have presented the method for dynamic force analysis of a knuckle boom crane.",
+            "startOffset": 93274,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68094,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The modelling procedure is presented in a general manner and is applicable for crane-like manipulators with an arbitrary number of links.",
+            "startOffset": 67957,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65133,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 64959,
+                    "startOffset": 64955
+                },
+                "bib0014": {
+                    "endOffset": 65018,
+                    "startOffset": 65014
+                },
+                "bib0015": {
+                    "endOffset": 65039,
+                    "startOffset": 65035
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Alternatively to formulation using coordinate-free vectors [13], Kane\u2019s method can be formulated using column vectors [14] or dual vectors [15], where an angular velocity is a real vector part and a linear velocity is a dual vector part.",
+            "startOffset": 64896,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94342,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "Such model could provide an important contribution to solving dry friction compensation and mechanical design problems for offshore cranes in practice.",
+            "startOffset": 94191,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67314,
+            "parents": [],
+            "refoffsets": {
+                "bib0006": {
+                    "endOffset": 67191,
+                    "startOffset": 67188
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The dynamical formulation presented in this paper was used in [6] to derive the equations of motion for a crane-ship system, where a heavy crane is mounted on a ship moving in ocean waves.",
+            "startOffset": 67126,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64160,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The dynamics of cranes has a much in common with the dynamics of robot manipulators.",
+            "startOffset": 64076,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67464,
+            "parents": [],
+            "refoffsets": {
+                "bib0030": {
+                    "endOffset": 67340,
+                    "startOffset": 67336
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In the previous work [30] the formulation was used to derive the equations of motion for a serial manipulator and calculate the forces of constraint.",
+            "startOffset": 67315,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92466,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The reaction forces and moments in Joint 3, given in the coordinates of Frame 3 are shown in Fig. 13 and 14.",
+            "startOffset": 92358,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 63478,
+            "parents": [],
+            "refoffsets": {
+                "bib0003": {
+                    "endOffset": 63477,
+                    "startOffset": 63472
+                },
+                "bib0004": {
+                    "endOffset": 63477,
+                    "startOffset": 63472
+                },
+                "bib0005": {
+                    "endOffset": 63477,
+                    "startOffset": 63472
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "When the control of hydraulics is of interest, the hydraulic cylinders are normally included in the dynamic model [3\u20135].",
+            "startOffset": 63358,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64517,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The dynamics can also be modelled with the Newton\u2013Euler formulation, which, in general, will lead to efficient computational schemes.",
+            "startOffset": 64384,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93656,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "Both dynamic modelling and force analysis procedures were derived using screws and screw transformations, which led to the efficient and geometrically meaningful formulation.",
+            "startOffset": 93482,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 92647,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The reaction forces in the joints are validated by the results obtained using Rigid Dynamics module in ANSYS, see Fig. 6.",
+            "startOffset": 92526,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 63108,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The resulting closed-loop structure leads to more complicated dynamic modelling and force analysis procedures than for serial manipulators.",
+            "startOffset": 62969,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64076,
+            "parents": [],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 64075,
+                    "startOffset": 64071
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Moreover, the reaction forces can be used for the structural strength and fatigue analysis of the system under realistic operational scenarios, and for optimal dynamic performance problems [10].",
+            "startOffset": 63882,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91736,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The crane parameters and masses used in the simulation are given in Tables 1 and 2.",
+            "startOffset": 91653,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 92248,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The reaction forces and moments in Joint 1, given in the coordinates of Frame 0 are shown in Figs. 9 and 10.",
+            "startOffset": 92140,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 65568,
+            "parents": [],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 65425,
+                    "startOffset": 65418
+                },
+                "bib0017": {
+                    "endOffset": 65425,
+                    "startOffset": 65418
+                },
+                "bib0018": {
+                    "endOffset": 65455,
+                    "startOffset": 65448
+                },
+                "bib0019": {
+                    "endOffset": 65567,
+                    "startOffset": 65563
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In Kane\u2019s method this is done using partial velocities and partial angular velocities, which can also be formulated with the natural orthogonal complement (NOC) [16,17] or the decomposed NOC [18,19], where the expressions for the NOC can be found directly from the body twists for serial-link manipulators [19].",
+            "startOffset": 65257,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79209,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "The system consists of n rigid links with n passive revolute joints and n cylinders for joint actuation.",
+            "startOffset": 79105,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 79701,
+            "parents": [
+                {
+                    "id": "sec0006",
+                    "title": "Modelling of parallel\u2013serial manipulator arms"
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "However for a piston pk a distance dpk is measured from the COG to the piston attachment point Pk, see Fig. 4.",
+            "startOffset": 79591,
+            "title": "System configuration and equations of motion"
+        },
+        {
+            "endOffset": 75657,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "However for closed-loop systems, the implementation becomes rather complex.",
+            "startOffset": 75582,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 68745,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In Section 3 the dynamic modelling of parallel-serial manipulator arms is discussed, while in Section 4 the method for determination of reaction forces is given.",
+            "startOffset": 68584,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93481,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "The method was presented in a general manner and can be applied for crane-like manipulators with an arbitrary number of links.",
+            "startOffset": 93355,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 92526,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The actuator input forces and torques are given in Fig. 15.",
+            "startOffset": 92467,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 75806,
+            "parents": [
+                {
+                    "id": "sec0002",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Therefore, in this work we propose an alternative method, which is specifically formulated for knuckle boom cranes and similar robotic manipulators.",
+            "startOffset": 75658,
+            "title": "Dynamics of serial manipulators"
+        },
+        {
+            "endOffset": 66983,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "From the geometric perspective, premultiplication of an external or inertial force with those lines leads to a projection of the force on the line.",
+            "startOffset": 66836,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93262,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The moment nx in the passive joints (Joints 2 and 3) is equal to zero throughout the simulations, which agrees with the mechanical arrangement of the crane.",
+            "startOffset": 93106,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 65962,
+            "parents": [],
+            "refoffsets": {
+                "bib0020": {
+                    "endOffset": 65961,
+                    "startOffset": 65954
+                },
+                "bib0021": {
+                    "endOffset": 65961,
+                    "startOffset": 65954
+                },
+                "bib0022": {
+                    "endOffset": 65961,
+                    "startOffset": 65954
+                },
+                "bib0023": {
+                    "endOffset": 65961,
+                    "startOffset": 65954
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "It is noted that there are several other methods for the determination of reaction forces (i.e. forces of constraint) based on Newton\u2013Euler or Lagrangian formalism [20\u201323].",
+            "startOffset": 65790,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63765,
+            "parents": [],
+            "refoffsets": {
+                "bib0008": {
+                    "endOffset": 63764,
+                    "startOffset": 63761
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "For cranes moving at high speeds the effects of inertial forces of the actuators on the system dynamics become important and they should be included [8].",
+            "startOffset": 63612,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92021,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The defined motion path represents a typical sequence of crane configurations during a hoisting operation.",
+            "startOffset": 91915,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 94190,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "It is proposed that further development of this work could be the implementation of the force analysis method for a coupled crane and marine vessel model.",
+            "startOffset": 94036,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67126,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 67084,
+                    "startOffset": 67080
+                },
+                "bib0016": {
+                    "endOffset": 67125,
+                    "startOffset": 67115
+                },
+                "bib0028": {
+                    "endOffset": 67125,
+                    "startOffset": 67115
+                },
+                "bib0029": {
+                    "endOffset": 67125,
+                    "startOffset": 67115
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Moreover, the columns of projection matrices are related to partial velocities in Kane\u2019s method [13] and to the columns of the NOC [16,28,29].",
+            "startOffset": 66984,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68909,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Implementation of the method for a knuckle boom crane is given in Section 5, which is followed by the simulation results and conclusions given in Sections 6 and 7.",
+            "startOffset": 68746,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91652,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The knuckle boom crane model from the previous section is computationally implemented and the results of the numerical simulation are presented in this section.",
+            "startOffset": 91492,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 62873,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Knuckle boom cranes belong to the class of heavy duty parallel\u2013serial manipulators, which are actuated by prismatic piston actuators, see Fig. 1.",
+            "startOffset": 62728,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93905,
+            "parents": [],
+            "secId": "sec0019",
+            "sentence": "The numerical simulation was carried out and the results were provided.",
+            "startOffset": 93834,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 93105,
+            "parents": [],
+            "secId": "sec0018",
+            "sentence": "The time histories given in Figs. 9\u201314 show good agreement with the results obtained from the ANSYS analysis.",
+            "startOffset": 92996,
+            "title": "Simulation results"
+        }
+    ],
+    "docId": "S0094114X18313119",
+    "metadata": {
+        "asjc": [
+            "1502",
+            "1706",
+            "2210",
+            "2211"
+        ],
+        "authors": [
+            {
+                "email": "andrej.cibicik@ntnu.no",
+                "first": "Andrej",
+                "initial": "A.",
+                "last": "Cibicik"
+            },
+            {
+                "email": "olav.egeland@ntnu.no",
+                "first": "Olav",
+                "initial": "O.",
+                "last": "Egeland"
+            }
+        ],
+        "doi": "10.1016/j.mechmachtheory.2018.10.019",
+        "firstpage": "179",
+        "issn": "0094114X",
+        "keywords": [
+            "Crane",
+            "Dynamic modeling",
+            "Force analysis",
+            "Reaction force",
+            "Robotics",
+            "Screw theory"
+        ],
+        "lastpage": "194",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "CENG",
+            "COMP",
+            "ENGI"
+        ],
+        "title": "Dynamic modelling and force analysis of a knuckle boom crane using screw theory"
+    }
+}

@@ -1,0 +1,3717 @@
+{
+    "abstract": "The vast number of small molecules with potentially useful dissolution modulating properties (inhibitors or accelerators) renders currently used experimental discovery methods time- and resource-consuming. Fortunately, emerging computer-assisted methods can explore large areas of chemical space with less effort. Here we show how density functional theory calculations and machine learning methods can work synergistically to generate robust and predictive models that recapitulate experimentally-derived corrosion inhibition efficiencies of small organic compounds for pure magnesium. We further validate our methods by predicting a priori the corrosion modulation properties of seven hitherto untested small molecules and confirm the prediction in subsequent experiments.",
+    "author_highlights": [
+        {
+            "endOffset": 25303,
+            "sentence": "Artificial neural network predicts performance of corrosion modulating agents for Mg.",
+            "startOffset": 25218
+        },
+        {
+            "endOffset": 25384,
+            "sentence": "Calculated HOMO LUMO gap correlates well with inhibition efficiencies for CP Mg.",
+            "startOffset": 25304
+        },
+        {
+            "endOffset": 25463,
+            "sentence": "Model predictions validated by subsequent investigation of untested compounds.",
+            "startOffset": 25385
+        },
+        {
+            "endOffset": 25549,
+            "sentence": "Trained model facilitates performance prediction for material of similar composition.",
+            "startOffset": 25464
+        }
+    ],
+    "bib_entries": {
+        "bib0005": {
+            "authors": [
+                {
+                    "first": "Stuart L.",
+                    "initial": "S.L.",
+                    "last": "Schreiber"
+                }
+            ],
+            "firstpage": "51",
+            "issn": "00092347",
+            "lastpage": "61",
+            "pub_year": 2003,
+            "title": "The small-molecule approach to biology",
+            "volume": "81"
+        },
+        "bib0010": {
+            "authors": [
+                {
+                    "first": "Alexander R.",
+                    "initial": "A.R.",
+                    "last": "Horswill"
+                },
+                {
+                    "first": "Sergey N.",
+                    "initial": "S.N.",
+                    "last": "Savinov"
+                },
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Benkovic"
+                }
+            ],
+            "doi": "10.1073/pnas.0406999101",
+            "firstpage": "15591",
+            "issn": "00278424",
+            "lastpage": "15596",
+            "pmid": "15498867",
+            "pub_year": 2004,
+            "title": "A systematic method for identifying small-molecule modulators of protein-protein interactions",
+            "volume": "101"
+        },
+        "bib0015": {
+            "authors": [
+                {
+                    "first": "Christopher J.",
+                    "initial": "C.J.",
+                    "last": "Gerry"
+                },
+                {
+                    "first": "Stuart L.",
+                    "initial": "S.L.",
+                    "last": "Schreiber"
+                }
+            ],
+            "doi": "10.1038/nrd.2018.53",
+            "firstpage": "333",
+            "issn": "14741776",
+            "lastpage": "352",
+            "pmid": "29651105",
+            "pub_year": 2018,
+            "title": "Chemical probes and drug leads from advances in synthetic planning and methodology",
+            "volume": "17"
+        },
+        "bib0020": {
+            "authors": [
+                {
+                    "first": "Dongqin",
+                    "initial": "D.",
+                    "last": "Bi"
+                },
+                {
+                    "first": "Xiong",
+                    "initial": "X.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Jovana V.",
+                    "initial": "J.V.",
+                    "last": "Mili\u0107"
+                },
+                {
+                    "first": "Dominik J.",
+                    "initial": "D.J.",
+                    "last": "Kubicki"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Pellet"
+                },
+                {
+                    "first": "Jingshan",
+                    "initial": "J.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "LaGrange"
+                },
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Mettraux"
+                },
+                {
+                    "first": "Lyndon",
+                    "initial": "L.",
+                    "last": "Emsley"
+                },
+                {
+                    "first": "Shaik M.",
+                    "initial": "S.M.",
+                    "last": "Zakeeruddin"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Gr\u00e4tzel"
+                }
+            ],
+            "doi": "10.1038/s41467-018-06709-w",
+            "issn": "20411723",
+            "pmid": "30367070",
+            "pub_year": 2018,
+            "title": "Multifunctional molecular modulators for perovskite solar cells with over 20% efficiency and high operational stability",
+            "volume": "9"
+        },
+        "bib0025": {
+            "authors": [
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Breedon"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "White"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "E. D.",
+                    "initial": "E.D.",
+                    "last": "Sapper"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Cole"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2016.02.008",
+            "firstpage": "229",
+            "issn": "0010938X",
+            "lastpage": "235",
+            "pub_year": 2016,
+            "title": "Using high throughput experimental data and in silico models to discover alternatives to toxic chromate corrosion inhibitors",
+            "volume": "106"
+        },
+        "bib0030": {
+            "authors": [
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Vaghefinazari"
+                },
+                {
+                    "first": "Di",
+                    "initial": "D.",
+                    "last": "Mei"
+                },
+                {
+                    "first": "R. P.",
+                    "initial": "R.P.",
+                    "last": "Petrauskas"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "H\u00f6che"
+                },
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2017.07.011",
+            "firstpage": "224",
+            "issn": "0010938X",
+            "lastpage": "240",
+            "pub_year": 2017,
+            "title": "Comprehensive screening of Mg corrosion inhibitors",
+            "volume": "128"
+        },
+        "bib0035": {
+            "authors": [
+                {
+                    "first": "Di",
+                    "initial": "D.",
+                    "last": "Mei"
+                },
+                {
+                    "first": "Sviatlana V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Feiler"
+                },
+                {
+                    "first": "Mikhail L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2019.03.039",
+            "firstpage": "258",
+            "issn": "0010938X",
+            "lastpage": "271",
+            "pub_year": 2019,
+            "title": "The effect of small-molecule bio-relevant organic components at low concentration on the corrosion of commercially pure Mg and Mg-0.8Ca alloy: An overall perspective",
+            "volume": "153"
+        },
+        "bib0040": null,
+        "bib0045": {
+            "authors": [
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Muster"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Furman"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Sherman"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Hardin"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Corrigan"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lau"
+                },
+                {
+                    "first": "F. H.",
+                    "initial": "F.H.",
+                    "last": "Scholes"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "White"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Glenn"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Mardel"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "J. M.C.",
+                    "initial": "J.M.C.",
+                    "last": "Mol"
+                }
+            ],
+            "doi": "10.1016/j.electacta.2008.12.051",
+            "firstpage": "3402",
+            "issn": "00134686",
+            "lastpage": "3411",
+            "pub_year": 2009,
+            "title": "A rapid screening multi-electrode method for the evaluation of corrosion inhibitors",
+            "volume": "54"
+        },
+        "bib0050": {
+            "authors": [
+                {
+                    "first": "T. G.",
+                    "initial": "T.G.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "S. G.",
+                    "initial": "S.G.",
+                    "last": "Hardin"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Muster"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "White"
+                },
+                {
+                    "first": "T. A.",
+                    "initial": "T.A.",
+                    "last": "Markley"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "Corrigan"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Mardel"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "J. M.C.",
+                    "initial": "J.M.C.",
+                    "last": "Mol"
+                },
+                {
+                    "first": "A. M.",
+                    "initial": "A.M.",
+                    "last": "Glenn"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2011.02.040",
+            "firstpage": "2184",
+            "issn": "0010938X",
+            "lastpage": "2190",
+            "pub_year": 2011,
+            "title": "The effect of inhibitor structure on the corrosion of AA2024 and AA7075",
+            "volume": "53"
+        },
+        "bib0055": {
+            "authors": [
+                {
+                    "first": "Carsten",
+                    "initial": "C.",
+                    "last": "Blawert"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "Dietzel"
+                },
+                {
+                    "first": "Edward",
+                    "initial": "E.",
+                    "last": "Ghali"
+                },
+                {
+                    "first": "Guangling",
+                    "initial": "G.",
+                    "last": "Song"
+                }
+            ],
+            "doi": "10.1002/adem.200500257",
+            "firstpage": "511",
+            "issn": "14381656",
+            "lastpage": "533",
+            "pub_year": 2006,
+            "title": "Anodizing treatments for magnesium alloys and their effect on corrosion resistance in various environments",
+            "volume": "8"
+        },
+        "bib0060": {
+            "authors": [
+                {
+                    "first": "Lingqian",
+                    "initial": "L.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Jiansong",
+                    "initial": "J.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Liang"
+                },
+                {
+                    "first": "Jianmin",
+                    "initial": "J.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1016/j.apsusc.2013.04.115",
+            "firstpage": "151",
+            "issn": "01694332",
+            "lastpage": "155",
+            "pub_year": 2013,
+            "title": "Thermal control coatings on magnesium alloys prepared by plasma electrolytic oxidation",
+            "volume": "280"
+        },
+        "bib0065": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "N\u011bmcov\u00e1"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Skeldon"
+                },
+                {
+                    "first": "G. E.",
+                    "initial": "G.E.",
+                    "last": "Thompson"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Pacal"
+                }
+            ],
+            "doi": "10.1016/j.surfcoat.2013.06.107",
+            "firstpage": "827",
+            "issn": "02578972",
+            "lastpage": "838",
+            "pub_year": 2013,
+            "title": "Effect of fluoride on plasma electrolytic oxidation of AZ61 magnesium alloy",
+            "volume": "232"
+        },
+        "bib0070": {
+            "authors": [
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Kn\u00f6rnschild"
+                },
+                {
+                    "first": "D. V.",
+                    "initial": "D.V.",
+                    "last": "Snihirova"
+                },
+                {
+                    "first": "M. G.",
+                    "initial": "M.G.",
+                    "last": "Taryba"
+                },
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                },
+                {
+                    "first": "M. G.S.",
+                    "initial": "M.G.S.",
+                    "last": "Ferreira"
+                }
+            ],
+            "doi": "10.1016/j.electacta.2009.08.018",
+            "firstpage": "131",
+            "issn": "00134686",
+            "lastpage": "141",
+            "pub_year": 2009,
+            "title": "Complex anticorrosion coating for ZK30 magnesium alloy",
+            "volume": "55"
+        },
+        "bib0075": {
+            "authors": [
+                {
+                    "first": "Fuyong",
+                    "initial": "F.",
+                    "last": "Cao"
+                },
+                {
+                    "first": "Guang Ling",
+                    "initial": "G.L.",
+                    "last": "Song"
+                },
+                {
+                    "first": "Andrej",
+                    "initial": "A.",
+                    "last": "Atrens"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2016.05.041",
+            "firstpage": "835",
+            "issn": "0010938X",
+            "lastpage": "845",
+            "pub_year": 2016,
+            "title": "Corrosion and passivation of magnesium alloys",
+            "volume": "111"
+        },
+        "bib0080": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Esmaily"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Svensson"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Fajardo"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Birbilis"
+                },
+                {
+                    "first": "G. S.",
+                    "initial": "G.S.",
+                    "last": "Frankel"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Virtanen"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Arrabal"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Thomas"
+                },
+                {
+                    "first": "L. G.",
+                    "initial": "L.G.",
+                    "last": "Johansson"
+                }
+            ],
+            "doi": "10.1016/j.pmatsci.2017.04.011",
+            "firstpage": "92",
+            "issn": "00796425",
+            "lastpage": "193",
+            "pub_year": 2017,
+            "title": "Fundamentals and advances in magnesium alloy corrosion",
+            "volume": "89"
+        },
+        "bib0085": {
+            "authors": [
+                {
+                    "first": "William J.",
+                    "initial": "W.J.",
+                    "last": "Joost"
+                },
+                {
+                    "first": "Paul E.",
+                    "initial": "P.E.",
+                    "last": "Krajewski"
+                }
+            ],
+            "doi": "10.1016/j.scriptamat.2016.07.035",
+            "firstpage": "107",
+            "issn": "13596462",
+            "lastpage": "112",
+            "pub_year": 2017,
+            "title": "Towards magnesium alloys for high-volume automotive applications",
+            "volume": "128"
+        },
+        "bib0090": {
+            "authors": [
+                {
+                    "first": "Alan A.",
+                    "initial": "A.A.",
+                    "last": "Luo"
+                }
+            ],
+            "doi": "10.1016/j.jma.2013.02.002",
+            "firstpage": "2",
+            "issn": "22139567",
+            "lastpage": "22",
+            "pub_year": 2013,
+            "title": "Magnesium casting technology for structural applications",
+            "volume": "1"
+        },
+        "bib0095": {
+            "authors": [
+                {
+                    "first": "Guangling",
+                    "initial": "G.",
+                    "last": "Song"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2007.01.001",
+            "firstpage": "1696",
+            "issn": "0010938X",
+            "lastpage": "1701",
+            "pub_year": 2007,
+            "title": "Control of biodegradation of biocompatable magnesium alloys",
+            "volume": "49"
+        },
+        "bib0100": {
+            "authors": [
+                {
+                    "first": "Regine",
+                    "initial": "R.",
+                    "last": "Willumeit"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Feyerabend"
+                },
+                {
+                    "first": "Norbert",
+                    "initial": "N.",
+                    "last": "Huber"
+                }
+            ],
+            "doi": "10.1016/j.actbio.2013.02.042",
+            "firstpage": "8722",
+            "issn": "17427061",
+            "lastpage": "8729",
+            "pmid": "23470548",
+            "pub_year": 2013,
+            "title": "Magnesium degradation as determined by artificial neural networks",
+            "volume": "9"
+        },
+        "bib0105": {
+            "authors": [
+                {
+                    "first": "B\u00e9reng\u00e8re J.C.",
+                    "initial": "B.J.C.",
+                    "last": "Luthringer"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Feyerabend"
+                },
+                {
+                    "first": "Regine Willumeit",
+                    "initial": "R.W.",
+                    "last": "R\u00f6mer"
+                }
+            ],
+            "doi": "10.1684/mrh.2015.0375",
+            "firstpage": "142",
+            "issn": "09531424",
+            "lastpage": "154",
+            "pmid": "25697680",
+            "pub_year": 2014,
+            "title": "Magnesium-Based Implants: A Mini-Review",
+            "volume": "27"
+        },
+        "bib0110": {
+            "authors": [
+                {
+                    "first": "Ingrid",
+                    "initial": "I.",
+                    "last": "Morgenthal"
+                },
+                {
+                    "first": "Olaf",
+                    "initial": "O.",
+                    "last": "Andersen"
+                },
+                {
+                    "first": "Cris",
+                    "initial": "C.",
+                    "last": "Kostmann"
+                },
+                {
+                    "first": "G\u00fcnter",
+                    "initial": "G.",
+                    "last": "Stephani"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Studnitzky"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Witte"
+                },
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Kieback"
+                }
+            ],
+            "doi": "10.1002/adem.201300130",
+            "firstpage": "309",
+            "issn": "14381656",
+            "lastpage": "318",
+            "pub_year": 2014,
+            "title": "Highly porous magnesium alloy structures and their properties regarding degradable implant application",
+            "volume": "16"
+        },
+        "bib0115": {
+            "authors": [
+                {
+                    "first": "Cijun",
+                    "initial": "C.",
+                    "last": "Shuai"
+                },
+                {
+                    "first": "Sheng",
+                    "initial": "S.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Shuping",
+                    "initial": "S.",
+                    "last": "Peng"
+                },
+                {
+                    "first": "Pei",
+                    "initial": "P.",
+                    "last": "Feng"
+                },
+                {
+                    "first": "Yuxiao",
+                    "initial": "Y.",
+                    "last": "Lai"
+                },
+                {
+                    "first": "Chengde",
+                    "initial": "C.",
+                    "last": "Gao"
+                }
+            ],
+            "doi": "10.1039/c8qm00507a",
+            "firstpage": "544",
+            "issn": "20521537",
+            "lastpage": "562",
+            "pub_year": 2019,
+            "title": "Biodegradable metallic bone implants",
+            "volume": "3"
+        },
+        "bib0120": {
+            "authors": [
+                {
+                    "first": "Tianran",
+                    "initial": "T.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Zhanliang",
+                    "initial": "Z.",
+                    "last": "Tao"
+                },
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1039/c3mh00059a",
+            "firstpage": "196",
+            "issn": "20516347",
+            "lastpage": "206",
+            "pub_year": 2014,
+            "title": "Magnesium-air batteries: From principle to application",
+            "volume": "1"
+        },
+        "bib0125": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "H\u00f6che"
+                },
+                {
+                    "first": "Sviatlana V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "Bahram",
+                    "initial": "B.",
+                    "last": "Vaghefinazari"
+                },
+                {
+                    "first": "Tobias",
+                    "initial": "T.",
+                    "last": "Braun"
+                },
+                {
+                    "first": "Rokas P.",
+                    "initial": "R.P.",
+                    "last": "Petrauskas"
+                },
+                {
+                    "first": "Maximilian",
+                    "initial": "M.",
+                    "last": "Fichtner"
+                },
+                {
+                    "first": "Mikhail L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                }
+            ],
+            "doi": "10.1038/s41598-018-25789-8",
+            "issn": "20452322",
+            "pmid": "29765088",
+            "pub_year": 2018,
+            "title": "Performance boost for primary magnesium cells using iron complexing agents as electrolyte additives /639/638/675 /639/301/299/161/891 /128 /123 /132 article",
+            "volume": "8"
+        },
+        "bib0130": {
+            "authors": [
+                {
+                    "first": "Fangyi",
+                    "initial": "F.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1039/c1cs15228a",
+            "firstpage": "2172",
+            "issn": "03060012",
+            "lastpage": "2192",
+            "pub_year": 2012,
+            "title": "Metal\u2013air batteries: From oxygen reduction electrochemistry to cathode catalysts",
+            "volume": "41"
+        },
+        "bib0135": {
+            "authors": [
+                {
+                    "first": "Alan H.",
+                    "initial": "A.H.",
+                    "last": "Lipkus"
+                },
+                {
+                    "first": "Qiong",
+                    "initial": "Q.",
+                    "last": "Yuan"
+                },
+                {
+                    "first": "Karen A.",
+                    "initial": "K.A.",
+                    "last": "Lucas"
+                },
+                {
+                    "first": "Susan A.",
+                    "initial": "S.A.",
+                    "last": "Funk"
+                },
+                {
+                    "first": "William F.",
+                    "initial": "W.F.",
+                    "last": "Bartelt"
+                },
+                {
+                    "first": "Roger J.",
+                    "initial": "R.J.",
+                    "last": "Schenck"
+                },
+                {
+                    "first": "Anthony J.",
+                    "initial": "A.J.",
+                    "last": "Trippe"
+                }
+            ],
+            "doi": "10.1021/jo8001276",
+            "firstpage": "4443",
+            "issn": "00223263",
+            "lastpage": "4451",
+            "pub_year": 2008,
+            "title": "Structural diversity of organic chemistry. A scaffold analysis of the CAS Registry",
+            "volume": "73"
+        },
+        "bib0140": {
+            "authors": [
+                {
+                    "first": "Daniel A.",
+                    "initial": "D.A.",
+                    "last": "Erlanson"
+                },
+                {
+                    "first": "Stephen W.",
+                    "initial": "S.W.",
+                    "last": "Fesik"
+                },
+                {
+                    "first": "Roderick E.",
+                    "initial": "R.E.",
+                    "last": "Hubbard"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "Jahnke"
+                },
+                {
+                    "first": "Harren",
+                    "initial": "H.",
+                    "last": "Jhoti"
+                }
+            ],
+            "doi": "10.1038/nrd.2016.109",
+            "firstpage": "605",
+            "issn": "14741776",
+            "lastpage": "619",
+            "pmid": "27417849",
+            "pub_year": 2016,
+            "title": "Twenty years on: The impact of fragments on drug discovery",
+            "volume": "15"
+        },
+        "bib0145": {
+            "authors": [
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.3390/met7120553",
+            "issn": "20754701",
+            "pub_year": 2017,
+            "title": "Predicting the performance of organic corrosion inhibitors",
+            "volume": "7"
+        },
+        "bib0150": {
+            "authors": [
+                {
+                    "first": "Junqi",
+                    "initial": "J.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Steven G.",
+                    "initial": "S.G.",
+                    "last": "Ballmer"
+                },
+                {
+                    "first": "Eric P.",
+                    "initial": "E.P.",
+                    "last": "Gillis"
+                },
+                {
+                    "first": "Seiko",
+                    "initial": "S.",
+                    "last": "Fujii"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Schmidt"
+                },
+                {
+                    "first": "Andrea M.E.",
+                    "initial": "A.M.E.",
+                    "last": "Palazzolo"
+                },
+                {
+                    "first": "Jonathan W.",
+                    "initial": "J.W.",
+                    "last": "Lehmann"
+                },
+                {
+                    "first": "Greg F.",
+                    "initial": "G.F.",
+                    "last": "Morehouse"
+                },
+                {
+                    "first": "Martin D.",
+                    "initial": "M.D.",
+                    "last": "Burke"
+                }
+            ],
+            "doi": "10.1126/science.aaa5414",
+            "firstpage": "1221",
+            "issn": "00368075",
+            "lastpage": "1226",
+            "pmid": "25766227",
+            "pub_year": 2015,
+            "title": "Synthesis of many different types of organic small molecules using one automated process",
+            "volume": "347"
+        },
+        "bib0155": {
+            "authors": [
+                {
+                    "first": "Marwin H.S.",
+                    "initial": "M.H.S.",
+                    "last": "Segler"
+                },
+                {
+                    "first": "Mike",
+                    "initial": "M.",
+                    "last": "Preuss"
+                },
+                {
+                    "first": "Mark P.",
+                    "initial": "M.P.",
+                    "last": "Waller"
+                }
+            ],
+            "doi": "10.1038/nature25978",
+            "firstpage": "604",
+            "issn": "00280836",
+            "lastpage": "610",
+            "pmid": "29595767",
+            "pub_year": 2018,
+            "title": "Planning chemical syntheses with deep neural networks and symbolic AI",
+            "volume": "555"
+        },
+        "bib0160": {
+            "authors": [
+                {
+                    "first": "Tu C.",
+                    "initial": "T.C.",
+                    "last": "Le"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.1021/acs.chemrev.5b00691",
+            "firstpage": "6107",
+            "issn": "00092665",
+            "lastpage": "6132",
+            "pmid": "27171499",
+            "pub_year": 2016,
+            "title": "Discovery and Optimization of Materials Using Evolutionary Approaches",
+            "volume": "116"
+        },
+        "bib0165": {
+            "authors": [
+                {
+                    "first": "Fiona Fang",
+                    "initial": "F.F.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Breedon"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "White"
+                },
+                {
+                    "first": "Clement",
+                    "initial": "C.",
+                    "last": "Chu"
+                },
+                {
+                    "first": "Dwaipayan",
+                    "initial": "D.",
+                    "last": "Mallick"
+                },
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "Thomas"
+                },
+                {
+                    "first": "Erik",
+                    "initial": "E.",
+                    "last": "Sapper"
+                },
+                {
+                    "first": "Ivan",
+                    "initial": "I.",
+                    "last": "Cole"
+                }
+            ],
+            "doi": "10.1016/j.matdes.2016.09.084",
+            "firstpage": "410",
+            "issn": "02641275",
+            "lastpage": "418",
+            "pub_year": 2016,
+            "title": "Correlation between molecular features and electrochemical properties using an artificial neural network",
+            "volume": "112"
+        },
+        "bib0170": {
+            "authors": [
+                {
+                    "first": "Junshui",
+                    "initial": "J.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Robert P.",
+                    "initial": "R.P.",
+                    "last": "Sheridan"
+                },
+                {
+                    "first": "Andy",
+                    "initial": "A.",
+                    "last": "Liaw"
+                },
+                {
+                    "first": "George E.",
+                    "initial": "G.E.",
+                    "last": "Dahl"
+                },
+                {
+                    "first": "Vladimir",
+                    "initial": "V.",
+                    "last": "Svetnik"
+                }
+            ],
+            "doi": "10.1021/ci500747n",
+            "firstpage": "263",
+            "issn": "15499596",
+            "lastpage": "274",
+            "pmid": "25635324",
+            "pub_year": 2015,
+            "title": "Deep neural nets as a method for quantitative structure-activity relationships",
+            "volume": "55"
+        },
+        "bib0175": {
+            "authors": [
+                {
+                    "first": "Toshio",
+                    "initial": "T.",
+                    "last": "Fujita"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.1021/acs.jcim.5b00229",
+            "firstpage": "269",
+            "issn": "15499596",
+            "lastpage": "274",
+            "pmid": "26754147",
+            "pub_year": 2016,
+            "title": "Understanding the Roles of the \"two QSARs\"",
+            "volume": "56"
+        },
+        "bib0180": null,
+        "bib0185": {
+            "authors": [
+                {
+                    "first": "I. B.",
+                    "initial": "I.B.",
+                    "last": "Obot"
+                },
+                {
+                    "first": "D. D.",
+                    "initial": "D.D.",
+                    "last": "Macdonald"
+                },
+                {
+                    "first": "Z. M.",
+                    "initial": "Z.M.",
+                    "last": "Gasem"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2015.01.037",
+            "firstpage": "1",
+            "issn": "0010938X",
+            "lastpage": "30",
+            "pub_year": 2015,
+            "title": "Density functional theory (DFT) as a powerful tool for designing new organic corrosion inhibitors: Part 1: An overview",
+            "volume": "99"
+        },
+        "bib0190": {
+            "authors": [
+                {
+                    "first": "Hong",
+                    "initial": "H.",
+                    "last": "Ju"
+                },
+                {
+                    "first": "Zhen Peng",
+                    "initial": "Z.P.",
+                    "last": "Kai"
+                },
+                {
+                    "first": "Yan",
+                    "initial": "Y.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2007.10.009",
+            "firstpage": "865",
+            "issn": "0010938X",
+            "lastpage": "871",
+            "pub_year": 2008,
+            "title": "Aminic nitrogen-bearing polydentate Schiff base compounds as corrosion inhibitors for iron in acidic media: A quantum chemical calculation",
+            "volume": "50"
+        },
+        "bib0195": {
+            "authors": [
+                {
+                    "first": "K. F.",
+                    "initial": "K.F.",
+                    "last": "Khaled"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2011.01.035",
+            "firstpage": "3457",
+            "issn": "0010938X",
+            "lastpage": "3465",
+            "pub_year": 2011,
+            "title": "Modeling corrosion inhibition of iron in acid medium by genetic function approximation method: A QSAR model",
+            "volume": "53"
+        },
+        "bib0200": {
+            "authors": [
+                {
+                    "first": "Eno E.",
+                    "initial": "E.E.",
+                    "last": "Ebenso"
+                },
+                {
+                    "first": "Taner",
+                    "initial": "T.",
+                    "last": "Arslan"
+                },
+                {
+                    "first": "Fatma",
+                    "initial": "F.",
+                    "last": "Kandemirli"
+                },
+                {
+                    "first": "Necmettin",
+                    "initial": "N.",
+                    "last": "Caner"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Love"
+                }
+            ],
+            "doi": "10.1002/qua.22249",
+            "firstpage": "1003",
+            "issn": "00207608",
+            "lastpage": "1018",
+            "pub_year": 2010,
+            "title": "Quantum chemical studies of some rhodanine azosulpha drugs as corrosion inhibitors for mild steel in acidic medium",
+            "volume": "110"
+        },
+        "bib0205": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Barouni"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Kassale"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Albourine"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Jbara"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Hammouti"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Bazzi"
+                }
+            ],
+            "firstpage": "456",
+            "issn": "20282508",
+            "lastpage": "463",
+            "pub_year": 2014,
+            "title": "Amino acids as corrosion inhibitors for copper in nitric acid medium: Experimental and theoretical study",
+            "volume": "5"
+        },
+        "bib0210": {
+            "authors": [
+                {
+                    "first": "Anton",
+                    "initial": "A.",
+                    "last": "Kokalj"
+                }
+            ],
+            "doi": "10.1016/j.electacta.2010.09.065",
+            "firstpage": "745",
+            "issn": "00134686",
+            "lastpage": "755",
+            "pub_year": 2010,
+            "title": "Is the analysis of molecular electronic structure of corrosion inhibitors sufficient to predict the trend of their inhibition performance",
+            "volume": "56"
+        },
+        "bib0215": {
+            "authors": [
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Breedon"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "F. R.",
+                    "initial": "F.R.",
+                    "last": "Burden"
+                },
+                {
+                    "first": "A. S.",
+                    "initial": "A.S.",
+                    "last": "Barnard"
+                },
+                {
+                    "first": "T. G.",
+                    "initial": "T.G.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Cole"
+                }
+            ],
+            "doi": "10.1039/c3gc42540a",
+            "firstpage": "3349",
+            "issn": "14639262",
+            "lastpage": "3357",
+            "pub_year": 2014,
+            "title": "Towards chromate-free corrosion inhibitors: Structure-property models for organic alternatives",
+            "volume": "16"
+        },
+        "bib0220": {
+            "authors": [
+                {
+                    "first": "Nata\u0161a",
+                    "initial": "N.",
+                    "last": "Kova\u010devi\u0107"
+                },
+                {
+                    "first": "Ingrid",
+                    "initial": "I.",
+                    "last": "Milo\u0161ev"
+                },
+                {
+                    "first": "Anton",
+                    "initial": "A.",
+                    "last": "Kokalj"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2017.04.021",
+            "firstpage": "25",
+            "issn": "0010938X",
+            "lastpage": "34",
+            "pub_year": 2017,
+            "title": "How relevant is the adsorption bonding of imidazoles and triazoles for their corrosion inhibition of copper?",
+            "volume": "124"
+        },
+        "bib0225": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Kokalj"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Costa"
+                }
+            ],
+            "doi": "10.1016/B978-0-12-409547-2.13444-4",
+            "firstpage": "332",
+            "lastpage": "345",
+            "pub_year": 2018,
+            "title": "Molecular modeling of corrosion inhibitors"
+        },
+        "bib0230": {
+            "authors": [
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.3762/bjoc.13.125",
+            "firstpage": "1288",
+            "issn": "18605397",
+            "lastpage": "1302",
+            "pub_year": 2017,
+            "title": "Biomimetic molecular design tools that learn, evolve, and adapt",
+            "volume": "13"
+        },
+        "bib0235": {
+            "authors": [
+                {
+                    "first": "G\u00f6khan",
+                    "initial": "G.",
+                    "last": "Gece"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2008.08.043",
+            "firstpage": "2981",
+            "issn": "0010938X",
+            "lastpage": "2992",
+            "pub_year": 2008,
+            "title": "The use of quantum chemical methods in corrosion inhibitor studies",
+            "volume": "50"
+        },
+        "bib0240": {
+            "authors": [
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "H\u00f6che"
+                },
+                {
+                    "first": "R. P.",
+                    "initial": "R.P.",
+                    "last": "Petrauskas"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Blawert"
+                },
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                }
+            ],
+            "doi": "10.1016/j.elecom.2015.10.023",
+            "firstpage": "5",
+            "issn": "13882481",
+            "lastpage": "8",
+            "pub_year": 2016,
+            "title": "A new concept for corrosion inhibition of magnesium: Suppression of iron re-deposition",
+            "volume": "62"
+        },
+        "bib0245": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "H\u00f6che"
+                },
+                {
+                    "first": "Carsten",
+                    "initial": "C.",
+                    "last": "Blawert"
+                },
+                {
+                    "first": "Sviatlana V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "Nico",
+                    "initial": "N.",
+                    "last": "Scharnagl"
+                },
+                {
+                    "first": "Chamini",
+                    "initial": "C.",
+                    "last": "Mendis"
+                },
+                {
+                    "first": "Mikhail L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                }
+            ],
+            "doi": "10.1039/c5cp05577f",
+            "firstpage": "1279",
+            "issn": "14639076",
+            "lastpage": "1291",
+            "pub_year": 2016,
+            "title": "The effect of iron re-deposition on the corrosion of impurity-containing magnesium",
+            "volume": "18"
+        },
+        "bib0250": {
+            "authors": [
+                {
+                    "first": "Dimitri",
+                    "initial": "D.",
+                    "last": "Mercier"
+                },
+                {
+                    "first": "Jolanta",
+                    "initial": "J.",
+                    "last": "Swiatowska"
+                },
+                {
+                    "first": "Sandrine",
+                    "initial": "S.",
+                    "last": "Zanna"
+                },
+                {
+                    "first": "Antoine",
+                    "initial": "A.",
+                    "last": "Seyeux"
+                },
+                {
+                    "first": "Philippe",
+                    "initial": "P.",
+                    "last": "Marcus"
+                }
+            ],
+            "doi": "10.1149/2.0621802jes",
+            "firstpage": "C42",
+            "issn": "00134651",
+            "lastpage": "C49",
+            "pub_year": 2018,
+            "title": "Role of segregated iron at grain boundaries on Mg corrosion",
+            "volume": "165"
+        },
+        "bib0255": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Michailidou"
+                },
+                {
+                    "first": "H. N.",
+                    "initial": "H.N.",
+                    "last": "McMurray"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Williams"
+                }
+            ],
+            "doi": "10.1149/2.0251805jes",
+            "firstpage": "C195",
+            "issn": "00134651",
+            "lastpage": "C205",
+            "pub_year": 2018,
+            "title": "Quantifying the role of transition metal electrodeposition in the cathodic activation of corroding magnesium",
+            "volume": "165"
+        },
+        "bib0260": {
+            "authors": [
+                {
+                    "first": "Jichao",
+                    "initial": "J.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Weihua",
+                    "initial": "W.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Belinda",
+                    "initial": "B.",
+                    "last": "Hurley"
+                },
+                {
+                    "first": "Alan A.",
+                    "initial": "A.A.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Rudolph G.",
+                    "initial": "R.G.",
+                    "last": "Buchheit"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2016.08.011",
+            "firstpage": "760",
+            "issn": "0010938X",
+            "lastpage": "764",
+            "pub_year": 2016,
+            "title": "Cu redistribution study during the corrosion of AZ91 using a rotating ring-disk collection experiment",
+            "volume": "112"
+        },
+        "bib0265": {
+            "authors": [
+                {
+                    "first": "Jun Ichi",
+                    "initial": "J.I.",
+                    "last": "Aihara"
+                }
+            ],
+            "doi": "10.1039/b002601h",
+            "firstpage": "3121",
+            "issn": "14639076",
+            "lastpage": "3125",
+            "pub_year": 2000,
+            "title": "Correlation found between the HOMO-LUMO energy separation and the chemical reactivity at the most reactive site for isolated-pentagon isomers of fullerenes",
+            "volume": "2"
+        },
+        "bib0270": {
+            "authors": [
+                {
+                    "first": "Tim",
+                    "initial": "T.",
+                    "last": "W\u00fcrger"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Feiler"
+                },
+                {
+                    "first": "F\u00e9lix",
+                    "initial": "F.",
+                    "last": "Musil"
+                },
+                {
+                    "first": "Gregor B.V.",
+                    "initial": "G.B.V.",
+                    "last": "Feldbauer"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "H\u00f6che"
+                },
+                {
+                    "first": "Sviatlana V.",
+                    "initial": "S.V.",
+                    "last": "Lamaka"
+                },
+                {
+                    "first": "Mikhail L.",
+                    "initial": "M.L.",
+                    "last": "Zheludkevich"
+                },
+                {
+                    "first": "Robert H.",
+                    "initial": "R.H.",
+                    "last": "Mei\u00dfner"
+                }
+            ],
+            "doi": "10.3389/fmats.2019.00053",
+            "firstpage": "1",
+            "issn": "22968016",
+            "lastpage": "9",
+            "pub_year": 2019,
+            "title": "Data science based mg corrosion engineering",
+            "volume": "6"
+        },
+        "bib0275": null,
+        "bib0280": {
+            "authors": [
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "White"
+                },
+                {
+                    "first": "G. B.",
+                    "initial": "G.B.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "T. G.",
+                    "initial": "T.G.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "Corrigan"
+                },
+                {
+                    "first": "M. A.",
+                    "initial": "M.A.",
+                    "last": "Glenn"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lau"
+                },
+                {
+                    "first": "S. G.",
+                    "initial": "S.G.",
+                    "last": "Hardin"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Mardel"
+                },
+                {
+                    "first": "T. A.",
+                    "initial": "T.A.",
+                    "last": "Markley"
+                },
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Muster"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Sherman"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "J. M.C.",
+                    "initial": "J.M.C.",
+                    "last": "Mol"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2012.01.016",
+            "firstpage": "327",
+            "issn": "0010938X",
+            "lastpage": "331",
+            "pub_year": 2012,
+            "title": "A new high-throughput method for corrosion testing",
+            "volume": "58"
+        },
+        "bib0285": {
+            "authors": [
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Garc\u00eda"
+                },
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Muster"
+                },
+                {
+                    "first": "\u00d6",
+                    "initial": "O.",
+                    "last": "\u00d6zkanat"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Sherman"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Terryn"
+                },
+                {
+                    "first": "J. H.W.",
+                    "initial": "J.H.W.",
+                    "last": "de Wit"
+                },
+                {
+                    "first": "J. M.C.",
+                    "initial": "J.M.C.",
+                    "last": "Mol"
+                }
+            ],
+            "doi": "10.1016/j.electacta.2009.12.013",
+            "firstpage": "2457",
+            "issn": "00134686",
+            "lastpage": "2465",
+            "pub_year": 2010,
+            "title": "The influence of pH on corrosion inhibitor selection for 2024-T3 aluminium alloy assessed by high-throughput multielectrode and potentiodynamic testing",
+            "volume": "55"
+        },
+        "bib0290": {
+            "authors": [
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "White"
+                },
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Furman"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Sherman"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "Corrigan"
+                },
+                {
+                    "first": "M. A.",
+                    "initial": "M.A.",
+                    "last": "Glenn"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lau"
+                },
+                {
+                    "first": "S. G.",
+                    "initial": "S.G.",
+                    "last": "Hardin"
+                },
+                {
+                    "first": "T. G.",
+                    "initial": "T.G.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Mardel"
+                },
+                {
+                    "first": "T. H.",
+                    "initial": "T.H.",
+                    "last": "Muster"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Kwakernaak"
+                },
+                {
+                    "first": "J. M.C.",
+                    "initial": "J.M.C.",
+                    "last": "Mol"
+                }
+            ],
+            "doi": "10.1016/j.corsci.2009.06.038",
+            "firstpage": "2279",
+            "issn": "0010938X",
+            "lastpage": "2290",
+            "pub_year": 2009,
+            "title": "High-throughput channel arrays for inhibitor testing: Proof of concept for AA2024-T3",
+            "volume": "51"
+        },
+        "bib0295": {
+            "authors": [
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Xiaorong",
+                    "initial": "X.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Song Mao",
+                    "initial": "S.M.",
+                    "last": "Liang"
+                },
+                {
+                    "first": "Rainer",
+                    "initial": "R.",
+                    "last": "Schmid-Fetzer"
+                },
+                {
+                    "first": "Zhongyun",
+                    "initial": "Z.",
+                    "last": "Fan"
+                },
+                {
+                    "first": "Geoff",
+                    "initial": "G.",
+                    "last": "Scamans"
+                },
+                {
+                    "first": "Joseph",
+                    "initial": "J.",
+                    "last": "Robson"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1016/j.jallcom.2014.09.040",
+            "firstpage": "396",
+            "issn": "09258388",
+            "lastpage": "400",
+            "pub_year": 2015,
+            "title": "Effect of traces of silicon on the formation of Fe-rich particles in pure magnesium and the corrosion susceptibility of magnesium",
+            "volume": "619"
+        },
+        "bib0300": {
+            "authors": [
+                {
+                    "first": "D. L.J.",
+                    "initial": "D.L.J.",
+                    "last": "Alexander"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Tropsha"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.1021/acs.jcim.5b00206",
+            "firstpage": "1316",
+            "issn": "15499596",
+            "lastpage": "1322",
+            "pmid": "26099013",
+            "pub_year": 2015,
+            "title": "Beware of R2: Simple, Unambiguous Assessment of the Prediction Accuracy of QSAR and QSPR Models",
+            "volume": "55"
+        },
+        "bib0305": null,
+        "bib0310": {
+            "authors": [
+                {
+                    "first": "Hamed M.",
+                    "initial": "H.M.",
+                    "last": "Kayello"
+                },
+                {
+                    "first": "Naresh K.R.",
+                    "initial": "N.K.R.",
+                    "last": "Tadisina"
+                },
+                {
+                    "first": "Natalia",
+                    "initial": "N.",
+                    "last": "Shlonimskaya"
+                },
+                {
+                    "first": "Joseph J.",
+                    "initial": "J.J.",
+                    "last": "Biernacki"
+                },
+                {
+                    "first": "Donald P.",
+                    "initial": "D.P.",
+                    "last": "Visco"
+                }
+            ],
+            "doi": "10.1111/jace.12453",
+            "firstpage": "365",
+            "issn": "00027820",
+            "lastpage": "377",
+            "pub_year": 2014,
+            "title": "An application of computer-aided molecular design (CAMD) using the signature molecular descriptor - Part 1. Identification of surface tension reducing agents and the search for shrinkage reducing admixtures",
+            "volume": "97"
+        },
+        "bib0315": null,
+        "bib0320": {
+            "authors": [
+                {
+                    "first": "Niharika",
+                    "initial": "N.",
+                    "last": "Gauraha"
+                }
+            ],
+            "doi": "10.1007/s12045-018-0635-x",
+            "firstpage": "439",
+            "issn": "09718044",
+            "lastpage": "464",
+            "pub_year": 2018,
+            "title": "Introduction to the LASSO: A Convex Optimization Approach for High-dimensional Problems",
+            "volume": "23"
+        },
+        "bib0325": {
+            "authors": [
+                {
+                    "first": "Tu C.",
+                    "initial": "T.C.",
+                    "last": "Le"
+                },
+                {
+                    "first": "Mathew",
+                    "initial": "M.",
+                    "last": "Ballard"
+                },
+                {
+                    "first": "Phillip",
+                    "initial": "P.",
+                    "last": "Casey"
+                },
+                {
+                    "first": "Ming S.",
+                    "initial": "M.S.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.1002/minf.201400098",
+            "firstpage": "18",
+            "issn": "18681743",
+            "lastpage": "27",
+            "pmid": "27490859",
+            "pub_year": 2015,
+            "title": "Illuminating flash point: Comprehensive prediction models",
+            "volume": "34"
+        },
+        "bib0330": {
+            "authors": [
+                {
+                    "first": "Maryam",
+                    "initial": "M.",
+                    "last": "Salahinejad"
+                },
+                {
+                    "first": "Tu C.",
+                    "initial": "T.C.",
+                    "last": "Le"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Winkler"
+                }
+            ],
+            "doi": "10.1021/mp4001958",
+            "firstpage": "2757",
+            "issn": "15438384",
+            "lastpage": "2766",
+            "pmid": "23718811",
+            "pub_year": 2013,
+            "title": "Aqueous solubility prediction: Do crystal lattice interactions help?",
+            "volume": "10"
+        },
+        "bib0335": null
+    },
+    "body_text": [
+        {
+            "endOffset": 26499,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "Magnesium (Mg) is one of the lightest, most abundant and versatile engineering materials.",
+            "startOffset": 26410,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27202,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "Small organic molecules are extremely useful modulators of a wide variety of processes.",
+            "startOffset": 27115,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36561,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, larger basis sets increased computational times \u223c100-fold (for details see SI, section II).",
+            "startOffset": 36461,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 41903,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The propionic acid derivative 3 shows the largest prediction deviation indicating that its composition is not well represent in the used training set.",
+            "startOffset": 41753,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 38444,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Consequently, a cross-validation approach was adopted where the test sets were randomly chosen six times to minimize selection biases for the model (for details see SI, section I).",
+            "startOffset": 38264,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 35919,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Although the R2 value is modest for this single parameter model, its p value is highly significant (2 \u00d7 10\u221211).",
+            "startOffset": 35808,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 36207,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Calculation of the HOMO-LUMO gap is computationally cheap and is relatively insensitive to basis set size.",
+            "startOffset": 36101,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 48865,
+            "parents": [],
+            "refoffsets": {
+                "bib0305": {
+                    "endOffset": 48696,
+                    "startOffset": 48694
+                },
+                "bib0310": {
+                    "endOffset": 48726,
+                    "startOffset": 48724
+                },
+                "bib0315": {
+                    "endOffset": 48792,
+                    "startOffset": 48790
+                },
+                "bib0320": {
+                    "endOffset": 48795,
+                    "startOffset": 48793
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Next, we aim to use a wider range of molecular descriptors, such as chemical potentials, electron density distributions, molecular polarizabilities [61] and molecular signatures [62], together with sparse feature selection methods, (e.g. LASSO [63,64]) to improve the predictive power and applicability of our ML models.",
+            "startOffset": 48545,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 38114,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Partitioning of the test sets was based on random selection.",
+            "startOffset": 38054,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 43008,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The conducted correlation test confirms that there is indeed a correlation between the measured and predicted values.",
+            "startOffset": 42891,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 43387,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Clearly, a quantitatively accurate forecast requires a larger training data set, and use of improved descriptors as these are the largest factor in model quality.",
+            "startOffset": 43225,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 47528,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Consequently, the ML model trained on data for CP Mg 220 may be applied to predict the performance of corrosion inhibiting agents for a Mg material with similar properties, as compounds 2-7 had a similar effect on the degradation rate of CP Mg 342.",
+            "startOffset": 47280,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 27626,
+            "parents": [],
+            "refoffsets": {
+                "bib0025": {
+                    "endOffset": 27619,
+                    "startOffset": 27618
+                },
+                "bib0040": {
+                    "endOffset": 27624,
+                    "startOffset": 27620
+                },
+                "bib0045": {
+                    "endOffset": 27624,
+                    "startOffset": 27620
+                },
+                "bib0050": {
+                    "endOffset": 27624,
+                    "startOffset": 27620
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "Discovery of effective corrosion inhibitors is particularly critical due to the imminent ban of highly effective but toxic chromates [5,8\u201310].",
+            "startOffset": 27484,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45718,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "There is a strong correlation between the IEs for the Mg with 220 ppm and 342 ppm Fe (R\u00b2 value of 0.87).",
+            "startOffset": 45614,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 46838,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The IEs of all seven accelerators were significantly more negative for CP Mg 342 compared to that of CP Mg 220 (for details see SI, section IV.3).",
+            "startOffset": 46692,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52876,
+            "parents": [],
+            "secId": "sec0025",
+            "sentence": "Funding by HZG MMDi IDEA project is gratefully acknowledged.",
+            "startOffset": 52816,
+            "title": "Funding"
+        },
+        {
+            "endOffset": 34093,
+            "parents": [],
+            "refoffsets": {
+                "bib0190": {
+                    "endOffset": 33839,
+                    "startOffset": 33834
+                },
+                "bib0195": {
+                    "endOffset": 33839,
+                    "startOffset": 33834
+                },
+                "bib0200": {
+                    "endOffset": 33839,
+                    "startOffset": 33834
+                },
+                "bib0205": {
+                    "endOffset": 33839,
+                    "startOffset": 33834
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Some researchers [38\u201341] claim there is a correlation between DFT-calculated parameters (e.g. the energy differences (\u0394EHL) between the highest occupied (HOMO) and the lowest unoccupied molecular orbital (LUMO)) and corrosion inhibition efficiencies of small organic molecules.",
+            "startOffset": 33816,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 53169,
+            "parents": [],
+            "secId": "sec0025",
+            "sentence": "The authors declare no competing financial interest.",
+            "startOffset": 53117,
+            "title": "Funding"
+        },
+        {
+            "endOffset": 40156,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The ML predictions of properties of these seven compounds were validated experimentally using the same hydrogen evolution protocols used to generate the training set.",
+            "startOffset": 39990,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42241,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This is due to the small number of compounds in the training set that accelerate dissolution (negative IE values, only four modulators have IE values < \u201340% and none have an IE < \u201375% (see Fig. 4, top left)).",
+            "startOffset": 42033,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 51239,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "We found that ML models trained on HOMO-LUMO gap energies combined with simple molecular descriptors could recapitulate the IE of small organic compounds for commercially pure Mg containing 220 ppm iron impurities (CP Mg 220).",
+            "startOffset": 51013,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 45242,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This is slightly counterintuitive, as one might expect faster degradation rates from the material of lower purity.",
+            "startOffset": 45128,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44896,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The results are presented in Table 3 and Fig. 5.",
+            "startOffset": 44848,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 37041,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, complementary features are needed to further improve the R\u00b2 value of our model.",
+            "startOffset": 36953,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 43867,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Additionally, a deeper understanding of the underlying degradation mechanisms (e.g. complexation of impurities or Mg2+, blocking of the Mg surface by adsorbed inhibitors or precipitation of coordination polymers) would also allow a more tailored preselection of the candidate modulators for experimental and computational testing.",
+            "startOffset": 43537,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44487,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In principle similar models could recapitulate the properties of formulated inhibitors as well, provided that sufficient experimental data were available to train the models.",
+            "startOffset": 44313,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 49814,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "As this might be one of the reasons for the strong correlation between HOMO-LUMO gap values and IE we are planning to elucidate if the correlation remains valid for a representative set of randomly chosen dissolution modulators that are not targeting contained impurities.",
+            "startOffset": 49542,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 36678,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This analysis suggested that compounds with small HOMO-LUMO gap are generally better corrosion inhibitors for CP Mg.",
+            "startOffset": 36562,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 53116,
+            "parents": [],
+            "secId": "sec0025",
+            "sentence": "RM gratefully acknowledge funding by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) \u2013 Projektnumber 192346071 - SFB 986.",
+            "startOffset": 52973,
+            "title": "Funding"
+        },
+        {
+            "endOffset": 39419,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "We excluded highly toxic chemicals and ordered only compounds that are low in price as expensive additives are not likely to be employed in applications since the cost of the protective coating would become too high.",
+            "startOffset": 39203,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 27680,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "The search for green corrosion inhibitors is complex.",
+            "startOffset": 27627,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37181,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Hence, we used two additional descriptors to train the ANN model (see Fig. 2), the number of hydroxyl and carbonyl groups in the molecules.",
+            "startOffset": 37042,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 37341,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "These were considered important because they are generating chelating moieties (carboxylates and phenols) that are involved in binding the compounds to metals.",
+            "startOffset": 37182,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45858,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The measured IE values for the CP Mg material containing the higher iron content are \u223c20% larger on average for compounds 2, 3, 4, 6 and 7.",
+            "startOffset": 45719,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52020,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "In spite of diverse and not completely unravelled inhibition mechanisms in play, we obtained a robust and qualitatively predictive model for corrosion modulators for CP Mg based on the used training set.",
+            "startOffset": 51817,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 28421,
+            "parents": [],
+            "refoffsets": {
+                "bib0095": {
+                    "endOffset": 28420,
+                    "startOffset": 28415
+                },
+                "bib0100": {
+                    "endOffset": 28420,
+                    "startOffset": 28415
+                },
+                "bib0105": {
+                    "endOffset": 28420,
+                    "startOffset": 28415
+                },
+                "bib0110": {
+                    "endOffset": 28420,
+                    "startOffset": 28415
+                },
+                "bib0115": {
+                    "endOffset": 28420,
+                    "startOffset": 28415
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "Bio-resorbable medical implants can also be loaded with modulators that provide control over the degradation rate as well as drugs that improve implant survival and prevent inflammation. [19\u201323]",
+            "startOffset": 28227,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47279,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The influence of minor impurities becomes less significant in the presence of corrosion accelerating agents, so that the rate of magnesium dissolution becomes similar for both magnesium materials of commercial purity.",
+            "startOffset": 47062,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42734,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "To quantify the trend between the measured and predicted values we performed a Pearson correlation test using the means of the values predicted by the model and the values determined by the subsequent experiments.",
+            "startOffset": 42521,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52809,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "Although experimental validation will remain an important final step, this ML approach will allow for preselection of the best performing substances for a specific target application, saving a significant amount of time and resources.",
+            "startOffset": 52575,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 45934,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This is in good agreement with the slower corrosion observed for CP Mg 342.",
+            "startOffset": 45859,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 29876,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "Specifically, for small molecules that modulate corrosion behaviour in magnesium-based materials, chemical intuition alone is inadequate to find the best modulators and to predict their effect on kinetics of the corrosion process.",
+            "startOffset": 29646,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40903,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Each experiment was performed three times.",
+            "startOffset": 40861,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 41362,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The predicted values for two out of seven candidates (acetamide (2) and the pyrazine derivative 7) matched the experimentally determined performance (within the error margin of the methods).",
+            "startOffset": 41172,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45613,
+            "parents": [],
+            "refoffsets": {
+                "bib0295": {
+                    "endOffset": 45612,
+                    "startOffset": 45610
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Silicon is known to promote nucleation and growth of Fe-rich particles by introducing a solidification interval. [59]",
+            "startOffset": 45496,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 49541,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "We will also expand the size and chemical diversity of our experimental database to allow generation of more broadly applicable and robust ML models as compounds contained in the used dataset were selected based on their ability to bind Fe ions.",
+            "startOffset": 49296,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 38053,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "To assess the ability of the ANN model to predict IE for new candidate modulators, the dataset was divided in a training (85%, 60 modulators) and test set (15%, 11 modulators).",
+            "startOffset": 37877,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 41540,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Furthermore, the predicted values of trimesic acid (5), the benzoic acid ester derivative 6 as well as pyridazine (4) are in the same range as the experimentally derived values.",
+            "startOffset": 41363,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44847,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The experiments were performed under the same conditions as those used to generate the data for commercial pure Mg (220 ppm iron impurities) that provided the training set for the ML model.",
+            "startOffset": 44658,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52395,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "We also showed that the trained model can predict inhibition efficiencies of corrosion inhibitors for a metal (CP Mg 342) with composition similar to that of the material used to generate it (CP Mg 220).",
+            "startOffset": 52192,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34199,
+            "parents": [],
+            "refoffsets": {
+                "bib0210": {
+                    "endOffset": 34198,
+                    "startOffset": 34193
+                },
+                "bib0215": {
+                    "endOffset": 34198,
+                    "startOffset": 34193
+                },
+                "bib0220": {
+                    "endOffset": 34198,
+                    "startOffset": 34193
+                },
+                "bib0225": {
+                    "endOffset": 34198,
+                    "startOffset": 34193
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "However, several other studies could not identify any relationship between experiment and theory. [42\u201345]",
+            "startOffset": 34094,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 39810,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This ratio of aromatic and aliphatic compounds was similar to that in the training set of the ANN.",
+            "startOffset": 39712,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 40418,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The errors of the ML prediction and the experimental investigation are summarized in Table 2 and in Fig. 4.",
+            "startOffset": 40311,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 34794,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, it has not been determined whether DFT-derived parameters are useful for generating predictive models of corrosion inhibitor performance for other metals and alloys, such as Mg.",
+            "startOffset": 34608,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52972,
+            "parents": [],
+            "secId": "sec0025",
+            "sentence": "DM thanks China Scholarship Council for the award of fellowship and funding (No. 201607040051).",
+            "startOffset": 52877,
+            "title": "Funding"
+        },
+        {
+            "endOffset": 33298,
+            "parents": [],
+            "secId": "sec0010",
+            "sentence": "The elemental composition of CP Mg materials that were used in this work is shown in Table 1.",
+            "startOffset": 33205,
+            "title": "Materials & methods"
+        },
+        {
+            "endOffset": 29484,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "As there are effectively an infinite number of potentially useful small molecules available to solve materials problems now and in the future, the challenge is how to find these \u2018islands of utility\u2019 in a vast sea of possibilities.",
+            "startOffset": 29254,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49295,
+            "parents": [],
+            "refoffsets": {
+                "bib0335": {
+                    "endOffset": 49294,
+                    "startOffset": 49292
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "For example, molecular descriptors generated by the software package alvaDesc show promising initial results in our preliminary investigations. [67]",
+            "startOffset": 49147,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 28014,
+            "parents": [],
+            "refoffsets": {
+                "bib0055": {
+                    "endOffset": 28011,
+                    "startOffset": 28006
+                },
+                "bib0060": {
+                    "endOffset": 28011,
+                    "startOffset": 28006
+                },
+                "bib0065": {
+                    "endOffset": 28011,
+                    "startOffset": 28006
+                },
+                "bib0070": {
+                    "endOffset": 28011,
+                    "startOffset": 28006
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "Most likely, each application will require bespoke corrosion inhibitor molecules and specialized methods of applying these agents (e.g. incorporation in a polymeric coating or porous oxidation treatment [11\u201314]).",
+            "startOffset": 27802,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40622,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In all of our experiments we assumed that the active surface area of the specimen does not change during the hydrogen evolution experiment and that the material composition is homogeneous in all samples.",
+            "startOffset": 40419,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 28714,
+            "parents": [],
+            "refoffsets": {
+                "bib0120": {
+                    "endOffset": 28489,
+                    "startOffset": 28484
+                },
+                "bib0125": {
+                    "endOffset": 28489,
+                    "startOffset": 28484
+                },
+                "bib0130": {
+                    "endOffset": 28489,
+                    "startOffset": 28484
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "Furthermore, the next generation of primary Mg-air batteries [24\u201326] requires efficient dissolution modulators to control self-corrosion (increasing the utilization efficiency) and reduce precipitation of corrosion products on the surface of magnesium anodes (assuring higher output voltage).",
+            "startOffset": 28422,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36460,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "We found that different basis sets (def2SVP, def2TZVP, and def2QZVP) did not substantially influence the HOMO-LUMO gap trend in a data set consisting of three dissolution accelerators, three moderate inhibitors and three effective corrosion inhibitors.",
+            "startOffset": 36208,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 39711,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The set for blind validation of our ANN model consisted of three aliphatic compounds (1-(2-hydroxyethyl)piperazine (1), acetamide (2) and dimethylolpropionic acid (3)) and four aromatic compounds (pyridazine (4), trimesic acid (5), n-octyl gallate (6) and 2,3-pyrazinedicarboxylic acid (7)).",
+            "startOffset": 39420,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42520,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, the model correctly predicts that the piperazine derivative 1 will act as a corrosion-accelerating agent for CP Mg 220, which is consistent with the hydrogen evolution experiments.",
+            "startOffset": 42331,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 47600,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Hence, no additional time-consuming testing campaign would be required.",
+            "startOffset": 47529,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 28984,
+            "parents": [],
+            "refoffsets": {
+                "bib0135": {
+                    "endOffset": 28983,
+                    "startOffset": 28981
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "The number of organic compounds reported in the literature is increasing exponentially, with \u223c120 million compounds being added in the last decade. [27]",
+            "startOffset": 28832,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40860,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The experimental error was determined by quadratic error propagation based on the error of the reference measurement and the reproducibility of the hydrogen evolution experiments employing one of the seven potential corrosion modulators.",
+            "startOffset": 40623,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 48240,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "For example, the calculated IE values of piperazine derivative 1 are significantly more negative for CP Mg 342 albeit the observation that the amount of evolved hydrogen in its presence is lower for CP Mg 342 (42 mL/cm\u00b2) than for CP Mg 220 (57.5 mL/cm\u00b2).",
+            "startOffset": 47986,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 26721,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "When Mg-based parts are designed for structural applications in automotive, aerospace and consumer goods industries, corrosion protection strategies need to be applied to extend the service life of Mg structural elements.",
+            "startOffset": 26500,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29645,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "In silico methods employing artificial intelligence (machine learning and evolutionary algorithms) are essential to discover these new small molecule materials.",
+            "startOffset": 29485,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45127,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "% NaCl in 500 mL electrolyte) is lower for CP Mg 342 (9.10 mL/cm2) than for CP Mg 220 (29.3 mL/cm2).",
+            "startOffset": 45027,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 28226,
+            "parents": [],
+            "refoffsets": {
+                "bib0075": {
+                    "endOffset": 28066,
+                    "startOffset": 28064
+                },
+                "bib0080": {
+                    "endOffset": 28069,
+                    "startOffset": 28067
+                },
+                "bib0085": {
+                    "endOffset": 28094,
+                    "startOffset": 28092
+                },
+                "bib0090": {
+                    "endOffset": 28113,
+                    "startOffset": 28111
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "Reactive, magnesium-based lightweight materials [15,16] used for automotive [17] and aerospace [18] applications are particularly prone to corrosion, so effective inhibitors are needed to avoid material failure.",
+            "startOffset": 28015,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46691,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "To confirm the trend displayed by compound 1 we selected six dissolution accelerators (Tris(hydroxylmethyl)aminomethane (TRIS), ethylenediaminetetraacetic acid (EDTA), nitrilotriacetic acid (NTA), 3,4-Dihydroxybenzoic acid, glycine and piperazine) that were used to train the ANN and measured the corresponding IEs for CP Mg 342.",
+            "startOffset": 46362,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 37877,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The source code for the ANN is provided in the supporting information (SI, section III).",
+            "startOffset": 37789,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45027,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The amount of hydrogen that is evolved in the reference measurements (0.5 wt.",
+            "startOffset": 44950,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 38538,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Fig. 3 shows the quality of the model prediction of modulators in the training and test sets.",
+            "startOffset": 38445,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 36100,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Given the promising correlation between HOMO-LUMO gap and the IE for the 71 small organic molecules we employed this parameter as a molecular descriptor used to train the ANN model.",
+            "startOffset": 35919,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 41051,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The experimental uncertainties are most likely caused by inhomogeneities in structure and composition of the as-cast material samples of CP Mg 220.",
+            "startOffset": 40904,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 26853,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "Conversely, Mg dissolution promoters are used to assure the constant dissolution of Mg anode materials in Mg-air primary batteries.",
+            "startOffset": 26722,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47061,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This is reasonable as inhibitors are mostly targeting the active iron-rich particles (constituting less than 0.05% of the material) while accelerators are chelating Mg that constitutes \u033499.95% of the investigated material.",
+            "startOffset": 46839,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45992,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Trimesic acid (5) has a similar IE for both Mg materials.",
+            "startOffset": 45935,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 35456,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "This parameter is a reliable indicator of the propensity of organic compounds to form complexes with metallic impurities in CP Mg.",
+            "startOffset": 35326,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 33427,
+            "parents": [],
+            "secId": "sec0010",
+            "sentence": "The values were determined by Optical Discharge Emission Spectroscopy (SPECTROLAB with Spark Analyser Vision software, Germany).",
+            "startOffset": 33299,
+            "title": "Materials & methods"
+        },
+        {
+            "endOffset": 47985,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Hence, the trained ANN cannot be applied to predict the inhibition efficiencies of corrosion accelerators for a material with similar properties as used for training of the ML model based on IE values.",
+            "startOffset": 47784,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 38699,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The RMSD values for the predictions of IE for the six cross-validation sets lie between 19% and 34%, consistent with the experimental errors that were observed.",
+            "startOffset": 38539,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42330,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The ANN is unable to accurately predict IE values outside the range of the training set.",
+            "startOffset": 42242,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 47783,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, in spite of similar dissolution rates of CP Mg 220 and CP Mg 342 in presence of accelerating agents, CP Mg 220 and CP Mg 342 do not display the same tendency in terms of IE.",
+            "startOffset": 47601,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 46361,
+            "parents": [],
+            "refoffsets": {
+                "bib0300": {
+                    "endOffset": 46360,
+                    "startOffset": 46358
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "The fit for the correlation of compounds 2\u20137, excluding the piperazine derivative 1, exhibits a slightly lower R\u00b2 value of 0.80 with a highly improved RMSD value of 25% (see Fig. 5b). [60]",
+            "startOffset": 46173,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 48545,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Consequently, corrosion acceleration seems to need a more precise way for quantification by putting more weight to the factor reflecting the amount of actually consumed Mg rather than the IE, as the latter is largely dependent on the performance of the investigated material during reference measurement.",
+            "startOffset": 48241,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 51816,
+            "parents": [],
+            "refoffsets": {
+                "bib0240": {
+                    "endOffset": 51714,
+                    "startOffset": 51709
+                },
+                "bib0245": {
+                    "endOffset": 51714,
+                    "startOffset": 51709
+                },
+                "bib0250": {
+                    "endOffset": 51714,
+                    "startOffset": 51709
+                },
+                "bib0255": {
+                    "endOffset": 51714,
+                    "startOffset": 51709
+                }
+            },
+            "secId": "sec0020",
+            "sentence": "Re-plating of transition metal impurities released during Mg dissolution, thought to play a key role in the kinetics of the corrosion of Mg-based materials [48\u201351], may be prevented by the organic compounds rendering these molecules efficient corrosion inhibitors.",
+            "startOffset": 51552,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33815,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The use of molecular descriptors derived from DFT calculations in ANN models of corrosion inhibitor performance has been quite controversial.",
+            "startOffset": 33674,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 36952,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The correlation of the energy gaps with the inhibition efficiencies is quite high for this material in comparison to studies on Al based alloys where the correlation was essentially zero and the frontier orbital energies may already account for 50% of variance in the data.",
+            "startOffset": 36679,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42819,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The test resulted in a correlation coefficient of 0.88, a good positive correlation.",
+            "startOffset": 42735,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42890,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The p-value was 0.009, indicating acceptable statistical significance.",
+            "startOffset": 42820,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 46172,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, piperazine derivate 1 greatly accelerates dissolution of the more iron rich material resulting in a high RMSD value of 97% for the linear least squares fit (see Fig. 5a).",
+            "startOffset": 45993,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 51012,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "It is therefore likely that the importance of this parameter is metal-dependent and not necessarily transferable to other materials as there are different corrosion mechanisms in play.",
+            "startOffset": 50828,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34364,
+            "parents": [],
+            "refoffsets": {
+                "bib0025": {
+                    "endOffset": 34357,
+                    "startOffset": 34356
+                },
+                "bib0215": {
+                    "endOffset": 34360,
+                    "startOffset": 34358
+                },
+                "bib0230": {
+                    "endOffset": 34363,
+                    "startOffset": 34361
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "In aluminium alloys, DFT-derived molecular descriptors of small organic compounds were reported to have almost zero correlation with corrosion inhibition. [5,43,46]",
+            "startOffset": 34200,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 27801,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "It is becoming apparent that a new universal corrosion inhibitor matching the performance of chromate will not be found.",
+            "startOffset": 27681,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35807,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The RSMD for this trend improves after the dataset is split into aliphatic (39) and aromatic compounds (32) while R\u00b2 decreases (see Fig. 1 right).",
+            "startOffset": 35661,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 37590,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "A fourth molecular descriptor that distinguishes between aromatic and aliphatic molecules was also used because aliphatic compounds generally have higher HOMO-LUMO gaps than aromatic molecules for a given level of corrosion inhibition (see Fig. 1).",
+            "startOffset": 37342,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 35660,
+            "parents": [],
+            "refoffsets": {
+                "bib0030": {
+                    "endOffset": 35517,
+                    "startOffset": 35516
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "This is also consistent with the experimental observation [6] that compounds with small HOMO-LUMO gaps show higher IEs, while dissolution accelerating agents have larger HOMO-LUMO gaps (see Fig. 1 left).",
+            "startOffset": 35457,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44949,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In general, CP Mg 342 corrodes slower than CP Mg 220.",
+            "startOffset": 44896,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 43536,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "It is very difficult to put a number on the size of training database that is necessary to predict highly accurate IEs of unspecified new compounds.",
+            "startOffset": 43388,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44312,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "If ML models can be trained on experimental data with considerably larger molecular diversity (a wider range of molecular features) the domain of applicability of the model will be larger, the predictions more accurate and it will extend further into accessible chemical space.",
+            "startOffset": 44035,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 35325,
+            "parents": [],
+            "refoffsets": {
+                "bib0265": {
+                    "endOffset": 35237,
+                    "startOffset": 35235
+                },
+                "bib0270": {
+                    "endOffset": 35240,
+                    "startOffset": 35238
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "The kinetic stability of an organic molecule [53,54] increases and hence, its reactivity decreases with increasing HOMO-LUMO gap energy.",
+            "startOffset": 35189,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 50071,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "We will also investigate formation of complexes between organic modulators with Mg2+, Ni2+ and Fe2+/Fe3+ using quantum chemical and molecular dynamics techniques to better understand the interactions of the small organic molecules with metallic impurities.",
+            "startOffset": 49815,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 42032,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The piperazine derivative 1 displayed the lowest (negative) IE value experimentally although the predicted IE was less negative.",
+            "startOffset": 41904,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 44034,
+            "parents": [],
+            "refoffsets": {
+                "bib0280": {
+                    "endOffset": 43951,
+                    "startOffset": 43946
+                },
+                "bib0285": {
+                    "endOffset": 43951,
+                    "startOffset": 43946
+                },
+                "bib0290": {
+                    "endOffset": 43951,
+                    "startOffset": 43946
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Large scale testing, preferably with high-throughput experimental techniques [56\u201358] needs to be implemented for the industrially most relevant alloys, especially Mg.",
+            "startOffset": 43868,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 29253,
+            "parents": [],
+            "refoffsets": {
+                "bib0150": {
+                    "endOffset": 29248,
+                    "startOffset": 29246
+                },
+                "bib0155": {
+                    "endOffset": 29251,
+                    "startOffset": 29249
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "High-throughput synthesis techniques and computer-assisted synthesis will, no doubt, extend this exponential rise [30,31].",
+            "startOffset": 29131,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33673,
+            "parents": [],
+            "refoffsets": {
+                "bib0185": {
+                    "endOffset": 33672,
+                    "startOffset": 33670
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "The ability of computational modeling and simulation methods, such as density functional theory (DFT) and machine learning (ML), to predict corrosion inhibiting properties of organic molecules has been reviewed recently. [37]",
+            "startOffset": 33448,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 43224,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In summary, the IE predictions of the used ANN are in good agreement with the subsequent experiments as the ordering of the investigated compounds is correct although the absolute values are not predicted accurately.",
+            "startOffset": 43008,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45495,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Lower corrosion rate displayed by CP Mg 342 is caused by a significantly lower amount of Si in its composition.",
+            "startOffset": 45384,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 27114,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "Furthermore, application of either Mg corrosion inhibitors or accelerators (hereafter jointly called modulators) is necessary for the application of Mg-based bio-resorbable implants to achieve specific degradation rates for the treatment of different injuries.",
+            "startOffset": 26854,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33204,
+            "parents": [],
+            "secId": "sec0010",
+            "sentence": "To elucidate the applicability of the artificial neural network (ANN) trained on data for CP Mg 220 to predict IE for a similar material, we additionally performed hydrogen evolution measurements for CP Mg containing 342 ppm iron impurity (CP Mg 342).",
+            "startOffset": 32953,
+            "title": "Materials & methods"
+        },
+        {
+            "endOffset": 44657,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "To estimate how sensitive the trained ML corrosion inhibitor models are to changes in the metal or alloy composition, we performed hydrogen evolution tests for CP Mg 342.",
+            "startOffset": 44487,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 52191,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "The model predicted the corrosion modulation performance of seven hitherto untested small organic molecules in good agreement with subsequently experimental measurements.",
+            "startOffset": 52021,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 38950,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The complete dataset was subsequently used to train an ANN model to make an a priori prediction of the performance of seven (corresponding to 10% of the dataset size used to train the model) hitherto untested organic corrosion modulators on CP Mg 220.",
+            "startOffset": 38699,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 37788,
+            "parents": [],
+            "refoffsets": {
+                "bib0030": {
+                    "endOffset": 37714,
+                    "startOffset": 37713
+                },
+                "bib0275": {
+                    "endOffset": 37786,
+                    "startOffset": 37784
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "A three layer feed forward network with one hidden layer was trained to predict the experimental IE values for CP Mg 220 [6] using the resilient back propagation (rprop+) algorithm in RStudio [55].",
+            "startOffset": 37591,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 39202,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "For this sake, we were looking for compounds that have a similar composition (e.g. functional moieties, atom types) as the molecules used for training of the model since it will not correctly predict the performance of compounds outside of its domain.",
+            "startOffset": 38951,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 34947,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Hence, we initially investigated whether a correlation existed between DFT-derived parameters (\u0394EHL) and the IE of small organic molecules for CP Mg 220.",
+            "startOffset": 34794,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 35188,
+            "parents": [],
+            "refoffsets": {
+                "bib0240": {
+                    "endOffset": 35048,
+                    "startOffset": 35043
+                },
+                "bib0245": {
+                    "endOffset": 35048,
+                    "startOffset": 35043
+                },
+                "bib0250": {
+                    "endOffset": 35048,
+                    "startOffset": 35043
+                },
+                "bib0255": {
+                    "endOffset": 35048,
+                    "startOffset": 35043
+                },
+                "bib0260": {
+                    "endOffset": 35048,
+                    "startOffset": 35043
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Because impurities like iron, nickel and copper significantly alter the corrosion rate of Mg, [48\u201352] the HOMO-LUMO gap energy may be an important parameter as it indicates the affinity of the corrosion modulators for transition metal ions.",
+            "startOffset": 34948,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 50323,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Recalculation of HOMO-LUMO gap energies of organic inhibitors in an aqueous environment, with full speciation (all possible neutral and ionized forms of the corrosion modulators) may also result in more accurate in silico predictions of the IE values.",
+            "startOffset": 50072,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 51551,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "However, it is not clear whether the significant contribution of frontier orbital energy gaps is a consequence of an intrinsic property of CP Mg such as reactivity, or the ability of modulators to form complexes with transition metal impurities like iron, that are important concerning the degradation of CP Mg.",
+            "startOffset": 51240,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 34607,
+            "parents": [],
+            "refoffsets": {
+                "bib0235": {
+                    "endOffset": 34605,
+                    "startOffset": 34603
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Furthermore, it was concluded that the use of datasets containing too few or poorly chosen data points can lead to erroneous conclusions about correlations between DFT-derived properties and experimental corrosion inhibition performance [47].",
+            "startOffset": 34365,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 30189,
+            "parents": [],
+            "refoffsets": {
+                "bib0145": {
+                    "endOffset": 30182,
+                    "startOffset": 30180
+                },
+                "bib0160": {
+                    "endOffset": 30188,
+                    "startOffset": 30183
+                },
+                "bib0165": {
+                    "endOffset": 30188,
+                    "startOffset": 30183
+                },
+                "bib0170": {
+                    "endOffset": 30188,
+                    "startOffset": 30183
+                },
+                "bib0175": {
+                    "endOffset": 30188,
+                    "startOffset": 30183
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "To address this issue, here we show how machine learning-based quantitative structure property relationship (QSPR) methods, combined with the results of quantum chemical methods (density functional theory (DFT) calculations), can predict the corrosion inhibition efficiency of small organic molecules. [29,32\u201335]",
+            "startOffset": 29877,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28831,
+            "parents": [],
+            "secId": "sec0005",
+            "sentence": "The vast majority of the roughly 150 million compounds listed in the Chemical Abstracts Service database are organic.",
+            "startOffset": 28714,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52574,
+            "parents": [],
+            "secId": "sec0020",
+            "sentence": "These results strongly suggest that computational ML models will be useful for the rapid discovery and optimization of new organic corrosion inhibitors or dissolution modulators.",
+            "startOffset": 52396,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 40310,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The IE of 0.05 M aqueous solution of carboxylic acids was determined for their sodium salts (initial pH 6.8 \u00b1 0.5) in the hydrogen evolution experiments.",
+            "startOffset": 40157,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 41171,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "For all seven compounds, the ML model correctly predicted whether the compounds inhibited or accelerated Mg dissolution.",
+            "startOffset": 41051,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 45383,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, corrosion susceptibility of Mg depends not only on the total amount of iron impurity but also on its distribution in the Mg matrix.",
+            "startOffset": 45243,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 27483,
+            "parents": [],
+            "refoffsets": {
+                "bib0005": {
+                    "endOffset": 27322,
+                    "startOffset": 27319
+                },
+                "bib0010": {
+                    "endOffset": 27322,
+                    "startOffset": 27319
+                },
+                "bib0015": {
+                    "endOffset": 27322,
+                    "startOffset": 27319
+                },
+                "bib0020": {
+                    "endOffset": 27427,
+                    "startOffset": 27426
+                },
+                "bib0025": {
+                    "endOffset": 27481,
+                    "startOffset": 27478
+                },
+                "bib0030": {
+                    "endOffset": 27481,
+                    "startOffset": 27478
+                },
+                "bib0035": {
+                    "endOffset": 27481,
+                    "startOffset": 27478
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "These include many important biomedical applications (e.g. novel drugs and control of protein-protein interactions [1\u20133]) and non-biological commercial applications such as increased conversion efficiencies in solar cells [4] as well as corrosion inhibition of light metals [5\u20137].",
+            "startOffset": 27203,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38263,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "However, random test set selection from small heterogeneous data sets often creates large differences in the prediction performance of an ANN model.",
+            "startOffset": 38115,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 39989,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "To estimate prediction errors and the robustness of the ML model, the ANN was retrained five times and each neural network used to predict the IE of the seven untested compounds.",
+            "startOffset": 39811,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 50827,
+            "parents": [],
+            "refoffsets": {
+                "bib0025": {
+                    "endOffset": 50803,
+                    "startOffset": 50802
+                },
+                "bib0210": {
+                    "endOffset": 50823,
+                    "startOffset": 50821
+                },
+                "bib0220": {
+                    "endOffset": 50826,
+                    "startOffset": 50824
+                }
+            },
+            "secId": "sec0020",
+            "sentence": "An important finding of this study is that frontier orbital energies can be important in modelling corrosion inhibition of organic compounds for CP Mg, although this is not the case for Al [5] and Cu alloys. [42,44]",
+            "startOffset": 50612,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49146,
+            "parents": [],
+            "refoffsets": {
+                "bib0325": {
+                    "endOffset": 49141,
+                    "startOffset": 49139
+                },
+                "bib0330": {
+                    "endOffset": 49144,
+                    "startOffset": 49142
+                }
+            },
+            "secId": "sec0015",
+            "sentence": "Additionally, larger and more chemically diverse data sets would be required to broaden the domain of applicability of IE models in chemical space (as was demonstrated for ML-based QSPR models of aqueous solubility and flash point predictions for small organic compounds) [65,66].",
+            "startOffset": 48866,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 29130,
+            "parents": [],
+            "refoffsets": {
+                "bib0140": {
+                    "endOffset": 29125,
+                    "startOffset": 29123
+                },
+                "bib0145": {
+                    "endOffset": 29128,
+                    "startOffset": 29126
+                }
+            },
+            "secId": "sec0005",
+            "sentence": "It has been estimated that the number of small organic compounds that could be synthesized using the rules of organic chemistry is \u223c1080 [28,29].",
+            "startOffset": 28985,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41752,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The performance of the heterocycle 4 is overestimated whereas the performance of the corrosion modulators 5 and 6 are underestimated by roughly 30% compared to the experimentally derived inhibition efficiencies.",
+            "startOffset": 41541,
+            "title": "Results & discussion"
+        },
+        {
+            "endOffset": 50601,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "Finally, as most applications employ Mg-based alloys rather than pure Mg materials we aim to establish a predictive model for the corrosion modulation of alloy series, like Mg-Al, Mg-RE, Mg-Ca for structural engineering, bio-resorbable implants and Mg-air battery applications.",
+            "startOffset": 50324,
+            "title": "Results & discussion"
+        }
+    ],
+    "docId": "S0010938X19311436",
+    "metadata": {
+        "asjc": [
+            "1500",
+            "1600",
+            "2500"
+        ],
+        "authors": [
+            {
+                "email": "christian.feiler@hzg.de",
+                "first": "Christian",
+                "initial": "C.",
+                "last": "Feiler"
+            },
+            {
+                "email": null,
+                "first": "Di",
+                "initial": "D.",
+                "last": "Mei"
+            },
+            {
+                "email": null,
+                "first": "Bahram",
+                "initial": "B.",
+                "last": "Vaghefinazari"
+            },
+            {
+                "email": null,
+                "first": "Tim",
+                "initial": "T.",
+                "last": "W\u00fcrger"
+            },
+            {
+                "email": null,
+                "first": "Robert H.",
+                "initial": "R.H.",
+                "last": "Mei\u00dfner"
+            },
+            {
+                "email": null,
+                "first": "B\u00e9reng\u00e8re J.C.",
+                "initial": "B.J.C.",
+                "last": "Luthringer-Feyerabend"
+            },
+            {
+                "email": null,
+                "first": "David A.",
+                "initial": "D.A.",
+                "last": "Winkler"
+            },
+            {
+                "email": null,
+                "first": "Mikhail L.",
+                "initial": "M.L.",
+                "last": "Zheludkevich"
+            },
+            {
+                "email": null,
+                "first": "Sviatlana V.",
+                "initial": "S.V.",
+                "last": "Lamaka"
+            }
+        ],
+        "doi": "10.1016/j.corsci.2019.108245",
+        "issn": "0010938X",
+        "keywords": [
+            "Corrosion modulators",
+            "Density functional theory",
+            "Magnesium",
+            "QSPR"
+        ],
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "CENG",
+            "CHEM",
+            "MATE"
+        ],
+        "title": "In silico screening of modulators of magnesium dissolution"
+    }
+}

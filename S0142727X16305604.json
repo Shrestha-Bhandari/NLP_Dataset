@@ -1,0 +1,2326 @@
+{
+    "abstract": "With performance in mind, we propose two general improvements to the popular class of turbulent inlet boundary conditions known as the \u2018synthetic eddy method\u2019, originally proposed 10 years ago by Jarrin 2006. Our updated version offers improvement in both statistical accuracy and computational efficiency. We first demonstrate that the original approach led to inaccuracies where eddy length-scale prescription was inhomogeneous. We then describe a correction to the normalisation procedure to ensure that prescribed statistics can be correctly recovered. A second improvement focusses on the computational efficiency of the method; by generalising the method to allow for arbitrary eddy placement, the required number of eddies whilst conserving the target \u2018eddy density\u2019 is reduced. The former enhancement is observed to deliver a consistent and measurable improvement over the standard formulation, whilst the latter provides efficiency savings of around 1\u20132 orders of magnitude. The original SEM has spawned a number of derivatives over the past decade, many of which would be expected to benefit from the improvements reported herein (whether they are used as boundary conditions, volume source terms or as part of a dynamic forcing algorithm). We apply the improved formulation to the case of a turbulent channel flow at two Reynolds numbers as well as to the case of an asymmetric planar diffuser, which is set up to exhibit a pressure-induced separation expected to be highly sensitive to upstream flow conditions. It is demonstrated that even apparently small errors in the imposed flow field can persist in such cases, adversely affecting the downstream flow prediction.",
+    "author_highlights": [
+        {
+            "endOffset": 25216,
+            "sentence": "We present a new normalisation method for synthetic eddy methods.",
+            "startOffset": 25151
+        },
+        {
+            "endOffset": 25296,
+            "sentence": "The formulation is generic, allowing an arbitrary placement of eddies in space.",
+            "startOffset": 25217
+        },
+        {
+            "endOffset": 25413,
+            "sentence": "This can lead to dramatic cost savings in cases where large numbers of eddies are required for statistical coverage.",
+            "startOffset": 25297
+        },
+        {
+            "endOffset": 25525,
+            "sentence": "The new normalisation also also delivers accuracy improvements, relative to the original synthetic eddy method.",
+            "startOffset": 25414
+        }
+    ],
+    "bib_entries": {
+        "bib0001": {
+            "authors": [
+                {
+                    "first": "Jean Luc",
+                    "initial": "J.L.",
+                    "last": "Aider"
+                },
+                {
+                    "first": "Alexandra",
+                    "initial": "A.",
+                    "last": "Danet"
+                },
+                {
+                    "first": "Marcel",
+                    "initial": "M.",
+                    "last": "Lesieur"
+                }
+            ],
+            "doi": "10.1080/14685240701701000",
+            "firstpage": "1",
+            "issn": "14685248",
+            "lastpage": "30",
+            "pub_year": 2007,
+            "title": "Large-eddy simulation applied to study the influence of upstream conditions on the time-dependant and averaged characteristics of a backward-facing step flow",
+            "volume": "8"
+        },
+        "bib0002": {
+            "authors": [
+                {
+                    "first": "Guillermo",
+                    "initial": "G.",
+                    "last": "Araya"
+                },
+                {
+                    "first": "Luciano",
+                    "initial": "L.",
+                    "last": "Castillo"
+                },
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Meneveau"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "Jansen"
+                }
+            ],
+            "doi": "10.1017/S0022112010005616",
+            "firstpage": "581",
+            "issn": "00221120",
+            "lastpage": "605",
+            "pub_year": 2011,
+            "title": "A dynamic multi-scale approach for turbulent inflow boundary conditions in spatially developing flows",
+            "volume": "670"
+        },
+        "bib0003": {
+            "authors": [
+                {
+                    "first": "Sofiane",
+                    "initial": "S.",
+                    "last": "Benhamadouche"
+                },
+                {
+                    "first": "Nicolas",
+                    "initial": "N.",
+                    "last": "Jarrin"
+                },
+                {
+                    "first": "Yacine",
+                    "initial": "Y.",
+                    "last": "Addad"
+                },
+                {
+                    "first": "Dominique",
+                    "initial": "D.",
+                    "last": "Laurence"
+                }
+            ],
+            "doi": "10.1504/PCFD.2006.009482",
+            "firstpage": "50",
+            "issn": "14684349",
+            "lastpage": "57",
+            "pub_year": 2006,
+            "title": "Synthetic turbulent inflow conditions based on a vortex method for large-eddy simulation",
+            "volume": "6"
+        },
+        "bib0004": {
+            "authors": [
+                {
+                    "first": "Carl U.",
+                    "initial": "C.U.",
+                    "last": "Buice"
+                },
+                {
+                    "first": "John K.",
+                    "initial": "J.K.",
+                    "last": "Eaton"
+                }
+            ],
+            "doi": "10.1115/1.483278",
+            "firstpage": "433",
+            "issn": "00982202",
+            "lastpage": "435",
+            "pub_year": 2000,
+            "title": "Experimental investigation of flow through an asymmetric plane diffuser",
+            "volume": "122"
+        },
+        "bib0005": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Davidson"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Billson"
+                }
+            ],
+            "doi": "10.1016/j.ijheatfluidflow.2006.02.025",
+            "firstpage": "1028",
+            "issn": "0142727X",
+            "lastpage": "1042",
+            "pub_year": 2006,
+            "title": "Hybrid LES-RANS using synthesized turbulent fluctuations for forcing in the interface region",
+            "volume": "27"
+        },
+        "bib0006": {
+            "authors": [
+                {
+                    "first": "S\u00e9bastien",
+                    "initial": "S.",
+                    "last": "Deck"
+                }
+            ],
+            "doi": "10.1007/s00162-011-0240-z",
+            "firstpage": "523",
+            "issn": "09354964",
+            "lastpage": "550",
+            "pub_year": 2012,
+            "title": "Recent improvements in the Zonal Detached Eddy Simulation (ZDES) formulation",
+            "volume": "26"
+        },
+        "bib0007": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Druault"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Lardeau"
+                },
+                {
+                    "first": "J. P.",
+                    "initial": "J.P.",
+                    "last": "Bonnet"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Coiffet"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Delville"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Lamballais"
+                },
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "Largeau"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Perret"
+                }
+            ],
+            "doi": "10.2514/1.3946",
+            "firstpage": "447",
+            "issn": "00011452",
+            "lastpage": "456",
+            "pub_year": 2004,
+            "title": "Generation of Three-Dimensional Turbulent Inlet Conditions for Large-Eddy Simulation",
+            "volume": "42"
+        },
+        "bib0008": {
+            "authors": [
+                {
+                    "first": "Massimo",
+                    "initial": "M.",
+                    "last": "Germano"
+                },
+                {
+                    "first": "Ugo",
+                    "initial": "U.",
+                    "last": "Piomelli"
+                },
+                {
+                    "first": "Parviz",
+                    "initial": "P.",
+                    "last": "Moin"
+                },
+                {
+                    "first": "William H.",
+                    "initial": "W.H.",
+                    "last": "Cabot"
+                }
+            ],
+            "doi": "10.1063/1.857955",
+            "firstpage": "1760",
+            "issn": "08998213",
+            "lastpage": "1765",
+            "pub_year": 1991,
+            "title": "A dynamic subgrid-scale eddy viscosity model",
+            "volume": "3"
+        },
+        "bib0009": {
+            "authors": [
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Jarrin"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Benhamadouche"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Laurence"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Prosser"
+                }
+            ],
+            "doi": "10.1016/j.ijheatfluidflow.2006.02.006",
+            "firstpage": "585",
+            "issn": "0142727X",
+            "lastpage": "593",
+            "pub_year": 2006,
+            "title": "A synthetic-eddy-method for generating inflow conditions for large-eddy simulations",
+            "volume": "27"
+        },
+        "bib0010": {
+            "authors": [
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Kaltenbach"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Fatica"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Mittal"
+                },
+                {
+                    "first": "T. S.",
+                    "initial": "T.S.",
+                    "last": "Lund"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Moin"
+                }
+            ],
+            "doi": "10.1017/S0022112099005054",
+            "firstpage": "151",
+            "issn": "00221120",
+            "lastpage": "185",
+            "pub_year": 1999,
+            "title": "Study of flow in a planar asymmetric diffuser using large-eddy simulation",
+            "volume": "390"
+        },
+        "bib0011": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Klein"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Sadiki"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Janicka"
+                }
+            ],
+            "doi": "10.1016/S0021-9991(03)00090-1",
+            "firstpage": "652",
+            "issn": "00219991",
+            "lastpage": "665",
+            "pub_year": 2003,
+            "title": "A digital filter based generation of inflow data for spatially developing direct numerical or large eddy simulations",
+            "volume": "186"
+        },
+        "bib0012": {
+            "authors": [
+                {
+                    "first": "Nikolai",
+                    "initial": "N.",
+                    "last": "Kornev"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Hassel"
+                }
+            ],
+            "doi": "10.1002/cnm.880",
+            "firstpage": "35",
+            "issn": "10698299",
+            "lastpage": "43",
+            "pub_year": 2007,
+            "title": "Method of random spots for generation of synthetic inhomogeneous turbulent fields with prescribed autocorrelation functions",
+            "volume": "23"
+        },
+        "bib0013": {
+            "authors": [
+                {
+                    "first": "D. K.",
+                    "initial": "D.K.",
+                    "last": "Lilly"
+                }
+            ],
+            "doi": "10.1063/1.858280",
+            "firstpage": "633",
+            "issn": "08998213",
+            "lastpage": "635",
+            "pub_year": 1992,
+            "title": "A proposed modification of the Germano subgrid-scale closure method",
+            "volume": "4"
+        },
+        "bib0014": {
+            "authors": [
+                {
+                    "first": "Thomas S.",
+                    "initial": "T.S.",
+                    "last": "Lund"
+                },
+                {
+                    "first": "Xiaohua",
+                    "initial": "X.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Kyle D.",
+                    "initial": "K.D.",
+                    "last": "Squires"
+                }
+            ],
+            "doi": "10.1006/jcph.1998.5882",
+            "firstpage": "233",
+            "issn": "00219991",
+            "lastpage": "258",
+            "pub_year": 1998,
+            "title": "Generation of Turbulent Inflow Data for Spatially-Developing Boundary Layer Simulations",
+            "volume": "140"
+        },
+        "bib0015": {
+            "authors": [
+                {
+                    "first": "R\u00e9mi",
+                    "initial": "R.",
+                    "last": "Manceau"
+                },
+                {
+                    "first": "Kermal",
+                    "initial": "K.",
+                    "last": "Hanjali\u0107"
+                }
+            ],
+            "doi": "10.1063/1.1432693",
+            "firstpage": "744",
+            "issn": "10706631",
+            "lastpage": "754",
+            "pub_year": 2002,
+            "title": "Elliptic blending model: A new near-wall Reynolds-stress turbulence closure",
+            "volume": "14"
+        },
+        "bib0016": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "di Mare"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Klein"
+                },
+                {
+                    "first": "W. P.",
+                    "initial": "W.P.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Janicka"
+                }
+            ],
+            "doi": "10.1063/1.2130744",
+            "issn": "10706631",
+            "pub_year": 2006,
+            "title": "Synthetic turbulence inflow conditions for large-eddy simulation",
+            "volume": "18"
+        },
+        "bib0017": {
+            "authors": [
+                {
+                    "first": "Fabrice",
+                    "initial": "F.",
+                    "last": "Mathey"
+                },
+                {
+                    "first": "Davor",
+                    "initial": "D.",
+                    "last": "Cokljat"
+                },
+                {
+                    "first": "Jean Pierre",
+                    "initial": "J.P.",
+                    "last": "Bertoglio"
+                },
+                {
+                    "first": "Emmanuel",
+                    "initial": "E.",
+                    "last": "Sergent"
+                }
+            ],
+            "doi": "10.1504/PCFD.2006.009483",
+            "firstpage": "58",
+            "issn": "14684349",
+            "lastpage": "67",
+            "pub_year": 2006,
+            "title": "Assessment of the vortex method for large eddy simulation inlet conditions",
+            "volume": "6"
+        },
+        "bib0018": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "de Laage de Meux"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Audebert"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Manceau"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Perrin"
+                }
+            ],
+            "doi": "10.1063/1.4916019",
+            "issn": "10706631",
+            "pub_year": 2015,
+            "title": "Anisotropic linear forcing for synthetic turbulence generation in large eddy simulation and hybrid RANS/LES modeling",
+            "volume": "27"
+        },
+        "bib0019": null,
+        "bib0020": {
+            "authors": [
+                {
+                    "first": "Mathieu",
+                    "initial": "M.",
+                    "last": "Pami\u00e8s"
+                },
+                {
+                    "first": "Pierre \u00c9lie",
+                    "initial": "P.E.",
+                    "last": "Weiss"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Garnier"
+                },
+                {
+                    "first": "S\u00e9bastien",
+                    "initial": "S.",
+                    "last": "Deck"
+                },
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Sagaut"
+                }
+            ],
+            "doi": "10.1063/1.3103881",
+            "issn": "10706631",
+            "pub_year": 2009,
+            "title": "Generation of synthetic turbulent inflow data for large eddy simulation of spatially evolving wall-bounded flows",
+            "volume": "21"
+        },
+        "bib0021": {
+            "authors": [
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "Perret"
+                },
+                {
+                    "first": "Jo\u00ebl",
+                    "initial": "J.",
+                    "last": "Delville"
+                },
+                {
+                    "first": "R\u00e9mi",
+                    "initial": "R.",
+                    "last": "Manceau"
+                },
+                {
+                    "first": "Jean Paul",
+                    "initial": "J.P.",
+                    "last": "Bonnet"
+                }
+            ],
+            "doi": "10.1063/1.2957019",
+            "issn": "10706631",
+            "pub_year": 2008,
+            "title": "Turbulent inflow conditions for large-eddy simulation based on low-order empirical model",
+            "volume": "20"
+        },
+        "bib0022": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Poletto"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Craft"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Revell"
+                }
+            ],
+            "doi": "10.1007/s10494-013-9488-2",
+            "firstpage": "519",
+            "issn": "13866184",
+            "lastpage": "539",
+            "pub_year": 2013,
+            "title": "A new divergence free synthetic eddy method for the reproduction of inlet flow conditions for les",
+            "volume": "91"
+        },
+        "bib0023": null,
+        "bib0024": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Schmidt"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Breuer"
+                }
+            ],
+            "doi": "10.1007/s10494-015-9639-8",
+            "firstpage": "669",
+            "issn": "13866184",
+            "lastpage": "707",
+            "pub_year": 2015,
+            "title": "Extended Synthetic Turbulence Inflow Generator within a Hybrid LES-URANS Methodology for the Prediction of Non-Equilibrium Wall-Bounded Flows",
+            "volume": "95"
+        },
+        "bib0025": null,
+        "bib0026": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Shur"
+                },
+                {
+                    "first": "Philippe R.",
+                    "initial": "P.R.",
+                    "last": "Spalart"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Strelets"
+                },
+                {
+                    "first": "Andrey",
+                    "initial": "A.",
+                    "last": "Travin"
+                }
+            ],
+            "doi": "10.1007/s10494-010-9309-9",
+            "firstpage": "179",
+            "issn": "13866184",
+            "lastpage": "206",
+            "pub_year": 2011,
+            "title": "A rapid and accurate switch from rans to les in boundary layers using an overlap region",
+            "volume": "86"
+        },
+        "bib0027": {
+            "authors": [
+                {
+                    "first": "Michael L.",
+                    "initial": "M.L.",
+                    "last": "Shur"
+                },
+                {
+                    "first": "Philippe R.",
+                    "initial": "P.R.",
+                    "last": "Spalart"
+                },
+                {
+                    "first": "Michael K.",
+                    "initial": "M.K.",
+                    "last": "Strelets"
+                },
+                {
+                    "first": "Andrey K.",
+                    "initial": "A.K.",
+                    "last": "Travin"
+                }
+            ],
+            "doi": "10.1007/s10494-014-9534-8",
+            "firstpage": "63",
+            "issn": "13866184",
+            "lastpage": "92",
+            "pub_year": 2014,
+            "title": "Synthetic turbulence generators for RANS-LES interfaces in zonal simulations of aerodynamic and aeroacoustic problems",
+            "volume": "93"
+        },
+        "bib0028": null,
+        "bib0029": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Smirnov"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Celik"
+                }
+            ],
+            "doi": "10.1115/1.1369598",
+            "firstpage": "359",
+            "issn": "00982202",
+            "lastpage": "371",
+            "pub_year": 2001,
+            "title": "Random flow generation technique for large eddy simulations and particle-dynamics modeling",
+            "volume": "123"
+        },
+        "bib0030": {
+            "authors": [
+                {
+                    "first": "P. R.",
+                    "initial": "P.R.",
+                    "last": "Spalart"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Strelets"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Travin"
+                }
+            ],
+            "doi": "10.1016/j.ijheatfluidflow.2006.03.014",
+            "firstpage": "902",
+            "issn": "0142727X",
+            "lastpage": "910",
+            "pub_year": 2006,
+            "title": "Direct numerical simulation of large-eddy-break-up devices in a boundary layer",
+            "volume": "27"
+        },
+        "bib0031": {
+            "authors": [
+                {
+                    "first": "G. R.",
+                    "initial": "G.R.",
+                    "last": "Tabor"
+                },
+                {
+                    "first": "M. H.",
+                    "initial": "M.H.",
+                    "last": "Baba-Ahmadi"
+                }
+            ],
+            "doi": "10.1016/j.compfluid.2009.10.007",
+            "firstpage": "553",
+            "issn": "00457930",
+            "lastpage": "567",
+            "pub_year": 2010,
+            "title": "Inlet conditions for large eddy simulation: A review",
+            "volume": "39"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 61307,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "This underlines the previous observations that the prediction of the new SEM is significantly closer to the reference than that of the original, and corroborates our expectation that while mean flow quantities at the inlet may appear to be similar, small errors introduced at this location can play a major role in downstream flow development.",
+            "startOffset": 60964,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 30715,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "As a natural evolution of this concept, it might then become useful to couple the RANS data generated in one mesh, with the generation of synthetic turbulence and subsequent turbulent simulation in another; such an approach can be termed Embedded LES (ELES).",
+            "startOffset": 30457,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 31115,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "One important objective of the inflow generation method is to minimise this development length.",
+            "startOffset": 31020,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 60553,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "For the new SEM, this is significantly improved, and all ensuing profiles are in close agreement with the reference LES solution.",
+            "startOffset": 60424,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 44192,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "The original synthetic eddy method"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Indeed for best results this is generally the recommended practice, as it improves the correlation statistics; both two-point and auto-correlations.",
+            "startOffset": 44044,
+            "title": "Limitation to homogeneous turbulence"
+        },
+        {
+            "endOffset": 35831,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "From an engineering viewpoint, the prescription of higher-order statistics by the user is undesirable since such information tends not to be readily available.",
+            "startOffset": 35672,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 28767,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This approach was based on the sampling of data from a location within the simulation itself, to be rescaled and reapplied at the inlet location.",
+            "startOffset": 28622,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51541,
+            "parents": [],
+            "secId": "sec0008",
+            "sentence": "In the following we report results series of three test cases.",
+            "startOffset": 51479,
+            "title": "Results"
+        },
+        {
+            "endOffset": 62146,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The improvement of the new SEM in this situation is demonstrated for the case of flow in a two-dimensional asymmetric diffuser.",
+            "startOffset": 62019,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 32964,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0007": {
+                    "endOffset": 32941,
+                    "startOffset": 32921
+                },
+                "bib0021": {
+                    "endOffset": 32962,
+                    "startOffset": 32943
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "Decomposition of higher order data sets (Druault et al., 2004; Perret et al., 2008);",
+            "startOffset": 32880,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 39350,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The improved formulation allows for an arbitrary eddy distribution size without detriment to its performance.",
+            "startOffset": 39241,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 33468,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0031": {
+                    "endOffset": 33349,
+                    "startOffset": 33321
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "The interested reader is instead referred to the review paper of Tabor and Baba-Ahmadi (2010), who provide a detailed review of inlet boundary conditions for LES, particularly for the approaches 1\u20133 listed above.",
+            "startOffset": 33256,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 39073,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The ability to achieve an exact recovery of turbulent quantities a long way downstream of the inlet appeared to be reduced versus the original method; indicating that the forcing has a non-negligible impact on the definition of the boundary condition.",
+            "startOffset": 38822,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 63099,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "Since the smallest eddies employed in the SEM tend to be clipped to the streamwise cell dimension, the potential saving will also be greatest for finer grids, such as those typically used in wall-resolved LES.",
+            "startOffset": 62890,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60035,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "The new formulation leads to a flow field that rapidly corresponds to fully-developed turbulent flow, not far downstream of the inlet, and hence gives results that agree very closely with the reference profiles at all locations through the diffuser.",
+            "startOffset": 59786,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 32654,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "These include, but are not limited to, methods based on the following:",
+            "startOffset": 32584,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 62511,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The potential cost saving of this, relative to the original SEM, is problem dependent.",
+            "startOffset": 62425,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 32764,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0005": {
+                    "endOffset": 32721,
+                    "startOffset": 32695
+                },
+                "bib0027": {
+                    "endOffset": 32740,
+                    "startOffset": 32723
+                },
+                "bib0029": {
+                    "endOffset": 32762,
+                    "startOffset": 32742
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "Combination of relevant Fourier modes (Davidson and Billson, 2006; Shur et al., 2014; Smirnov et al., 2001);",
+            "startOffset": 32656,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 35671,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The extent of the support domain for each spot is set through the solution of a non-linear least squares problem, such that the prescribed higher-order statistics are approximately realised.",
+            "startOffset": 35481,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 30456,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "Indeed RANS statistics may be interpolated from an entirely independent calculation with different mesh, numerics and underlying code.",
+            "startOffset": 30322,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 37019,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0006": {
+                    "endOffset": 36901,
+                    "startOffset": 36890
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "The method has been very successful for such flows Deck (2012) but is not expected to be fully general on account of the level of calibration undertaken to a specific type of flow.",
+            "startOffset": 36839,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 62652,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "For a planar inlet, the saving is linked to the ratio between the sizes of the largest and smallest eddies across the inlet (see Eq. (16) ).",
+            "startOffset": 62512,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 39487,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "It will be demonstrated that this leads to a reduction in the development length, increased flexibility and improved computational cost.",
+            "startOffset": 39351,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 63310,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "In the general case, where the inlet adopts some non-planar shape, the potential cost saving is greater still.",
+            "startOffset": 63200,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 47429,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "This is the \u2018safe\u2019 approach, but tends to be computationally wasteful.",
+            "startOffset": 47359,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 31601,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "This is particularly relevant to ELES, where this development length should be minimised to reduce to required size, and thus the cost, of the LES region within the RANS domain.",
+            "startOffset": 31424,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 63984,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "On the other hand, when using the new method presented herein, all eddies are active on the inlet at all times, and the requisite number of eddies for statistical coverage is based on the area of the inlet plane (rather than the volume of the box).",
+            "startOffset": 63736,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 30148,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "From the users perspective, the inflow problem is then reduced to the prescription of low-order statistical data over the inlet plane itself.",
+            "startOffset": 30007,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 62889,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "Where this ratio is large (as is typically the case in a boundary layer profile or atmospheric flows, for example), the majority of eddies will be unused at each timestep in the original SEM formulation, leading to a waste of resources.",
+            "startOffset": 62653,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 47540,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "A better approach may be to take the average volume of all eddies, in which case, N must be found iteratively.",
+            "startOffset": 47430,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 61815,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "This is not generally the case for the original SEM, where inhomogeneity of the eddy properties introduces an error in the reproduction of the Reynolds stresses.",
+            "startOffset": 61654,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 31985,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0001": {
+                    "endOffset": 31983,
+                    "startOffset": 31965
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "However, despite accurate reproduction of the Reynolds stresses and mean flow at the inlet, it is well recognised that the characteristic development length tends to be long (Aider et al., 2007).",
+            "startOffset": 31790,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 30842,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "Since the synthetic inflow condition is generated without solving the Navier-Stokes equations, the algorithm tends to be cheap.",
+            "startOffset": 30715,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 59566,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 59565,
+                    "startOffset": 59541
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "We observe good agreement for the new SEM against Kaltenbach et al. (1999).",
+            "startOffset": 59491,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 36669,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The eddy properties in each mode are set to match the local flow physics \u2013 e.g. streaks near walls, with more isotropic eddies at modes away from the wall.",
+            "startOffset": 36514,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 28367,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "A stochastically varying inlet condition must be created from a reduced set of low order statistical data: while knowledge of the low order statistics tends to be available (or, at least, can be intuitively gauged), a full time history of the inflow data is almost certainly not.",
+            "startOffset": 28088,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38188,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "In a complex geometry, this will not generally be the case.",
+            "startOffset": 38129,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 36838,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0020": {
+                    "endOffset": 36693,
+                    "startOffset": 36673
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "In Pami\u00e8s et al. (2009), the selection of modes and corresponding eddy properties are described to be suitable for a zero pressure-gradient boundary layer, for example.",
+            "startOffset": 36670,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 37264,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The adoption of the method for a significantly different flow type would involve identifying the appropriate eddy characteristics and recalibrating the modes; which assumes the availability of relevant DNS or experimental data for this purpose.",
+            "startOffset": 37020,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 48228,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "In the original SEM, the SEM box was essentially a book-keeping tool to maintain a uniform eddy distribution.",
+            "startOffset": 48119,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 27430,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Numerical simulation of turbulent flow will typically consider a computational domain that covers a subset of the physical space which the test fluid occupies.",
+            "startOffset": 27271,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38621,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "Forcing terms are defined analogous to production terms, and the computational domain is extended a short distance of between 1 and 7.5 times \u03b4 upstream of the inlet plane, to enable the flow to be forced towards its \u2018natural\u2019 periodic state.",
+            "startOffset": 38379,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 63735,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The total number of eddies required for statistical coverage can quickly become prohibitively large in such cases.",
+            "startOffset": 63621,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60963,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "The size of the mean separation region can be ascertained more precisely from plots of the skin-friction coefficient, reported in Fig. 12.",
+            "startOffset": 60825,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 27817,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This approach does, however, introduce artificial boundaries to the domain in the form of inlets and outlets; the treatment of which must be considered carefully.",
+            "startOffset": 27655,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59490,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 59408,
+                    "startOffset": 59384
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "Fig. 10 shows mean velocity profiles at various sections along the diffuser, compared to the LES results of Kaltenbach et al. (1999) (where a pre-cursor LES was used to generate the fully-developed channel inflow).",
+            "startOffset": 59276,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 51695,
+            "parents": [],
+            "secId": "sec0008",
+            "sentence": "The first, a simple \u2018two-scale test\u2019, aims to illustrate the error in the original formulation when applied to inhomogeneous length-scales of turbulence.",
+            "startOffset": 51542,
+            "title": "Results"
+        },
+        {
+            "endOffset": 28087,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The generation of turbulent inflow boundary conditions for scale-resolving simulations poses a formidable challenge.",
+            "startOffset": 27971,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61435,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 61434,
+                    "startOffset": 61410
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "The present SEM is significantly cheaper to apply computationally than the pre-cursor LES employed by Kaltenbach et al. (1999).",
+            "startOffset": 61308,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 47965,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "In many practical situations, the number of eddies can become sufficiently large as to command significant computational cost, in terms of both CPU time and memory requirements.",
+            "startOffset": 47788,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 36217,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0012": {
+                    "endOffset": 36083,
+                    "startOffset": 36059
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "Perhaps recognising this, Kornev and Hassel (2007) also describe a prediction-correction algorithm, whereby the integral length-scale is approximately reproduced in a two-step process.",
+            "startOffset": 36033,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 37995,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0022": {
+                    "endOffset": 37893,
+                    "startOffset": 37872
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "For an incompressible solver, Poletto et al. (2013) report a reduction in the number of inner iterations required on the pressure solver for convergence.",
+            "startOffset": 37842,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 31677,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "The simplest form of stochastically varying inflow condition is white noise.",
+            "startOffset": 31601,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 62424,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "This introduces the possibility of making improvements to the efficiency of the SEM, by ensuring that all eddies are active on the inlet at all timesteps.",
+            "startOffset": 62270,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33714,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0027": {
+                    "endOffset": 33532,
+                    "startOffset": 33514
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "We also point the reader towards the work of Shur et al. (2014), who in addition to defining a method themselves, also provide a useful classification of how synthetic methods can be used with wall modelled LES in the context of hybrid RANS-LES.",
+            "startOffset": 33469,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 29193,
+            "parents": [],
+            "refoffsets": {
+                "bib0002": {
+                    "endOffset": 29148,
+                    "startOffset": 29129
+                },
+                "bib0026": {
+                    "endOffset": 29168,
+                    "startOffset": 29150
+                },
+                "bib0030": {
+                    "endOffset": 29191,
+                    "startOffset": 29170
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In certain specific cases, this approach works well and is relatively simple to implement, and has subsequently been extended by several researchers (see e.g. Araya et al. (2011); Shur et al. (2011); Spalart et al. (2006)).",
+            "startOffset": 28970,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46838,
+            "parents": [],
+            "secId": "sec0006",
+            "sentence": "Values of T equal to one, five, and ten eddy convection times were tested, with no noticible sensitivity to this parameter, and hence the minimum suitable value of one eddy convection time was used herein.",
+            "startOffset": 46633,
+            "title": "Improved normalisation for the SEM"
+        },
+        {
+            "endOffset": 52010,
+            "parents": [],
+            "secId": "sec0008",
+            "sentence": "We then report results from both original and improved schemes for a turbulent channel flow, before final application to the 2D planar asymmetric diffuser; demonstrating that apparently similar behaviours in one case may not preclude differences in cases where the flow is more sensitive to the boundary condition.",
+            "startOffset": 51696,
+            "title": "Results"
+        },
+        {
+            "endOffset": 29797,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "By performing a Reynolds decomposition on the velocity field, one can split the flow into mean and stochastic components.",
+            "startOffset": 29676,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 59785,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "In particular, the original SEM leads to a flow field that appears to give a significantly smaller separated region than the LES of Kaltenbach et al., with correspondingly lower velocity levels close to the upper wall.",
+            "startOffset": 59567,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 36513,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "Within each region a different calibration of the SEM is applied, in order to realise a specific arrangement of eddies with certain characteristic size and shape.",
+            "startOffset": 36351,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 33076,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0003": {
+                    "endOffset": 33038,
+                    "startOffset": 33012
+                },
+                "bib0017": {
+                    "endOffset": 33059,
+                    "startOffset": 33040
+                },
+                "bib0025": {
+                    "endOffset": 33074,
+                    "startOffset": 33061
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "2D turbulent spots such as the vortex method (Benhamadouche et al., 2006; Mathey et al., 2006; Sergent, 2002);",
+            "startOffset": 32966,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 47358,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "Here, Veddy can be taken to be the minimum volume of all eddies.",
+            "startOffset": 47294,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 32131,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "The missing ingredient is coherence; the length and time scales of white-noise are of the order of the cell size and time-step size respectively.",
+            "startOffset": 31986,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 41411,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "At each time-step, the position of all eddies is updated by advecting them by the bulk velocity of the inflow.",
+            "startOffset": 41301,
+            "title": "The original synthetic eddy method"
+        },
+        {
+            "endOffset": 33255,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "It is beyond the scope of this paper to discuss in detail all these methods.",
+            "startOffset": 33179,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 32508,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "It is thus apparent that practical synthetic turbulence generators must take into account some higher order statistics; either explicitly, or implicitly through the use of a length-scale.",
+            "startOffset": 32321,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 37841,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "For a compressible solver, this has the advantage of reducing the spurious noise introduced at the inlet.",
+            "startOffset": 37736,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 30321,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "In practise, these low order statistics may be obtained by experiment, theoretical approximation, or as is perhaps the most common, by a separate or \u2018precursor\u2019 RANS study.",
+            "startOffset": 30149,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 27872,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In this paper, we consider the inflow boundary problem.",
+            "startOffset": 27817,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33883,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "In the following, we limit our focus to the last of the above listed approaches, i.e. the convection of 3D virtual eddies, wherein the Synthetic Eddy Method is defined.",
+            "startOffset": 33715,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 61500,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "A new normalisation algorithm for the SEM is proposed.",
+            "startOffset": 61446,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 29465,
+            "parents": [],
+            "refoffsets": {
+                "bib0031": {
+                    "endOffset": 29463,
+                    "startOffset": 29436
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Nevertheless, the technique remains somewhat inadequate in regions of strong pressure gradients and tends to suffer from issues of spurious periodicity introduced by the recycling process, which manifest as non-physical peaks in the spectra (Tabor and Baba-Ahmadi, 2010).",
+            "startOffset": 29194,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36032,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "It is then preferable to work with the integral values of turbulence, i.e. the length-scales, which can be approximated from experimental data or lower order turbulence modelling methods such as RANS.",
+            "startOffset": 35832,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 47122,
+            "parents": [],
+            "secId": "sec0006",
+            "sentence": "For statistically unsteady flows, where there is a scale separation between the large-scale unsteadiness and the turbulence time-scale, a suitable value of T would be expected to be of the same order as the large-scale unsteadiness, although such an extension is left as future work.",
+            "startOffset": 46839,
+            "title": "Improved normalisation for the SEM"
+        },
+        {
+            "endOffset": 38821,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "The method was demonstrated to be effective and flexible according to the upstream extent of the domain available for forcing, and enabled a faster recovery to within a reasonable degree of accuracy.",
+            "startOffset": 38622,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 37735,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "Since the generated synthetic turbulence is divergence-free, pressure fluctuations that would otherwise develop near the inlet are reduced.",
+            "startOffset": 37596,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 61653,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "It is shown that the new method recovers the target first and second order statistics at the inlet, regardless of the eddy distribution and homogeneity.",
+            "startOffset": 61501,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 43883,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "The original synthetic eddy method"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Where the initial distribution of eddies is random, and all eddies are advected by the same velocity, the spatial distribution of eddies within the box will remain statistically uniform throughout the simulation.",
+            "startOffset": 43671,
+            "title": "Limitation to homogeneous turbulence"
+        },
+        {
+            "endOffset": 62269,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The new SEM presented herein also allows for the arbitrary placement of eddies in space, which was not previously possible.",
+            "startOffset": 62146,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 27970,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "At Reynolds numbers of practical engineering interest, the incoming flow will often be turbulent.",
+            "startOffset": 27873,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37595,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0022": {
+                    "endOffset": 37431,
+                    "startOffset": 37410
+                },
+                "bib0023": {
+                    "endOffset": 37381,
+                    "startOffset": 37360
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "Another extension of the SEM, the Divergence-Free SEM (DFSEM), was proposed first for isotropic Poletto et al. (2011) then anisotropic turbulence Poletto et al. (2013), with the intention of reducing non-negligible violations of mass-flow rate conservation, previously identified to cause numerical problems in the original method.",
+            "startOffset": 37264,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 28516,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Furthermore, in cases where it might be made available, by pre-cursor simulation for instance, the storage requirements may not always be practical.",
+            "startOffset": 28368,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39240,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "In the current study, we present two improvements to the original SEM, ten years after its original publication, that provide both improved performance and efficiency.",
+            "startOffset": 39073,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 31019,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "However, as the boundary condition is not fully consistent with \u2018real\u2019 or \u2018mature\u2019 turbulence, there is a development length over which a realistic turbulent flow is recovered.",
+            "startOffset": 30843,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 44043,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "The original synthetic eddy method"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "However, the inlet conditions are of course often needed perpendicular to a physical boundary, and should therefore be applied with an inhomogeneous eddy size.",
+            "startOffset": 43884,
+            "title": "Limitation to homogeneous turbulence"
+        },
+        {
+            "endOffset": 32320,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "Since the energy is evenly distributed between low and high wavenumber ranges of the spectrum, the classical energy cascade is not established, and the fluctuations are quickly dissipated.",
+            "startOffset": 32132,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 30006,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "The mean component is required as an input to the method, while the stochastic component is synthetically generated so as to have a variance and covariance consistent with a prescribed Reynolds stress tensor.",
+            "startOffset": 29798,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 39678,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "Furthermore, it is expected that many of the SEM derivatives that have arisen over the past decade will derive benefit from the modifications presented herein, which are simple to implement.",
+            "startOffset": 39488,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 63620,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "Clearly in such cases, employing a Cartesian bounding box (necessary for normalisation in the original SEM), can lead to situations in which regions within the box\u2019s volume lie far from the inlet faces.",
+            "startOffset": 63418,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64128,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The new SEM will thus be particularly relevant in the application of a general embedded LES, given the likely need to employ non-planar inlets.",
+            "startOffset": 63985,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 48341,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "In the generalised SEM, significant cost savings can be made by removing the box, which is now no longer needed.",
+            "startOffset": 48229,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 47787,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "In any case, it is apparent that when there is a large disparity in eddy sizes (leading to a large box to contain the larger eddies, with a small average or minimum eddy size), the number of eddies required for statistical coverage will be large.",
+            "startOffset": 47541,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 33179,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0009": {
+                    "endOffset": 33130,
+                    "startOffset": 33111
+                },
+                "bib0012": {
+                    "endOffset": 33155,
+                    "startOffset": 33132
+                },
+                "bib0022": {
+                    "endOffset": 33177,
+                    "startOffset": 33157
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "Convection of 3D virtual eddies (Jarrin et al., 2006; Kornev and Hassel, 2007; Poletto et al., 2013);",
+            "startOffset": 33078,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 35480,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "Similarly, their method defined a finite number of Lagrangian instances of turbulent eddies, represented as regions of compact support, or \u2018spots\u2019, over which the mean field is perturbed by an artificial fluctuation, and weighted by a prescribed shape function.",
+            "startOffset": 35219,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 60423,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Despite apparently good agreement of the original SEM near the inlet, small errors are soon amplified for this flow, and by x/\u03b4 \u2248 18 there is a marked discrepancy relative to the reference data.",
+            "startOffset": 60229,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 44374,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "The original synthetic eddy method"
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "The price to pay is in the form of errors introduced in the reproduction of the second order one-point statistics, due to this violation of the assumption of homogeneous turbulence.",
+            "startOffset": 44193,
+            "title": "Limitation to homogeneous turbulence"
+        },
+        {
+            "endOffset": 41558,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "If an eddy leaves the box as a result of this advection step, that eddy is regenerated at a random location on the opposite face to which it left.",
+            "startOffset": 41412,
+            "title": "The original synthetic eddy method"
+        },
+        {
+            "endOffset": 41707,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The size of the box is set such that any eddies generated on a face of the box do not (initially) intersect with any faces of the flow domain inlet.",
+            "startOffset": 41559,
+            "title": "The original synthetic eddy method"
+        },
+        {
+            "endOffset": 35218,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0012": {
+                    "endOffset": 35027,
+                    "startOffset": 35003
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "Following a slightly different line of thought, Kornev and Hassel (2007) presented a method whereby a synthetically generated stochastic fluctuating velocity field is made to match prescribed two-point spatial correlations and one-point temporal autocorrelations.",
+            "startOffset": 34955,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 60089,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Fig. 11 shows the corresponding shear stress profiles.",
+            "startOffset": 60035,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 29675,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "To overcome the need for a self-similar flow, various methods were then proposed to generate fluctuating turbulent quantities from mean flow data provided at the plane of the inlet.",
+            "startOffset": 29494,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 27654,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This is clearly practical since there is little to be gained by solving for the complete flow field in a large scale system (e.g. a closed loop wind tunnel) if the region of interest (e.g. the test section) is much smaller.",
+            "startOffset": 27431,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28621,
+            "parents": [],
+            "refoffsets": {
+                "bib0014": {
+                    "endOffset": 28584,
+                    "startOffset": 28566
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "An early solution to this problem was proposed by Lund et al. (1998) in the form of a \u2018recycling method\u2019.",
+            "startOffset": 28516,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60825,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Note that both the original SEM and the new SEM converged to the reference data, with negligible differences between all three profiles, in preliminary tests with a longer inlet section (20\u03b4), and hence we attribute the differences presented here to the inflow condition.",
+            "startOffset": 60554,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 60228,
+            "parents": [
+                {
+                    "id": "sec0008",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 60227,
+                    "startOffset": 60203
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "The new SEM again shows an improved agreement relative to the original SEM when compared with the LES results of Kaltenbach et al. (1999).",
+            "startOffset": 60090,
+            "title": "Flow through a planar two-dimensional asymmetric diffuser"
+        },
+        {
+            "endOffset": 41796,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The minimum sized box that satisfies this constraint is selected for efficiency reasons.",
+            "startOffset": 41708,
+            "title": "The original synthetic eddy method"
+        },
+        {
+            "endOffset": 63417,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "In such cases, the box of the original SEM must enclose both the inlet shape and largest synthetic eddies.",
+            "startOffset": 63311,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 36350,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0020": {
+                    "endOffset": 36237,
+                    "startOffset": 36217
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "Pami\u00e8s et al. (2009) improved the SEM for external boundary layer flows by splitting the inlet plane into discrete regions, or modes.",
+            "startOffset": 36217,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 38128,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0003",
+            "sentence": "This is, however, problem dependent, and assumes that the stiffness of the pressure equation is as a result of the near-inlet cells.",
+            "startOffset": 37996,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 32878,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0011": {
+                    "endOffset": 32828,
+                    "startOffset": 32810
+                },
+                "bib0016": {
+                    "endOffset": 32850,
+                    "startOffset": 32830
+                },
+                "bib0024": {
+                    "endOffset": 32876,
+                    "startOffset": 32852
+                }
+            },
+            "secId": "sec0002",
+            "sentence": "Digital filtering of initially random data (Klein et al., 2003; di Mare et al., 2006; Schmidt and Breuer, 2015);",
+            "startOffset": 32766,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 48118,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "Motivated by the realisation that our generalised SEM no longer requires a uniform eddy distribution, we attempt to find a more efficient eddy placement.",
+            "startOffset": 47965,
+            "title": "Improvements in eddy positioning"
+        },
+        {
+            "endOffset": 63200,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The normalisation presented here could, at least in principle, be applied within other SEM variants.",
+            "startOffset": 63100,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 38378,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib0018": {
+                    "endOffset": 38292,
+                    "startOffset": 38271
+                }
+            },
+            "secId": "sec0003",
+            "sentence": "More recently the SEM was extended to incorporate a feed-back forcing mechanism by de Meux et al. (2015), via a physically intuitive system of \u2018anisotropic forcing\u2019 of the Reynolds stresses.",
+            "startOffset": 38188,
+            "title": "Methods based on convection of 3D virtual eddies"
+        },
+        {
+            "endOffset": 32583,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "There are several classes of synthetic methods available in the literature.",
+            "startOffset": 32508,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 31789,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "The intensity and sign of the noise can be set so as to yield the prescribed first and second order statistics.",
+            "startOffset": 31678,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 62018,
+            "parents": [],
+            "secId": "sec0012",
+            "sentence": "The seemingly small errors of the original SEM (due to an inhomogeneous eddy size), can have a significant impact on the downstream flow development for cases that are sensitive to the inlet conditions.",
+            "startOffset": 61816,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 31423,
+            "parents": [
+                {
+                    "id": "sec0001",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec0002",
+            "sentence": "This is important, not only from the computational cost viewpoint (since it allows for a smaller computational domain), but also since it may \u2013 if a suitably small development length can be found \u2013 allow for the application of inlet conditions in spatially developing or non-equilibrium regions of the flow.",
+            "startOffset": 31116,
+            "title": "Synthetic inlet turbulence"
+        },
+        {
+            "endOffset": 28969,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Inherently limited to self-similar flows, the original method was also based on empirical observations of a zero pressure gradient boundary layer, which further restricted the generality of the method.",
+            "startOffset": 28768,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46465,
+            "parents": [],
+            "secId": "sec0006",
+            "sentence": "In determining a suitable timescale T, on one hand, we require T to be sufficiently large as to minimise spurious variance in the averaging operator (i.e. the EWMA should return a steady value for statistically steady flows), while on the other hand, we wish for T to be small so as to minimise the duration of the initial transient.",
+            "startOffset": 46132,
+            "title": "Improved normalisation for the SEM"
+        },
+        {
+            "endOffset": 46632,
+            "parents": [],
+            "secId": "sec0006",
+            "sentence": "Values of T greater than one eddy convection time, 2\u03c3x/Ubulk (conservatively based on the largest synthetic eddy) was found to suitably satisfy the former constraint.",
+            "startOffset": 46466,
+            "title": "Improved normalisation for the SEM"
+        }
+    ],
+    "docId": "S0142727X16305604",
+    "metadata": {
+        "asjc": [
+            "1507",
+            "2210",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "alex.skillen@stfc.ac.uk",
+                "first": "A.",
+                "initial": "A.",
+                "last": "Skillen"
+            },
+            {
+                "email": null,
+                "first": "A.",
+                "initial": "A.",
+                "last": "Revell"
+            },
+            {
+                "email": null,
+                "first": "T.",
+                "initial": "T.",
+                "last": "Craft"
+            }
+        ],
+        "doi": "10.1016/j.ijheatfluidflow.2016.09.008",
+        "firstpage": "386",
+        "issn": "0142727X",
+        "keywords": [
+            "Inlet methods",
+            "LES",
+            "Synthetic turbulence"
+        ],
+        "lastpage": "394",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "CENG",
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Accuracy and efficiency improvements in synthetic eddy methods."
+    }
+}

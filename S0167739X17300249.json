@@ -1,0 +1,3893 @@
+{
+    "abstract": "Science gateways often rely on workflow engines to execute applications on distributed infrastructures. We investigate six software architectures commonly used to integrate workflow engines into science gateways. In tight integration, the workflow engine shares software components with the science gateway. In service invocation, the engine is isolated and invoked through a specific software interface. In task encapsulation, the engine is wrapped as a computing task executed on the infrastructure. In the pool model, the engine is bundled in an agent that connects to a central pool to fetch and execute workflows. In nested workflows, the engine is integrated as a child process of another engine. In workflow conversion, the engine is integrated through workflow language conversion. We describe and evaluate these architectures with metrics for assessment of integration complexity, robustness, extensibility, scalability and functionality. Tight integration and task encapsulation are the easiest to integrate and the most robust. Extensibility is equivalent in most architectures. The pool model is the most scalable one and meta-workflows are only available in nested workflows and workflow conversion. These results provide insights for science gateway architects and developers.",
+    "author_highlights": [
+        {
+            "endOffset": 88479,
+            "sentence": "We study 6 software architectures to integrate workflow engines in science gateways.",
+            "startOffset": 88395
+        },
+        {
+            "endOffset": 88538,
+            "sentence": "We describe these architectures in a consistent framework.",
+            "startOffset": 88480
+        },
+        {
+            "endOffset": 88624,
+            "sentence": "We assess their complexity, robustness, extensibility, scalability and functionality.",
+            "startOffset": 88539
+        },
+        {
+            "endOffset": 88696,
+            "sentence": "Results provide insights for science gateway architects and developers.",
+            "startOffset": 88625
+        }
+    ],
+    "bib_entries": {
+        "br000005": {
+            "authors": [
+                {
+                    "first": "Tarek",
+                    "initial": "T.",
+                    "last": "Sherif"
+                },
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Rioux"
+                },
+                {
+                    "first": "Marc Etienne",
+                    "initial": "M.E.",
+                    "last": "Rousseau"
+                },
+                {
+                    "first": "Nicolas",
+                    "initial": "N.",
+                    "last": "Kassis"
+                },
+                {
+                    "first": "Natacha",
+                    "initial": "N.",
+                    "last": "Beck"
+                },
+                {
+                    "first": "Reza",
+                    "initial": "R.",
+                    "last": "Adalat"
+                },
+                {
+                    "first": "Samir",
+                    "initial": "S.",
+                    "last": "Das"
+                },
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Glatard"
+                },
+                {
+                    "first": "Alan C.",
+                    "initial": "A.C.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.3389/fninf.2014.00054",
+            "issn": "16625196",
+            "pub_year": 2014,
+            "title": "CBRAIN: A web-based, distributed computing platform for collaborative neuroimaging research",
+            "volume": "8"
+        },
+        "br000010": {
+            "authors": [
+                {
+                    "first": "Shayan",
+                    "initial": "S.",
+                    "last": "Shahand"
+                },
+                {
+                    "first": "Ammar",
+                    "initial": "A.",
+                    "last": "Benabdelkader"
+                },
+                {
+                    "first": "Mohammad Mahdi",
+                    "initial": "M.M.",
+                    "last": "Jaghoori"
+                },
+                {
+                    "first": "Mostapha Al",
+                    "initial": "M.A.",
+                    "last": "Mourabit"
+                },
+                {
+                    "first": "Jordi",
+                    "initial": "J.",
+                    "last": "Huguet"
+                },
+                {
+                    "first": "Matthan W.A.",
+                    "initial": "M.W.A.",
+                    "last": "Caan"
+                },
+                {
+                    "first": "Antoine H.C.",
+                    "initial": "A.H.C.",
+                    "last": "Van Kampen"
+                },
+                {
+                    "first": "S\u00edlvia D.",
+                    "initial": "S.D.",
+                    "last": "Olabarriaga"
+                }
+            ],
+            "doi": "10.1002/cpe.3281",
+            "firstpage": "489",
+            "issn": "15320626",
+            "lastpage": "506",
+            "pub_year": 2015,
+            "title": "A data-centric neuroscience gateway: Design, implementation, and experiences",
+            "volume": "27"
+        },
+        "br000015": {
+            "authors": [
+                {
+                    "first": "Shayan",
+                    "initial": "S.",
+                    "last": "Shahand"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Santcroos"
+                },
+                {
+                    "first": "Antoine H.C.",
+                    "initial": "A.H.C.",
+                    "last": "van Kampen"
+                },
+                {
+                    "first": "S\u00edlvia Delgado",
+                    "initial": "S.D.",
+                    "last": "Olabarriaga"
+                }
+            ],
+            "doi": "10.1007/s10723-012-9233-4",
+            "firstpage": "725",
+            "issn": "15707873",
+            "lastpage": "742",
+            "pub_year": 2012,
+            "title": "A Grid-Enabled Gateway for Biomedical Data Analysis",
+            "volume": "10"
+        },
+        "br000020": {
+            "authors": [
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Glatard"
+                },
+                {
+                    "first": "Carole",
+                    "initial": "C.",
+                    "last": "Lartizien"
+                },
+                {
+                    "first": "Bernard",
+                    "initial": "B.",
+                    "last": "Gibaud"
+                },
+                {
+                    "first": "Rafael Ferreira",
+                    "initial": "R.F.",
+                    "last": "Da Silva"
+                },
+                {
+                    "first": "Germain",
+                    "initial": "G.",
+                    "last": "Forestier"
+                },
+                {
+                    "first": "Fr\u00e9d\u00e9ric",
+                    "initial": "F.",
+                    "last": "Cervenansky"
+                },
+                {
+                    "first": "Martino",
+                    "initial": "M.",
+                    "last": "Alessandrini"
+                },
+                {
+                    "first": "Hugues",
+                    "initial": "H.",
+                    "last": "Benoit-Cattin"
+                },
+                {
+                    "first": "Olivier",
+                    "initial": "O.",
+                    "last": "Bernard"
+                },
+                {
+                    "first": "Sorina",
+                    "initial": "S.",
+                    "last": "Camarasu-Pop"
+                },
+                {
+                    "first": "Nadia",
+                    "initial": "N.",
+                    "last": "Cerezo"
+                },
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Clarysse"
+                },
+                {
+                    "first": "Alban",
+                    "initial": "A.",
+                    "last": "Gaignard"
+                },
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Hugonnard"
+                },
+                {
+                    "first": "Herv\u00e9",
+                    "initial": "H.",
+                    "last": "Liebgott"
+                },
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "Marache"
+                },
+                {
+                    "first": "Adrien",
+                    "initial": "A.",
+                    "last": "Marion"
+                },
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Montagnat"
+                },
+                {
+                    "first": "Joachim",
+                    "initial": "J.",
+                    "last": "Tabary"
+                },
+                {
+                    "first": "Denis",
+                    "initial": "D.",
+                    "last": "Friboulet"
+                }
+            ],
+            "doi": "10.1109/TMI.2012.2220154",
+            "firstpage": "110",
+            "issn": "02780062",
+            "lastpage": "118",
+            "pmid": "23014715",
+            "pub_year": 2013,
+            "title": "A virtual imaging platform for multi-modality medical image simulation",
+            "volume": "32"
+        },
+        "br000025": {
+            "authors": [
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Fahringer"
+                },
+                {
+                    "first": "Radu",
+                    "initial": "R.",
+                    "last": "Prodan"
+                },
+                {
+                    "first": "Rubing",
+                    "initial": "R.",
+                    "last": "Duan"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Nerieri"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Podlipnig"
+                },
+                {
+                    "first": "Jun",
+                    "initial": "J.",
+                    "last": "Qin"
+                },
+                {
+                    "first": "Mumtaz",
+                    "initial": "M.",
+                    "last": "Siddiqui"
+                },
+                {
+                    "first": "Hong Linh",
+                    "initial": "H.L.",
+                    "last": "Truong"
+                },
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Villaz\u00f3n"
+                },
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Wieczorek"
+                }
+            ],
+            "doi": "10.1109/GRID.2005.1542733",
+            "firstpage": "122",
+            "issn": "15505510",
+            "lastpage": "131",
+            "pub_year": 2005,
+            "title": "ASKALON: A grid application development and computing environment",
+            "volume": "2005"
+        },
+        "br000030": {
+            "authors": [
+                {
+                    "first": "Bartosz",
+                    "initial": "B.",
+                    "last": "Balis"
+                }
+            ],
+            "doi": "10.1016/j.future.2015.08.015",
+            "firstpage": "147",
+            "issn": "0167739X",
+            "lastpage": "162",
+            "pub_year": 2016,
+            "title": "HyperFlow: A model of computation, programming approach and enactment engine for complex distributed workflows",
+            "volume": "55"
+        },
+        "br000035": {
+            "authors": [
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Glatard"
+                },
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Montagnat"
+                },
+                {
+                    "first": "Diane",
+                    "initial": "D.",
+                    "last": "Lingrand"
+                },
+                {
+                    "first": "Xavier",
+                    "initial": "X.",
+                    "last": "Pennec"
+                }
+            ],
+            "doi": "10.1177/1094342008096067",
+            "firstpage": "347",
+            "issn": "10943420",
+            "lastpage": "360",
+            "pub_year": 2008,
+            "title": "Flexible and efficient workflow deployment of data-intensive applications on grids with moteur",
+            "volume": "22"
+        },
+        "br000040": {
+            "authors": [
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Gurmeet",
+                    "initial": "G.",
+                    "last": "Singh"
+                },
+                {
+                    "first": "Mei Hui",
+                    "initial": "M.H.",
+                    "last": "Su"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Blythe"
+                },
+                {
+                    "first": "Yolanda",
+                    "initial": "Y.",
+                    "last": "Gil"
+                },
+                {
+                    "first": "Carl",
+                    "initial": "C.",
+                    "last": "Kesselman"
+                },
+                {
+                    "first": "Gaurang",
+                    "initial": "G.",
+                    "last": "Mehta"
+                },
+                {
+                    "first": "Karan",
+                    "initial": "K.",
+                    "last": "Vahi"
+                },
+                {
+                    "first": "G. Bruce",
+                    "initial": "G.B.",
+                    "last": "Berriman"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Good"
+                },
+                {
+                    "first": "Anastasia",
+                    "initial": "A.",
+                    "last": "Laity"
+                },
+                {
+                    "first": "Joseph C.",
+                    "initial": "J.C.",
+                    "last": "Jacob"
+                },
+                {
+                    "first": "Daniel S.",
+                    "initial": "D.S.",
+                    "last": "Katz"
+                }
+            ],
+            "doi": "10.1155/2005/128026",
+            "firstpage": "219",
+            "issn": "10589244",
+            "lastpage": "237",
+            "pub_year": 2005,
+            "title": "Pegasus: A framework for mapping complex scientific workflows onto distributed systems",
+            "volume": "13"
+        },
+        "br000045": {
+            "authors": [
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Karan",
+                    "initial": "K.",
+                    "last": "Vahi"
+                },
+                {
+                    "first": "Gideon",
+                    "initial": "G.",
+                    "last": "Juve"
+                },
+                {
+                    "first": "Mats",
+                    "initial": "M.",
+                    "last": "Rynge"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Callaghan"
+                },
+                {
+                    "first": "Philip J.",
+                    "initial": "P.J.",
+                    "last": "Maechling"
+                },
+                {
+                    "first": "Rajiv",
+                    "initial": "R.",
+                    "last": "Mayani"
+                },
+                {
+                    "first": "Weiwei",
+                    "initial": "W.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Rafael",
+                    "initial": "R.",
+                    "last": "Ferreira Da Silva"
+                },
+                {
+                    "first": "Miron",
+                    "initial": "M.",
+                    "last": "Livny"
+                },
+                {
+                    "first": "Kent",
+                    "initial": "K.",
+                    "last": "Wenger"
+                }
+            ],
+            "doi": "10.1016/j.future.2014.10.008",
+            "firstpage": "17",
+            "issn": "0167739X",
+            "lastpage": "35",
+            "pub_year": 2015,
+            "title": "Pegasus, a workflow management system for science automation",
+            "volume": "46"
+        },
+        "br000050": null,
+        "br000055": {
+            "authors": [
+                {
+                    "first": "Tom",
+                    "initial": "T.",
+                    "last": "Oinn"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Addis"
+                },
+                {
+                    "first": "Justin",
+                    "initial": "J.",
+                    "last": "Ferris"
+                },
+                {
+                    "first": "Darren",
+                    "initial": "D.",
+                    "last": "Marvin"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Senger"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Greenwood"
+                },
+                {
+                    "first": "Tim",
+                    "initial": "T.",
+                    "last": "Carver"
+                },
+                {
+                    "first": "Kevin",
+                    "initial": "K.",
+                    "last": "Glover"
+                },
+                {
+                    "first": "Matthew R.",
+                    "initial": "M.R.",
+                    "last": "Pocock"
+                },
+                {
+                    "first": "Anil",
+                    "initial": "A.",
+                    "last": "Wipat"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1093/bioinformatics/bth361",
+            "firstpage": "3045",
+            "issn": "13674803",
+            "lastpage": "3054",
+            "pmid": "15201187",
+            "pub_year": 2004,
+            "title": "Taverna: A tool for the composition and enactment of bioinformatics workflows",
+            "volume": "20"
+        },
+        "br000060": {
+            "authors": [
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Shields"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Harrison"
+                }
+            ],
+            "doi": "10.1007/978-1-84628-757-2_20",
+            "firstpage": "320",
+            "lastpage": "339",
+            "pub_year": 2007,
+            "title": "The triana workflow environment: Architecture and applications"
+        },
+        "br000065": null,
+        "br000070": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Kacsuk"
+                },
+                {
+                    "first": "Zoltan",
+                    "initial": "Z.",
+                    "last": "Farkas"
+                },
+                {
+                    "first": "Miklos",
+                    "initial": "M.",
+                    "last": "Kozlovszky"
+                },
+                {
+                    "first": "Gabor",
+                    "initial": "G.",
+                    "last": "Hermann"
+                },
+                {
+                    "first": "Akos",
+                    "initial": "A.",
+                    "last": "Balasko"
+                },
+                {
+                    "first": "Krisztian",
+                    "initial": "K.",
+                    "last": "Karoczkai"
+                },
+                {
+                    "first": "Istvan",
+                    "initial": "I.",
+                    "last": "Marton"
+                }
+            ],
+            "doi": "10.1007/s10723-012-9240-5",
+            "firstpage": "601",
+            "issn": "15707873",
+            "lastpage": "630",
+            "pub_year": 2012,
+            "title": "WS-PGRADE/gUSE Generic DCI Gateway Framework for a Large Variety of User Communities",
+            "volume": "10"
+        },
+        "br000075": {
+            "authors": [
+                {
+                    "first": "Vladimir",
+                    "initial": "V.",
+                    "last": "Korkhov"
+                },
+                {
+                    "first": "Dmitry",
+                    "initial": "D.",
+                    "last": "Vasyunin"
+                },
+                {
+                    "first": "Adianto",
+                    "initial": "A.",
+                    "last": "Wibisono"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Guevara-Masis"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Belloum"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "De Laat"
+                },
+                {
+                    "first": "Pieter",
+                    "initial": "P.",
+                    "last": "Adriaans"
+                },
+                {
+                    "first": "L. O.",
+                    "initial": "L.O.",
+                    "last": "Hertzberger"
+                }
+            ],
+            "doi": "10.1145/1273360.1273372",
+            "firstpage": "63",
+            "lastpage": "68",
+            "pub_year": 2007,
+            "title": "WS-VLAM: Towards a scalable workflow system on the grid"
+        },
+        "br000080": {
+            "authors": [
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Dennis",
+                    "initial": "D.",
+                    "last": "Gannon"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Shields"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                }
+            ],
+            "doi": "10.1016/j.future.2008.06.012",
+            "firstpage": "528",
+            "issn": "0167739X",
+            "lastpage": "540",
+            "pub_year": 2009,
+            "title": "Workflows and e-Science: An overview of workflow system features and capabilities",
+            "volume": "25"
+        },
+        "br000085": {
+            "authors": [
+                {
+                    "first": "Krzysztof",
+                    "initial": "K.",
+                    "last": "Gorgolewski"
+                },
+                {
+                    "first": "Christopher D.",
+                    "initial": "C.D.",
+                    "last": "Burns"
+                },
+                {
+                    "first": "Cindee",
+                    "initial": "C.",
+                    "last": "Madison"
+                },
+                {
+                    "first": "Dav",
+                    "initial": "D.",
+                    "last": "Clark"
+                },
+                {
+                    "first": "Yaroslav O.",
+                    "initial": "Y.O.",
+                    "last": "Halchenko"
+                },
+                {
+                    "first": "Michael L.",
+                    "initial": "M.L.",
+                    "last": "Waskom"
+                },
+                {
+                    "first": "Satrajit S.",
+                    "initial": "S.S.",
+                    "last": "Ghosh"
+                }
+            ],
+            "doi": "10.3389/fninf.2011.00013",
+            "issn": "16625196",
+            "pub_year": 2011,
+            "title": "Nipype: A flexible, lightweight and extensible neuroimaging data processing framework in Python",
+            "volume": "5"
+        },
+        "br000090": {
+            "authors": [
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Bellec"
+                },
+                {
+                    "first": "S\u00e9bastien",
+                    "initial": "S.",
+                    "last": "Lavoie-Courchesne"
+                },
+                {
+                    "first": "Phil",
+                    "initial": "P.",
+                    "last": "Dickinson"
+                },
+                {
+                    "first": "Jason P.",
+                    "initial": "J.P.",
+                    "last": "Lerch"
+                },
+                {
+                    "first": "Alex P.",
+                    "initial": "A.P.",
+                    "last": "Zijdenbos"
+                },
+                {
+                    "first": "Alan C.",
+                    "initial": "A.C.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.3389/fninf.2012.00007",
+            "issn": "16625196",
+            "pub_year": 2012,
+            "title": "The pipeline system for Octave and Matlab (PSOM): A lightweight scripting framework and execution engine for scientific workflows",
+            "volume": "6"
+        },
+        "br000095": null,
+        "br000100": {
+            "authors": [
+                {
+                    "first": "Alex P.",
+                    "initial": "A.P.",
+                    "last": "Zijdenbos"
+                },
+                {
+                    "first": "Reza",
+                    "initial": "R.",
+                    "last": "Forghani"
+                },
+                {
+                    "first": "Alan C.",
+                    "initial": "A.C.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.1109/TMI.2002.806283",
+            "firstpage": "1280",
+            "issn": "02780062",
+            "lastpage": "1291",
+            "pmid": "12585710",
+            "pub_year": 2002,
+            "title": "Automatic \"pipeline\" analysis of 3-D MRI data for clinical trials: Application to multiple sclerosis",
+            "volume": "21"
+        },
+        "br000105": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Ashburner"
+                }
+            ],
+            "doi": "10.1016/j.neuroimage.2011.10.025",
+            "firstpage": "791",
+            "issn": "10538119",
+            "lastpage": "800",
+            "pmid": "22023741",
+            "pub_year": 2012,
+            "title": "SPM: A history",
+            "volume": "62"
+        },
+        "br000110": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Jenkinson"
+                },
+                {
+                    "first": "Christian F.",
+                    "initial": "C.F.",
+                    "last": "Beckmann"
+                },
+                {
+                    "first": "Timothy E.J.",
+                    "initial": "T.E.J.",
+                    "last": "Behrens"
+                },
+                {
+                    "first": "Mark W.",
+                    "initial": "M.W.",
+                    "last": "Woolrich"
+                },
+                {
+                    "first": "Stephen M.",
+                    "initial": "S.M.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.1016/j.neuroimage.2011.09.015",
+            "firstpage": "782",
+            "issn": "10538119",
+            "lastpage": "790",
+            "pmid": "21979382",
+            "pub_year": 2012,
+            "title": "FSL",
+            "volume": "62"
+        },
+        "br000115": {
+            "authors": [
+                {
+                    "first": "Suresh",
+                    "initial": "S.",
+                    "last": "Marru"
+                },
+                {
+                    "first": "Lahiru",
+                    "initial": "L.",
+                    "last": "Gunathilake"
+                },
+                {
+                    "first": "Chathura",
+                    "initial": "C.",
+                    "last": "Herath"
+                },
+                {
+                    "first": "Patanachai",
+                    "initial": "P.",
+                    "last": "Tangchaisin"
+                },
+                {
+                    "first": "Marlon",
+                    "initial": "M.",
+                    "last": "Pierce"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Mattmann"
+                },
+                {
+                    "first": "Raminder",
+                    "initial": "R.",
+                    "last": "Singh"
+                },
+                {
+                    "first": "Thilina",
+                    "initial": "T.",
+                    "last": "Gunarathne"
+                },
+                {
+                    "first": "Eran",
+                    "initial": "E.",
+                    "last": "Chinthaka"
+                },
+                {
+                    "first": "Ross",
+                    "initial": "R.",
+                    "last": "Gardler"
+                },
+                {
+                    "first": "Aleksander",
+                    "initial": "A.",
+                    "last": "Slominski"
+                },
+                {
+                    "first": "Ate",
+                    "initial": "A.",
+                    "last": "Douma"
+                },
+                {
+                    "first": "Srinath",
+                    "initial": "S.",
+                    "last": "Perera"
+                },
+                {
+                    "first": "Sanjiva",
+                    "initial": "S.",
+                    "last": "Weerawarana"
+                }
+            ],
+            "doi": "10.1145/2110486.2110490",
+            "firstpage": "21",
+            "lastpage": "28",
+            "pub_year": 2011,
+            "title": "Apache Airavata: A framework for distributed applications and computational workflows"
+        },
+        "br000120": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Ardizzone"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Barbera"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Calanducci"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Fargetta"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Ingr\u00e0"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Porro"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "La Rocca"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Monforte"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Ricceri"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Rotondo"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Scardaci"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Schenone"
+                }
+            ],
+            "doi": "10.1007/s10723-012-9242-3",
+            "firstpage": "689",
+            "issn": "15707873",
+            "lastpage": "707",
+            "pub_year": 2012,
+            "title": "The DECIDE Science Gateway",
+            "volume": "10"
+        },
+        "br000125": {
+            "authors": [
+                {
+                    "first": "P\u00e9ter",
+                    "initial": "P.",
+                    "last": "Kacsuk"
+                }
+            ],
+            "doi": "10.1007/978-3-319-11268-8",
+            "firstpage": "1",
+            "lastpage": "301",
+            "pub_year": 2014,
+            "title": "Science gateways for distributed computing infrastructures: Development framework and exploitation by scientific user communities",
+            "volume": "9783319112688"
+        },
+        "br000130": null,
+        "br000135": {
+            "authors": [
+                {
+                    "first": "Sharath",
+                    "initial": "S.",
+                    "last": "Maddineni"
+                },
+                {
+                    "first": "Joohyun",
+                    "initial": "J.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Yaakoub",
+                    "initial": "Y.",
+                    "last": "El-Khamra"
+                },
+                {
+                    "first": "Shantenu",
+                    "initial": "S.",
+                    "last": "Jha"
+                }
+            ],
+            "doi": "10.1007/s10723-012-9244-1",
+            "firstpage": "647",
+            "issn": "15707873",
+            "lastpage": "664",
+            "pub_year": 2012,
+            "title": "Distributed Application Runtime Environment (DARE): A Standards-based Middleware Framework for Science-Gateways",
+            "volume": "10"
+        },
+        "br000140": {
+            "authors": [
+                {
+                    "first": "Ivo D.",
+                    "initial": "I.D.",
+                    "last": "Dinov"
+                },
+                {
+                    "first": "John D.",
+                    "initial": "J.D.",
+                    "last": "Van Horn"
+                },
+                {
+                    "first": "Kamen M.",
+                    "initial": "K.M.",
+                    "last": "Lozev"
+                },
+                {
+                    "first": "Rico",
+                    "initial": "R.",
+                    "last": "Magsipoc"
+                },
+                {
+                    "first": "Petros",
+                    "initial": "P.",
+                    "last": "Petrosyan"
+                },
+                {
+                    "first": "Zhizhong",
+                    "initial": "Z.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Allan",
+                    "initial": "A.",
+                    "last": "MacKenzie-Graham"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Eggert"
+                },
+                {
+                    "first": "Douglas S.",
+                    "initial": "D.S.",
+                    "last": "Parker"
+                },
+                {
+                    "first": "Arthur W.",
+                    "initial": "A.W.",
+                    "last": "Toga"
+                }
+            ],
+            "doi": "10.3389/neuro.11.022.2009",
+            "issn": "16625196",
+            "pub_year": 2009,
+            "title": "Efficient, distributed and interactive neuroimaging data analysis using the LONI Pipeline",
+            "volume": "3"
+        },
+        "br000145": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "McLennan"
+                },
+                {
+                    "first": "Steven",
+                    "initial": "S.",
+                    "last": "Clark"
+                },
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Mats",
+                    "initial": "M.",
+                    "last": "Rynge"
+                },
+                {
+                    "first": "Karan",
+                    "initial": "K.",
+                    "last": "Vahi"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "McKenna"
+                },
+                {
+                    "first": "Derrick",
+                    "initial": "D.",
+                    "last": "Kearney"
+                },
+                {
+                    "first": "Carol",
+                    "initial": "C.",
+                    "last": "Song"
+                }
+            ],
+            "doi": "10.1002/cpe.3257",
+            "firstpage": "328",
+            "issn": "15320626",
+            "lastpage": "343",
+            "pub_year": 2015,
+            "title": "HUBzero and Pegasus: Integrating scientific workflows into science gateways",
+            "volume": "27"
+        },
+        "br000150": {
+            "authors": [
+                {
+                    "first": "Wenjun",
+                    "initial": "W.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Uram"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Wilde"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Hereld"
+                },
+                {
+                    "first": "Michael E.",
+                    "initial": "M.E.",
+                    "last": "Papka"
+                }
+            ],
+            "doi": "10.1145/1838574.1838597",
+            "pub_year": 2010,
+            "title": "Accelerating science gateway development with web 2.0 and swift"
+        },
+        "br000155": null,
+        "br000160": null,
+        "br000165": null,
+        "br000170": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Rogers"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "Tram Truong",
+                    "initial": "T.T.",
+                    "last": "Huu"
+                },
+                {
+                    "first": "Kieran",
+                    "initial": "K.",
+                    "last": "Evans"
+                },
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Glatard"
+                },
+                {
+                    "first": "Ibrahim",
+                    "initial": "I.",
+                    "last": "Kallel"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Montagnat"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Harrison"
+                }
+            ],
+            "doi": "10.1007/s10723-013-9267-2",
+            "firstpage": "457",
+            "issn": "15707873",
+            "lastpage": "480",
+            "pub_year": 2013,
+            "title": "Bundle and Pool Architecture for Multi-Language, Robust, Scalable Workflow Executions",
+            "volume": "11"
+        },
+        "br000175": {
+            "authors": [
+                {
+                    "first": "Gabor",
+                    "initial": "G.",
+                    "last": "Terstyanszky"
+                },
+                {
+                    "first": "Tamas",
+                    "initial": "T.",
+                    "last": "Kukla"
+                },
+                {
+                    "first": "Tamas",
+                    "initial": "T.",
+                    "last": "Kiss"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Kacsuk"
+                },
+                {
+                    "first": "Akos",
+                    "initial": "A.",
+                    "last": "Balasko"
+                },
+                {
+                    "first": "Zoltan",
+                    "initial": "Z.",
+                    "last": "Farkas"
+                }
+            ],
+            "doi": "10.1016/j.future.2014.02.016",
+            "firstpage": "46",
+            "issn": "0167739X",
+            "lastpage": "59",
+            "pub_year": 2014,
+            "title": "Enabling scientific workflow sharing through coarse-grained interoperability",
+            "volume": "37"
+        },
+        "br000180": {
+            "authors": [
+                {
+                    "first": "Mohamed",
+                    "initial": "M.",
+                    "last": "Abouelhoda"
+                },
+                {
+                    "first": "Shadi A.",
+                    "initial": "S.A.",
+                    "last": "Issa"
+                },
+                {
+                    "first": "Moustafa",
+                    "initial": "M.",
+                    "last": "Ghanem"
+                }
+            ],
+            "doi": "10.1186/1471-2105-13-77",
+            "issn": "14712105",
+            "pmid": "22559942",
+            "pub_year": 2012,
+            "title": "Tavaxy: Integrating Taverna and Galaxy workflows with cloud computing support",
+            "volume": "13"
+        },
+        "br000185": {
+            "authors": [
+                {
+                    "first": "Kassian",
+                    "initial": "K.",
+                    "last": "Plankensteiner"
+                },
+                {
+                    "first": "Radu",
+                    "initial": "R.",
+                    "last": "Prodan"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Janetschek"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Fahringer"
+                },
+                {
+                    "first": "Johan",
+                    "initial": "J.",
+                    "last": "Montagnat"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Rogers"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Harvey"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "\u00c1kos",
+                    "initial": "A.",
+                    "last": "Balask\u00f3"
+                },
+                {
+                    "first": "P\u00e9ter",
+                    "initial": "P.",
+                    "last": "Kacsuk"
+                }
+            ],
+            "doi": "10.1007/s10723-013-9261-8",
+            "firstpage": "429",
+            "issn": "15707873",
+            "lastpage": "455",
+            "pub_year": 2013,
+            "title": "Fine-Grain Interoperability of Scientific Workflows in Distributed Computing Infrastructures",
+            "volume": "11"
+        },
+        "br000190": {
+            "authors": [
+                {
+                    "first": "Luis",
+                    "initial": "L.",
+                    "last": "de la Garza"
+                },
+                {
+                    "first": "Johannes",
+                    "initial": "J.",
+                    "last": "Veit"
+                },
+                {
+                    "first": "Andras",
+                    "initial": "A.",
+                    "last": "Szolek"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "R\u00f6ttig"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Aiche"
+                },
+                {
+                    "first": "Sandra",
+                    "initial": "S.",
+                    "last": "Gesing"
+                },
+                {
+                    "first": "Knut",
+                    "initial": "K.",
+                    "last": "Reinert"
+                },
+                {
+                    "first": "Oliver",
+                    "initial": "O.",
+                    "last": "Kohlbacher"
+                }
+            ],
+            "doi": "10.1186/s12859-016-0978-9",
+            "issn": "14712105",
+            "pmid": "26968893",
+            "pub_year": 2016,
+            "title": "From the desktop to the grid: Scalable bioinformatics via workflow conversion",
+            "volume": "17"
+        },
+        "br000195": null,
+        "br000200": null,
+        "br000205": {
+            "authors": [
+                {
+                    "first": "Andy",
+                    "initial": "A.",
+                    "last": "Edmonds"
+                },
+                {
+                    "first": "Thijs",
+                    "initial": "T.",
+                    "last": "Metsch"
+                },
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Papaspyrou"
+                },
+                {
+                    "first": "Alexis",
+                    "initial": "A.",
+                    "last": "Richardson"
+                }
+            ],
+            "doi": "10.1109/MIC.2012.65",
+            "firstpage": "15",
+            "issn": "10897801",
+            "lastpage": "25",
+            "pub_year": 2012,
+            "title": "Toward an open cloud standard",
+            "volume": "16"
+        },
+        "br000210": null,
+        "br000215": {
+            "authors": [
+                {
+                    "first": "\u00c1kos",
+                    "initial": "A.",
+                    "last": "Hajnal"
+                },
+                {
+                    "first": "Zolt\u00e1n",
+                    "initial": "Z.",
+                    "last": "Farkas"
+                },
+                {
+                    "first": "P\u00e9ter",
+                    "initial": "P.",
+                    "last": "Kacsuk"
+                }
+            ],
+            "doi": "10.1109/IWSG.2014.7",
+            "firstpage": "1",
+            "lastpage": "5",
+            "pub_year": 2014,
+            "title": "Data avenue: Remote storage resource management in WS-PGRADE/gUSE"
+        },
+        "br000220": null,
+        "br000225": {
+            "authors": [
+                {
+                    "first": "S\u00edlvia D.",
+                    "initial": "S.D.",
+                    "last": "Olabarriaga"
+                },
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Glatard"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "Hoheisel"
+                },
+                {
+                    "first": "Aart J.",
+                    "initial": "A.J.",
+                    "last": "Nederveen"
+                },
+                {
+                    "first": "Dagmar",
+                    "initial": "D.",
+                    "last": "Krefting"
+                }
+            ],
+            "doi": "10.3233/978-1-60750-027-8-62",
+            "firstpage": "62",
+            "issn": "09269630",
+            "lastpage": "71",
+            "pmid": "19593045",
+            "pub_year": 2009,
+            "title": "Crossing HealthGrid borders: Early results in medical imaging",
+            "volume": "147"
+        },
+        "br000230": {
+            "authors": [
+                {
+                    "first": "Jeremy",
+                    "initial": "J.",
+                    "last": "Goecks"
+                },
+                {
+                    "first": "Anton",
+                    "initial": "A.",
+                    "last": "Nekrutenko"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Enis",
+                    "initial": "E.",
+                    "last": "Afgan"
+                },
+                {
+                    "first": "Guruprasad",
+                    "initial": "G.",
+                    "last": "Ananda"
+                },
+                {
+                    "first": "Dannon",
+                    "initial": "D.",
+                    "last": "Baker"
+                },
+                {
+                    "first": "Dan",
+                    "initial": "D.",
+                    "last": "Blankenberg"
+                },
+                {
+                    "first": "Ramkrishna",
+                    "initial": "R.",
+                    "last": "Chakrabarty"
+                },
+                {
+                    "first": "Nate",
+                    "initial": "N.",
+                    "last": "Coraor"
+                },
+                {
+                    "first": "Jeremy",
+                    "initial": "J.",
+                    "last": "Goecks"
+                },
+                {
+                    "first": "Greg",
+                    "initial": "G.",
+                    "last": "Von Kuster"
+                },
+                {
+                    "first": "Ross",
+                    "initial": "R.",
+                    "last": "Lazarus"
+                },
+                {
+                    "first": "Kanwei",
+                    "initial": "K.",
+                    "last": "Li"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Kelly",
+                    "initial": "K.",
+                    "last": "Vincent"
+                }
+            ],
+            "doi": "10.1186/gb-2010-11-8-r86",
+            "issn": "1474760X",
+            "pmid": "20738864",
+            "pub_year": 2010,
+            "title": "Galaxy: a comprehensive approach for supporting accessible, reproducible, and transparent computational research in the life sciences",
+            "volume": "11"
+        },
+        "br000235": {
+            "authors": [
+                {
+                    "first": "Michael R.",
+                    "initial": "M.R.",
+                    "last": "Berthold"
+                },
+                {
+                    "first": "Nicolas",
+                    "initial": "N.",
+                    "last": "Cebron"
+                },
+                {
+                    "first": "Fabian",
+                    "initial": "F.",
+                    "last": "Dill"
+                },
+                {
+                    "first": "Thomas R.",
+                    "initial": "T.R.",
+                    "last": "Gabriel"
+                },
+                {
+                    "first": "Tobias",
+                    "initial": "T.",
+                    "last": "K\u00f6tter"
+                },
+                {
+                    "first": "Thorsten",
+                    "initial": "T.",
+                    "last": "Meinl"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Ohl"
+                },
+                {
+                    "first": "Christoph",
+                    "initial": "C.",
+                    "last": "Sieb"
+                },
+                {
+                    "first": "Kilian",
+                    "initial": "K.",
+                    "last": "Thiel"
+                },
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Wiswedel"
+                }
+            ],
+            "firstpage": "319",
+            "issn": "14318814",
+            "lastpage": "326",
+            "pub_year": 2008,
+            "title": "KNIME: The Konstanz information miner"
+        },
+        "br000240": {
+            "authors": [
+                {
+                    "first": "Silvia D.",
+                    "initial": "S.D.",
+                    "last": "Olabarriaga"
+                },
+                {
+                    "first": "Gabrielle",
+                    "initial": "G.",
+                    "last": "Pierantoni"
+                },
+                {
+                    "first": "Giuliano",
+                    "initial": "G.",
+                    "last": "Taffoni"
+                },
+                {
+                    "first": "Eva",
+                    "initial": "E.",
+                    "last": "Sciacca"
+                },
+                {
+                    "first": "Mahdi",
+                    "initial": "M.",
+                    "last": "Jaghoori"
+                },
+                {
+                    "first": "Vladimir",
+                    "initial": "V.",
+                    "last": "Korkhov"
+                },
+                {
+                    "first": "Giuliano",
+                    "initial": "G.",
+                    "last": "Castelli"
+                },
+                {
+                    "first": "Claudio",
+                    "initial": "C.",
+                    "last": "Vuerli"
+                },
+                {
+                    "first": "Ugo",
+                    "initial": "U.",
+                    "last": "Becciani"
+                },
+                {
+                    "first": "Eoin",
+                    "initial": "E.",
+                    "last": "Carley"
+                },
+                {
+                    "first": "Bob",
+                    "initial": "B.",
+                    "last": "Bentley"
+                }
+            ],
+            "doi": "10.1109/eScience.2014.8",
+            "firstpage": "298",
+            "lastpage": "305",
+            "pub_year": 2014,
+            "title": "Scientific workflow management - For whom?",
+            "volume": "1"
+        },
+        "br000245": {
+            "authors": [
+                {
+                    "first": "Jia",
+                    "initial": "J.",
+                    "last": "Yu"
+                },
+                {
+                    "first": "Rajkumar",
+                    "initial": "R.",
+                    "last": "Buyya"
+                }
+            ],
+            "doi": "10.1007/s10723-005-9010-8",
+            "firstpage": "171",
+            "issn": "15707873",
+            "lastpage": "200",
+            "pub_year": 2005,
+            "title": "A taxonomy of workflow management systems for Grid computing",
+            "volume": "3"
+        },
+        "br000250": null
+    },
+    "body_text": [
+        {
+            "endOffset": 145752,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "A few works described the architecture and features of workflow systems at an abstract level.",
+            "startOffset": 145659,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 114591,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "The remainder of this Section defines the metrics in each criterion.",
+            "startOffset": 114523,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 104285,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "See Fig. 2(III).",
+            "startOffset": 104269,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 147801,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "So far, the literature on science gateways and workflow engines has focused on the description of particular systems, or on the presentation of a particular architecture.",
+            "startOffset": 147631,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 141771,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "The particular case of interaction g (workflow language conversion) requires particular attention when implementing a real system since this interaction may not be easily generalized to any workflow language.",
+            "startOffset": 141563,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 142478,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Other types of instantiation, for instance nested workflows with task encapsulation, could also be envisaged.",
+            "startOffset": 142369,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 90142,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In Section  2, we describe six architectures within a consistent framework that underlines the functional interactions between their main software components.",
+            "startOffset": 89984,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90207,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We illustrate these architectures on real systems in Section  3.",
+            "startOffset": 90143,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 142679,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "We chose to limit ourselves to instantiations with service invocation because the resulting architectures have already been implemented in real systems, and because service invocation is largely used.",
+            "startOffset": 142479,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 138421,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Tight integration is the least scalable and all the other architectures perform the same overall.",
+            "startOffset": 138324,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 90959,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "In the last decade, the e-Science community has developed workflow systems to help application developers access distributed infrastructures such as clusters, grids, clouds and web services.",
+            "startOffset": 90769,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 111022,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000080",
+            "sentence": "Note how this peculiar execution model is well supported by task encapsulation.",
+            "startOffset": 110943,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 141182,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "For example, interaction g (workflow language conversion) is clearly more complex than interaction d (service invocation).",
+            "startOffset": 141060,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 114371,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "In addition, all the metrics in a criterion contribute equally to the global score used for the criterion.",
+            "startOffset": 114265,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 92571,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "A wide array of workflows have been implemented using these pipeline systems and are now shared across neuroimaging groups world-wide, which represents a tremendous opportunity for science gateways to leverage.",
+            "startOffset": 92361,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 89847,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In real systems, such patterns sometimes coexist due to the historical and technical context of software projects.",
+            "startOffset": 89733,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 109133,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000070",
+            "sentence": "The architecture of the Catania Science Gateway Framework (CSGF) is shown in Fig. 3.",
+            "startOffset": 109049,
+            "title": "Tight integration"
+        },
+        {
+            "endOffset": 144203,
+            "parents": [],
+            "secId": "s000180",
+            "sentence": "This scenario came up after the evaluation framework had already been designed.",
+            "startOffset": 144124,
+            "title": "Application to systems design"
+        },
+        {
+            "endOffset": 89562,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This analysis is intended for experts of science gateway and workflow engine design.",
+            "startOffset": 89478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112338,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000095",
+            "sentence": "Fig. 8 shows the architecture of Tavaxy where workflows in various formats (tSCUFL, SCUFL, t2flow and JSON) can be imported.",
+            "startOffset": 112214,
+            "title": "Workflow conversion with service invocation"
+        },
+        {
+            "endOffset": 95319,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Robustness is highly desirable as well since it is key to a good user experience.",
+            "startOffset": 95238,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 125031,
+            "parents": [],
+            "secId": "s000130",
+            "sentence": "The architectures described in Fig. 2 are evaluated hereafter with the proposed metrics.",
+            "startOffset": 124943,
+            "title": "Architecture evaluation"
+        },
+        {
+            "endOffset": 90338,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In Section  4, we introduce metrics that measure integration complexity, robustness, extensibility, scalability and functionality.",
+            "startOffset": 90208,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90602,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We evaluate the architectures individually in Section  5, and we compare and discuss them in Section  6.",
+            "startOffset": 90498,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93936,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "They are often accessible through a web interface that helps users manage access rights, data transfers, task execution, and authentication on multiple computing and storage locations.",
+            "startOffset": 93752,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 94038,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Workflow engines are part of this ecosystem as core components to implement and execute applications.",
+            "startOffset": 93937,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 93398,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Some workflow engines, usually from the e-Science community, may transfer data across the infrastructure, and others, usually domain-specific ones, may leave this role to external processes.",
+            "startOffset": 93208,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 147056,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "We have systematically reviewed architectures used to integrate workflow engines in science gateways.",
+            "startOffset": 146955,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 111525,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The interactions described in the SHIWA pool are much finer-grained than in our model, but they can be grouped to match interactions d and f, as explained in the Figure caption.",
+            "startOffset": 111348,
+            "title": "Pool model"
+        },
+        {
+            "endOffset": 92096,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000085": {
+                    "endOffset": 91773,
+                    "startOffset": 91769
+                },
+                "br000090": {
+                    "endOffset": 91825,
+                    "startOffset": 91821
+                },
+                "br000095": {
+                    "endOffset": 91858,
+                    "startOffset": 91854
+                },
+                "br000100": {
+                    "endOffset": 91871,
+                    "startOffset": 91867
+                },
+                "br000105": {
+                    "endOffset": 91914,
+                    "startOffset": 91910
+                },
+                "br000110": {
+                    "endOffset": 91953,
+                    "startOffset": 91949
+                }
+            },
+            "secId": "s000010",
+            "sentence": "In neuroimaging, our primary domain of interest, tools such as Nipype (Neuroimaging in Python, Pipelines and Interfaces  [17]), PSOM (Pipeline System for Octave and Matlab  [18]), PMP (Poor Man\u2019s Pipeline  [19]), RPPL  [20], SPM (Statistical Parametric Mapping  [21]) and FSL (FMRIB Software Library  [22]) provide abstractions and functions to handle the data and computing flow between processes implemented in a variety of programming languages.",
+            "startOffset": 91648,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 142038,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "For instance, converting FSL, PSOM or Nipype pipelines to any other workflow language is problematic because these engines rely on general-purpose programming languages such as Bash, Octave/Matlab and Python, which are much richer than scientific workflow languages.",
+            "startOffset": 141772,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 108924,
+            "parents": [],
+            "secId": "s000065",
+            "sentence": "This section illustrates the architectural patterns on a few real systems, using the original architecture diagrams published by the system developers.",
+            "startOffset": 108773,
+            "title": "Real systems"
+        },
+        {
+            "endOffset": 113620,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "The goal is to abstract architectural discussions from the particular technical context of a real system.",
+            "startOffset": 113515,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 112998,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "Colors in Table 2 represent normalized scores (see caption).",
+            "startOffset": 112938,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 147630,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "To the best of our knowledge, our work is the first to systematically review and compare software architectures to integrate workflow engines into science gateways.",
+            "startOffset": 147466,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 109282,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000070",
+            "sentence": "In CSGF, workflows are integrated as Liferay portlets, i.e., as part of the science gateway when no specific protocol is used for remote invocation.",
+            "startOffset": 109134,
+            "title": "Tight integration"
+        },
+        {
+            "endOffset": 96771,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "Software components are defined at a granularity such that two components may potentially be operated by different teams on different hardware systems.",
+            "startOffset": 96620,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 89456,
+            "parents": [],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 89249,
+                    "startOffset": 89246
+                },
+                "br000010": {
+                    "endOffset": 89261,
+                    "startOffset": 89256
+                },
+                "br000015": {
+                    "endOffset": 89261,
+                    "startOffset": 89256
+                },
+                "br000020": {
+                    "endOffset": 89274,
+                    "startOffset": 89271
+                }
+            },
+            "secId": "s000005",
+            "sentence": "It is informed by our experience in the development and sustained operation of the CBRAIN  [1], NSG  [2,3] and VIP  [4] science gateways during the past 7 years, as well as by lessons learned from several science gateway and workflow projects such as SHIWA1 and ER-flow.2",
+            "startOffset": 89155,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89983,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The remainder of this section provides background information and definitions of workflow engines, science gateways and infrastructures.",
+            "startOffset": 89847,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 110942,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "refoffsets": {
+                "br000220": {
+                    "endOffset": 110816,
+                    "startOffset": 110812
+                }
+            },
+            "secId": "s000080",
+            "sentence": "The PSOM workflow engine adopts a pilot-job architecture  [44] where a master coordinates workflow execution by submitting workers and establishing direct communication channels with them.",
+            "startOffset": 110754,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 94910,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Scalability is also a crucial concern for such multi-user, high-throughput systems.",
+            "startOffset": 94827,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 89732,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "It is an abstraction effort to identify and evaluate the fundamental architectural patterns that are encountered while integrating workflow engines and science gateways.",
+            "startOffset": 89563,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93560,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Workflows may be expressed in any language, including high-level XML or JSON dialects such as Scufl or Hyperflow, and low-level scripting languages such as Bash.",
+            "startOffset": 93399,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 146734,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "presents a user-centered view of the ecosystem of science gateways with focus on workflow management.",
+            "startOffset": 146633,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 114115,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "Some degree of system-specificity can be introduced in the evaluation by assigning weights to interactions and components through a public spreadsheet available at https://frama.link/LrPRsCQp.5 In particular, sheet \u201cComponents and interactions\u201d in this spreadsheet contains the weight assigned to components and interactions, which can be used to produce new versions of Table 2 that fit the particular technical context of a real system.",
+            "startOffset": 113621,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 93207,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Although simplistic, this definition covers both e-Science workflow engines and domain-specific pipeline systems.",
+            "startOffset": 93094,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 139235,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Differences in functionality should not be neglected.",
+            "startOffset": 139182,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 89154,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper describes, illustrates and compares such architectures, based on system-independent representations of their main components and interactions.",
+            "startOffset": 89001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107697,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "refoffsets": {
+                "br000175": {
+                    "endOffset": 107626,
+                    "startOffset": 107622
+                }
+            },
+            "secId": "s000055",
+            "sentence": "Nested workflows were notably used by the SHIWA Science Gateway to implement so-called Coarse-Grained workflow interoperability  [35], i.e., to integrate various workflow engines in a consistent platform.",
+            "startOffset": 107493,
+            "title": "Nested workflows"
+        },
+        {
+            "endOffset": 89000,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Several software architectures can be adopted to integrate workflow engines in the ecosystem of tools and services offered by science gateways, with important consequences for the development effort required and resulting system.",
+            "startOffset": 88771,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 145044,
+            "parents": [],
+            "secId": "s000180",
+            "sentence": "The system evaluation is presented in Table 4.",
+            "startOffset": 144998,
+            "title": "Application to systems design"
+        },
+        {
+            "endOffset": 97004,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "In real systems, software components may exist at a finer granularity, to implement functions such as authentication, data persistence or logging.",
+            "startOffset": 96858,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 146632,
+            "parents": [],
+            "refoffsets": {
+                "br000240": {
+                    "endOffset": 146632,
+                    "startOffset": 146628
+                }
+            },
+            "secId": "s000185",
+            "sentence": "Olabarriaga et al.  [48]",
+            "startOffset": 146608,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 113098,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "For each criterion, a global score is computed by summing up the individual scores for each metric.",
+            "startOffset": 112999,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 107356,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "refoffsets": {
+                "br000055": {
+                    "endOffset": 107355,
+                    "startOffset": 107351
+                }
+            },
+            "secId": "s000055",
+            "sentence": "Nested workflows have long been available in workflow engines, for instance in the Taverna workbench  [11].",
+            "startOffset": 107249,
+            "title": "Nested workflows"
+        },
+        {
+            "endOffset": 92216,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Such tools were interfaced to computing infrastructures, in particular clusters, to execute tasks at a high throughput.",
+            "startOffset": 92097,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 144123,
+            "parents": [],
+            "secId": "s000180",
+            "sentence": "To illustrate how our evaluation framework can be applied to help design new systems, let us consider a hypothetical system where the workflow engine is split in two parts: (1) a high-level part integrated in the science gateway, which submits sub-workflows to the infrastructure; (2) a lower-level part, executed on the infrastructure, which executes the sub-workflows.",
+            "startOffset": 143753,
+            "title": "Application to systems design"
+        },
+        {
+            "endOffset": 140545,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "In particular, the presented architectures are abstract patterns that may be mixed together in actual systems.",
+            "startOffset": 140435,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 138323,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "The pool architecture is overall the most scalable, which is not surprising since it is designed precisely for scalability.",
+            "startOffset": 138200,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 146265,
+            "parents": [],
+            "refoffsets": {
+                "br000250": {
+                    "endOffset": 146265,
+                    "startOffset": 146261
+                }
+            },
+            "secId": "s000185",
+            "sentence": "Shahand et al.  [50]",
+            "startOffset": 146245,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 139005,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Non-reliable infrastructures, for example, could hardly cope with workflow engines being wrapped in computing tasks as done in task encapsulation.",
+            "startOffset": 138859,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 140897,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Nevertheless, the criteria discussed in this work would still be applicable for broadly comparing and categorizing such cases of hybrid architectures.",
+            "startOffset": 140747,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 146041,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "have further characterized the features of workflow systems.",
+            "startOffset": 145981,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 146244,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "However, only a few works focused on science gateway architectures.",
+            "startOffset": 146177,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 112937,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "Criteria break down into specific metrics where lower value indicates better performance.",
+            "startOffset": 112848,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 96007,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "The infrastructure can be composed of computing or file servers, databases, clusters, grids or clouds.",
+            "startOffset": 95905,
+            "title": "Infrastructure"
+        },
+        {
+            "endOffset": 140667,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "The distinction between tight integration and service invocation, for instance, may not always be that clear in practice.",
+            "startOffset": 140546,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 142185,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "If not properly validated, workflow language conversion could introduce critical errors impacting the robustness and correctness of the execution.",
+            "startOffset": 142039,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 94827,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "New workflows are added frequently, different types and versions of workflow engines may be integrated over time, and different kinds of infrastructure can be targeted.",
+            "startOffset": 94659,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 105004,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "The science gateway may also implement mechanisms to facilitate the handling of task dependencies, for instance lists of tasks that must be completed before a particular task can be executed.",
+            "startOffset": 104813,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 147277,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "These architectures were described in a system-independent framework suitable for comparison, illustrated on real systems, and evaluated using novel quantitative metrics that allow simple comparison across architectures.",
+            "startOffset": 147057,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 91494,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000080": {
+                    "endOffset": 91493,
+                    "startOffset": 91489
+                }
+            },
+            "secId": "s000010",
+            "sentence": "An overview of workflow system capabilities is available in  [16].",
+            "startOffset": 91428,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 90497,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "The metrics are specifically designed to measure the ability of the architectures to address workflow-related issues commonly encountered in science gateways.",
+            "startOffset": 90339,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136675,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Tight integration and task encapsulation are the simplest architectures to integrate, followed by service integration, workflow conversion (with service invocation) and pool.",
+            "startOffset": 136501,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 142759,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Nevertheless, it could be interesting to explore other types of instantiations.",
+            "startOffset": 142680,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 94600,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Some science gateways are tailored to a particular engine, while others are more general and host applications executed by different types of engines.",
+            "startOffset": 94450,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 142368,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "The abstract nested workflows and workflow conversion patterns were instantiated with service invocation so that they can be analyzed in the same framework as the other architectures.",
+            "startOffset": 142185,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 94369,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Most of these systems include one or several workflow engines.",
+            "startOffset": 94307,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 104748,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "The workflow engine keeps track of the dependencies between the sub-tasks, but their execution is delegated to the science gateway that executes them on the infrastructure through interaction b. Although the science gateway has no global vision of the workflow, it submits the sub-tasks to the infrastructure and completely controls them.",
+            "startOffset": 104410,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 139536,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Besides, tight integration is the only architecture that allows fine-grained debugging, which may be critical for efficient user support.",
+            "startOffset": 139399,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 143723,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Other properties definitely influence the design of a software architecture, for instance collaborative features, data visualization, search, authentication, accounting and so on.",
+            "startOffset": 143544,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 113245,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "We ensure that the different metrics used to calculate the global score for a criterion are comparable, so that they can be combined meaningfully.",
+            "startOffset": 113099,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 136773,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Nested workflows (with service invocation) require more integration than the other architectures.",
+            "startOffset": 136676,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 141391,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "However, without entering into the details of a particular system, quantification of the robustness or the amount of development associated with each interaction and software component will hardly be precise.",
+            "startOffset": 141183,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 112678,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000095",
+            "sentence": "The workflow engine is a re-engineered version of the Galaxy engine that also includes some components of Taverna.",
+            "startOffset": 112564,
+            "title": "Workflow conversion with service invocation"
+        },
+        {
+            "endOffset": 94658,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Extensibility is an important property of the integration.",
+            "startOffset": 94600,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 114265,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "For instance, a high weight could be assigned to the science gateway if its internal architecture is such that it can hardly be extended in practice.",
+            "startOffset": 114116,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 109567,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000070",
+            "sentence": "The science gateway also includes a set of services to manage data and tasks (jobs) on a wide array of grid middleware systems through the SAGA API.",
+            "startOffset": 109419,
+            "title": "Tight integration"
+        },
+        {
+            "endOffset": 91156,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000025": {
+                    "endOffset": 91016,
+                    "startOffset": 91013
+                },
+                "br000030": {
+                    "endOffset": 91032,
+                    "startOffset": 91029
+                },
+                "br000035": {
+                    "endOffset": 91045,
+                    "startOffset": 91042
+                },
+                "br000040": {
+                    "endOffset": 91061,
+                    "startOffset": 91056
+                },
+                "br000045": {
+                    "endOffset": 91061,
+                    "startOffset": 91056
+                },
+                "br000050": {
+                    "endOffset": 91074,
+                    "startOffset": 91070
+                },
+                "br000055": {
+                    "endOffset": 91089,
+                    "startOffset": 91085
+                },
+                "br000060": {
+                    "endOffset": 91103,
+                    "startOffset": 91099
+                },
+                "br000065": {
+                    "endOffset": 91120,
+                    "startOffset": 91116
+                },
+                "br000070": {
+                    "endOffset": 91137,
+                    "startOffset": 91133
+                },
+                "br000075": {
+                    "endOffset": 91155,
+                    "startOffset": 91151
+                }
+            },
+            "secId": "s000010",
+            "sentence": "These efforts resulted in tools among which Askalon  [5], Hyperflow  [6], MOTEUR  [7], Pegasus  [8,9], Swift  [10], Taverna  [11], Triana  [12], VisTrails  [13], WS-PGRADE  [14] and WS-VLAM  [15].",
+            "startOffset": 90960,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 146608,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "Although workflow management is mentioned as a possible component to coordinate distributed computations in science gateways, the paper does not comment on architecture to achieve this.",
+            "startOffset": 146423,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 148154,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "These insights will be valuable for software architects when considering alternatives for the architecture and evaluating the impact of their decisions.",
+            "startOffset": 148002,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 97245,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "Table 1 summarizes the classification of a few systems by architecture.",
+            "startOffset": 97174,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 111347,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "The software components map directly to the ones in our architecture, except that the infrastructure is not represented.",
+            "startOffset": 111227,
+            "title": "Pool model"
+        },
+        {
+            "endOffset": 137067,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Robustness roughly leads to the same ordering of architectures, with tight integration and task encapsulation in the top group, service integration and workflow conversion (with service invocation) close behind, pool in a third group, and nested workflows (with service invocation) at the end.",
+            "startOffset": 136774,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 139971,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Weights can be adjusted in the public spreadsheet at https://frama.link/LrPRsCQp (column B of sheet \u201cMetrics\u201d) to produce a custom version of Table 3 if required.",
+            "startOffset": 139809,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 140150,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Overall, task encapsulation and workflow conversion perform a bit better than the other architectures and nested workflows stand a bit behind for the reasons mentioned previously.",
+            "startOffset": 139971,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 140434,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "First, our evaluation methods aimed to provide comparative metrics, however the high-level of abstraction used to derive these metrics hinders the complexity of real systems to some extent.",
+            "startOffset": 140245,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 104812,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "For instance, it may cancel them when the workflow is canceled.",
+            "startOffset": 104749,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 146176,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "Numerous science gateways have been described, as mentioned in Section  1.2.",
+            "startOffset": 146100,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 143543,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Finally, workflow engines are only one of the many aspects involved in the design of a science gateway.",
+            "startOffset": 143440,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 145142,
+            "parents": [],
+            "secId": "s000180",
+            "sentence": "The detailed calculations are available in our public spreadsheet at https://frama.link/LrPRsCQp.",
+            "startOffset": 145045,
+            "title": "Application to systems design"
+        },
+        {
+            "endOffset": 146100,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "These two works, however, do not mention science gateways.",
+            "startOffset": 146042,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 94449,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Integration between workflow engines and science gateways varies across systems.",
+            "startOffset": 94369,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 104409,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "The workflow engine is wrapped in a particular task that can submit sub-tasks to the science gateway through interaction e.",
+            "startOffset": 104286,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 139630,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Table 3 provides an overall comparison between architectures, based on the metrics in Table 2.",
+            "startOffset": 139536,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 109418,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "secId": "s000070",
+            "sentence": "A specific portlet called mi-parallel-portlet allows to create job collections, parametric jobs and split-and-merge types of workflows.",
+            "startOffset": 109283,
+            "title": "Tight integration"
+        },
+        {
+            "endOffset": 94306,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 94305,
+                    "startOffset": 94300
+                },
+                "br000020": {
+                    "endOffset": 94305,
+                    "startOffset": 94300
+                },
+                "br000120": {
+                    "endOffset": 94273,
+                    "startOffset": 94266
+                },
+                "br000125": {
+                    "endOffset": 94273,
+                    "startOffset": 94266
+                }
+            },
+            "secId": "s000015",
+            "sentence": "Numerous science gateways were built using such frameworks  [25,24] or as standalone systems  [1,4].",
+            "startOffset": 94206,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 92360,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Some of these tools also support advanced features such as provenance tracking or redundancy detection across analyses to avoid re-computation.",
+            "startOffset": 92217,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 97364,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "The interactions involved in the architectures are described below and labeled from a to g as in Fig. 2.",
+            "startOffset": 97260,
+            "title": "Interactions"
+        },
+        {
+            "endOffset": 140244,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "A few limitations should be considered when using the results of our evaluation.",
+            "startOffset": 140164,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 95238,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000130": {
+                    "endOffset": 95107,
+                    "startOffset": 95103
+                }
+            },
+            "secId": "s000015",
+            "sentence": "For this purpose, science gateways may balance the load among different instances of the same engine, start new engines elastically using auto-scaling techniques such as the ones reviewed in  [26], and use advanced task scheduling policies on the infrastructure to improve performance, fault-tolerance and fairness among users.",
+            "startOffset": 94911,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 145980,
+            "parents": [],
+            "refoffsets": {
+                "br000080": {
+                    "endOffset": 145980,
+                    "startOffset": 145976
+                }
+            },
+            "secId": "s000185",
+            "sentence": "Deelman et al.  [16]",
+            "startOffset": 145960,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 139398,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Nested workflows (with service invocation) and workflow conversion (with service invocation) are the only architectures that intrinsically support meta-workflows.",
+            "startOffset": 139236,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 95725,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Other specific features may also be available, for instance data visualization and quality control, workflow edition, debugging instruments, or social tools among users.",
+            "startOffset": 95556,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 112847,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "The architectures are evaluated in Table 2 using five main criteria: integration complexity, robustness, extensibility, scalability and functionality.",
+            "startOffset": 112697,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 93751,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Science gateways are used to share resources within a community and to provide increased performance and capacity through facilitated access to storage and computing power.",
+            "startOffset": 93579,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 96469,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Instead, we consider the infrastructure as an abstract system that can execute tasks and store data regardless of the enabling mechanisms.",
+            "startOffset": 96331,
+            "title": "Infrastructure"
+        },
+        {
+            "endOffset": 140746,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "Service invocation may also be combined with task encapsulation in some cases.",
+            "startOffset": 140668,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 90709,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Finally, in Section  7, we illustrate how our evaluation framework can be used to help design new systems.",
+            "startOffset": 90603,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113514,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "The metrics defined hereafter aim at providing a framework to evaluate architectures independently from any particular system, regardless of any technical constraint such as the use of a specific programming language or the internal architecture of the science gateway.",
+            "startOffset": 113245,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 145658,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "There is abundant literature describing specific workflow engines and systems; some of the main references are cited in Section  1.1.",
+            "startOffset": 145525,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 114523,
+            "parents": [],
+            "secId": "s000100",
+            "sentence": "Column B of sheet \u201cMetrics\u201d of the public spreadsheet may be used to assign different weights to each metric to adjust the specific context of a study.",
+            "startOffset": 114372,
+            "title": "Evaluation metrics"
+        },
+        {
+            "endOffset": 146901,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "Their proposed layered system architecture includes gateway, workflow engine and distributed infrastructure components, similarly to the \u201cservice invocation\u201d pattern.",
+            "startOffset": 146735,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 141059,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "It should also be noted that all the interactions involved in the architectures were treated equally, whereas some of them are obviously more complex than others.",
+            "startOffset": 140897,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 147466,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "We have discussed the pros and cons of all the presented architectures based on these metrics, and we have shown how our evaluation framework can be leveraged in the design of new systems.",
+            "startOffset": 147278,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 95904,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "An infrastructure consists of the computing and storage resources involved in workflow execution, as well as the software services used to access these resources.",
+            "startOffset": 95742,
+            "title": "Infrastructure"
+        },
+        {
+            "endOffset": 96247,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Some workflow engines and science gateways may require specific characteristics, such as the presence of a shared file system between the computing nodes, the availability of a global task meta-scheduler, or the presence of a file catalog.",
+            "startOffset": 96008,
+            "title": "Infrastructure"
+        },
+        {
+            "endOffset": 109029,
+            "parents": [],
+            "secId": "s000065",
+            "sentence": "To improve readability, we annotated these diagrams with the interactions and components used in Fig. 2.",
+            "startOffset": 108925,
+            "title": "Real systems"
+        },
+        {
+            "endOffset": 90750,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Related work is presented in Section  8.",
+            "startOffset": 90710,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97173,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "Such fine-grained components are not covered by our analysis since we focus on the interactions between the science gateway, the infrastructure and the workflow engine.",
+            "startOffset": 97005,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 146944,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "However other patterns are not identified.",
+            "startOffset": 146902,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 96330,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "In the analysis presented hereafter, such specific requirements are not discussed.",
+            "startOffset": 96248,
+            "title": "Infrastructure"
+        },
+        {
+            "endOffset": 111226,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "refoffsets": {
+                "br000170": {
+                    "endOffset": 111089,
+                    "startOffset": 111085
+                }
+            },
+            "secId": "s000085",
+            "sentence": "The pool model was implemented in the SHIWA pool  [34] diagrammed in Fig. 6, where agents can wrap different types of workflow engines to execute workflows expressed with different languages.",
+            "startOffset": 111035,
+            "title": "Pool model"
+        },
+        {
+            "endOffset": 107492,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "They are also used implicitly in several platforms where workflow engines are wrapped in workflow tasks as any other command-line tool.",
+            "startOffset": 107357,
+            "title": "Nested workflows"
+        },
+        {
+            "endOffset": 146422,
+            "parents": [],
+            "secId": "s000185",
+            "sentence": "presents the Science Gateway Canvas, which is a business reference model where the most relevant functional components are organized into functional groups.",
+            "startOffset": 146266,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 95556,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000015",
+            "sentence": "Simple architectures facilitate the implementation effort towards robust interactions which, in turn, have a positive impact on characteristics such as gateway predictability, transparency, reliability, traceability and reproducibility.",
+            "startOffset": 95320,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 96857,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "For instance, the science gateway and infrastructure are usually distinct components.",
+            "startOffset": 96772,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 103979,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 103939,
+                    "startOffset": 103933
+                },
+                "br000020": {
+                    "endOffset": 103915,
+                    "startOffset": 103912
+                },
+                "br000070": {
+                    "endOffset": 103978,
+                    "startOffset": 103974
+                },
+                "br000115": {
+                    "endOffset": 103848,
+                    "startOffset": 103844
+                },
+                "br000150": {
+                    "endOffset": 103939,
+                    "startOffset": 103933
+                },
+                "br000155": {
+                    "endOffset": 103884,
+                    "startOffset": 103880
+                },
+                "br000160": {
+                    "endOffset": 103864,
+                    "startOffset": 103860
+                }
+            },
+            "secId": "s000040",
+            "sentence": "This architecture is largely adopted in systems such as the Apache Airvata framework  [23], GridSFEA  [32], Vine Toolkit  [31], Virtual Imaging Platform  [4], the systems in  [30,3] and the WS-PGRADE/gUSE framework  [14].",
+            "startOffset": 103758,
+            "title": "Service invocation"
+        },
+        {
+            "endOffset": 145512,
+            "parents": [],
+            "secId": "s000180",
+            "sentence": "We conclude that the studied system supports nested workflows with a much better performance than the nested workflow model instantiated with service invocation (evaluated in Table 2): the integration score is improved by a factor of 2, robustness is improved by a factor of 2.6, extensibility is substantially improved, scalability and functionality are not penalized.",
+            "startOffset": 145143,
+            "title": "Application to systems design"
+        },
+        {
+            "endOffset": 96619,
+            "parents": [],
+            "secId": "s000025",
+            "sentence": "Architectures to integrate workflow engines in science gateways are presented in Fig. 2 using the graphical notations defined in Fig. 1.",
+            "startOffset": 96483,
+            "title": "Architectures"
+        },
+        {
+            "endOffset": 138549,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "The global scalability score, however, should not conceal the unique characteristics of architectures regarding this criterion.",
+            "startOffset": 138422,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 110753,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "refoffsets": {
+                "br000165": {
+                    "endOffset": 110729,
+                    "startOffset": 110725
+                }
+            },
+            "secId": "s000080",
+            "sentence": "The CBRAIN-PSOM integration  [33] is shown in Fig. 5(II).",
+            "startOffset": 110696,
+            "title": "Task encapsulation"
+        },
+        {
+            "endOffset": 141563,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000175",
+            "sentence": "If a particular system is evaluated, the public spreadsheet can be used to adjust the weights given to specific components and interactions based on the technical context.",
+            "startOffset": 141392,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 91647,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "At the same time, toolboxes have been emerging in various scientific domains to facilitate the assembly of software components in consistent \u201cpipelines\u201d.",
+            "startOffset": 91494,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 93093,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "In this paper, a workflow engine (also abbreviated engine) is a piece of software that coordinates and submits interdependent computing tasks to an infrastructure (local server, cluster, grid or cloud) based on a workflow description (a.k.a workflow), using input data that may consist of files, database entries or simple parameter values.",
+            "startOffset": 92753,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 94205,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br000070": {
+                    "endOffset": 94204,
+                    "startOffset": 94200
+                },
+                "br000115": {
+                    "endOffset": 94134,
+                    "startOffset": 94130
+                },
+                "br000120": {
+                    "endOffset": 94179,
+                    "startOffset": 94175
+                }
+            },
+            "secId": "s000015",
+            "sentence": "Various science gateways have been developed, including frameworks such as Apache Airavata  [23], the Catania Science Gateway Framework  [24] and WS-PGRADE/gUSE  [14].",
+            "startOffset": 94038,
+            "title": "Science gateways"
+        },
+        {
+            "endOffset": 145938,
+            "parents": [],
+            "refoffsets": {
+                "br000245": {
+                    "endOffset": 145787,
+                    "startOffset": 145783
+                }
+            },
+            "secId": "s000185",
+            "sentence": "For instance, the early work  [49] proposes a generic architecture for grid workflow systems that is based on the workflow reference model defined by the Workflow Management Coalition.6",
+            "startOffset": 145753,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 91427,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Such workflow engines usually describe applications using a high-level language with specific data and control flow constructs, parallelization operators, visual edition tools, links with domain-specific application repositories, provenance recording and other features.",
+            "startOffset": 91157,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 148001,
+            "parents": [],
+            "secId": "s000190",
+            "sentence": "Instead, our analysis abstracts and evaluates architectural patterns independently from any particular system, providing general insight about ways to integrate science gateways and workflow engines.",
+            "startOffset": 147802,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 92753,
+            "parents": [
+                {
+                    "id": "s000005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s000010",
+            "sentence": "Domain-specific engines nicely complement e-Science systems that are more oriented towards the exploitation of distributed computing infrastructures, in particular grids and clouds.",
+            "startOffset": 92572,
+            "title": "Workflow engines"
+        },
+        {
+            "endOffset": 104248,
+            "parents": [
+                {
+                    "id": "s000025",
+                    "title": "Architectures"
+                }
+            ],
+            "refoffsets": {
+                "br000145": {
+                    "endOffset": 104082,
+                    "startOffset": 104078
+                }
+            },
+            "secId": "s000040",
+            "sentence": "The integration between the HubZero science gateway and the Pegasus workflow engine performed in  [29] also uses a service architecture, where the d interaction is implemented as a set of calls to Pegasus\u2019 command-line tools (e.g., pegasus-status, pegasus-plan, etc.).",
+            "startOffset": 103980,
+            "title": "Service invocation"
+        },
+        {
+            "endOffset": 112563,
+            "parents": [
+                {
+                    "id": "s000065",
+                    "title": "Real systems"
+                }
+            ],
+            "refoffsets": {
+                "br000180": {
+                    "endOffset": 112359,
+                    "startOffset": 112355
+                }
+            },
+            "secId": "s000095",
+            "sentence": "As detailed in  [36], workflow conversion (interaction g) is implemented through an interactive authoring module where users can check and edit workflow imports, and a mapper module that performs some language substitutions.",
+            "startOffset": 112339,
+            "title": "Workflow conversion with service invocation"
+        },
+        {
+            "endOffset": 138858,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "At the same time, the scheduling constraints created by task encapsulation and nested workflows may become problematic depending on the type of targeted infrastructure.",
+            "startOffset": 138690,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 137167,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "This ordering is consistent across metrics; it reflects the global complexity of the architectures.",
+            "startOffset": 137068,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 139182,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "The availability of multiple engine instances could also become a critical feature for science gateways with important workloads, which would favor task encapsulation and pool.",
+            "startOffset": 139006,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 139808,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "It should be noted that this analysis is only meant for illustration purposes, since it assumes that all criteria have equal weights while real systems would favor some of them.",
+            "startOffset": 139631,
+            "title": "Comparison between architectures"
+        },
+        {
+            "endOffset": 138689,
+            "parents": [
+                {
+                    "id": "s000165",
+                    "title": "Discussion"
+                }
+            ],
+            "secId": "s000170",
+            "sentence": "Nested workflows are the only architecture that can easily accommodate distributed workflow execution, which can be critical in some cases.",
+            "startOffset": 138550,
+            "title": "Comparison between architectures"
+        }
+    ],
+    "docId": "S0167739X17300249",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "tristan.glatard@concordia.ca",
+                "first": "Tristan",
+                "initial": "T.",
+                "last": "Glatard"
+            },
+            {
+                "email": null,
+                "first": "Marc \u00c9tienne",
+                "initial": "M.\u00c9.",
+                "last": "Rousseau"
+            },
+            {
+                "email": null,
+                "first": "Sorina",
+                "initial": "S.",
+                "last": "Camarasu-Pop"
+            },
+            {
+                "email": null,
+                "first": "Reza",
+                "initial": "R.",
+                "last": "Adalat"
+            },
+            {
+                "email": null,
+                "first": "Natacha",
+                "initial": "N.",
+                "last": "Beck"
+            },
+            {
+                "email": null,
+                "first": "Samir",
+                "initial": "S.",
+                "last": "Das"
+            },
+            {
+                "email": null,
+                "first": "Rafael Ferreira",
+                "initial": "R.F.",
+                "last": "da Silva"
+            },
+            {
+                "email": null,
+                "first": "Najmeh",
+                "initial": "N.",
+                "last": "Khalili-Mahani"
+            },
+            {
+                "email": null,
+                "first": "Vladimir",
+                "initial": "V.",
+                "last": "Korkhov"
+            },
+            {
+                "email": null,
+                "first": "Pierre Olivier",
+                "initial": "P.O.",
+                "last": "Quirion"
+            },
+            {
+                "email": null,
+                "first": "Pierre",
+                "initial": "P.",
+                "last": "Rioux"
+            },
+            {
+                "email": null,
+                "first": "S\u00edlvia D.",
+                "initial": "S.D.",
+                "last": "Olabarriaga"
+            },
+            {
+                "email": null,
+                "first": "Pierre",
+                "initial": "P.",
+                "last": "Bellec"
+            },
+            {
+                "email": null,
+                "first": "Alan C.",
+                "initial": "A.C.",
+                "last": "Evans"
+            }
+        ],
+        "doi": "10.1016/j.future.2017.01.005",
+        "firstpage": "239",
+        "issn": "0167739X",
+        "keywords": [
+            "Science gateways",
+            "Software architectures",
+            "Workflow engines"
+        ],
+        "lastpage": "255",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Software architectures to integrate workflow engines in science gateways"
+    }
+}

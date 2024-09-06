@@ -1,0 +1,1953 @@
+{
+    "abstract": "This paper reviews the Euler-Rodrigues formula in the axis-angle representation of rotations, studies its variations and derivations in different mathematical forms as vectors, quaternions and Lie groups and investigates their intrinsic connections. The Euler-Rodrigues formula in the Taylor series expansion is presented and its use as an exponential map of Lie algebras is discussed particularly with a non-normalized vector. The connection between Euler-Rodrigues parameters and the Euler-Rodrigues formula is then demonstrated through quaternion conjugation and the equivalence between quaternion conjugation and an adjoint action of the Lie group is subsequently presented. The paper provides a rich reference for the Euler-Rodrigues formula, the variations and their connections and for their use in rigid body kinematics, dynamics and computer graphics.",
+    "author_highlights": [
+        {
+            "endOffset": 23703,
+            "sentence": "Review variations of the Euler\u2013Rodrigues formula in different mathematical forms",
+            "startOffset": 23623
+        },
+        {
+            "endOffset": 23784,
+            "sentence": "Derive the connections between variations in vectors, quaternions and Lie groups",
+            "startOffset": 23704
+        },
+        {
+            "endOffset": 23867,
+            "sentence": "Give the geometrical interpretation and associate it with the algebraic derivation",
+            "startOffset": 23785
+        },
+        {
+            "endOffset": 23981,
+            "sentence": "Present the equivalence between quaternion conjugation and the adjoint action of the Lie group on the Lie algebra",
+            "startOffset": 23868
+        }
+    ],
+    "bib_entries": {
+        "bb0005": null,
+        "bb0010": null,
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2005.04.004",
+            "firstpage": "41",
+            "issn": "0094114X",
+            "lastpage": "52",
+            "pub_year": 2006,
+            "title": "An historical review of the theoretical development of rigid body displacements from Rodrigues parameters to the finite twist",
+            "volume": "41"
+        },
+        "bb0020": {
+            "authors": [
+                {
+                    "first": "Jeremy J.",
+                    "initial": "J.J.",
+                    "last": "Gray"
+                }
+            ],
+            "doi": "10.1007/BF00595376",
+            "firstpage": "375",
+            "issn": "00039519",
+            "lastpage": "385",
+            "pub_year": 1980,
+            "title": "Olinde Rodrigues' paper of 1840 on transformation groups",
+            "volume": "21"
+        },
+        "bb0025": null,
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "F. C.",
+                    "initial": "F.C.",
+                    "last": "Frank"
+                }
+            ],
+            "doi": "10.1007/BF02649253",
+            "firstpage": "403",
+            "issn": "03602133",
+            "lastpage": "408",
+            "pub_year": 1988,
+            "title": "ORIENTATION MAPPING.",
+            "volume": "19"
+        },
+        "bb0035": {
+            "authors": [
+                {
+                    "first": "Clementina D.",
+                    "initial": "C.D.",
+                    "last": "Mladenova"
+                },
+                {
+                    "first": "Iva\u00eflo M.",
+                    "initial": "I.M.",
+                    "last": "Mladenov"
+                }
+            ],
+            "doi": "10.1016/S0034-4877(11)60030-X",
+            "firstpage": "107",
+            "issn": "00344877",
+            "lastpage": "117",
+            "pub_year": 2011,
+            "title": "Vector decomposition of finite rotations",
+            "volume": "68"
+        },
+        "bb0040": null,
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "K. E.",
+                    "initial": "K.E.",
+                    "last": "Bisshopp"
+                }
+            ],
+            "doi": "10.1115/1.3591509",
+            "firstpage": "179",
+            "issn": "10871357",
+            "lastpage": "184",
+            "pub_year": 1969,
+            "title": "Rodrigues\u2019 formula and the screw matrix",
+            "volume": "91"
+        },
+        "bb0050": null,
+        "bb0055": null,
+        "bb0060": null,
+        "bb0065": null,
+        "bb0070": null,
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "Jose",
+                    "initial": "J.",
+                    "last": "Pujol"
+                }
+            ],
+            "firstpage": "1",
+            "issn": "19389787",
+            "lastpage": "14",
+            "pub_year": 2012,
+            "title": "Hamilton, Rodrigues, Gauss, Quaternions, and rotations: A historical reassessment",
+            "volume": "13"
+        },
+        "bb0080": null,
+        "bb0085": null,
+        "bb0090": {
+            "authors": [
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1115/1.4006951",
+            "issn": "19424302",
+            "pub_year": 2012,
+            "title": "Finite Displacement Screw Operators With Embedded Chasles' Motion",
+            "volume": "4"
+        },
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "Hui",
+                    "initial": "H.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "K. C.",
+                    "initial": "K.C.",
+                    "last": "Gupta"
+                }
+            ],
+            "doi": "10.1115/1.3176034",
+            "firstpage": "139",
+            "issn": "00218936",
+            "lastpage": "145",
+            "pub_year": 1989,
+            "title": "An historical note on finite rotations",
+            "volume": "56"
+        },
+        "bb0100": {
+            "authors": [
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Doran"
+                },
+                {
+                    "first": "Anthony",
+                    "initial": "A.",
+                    "last": "Lasenby"
+                }
+            ],
+            "doi": "10.1017/CBO9780511807497",
+            "firstpage": "1",
+            "lastpage": "578",
+            "pub_year": 2009,
+            "title": "Geometric algebra for physicists",
+            "volume": "9780521480222"
+        },
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "Joe",
+                    "initial": "J.",
+                    "last": "Rooney"
+                }
+            ],
+            "firstpage": "191",
+            "lastpage": "200",
+            "pub_year": 2009,
+            "title": "Aspects of clifford algebra for screw theory"
+        },
+        "bb0110": null,
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "F. C.",
+                    "initial": "F.C.",
+                    "last": "Park"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Ravani"
+                }
+            ],
+            "doi": "10.1115/1.2826114",
+            "firstpage": "36",
+            "issn": "10500472",
+            "lastpage": "40",
+            "pub_year": 1995,
+            "title": "B\u00e9zier curves on riemannian manifolds and lie groups with kinematics applications",
+            "volume": "117"
+        },
+        "bb0120": null,
+        "bb0125": null,
+        "bb0130": null,
+        "bb0135": null,
+        "bb0140": null,
+        "bb0145": {
+            "authors": [
+                {
+                    "first": "F. C.",
+                    "initial": "F.C.",
+                    "last": "Park"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Bobrow"
+                },
+                {
+                    "first": "S. R.",
+                    "initial": "S.R.",
+                    "last": "Ploen"
+                }
+            ],
+            "doi": "10.1177/027836499501400606",
+            "firstpage": "609",
+            "issn": "02783649",
+            "lastpage": "618",
+            "pub_year": 1995,
+            "title": "A Lie Group Formulation of Robot Dynamics",
+            "volume": "14"
+        },
+        "bb0150": {
+            "authors": [
+                {
+                    "first": "Garett A.",
+                    "initial": "G.A.",
+                    "last": "Sohl"
+                },
+                {
+                    "first": "James E.",
+                    "initial": "J.E.",
+                    "last": "Bobrow"
+                }
+            ],
+            "doi": "10.1115/1.1376121",
+            "firstpage": "391",
+            "issn": "00220434",
+            "lastpage": "399",
+            "pub_year": 2001,
+            "title": "A recursive multibody dynamics and sensitivity algorithm for branched kinematic chains",
+            "volume": "123"
+        },
+        "bb0155": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Lewis"
+                },
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                }
+            ],
+            "doi": "10.1007/BF02430634",
+            "firstpage": "253",
+            "issn": "09388974",
+            "lastpage": "299",
+            "pub_year": 1994,
+            "title": "Conserving algorithms for the dynamics of Hamiltonian systems on lie groups",
+            "volume": "4"
+        },
+        "bb0160": {
+            "authors": [
+                {
+                    "first": "O. A.",
+                    "initial": "O.A.",
+                    "last": "Bauchau"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Damilano"
+                },
+                {
+                    "first": "N. J.",
+                    "initial": "N.J.",
+                    "last": "Theron"
+                }
+            ],
+            "doi": "10.1002/nme.1620381605",
+            "firstpage": "2727",
+            "issn": "00295981",
+            "lastpage": "2751",
+            "pub_year": 1995,
+            "title": "Numerical integration of non\u2010linear elastic multi\u2010body systems",
+            "volume": "38"
+        },
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "Olivier A.",
+                    "initial": "O.A.",
+                    "last": "Bauchau"
+                },
+                {
+                    "first": "Lorenzo",
+                    "initial": "L.",
+                    "last": "Trainelli"
+                }
+            ],
+            "doi": "10.1023/A:1024265401576",
+            "firstpage": "71",
+            "issn": "0924090X",
+            "lastpage": "92",
+            "pub_year": 2003,
+            "title": "The vectorial parameterization of rotation",
+            "volume": "32"
+        },
+        "bb0170": null,
+        "bb0175": null,
+        "bb0180": null,
+        "bb0185": {
+            "authors": [
+                {
+                    "first": "Nur Adila Faruk",
+                    "initial": "N.A.F.",
+                    "last": "Senan"
+                },
+                {
+                    "first": "Oliver M.",
+                    "initial": "O.M.",
+                    "last": "O'Reilly"
+                }
+            ],
+            "doi": "10.1016/j.ijengsci.2008.12.008",
+            "firstpage": "595",
+            "issn": "00207225",
+            "lastpage": "609",
+            "pub_year": 2009,
+            "title": "On the use of quaternions and Euler-Rodrigues symmetric parameters with moments and moment potentials",
+            "volume": "47"
+        },
+        "bb0190": {
+            "authors": [
+                {
+                    "first": "A. N.",
+                    "initial": "A.N.",
+                    "last": "Norris"
+                }
+            ],
+            "doi": "10.1177/1081286507077982",
+            "firstpage": "465",
+            "issn": "10812865",
+            "lastpage": "498",
+            "pub_year": 2008,
+            "title": "Euler-Rodrigues and Cayley formulae for rotation of elasticity tensors",
+            "volume": "13"
+        },
+        "bb0195": {
+            "authors": [
+                {
+                    "first": "Sandra",
+                    "initial": "S.",
+                    "last": "Forte"
+                },
+                {
+                    "first": "Maurizio",
+                    "initial": "M.",
+                    "last": "Vianello"
+                }
+            ],
+            "firstpage": "X3",
+            "issn": "00335614",
+            "lastpage": "552",
+            "pub_year": 1998,
+            "title": "Functional bases for transversely isotropic and transversely hemitropic invariants of elasticity tensors",
+            "volume": "51"
+        },
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "M\u00fcller"
+                }
+            ],
+            "doi": "10.7546/jgsp-19-2010-43-72",
+            "firstpage": "43",
+            "issn": "13125192",
+            "lastpage": "72",
+            "pub_year": 2010,
+            "title": "Group theoretical approaches to vector parameterization of rotations",
+            "volume": "19"
+        },
+        "bb0205": {
+            "authors": [
+                {
+                    "first": "Emod",
+                    "initial": "E.",
+                    "last": "Kov\u00e1cs"
+                }
+            ],
+            "firstpage": "175",
+            "issn": "17875021",
+            "lastpage": "186",
+            "pub_year": 2012,
+            "title": "Rotation about an arbitrary axis and reflection through an arbitrary plane",
+            "volume": "40"
+        },
+        "bb0210": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Pujol"
+                }
+            ],
+            "doi": "10.1785/0120080161",
+            "firstpage": "1011",
+            "issn": "00371106",
+            "lastpage": "1027",
+            "pub_year": 2009,
+            "title": "Tutorial on rotations in the theories of finite deformation and micropolar (cosserat) elasticity",
+            "volume": "99"
+        },
+        "bb0215": null,
+        "bb0220": null,
+        "bb0225": null,
+        "bb0230": {
+            "authors": [
+                {
+                    "first": "Q.",
+                    "initial": "Q.",
+                    "last": "Jeffrey Ge"
+                },
+                {
+                    "first": "P. M.",
+                    "initial": "P.M.",
+                    "last": "Larochelle"
+                }
+            ],
+            "doi": "10.1115/1.2829493",
+            "firstpage": "529",
+            "issn": "10500472",
+            "lastpage": "532",
+            "pub_year": 1999,
+            "title": "Algebraic motion approximation with nurbs iviotions and its application to spherical mechanism synthesis",
+            "volume": "121"
+        },
+        "bb0235": {
+            "authors": [
+                {
+                    "first": "Anurag",
+                    "initial": "A.",
+                    "last": "Purwar"
+                },
+                {
+                    "first": "Qiaode Jeffrey",
+                    "initial": "Q.J.",
+                    "last": "Ge"
+                }
+            ],
+            "doi": "10.1115/1.1906263",
+            "firstpage": "967",
+            "issn": "10500472",
+            "lastpage": "972",
+            "pub_year": 2005,
+            "title": "On the effect of dual weights in computer aided design of rational motions",
+            "volume": "127"
+        },
+        "bb0240": {
+            "authors": [
+                {
+                    "first": "Shaoping",
+                    "initial": "S.",
+                    "last": "Bai"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Angeles"
+                }
+            ],
+            "doi": "10.1115/1.4006658",
+            "firstpage": "031003",
+            "issn": "19424302",
+            "pub_year": 2012,
+            "title": "A Robust Solution of the Spatial Burmester Problem",
+            "volume": "4"
+        },
+        "bb0245": null,
+        "bb0250": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Belta"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Kumar"
+                }
+            ],
+            "doi": "10.1243/0954406021524909",
+            "firstpage": "47",
+            "issn": "09544062",
+            "lastpage": "60",
+            "pub_year": 2002,
+            "title": "Euclidean metrics for motion generation on SE(3)",
+            "volume": "216"
+        },
+        "bb0255": {
+            "authors": [
+                {
+                    "first": "Lei",
+                    "initial": "L.",
+                    "last": "Cui"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1109/TRO.2010.2040201",
+            "firstpage": "383",
+            "issn": "15523098",
+            "lastpage": "388",
+            "pub_year": 2010,
+            "title": "A darboux-frame-based formulation of spin-rolling motion of rigid objects with point contact",
+            "volume": "26"
+        },
+        "bb0260": {
+            "authors": [
+                {
+                    "first": "Q. J.",
+                    "initial": "Q.J.",
+                    "last": "Ge"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Ravani"
+                }
+            ],
+            "doi": "10.1115/1.2919447",
+            "firstpage": "756",
+            "issn": "10500472",
+            "lastpage": "762",
+            "pub_year": 1994,
+            "title": "Computer aided geometric design of motion interpolates",
+            "volume": "116"
+        },
+        "bb0265": null,
+        "bb0270": {
+            "authors": [
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "M\u00fcller"
+                }
+            ],
+            "doi": "10.1115/1.4005524",
+            "issn": "19424302",
+            "pub_year": 2012,
+            "title": "On the manifold property of the set of singularities of kinematic mappings: Genericity Conditions",
+            "volume": "4"
+        },
+        "bb0275": {
+            "authors": [
+                {
+                    "first": "J. S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Holland"
+                },
+                {
+                    "first": "D. R.",
+                    "initial": "D.R.",
+                    "last": "Kerr"
+                }
+            ],
+            "doi": "10.1243/PIME_PROC_1995_209_153_02",
+            "firstpage": "263",
+            "issn": "09544062",
+            "lastpage": "271",
+            "pub_year": 1995,
+            "title": "Finite Twist Mapping and its Application to Planar Serial Manipulators with Revolute Joints",
+            "volume": "209"
+        },
+        "bb0280": {
+            "authors": [
+                {
+                    "first": "Berthold K.P.",
+                    "initial": "B.K.P.",
+                    "last": "Horn"
+                }
+            ],
+            "doi": "10.1364/JOSAA.4.000629",
+            "firstpage": "629",
+            "issn": "10847529",
+            "lastpage": "642",
+            "pub_year": 1987,
+            "title": "Closed-form solution of absolute orientation using unit quaternions",
+            "volume": "4"
+        },
+        "bb0285": null,
+        "bb0290": null,
+        "bb0295": {
+            "authors": [
+                {
+                    "first": "Yushu",
+                    "initial": "Y.",
+                    "last": "Yu"
+                },
+                {
+                    "first": "Xilun",
+                    "initial": "X.",
+                    "last": "Ding"
+                },
+                {
+                    "first": "J. Jim",
+                    "initial": "J.J.",
+                    "last": "Zhu"
+                }
+            ],
+            "doi": "10.1016/j.jfranklin.2013.05.022",
+            "firstpage": "2044",
+            "issn": "00160032",
+            "lastpage": "2068",
+            "pub_year": 2013,
+            "title": "Attitude tracking control of a quadrotor UAV in the exponential coordinates",
+            "volume": "350"
+        },
+        "bb0300": {
+            "authors": [
+                {
+                    "first": "Nur Adila Faruk",
+                    "initial": "N.A.F.",
+                    "last": "Senan"
+                },
+                {
+                    "first": "Oliver M.",
+                    "initial": "O.M.",
+                    "last": "O'Reilly"
+                }
+            ],
+            "doi": "10.1016/j.ijengsci.2008.12.008",
+            "firstpage": "595",
+            "issn": "00207225",
+            "lastpage": "609",
+            "pub_year": 2009,
+            "title": "On the use of quaternions and Euler-Rodrigues symmetric parameters with moments and moment potentials",
+            "volume": "47"
+        },
+        "bb0305": {
+            "authors": [
+                {
+                    "first": "Alba",
+                    "initial": "A.",
+                    "last": "Perez"
+                },
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "McCarthy"
+                }
+            ],
+            "doi": "10.1115/1.1737378",
+            "firstpage": "425",
+            "issn": "10500472",
+            "lastpage": "435",
+            "pub_year": 2004,
+            "title": "Dual quaternion synthesis of constrained robotic systems",
+            "volume": "126"
+        },
+        "bb0310": {
+            "authors": [
+                {
+                    "first": "Ketao",
+                    "initial": "K.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "Yuefa",
+                    "initial": "Y.",
+                    "last": "Fang"
+                }
+            ],
+            "doi": "10.1115/1.4002691",
+            "issn": "10500472",
+            "pub_year": 2010,
+            "title": "Topology and constraint analysis of phase change in the metamorphic chain and its evolved mechanism",
+            "volume": "132"
+        },
+        "bb0315": {
+            "authors": [
+                {
+                    "first": "Xilun",
+                    "initial": "X.",
+                    "last": "Ding"
+                },
+                {
+                    "first": "Shengnan",
+                    "initial": "S.",
+                    "last": "Lu"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2013.08.011",
+            "firstpage": "487",
+            "issn": "0094114X",
+            "lastpage": "507",
+            "pub_year": 2013,
+            "title": "Fundamental reconfiguration theory of chain-type modular reconfigurable mechanisms",
+            "volume": "70"
+        },
+        "bb0320": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2013.12.010",
+            "firstpage": "188",
+            "issn": "0094114X",
+            "lastpage": "201",
+            "pub_year": 2014,
+            "title": "Reconfiguration analysis of a 3-DOF parallel mechanism using Euler parameter quaternions and algebraic geometry method",
+            "volume": "74"
+        },
+        "bb0325": {
+            "authors": [
+                {
+                    "first": "Ketao",
+                    "initial": "K.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1115/1.4026337",
+            "issn": "19424302",
+            "pub_year": 2014,
+            "title": "A kirigami-inspired 8R linkage and its evolved overconstrained 6R linkages with the rotational symmetry of order two",
+            "volume": "6"
+        },
+        "bb0330": {
+            "authors": [
+                {
+                    "first": "Dong",
+                    "initial": "D.",
+                    "last": "Gan"
+                },
+                {
+                    "first": "Q.",
+                    "initial": "Q.",
+                    "last": "Liao"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Wei"
+                },
+                {
+                    "first": "J. S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Qiao"
+                }
+            ],
+            "doi": "10.1243/09544062JMES1082",
+            "firstpage": "1593",
+            "issn": "09544062",
+            "lastpage": "1598",
+            "pub_year": 2008,
+            "title": "Dual quaternion-based inverse kinematics of the general spatial 7R mechanism",
+            "volume": "222"
+        },
+        "bb0335": {
+            "authors": [
+                {
+                    "first": "Shuguang",
+                    "initial": "S.",
+                    "last": "Qiao"
+                },
+                {
+                    "first": "Qizheng",
+                    "initial": "Q.",
+                    "last": "Liao"
+                },
+                {
+                    "first": "Shimin",
+                    "initial": "S.",
+                    "last": "Wei"
+                },
+                {
+                    "first": "Hai Jun",
+                    "initial": "H.J.",
+                    "last": "Su"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2009.05.013",
+            "firstpage": "193",
+            "issn": "0094114X",
+            "lastpage": "199",
+            "pub_year": 2010,
+            "title": "Inverse kinematic analysis of the general 6R serial manipulators based on double quaternions",
+            "volume": "45"
+        },
+        "bb0340": null,
+        "bb0345": {
+            "authors": [
+                {
+                    "first": "Guowu",
+                    "initial": "G.",
+                    "last": "Wei"
+                },
+                {
+                    "first": "Yao",
+                    "initial": "Y.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                }
+            ],
+            "doi": "10.1115/1.4027638",
+            "issn": "10500472",
+            "pub_year": 2014,
+            "title": "Synthesis, mobility, and multifurcation of deployable polyhedral mechanisms with radially reciprocating motion",
+            "volume": "136"
+        },
+        "bb0350": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Corke"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Lobo"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Dias"
+                }
+            ],
+            "doi": "10.1177/0278364907079279",
+            "firstpage": "519",
+            "issn": "02783649",
+            "lastpage": "535",
+            "pub_year": 2007,
+            "title": "An introduction to inertial and visual sensing",
+            "volume": "26"
+        },
+        "bb0355": null,
+        "bb0360": {
+            "authors": [
+                {
+                    "first": "Ken",
+                    "initial": "K.",
+                    "last": "Shoemake"
+                }
+            ],
+            "doi": "10.1145/325165.325242",
+            "firstpage": "245",
+            "issn": "00978930",
+            "lastpage": "254",
+            "pub_year": 1985,
+            "title": "ANIMATING ROTATION WITH QUATERNION CURVES.",
+            "volume": "19"
+        },
+        "bb0365": null,
+        "bb0370": null,
+        "bb0375": null,
+        "bb0380": null,
+        "bb0385": null,
+        "bb0390": null,
+        "bb0395": {
+            "authors": [
+                {
+                    "first": "Chintien",
+                    "initial": "C.",
+                    "last": "Huang"
+                },
+                {
+                    "first": "Bernard",
+                    "initial": "B.",
+                    "last": "Roth"
+                }
+            ],
+            "doi": "10.1016/0094-114X(94)90031-0",
+            "firstpage": "207",
+            "issn": "0094114X",
+            "lastpage": "222",
+            "pub_year": 1994,
+            "title": "Analytic expressions for the finite screw systems",
+            "volume": "29"
+        },
+        "bb0400": {
+            "authors": [
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Rees Jones"
+                }
+            ],
+            "doi": "10.1016/S0094-114X(01)00004-0",
+            "firstpage": "633",
+            "issn": "0094114X",
+            "lastpage": "651",
+            "pub_year": 2001,
+            "title": "Interrelationship between screw systems and corresponding reciprocal systems and applications",
+            "volume": "36"
+        },
+        "bb0405": {
+            "authors": [
+                {
+                    "first": "Ettore",
+                    "initial": "E.",
+                    "last": "Pennestr\u00ec"
+                },
+                {
+                    "first": "Pier Paolo",
+                    "initial": "P.P.",
+                    "last": "Valentini"
+                }
+            ],
+            "firstpage": "207",
+            "issn": "18713033",
+            "lastpage": "229",
+            "pub_year": 2009,
+            "title": "Linear dual algebra algorithms and their application to kinematics",
+            "volume": "12"
+        },
+        "bb0410": {
+            "authors": [
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Rees Jones"
+                }
+            ],
+            "doi": "10.1098/rspa.2001.0949",
+            "firstpage": "1845",
+            "issn": "13645021",
+            "lastpage": "1866",
+            "pub_year": 2002,
+            "title": "Null-space construction using cofactors from a screw-algebra context",
+            "volume": "458"
+        },
+        "bb0415": null,
+        "bb0420": null,
+        "bb0425": null,
+        "bb0430": null,
+        "bb0435": {
+            "authors": [
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Siminovitch"
+                }
+            ],
+            "doi": "10.1002/(SICI)1099-0534(1997)9:3<149::AID-CMR3>3.0.CO;2-Z",
+            "firstpage": "149",
+            "issn": "10437347",
+            "lastpage": "171",
+            "pub_year": 1997,
+            "title": "Rotations in NMR: Part I. Euler - Rodrigues parameters and quaternions",
+            "volume": "9"
+        },
+        "bb0440": {
+            "authors": [
+                {
+                    "first": "Dominic",
+                    "initial": "D.",
+                    "last": "Widdows"
+                }
+            ],
+            "doi": "10.1093/qmath/hag024",
+            "firstpage": "463",
+            "issn": "00335606",
+            "lastpage": "481",
+            "pub_year": 2003,
+            "title": "Quaternionic algebra described by Sp(1) representations",
+            "volume": "54"
+        },
+        "bb0445": null,
+        "bb0450": {
+            "authors": [
+                {
+                    "first": "P. R.",
+                    "initial": "P.R.",
+                    "last": "Girard"
+                }
+            ],
+            "doi": "10.1088/0143-0807/5/1/007",
+            "firstpage": "25",
+            "issn": "01430807",
+            "lastpage": "32",
+            "pub_year": 1984,
+            "title": "The quaternion group and modern physics",
+            "volume": "5"
+        },
+        "bb0455": null,
+        "bb0460": null,
+        "bb0465": null,
+        "bb0470": {
+            "authors": [
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Thomas"
+                }
+            ],
+            "doi": "10.1109/TRO.2014.2341312",
+            "firstpage": "1037",
+            "issn": "15523098",
+            "lastpage": "1048",
+            "pub_year": 2014,
+            "title": "Approaching dual quaternions from matrix algebra",
+            "volume": "30"
+        },
+        "bb0475": null,
+        "bb0480": {
+            "authors": [
+                {
+                    "first": "Manfred L.",
+                    "initial": "M.L.",
+                    "last": "Husty"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Pfurner"
+                },
+                {
+                    "first": "Hans Peter",
+                    "initial": "H.P.",
+                    "last": "Schr\u00f6cker"
+                },
+                {
+                    "first": "Katrin",
+                    "initial": "K.",
+                    "last": "Brunnthaler"
+                }
+            ],
+            "doi": "10.1017/S0263574707003530",
+            "firstpage": "661",
+            "issn": "02635747",
+            "lastpage": "675",
+            "pub_year": 2007,
+            "title": "Algebraic methods in mechanism analysis and synthesis",
+            "volume": "25"
+        },
+        "bb0485": {
+            "authors": [
+                {
+                    "first": "Teijo",
+                    "initial": "T.",
+                    "last": "Arponen"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "M\u00fcller"
+                },
+                {
+                    "first": "Samuli",
+                    "initial": "S.",
+                    "last": "Piipponen"
+                },
+                {
+                    "first": "Jukka",
+                    "initial": "J.",
+                    "last": "Tuomela"
+                }
+            ],
+            "doi": "10.1016/j.amc.2014.01.138",
+            "firstpage": "820",
+            "issn": "00963003",
+            "lastpage": "835",
+            "pub_year": 2014,
+            "title": "Computational algebraic geometry and global analysis of regional manipulators",
+            "volume": "232"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 42352,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The paper further reviewed the use of the Euler\u2013Rodrigues formula for the exponential map and a way of generating the Euler\u2013Rodrigues formula from a Taylor series expansion, presenting a derivation of the Euler\u2013Rodrigues formula algebraically.",
+            "startOffset": 42109,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 28771,
+            "parents": [],
+            "refoffsets": {
+                "bb0165": {
+                    "endOffset": 28442,
+                    "startOffset": 28432
+                },
+                "bb0200": {
+                    "endOffset": 28442,
+                    "startOffset": 28432
+                },
+                "bb0225": {
+                    "endOffset": 28442,
+                    "startOffset": 28432
+                },
+                "bb0230": {
+                    "endOffset": 28468,
+                    "startOffset": 28461
+                },
+                "bb0235": {
+                    "endOffset": 28468,
+                    "startOffset": 28461
+                },
+                "bb0240": {
+                    "endOffset": 28468,
+                    "startOffset": 28461
+                },
+                "bb0245": {
+                    "endOffset": 28468,
+                    "startOffset": 28461
+                },
+                "bb0250": {
+                    "endOffset": 28495,
+                    "startOffset": 28488
+                },
+                "bb0255": {
+                    "endOffset": 28495,
+                    "startOffset": 28488
+                },
+                "bb0260": {
+                    "endOffset": 28495,
+                    "startOffset": 28488
+                },
+                "bb0265": {
+                    "endOffset": 28513,
+                    "startOffset": 28509
+                },
+                "bb0270": {
+                    "endOffset": 28540,
+                    "startOffset": 28533
+                },
+                "bb0275": {
+                    "endOffset": 28540,
+                    "startOffset": 28533
+                },
+                "bb0280": {
+                    "endOffset": 28558,
+                    "startOffset": 28554
+                },
+                "bb0285": {
+                    "endOffset": 28590,
+                    "startOffset": 28583
+                },
+                "bb0290": {
+                    "endOffset": 28590,
+                    "startOffset": 28583
+                },
+                "bb0295": {
+                    "endOffset": 28590,
+                    "startOffset": 28583
+                },
+                "bb0300": {
+                    "endOffset": 28606,
+                    "startOffset": 28602
+                },
+                "bb0305": {
+                    "endOffset": 28635,
+                    "startOffset": 28628
+                },
+                "bb0310": {
+                    "endOffset": 28635,
+                    "startOffset": 28628
+                },
+                "bb0315": {
+                    "endOffset": 28660,
+                    "startOffset": 28653
+                },
+                "bb0320": {
+                    "endOffset": 28660,
+                    "startOffset": 28653
+                },
+                "bb0325": {
+                    "endOffset": 28688,
+                    "startOffset": 28681
+                },
+                "bb0330": {
+                    "endOffset": 28688,
+                    "startOffset": 28681
+                },
+                "bb0335": {
+                    "endOffset": 28688,
+                    "startOffset": 28681
+                },
+                "bb0340": {
+                    "endOffset": 28710,
+                    "startOffset": 28703
+                },
+                "bb0345": {
+                    "endOffset": 28710,
+                    "startOffset": 28703
+                },
+                "bb0350": {
+                    "endOffset": 28724,
+                    "startOffset": 28720
+                },
+                "bb0355": {
+                    "endOffset": 28754,
+                    "startOffset": 28747
+                },
+                "bb0360": {
+                    "endOffset": 28754,
+                    "startOffset": 28747
+                },
+                "bb0365": {
+                    "endOffset": 28754,
+                    "startOffset": 28747
+                },
+                "bb0370": {
+                    "endOffset": 28770,
+                    "startOffset": 28766
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Following various studies, the use of the Euler\u2013Rodrigues formula and of the Euler\u2013Rodrigues-parameters formulated unit-quaternion has been extended to a broad range of research topics including vector parameterization of rotations [33,40,45], rational motions [46\u201349], motion generation [50\u201352] and planning [53], kinematic mapping [54,55], orientation [56] and attitude estimation [57\u201359], mechanics [60], constraint analysis [61,62], reconfiguration [63,64], mechanism analysis [65\u201367] and synthesis [68,69], sensing [70] and computer graphics [71\u201373] and vision [74].",
+            "startOffset": 28200,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25970,
+            "parents": [],
+            "refoffsets": {
+                "bb0020": {
+                    "endOffset": 25845,
+                    "startOffset": 25842
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 1980, Gray [4] reviewed Rodrigues' contribution to the combination of two rotations and presented a historical account of this development.",
+            "startOffset": 25828,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41820,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "This paper presented variations of the Euler\u2013Rodrigues formula in different mathematical forms and revealed connections between these forms geometrically and algebraically and in particular the connection with Euler\u2013Rodrigues parameters through quaternion conjugation.",
+            "startOffset": 41552,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 25676,
+            "parents": [],
+            "refoffsets": {
+                "bb0045": {
+                    "endOffset": 25541,
+                    "startOffset": 25538
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 1969, Bisshop [9] studied the formula in vector form of the rotation tensor by presenting a derivation from rotating a vector about an axis by an angle.",
+            "startOffset": 25521,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29251,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper is to examine all Euler\u2013Rodrigues formula variations, present their derivations and discuss their intrinsic connections to provide readers with a complete picture of variations and connections, leading to understanding of the Euler\u2013Rodrigues formula in its variations and uses as an exponential map and a quaternion operator.",
+            "startOffset": 28915,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42812,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Through quaternion conjugation, the paper presented a way of obtaining the Euler\u2013Rodrigues formula and demonstrated that the quaternion conjugation is an left action of the Lie group on a Lie algebra and equivalent to an operation using the Euler\u2013Rodrigues formula as an operator.",
+            "startOffset": 42532,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 34376,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "This can further be illustrated in the following by mapping a skew\u2013symmetric matrix of a Lie algebra element into an orthogonal matrix of a Lie group using the Euler\u2013Rodrigues formula.",
+            "startOffset": 34192,
+            "title": "Algebraic interpretation and the exponential map"
+        },
+        {
+            "endOffset": 36817,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Algebraic interpretation and the exponential map"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The formula maps a non-normalized rotation axis into a rotation matrix.",
+            "startOffset": 36746,
+            "title": "Exponential map of a non-normalized rotation axis"
+        },
+        {
+            "endOffset": 26131,
+            "parents": [],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 26000,
+                    "startOffset": 25996
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 1989, Cheng and Gupta [19] verified the original contribution of Euler and accounted a further contribution of Rodrigues based on Euler\u2013Rodrigues parameters.",
+            "startOffset": 25971,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24575,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 24309,
+                    "startOffset": 24306
+                },
+                "bb0015": {
+                    "endOffset": 24347,
+                    "startOffset": 24344
+                },
+                "bb0020": {
+                    "endOffset": 24465,
+                    "startOffset": 24460
+                },
+                "bb0025": {
+                    "endOffset": 24465,
+                    "startOffset": 24460
+                },
+                "bb0030": {
+                    "endOffset": 24465,
+                    "startOffset": 24460
+                },
+                "bb0035": {
+                    "endOffset": 24507,
+                    "startOffset": 24504
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This was rediscovered independently by Rodrigues [2] in 1840 with Rodrigues parameters [3] of tangent of half the rotation angle attached with coordinates of the rotation axis, known as Rodrigues vector [4\u20136] sometimes called the vector\u2013parameter [7], presenting a way for geometrically constructing a rotation matrix.",
+            "startOffset": 24257,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25520,
+            "parents": [],
+            "refoffsets": {
+                "bb0085": {
+                    "endOffset": 25459,
+                    "startOffset": 25452
+                },
+                "bb0090": {
+                    "endOffset": 25459,
+                    "startOffset": 25452
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The Euler\u2013Rodrigues formula for finite rotations [17,18] raised much interest in the second half of the 20th century.",
+            "startOffset": 25403,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25403,
+            "parents": [],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 24910,
+                    "startOffset": 24906
+                },
+                "bb0060": {
+                    "endOffset": 25011,
+                    "startOffset": 25007
+                },
+                "bb0065": {
+                    "endOffset": 25053,
+                    "startOffset": 25049
+                },
+                "bb0070": {
+                    "endOffset": 25152,
+                    "startOffset": 25145
+                },
+                "bb0075": {
+                    "endOffset": 25152,
+                    "startOffset": 25145
+                },
+                "bb0080": {
+                    "endOffset": 25279,
+                    "startOffset": 25275
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It was illustrated by Cayley [11] that the rotation about an axis by an angle could be implemented by a quaternion transformation [12] that was again interpreted by Cayley [13] physically using Euler\u2013Rodrigues parameters that we now know as the quaternion conjugation [14,15], this coincides with the result of using Rodrigues parameters in the Euler\u2013Rodrigues formula, leading to Cayley transform [16] as a mapping between skew\u2013symmetric matrices of Lie algebra elements and special orthogonal matrices of Lie group elements.",
+            "startOffset": 24877,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36745,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Algebraic interpretation and the exponential map"
+                }
+            ],
+            "refoffsets": {
+                "bb0125": {
+                    "endOffset": 36610,
+                    "startOffset": 36606
+                }
+            },
+            "secId": "s0025",
+            "sentence": "This gives an exponential map [25] from a Lie algebra element to a Lie group element together with its normalization as another variation of the Euler\u2013Rodrigues formula.",
+            "startOffset": 36576,
+            "title": "Exponential map of a non-normalized rotation axis"
+        },
+        {
+            "endOffset": 29974,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "This can be seen in Fig. 1.",
+            "startOffset": 29947,
+            "title": "Geometrical interpretation of the Euler\u2013Rodrigues formula"
+        },
+        {
+            "endOffset": 41540,
+            "parents": [],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 41417,
+                    "startOffset": 41414
+                },
+                "bb0475": {
+                    "endOffset": 41539,
+                    "startOffset": 41535
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The derivation also presents the intrinsic connection between Euler\u2013Rodrigues parameters and Euler\u2013Rodrigues formula and provides a way of implementing the Euler\u2013Rodrigues formula through quaternion conjugation which utilizes the half angle of rotation in kinematics [7], that geometrically describes a rotation and makes the conjugation possible in the form of quaternion triple product [95].",
+            "startOffset": 41147,
+            "title": "Quaternion conjugation and equivalent Euler\u2013Rodrigues formula operation"
+        },
+        {
+            "endOffset": 26869,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 26868,
+                    "startOffset": 26861
+                },
+                "bb0165": {
+                    "endOffset": 26665,
+                    "startOffset": 26661
+                },
+                "bb0170": {
+                    "endOffset": 26868,
+                    "startOffset": 26861
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2003, Bauchau and Trainelli [33] developed an explicit expression of the rotation tensor in terms of vector parameterization based on the Euler\u2013Rodrigues formula and in particular utilized tangent of half the angle of rotations [10,34].",
+            "startOffset": 26630,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34191,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "From the above, the relation between the finite and infinitesimal motion is presented by introducing the infinitesimal rotation to the Euler\u2013Rodrigues formula.",
+            "startOffset": 34032,
+            "title": "Algebraic interpretation and the exponential map"
+        },
+        {
+            "endOffset": 40868,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "In the above derivation of conjugation, it can be seen that the conjugation is a way of executing the Euler\u2013Rodrigues formula and subsequently applies the formula to a Lie algebra element.",
+            "startOffset": 40680,
+            "title": "Quaternion conjugation and equivalent Euler\u2013Rodrigues formula operation"
+        },
+        {
+            "endOffset": 28914,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Though various studies were made, reconciliation of different versions of the Euler\u2013Rodrigues formula and their derivations were vaguely known.",
+            "startOffset": 28771,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42532,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "This then extended through derivation the exponential map to another form of the Euler\u2013Rodrigues formula with respect to a non-normalized vector and established their connections.",
+            "startOffset": 42353,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 40679,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The Euler\u2013Rodrigues formula of rotations in Eq. (13) is in this case again obtained but this time from the quaternion operator.",
+            "startOffset": 40552,
+            "title": "Quaternion conjugation and equivalent Euler\u2013Rodrigues formula operation"
+        },
+        {
+            "endOffset": 43212,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The paper hence provided a foundation of the Euler\u2013Rodrigues formula and presented an aspect of use of the Euler\u2013Rodrigues formula in different forms in the study of rigid body kinematics, dynamics, computer graphics and mechanism analysis and synthesis.",
+            "startOffset": 42958,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 42108,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The paper started by reviewing the Euler\u2013Rodrigues formula from its geometrical content exerting a rotation on a vector and visited the connection between two various representations, relating the formula to the finite and infinitesimal motion in the realm of Lie groups and Lie algebras.",
+            "startOffset": 41820,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 27203,
+            "parents": [],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 27038,
+                    "startOffset": 27034
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2007, Mebius [36] presented a way of obtaining the Euler\u2013Rodrigues formula by substituting Euler\u2013Rodrigues parameters in a 4 \u00d7 4 rotation matrix based on a quaternion representation.",
+            "startOffset": 27018,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24876,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 24852,
+                    "startOffset": 24849
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In addition to Rodrigues parameters, Euler\u2013Rodrigues parameters were revealed in the same paper [2] as the unit quaternion.",
+            "startOffset": 24753,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27371,
+            "parents": [],
+            "refoffsets": {
+                "bb0185": {
+                    "endOffset": 27236,
+                    "startOffset": 27232
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2008, Senan and O'Reilly [37] illustrated rotation tensors with a direct product of quaternions and examined the parameter constraint in Euler\u2013Rodrigues parameters.",
+            "startOffset": 27204,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28199,
+            "parents": [],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 28163,
+                    "startOffset": 28156
+                },
+                "bb0075": {
+                    "endOffset": 28004,
+                    "startOffset": 27997
+                },
+                "bb0210": {
+                    "endOffset": 28004,
+                    "startOffset": 27997
+                },
+                "bb0215": {
+                    "endOffset": 28103,
+                    "startOffset": 28099
+                },
+                "bb0220": {
+                    "endOffset": 28163,
+                    "startOffset": 28156
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the same year, Pujol [15,42] investigated the relation between the composition of rotations and the product of quaternions [43] and related the work to Cayley's early contribution [11,44] through Euler\u2013Rodrigues parameters.",
+            "startOffset": 27973,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26629,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the 21st century, Euler\u2013Rodrigues formula continuously attracted broad interest.",
+            "startOffset": 26546,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 29946,
+            "parents": [],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 29814,
+                    "startOffset": 29808
+                },
+                "bb0050": {
+                    "endOffset": 29814,
+                    "startOffset": 29808
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The half-angle is an essential feature [3,10] of parameterization of rotations and of the measure of pure rotation in the most elegant representation of rotations in kinematics.",
+            "startOffset": 29769,
+            "title": "Geometrical interpretation of the Euler\u2013Rodrigues formula"
+        },
+        {
+            "endOffset": 42958,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "The connection between Euler\u2013Rodrigues parameters in the form of the unit quaternion and the Euler\u2013Rodrigues formula is simultaneously presented.",
+            "startOffset": 42813,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 26546,
+            "parents": [],
+            "refoffsets": {
+                "bb0125": {
+                    "endOffset": 26355,
+                    "startOffset": 26351
+                },
+                "bb0130": {
+                    "endOffset": 26509,
+                    "startOffset": 26502
+                },
+                "bb0135": {
+                    "endOffset": 26509,
+                    "startOffset": 26502
+                },
+                "bb0140": {
+                    "endOffset": 26509,
+                    "startOffset": 26502
+                },
+                "bb0145": {
+                    "endOffset": 26545,
+                    "startOffset": 26538
+                },
+                "bb0150": {
+                    "endOffset": 26545,
+                    "startOffset": 26538
+                },
+                "bb0155": {
+                    "endOffset": 26545,
+                    "startOffset": 26538
+                },
+                "bb0160": {
+                    "endOffset": 26545,
+                    "startOffset": 26538
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In modern mathematics, Euler\u2013Rodrigues formula is used as an exponential map [25] that converts Lie algebra so(3) into Lie group SO(3), providing an algorithm for the exponential map without calculating the full matrix exponent [26\u201328] and for multi-body dynamics [29\u201332].",
+            "startOffset": 26274,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40551,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Hence a rotation can be completed by quaternion conjugation in Eq. (31) which exerts a linear transformation on a Lie algebra element.",
+            "startOffset": 40417,
+            "title": "Quaternion conjugation and equivalent Euler\u2013Rodrigues formula operation"
+        },
+        {
+            "endOffset": 24752,
+            "parents": [],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 24633,
+                    "startOffset": 24630
+                },
+                "bb0045": {
+                    "endOffset": 24647,
+                    "startOffset": 24644
+                },
+                "bb0050": {
+                    "endOffset": 24674,
+                    "startOffset": 24670
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The vector form of this formula was revealed by Gibbs [8], Bisshopp [9], and Bottema and Roth [10] in their presentation of the Rodrigues formulae in planar and spatial motion.",
+            "startOffset": 24576,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27017,
+            "parents": [],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 26898,
+                    "startOffset": 26892
+                },
+                "bb0175": {
+                    "endOffset": 26898,
+                    "startOffset": 26892
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2004 and 2006, Dai [3,35] reviewed Euler\u2013Rodrigues parameters in the context of theoretical development of rigid body displacement historically.",
+            "startOffset": 26870,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41147,
+            "parents": [],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 41098,
+                    "startOffset": 41091
+                },
+                "bb0170": {
+                    "endOffset": 41098,
+                    "startOffset": 41091
+                }
+            },
+            "secId": "s0030",
+            "sentence": "This quaternion conjugation implements an operation by the Euler\u2013Rodrigues formula and the equivalence [34] is confirmed between the conjugation applied to a Lie algebra element in pure quaternion form and the left action [27,34] applied to a Lie algebra element in vector form.",
+            "startOffset": 40869,
+            "title": "Quaternion conjugation and equivalent Euler\u2013Rodrigues formula operation"
+        },
+        {
+            "endOffset": 26273,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 26253,
+                    "startOffset": 26243
+                },
+                "bb0100": {
+                    "endOffset": 26218,
+                    "startOffset": 26211
+                },
+                "bb0105": {
+                    "endOffset": 26218,
+                    "startOffset": 26211
+                },
+                "bb0110": {
+                    "endOffset": 26253,
+                    "startOffset": 26243
+                },
+                "bb0115": {
+                    "endOffset": 26253,
+                    "startOffset": 26243
+                },
+                "bb0120": {
+                    "endOffset": 26272,
+                    "startOffset": 26268
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Since 1980s, Euler\u2013Rodrigues formula has been widely used in geometric algebra [20,21], theoretical kinematics [10,22,23], and robotics [24].",
+            "startOffset": 26132,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27972,
+            "parents": [],
+            "refoffsets": {
+                "bb0205": {
+                    "endOffset": 27855,
+                    "startOffset": 27851
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2012, Kov\u00e1cs [41] gave a new derivation of the Euler\u2013Rodrigues formula based on a matrix transformation of three continuous rotations.",
+            "startOffset": 27835,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24256,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 24150,
+                    "startOffset": 24147
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Euler\u2013Rodrigues formula was first revealed in Euler's equations [1] published in 1775 in the way of change of direction cosines of a unit vector before and after a rotation.",
+            "startOffset": 24083,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27834,
+            "parents": [],
+            "refoffsets": {
+                "bb0200": {
+                    "endOffset": 27632,
+                    "startOffset": 27628
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2010, M\u00fcller [40] used a Cayley transformation to obtain a modified vector parameterization that represents an extension of the Rodrigues parameters, which reduces the computational complexity while increasing accuracy.",
+            "startOffset": 27612,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27611,
+            "parents": [],
+            "refoffsets": {
+                "bb0190": {
+                    "endOffset": 27401,
+                    "startOffset": 27397
+                },
+                "bb0195": {
+                    "endOffset": 27610,
+                    "startOffset": 27606
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the same year, Norris [38] applied the Euler\u2013Rodrigues formula to developing rotation of tensors in elasticity by projecting it onto the hexagonal symmetry defined by axes of rotations with Carton decomposition of rotation tensors [39].",
+            "startOffset": 27372,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25827,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 25707,
+                    "startOffset": 25703
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 1979, Bottema and Roth [10] presented Rodrigues formulae for rigid body displacements of various motions and put forward vectorial representations.",
+            "startOffset": 25677,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0094114X15000415",
+    "metadata": {
+        "asjc": [
+            "1502",
+            "1706",
+            "2210",
+            "2211"
+        ],
+        "authors": [
+            {
+                "email": "jian.dai@kcl.ac.uk",
+                "first": "Jian S.",
+                "initial": "J.S.",
+                "last": "Dai"
+            }
+        ],
+        "doi": "10.1016/j.mechmachtheory.2015.03.004",
+        "firstpage": "144",
+        "issn": "0094114X",
+        "keywords": [
+            "Euler-Rodrigues formula",
+            "Exponential map",
+            "Kinematics",
+            "Lie algebras",
+            "Lie groups",
+            "Quaternions"
+        ],
+        "lastpage": "152",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "CENG",
+            "COMP",
+            "ENGI"
+        ],
+        "title": "Euler-Rodrigues formula variations, quaternion conjugation and intrinsic connections"
+    }
+}

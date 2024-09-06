@@ -1,0 +1,3579 @@
+{
+    "abstract": "Within the research project TAURA, a traffic noise auralization system was developed that covers road traffic and railway noise. This paper focuses on an emission synthesizer for railway noise and presents a concept for rolling and impact noise. The synthesis is based on a physical approach in which the noise generation mechanism is modeled in the time domain. As a starting point, equivalent roughness patterns of each wheel and the rail are generated. These spatial signals are used to implicitly model the mechanical excitation of the wheel/rail system. Transfer paths describing the vibrational behavior and the radiation of wheels and rail are implemented as digital filters. This approach features a high degree of flexibility but requires knowledge of the detailed model parameters.",
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "Mendel",
+                    "initial": "M.",
+                    "last": "Kleiner"
+                },
+                {
+                    "first": "Bengt Inge",
+                    "initial": "B.I.",
+                    "last": "Dalenback"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Svensson"
+                }
+            ],
+            "firstpage": "861",
+            "issn": "00047554",
+            "lastpage": "875",
+            "pub_year": 1993,
+            "title": "Auralization - an overview",
+            "volume": "41"
+        },
+        "b0010": null,
+        "b0015": {
+            "authors": [
+                {
+                    "first": "Lauri",
+                    "initial": "L.",
+                    "last": "Savioja"
+                },
+                {
+                    "first": "U. Peter",
+                    "initial": "U.P.",
+                    "last": "Svensson"
+                }
+            ],
+            "doi": "10.1121/1.4926438",
+            "firstpage": "708",
+            "issn": "00014966",
+            "lastpage": "730",
+            "pub_year": 2015,
+            "title": "Overview of geometrical room acoustic modeling techniques",
+            "volume": "138"
+        },
+        "b0020": null,
+        "b0025": null,
+        "b0030": {
+            "authors": [
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Jagla"
+                },
+                {
+                    "first": "Julien",
+                    "initial": "J.",
+                    "last": "Maillard"
+                },
+                {
+                    "first": "Nadine",
+                    "initial": "N.",
+                    "last": "Martin"
+                }
+            ],
+            "doi": "10.1121/1.4754663",
+            "firstpage": "3098",
+            "issn": "00014966",
+            "lastpage": "3108",
+            "pmid": "23145595",
+            "pub_year": 2012,
+            "title": "Sample-based engine noise synthesis using an enhanced pitch-synchronous overlap-And-Add method",
+            "volume": "132"
+        },
+        "b0035": {
+            "authors": [
+                {
+                    "first": "Reto",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "B\u00fctler"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                }
+            ],
+            "doi": "10.3390/app6010005",
+            "firstpage": "1",
+            "issn": "20763417",
+            "lastpage": "27",
+            "pub_year": 2016,
+            "title": "Auralization of accelerating passenger cars using spectral modeling synthesis",
+            "volume": "6"
+        },
+        "b0040": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Arntzen"
+                },
+                {
+                    "first": "D. G.",
+                    "initial": "D.G.",
+                    "last": "Simons"
+                }
+            ],
+            "doi": "10.1016/j.apacoust.2013.09.002",
+            "firstpage": "99",
+            "issn": "0003682X",
+            "lastpage": "106",
+            "pub_year": 2014,
+            "title": "Modeling and synthesis of aircraft flyover noise",
+            "volume": "84"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Arntzen"
+                },
+                {
+                    "first": "D. G.",
+                    "initial": "D.G.",
+                    "last": "Simons"
+                }
+            ],
+            "doi": "10.1260/1475-472X.13.5-6.449",
+            "firstpage": "449",
+            "issn": "1475472X",
+            "lastpage": "462",
+            "pub_year": 2014,
+            "title": "Ground reflection with turbulence induced coherence loss in flyover auralization",
+            "volume": "13"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "Stephen A.",
+                    "initial": "S.A.",
+                    "last": "Rizzi"
+                },
+                {
+                    "first": "Aric R.",
+                    "initial": "A.R.",
+                    "last": "Aumann"
+                },
+                {
+                    "first": "Leonard V.",
+                    "initial": "L.V.",
+                    "last": "Lopes"
+                },
+                {
+                    "first": "Casey L.",
+                    "initial": "C.L.",
+                    "last": "Burley"
+                }
+            ],
+            "doi": "10.2514/1.C032572",
+            "firstpage": "1914",
+            "issn": "00218669",
+            "lastpage": "1926",
+            "pub_year": 2014,
+            "title": "Auralization of hybrid wing-body aircraft flyover noise from system noise predictions",
+            "volume": "51"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Abhishek",
+                    "initial": "A.",
+                    "last": "Sahai"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Wefers"
+                },
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "Pick"
+                },
+                {
+                    "first": "Eike",
+                    "initial": "E.",
+                    "last": "Stumpf"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Vorl\u00e4nder"
+                },
+                {
+                    "first": "Torsten",
+                    "initial": "T.",
+                    "last": "Kuhlen"
+                }
+            ],
+            "doi": "10.1016/j.apacoust.2015.08.002",
+            "firstpage": "24",
+            "issn": "0003682X",
+            "lastpage": "38",
+            "pub_year": 2016,
+            "title": "Interactive simulation of aircraft noise in aural and visual virtual environments",
+            "volume": "101"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Reto",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                },
+                {
+                    "first": "Menno",
+                    "initial": "M.",
+                    "last": "M\u00fcller"
+                },
+                {
+                    "first": "Madeleine",
+                    "initial": "M.",
+                    "last": "Manyoky"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Eggenschwiler"
+                }
+            ],
+            "doi": "10.3813/AAA.918683",
+            "firstpage": "25",
+            "issn": "16101928",
+            "lastpage": "33",
+            "pub_year": 2014,
+            "title": "Auralization of wind turbine noise: Emission synthesis",
+            "volume": "100"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                },
+                {
+                    "first": "Reto",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "Menno",
+                    "initial": "M.",
+                    "last": "M\u00fcller"
+                },
+                {
+                    "first": "Madeleine",
+                    "initial": "M.",
+                    "last": "Manyoky"
+                },
+                {
+                    "first": "Ulrike",
+                    "initial": "U.",
+                    "last": "Wissen Hayek"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Eggenschwiler"
+                }
+            ],
+            "doi": "10.3813/AAA.918682",
+            "firstpage": "13",
+            "issn": "16101928",
+            "lastpage": "24",
+            "pub_year": 2014,
+            "title": "Auralization of wind turbine noise: Propagation filtering and vegetation noise synthesis",
+            "volume": "100"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Klemenz"
+                }
+            ],
+            "firstpage": "779",
+            "issn": "16101928",
+            "lastpage": "788",
+            "pub_year": 2005,
+            "title": "Sound synthesis of starting electric railbound vehicles and the influence of consonance on sound quality",
+            "volume": "91"
+        },
+        "b0075": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Khan"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ulhas"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Goel"
+                }
+            ],
+            "firstpage": "1025",
+            "issn": "22265147",
+            "lastpage": "1030",
+            "pub_year": 2008,
+            "title": "Synthesis of pass-by railway noise"
+        },
+        "b0080": null,
+        "b0085": {
+            "authors": [
+                {
+                    "first": "Estelle",
+                    "initial": "E.",
+                    "last": "Bongini"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Molla"
+                },
+                {
+                    "first": "P. E.",
+                    "initial": "P.E.",
+                    "last": "Gautier"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Habault"
+                },
+                {
+                    "first": "P. O.",
+                    "initial": "P.O.",
+                    "last": "Matt\u00e9i"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Poisson"
+                }
+            ],
+            "doi": "10.1007/978-3-540-74893-9_45",
+            "firstpage": "320",
+            "issn": "16122909",
+            "lastpage": "326",
+            "pub_year": 2008,
+            "title": "Synthesis of noise of operating vehicles: Development within SILENCE of a tool with listening features",
+            "volume": "99"
+        },
+        "b0090": null,
+        "b0095": null,
+        "b0100": {
+            "authors": [
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Peplow"
+                },
+                {
+                    "first": "Jens",
+                    "initial": "J.",
+                    "last": "Forss\u00e9n"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Lund\u00e9n"
+                },
+                {
+                    "first": "Mats E.",
+                    "initial": "M.E.",
+                    "last": "Nilsson"
+                }
+            ],
+            "firstpage": "665",
+            "issn": "22213767",
+            "lastpage": "669",
+            "pub_year": 2011,
+            "title": "Exterior auralization of traffic noise within the LISTEN project"
+        },
+        "b0105": {
+            "authors": [
+                {
+                    "first": "Fanyu",
+                    "initial": "F.",
+                    "last": "Meng"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Wefers"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Vorlaender"
+                }
+            ],
+            "firstpage": "1703",
+            "lastpage": "1708",
+            "pub_year": 2020,
+            "title": "Acquisition of exterior multiple sound sources for train auralization based on beamforming"
+        },
+        "b0110": null,
+        "b0115": null,
+        "b0120": {
+            "authors": [
+                {
+                    "first": "Alex M.",
+                    "initial": "A.M.",
+                    "last": "Remennikov"
+                },
+                {
+                    "first": "Sakdirat",
+                    "initial": "S.",
+                    "last": "Kaewunruen"
+                }
+            ],
+            "doi": "10.1002/stc.227",
+            "firstpage": "207",
+            "issn": "15452255",
+            "lastpage": "234",
+            "pub_year": 2008,
+            "title": "A review of loading conditions for railway track structures due to train and track vertical interaction",
+            "volume": "15"
+        },
+        "b0125": {
+            "authors": [
+                {
+                    "first": "T. X.",
+                    "initial": "T.X.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1006/jsvi.2001.3980",
+            "firstpage": "115",
+            "issn": "0022460X",
+            "lastpage": "139",
+            "pub_year": 2002,
+            "title": "A hybrid model for the noise generation due to railway wheel flats",
+            "volume": "251"
+        },
+        "b0130": {
+            "authors": [
+                {
+                    "first": "T. X.",
+                    "initial": "T.X.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1016/S0022-460X(03)00709-0",
+            "firstpage": "485",
+            "issn": "0022460X",
+            "lastpage": "496",
+            "pub_year": 2003,
+            "title": "On the impact noise generation due to a wheel passing over rail joints",
+            "volume": "267"
+        },
+        "b0135": {
+            "authors": [
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1006/jsvi.1993.1082",
+            "firstpage": "387",
+            "issn": "0022460X",
+            "lastpage": "400",
+            "pub_year": 1993,
+            "title": "Wheel-rail noise generation, part I: Introduction and interaction model",
+            "volume": "161"
+        },
+        "b0140": null,
+        "b0145": {
+            "authors": [
+                {
+                    "first": "Reto",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "Jean Marc",
+                    "initial": "J.M.",
+                    "last": "Wunderli"
+                },
+                {
+                    "first": "Armin",
+                    "initial": "A.",
+                    "last": "Zemp"
+                },
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "Sohr"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                }
+            ],
+            "firstpage": "3466",
+            "lastpage": "3472",
+            "pub_year": 2016,
+            "title": "Auralisation of railway noise: A concept for the emission synthesis of rolling and impact noise"
+        },
+        "b0150": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Thron"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Hecht"
+                }
+            ],
+            "doi": "10.3813/AAA.918346",
+            "firstpage": "873",
+            "issn": "16101928",
+            "lastpage": "883",
+            "pub_year": 2010,
+            "title": "The sonRAIL emission model for railway noise in Switzerland",
+            "volume": "96"
+        },
+        "b0155": null,
+        "b0160": null,
+        "b0165": {
+            "authors": [
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                }
+            ],
+            "doi": "10.3813/AAA.918193",
+            "firstpage": "644",
+            "issn": "16101928",
+            "lastpage": "652",
+            "pub_year": 2009,
+            "title": "Calculation of reflections in an urban environment",
+            "volume": "95"
+        },
+        "b0170": null,
+        "b0175": {
+            "authors": [
+                {
+                    "first": "Jean Marc",
+                    "initial": "J.M.",
+                    "last": "Wunderli"
+                }
+            ],
+            "doi": "10.3813/AAA.918510",
+            "firstpage": "263",
+            "issn": "16101928",
+            "lastpage": "278",
+            "pub_year": 2012,
+            "title": "An extended model to predict reflections from forests",
+            "volume": "98"
+        },
+        "b0180": {
+            "authors": [
+                {
+                    "first": "Reto",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "Jean Marc",
+                    "initial": "J.M.",
+                    "last": "Wunderli"
+                }
+            ],
+            "doi": "10.3813/AAA.918404",
+            "firstpage": "243",
+            "issn": "16101928",
+            "lastpage": "253",
+            "pub_year": 2011,
+            "title": "A model to predict sound reflections from cliffs",
+            "volume": "97"
+        },
+        "b0185": {
+            "authors": [
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Wunderli"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Pieren"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                }
+            ],
+            "doi": "10.3397/1.3701000",
+            "firstpage": "224",
+            "issn": "07362501",
+            "lastpage": "235",
+            "pub_year": 2012,
+            "title": "The Swiss shooting sound calculation model sonARMS",
+            "volume": "60"
+        },
+        "b0190": {
+            "authors": [
+                {
+                    "first": "Corinne",
+                    "initial": "C.",
+                    "last": "Talotte"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "van der Stap"
+                },
+                {
+                    "first": "Matias",
+                    "initial": "M.",
+                    "last": "Ringheim"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Dittrich"
+                },
+                {
+                    "first": "Xuetao",
+                    "initial": "X.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Doroth\u00e9e",
+                    "initial": "D.",
+                    "last": "Stiebel"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2005.12.020",
+            "firstpage": "975",
+            "issn": "0022460X",
+            "lastpage": "985",
+            "pub_year": 2006,
+            "title": "Railway source models for integration in the new European noise prediction method proposed in Harmonoise",
+            "volume": "293"
+        },
+        "b0195": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Dittrich"
+                }
+            ],
+            "firstpage": "185",
+            "issn": "16101928",
+            "lastpage": "200",
+            "pub_year": 2007,
+            "title": "The IMAGINE source model for railway noise prediction",
+            "volume": "93"
+        },
+        "b0200": null,
+        "b0205": {
+            "authors": [
+                {
+                    "first": "Giovanni",
+                    "initial": "G.",
+                    "last": "De Poli"
+                }
+            ],
+            "doi": "10.2307/3679529",
+            "firstpage": "8",
+            "issn": "01489267",
+            "lastpage": "26",
+            "pub_year": 1983,
+            "title": "TUTORIAL ON DIGITAL SOUND SYNTHESIS TECHNIQUES.",
+            "volume": "7"
+        },
+        "b0210": null,
+        "b0215": null,
+        "b0220": null,
+        "b0225": {
+            "authors": [
+                {
+                    "first": "Xavier",
+                    "initial": "X.",
+                    "last": "Serra"
+                },
+                {
+                    "first": "Julius O.",
+                    "initial": "J.O.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.2307/3680788",
+            "firstpage": "12",
+            "issn": "01489267",
+            "lastpage": "24",
+            "pub_year": 1990,
+            "title": "Spectral modeling synthesis. A sound analysis/synthesis system based on a deterministic plus stochastic decomposition",
+            "volume": "14"
+        },
+        "b0230": {
+            "authors": [
+                {
+                    "first": "Xavier",
+                    "initial": "X.",
+                    "last": "Serra"
+                }
+            ],
+            "firstpage": "91",
+            "lastpage": "122",
+            "pub_year": 2013,
+            "title": "Musical sound modeling with sinusoids plus nois"
+        },
+        "b0235": {
+            "authors": [
+                {
+                    "first": "Perry R.",
+                    "initial": "P.R.",
+                    "last": "Cook"
+                }
+            ],
+            "doi": "10.2307/3681012",
+            "firstpage": "38",
+            "issn": "01489267",
+            "lastpage": "49",
+            "pub_year": 1997,
+            "title": "Physically informed sonic modeling (PhISM): Synthesis of percussive sounds",
+            "volume": "21"
+        },
+        "b0240": {
+            "authors": [
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Avanzini"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Rath"
+                },
+                {
+                    "first": "Davide",
+                    "initial": "D.",
+                    "last": "Rocchesso"
+                }
+            ],
+            "doi": "10.1109/ICME.2002.1035636",
+            "firstpage": "445",
+            "lastpage": "448",
+            "pub_year": 2002,
+            "title": "Physically-based audio rendering of contact",
+            "volume": "2"
+        },
+        "b0245": {
+            "authors": [
+                {
+                    "first": "Kees",
+                    "initial": "K.",
+                    "last": "Van Den Doel"
+                },
+                {
+                    "first": "Dinesh K.",
+                    "initial": "D.K.",
+                    "last": "Pai"
+                }
+            ],
+            "doi": "10.1201/9781439864869-7",
+            "firstpage": "99",
+            "lastpage": "120",
+            "pub_year": 2007,
+            "title": "Modal synthesis for vibrating objects"
+        },
+        "b0250": {
+            "authors": [
+                {
+                    "first": "Luca",
+                    "initial": "L.",
+                    "last": "Turchet"
+                }
+            ],
+            "doi": "10.1016/j.apacoust.2015.05.013",
+            "firstpage": "46",
+            "issn": "0003682X",
+            "lastpage": "68",
+            "pub_year": 2016,
+            "title": "Footstep sounds synthesis: Design, implementation, and evaluation of foot-floor interactions, surface materials, shoe types, and walkers' features",
+            "volume": "107"
+        },
+        "b0255": {
+            "authors": [
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Thompson"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Hemsworth"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Vincent"
+                }
+            ],
+            "doi": "10.1006/jsvi.1996.0252",
+            "firstpage": "123",
+            "issn": "0022460X",
+            "lastpage": "135",
+            "pub_year": 1996,
+            "title": "Experimental validation of the twins prediction program for rolling noise, part 1: Description of the model and method",
+            "volume": "193"
+        },
+        "b0260": null,
+        "b0265": null,
+        "b0270": {
+            "authors": [
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Thompson"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Vincent"
+                },
+                {
+                    "first": "P. E.",
+                    "initial": "P.E.",
+                    "last": "Gautier"
+                }
+            ],
+            "doi": "10.1006/jsvi.1998.2107",
+            "firstpage": "587",
+            "issn": "0022460X",
+            "lastpage": "609",
+            "pub_year": 1999,
+            "title": "Validation of a model for railway rolling noise using field measurements with sinusoidally profiled wheels",
+            "volume": "223"
+        },
+        "b0275": null,
+        "b0280": {
+            "authors": [
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Heutschi"
+                }
+            ],
+            "doi": "10.3813/AAA.918232",
+            "firstpage": "1006",
+            "issn": "16101928",
+            "lastpage": "1012",
+            "pub_year": 2009,
+            "title": "Sound propagation over ballast surfaces",
+            "volume": "95"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 113100,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In the third panel again, the equidistant impulses due to the wheel flat and the single impulse due to the impact at 7 m as well as the smoothing effect of the contact filter can be observed.",
+            "startOffset": 112909,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 91093,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For most exposure situations, a train has to be viewed as an extended source as its total length is typically larger than or of similar magnitude as the distance to the receiver point.",
+            "startOffset": 90909,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 125486,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The shown data was calculated for a distance of 7.5 m, 60 km/h speed and 1 s integration time.",
+            "startOffset": 125392,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 132426,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Spectral patterns of rolling noise were observed in narrowband spectra which showed distinct peaks which are due to different kinds of physical phenomena.",
+            "startOffset": 132272,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 89959,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The second module is a series of filters that simulate the propagation effects of the sound waves traveling from the source to the virtual observer point.",
+            "startOffset": 89805,
+            "title": "Model"
+        },
+        {
+            "endOffset": 118827,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Similar to Fig. 4, Fig. 14 shows measured narrowband spectra of sound pressure signals recorded close to the passing of axles of the same type.",
+            "startOffset": 118684,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 130701,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "These peaks are attributed to the resonances included in the transfer path filters of the vehicle as defined in Eq. (23), i.e. due to the vibration.",
+            "startOffset": 130553,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 118413,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "However, listening tests revealed that different filter types with a more complex frequency response are needed.",
+            "startOffset": 118301,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 134916,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The presented auralization model is able to synthesize rolling and impact noise of railway noise without audible artifacts at a high audio quality.",
+            "startOffset": 134769,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 118927,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Between 1 and 8 kHz, the fluctuating frequency dependency of rolling noise can be clearly observed.",
+            "startOffset": 118828,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 87018,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Hence in an auralization, signals with a wide frequency content need to be utilized.",
+            "startOffset": 86934,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97330,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "A physical approach on that basis has the advantage that it allows the extrapolation to situations for which no synthesizer parameters have been measured.",
+            "startOffset": 97176,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 98122,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The basis of the proposed auralization model is (in a statistical sense) an estimate of the surface microstructure (i.e. the roughness) of the rail and the wheels.",
+            "startOffset": 97959,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 134480,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Further, typical audible railway noise characteristics such as squeal and rattling would demand a model with more complexity and subtlety.",
+            "startOffset": 134342,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 119198,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "For higher speeds, the peaks are still present but somewhat less pronounced due to the Doppler effect.",
+            "startOffset": 119096,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 90908,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "They all move at the same speed which is equivalent to the traveling speed V of the train.",
+            "startOffset": 90818,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 90817,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The train composition as an acoustical source is represented by a series of moving point sources.",
+            "startOffset": 90720,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 95120,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In this example, a series of typical features of railway noise can be pointed out.",
+            "startOffset": 95038,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 97612,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0125": {
+                    "endOffset": 97571,
+                    "startOffset": 97567
+                },
+                "b0130": {
+                    "endOffset": 97611,
+                    "startOffset": 97607
+                }
+            },
+            "secId": "s0025",
+            "sentence": "For railway noise, transient sounds occur notably in the context of wheel flats [25], insulated rail joints or switches [26].",
+            "startOffset": 97487,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 134029,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The latter means that the approach allows for interpolation between known situations but also the extrapolations to new situations, i.e. future scenarios.",
+            "startOffset": 133875,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 86256,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Rolling noise is generated by very small amplitude undulations of the wheel and the rail running surfaces.",
+            "startOffset": 86150,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100082,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The operating principle of the generators is depicted in Fig. 6.",
+            "startOffset": 100018,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 90402,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The third module is a reproduction system, which adequately renders the received signals to headphones or a multi-channel loudspeaker system.",
+            "startOffset": 90261,
+            "title": "Model"
+        },
+        {
+            "endOffset": 95404,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This is due to different types of wagons, as during the first part, passenger cars (K-braked), and in the second part, freight wagons (Ci-braked) are passing by.",
+            "startOffset": 95243,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 95684,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Thirdly, fine spectral patterns consisting of peaks and dips can be observed throughout this example.",
+            "startOffset": 95583,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 84782,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For railway noise where noise mitigation measures are diverse and costly, such an assessment of the effectiveness of different measures could be helpful.",
+            "startOffset": 84629,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 133013,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Further, it is insufficient to rely on 1/3 octave band data only.",
+            "startOffset": 132948,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 86933,
+            "parents": [],
+            "refoffsets": {
+                "b0115": {
+                    "endOffset": 86932,
+                    "startOffset": 86925
+                },
+                "b0135": {
+                    "endOffset": 86932,
+                    "startOffset": 86925
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The maximum sound pressure level lies in the mid frequencies, typically in the range of 500 Hz to 2 kHz [27,23].",
+            "startOffset": 86821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91271,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "To correctly model ground reflections and shielding, the source height is of importance.",
+            "startOffset": 91183,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 121608,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "For higher frequencies, it is more difficult to discern clear spectral patterns.",
+            "startOffset": 121528,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 88106,
+            "parents": [],
+            "refoffsets": {
+                "b0150": {
+                    "endOffset": 88089,
+                    "startOffset": 88085
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The measurement sites typically consisted of two-track sections (see [30] for the set-up).",
+            "startOffset": 88016,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 133138,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "In addition, modal data of the wheel/rail system has to be included to create the required timbre and thus realistic sounds.",
+            "startOffset": 133014,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97175,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Therefore in the next section we propose a physical approach that includes modeling of the mechanical excitation of the wheel/rail system and the vibrational behavior of the system separately.",
+            "startOffset": 96983,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 112427,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "From top to bottom, the first panel shows the random structure of the rail roughness which was generated based on the measurement data from Fig. 7.",
+            "startOffset": 112280,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 98523,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "These effects are characterized by transfer paths which are applied in the time domain using digital filters.",
+            "startOffset": 98414,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 87775,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In the years 2007 and 2008 a large railway noise measurement campaign was carried out in Switzerland in the context of the sonRAIL project.",
+            "startOffset": 87636,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 83941,
+            "parents": [],
+            "refoffsets": {
+                "b0075": {
+                    "endOffset": 83832,
+                    "startOffset": 83828
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In [15] train pass-bys have been auralized based on a combination of filtered and resynthesized binaural recordings.",
+            "startOffset": 83825,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112908,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The peaks of the wheel flat are distinctly above the wheel roughness although the underlying equivalent levels at high wavenumbers are lower.",
+            "startOffset": 112767,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 83824,
+            "parents": [],
+            "refoffsets": {
+                "b0070": {
+                    "endOffset": 83728,
+                    "startOffset": 83724
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In [14] the sound quality of traction noise of starting vehicles was assessed using synthesized sounds.",
+            "startOffset": 83721,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98244,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "These roughness signals are then combined and processed to obtain the mechanical excitation of the wheel/track structure.",
+            "startOffset": 98123,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 95758,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "These spectral peaks and dips seem to differ between the two wagon types.",
+            "startOffset": 95685,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 128766,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Panel (ii) of Fig. 4 shows sound pressure spectra which were calculated from auralized pass-bys at an observer point close to the track.",
+            "startOffset": 128630,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 97486,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0235": {
+                    "endOffset": 97461,
+                    "startOffset": 97454
+                },
+                "b0240": {
+                    "endOffset": 97461,
+                    "startOffset": 97454
+                },
+                "b0245": {
+                    "endOffset": 97461,
+                    "startOffset": 97454
+                },
+                "b0250": {
+                    "endOffset": 97485,
+                    "startOffset": 97481
+                }
+            },
+            "secId": "s0025",
+            "sentence": "This approach has already proven to be successful for the synthesis of transient sounds, specifically percussion and bells [47\u201349] or footstep sounds [50].",
+            "startOffset": 97331,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 88015,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "At all sites, sound pressure and rail accelerations were synchronously measured and passing axles were detected using light barriers.",
+            "startOffset": 87882,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 96983,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This indicates that two different physical phenomena are involved in creating these spectral patterns.",
+            "startOffset": 96881,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 119462,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Consequently, within the model structure depicted in Fig. 5, this effect has to be incorporated in the transfer path filters.",
+            "startOffset": 119337,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 133874,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This results in full control over the signals and a maximal degree of flexibility.",
+            "startOffset": 133792,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 113418,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Theoretically, the 10 m point should be warped to time instant 0.5 s for a speed of 72 km/h.",
+            "startOffset": 113326,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 113325,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For the chosen axis limits of 10 m and 0.5 s, respectively, a compression of the deflection signal with respect to the abscissa happens.",
+            "startOffset": 113189,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 100809,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "By contrast, for impacts and wheel flats, discrete impulses are utilized as basic waveforms.",
+            "startOffset": 100717,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 97755,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "As mentioned above, the synthesis of rolling and impact noise is based on a physical approach.",
+            "startOffset": 97661,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 87304,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It will form the basis for future listening test experiments to assess different noise mitigation measures.",
+            "startOffset": 87197,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131387,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Below 800 Hz the pattern is less clear.",
+            "startOffset": 131348,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 121527,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "In the passenger wagon spectra of Fig. 14, distinct peaks may be recognized at different frequencies, namely at 1.4, 2.2, 2.9, 3.6 and 4.4 kHz.",
+            "startOffset": 121384,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 112679,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In the second panel, the wheel diameter of 0.92 m leads to signal periods of 2.9 m which is also partially reflected in the effective roughness (third panel).",
+            "startOffset": 112521,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 89583,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Parts of this measurement data set were used for the development and validation of the auralization model, which is described in the following section.",
+            "startOffset": 89432,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 128837,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In the simulation, the only varying parameter was the vehicle speed V.",
+            "startOffset": 128767,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 100346,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Measurement data indicate a strong wavenumber dependency of roughness signals with substantial low wavenumber content (see e.g. Figs. 7 and 9).",
+            "startOffset": 100203,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 95037,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The spectrogram in Fig. 3 contains an excerpt of the sound pressure of the measurement train recorded close to the track (see Section 2).",
+            "startOffset": 94900,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 112520,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "At location 7 m an impact is present having a much higher magnitude than the rail roughness.",
+            "startOffset": 112428,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 100716,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The corresponding filters are designed in the frequency domain based on spectral input data.",
+            "startOffset": 100624,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 100561,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "These signals are processed using digital FIR filters.",
+            "startOffset": 100507,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 118684,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This is a major difference with previous attempts of railway noise auralization, e.g. VAMPPASS.",
+            "startOffset": 118589,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 122523,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This variation is also expected to be larger at higher frequencies.",
+            "startOffset": 122456,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 84316,
+            "parents": [],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 84315,
+                    "startOffset": 84311
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Initial attempts to auralize train pass-bys are also indicated in [20].",
+            "startOffset": 84245,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 121923,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "However, as at lower speeds, rolling noise is reduced, secondary sources increasingly contaminate the data.",
+            "startOffset": 121816,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 130821,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "For the peak at 2.5 kHz, the speed-related increase of the bandwidth which is due to the Doppler shift is also visible.",
+            "startOffset": 130702,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 87434,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The objective of this article is to present an emission synthesizer for the rolling and impact noise components of railway noise.",
+            "startOffset": 87305,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83720,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To date, only a few studies have been related to the auralization of railway noise.",
+            "startOffset": 83637,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112146,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 13 shows an example of the spatial signals which were generated with the described model for an extreme case where an impact as well as a wheel flat are present.",
+            "startOffset": 111980,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 135206,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Future efforts will include better estimation methods for the input data as well as perceptual validation of the proposed auralization system through listening tests.",
+            "startOffset": 135040,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 84628,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Based on auralization, different acoustical scenarios may be compared in terms of their perception using e.g. listening test experiments.",
+            "startOffset": 84491,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112279,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The equivalent roughness of a rail, an impact, a wheel and a wheel flat as well as the combined effective roughness are illustrated.",
+            "startOffset": 112147,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 88489,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A vertical microphone array was used for sound source separation.",
+            "startOffset": 88424,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 132799,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "In former studies, a method denoted spectral modeling synthesis has proven successful in the context of wind turbine, road traffic and aircraft noise.",
+            "startOffset": 132649,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 93179,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In fact, the wheel/track system features an extended source, the rail, also radiating at locations away from the point of contact, especially at medium and high frequencies where vibration attenuation along the rail is low.",
+            "startOffset": 92956,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 125899,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "However, the applied directivity, as defined in Section 3.3.4, is maximal at the shortest distance, which leads to an attenuation of the frequency shifted energy and thus decreases spectral smearing.",
+            "startOffset": 125700,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 134341,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Realistic emission sounds of these sources may probably be generated using spectral modeling synthesis.",
+            "startOffset": 134238,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 132947,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "However, in this study it was found that this method is not capable to satisfyingly represent the above described characteristics of railway noise.",
+            "startOffset": 132800,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 90081,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "These propagation filters are generated as a function of the source-receiver-geometry, topography and weather conditions.",
+            "startOffset": 89960,
+            "title": "Model"
+        },
+        {
+            "endOffset": 100202,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "It is based on the subtractive synthesis technique but differs for each generator in terms of input and basic waveform.",
+            "startOffset": 100083,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 131053,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The wide peak from 650 to 850 Hz for the speed 60 km/h is shifted upwards in frequency for higher speeds.",
+            "startOffset": 130948,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 131555,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "This peak might be attributed to the roughness patterns of other wheels.",
+            "startOffset": 131483,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 122455,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Furthermore, the spectra of Fig. 14 are averaged over 12 axles with a certain variation in their resonance frequencies.",
+            "startOffset": 122336,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 130552,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Above 1.6 kHz three peaks are present which feature an increasing amplitude for increasing speed, but at a constant frequency.",
+            "startOffset": 130426,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 83317,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 83316,
+                    "startOffset": 83311
+                },
+                "b0010": {
+                    "endOffset": 83316,
+                    "startOffset": 83311
+                },
+                "b0015": {
+                    "endOffset": 83316,
+                    "startOffset": 83311
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Auralization has a long tradition in architectural acoustics already, notably in room acoustics [1\u20133].",
+            "startOffset": 83215,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91182,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Therefore the point sources have to be horizontally spread across the train composition.",
+            "startOffset": 91094,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 83637,
+            "parents": [],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 83567,
+                    "startOffset": 83562
+                },
+                "b0025": {
+                    "endOffset": 83567,
+                    "startOffset": 83562
+                },
+                "b0030": {
+                    "endOffset": 83567,
+                    "startOffset": 83562
+                },
+                "b0035": {
+                    "endOffset": 83567,
+                    "startOffset": 83562
+                },
+                "b0040": {
+                    "endOffset": 83590,
+                    "startOffset": 83584
+                },
+                "b0045": {
+                    "endOffset": 83590,
+                    "startOffset": 83584
+                },
+                "b0050": {
+                    "endOffset": 83590,
+                    "startOffset": 83584
+                },
+                "b0055": {
+                    "endOffset": 83590,
+                    "startOffset": 83584
+                },
+                "b0060": {
+                    "endOffset": 83616,
+                    "startOffset": 83609
+                },
+                "b0065": {
+                    "endOffset": 83616,
+                    "startOffset": 83609
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Several studies on the auralization of road traffic noise [4\u20137], aircraft noise [8\u201311] and wind turbines [12,13] have been published.",
+            "startOffset": 83504,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89432,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Subsequent to the pass-by measurements, direct roughness measurements of all 36 freight wagon wheels were conducted.",
+            "startOffset": 89316,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 83079,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Auralization is the technique to artificially make a situation audible.",
+            "startOffset": 83008,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85517,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In contrast to architectural acoustics where mainly speech or music signals are used, in environmental acoustics it is often desirable to synthesize the emission signals instead of relying on audio recordings.",
+            "startOffset": 85308,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93363,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0200": {
+                    "endOffset": 93251,
+                    "startOffset": 93247
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Here, we follow the standard engineering models such as CNOSSOS-EU [40] where it is assumed that, as the wheel moves on the rail, this system is approximated by a single point source.",
+            "startOffset": 93180,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 95582,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "These vertical lines represent transient sounds which are due to a wheel flat on one of the freight wagon axles.",
+            "startOffset": 95470,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 131219,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "These peaks are therefore related to the excitation.",
+            "startOffset": 131167,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 133299,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "In this article, a synthesizer structure was proposed that is based on a physical approach in which the noise generation mechanism is modeled in the time domain.",
+            "startOffset": 133138,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 131828,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Thus, this demonstrates the variation between axles and underlines the importance of detailed input data for the described model.",
+            "startOffset": 131699,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 85742,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A more versatile method with a much higher degree of freedom, as well as full control of the influencing signal parameters is to synthesize the sounds.",
+            "startOffset": 85591,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85896,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Railway noise consists of different contributions which may dominate in dependence on the vehicle and track type, traveling speed, frequency and geometry.",
+            "startOffset": 85742,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86820,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The frequency content of rolling and impact noise is very wide and it covers almost the whole audible frequency range.",
+            "startOffset": 86702,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 132157,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "On the other hand, transient sounds are also characteristic for railway noise.",
+            "startOffset": 132079,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 132566,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Empirical data suggests that they can be either attributed to the mechanical excitation or the vibration of the dynamic wheel/track system.",
+            "startOffset": 132427,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 85307,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Auralization models are either based on audio recordings or include a synthesizer that artificially generates audible signals.",
+            "startOffset": 85181,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86513,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The three main parts contributing to the radiated noise of the wheel/rail interaction are the wheel, the rail and the track sleepers.",
+            "startOffset": 86380,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90260,
+            "parents": [],
+            "refoffsets": {
+                "b0065": {
+                    "endOffset": 90165,
+                    "startOffset": 90158
+                },
+                "b0165": {
+                    "endOffset": 90147,
+                    "startOffset": 90143
+                },
+                "b0170": {
+                    "endOffset": 90165,
+                    "startOffset": 90158
+                },
+                "b0175": {
+                    "endOffset": 90192,
+                    "startOffset": 90185
+                },
+                "b0180": {
+                    "endOffset": 90192,
+                    "startOffset": 90185
+                },
+                "b0185": {
+                    "endOffset": 90192,
+                    "startOffset": 90185
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Also propagation effects due to obstacles, such as buildings [33], barriers [34,13] or natural objects [35\u201337] may be considered here, e.g. reflections, scattering and shielding.",
+            "startOffset": 90082,
+            "title": "Model"
+        },
+        {
+            "endOffset": 119336,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "We conclude that the narrowband level variations as shown in Fig. 14 are most probably attributed to the modal behavior of the structure.",
+            "startOffset": 119199,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 95242,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Firstly, clear broadband differences between the first part (up to time instant 3 s) and the second part can be observed.",
+            "startOffset": 95121,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 88423,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Furthermore, direct rail roughnesses, track decay rates and propagation attenuations were determined.",
+            "startOffset": 88322,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 99930,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The four generator modules in Fig. 5 produce roughness signals as a function of the spatial coordinate X.",
+            "startOffset": 99825,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 134237,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "For the auralization of full train passbys, in addition to rolling and impact sounds, secondary sources also need to be considered, such as the noise from the traction system, aggregates or aerodynamic noise.",
+            "startOffset": 134029,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 96269,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In Fig. 4 spectral peaks are also clearly apparent.",
+            "startOffset": 96218,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 88321,
+            "parents": [],
+            "refoffsets": {
+                "b0155": {
+                    "endOffset": 88234,
+                    "startOffset": 88230
+                }
+            },
+            "secId": "s0010",
+            "sentence": "For each track, sound pressure was measured on both sides at the reference position \u2019A\u2019 according to the standard ISO 3095 [31], that is at a distance of 7.5 m from the centerline of the track and 1.2 m above rail.",
+            "startOffset": 88107,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 125391,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The simulation considers directivity (see Section 3.3.4), geometrical spreading and the Doppler frequency shift.",
+            "startOffset": 125279,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 131482,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The peak which shifts from 400 to 600 Hz in the measurements in Fig. 4 is not well reproduced.",
+            "startOffset": 131388,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 118588,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The 1/3 octave band frequency resolution is justified for noise prediction but seems to be too rough for realistic auralizations for which the timbre plays an important role.",
+            "startOffset": 118414,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 100431,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "These wavenumber dependencies are realized by applying filters to broadband signals.",
+            "startOffset": 100347,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 131347,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Compared to the measurement, however, the magnitude of these peaks stays constant whereas the measurements suggest an increase.",
+            "startOffset": 131220,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 85042,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Therefore an auralization model for railway noise should be able to simulate both intervention types independently, i.e. only measures at the source, on the propagation or on both.",
+            "startOffset": 84862,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92955,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Note that replacing the emission of the wheel/track system by two stacked equivalent point sources with a prescribed directivity is a simplification of the real system.",
+            "startOffset": 92787,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 131698,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0275": {
+                    "endOffset": 131697,
+                    "startOffset": 131693
+                }
+            },
+            "secId": "s0055",
+            "sentence": "In fact, direct wheel roughness measurements have revealed that some wheels of the same type had a dominant peak at a wavelength of 5 cm [55].",
+            "startOffset": 131556,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 89182,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The measurement train consisted of two locomotives, 7 passenger cars and 6 freight wagons and was composed as listed in Table 1.",
+            "startOffset": 89054,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 95469,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Secondly, between second 6 and 7, a temporal pattern is present.",
+            "startOffset": 95405,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 84861,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Measures at the source as well as on the propagation paths are viable options.",
+            "startOffset": 84783,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131166,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "These peaks are due to the distinct peak at a wavelength of 2 cm of the used wheel roughness as shown in Fig. 9.",
+            "startOffset": 131054,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 112766,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The signals were generated based on the measurement data of the wheel W1 from Fig. 12.",
+            "startOffset": 112680,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 132649,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "These spectral patterns evoke the characteristic metallic timbre of rolling noise.",
+            "startOffset": 132567,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 134769,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "However, in the assessment and comparison of noise mitigation measures, such as a reduction of roughness, the introduction of dampers or noise barriers, relative differences between scenarios are in the focus and therefore for this purpose these characteristics may possibly be neglected.",
+            "startOffset": 134481,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 89742,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The first module provides the signals emitted by the sources.",
+            "startOffset": 89681,
+            "title": "Model"
+        },
+        {
+            "endOffset": 91433,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "As railway noise consists of noise sources of different heights, the point sources in the model are thus horizontally and vertically distributed along the train.",
+            "startOffset": 91272,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 94899,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Experimental data which illustrates these characteristics is shown in Figs. 3 and 4.",
+            "startOffset": 94815,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 132271,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "They particularly occur in the cases of wheel flats, or impact noise caused by insulated rail joints or switches.",
+            "startOffset": 132158,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 133429,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "It allows for the reproduction of the above described sound characteristics and concurrently represents rolling and impact noise.",
+            "startOffset": 133300,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 135039,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "It offers a high degree of flexibility, however at the cost of numerous input parameters which are difficult to determine.",
+            "startOffset": 134917,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 100506,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The basis of the rail and wheel roughness profiles are white noise signals.",
+            "startOffset": 100431,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 133707,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Thus, different noise mitigation measures at the source and on the propagation path can be simulated without the need of elaborate measurements.",
+            "startOffset": 133563,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 130947,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "For the studied situation, at frequencies below 1.2 kHz the transfer path of the track dominates the simulated sound pressure.",
+            "startOffset": 130821,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 89315,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The train passed each measurement site six times in each direction at different speeds, i.e. 1 \u00d7 60 km/h, 3 \u00d7 80 km/h, 2 \u00d7 100 km/h.",
+            "startOffset": 89183,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 101062,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In the following, the details on the computation of the roughness profiles (rail, wheel, impact and flats) are given.",
+            "startOffset": 100945,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 84092,
+            "parents": [],
+            "refoffsets": {
+                "b0080": {
+                    "endOffset": 84091,
+                    "startOffset": 84084
+                },
+                "b0085": {
+                    "endOffset": 84091,
+                    "startOffset": 84084
+                },
+                "b0090": {
+                    "endOffset": 84091,
+                    "startOffset": 84084
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Within the SILENCE project, a software called VAMPPASS was developed which features audio synthesis capabilities for railway vehicle pass-bys [16\u201318].",
+            "startOffset": 83942,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96880,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Their bandwidth slightly increases with speed which is mainly due to the Doppler frequency shift which leads to a frequency smearing.",
+            "startOffset": 96747,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 96703,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "(b) Above 1600 Hz, two peaks per speed are present which feature an increasing amplitude with increasing speed.",
+            "startOffset": 96592,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 96746,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "However, their frequency remains constant.",
+            "startOffset": 96704,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 100623,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In doing so, the initial constant spectral content is shaped.",
+            "startOffset": 100562,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 84244,
+            "parents": [],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 84243,
+                    "startOffset": 84239
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The tool mainly uses recordings obtained by a microphone array and simulates physical acoustic sources on the vehicle by equivalent point sources [19].",
+            "startOffset": 84093,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96532,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "These peaks show an increasing amplitude as a function of the traveling speed as well as a distinct frequency shift.",
+            "startOffset": 96416,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 87196,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 87172,
+                    "startOffset": 87166
+                },
+                "b0140": {
+                    "endOffset": 87172,
+                    "startOffset": 87166
+                },
+                "b0145": {
+                    "endOffset": 87195,
+                    "startOffset": 87191
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the research project TAURA: Traffic Noise Auralisator (2014\u20132016) an auralization model for traffic noise was developed that covers road traffic [28,7] and railway noise [29].",
+            "startOffset": 87018,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96085,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Identical wagons where measured at the identical location.",
+            "startOffset": 96027,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 122252,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "refoffsets": {
+                "b0115": {
+                    "endOffset": 122165,
+                    "startOffset": 122161
+                }
+            },
+            "secId": "s0045",
+            "sentence": "As modal density increases with frequency [23], at higher frequencies, a higher number of resonances per 1/3 octave band is expected.",
+            "startOffset": 122119,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 96591,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The frequency location of the peaks scales with the speed.",
+            "startOffset": 96533,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 125278,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 15 further illustrates the spectral smearing effect of sound propagation.",
+            "startOffset": 125200,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 87881,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "It involved 15 measurement sites and, along with the regular rail traffic, a dedicated measurement train.",
+            "startOffset": 87776,
+            "title": "Measurements"
+        },
+        {
+            "endOffset": 122687,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Therefore at higher frequencies a modal density of more than one mode per 1/3 octave band and some variation of the resonance frequencies between wheels is needed.",
+            "startOffset": 122524,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 113188,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The lowest panel shows the deflection signal calculated for a vehicle speed of 80 km/h.",
+            "startOffset": 113101,
+            "title": "From roughness to excitation"
+        },
+        {
+            "endOffset": 98338,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Using the vehicle speed, a transformation from the spatial into the time domain is performed.",
+            "startOffset": 98245,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 128629,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As a demonstration of the presented auralization concept, the measured data from panel (i) of Fig. 4 was reproduced using the proposed emission synthesizer structure and propagation filters.",
+            "startOffset": 128439,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 122335,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This might explain the difficulty to recognize distinct peaks at high frequencies.",
+            "startOffset": 122253,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 132078,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The temporal patterns arise on the one hand from differences between the vehicles and axles.",
+            "startOffset": 131986,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 85181,
+            "parents": [],
+            "refoffsets": {
+                "b0010": {
+                    "endOffset": 85180,
+                    "startOffset": 85177
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This suggests to use separate source and propagation modules which is in line with Vorl\u00e4nder\u2019s definition of the auralization process [2].",
+            "startOffset": 85043,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86379,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The resulting varying contact forces excite the wheel/rail structure which consequently vibrates and radiates sound waves.",
+            "startOffset": 86257,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89680,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Fig. 1 shows the structure of the auralization model which contains three separate modules.",
+            "startOffset": 89589,
+            "title": "Model"
+        },
+        {
+            "endOffset": 95916,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For the passenger cars, peaks occur at about 1.5, 2.3 and 3.0 kHz, whereas for the freight wagons peaks occur at somewhat higher values of 1.8, 2.5, 3.2 kHz.",
+            "startOffset": 95759,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 133791,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The audio signals are purely artificially generated using a parametric synthesizer.",
+            "startOffset": 133708,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 86701,
+            "parents": [],
+            "refoffsets": {
+                "b0125": {
+                    "endOffset": 86660,
+                    "startOffset": 86656
+                },
+                "b0130": {
+                    "endOffset": 86700,
+                    "startOffset": 86696
+                }
+            },
+            "secId": "s0005",
+            "sentence": "These transient sounds occur notably in the context of wheel flats [25], insulated rail joints or switches [26].",
+            "startOffset": 86589,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98413,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Next, the modal behavior of the structure and the radiation are simulated.",
+            "startOffset": 98339,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 89804,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The emissions are synthesized based on source specifications.",
+            "startOffset": 89743,
+            "title": "Model"
+        },
+        {
+            "endOffset": 85590,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The latter only allows for little variation of different signal aspects.",
+            "startOffset": 85518,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119095,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Thus it appears that they are not linked to the spatial domain, i.e. roughness.",
+            "startOffset": 119016,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 87557,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 2 shortly describes the railway noise measurement campaign that produced expedient data for the model development.",
+            "startOffset": 87435,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86037,
+            "parents": [],
+            "refoffsets": {
+                "b0115": {
+                    "endOffset": 86036,
+                    "startOffset": 86032
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It consists of rolling and impact noise as well as noise from secondary sources such as the traction, aggregates and aerodynamic noise [23].",
+            "startOffset": 85897,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84491,
+            "parents": [],
+            "refoffsets": {
+                "b0110": {
+                    "endOffset": 84490,
+                    "startOffset": 84486
+                }
+            },
+            "secId": "s0005",
+            "sentence": "These recordings may be used as input data to synthesize source signals [22].",
+            "startOffset": 84414,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 121733,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The data further shows that the peaks may be more easily localized at a low speed of 60 km/h, as compared to 80 or 100 km/h.",
+            "startOffset": 121609,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 83214,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By incorporating prediction models into the auralization process, this technique allows to listen to situations that do not exist yet.",
+            "startOffset": 83080,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100944,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "These impulses are spatially shifted to their respective location and filtered in order to bring them into the desired spectral shape.",
+            "startOffset": 100810,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 83413,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For instance concert halls and opera houses are typically auralized during the planing process.",
+            "startOffset": 83318,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90485,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "By considering the sound incidence direction, a spatial impression can be created.",
+            "startOffset": 90403,
+            "title": "Model"
+        },
+        {
+            "endOffset": 119015,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 14 further illustrates that the distinct peaks do not depend on the vehicle speed.",
+            "startOffset": 118928,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 96415,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Two different kinds of peaks can be discriminated (see Fig. 4 i), (a) and (b)): (a) Below 1600 Hz, two widely spaced peaks per speed are present.",
+            "startOffset": 96270,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 122118,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The measurement data in Fig. 14 thus exhibits five peaks between 1 and 5 kHz, which signifies that only slightly less peaks than the number of 1/3 octave bands occur within this frequency range.",
+            "startOffset": 121924,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 100017,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In order to do this, they use either measured or predicted roughness spectra as input.",
+            "startOffset": 99931,
+            "title": "Roughness generators"
+        },
+        {
+            "endOffset": 125594,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Fig. 15 shows that even for such low speeds the peak bandwidths are strongly increased, as explained above.",
+            "startOffset": 125487,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 125699,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "This increase is due to the Doppler frequency shift, which is large for short distances and high speeds.",
+            "startOffset": 125595,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 84413,
+            "parents": [],
+            "refoffsets": {
+                "b0105": {
+                    "endOffset": 84324,
+                    "startOffset": 84320
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In [21] beamforming was applied to obtain audio recordings of sub-sources during train pass-bys.",
+            "startOffset": 84317,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86149,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Today, in most noise exposure situations rolling and impact noise dominate the A-weighted sound pressure level.",
+            "startOffset": 86038,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 121383,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "In the freight wagon sound pressure spectra of Fig. 4, distinct peaks which are related to the vibration are located at 1.8, 2.5 and 2.9 kHz.",
+            "startOffset": 121242,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 90720,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0010": {
+                    "endOffset": 90557,
+                    "startOffset": 90554
+                }
+            },
+            "secId": "s0020",
+            "sentence": "To comply with the fundamentals of auralization [2], in particular the separation of sound generation and propagation, the proposed model follows the source-path-receiver concept and uses distributed point sources.",
+            "startOffset": 90506,
+            "title": "Point source model"
+        },
+        {
+            "endOffset": 97958,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "refoffsets": {
+                "b0150": {
+                    "endOffset": 97938,
+                    "startOffset": 97934
+                },
+                "b0190": {
+                    "endOffset": 97910,
+                    "startOffset": 97906
+                },
+                "b0195": {
+                    "endOffset": 97924,
+                    "startOffset": 97920
+                },
+                "b0200": {
+                    "endOffset": 97957,
+                    "startOffset": 97953
+                },
+                "b0255": {
+                    "endOffset": 97832,
+                    "startOffset": 97828
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The same approach is also reflected in theoretical models such as TWINS [51] and state-of-the-art railway noise engineering models such as Harmonoise [38], IMAGINE [39], sonRAIL [30] or CNOSSOS-EU [40].",
+            "startOffset": 97756,
+            "title": "Emission synthesis of rolling and impact noise"
+        },
+        {
+            "endOffset": 128931,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "It was set to 60, 80 and 100 km/h, whereas all the other model parameters were kept constant.",
+            "startOffset": 128838,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 96217,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Flat wagons were chosen for this example as secondary sources are negligible for this vehicle type and rolling noise is dominating.",
+            "startOffset": 96086,
+            "title": "Synthesis approach"
+        },
+        {
+            "endOffset": 118300,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "In a first attempt, the transfer path filters were designed with linear phase and a smooth magnitude response based on 1/3 octave band data.",
+            "startOffset": 118160,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 131985,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Our study showed that for a realistic auralization of railway noise, temporal and spectral patterns with a high resolution need to be considered.",
+            "startOffset": 131840,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 133562,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The physical model further allows for auralizing the effect of varying wheel and rail roughness as well as different vehicle speeds.",
+            "startOffset": 133430,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 83503,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The application of auralization to environmental noise has been discovered only recently.",
+            "startOffset": 83414,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130425,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In panel (ii) of Fig. 4 the behavior of both types of spectral peaks as observed in panel (i) are well reproduced by the model, i.e. peaks due to the excitation and peaks due to the vibration.",
+            "startOffset": 130233,
+            "title": "Evaluation"
+        },
+        {
+            "endOffset": 86588,
+            "parents": [],
+            "refoffsets": {
+                "b0120": {
+                    "endOffset": 86587,
+                    "startOffset": 86583
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Impact noise arises due to discrete irregularities on these surfaces [24].",
+            "startOffset": 86514,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87623,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 3 the auralization model is established and presented.",
+            "startOffset": 87558,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 121815,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Emission synthesis of rolling and impact noise"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "At lower speeds, spectral smearing due to the Doppler frequency shift is reduced.",
+            "startOffset": 121734,
+            "title": "Transfer path filters"
+        },
+        {
+            "endOffset": 96026,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Model"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Fig. 4 shows measured narrowband sound pressure spectra of flat freight wagons traveling at different speeds.",
+            "startOffset": 95917,
+            "title": "Synthesis approach"
+        }
+    ],
+    "docId": "S0003682X17300361",
+    "metadata": {
+        "asjc": [
+            "3102"
+        ],
+        "authors": [
+            {
+                "email": "reto.pieren@empa.ch",
+                "first": "Reto",
+                "initial": "R.",
+                "last": "Pieren"
+            },
+            {
+                "email": "kurt.heutschi@empa.ch",
+                "first": "Kurt",
+                "initial": "K.",
+                "last": "Heutschi"
+            },
+            {
+                "email": "jean-marc.wunderli@empa.ch",
+                "first": "Jean Marc",
+                "initial": "J.M.",
+                "last": "Wunderli"
+            },
+            {
+                "email": "m.snellen@tudelft.nl",
+                "first": "Mirjam",
+                "initial": "M.",
+                "last": "Snellen"
+            },
+            {
+                "email": "d.g.simons@tudelft.nl",
+                "first": "Dick G.",
+                "initial": "D.G.",
+                "last": "Simons"
+            }
+        ],
+        "doi": "10.1016/j.apacoust.2017.05.026",
+        "firstpage": "34",
+        "issn": "0003682X",
+        "keywords": [
+            "Auralization",
+            "Railway noise",
+            "Rolling noise",
+            "Sound synthesis"
+        ],
+        "lastpage": "45",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "PHYS"
+        ],
+        "title": "Auralization of railway noise: Emission synthesis of rolling and impact noise"
+    }
+}

@@ -1,0 +1,615 @@
+{
+    "abstract": "Max-linear programs have been used to describe optimisation problems for multiprocessor interactive systems. In some instances the variables used in this model are required to be integer; however, no method seems to exist for finding integer solutions to max-linear programs. For a generic class of matrices, we show that integer solutions to two-sided max-linear systems and programs can be found in polynomial time. For general matrices, we adapt the existing methods for finding real solutions to obtain algorithms for finding integer solutions. \u00a9 2013 The Authors. Published by Elsevier B.V. All rights reserved.",
+    "bib_entries": {
+        "br000005": {
+            "authors": [
+                {
+                    "first": "Xavier",
+                    "initial": "X.",
+                    "last": "Allamigeon"
+                },
+                {
+                    "first": "St\u00e9phane",
+                    "initial": "S.",
+                    "last": "Gaubert"
+                },
+                {
+                    "first": "\u00c9ric",
+                    "initial": "E.",
+                    "last": "Goubault"
+                }
+            ],
+            "doi": "10.4230/LIPIcs.STACS.2010.2443",
+            "firstpage": "47",
+            "issn": "18688969",
+            "lastpage": "58",
+            "pub_year": 2010,
+            "title": "The tropical double description method",
+            "volume": "5"
+        },
+        "br000010": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Butkovi\u010d"
+                }
+            ],
+            "doi": "10.1016/S0024-3795(02)00655-9",
+            "firstpage": "313",
+            "issn": "00243795",
+            "lastpage": "335",
+            "pub_year": 2003,
+            "title": "Max-algebra: The linear algebra of combinatorics?",
+            "volume": "367"
+        },
+        "br000015": null,
+        "br000020": {
+            "authors": [
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Butkovic"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Aminu"
+                }
+            ],
+            "doi": "10.1093/imaman/dpn029",
+            "firstpage": "233",
+            "issn": "1471678X",
+            "lastpage": "249",
+            "pub_year": 2009,
+            "title": "Introduction to max-linear programming",
+            "volume": "20"
+        },
+        "br000025": null,
+        "br000030": null,
+        "br000035": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Butkovi\u010d"
+                },
+                {
+                    "first": "Marie",
+                    "initial": "M.",
+                    "last": "MacCaig"
+                }
+            ],
+            "doi": "10.1016/j.laa.2012.12.017",
+            "firstpage": "3408",
+            "issn": "00243795",
+            "lastpage": "3424",
+            "pub_year": 2013,
+            "title": "On integer eigenvectors and subeigenvectors in the max-plus algebra",
+            "volume": "438"
+        },
+        "br000040": null,
+        "br000045": {
+            "authors": [
+                {
+                    "first": "R. A.",
+                    "initial": "R.A.",
+                    "last": "Cuninghame-Green"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Butkovic"
+                }
+            ],
+            "doi": "10.1016/S0304-3975(02)00228-1",
+            "firstpage": "3",
+            "issn": "03043975",
+            "lastpage": "12",
+            "pub_year": 2003,
+            "title": "The equation A \u2297 x = B \u2297 y over (max, +)",
+            "volume": "293"
+        },
+        "br000050": {
+            "authors": [
+                {
+                    "first": "St\u00e9phane",
+                    "initial": "S.",
+                    "last": "Gaubert"
+                },
+                {
+                    "first": "Ricardo D.",
+                    "initial": "R.D.",
+                    "last": "Katz"
+                },
+                {
+                    "first": "Serge\u01d0",
+                    "initial": "S.",
+                    "last": "Sergeev"
+                }
+            ],
+            "doi": "10.1016/j.jsc.2011.12.049",
+            "firstpage": "1447",
+            "issn": "07477171",
+            "lastpage": "1478",
+            "pub_year": 2012,
+            "title": "Tropical linear-fractional programming and parametric mean payoff games",
+            "volume": "47"
+        },
+        "br000055": {
+            "authors": [
+                {
+                    "first": "Richard M.",
+                    "initial": "R.M.",
+                    "last": "Karp"
+                }
+            ],
+            "doi": "10.1016/0012-365X(78)90011-0",
+            "firstpage": "309",
+            "issn": "0012365X",
+            "lastpage": "311",
+            "pub_year": 1978,
+            "title": "A characterization of the minimum cycle mean in a digraph",
+            "volume": "23"
+        },
+        "br000060": null
+    },
+    "body_text": [
+        {
+            "endOffset": 305961,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[7]",
+            "startOffset": 305958,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 308230,
+            "parents": [],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 308101,
+                    "startOffset": 308096
+                },
+                "br000045": {
+                    "endOffset": 308101,
+                    "startOffset": 308096
+                }
+            },
+            "secId": "s000015",
+            "sentence": "In this section, we show that the Alternating Method  [3,9] can be easily adapted to design algorithms that determine whether integer solutions to (1.1) or (1.2) exist, and if so find one.",
+            "startOffset": 308042,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 310490,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "[6]",
+            "startOffset": 310487,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 310122,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "We propose the following algorithm to find integer solutions to (1.2).",
+            "startOffset": 310052,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 325480,
+            "parents": [
+                {
+                    "id": "s000050",
+                    "title": "Integer max-linear programs"
+                }
+            ],
+            "secId": "s000055",
+            "sentence": "For the upper bound, we need the following results.",
+            "startOffset": 325429,
+            "title": "When the objective function is unbounded"
+        },
+        {
+            "endOffset": 305449,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[3,8]",
+            "startOffset": 305444,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 305362,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "\u25a1",
+            "startOffset": 305361,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 308414,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "We first detail an algorithm to solve systems with separated variables, and then a second algorithm to solve general systems.",
+            "startOffset": 308289,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 307723,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[3,7]",
+            "startOffset": 307718,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 305507,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[3]",
+            "startOffset": 305504,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 300368,
+            "parents": [],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 300267,
+                    "startOffset": 300262
+                },
+                "br000020": {
+                    "endOffset": 300267,
+                    "startOffset": 300262
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Solution methods to solve the MLP are known; for example, in  [3,4], a bisection method is applied to obtain an algorithm that finds an approximate solution to the MLP.",
+            "startOffset": 300200,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 316719,
+            "parents": [
+                {
+                    "id": "s000020",
+                    "title": "A polynomially solvable case"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "\u25a1",
+            "startOffset": 316718,
+            "title": "Systems with separated variables"
+        },
+        {
+            "endOffset": 301133,
+            "parents": [],
+            "refoffsets": {
+                "br000010": {
+                    "endOffset": 301132,
+                    "startOffset": 301127
+                },
+                "br000015": {
+                    "endOffset": 301132,
+                    "startOffset": 301127
+                }
+            },
+            "secId": "s000005",
+            "sentence": "It should be noted that the solution set of a max-linear system with all variables on one side can be described in terms of set coverings and can easily be solved  [2,3].",
+            "startOffset": 300963,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 300539,
+            "parents": [],
+            "refoffsets": {
+                "br000050": {
+                    "endOffset": 300422,
+                    "startOffset": 300418
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Also, a Newton-type algorithm has been designed  [10] to solve a more general max-linear fractional programming problem by a reduction to a sequence of mean payoff games.",
+            "startOffset": 300369,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 300963,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In Section  6, we show that, in the generic case, the IMLP can be solved in polynomial time.",
+            "startOffset": 300871,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 305360,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "Straightforward from the definitions.",
+            "startOffset": 305323,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 335681,
+            "parents": [
+                {
+                    "id": "s000080",
+                    "title": "IMLP and systems with Property OneFP"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Finally, note that the computationally expensive step in Algorithms INT-MAXLINMIN and INT-MAXLINMAX is the use of Algorithm GEN-INT-TSS in each iteration.",
+            "startOffset": 335527,
+            "title": "The adapted Alternating Method is pseudopolynomial for systems with Property OneFP"
+        },
+        {
+            "endOffset": 316717,
+            "parents": [
+                {
+                    "id": "s000020",
+                    "title": "A polynomially solvable case"
+                }
+            ],
+            "secId": "s000030",
+            "sentence": "The result is obtained by rearranging inequalities (4.5) and (4.6).",
+            "startOffset": 316650,
+            "title": "Systems with separated variables"
+        },
+        {
+            "endOffset": 321406,
+            "parents": [
+                {
+                    "id": "s000020",
+                    "title": "A polynomially solvable case"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "We end this section by giving a brief description of how the solution method for systems satisfying Property OneFP could be adapted to find integer solutions to any TSS, but that in doing so we may lose efficiency.",
+            "startOffset": 321192,
+            "title": "Adapting the method to solve any TSS"
+        },
+        {
+            "endOffset": 302914,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "When solving the MPIS it may be required that the starting times are restricted to discrete values, in which case we would want to look for integer solutions to the TSS.",
+            "startOffset": 302745,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 321546,
+            "parents": [
+                {
+                    "id": "s000020",
+                    "title": "A polynomially solvable case"
+                }
+            ],
+            "secId": "s000045",
+            "sentence": "Since we can convert any general two-sided system into a system with separated variables, we discuss systems with separated variables only.",
+            "startOffset": 321407,
+            "title": "Adapting the method to solve any TSS"
+        },
+        {
+            "endOffset": 305376,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[3,8]",
+            "startOffset": 305371,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 300714,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Again, an integer solution is found for any instances of the MLP with integer entries, but the problem with integrality constraints is very different if the entries are real.",
+            "startOffset": 300540,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 301474,
+            "parents": [],
+            "refoffsets": {
+                "br000020": {
+                    "endOffset": 301458,
+                    "startOffset": 301455
+                },
+                "br000040": {
+                    "endOffset": 301473,
+                    "startOffset": 301470
+                }
+            },
+            "secId": "s000005",
+            "sentence": "As an example of an application of a TSS and the IMLP, consider the following multiprocessor interactive system (MPIS) as described in  [4]; see also  [8].",
+            "startOffset": 301319,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 301319,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Consequently, the corresponding systems with integrality constraints can also be easily solved, as can max-linear programs and integer max-linear programs with constraints of this type.",
+            "startOffset": 301134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 327193,
+            "parents": [
+                {
+                    "id": "s000050",
+                    "title": "Integer max-linear programs"
+                }
+            ],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 327192,
+                    "startOffset": 327189
+                }
+            },
+            "secId": "s000060",
+            "sentence": "Similar to the proof of Corollaries 10.2.12 and 10.2.17 in  [3].",
+            "startOffset": 327129,
+            "title": "Attainment of optimal values"
+        },
+        {
+            "endOffset": 335770,
+            "parents": [
+                {
+                    "id": "s000080",
+                    "title": "IMLP and systems with Property OneFP"
+                }
+            ],
+            "secId": "s000085",
+            "sentence": "Therefore, for systems satisfying Property OneFP, these algorithms are pseudopolynomial.",
+            "startOffset": 335682,
+            "title": "The adapted Alternating Method is pseudopolynomial for systems with Property OneFP"
+        },
+        {
+            "endOffset": 305698,
+            "parents": [],
+            "secId": "s000010",
+            "sentence": "[3]",
+            "startOffset": 305695,
+            "title": "Preliminaries"
+        },
+        {
+            "endOffset": 324046,
+            "parents": [],
+            "secId": "s000050",
+            "sentence": "[3]",
+            "startOffset": 324043,
+            "title": "Integer max-linear programs"
+        },
+        {
+            "endOffset": 297924,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This paper deals with the task of finding integer solutions to two-sided max-linear systems and the integer max-linear programming problem.",
+            "startOffset": 297785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 309176,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "We propose the following algorithm to find integer solutions to the system with separated variables (1.1).",
+            "startOffset": 309070,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 309533,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "[6]",
+            "startOffset": 309530,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 300870,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In Section  5, we develop an algorithm based on the bisection method which will find an optimal solution to the IMLP, or determine that no solution exists.",
+            "startOffset": 300715,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 327195,
+            "parents": [
+                {
+                    "id": "s000050",
+                    "title": "Integer max-linear programs"
+                }
+            ],
+            "secId": "s000060",
+            "sentence": "\u25a1",
+            "startOffset": 327194,
+            "title": "Attainment of optimal values"
+        },
+        {
+            "endOffset": 318951,
+            "parents": [
+                {
+                    "id": "s000020",
+                    "title": "A polynomially solvable case"
+                }
+            ],
+            "secId": "s000040",
+            "sentence": "We now present a couple of cases where we can give simpler conditions, both for systems with separated variables.",
+            "startOffset": 318838,
+            "title": "Some special cases"
+        },
+        {
+            "endOffset": 333264,
+            "parents": [],
+            "secId": "s000080",
+            "sentence": "In Section  4, we showed that, for systems satisfying Property OneFP, we could find integer solutions to a TSS in strongly polynomial time; here, we show that, if Property OneFP is satisfied, then our solution methods for the IMLP can also be made more efficient.",
+            "startOffset": 333001,
+            "title": "IMLP and systems with Property OneFP"
+        },
+        {
+            "endOffset": 308288,
+            "parents": [],
+            "secId": "s000015",
+            "sentence": "This method will be crucial for the solution of the IMLP.",
+            "startOffset": 308231,
+            "title": "Alternating Method for integer solutions"
+        },
+        {
+            "endOffset": 308612,
+            "parents": [],
+            "refoffsets": {
+                "br000015": {
+                    "endOffset": 308538,
+                    "startOffset": 308533
+                },
+                "br000030": {
+                    "endOffset": 308611,
+                    "startOffset": 308608
+                },
+                "br000045": {
+                    "endOffset": 308538,
+                    "startOffset": 308533
+                }
+            },
+            "secId": "s000015",
+            "sentence": "Since the justification behind the construction of the two algorithms in this section is similar to the arguments in  [3,9], we only outline the key results here; full details can be found in  [6].",
+            "startOffset": 308415,
+            "title": "Alternating Method for integer solutions"
+        }
+    ],
+    "docId": "S0166218X1300348X",
+    "metadata": {
+        "asjc": [
+            "2604",
+            "2607"
+        ],
+        "authors": [
+            {
+                "email": "P.Butkovic@bham.ac.uk",
+                "first": "Peter",
+                "initial": "P.",
+                "last": "Butkovi\u010d"
+            },
+            {
+                "email": "mxm779@bham.ac.uk",
+                "first": "Marie",
+                "initial": "M.",
+                "last": "Maccaig"
+            }
+        ],
+        "doi": "10.1016/j.dam.2013.08.007",
+        "firstpage": "128",
+        "issn": "0166218X",
+        "keywords": [
+            "Integer vector",
+            "Max-linear program",
+            "Max-linear system"
+        ],
+        "lastpage": "141",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "On the integer max-linear programming problem"
+    }
+}

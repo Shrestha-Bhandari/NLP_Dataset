@@ -1,0 +1,1712 @@
+{
+    "abstract": "Current codes of practice for PV systems lack detailed guidance regarding circuit mismatch, over or reverse current protection and unbalanced operational conditions in large PV systems. Experimental work in this field is expensive and limited by hardware and environmental resources. The available commercial simulation tools do not rigorously model the complex behaviour of PV systems operating under non-uniform conditions. In this paper a detailed cell-by-cell model of large scale PV systems is developed. The parameter set used for simulations is based on real PV modules power tolerance data and the variance in its principal parameters, thus representing a realistic power frequency distribution. The model is used to estimate and analyse losses due to circuit mismatch, analyse the causes of reverse current in the system's strings and its consequences in the system performance and to estimate energy losses due to string's fuses failures.",
+    "author_highlights": [
+        {
+            "endOffset": 39910,
+            "sentence": "A detailed model of large scale PV systems is generated.",
+            "startOffset": 39854
+        },
+        {
+            "endOffset": 39973,
+            "sentence": "Different distributions of PV module parameters are generated.",
+            "startOffset": 39911
+        },
+        {
+            "endOffset": 40032,
+            "sentence": "Losses due to circuit mismatch are analysed and estimated.",
+            "startOffset": 39974
+        },
+        {
+            "endOffset": 40113,
+            "sentence": "Causes and consequences of reverse current in the system\u2019s strings are analysed.",
+            "startOffset": 40033
+        },
+        {
+            "endOffset": 40188,
+            "sentence": "Losses due to string\u2019s fuses failures and fuses effectiveness is analysed.",
+            "startOffset": 40114
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "J. W.",
+                    "initial": "J.W.",
+                    "last": "Bishop"
+                }
+            ],
+            "doi": "10.1016/0379-6787(88)90059-2",
+            "firstpage": "73",
+            "issn": "03796787",
+            "lastpage": "89",
+            "pub_year": 1988,
+            "title": "Computer simulation of the effects of electrical mismatches in photovoltaic cell interconnection circuits",
+            "volume": "25"
+        },
+        "b0010": null,
+        "b0015": {
+            "authors": [
+                {
+                    "first": "Daniel G\u00f3mez",
+                    "initial": "D.G.",
+                    "last": "Lorente"
+                },
+                {
+                    "first": "Simone",
+                    "initial": "S.",
+                    "last": "Pedrazzi"
+                },
+                {
+                    "first": "Gabriele",
+                    "initial": "G.",
+                    "last": "Zini"
+                },
+                {
+                    "first": "Alberto",
+                    "initial": "A.",
+                    "last": "Dalla Rosa"
+                },
+                {
+                    "first": "Paolo",
+                    "initial": "P.",
+                    "last": "Tartarini"
+                }
+            ],
+            "doi": "10.1016/j.solener.2013.11.026",
+            "firstpage": "42",
+            "issn": "0038092X",
+            "lastpage": "49",
+            "pub_year": 2014,
+            "title": "Mismatch losses in PV power plants",
+            "volume": "100"
+        },
+        "b0020": null,
+        "b0025": null,
+        "b0030": null,
+        "b0035": null,
+        "b0040": null,
+        "b0045": null,
+        "b0050": null,
+        "b0055": null,
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Perdue"
+                },
+                {
+                    "first": "Ralph",
+                    "initial": "R.",
+                    "last": "Gottschalg"
+                }
+            ],
+            "doi": "10.1049/iet-rpg.2014.0389",
+            "firstpage": "432",
+            "issn": "17521416",
+            "lastpage": "437",
+            "pub_year": 2015,
+            "title": "Energy yields of small grid connected photovoltaic system: Effects of component reliability and maintenance",
+            "volume": "9"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Volker",
+                    "initial": "V.",
+                    "last": "Quaschning"
+                },
+                {
+                    "first": "Rolf",
+                    "initial": "R.",
+                    "last": "Hanitsch"
+                }
+            ],
+            "doi": "10.1016/0038-092X(96)00006-0",
+            "firstpage": "513",
+            "issn": "0038092X",
+            "lastpage": "520",
+            "pub_year": 1996,
+            "title": "Numerical simulation of current-voltage characteristics of photovoltaic systems with shaded solar cells",
+            "volume": "56"
+        },
+        "b0070": null,
+        "b9000": {
+            "authors": [
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Goss"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Cole"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Betts"
+                },
+                {
+                    "first": "Ralph",
+                    "initial": "R.",
+                    "last": "Gottschalg"
+                }
+            ],
+            "doi": "10.1016/j.solener.2014.09.037",
+            "firstpage": "410",
+            "issn": "0038092X",
+            "lastpage": "419",
+            "pub_year": 2014,
+            "title": "Irradiance modelling for individual cells of shaded solar photovoltaic arrays",
+            "volume": "110"
+        },
+        "b9005": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Johansson"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Gottschalg"
+                },
+                {
+                    "first": "D. G.",
+                    "initial": "D.G.",
+                    "last": "Infield"
+                }
+            ],
+            "doi": "10.1080/01430750.2004.9674942",
+            "firstpage": "65",
+            "issn": "01430750",
+            "lastpage": "72",
+            "pub_year": 2004,
+            "title": "Effect of shading on amorphous silicon single and double junction photovoltaic modules",
+            "volume": "25"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 65472,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In extreme shading scenarios, where a whole string was shaded by 90%, the reverse current was less than the short circuit current of the modules.",
+            "startOffset": 65327,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 66583,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In short-circuited scenarios, in most cases the inverter reduced the fault reverse current to levels below the fuse disconnection current.",
+            "startOffset": 66445,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 67653,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Assuming 1\u20132 string fuses failures per system lifetime, as reported in the literature, with a failure rate that increase with time, the energy losses without an inspection and replacement plan are very significant (38%).",
+            "startOffset": 67433,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 48157,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For power simulations, STC conditions were considered.",
+            "startOffset": 48103,
+            "title": "Power and energy simulations"
+        },
+        {
+            "endOffset": 43632,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The objectives of the paper are to:",
+            "startOffset": 43597,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43781,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Generate different distributions of PV module parameters, according to available statistic data.",
+            "startOffset": 43685,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50511,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "An annual simulation of a 1 MWp system was performed, registering the generation of each string for each hour of the year to identify the failure of a string fuse and therefore the loss of generation.",
+            "startOffset": 50311,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 67257,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "As such the uses of thermal fuses could increase the risk of fires in PV systems.",
+            "startOffset": 67176,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 42853,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is not clear what is the magnitude of this reverse current and if fuses are appropriate to prevent energy loss and damage to components.",
+            "startOffset": 42714,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54703,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Table B.3 in Appendix B, shows the results of the energy simulations.",
+            "startOffset": 54634,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 41576,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "One of the inherent losses of PV systems is the mismatch due to electrical interconnection.",
+            "startOffset": 41485,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56906,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the reverse current analysis, for both scenarios (shading and short circuits) were tested on two systems, one system using standard silicon modules and another system using high efficiency modules.",
+            "startOffset": 56705,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 55931,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The blue line is the I\u2013V curve of the whole system and the dashed black lines are the I\u2013V curves of each string (the shaded/short-circuited and the normal).",
+            "startOffset": 55775,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 54273,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The key finding here is that realistic distributions cause higher power losses than Gaussian distributions, with the order of magnitude of 50% of the bin-width.",
+            "startOffset": 54113,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 53629,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Each string was formed with 24 modules obtaining a power of 5 kWp per string and an approximate system Voc of 869 [VDC].",
+            "startOffset": 53509,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 42463,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This may be an issue particularly in large PV systems with large number of strings.",
+            "startOffset": 42380,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45398,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Each string is composed by a series of PV modules (that are a series of substrings).",
+            "startOffset": 45314,
+            "title": "System model"
+        },
+        {
+            "endOffset": 66738,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In both cases (shading and short-circuits), the reverse currents involve significant losses that justify the use of series blocking diodes in the strings.",
+            "startOffset": 66584,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60751,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the short-circuited scenario a short-circuit sufficient to cause a reverse current twice the Isc of the modules was introduced.",
+            "startOffset": 60620,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 48336,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For energy simulations, annuals simulations were considered with a time resolution of one hour, namely, the temperature and the irradiance were updated for each hour of the year.",
+            "startOffset": 48158,
+            "title": "Power and energy simulations"
+        },
+        {
+            "endOffset": 43361,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The available commercial simulation tools, do not rigorously model the complex behaviour of PV systems operating under non-uniform conditions, therefore a detailed model of large PV systems need to be developed.",
+            "startOffset": 43150,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65693,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Fault reverse currents are determined by fault types, fault location and the action of the MPP tracking algorithm of the inverter.",
+            "startOffset": 65563,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60619,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the shaded scenario, all the modules of the string were fully shaded (a 90% irradiance reduction) for both systems (standard silicon and high efficiency).",
+            "startOffset": 60461,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 41672,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The manufacturing tolerances for PV modules result in a variation in their physical parameters.",
+            "startOffset": 41577,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53401,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "With the adjusted distributions, 100 PV systems were simulated considering an installed capacity (kW at STC) of 10, 50, 100, 250, 500, 750 and 1000 kWp, using the standard silicon modules.",
+            "startOffset": 53213,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 52838,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Table 1 shows the results of the module simulations.",
+            "startOffset": 52786,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 57079,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the standard silicon system, a power of 50 kWp was considered, with a system composed by 10 strings of 24 modules per string and an approximate system Voc of 864 [VDC].",
+            "startOffset": 56907,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 47711,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0015": {
+                    "endOffset": 47680,
+                    "startOffset": 47661
+                },
+                "b0025": {
+                    "endOffset": 47460,
+                    "startOffset": 47445
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Power simulations were considered to evaluate the static losses, using Herrmann (2005), and also dynamic energy simulations were performed taking into account the action of a central inverter to set the optimum operational point of the system (maximum power point MPP), in contrast with Gomez et al. (2014) that used a simplified method.",
+            "startOffset": 47374,
+            "title": "Power and energy simulations"
+        },
+        {
+            "endOffset": 57503,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 5(b) shows the reverse current present in one string when different numbers of modules of the string are short-circuited.",
+            "startOffset": 57377,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 55303,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Energy losses due to circuit mismatch tend to stabilise for systems over 250 kWp, with losses of 1.18% for the normal distribution and losses of 1.73% for the real distribution.",
+            "startOffset": 55126,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 45685,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "To solve the I\u2013V curve of the array, first the I\u2013V curve of each string is solved summing the voltage of each substring for a specific string current.",
+            "startOffset": 45535,
+            "title": "System model"
+        },
+        {
+            "endOffset": 58112,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "If the inverter switches off for any reason, the voltage of the system will be Voc and the reverse current present in a completely shaded string (a 90% irradiance reduction affecting all modules), will not exceed the short circuit current of the modules.",
+            "startOffset": 57858,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 62123,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the short-circuited scenario a number of modules were short-circuited to obtain a reverse current of twice the module Isc.",
+            "startOffset": 61997,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 66884,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The question of the economically most beneficial approach would then need to be answered based on the reliability of all the components involved.",
+            "startOffset": 66739,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 67847,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The current approach of string monitoring will show any failures quickly and will guarantee minimal losses due to failures.",
+            "startOffset": 67724,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63734,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Fig. 8(a) shows the frequency distribution of the MTTF of the fuses generated in the simulations.",
+            "startOffset": 63637,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 55428,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "This behaviour is similar to the power, but the impact is higher, with the energy loss being closer to 2/3 of the bin-width.",
+            "startOffset": 55304,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 60460,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Firstly, the size of the system was increased by adding more strings (and therefore current), keeping the voltage (modules per strings) constant.",
+            "startOffset": 60315,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 43149,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Computer simulation offers control over all the variables in a PV system, therefore more defined results can be obtained.",
+            "startOffset": 43028,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49632,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For each PV system, the system size (installed capacity) was changed, increasing the system current (adding more strings) and/or increasing the system voltage (adding more modules per string), with the aim of identifying the effect in the reverse current of the shaded and short-circuited string when the system size changes.",
+            "startOffset": 49307,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 54112,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Power losses due to circuit mismatch tend to stabilise for systems over 250 kWp, with losses of 0.73% for the normal distribution and with losses of 1.33% for the real distribution.",
+            "startOffset": 53931,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 53931,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fig. 2 shows the power losses due to the circuit mismatch in a boxplot3.",
+            "startOffset": 53699,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 54633,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In each simulation a new system was created using the respective distribution to generate the parameters of the modules.",
+            "startOffset": 54513,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 55774,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 4 shows a system of 2 strings with 1 string of shaded modules in Fig. 4(a) and with 1 string with modules short-circuited in Fig. 4(b).",
+            "startOffset": 55634,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 67931,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "A detailed of the energy losses versus protection of the system is yet outstanding.",
+            "startOffset": 67848,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63636,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Different inspection periods were performed, where the failed fuses were replaced, generating new fuses with a new MTTF.",
+            "startOffset": 63516,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 60886,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the standard silicon system 10 of 24 modules were short-circuited in 1 string, and for the high efficiency system 6 of 18 modules.",
+            "startOffset": 60752,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 58350,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 58167,
+                    "startOffset": 58151
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Grid connected PV inverters tested to IEC-62109 (2010) must include protection which disconnects the inverter from the utility network in the event of an array earth fault or the AC voltage or frequency going outside the allowable range.",
+            "startOffset": 58113,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 64038,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "With an annual inspection the losses are reduced to a 1% and with an inspection every 6 months the losses are reduced to a 0.6%.",
+            "startOffset": 63910,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 51992,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The sorting by power is not a homogeneous process but usually varies in each production order or project contract.",
+            "startOffset": 51878,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 61996,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the shaded scenario all the modules of the string were fully shaded (90% irradiance loss) for both systems (standard silicon and high efficiency).",
+            "startOffset": 61846,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 43596,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The aim of this paper is to estimate and analyse losses in PV systems due to variations in the parameters of the modules and to analyse the magnitude of reverse currents in the strings as well as the consequences on system performance.",
+            "startOffset": 43361,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65326,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "There is no relevant reverse current due to partial or full shading of strings in a PV system with fully operational bypass diodes and inverter(s).",
+            "startOffset": 65179,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 61845,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "After increasing the system current, the voltage of the system was increased adding more modules per string in a 50 string system.",
+            "startOffset": 61715,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 65074,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "It appears that the use of thermal fuses for overcurrent protection has been carried over from their traditional use in circuits supplied by batteries or electromagnetic generators to the DC circuits of PV systems without modification for the specific failure modes in PV systems.",
+            "startOffset": 64794,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 52506,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "A similar result was obtained for the high efficiency modules, but with a very marked highest power probability, demonstrating a strict power selection method (See Fig. A.9 of Appendix A).",
+            "startOffset": 52318,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 54763,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Fig. 3 shows the energy losses due to the circuit mismatch.",
+            "startOffset": 54704,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 43684,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Develop a detailed model of large scale PV systems.",
+            "startOffset": 43633,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55633,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "To analyse the reverse current in strings of PV systems under unbalanced conditions, two scenarios were considered: shading and short-circuits, both under STC conditions.",
+            "startOffset": 55463,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 65922,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "There are some faults that are hidden by the inverter action, because when the failure occurs, the inverter negates the fault reverse current by reducing the voltage of the system, before the fuses disconnection time is reached.",
+            "startOffset": 65694,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63018,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For a system Voc around 1600 [VDC], are necessary 19 of 48 short-circuited modules (40% of the string) in the standard silicon system and 11 of 36 (31% of the string) in the high efficiency system.",
+            "startOffset": 62821,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 56056,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The magenta line is the power of the system and the red line is the reverse current in the shaded or short-circuited string.",
+            "startOffset": 55932,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 57251,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the high efficiency system, a power of 40 kWp was considered, with a system composed by 10 strings of 18 modules per string and an approximate system Voc of 873 [VDC].",
+            "startOffset": 57080,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 67723,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "These losses can be almost eliminated with an annual inspection plan.",
+            "startOffset": 67654,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 42713,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The reason for the imbalance voltage can be unbalanced operating conditions (shadowed panels) or failures (short-circuits) in a string.",
+            "startOffset": 42578,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41817,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "When a PV system is formed from modules with variation in their parameters, losses appear due to circuit mismatch in the electrical connections.",
+            "startOffset": 41673,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53193,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "These are for both distributions (normal and real), and also show the effect of the sorting of power present in the real distribution, resulting in the peak values being closer to the average value than in the normal distribution.",
+            "startOffset": 52963,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 43914,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Analyse the causes and consequences of reverse current in the system\u2019s strings.",
+            "startOffset": 43835,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66046,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "If the inverter is disconnected however, the fault reverse current can be 5 times the short circuit current of the modules.",
+            "startOffset": 65923,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 54512,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The target was to perform 100 simulations for each PV system (10, 50, 100, 250, 500, 750 and 1,000 kWp) and for each distribution (Normal and Real).",
+            "startOffset": 54364,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 67041,
+            "parents": [],
+            "refoffsets": {
+                "b0070": {
+                    "endOffset": 67039,
+                    "startOffset": 67022
+                }
+            },
+            "secId": "s0070",
+            "sentence": "A study of 180 fires involving PV systems found that in 50% of cases the fires were caused by installer errors not by component failures (TVRheinland, 2012).",
+            "startOffset": 66884,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 65179,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Based on the results presented here, it is not clear that thermal fuses provide the intended protection.",
+            "startOffset": 65075,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 42577,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The system voltage may be higher than a particular string voltage, thus causing a reverse current in this string.",
+            "startOffset": 42464,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60315,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "With large system powers, the influence of a shaded or short-circuited string over MPP and Voc of the system may be different, so the simulations were repeated with different system sizes, using modules without parameter variations (all the modules were set with datasheet parameters) so the same system was used in each simulations.",
+            "startOffset": 59982,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 65562,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The use of string fuses does not ensure fault clearance due to the action of the inverter.",
+            "startOffset": 65472,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63515,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "In each simulation new fuses were generated with its respective MTTF.",
+            "startOffset": 63446,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 50733,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In each simulation new fuses were included with their respective MTTF.",
+            "startOffset": 50663,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 63909,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "As shown in Fig. 8(b) the energy losses due to fuse failures without inspections reach 38%.",
+            "startOffset": 63818,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 43997,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Estimate losses due to string fuse failures using its mean time to failure (MTTF).",
+            "startOffset": 43915,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47164,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For the realistic distribution, a regression method was used to fit the distribution the best possible with the real distribution obtained from the data of the flash tests of the modules and considering the sorting in power categories done by the manufacturers.",
+            "startOffset": 46903,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 54886,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As can be seen in Fig. 2 and in Fig. 3, the standard deviation of the losses decreases as the size of the system increases.",
+            "startOffset": 54763,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 51877,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The distribution of the parameters of the real modules (blue line) does not present a normal distribution shape, due to cell sorting into power categories by the manufacturer, resulting in the sharp edge in the high and low power limit of the distribution as shown in Fig. 1.",
+            "startOffset": 51602,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 43834,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Estimate and analyse losses due to circuit mismatch.",
+            "startOffset": 43782,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50854,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Different inspection periods were performed, where the failed fuses were replaced, generating new fuses with a new MTTF.",
+            "startOffset": 50734,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 49139,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 49083,
+                    "startOffset": 49036
+                },
+                "b0045": {
+                    "endOffset": 49083,
+                    "startOffset": 49036
+                }
+            },
+            "secId": "s0030",
+            "sentence": "In order to analyse the reverse current that may be present in the strings, the system model was submitted to unbalanced operational conditions that can cause reverse or fault current, as described by Laschinsky et al. (2010) and Goss et al. (2011), considering two scenarios, shading and short-circuits.",
+            "startOffset": 48835,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 58493,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The latter protection type may occur if there is a fault in the AC network for example a high resistance joint causing excessive voltage rise.",
+            "startOffset": 58351,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 66353,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The use of string fuses does not prevent the risk of reverse currents.",
+            "startOffset": 66283,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 62170,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 7 shows the results of these simulations.",
+            "startOffset": 62124,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 62547,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As can be seen in Fig. 7(a), there is almost no difference in the reverse current in the shaded string when the voltage of the system was increased, this is because to increase the voltage of the system, more modules per string would have to be added, increasing also the resistance of the string (there is a linear relationship between the increase of voltage and resistance).",
+            "startOffset": 62170,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 45534,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 45470,
+                    "startOffset": 45455
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Parallel connections were added to the Mohapatra model (Mohapatra, 2011), forming a PV array composed by strings connected in parallel.",
+            "startOffset": 45399,
+            "title": "System model"
+        },
+        {
+            "endOffset": 52962,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Figs. A.10 and A.11 in Appendix A show the random generation of the standard silicon and high efficiency module parameters.",
+            "startOffset": 52839,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 52785,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Once the distributions were adjusted, 200 simulations of each module type (standard silicon and high efficiency) were performed, using the normal and the real distribution, with the aim of verifying that the parameter variance was in accordance with the datasheet of the modules.",
+            "startOffset": 52506,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 62820,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As shown in Fig. 7(b), for a system Voc around 800 [VDC], its necessary for 10 of 24 modules to be short-circuited (42% of the string) to have a reverse current over two times Isc in the standard silicon system and 6 of 18 (33% of the string) in the high efficiency system.",
+            "startOffset": 62547,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 42060,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "When connected together in series, all modules will operate at the same current.",
+            "startOffset": 41980,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57634,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For both figures the continuous lines are for the standard silicon system and the dashed lines are for the high efficiency system.",
+            "startOffset": 57504,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 49306,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For each condition (shading and short-circuit), two PV systems were considered, one using standard silicon modules and the other using high efficiency silicon modules.",
+            "startOffset": 49139,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 61080,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As shown in Fig. 6(a), there is almost no difference in the reverse current in the shaded string when the size (power) of the system was increased.",
+            "startOffset": 60933,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 42379,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The operation at the same operating voltage may cause reverse currents that are another source of losses.",
+            "startOffset": 42274,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43027,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Estimating the losses and consequences of unbalanced operational conditions with experimental work is expensive and limited by hardware resources and environmental variables.",
+            "startOffset": 42853,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47373,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 47269,
+                    "startOffset": 47246
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Instead of the mismatch degradation factor used by MacAlpine et al. (2012), simulations were performed to evaluate the mismatch losses, considering different systems sizes (kWp).",
+            "startOffset": 47195,
+            "title": "Power and energy simulations"
+        },
+        {
+            "endOffset": 66283,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In these cases, it is questionable if a one h withstand time of the fuses delivers the required protection.",
+            "startOffset": 66176,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 57376,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 5(a) shows the reverse current present in one string when different numbers of modules in the string are shaded by 90%.",
+            "startOffset": 57252,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 53508,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 53507,
+                    "startOffset": 53491
+                }
+            },
+            "secId": "s0050",
+            "sentence": "A maximum system voltage of 1000 [VDC] was used in compliance with the voltage limit for IEC-60364 (2005).",
+            "startOffset": 53402,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 67433,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The PV industry should review the protection strategy for PV systems and consider whether the current combination of module bypass diodes and string fuses is the best solution.",
+            "startOffset": 67257,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 61244,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "When the size of the system was increased by 1000%, the reverse current increased by 6.8% in the standard silicon system and by 8.4% in the high efficiency system.",
+            "startOffset": 61081,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 45786,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The I\u2013V curve of the array is then solved summing the strings currents for a specific array voltage.",
+            "startOffset": 45686,
+            "title": "System model"
+        },
+        {
+            "endOffset": 53698,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Table B.2 in Appendix B, shows the results of the power simulations.",
+            "startOffset": 53630,
+            "title": "Power simulations"
+        },
+        {
+            "endOffset": 56351,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For simplicity, in the following graphs only the curve corresponding to the reverse current will be showed.",
+            "startOffset": 56244,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 42274,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Therefore each module operates away from its maximum power point and the system power is not the sum of the power of the modules.",
+            "startOffset": 42145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48800,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The meteorological data of Sutton Bonington1 obtained from the Met Office Integrated Data Archive System2 have been used for the energy simulations.",
+            "startOffset": 48337,
+            "title": "Power and energy simulations"
+        },
+        {
+            "endOffset": 66175,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Thus, it one would need two faults in the system to cause a reverse current fault of a magnitude that would destroy the modules.",
+            "startOffset": 66047,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 50662,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Methodology"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Then simulations were performed for 25 consecutive years, using the same meteorological data and using the string generation data of the 1 MWp system.",
+            "startOffset": 50512,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 63222,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "String fuses have the possibility to fail due to other failures in the system depending on the mean time to failure (MTTF) of individual components.",
+            "startOffset": 63074,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 63445,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "To estimate the energy losses due to these fuse failures, the MTTF feature was added to the string fuses of the model and then 100 simulations were performed using a 1 MWp system, considering a system lifetime of 25 years.",
+            "startOffset": 63223,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 66444,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In shaded scenarios, the reverse current in the strings was lower than the fusing current.",
+            "startOffset": 66354,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 52318,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Other characteristics of the distribution are that the peak power probability (highest number of modules with the same power bin) of the real modules is not at the central point of the distribution, it is close to the high limit, allowing to keep the power average of the distribution when more lower power modules are added.",
+            "startOffset": 51993,
+            "title": "PV modules parameters distributions"
+        },
+        {
+            "endOffset": 41485,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Pressures on PV system developers to deliver improved the economic returns is motivating research in systems optimization to minimize losses, and deliver improvements in systems reliability to minimize components failures.",
+            "startOffset": 41263,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41979,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This is because each PV module has a different maximum power point, so each module has to operate at non-ideal current and voltage to conform to Kirchhoff's Law.",
+            "startOffset": 41818,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55126,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "This is because larger systems have more modules, therefore there is a higher probability that modules with below average power compensate for modules with above average power, thereby decreasing the standard deviation of the whole system.",
+            "startOffset": 54887,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 60933,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 6 shows the results of these simulations.",
+            "startOffset": 60887,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 42144,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In parallel connections, all strings (of modules) will operate at the same voltage.",
+            "startOffset": 42061,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54363,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Annual simulations were conducted with a time resolution of one hour.",
+            "startOffset": 54294,
+            "title": "Energy simulations"
+        },
+        {
+            "endOffset": 63818,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Fig. 8(b) shows the energy losses when different inspection periods were performed.",
+            "startOffset": 63735,
+            "title": "Fuses failures and their impact on system performance"
+        },
+        {
+            "endOffset": 67175,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The use of DC string fuses adds complexity to systems and may increase the number of DC connections to be made on site by installers.",
+            "startOffset": 67042,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 56705,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "When the system conditions change suddenly, like in a short-circuit, the inverter takes time to find the new maximum power point of the system, therefore there is a transient fault current, that is the current between the diamond and the asterisk in Fig. 4(b) and its duration time depends of the response of the MPP tracking algorithm during the fault.",
+            "startOffset": 56352,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 56243,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The asterisk is the reverse current at the voltage of the maximum power point of the system (MPP) and the triangle is the reverse current at the open circuit voltage (Voc) of the system.",
+            "startOffset": 56057,
+            "title": "Strings reverse current analysis"
+        },
+        {
+            "endOffset": 57857,
+            "parents": [
+                {
+                    "id": "s0040",
+                    "title": "Results and discussion"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As can be seen in Fig. 5(a), when the inverter is working optimally (tracking the maximum power point of the system), there is no reverse current in the shaded string at the voltage of the maximum power point of the system.",
+            "startOffset": 57634,
+            "title": "Strings reverse current analysis"
+        }
+    ],
+    "docId": "S0038092X15001681",
+    "metadata": {
+        "asjc": [
+            "2105",
+            "2500"
+        ],
+        "authors": [
+            {
+                "email": "j.p.vargas-abalos-12@alumni.lboro.ac.uk",
+                "first": "J. P.",
+                "initial": "J.P.",
+                "last": "Vargas"
+            },
+            {
+                "email": null,
+                "first": "B.",
+                "initial": "B.",
+                "last": "Goss"
+            },
+            {
+                "email": null,
+                "first": "R.",
+                "initial": "R.",
+                "last": "Gottschalg"
+            }
+        ],
+        "doi": "10.1016/j.solener.2015.03.041",
+        "firstpage": "303",
+        "issn": "0038092X",
+        "keywords": [
+            "Detailed model",
+            "Fuses failures",
+            "Mismatch losses",
+            "Non-uniform conditions",
+            "Reverse current",
+            "System performance"
+        ],
+        "lastpage": "313",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "ENER",
+            "MATE"
+        ],
+        "title": "Large scale PV systems under non-uniform and fault conditions"
+    }
+}

@@ -1,0 +1,4606 @@
+{
+    "abstract": "Mapping or \"delimiting\" landforms is one of geomorphology's primary tools. Computer-based techniques such as land-surface segmentation allow the emulation of the process of manual landform delineation. Land-surface segmentation exhaustively subdivides a digital elevation model (DEM) into morphometrically-homogeneous irregularly-shaped regions, called terrain segments. Terrain segments can be created from various land-surface parameters (LSP) at multiple scales, and may therefore potentially correspond to the spatial extents of landforms such as drumlins. However, this depends on the segmentation algorithm, the parameterization, and the LSPs. In the present study we assess the widely used multiresolution segmentation (MRS) algorithm for its potential in providing terrain segments which delimit drumlins. Supervised testing was based on five 5-m DEMs that represented a set of 173 synthetic drumlins at random but representative positions in the same landscape. Five LSPs were tested, and four variants were computed for each LSP to assess the impact of median filtering of DEMs, and logarithmic transformation of LSPs. The testing scheme (1) employs MRS to partition each LSP exhaustively into 200 coarser scales of terrain segments by increasing the scale parameter (SP), (2) identifies the spatially best matching terrain segment for each reference drumlin, and (3) computes four segmentation accuracy metrics for quantifying the overall spatial match between drumlin segments and reference drumlins. Results of 100 tests showed that MRS tends to perform best on LSPs that are regionally derived from filtered DEMs, and then log-transformed. MRS delineated 97% of the detected drumlins at SP values between 1 and 50. Drumlin delimitation rates with values up to 50% are in line with the success of manual interpretations. Synthetic DEMs are well-suited for assessing landform quantification methods such as MRS, since subjectivity in the reference data is avoided which increases the reliability, validity and applicability of results. \u00a9 2014 The Authors.",
+    "author_highlights": [
+        {
+            "endOffset": 28266,
+            "sentence": "Multiresolution segmentation is tested for delimiting drumlins in synthetic DEMs.",
+            "startOffset": 28185
+        },
+        {
+            "endOffset": 28324,
+            "sentence": "Drumlins may be delimited by individual terrain segments.",
+            "startOffset": 28267
+        },
+        {
+            "endOffset": 28401,
+            "sentence": "Recommendations for optimizing terrain-based drumlin delimitation are given.",
+            "startOffset": 28325
+        },
+        {
+            "endOffset": 28486,
+            "sentence": "Ideal terrain derivatives are regional, derived from a filtered DEM, and normalized.",
+            "startOffset": 28402
+        },
+        {
+            "endOffset": 28568,
+            "sentence": "Recovery rates are similar to those achieved by experts in manual interpretation.",
+            "startOffset": 28487
+        }
+    ],
+    "bib_entries": {
+        "bb0005": {
+            "authors": [
+                {
+                    "first": "Niels S.",
+                    "initial": "N.S.",
+                    "last": "Anders"
+                },
+                {
+                    "first": "Arie C.",
+                    "initial": "A.C.",
+                    "last": "Seijmonsbergen"
+                },
+                {
+                    "first": "Willem",
+                    "initial": "W.",
+                    "last": "Bouten"
+                }
+            ],
+            "doi": "10.1016/j.rse.2011.05.007",
+            "firstpage": "2976",
+            "issn": "00344257",
+            "lastpage": "2985",
+            "pub_year": 2011,
+            "title": "Segmentation optimization and stratified object-based analysis for semi-automated geomorphological mapping",
+            "volume": "115"
+        },
+        "bb0010": null,
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Lawrence E.",
+                    "initial": "L.E.",
+                    "last": "Band"
+                },
+                {
+                    "first": "Christina L.",
+                    "initial": "C.L.",
+                    "last": "Tague"
+                },
+                {
+                    "first": "Soren E.",
+                    "initial": "S.E.",
+                    "last": "Brun"
+                },
+                {
+                    "first": "David E.",
+                    "initial": "D.E.",
+                    "last": "Tenenbaum"
+                },
+                {
+                    "first": "Richard A.",
+                    "initial": "R.A.",
+                    "last": "Fernandes"
+                }
+            ],
+            "doi": "10.1111/1467-9671.00048",
+            "firstpage": "181",
+            "issn": "13611682",
+            "lastpage": "196",
+            "pub_year": 2000,
+            "title": "Modelling watersheds as spatial object hierarchies: Structure and dynamics",
+            "volume": "4"
+        },
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "Ursula C.",
+                    "initial": "U.C.",
+                    "last": "Benz"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Hofmann"
+                },
+                {
+                    "first": "Gregor",
+                    "initial": "G.",
+                    "last": "Willhauck"
+                },
+                {
+                    "first": "Iris",
+                    "initial": "I.",
+                    "last": "Lingenfelder"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "Heynen"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2003.10.002",
+            "firstpage": "239",
+            "issn": "09242716",
+            "lastpage": "258",
+            "pub_year": 2004,
+            "title": "Multi-resolution, object-oriented fuzzy analysis of remote sensing data for GIS-ready information",
+            "volume": "58"
+        },
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2009.06.004",
+            "firstpage": "2",
+            "issn": "09242716",
+            "lastpage": "16",
+            "pub_year": 2010,
+            "title": "Object based image analysis for remote sensing",
+            "volume": "65"
+        },
+        "bb0035": null,
+        "bb0040": null,
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "B\u00f6hner"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Antoni\u0107"
+                }
+            ],
+            "doi": "10.1016/S0166-2481(08)00008-1",
+            "firstpage": "195",
+            "issn": "01660918",
+            "lastpage": "226",
+            "pub_year": 2009,
+            "title": "Land-surface parameters specific to topo-climatology",
+            "volume": "33"
+        },
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Chris D.",
+                    "initial": "C.D.",
+                    "last": "Clark"
+                },
+                {
+                    "first": "Anna L.C.",
+                    "initial": "A.L.C.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "Sarah L.",
+                    "initial": "S.L.",
+                    "last": "Greenwood"
+                },
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Spagnolo"
+                },
+                {
+                    "first": "Felix S.L.",
+                    "initial": "F.S.L.",
+                    "last": "Ng"
+                }
+            ],
+            "doi": "10.1016/j.quascirev.2008.08.035",
+            "firstpage": "677",
+            "issn": "02773791",
+            "lastpage": "692",
+            "pub_year": 2009,
+            "title": "Size and shape characteristics of drumlins, derived from a large sample, and associated scaling laws",
+            "volume": "28"
+        },
+        "bb0055": {
+            "authors": [
+                {
+                    "first": "Nicholas",
+                    "initial": "N.",
+                    "last": "Clinton"
+                },
+                {
+                    "first": "Ashley",
+                    "initial": "A.",
+                    "last": "Holt"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Scarborough"
+                },
+                {
+                    "first": "L. I.",
+                    "initial": "L.I.",
+                    "last": "Yan"
+                },
+                {
+                    "first": "Peng",
+                    "initial": "P.",
+                    "last": "Gong"
+                }
+            ],
+            "doi": "10.14358/PERS.76.3.289",
+            "firstpage": "289",
+            "issn": "00991112",
+            "lastpage": "299",
+            "pub_year": 2010,
+            "title": "Accuracy assessment measures for object-based image segmentation goodness",
+            "volume": "76"
+        },
+        "bb0060": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "D'Oleire-Oltmanns"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Eisank"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Dr\u01cegut"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1109/LGRS.2013.2254465",
+            "firstpage": "947",
+            "issn": "1545598X",
+            "lastpage": "951",
+            "pub_year": 2013,
+            "title": "An object-based workflow to extract landforms at multiple scales from two distinct data types",
+            "volume": "10"
+        },
+        "bb0065": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Dikau"
+                }
+            ],
+            "firstpage": "51",
+            "lastpage": "77",
+            "pub_year": 1989,
+            "title": "The application of a digital relief model to landform analysis in geomorphology"
+        },
+        "bb0070": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2006.04.013",
+            "firstpage": "330",
+            "issn": "0169555X",
+            "lastpage": "344",
+            "pub_year": 2006,
+            "title": "Automated classification of landform elements using object-based image analysis",
+            "volume": "81"
+        },
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Dirk",
+                    "initial": "D.",
+                    "last": "Tiede"
+                },
+                {
+                    "first": "Shaun R.",
+                    "initial": "S.R.",
+                    "last": "Levick"
+                }
+            ],
+            "doi": "10.1080/13658810903174803",
+            "firstpage": "859",
+            "issn": "13658816",
+            "lastpage": "871",
+            "pub_year": 2010,
+            "title": "ESP: A tool to estimate scale parameter for multiresolution image segmentation of remotely sensed data",
+            "volume": "24"
+        },
+        "bb0080": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Eisank"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.03.003",
+            "firstpage": "183",
+            "issn": "0169555X",
+            "lastpage": "189",
+            "pub_year": 2011,
+            "title": "Object representations at multiple scales from digital elevation models",
+            "volume": "129"
+        },
+        "bb0085": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegut"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Eisank"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Strasser"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.03.011",
+            "firstpage": "162",
+            "issn": "0169555X",
+            "lastpage": "172",
+            "pub_year": 2011,
+            "title": "Local variance for multi-scale analysis in geomorphometry",
+            "volume": "130"
+        },
+        "bb0090": {
+            "authors": [
+                {
+                    "first": "Lucian",
+                    "initial": "L.",
+                    "last": "Dr\u01cegu\u0163"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Eisank"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.12.001",
+            "firstpage": "21",
+            "issn": "0169555X",
+            "lastpage": "33",
+            "pub_year": 2012,
+            "title": "Automated object-based classification of topography from SRTM data",
+            "volume": "141-142"
+        },
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Eisank"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Dr\u0259gu\u0163"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "G\u00f6tz"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Blaschke"
+                }
+            ],
+            "issn": "16821750",
+            "pub_year": 2010,
+            "title": "Developing a semantic model of glacial landforms for object-based terrain classification-the example of glacial cirques",
+            "volume": "38"
+        },
+        "bb0100": null,
+        "bb0105": {
+            "authors": [
+                {
+                    "first": "Ian S.",
+                    "initial": "I.S.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2010.09.029",
+            "firstpage": "94",
+            "issn": "0169555X",
+            "lastpage": "106",
+            "pub_year": 2012,
+            "title": "Geomorphometry and landform mapping: What is a landform?",
+            "volume": "137"
+        },
+        "bb0110": {
+            "authors": [
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Finlayson"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2013.03.026",
+            "firstpage": "25",
+            "issn": "0169555X",
+            "lastpage": "33",
+            "pub_year": 2013,
+            "title": "Digital surface models are not always representative of former glacier beds: Palaeoglaciological and geomorphological implications",
+            "volume": "194"
+        },
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "Yan",
+                    "initial": "Y.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "Prashanth",
+                    "initial": "P.",
+                    "last": "Marpu"
+                },
+                {
+                    "first": "Imgard",
+                    "initial": "I.",
+                    "last": "Niemeyer"
+                },
+                {
+                    "first": "Daniel Miller",
+                    "initial": "D.M.",
+                    "last": "Runfola"
+                },
+                {
+                    "first": "Nicholas M.",
+                    "initial": "N.M.",
+                    "last": "Giner"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Hamill"
+                },
+                {
+                    "first": "Robert Gilmore",
+                    "initial": "R.G.",
+                    "last": "Pontius"
+                }
+            ],
+            "doi": "10.1080/10106049.2011.556754",
+            "firstpage": "211",
+            "issn": "10106049",
+            "lastpage": "226",
+            "pub_year": 2011,
+            "title": "Object-based classification with features extracted by a semi-automatic feature extraction algorithm-SEaTH",
+            "volume": "26"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "Deniz",
+                    "initial": "D.",
+                    "last": "Ger\u00e7ek"
+                },
+                {
+                    "first": "Vedat",
+                    "initial": "V.",
+                    "last": "Toprak"
+                },
+                {
+                    "first": "Josef",
+                    "initial": "J.",
+                    "last": "Stroblc"
+                }
+            ],
+            "doi": "10.1080/13658816.2011.558845",
+            "firstpage": "1011",
+            "issn": "13658816",
+            "lastpage": "1023",
+            "pub_year": 2011,
+            "title": "Object-based classification of landforms based on their local geometry and geomorphometric context",
+            "volume": "25"
+        },
+        "bb0125": {
+            "authors": [
+                {
+                    "first": "Philip T.",
+                    "initial": "P.T.",
+                    "last": "Giles"
+                },
+                {
+                    "first": "Steven E.",
+                    "initial": "S.E.",
+                    "last": "Franklin"
+                }
+            ],
+            "firstpage": "251",
+            "issn": "0169555X",
+            "lastpage": "264",
+            "pub_year": 1998,
+            "title": "An automated approach to the classification of the slope units using digital data",
+            "volume": "21"
+        },
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "J. K.",
+                    "initial": "J.K.",
+                    "last": "Hiller"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.1002/esp.1659",
+            "firstpage": "2266",
+            "issn": "01979337",
+            "lastpage": "2276",
+            "pub_year": 2008,
+            "title": "Residual relief separation: Digital elevation model enhancement for geomorphological mapping",
+            "volume": "33"
+        },
+        "bb0135": {
+            "authors": [
+                {
+                    "first": "John K.",
+                    "initial": "J.K.",
+                    "last": "Hillier"
+                },
+                {
+                    "first": "Mike J.",
+                    "initial": "M.J.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2012.02.009",
+            "firstpage": "61",
+            "issn": "0169555X",
+            "lastpage": "73",
+            "pub_year": 2012,
+            "title": "Testing 3D landform quantification methods with synthetic drumlins in a real digital elevation model",
+            "volume": "153-154"
+        },
+        "bb0140": {
+            "authors": [
+                {
+                    "first": "John K.",
+                    "initial": "J.K.",
+                    "last": "Hillier"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.1002/esp.3530",
+            "firstpage": "676",
+            "issn": "01979337",
+            "lastpage": "688",
+            "pub_year": 2014,
+            "title": "Testing techniques to quantify drumlin height and volume: Synthetic DEMs as a diagnostic tool",
+            "volume": "39"
+        },
+        "bb0145": null,
+        "bb0155": null,
+        "bb0160": {
+            "authors": [
+                {
+                    "first": "A. S.",
+                    "initial": "A.S.",
+                    "last": "Laliberte"
+                },
+                {
+                    "first": "D. M.",
+                    "initial": "D.M.",
+                    "last": "Browning"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Rango"
+                }
+            ],
+            "doi": "10.1016/j.jag.2011.05.011",
+            "firstpage": "70",
+            "issn": "15698432",
+            "lastpage": "78",
+            "pub_year": 2012,
+            "title": "A comparison of three feature selection methods for object-based classification of sub-decimeter resolution UltraCam-L imagery",
+            "volume": "15"
+        },
+        "bb0165": {
+            "authors": [
+                {
+                    "first": "Yong",
+                    "initial": "Y.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Ling",
+                    "initial": "L.",
+                    "last": "Bian"
+                },
+                {
+                    "first": "Yuhong",
+                    "initial": "Y.",
+                    "last": "Meng"
+                },
+                {
+                    "first": "Huanping",
+                    "initial": "H.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Shifu",
+                    "initial": "S.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Yining",
+                    "initial": "Y.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Xiaomin",
+                    "initial": "X.",
+                    "last": "Shao"
+                },
+                {
+                    "first": "Bo",
+                    "initial": "B.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1016/j.isprsjprs.2012.01.007",
+            "firstpage": "144",
+            "issn": "09242716",
+            "lastpage": "156",
+            "pub_year": 2012,
+            "title": "Discrepancy measures for selecting optimal combination of parameter values in object-based image analysis",
+            "volume": "68"
+        },
+        "bb0170": {
+            "authors": [
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Livingstone"
+                },
+                {
+                    "first": "Colm \u00d3",
+                    "initial": "C.O.",
+                    "last": "Cofaigh"
+                },
+                {
+                    "first": "David J.A.",
+                    "initial": "D.J.A.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.4113/jom.2008.1032",
+            "firstpage": "358",
+            "issn": "17445647",
+            "lastpage": "377",
+            "pub_year": 2008,
+            "title": "Glacial geomorphology of the central sector of the last British-Irish Ice sheet",
+            "volume": "4"
+        },
+        "bb0175": {
+            "authors": [
+                {
+                    "first": "Arko",
+                    "initial": "A.",
+                    "last": "Lucieer"
+                },
+                {
+                    "first": "Alfred",
+                    "initial": "A.",
+                    "last": "Stein"
+                }
+            ],
+            "doi": "10.1109/TGRS.2002.805072",
+            "firstpage": "2518",
+            "issn": "01962892",
+            "lastpage": "2521",
+            "pub_year": 2002,
+            "title": "Existential uncertainty of spatial objects segmented from satellite sensor imagery",
+            "volume": "40"
+        },
+        "bb0180": {
+            "authors": [
+                {
+                    "first": "John C.",
+                    "initial": "J.C.",
+                    "last": "Maclachlan"
+                },
+                {
+                    "first": "Carolyn H.",
+                    "initial": "C.H.",
+                    "last": "Eyles"
+                }
+            ],
+            "doi": "10.1111/geoa.12005",
+            "firstpage": "125",
+            "issn": "04353676",
+            "lastpage": "144",
+            "pub_year": 2013,
+            "title": "Quantitative geomorphological analysis of drumlins in the Peterborough drumlin field, Ontario, Canada",
+            "volume": "95"
+        },
+        "bb0185": {
+            "authors": [
+                {
+                    "first": "R. A.",
+                    "initial": "R.A.",
+                    "last": "MacMillan"
+                },
+                {
+                    "first": "R. Keith",
+                    "initial": "R.K.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "David H.",
+                    "initial": "D.H.",
+                    "last": "McNabb"
+                }
+            ],
+            "doi": "10.1016/S0198-9715(03)00019-X",
+            "firstpage": "175",
+            "issn": "01989715",
+            "lastpage": "200",
+            "pub_year": 2004,
+            "title": "Defining a hierarchy of spatial entities for environmental analysis and modeling using digital elevation models (DEMs)",
+            "volume": "28"
+        },
+        "bb0190": {
+            "authors": [
+                {
+                    "first": "R. A.",
+                    "initial": "R.A.",
+                    "last": "MacMillan"
+                },
+                {
+                    "first": "P. A.",
+                    "initial": "P.A.",
+                    "last": "Shary"
+                }
+            ],
+            "doi": "10.1016/S0166-2481(08)00009-3",
+            "firstpage": "227",
+            "issn": "01660918",
+            "lastpage": "254",
+            "pub_year": 2009,
+            "title": "Landforms and landform elements in geomorphometry",
+            "volume": "33"
+        },
+        "bb0195": null,
+        "bb0200": {
+            "authors": [
+                {
+                    "first": "Tapas Ranjan",
+                    "initial": "T.R.",
+                    "last": "Martha"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Cees J.",
+                    "initial": "C.J.",
+                    "last": "Van Westen"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Jetten"
+                },
+                {
+                    "first": "K. Vinod",
+                    "initial": "K.V.",
+                    "last": "Kumar"
+                }
+            ],
+            "doi": "10.1109/TGRS.2011.2151866",
+            "firstpage": "4928",
+            "issn": "01962892",
+            "lastpage": "4943",
+            "pub_year": 2011,
+            "title": "Segment optimization and data-driven thresholding for knowledge-based landslide detection by object-based image analysis",
+            "volume": "49"
+        },
+        "bb0205": {
+            "authors": [
+                {
+                    "first": "Toshiya",
+                    "initial": "T.",
+                    "last": "Matsuura"
+                },
+                {
+                    "first": "Masamu",
+                    "initial": "M.",
+                    "last": "Aniya"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2012.07.024",
+            "firstpage": "167",
+            "issn": "0169555X",
+            "lastpage": "177",
+            "pub_year": 2012,
+            "title": "Automated segmentation of hillslope profiles across ridges and valleys using a digital elevation model",
+            "volume": "177-178"
+        },
+        "bb0210": {
+            "authors": [
+                {
+                    "first": "J. Donald",
+                    "initial": "J.D.",
+                    "last": "McClenagan"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2013.01.015",
+            "firstpage": "41",
+            "issn": "0169555X",
+            "lastpage": "54",
+            "pub_year": 2013,
+            "title": "Streamlined erosional residuals and drumlins in central British Columbia, Canada",
+            "volume": "189"
+        },
+        "bb0215": {
+            "authors": [
+                {
+                    "first": "George Ch",
+                    "initial": "G.C.",
+                    "last": "Miliaresis"
+                }
+            ],
+            "doi": "10.1016/S0098-3004(01)00032-2",
+            "firstpage": "1157",
+            "issn": "00983004",
+            "lastpage": "1167",
+            "pub_year": 2001,
+            "title": "Extraction of bajadas from digital elevation models and satellite imagery",
+            "volume": "27"
+        },
+        "bb0220": {
+            "authors": [
+                {
+                    "first": "Jozef",
+                    "initial": "J.",
+                    "last": "Min\u00e1r"
+                },
+                {
+                    "first": "Ian S.",
+                    "initial": "I.S.",
+                    "last": "Evans"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2007.06.003",
+            "firstpage": "236",
+            "issn": "0169555X",
+            "lastpage": "259",
+            "pub_year": 2008,
+            "title": "Elementary forms for land surface segmentation: The theoretical basis of terrain analysis and geomorphological mapping",
+            "volume": "95"
+        },
+        "bb0225": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "M\u00f6ller"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Lymburner"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Volk"
+                }
+            ],
+            "doi": "10.1016/j.jag.2006.10.002",
+            "firstpage": "311",
+            "issn": "15698432",
+            "lastpage": "321",
+            "pub_year": 2007,
+            "title": "The comparison index: A tool for assessing the accuracy of image segmentation",
+            "volume": "9"
+        },
+        "bb0235": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Olaya"
+                }
+            ],
+            "doi": "10.1016/S0166-2481(08)00006-8",
+            "firstpage": "141",
+            "issn": "01660918",
+            "lastpage": "169",
+            "pub_year": 2009,
+            "title": "Basic land-surface parameters",
+            "volume": "33"
+        },
+        "bb0240": {
+            "authors": [
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Olaya"
+                },
+                {
+                    "first": "O.",
+                    "initial": "O.",
+                    "last": "Conrad"
+                }
+            ],
+            "doi": "10.1016/S0166-2481(08)00012-3",
+            "firstpage": "293",
+            "issn": "01660918",
+            "lastpage": "308",
+            "pub_year": 2009,
+            "title": "Geomorphometry in SAGA",
+            "volume": "33"
+        },
+        "bb0250": null,
+        "bb0255": {
+            "authors": [
+                {
+                    "first": "B\u00e5rd",
+                    "initial": "B.",
+                    "last": "Romstad"
+                },
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Etzelm\u00fcller"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2011.10.031",
+            "firstpage": "293",
+            "issn": "0169555X",
+            "lastpage": "302",
+            "pub_year": 2012,
+            "title": "Mean-curvature watersheds: A simple method for segmentation of a digital elevation model into terrain units",
+            "volume": "139-140"
+        },
+        "bb0260": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Rose"
+                }
+            ],
+            "firstpage": "103",
+            "lastpage": "116",
+            "pub_year": 1987,
+            "title": "Drumlins as part of a glacier bedform continuum"
+        },
+        "bb0265": {
+            "authors": [
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Rose"
+                },
+                {
+                    "first": "Mike J.",
+                    "initial": "M.J.",
+                    "last": "Smith"
+                }
+            ],
+            "doi": "10.4113/jom.2008.1040",
+            "firstpage": "399",
+            "issn": "17445647",
+            "lastpage": "416",
+            "pub_year": 2008,
+            "title": "Glacial geomorphological maps of the Glasgow region, western central Scotland",
+            "volume": "4"
+        },
+        "bb0270": {
+            "authors": [
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Rutzinger"
+                },
+                {
+                    "first": "Bernhard",
+                    "initial": "B.",
+                    "last": "H\u00f6fle"
+                },
+                {
+                    "first": "Korbinian",
+                    "initial": "K.",
+                    "last": "Kringer"
+                }
+            ],
+            "doi": "10.1111/j.1468-0459.2012.00453.x",
+            "firstpage": "33",
+            "issn": "04353676",
+            "lastpage": "42",
+            "pub_year": 2012,
+            "title": "Accuracy of automatically extracted geomorphological breaklines from airborne lidar curvature images",
+            "volume": "94"
+        },
+        "bb0275": {
+            "authors": [
+                {
+                    "first": "Kakoli",
+                    "initial": "K.",
+                    "last": "Saha"
+                },
+                {
+                    "first": "Neil A.",
+                    "initial": "N.A.",
+                    "last": "Wells"
+                },
+                {
+                    "first": "Mandy",
+                    "initial": "M.",
+                    "last": "Munro-Stasiuk"
+                }
+            ],
+            "doi": "10.1016/j.cageo.2011.04.001",
+            "firstpage": "1324",
+            "issn": "00983004",
+            "lastpage": "1336",
+            "pub_year": 2011,
+            "title": "An object-oriented approach to automated landform mapping: A case study of drumlins",
+            "volume": "37"
+        },
+        "bb0280": {
+            "authors": [
+                {
+                    "first": "Nora Jennifer",
+                    "initial": "N.J.",
+                    "last": "Schneevoigt"
+                },
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "van der Linden"
+                },
+                {
+                    "first": "Hans Peter",
+                    "initial": "H.P.",
+                    "last": "Thamm"
+                },
+                {
+                    "first": "Lothar",
+                    "initial": "L.",
+                    "last": "Schrott"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2006.12.034",
+            "firstpage": "104",
+            "issn": "0169555X",
+            "lastpage": "119",
+            "pub_year": 2008,
+            "title": "Detecting Alpine landforms from remotely sensed imagery. A pilot study in the Bavarian Alps",
+            "volume": "93"
+        },
+        "bb0285": null,
+        "bb0290": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Rose"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Booth"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2005.11.001",
+            "firstpage": "148",
+            "issn": "0169555X",
+            "lastpage": "165",
+            "pub_year": 2006,
+            "title": "Geomorphological mapping of glacial landforms from remotely sensed data: An evaluation of the principal data sources and an assessment of their quality",
+            "volume": "76"
+        },
+        "bb0295": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Rose"
+                },
+                {
+                    "first": "M. B.",
+                    "initial": "M.B.",
+                    "last": "Gousie"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2009.01.006",
+            "firstpage": "209",
+            "issn": "0169555X",
+            "lastpage": "218",
+            "pub_year": 2009,
+            "title": "The Cookie Cutter: A method for obtaining a quantitative 3D description of glacial bedforms",
+            "volume": "108"
+        },
+        "bb0300": {
+            "authors": [
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Spagnolo"
+                },
+                {
+                    "first": "Chris D.",
+                    "initial": "C.D.",
+                    "last": "Clark"
+                },
+                {
+                    "first": "Anna L.C.",
+                    "initial": "A.L.C.",
+                    "last": "Hughes"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2012.02.023",
+            "firstpage": "179",
+            "issn": "0169555X",
+            "lastpage": "191",
+            "pub_year": 2012,
+            "title": "Drumlin relief",
+            "volume": "153-154"
+        },
+        "bb0305": null,
+        "bb0310": null,
+        "bb0315": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "van Asselen"
+                },
+                {
+                    "first": "A. C.",
+                    "initial": "A.C.",
+                    "last": "Seijmonsbergen"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2006.01.037",
+            "firstpage": "309",
+            "issn": "0169555X",
+            "lastpage": "320",
+            "pub_year": 2006,
+            "title": "Expert-driven semi-automated geomorphological mapping for a mountainous area using a laser DTM",
+            "volume": "78"
+        },
+        "bb0320": {
+            "authors": [
+                {
+                    "first": "Miet",
+                    "initial": "M.",
+                    "last": "Van Den Eeckhaut"
+                },
+                {
+                    "first": "Norman",
+                    "initial": "N.",
+                    "last": "Kerle"
+                },
+                {
+                    "first": "Jean",
+                    "initial": "J.",
+                    "last": "Poesen"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Herv\u00e1s"
+                }
+            ],
+            "doi": "10.1016/j.geomorph.2012.05.024",
+            "firstpage": "30",
+            "issn": "0169555X",
+            "lastpage": "42",
+            "pub_year": 2012,
+            "title": "Object-oriented identification of forested landslides with derivatives of single pulse LiDAR data",
+            "volume": "173-174"
+        },
+        "bb0325": {
+            "authors": [
+                {
+                    "first": "Uwe",
+                    "initial": "U.",
+                    "last": "Weidner"
+                }
+            ],
+            "firstpage": "479",
+            "issn": "16821750",
+            "lastpage": "484",
+            "pub_year": 2008,
+            "title": "Contribution to the assessment of segmentation quality for remote sensing applications",
+            "volume": "37"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 51806,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Only SH consistently showed better values for the variants derived from the original DEMs.",
+            "startOffset": 51716,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 54722,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Only one segment could potentially meet these overlap conditions.",
+            "startOffset": 54657,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 62571,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "We believe that the conclusions drawn in this study are transferable to other areas, landform categories, and DEMs at comparable spatial resolutions.",
+            "startOffset": 62422,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 43350,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "MRS employs iterative region-growing that is controlled by a user-specified relative homogeneity criterion known as \u201cscale parameter\u201d (SP).",
+            "startOffset": 43211,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 34451,
+            "parents": [],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 34449,
+                    "startOffset": 34435
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The MRS algorithm can be applied to any gridded datasets including remote sensing, medical, and air-borne images (Blaschke, 2010).",
+            "startOffset": 34321,
+            "title": "Background"
+        },
+        {
+            "endOffset": 55530,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The four segmentation accuracy metrics proved to be valuable tools for quantifying the spatial agreement and discrepancy between the results of multi-scale segmentation and the reference drumlin maps.",
+            "startOffset": 55330,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 54048,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 54046,
+                    "startOffset": 54028
+                }
+            },
+            "secId": "s0065",
+            "sentence": "This reflects the underlying distribution of drumlin sizes (Clark et al., 2009).",
+            "startOffset": 53968,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 60411,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Setting the overlap threshold to values higher than 50% reduces segmentation accuracies, since fewer drumlins are detected, and those detected are over-estimated by terrain segments.",
+            "startOffset": 60229,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32297,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 32297,
+                    "startOffset": 32266
+                },
+                "bb0275": {
+                    "endOffset": 32118,
+                    "startOffset": 32100
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Saha et al. (2011) implemented a supervised object-based drumlin mapping approach based on medium-scale multi-band thematic layers and manually digitized references. d'Oleire-Oltmanns et al. (2013)",
+            "startOffset": 32100,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37529,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "However, for the sake of clarity, a summary of the steps involved is as follows:",
+            "startOffset": 37449,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 32584,
+            "parents": [],
+            "refoffsets": {
+                "bb0270": {
+                    "endOffset": 32481,
+                    "startOffset": 32458
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Rutzinger et al. (2012) used a curvature map and user-specified thresholds to identify drumlin edges in a high-resolution DEM.",
+            "startOffset": 32458,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34799,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 34797,
+                    "startOffset": 34767
+                },
+                "bb0200": {
+                    "endOffset": 34741,
+                    "startOffset": 34722
+                },
+                "bb0220": {
+                    "endOffset": 34700,
+                    "startOffset": 34679
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The intention is that terrain segments derived by MRS directly relate to the products of physical processes (e.g. Min\u00e1r and Evans, 2008) such as landslides (Martha et al., 2011) or subglacial bedforms (d'Oleire-Oltmanns et al., 2013).",
+            "startOffset": 34565,
+            "title": "Background"
+        },
+        {
+            "endOffset": 62180,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In this way, one major source of uncertainty (i.e. the subjectivity of manually delineated references) was removed.",
+            "startOffset": 62065,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 42919,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Performance testing consisted of three steps (Fig. 3): (1) iterative multi-scale land-surface segmentation using MRS to partition the input LSP into consecutively larger terrain segments, (2) extraction of terrain segments that delimit synthetic drumlins by using a mutual spatial overlap threshold at 50%, and (3) drumlin segmentation accuracy assessment.",
+            "startOffset": 42563,
+            "title": "Performance testing of multiresolution segmentation (MRS)"
+        },
+        {
+            "endOffset": 59796,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "A preliminary assessment of the impact of changed mutual spatial overlap, as well as of altered \u201cshape homogeneity\u201d on MRS performance indicates that the selected values of 50% and 0.1, respectively, are suitable for drumlin delimitation (Fig. 12).",
+            "startOffset": 59548,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63180,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The following conclusions can be drawn from the results obtained from 100 tests:",
+            "startOffset": 63100,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 34972,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Land-surface segmentation by means of MRS does not necessarily delineate landforms, thus \u201clandform delimitation\u201d can be seen as a special case of land-surface segmentation.",
+            "startOffset": 34800,
+            "title": "Background"
+        },
+        {
+            "endOffset": 54900,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Other types of relations (one-to-many, many-to-one, many-to-many) were disregarded.",
+            "startOffset": 54817,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39938,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0155": {
+                    "endOffset": 39890,
+                    "startOffset": 39866
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Convergence Index (CI): a measure of the extent to which steepest descent aspect (i.e., orientations of down-slope flow) for grid cells within a kernel converge on the center of the kernel (K\u00f6the and Lehmeier, 1996); it is low when centered on topographic highs.",
+            "startOffset": 39676,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 41374,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0130": {
+                    "endOffset": 41372,
+                    "startOffset": 41349
+                }
+            },
+            "secId": "s0025",
+            "sentence": "A similar layer has also been used in manual drumlin interpretation (Hillier and Smith, 2008).",
+            "startOffset": 41280,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 43687,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "More specifically, the SP value defines the maximum allowed difference in \u201ccolor homogeneity\u201d and \u201cshape homogeneity\u201d between the initial segments and the segments resulting from the intended merge.",
+            "startOffset": 43489,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 49132,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "By applying the automated three-stepped workflow (Fig. 3) to the four variants of each of the five selected LSPs (see Fig. 2), 20 intersection maps were generated for each of the five synthetic DEMs, resulting in 100 maps in total.",
+            "startOffset": 48901,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 43032,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The whole procedure was automated as a customized algorithm within an OBIA software, i.e. eCognition\u00ae (Trimble).",
+            "startOffset": 42920,
+            "title": "Performance testing of multiresolution segmentation (MRS)"
+        },
+        {
+            "endOffset": 52453,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This caused the high proportion of under-estimated areas (blue in Fig. 8) in the intersection map.",
+            "startOffset": 52355,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 58933,
+            "parents": [],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 58922,
+                    "startOffset": 58887
+                },
+                "bb0325": {
+                    "endOffset": 58922,
+                    "startOffset": 58887
+                }
+            },
+            "secId": "s0070",
+            "sentence": "There are several limitations in the current study: firstly, for all tests a fixed mutual overlap threshold of 50% (Weidner, 2008; Clinton et al., 2010) was used.",
+            "startOffset": 58771,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 39211,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Local LSPs are computed by applying either mathematical functions or statistical descriptors to DEM values inside a fixed-sized kernel (or window).",
+            "startOffset": 39064,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 56490,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In contrast to fixed-sized regular kernels, the evaluated regions per grid cell are different in size, depending on the structure of the land surface.",
+            "startOffset": 56340,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51715,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Application of log-transformation seems to depend on the underlying DEM.",
+            "startOffset": 51643,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 31775,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 31773,
+                    "startOffset": 31762
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Since drumlins are generally bounded by concave breaks of slope, they should be extractable from a DEM using automated delimitation methods such as MRS (Evans, 2012).",
+            "startOffset": 31609,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42300,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0305": {
+                    "endOffset": 42298,
+                    "startOffset": 42285
+                }
+            },
+            "secId": "s0025",
+            "sentence": "As a result of this transformation, LSPs showed distributions close to normal (Speight, 1971).",
+            "startOffset": 42206,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 48619,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The values of MR range from zero to 1.",
+            "startOffset": 48581,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 51642,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As can be seen in Fig. 7b, for most LSPs there is no clear proof whether a log-transformation will improve drumlin delimitation or not.",
+            "startOffset": 51507,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 44113,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "For the difference calculation the user has to set the relative importance of \u201ccolor homogeneity\u201d versus \u201cshape homogeneity\u201d, and further, for \u201cshape homogeneity\u201d, of \u201csmoothness\u201d versus \u201ccompactness\u201d by specifying weights that in both cases sum up to 1.",
+            "startOffset": 43859,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 47698,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 47644,
+                    "startOffset": 47623
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Clinton et al. (2010) provided a valuable review of the available measures.",
+            "startOffset": 47623,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 54525,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The intention was to automatically find, for each synthetic reference drumlin, the one spatially best matching terrain segment.",
+            "startOffset": 54398,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 38828,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Each DEM represents the same set of 173 synthetic drumlins, distributed differently across the study area.",
+            "startOffset": 38722,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 41056,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Vertical Distance to Channel Network (VDTCN): this describes the height above the channel network.",
+            "startOffset": 40958,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 41164,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 41162,
+                    "startOffset": 41142
+                }
+            },
+            "secId": "s0025",
+            "sentence": "It is measured as the relative height to an interpolated channel network base level (Bock and K\u00f6the, 2008).",
+            "startOffset": 41057,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 33967,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "This section provides details on the MRS algorithm, landform delimitation, and methods for optimizing MRS for landform delimitation.",
+            "startOffset": 33835,
+            "title": "Background"
+        },
+        {
+            "endOffset": 51210,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Log-transformation of LSPs led to higher or at least similar numbers of delimited drumlins (Fig. 7b), as compared to their non-transformed variants (Fig. 7a), with improvements highest for CI (from values of ~ 15\u201325 to ~ 45\u201360) followed by VDTCN.",
+            "startOffset": 50964,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 46166,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "AR \u2229 AS > AR/2: the overlap area has to be greater than half the area of the reference drumlin.",
+            "startOffset": 46071,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 36152,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Segmentation scales where the deviations between the distributions were minimal were selected as optimal.",
+            "startOffset": 36047,
+            "title": "Background"
+        },
+        {
+            "endOffset": 31608,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 31606,
+                    "startOffset": 31588
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Due to postglacial erosion and anthropogenic modification, many drumlins deviate from this characteristic form (Clark et al., 2009).",
+            "startOffset": 31476,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41629,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The synthetic DEMs 1\u20135 included non-topographic features such as trees and building (see Fig. 1).",
+            "startOffset": 41532,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 55810,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The highest drumlin delimitation accuracies were reached with log-transformed LSPs that were based on median filtered DEMs.",
+            "startOffset": 55687,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46538,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Segments that did not meet the overlap criteria were re-segmented with the next higher SP.",
+            "startOffset": 46448,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 47622,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0165": {
+                    "endOffset": 47620,
+                    "startOffset": 47543
+                },
+                "bb0175": {
+                    "endOffset": 47620,
+                    "startOffset": 47543
+                },
+                "bb0225": {
+                    "endOffset": 47620,
+                    "startOffset": 47543
+                },
+                "bb0325": {
+                    "endOffset": 47620,
+                    "startOffset": 47543
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Various metrics for segmentation quality assessment have been proposed (Lucieer and Stein, 2002; M\u00f6ller et al., 2007; Weidner, 2008; Liu et al., 2012).",
+            "startOffset": 47471,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 45143,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The selected weights imply that the creation of segments through MRS was mainly driven by the values of LSP grid cells, i.e. color, rather than by shape characteristics, i.e. smoothness and compactness.",
+            "startOffset": 44941,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 40637,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "NH also enhances subtle drumlins.",
+            "startOffset": 40604,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 58491,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The resultant terrain segments in these areas are \u2013 to a certain degree \u2013 arbitrarily defined, and deviate from the form and size of the synthetic drumlins.",
+            "startOffset": 58335,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63545,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The rates of drumlin recovery can be compared to those achieved by manual interpretations.",
+            "startOffset": 63455,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 49938,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Only in case of SH, the variant based on the filtered DEMs yielded lower segmentation accuracies.",
+            "startOffset": 49841,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 58151,
+            "parents": [],
+            "refoffsets": {
+                "bb0140": {
+                    "endOffset": 58150,
+                    "startOffset": 58126
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Since the filtered DEMs still included some noise, it can be concluded that the 60 m median filter was adequate for smoothing the DEMs, a finding noted by Hillier and Smith (2014).",
+            "startOffset": 57971,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 62064,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 61980,
+                    "startOffset": 61961
+                }
+            },
+            "secId": "s0070",
+            "sentence": "In contrast to previous landform quantification studies (e.g. Anders et al., 2011), we used synthetic landforms that represent objective and reliable reference data.",
+            "startOffset": 61899,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59013,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Secondly, only one segmentation algorithm, i.e. MRS, was analyzed among others.",
+            "startOffset": 58934,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 38060,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 38058,
+                    "startOffset": 38035
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Since the shape (height, width, length) of the extracted drumlins was approximately Gaussian, the synthetic drumlins were generated by idealizing the extracted drumlin 3D shapes based upon a Gaussian model (Hillier and Smith, 2012).",
+            "startOffset": 37828,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 54397,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "This study presents a method for supervised testing of the performance of MRS, a widely-used region-growing segmentation algorithm, for the delimitation of synthetic drumlins from 5-m DEMs.",
+            "startOffset": 54208,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 34565,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 34478,
+                    "startOffset": 34452
+                },
+                "bb0315": {
+                    "endOffset": 34520,
+                    "startOffset": 34483
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Dr\u0103gu\u0163 and Blaschke (2006) and Van Asselen and Seijmonsbergen (2006) introduced MRS to land-surface segmentation.",
+            "startOffset": 34452,
+            "title": "Background"
+        },
+        {
+            "endOffset": 40804,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 40802,
+                    "startOffset": 40779
+                }
+            },
+            "secId": "s0025",
+            "sentence": "It is computed based on slope values and the modified catchment area (B\u00f6hner and Selige, 2006).",
+            "startOffset": 40709,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 48209,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Except for AFI, the value range is from zero to 1; the closer the value is to zero, the better is the spatial match between reference objects and their largest overlapping segments, and the higher is the segmentation accuracy.",
+            "startOffset": 47983,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 35910,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 35836,
+                    "startOffset": 35816
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Anders et al. (2011) proposed a supervised approach to optimize MRS for landform delimitation.",
+            "startOffset": 35816,
+            "title": "Background"
+        },
+        {
+            "endOffset": 56209,
+            "parents": [],
+            "refoffsets": {
+                "bb0235": {
+                    "endOffset": 56207,
+                    "startOffset": 56196
+                }
+            },
+            "secId": "s0070",
+            "sentence": "This is because regional LSPs are computed based on topographically meaningful regions and linear structures rather than on morphologically irrelevant fixed-sized kernel (Olaya, 2009).",
+            "startOffset": 56025,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56339,
+            "parents": [],
+            "refoffsets": {
+                "bb0035": {
+                    "endOffset": 56337,
+                    "startOffset": 56317
+                }
+            },
+            "secId": "s0070",
+            "sentence": "For instance, VDTCN is computed by evaluating the catchment area and the height above the channel network (Bock and K\u00f6the, 2008).",
+            "startOffset": 56210,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 62950,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The devised testing scheme is based on an automated evaluation of mutual spatial overlaps between MRS-derived terrain segments and idealized drumlin polygons.",
+            "startOffset": 62792,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 42058,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Since derived LSPs (except for CI) showed heavily skewed distributions, logarithmic transformation (hereafter \u201clog-transformation\u201d) was performed.",
+            "startOffset": 41912,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 31112,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 31110,
+                    "startOffset": 31099
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Delimiting landforms as individual terrain segments by means of land-surface segmentation is attractive, since the time-consuming aggregation of terrain segments could be avoided, but remains challenging and a research frontier (Evans, 2012).",
+            "startOffset": 30870,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33824,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 33711,
+                    "startOffset": 33662
+                },
+                "bb0275": {
+                    "endOffset": 33711,
+                    "startOffset": 33662
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In contrast to previous drumlin studies using OBIA (Saha et al., 2011; d'Oleire-Oltmanns et al., 2013), the focus is upon the MRS algorithm; the definition of classification rules is beyond the scope of this paper.",
+            "startOffset": 33610,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59116,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Thirdly, the experiments were conducted for individual LSPs, but not for multiple LSPs in combination.",
+            "startOffset": 59014,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 38721,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 38691,
+                    "startOffset": 38667
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Specifically, these were DEMs 21 to 25 created using Mehtod 2 of Hillier and Smith (2012), here renamed DEM 1 to DEM 5.",
+            "startOffset": 38602,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 59928,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Tests were based on the best performing LSP variants, i.e. the log-transformed SWI values as derived from the median filtered DEMs.",
+            "startOffset": 59797,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 37448,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0130": {
+                    "endOffset": 37446,
+                    "startOffset": 37378
+                },
+                "bb0135": {
+                    "endOffset": 37446,
+                    "startOffset": 37378
+                },
+                "bb0295": {
+                    "endOffset": 37446,
+                    "startOffset": 37378
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The conceptual and technical background for creating the synthetic DEMs for the study area has been described in detail in the original studies (Hillier and Smith, 2008; Smith et al., 2009; Hillier and Smith, 2012).",
+            "startOffset": 37233,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 44940,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 44938,
+                    "startOffset": 44883
+                },
+                "bb0090": {
+                    "endOffset": 44938,
+                    "startOffset": 44883
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Weights for \u201cshape homogeneity\u201d and \u201ccolor homogeneity\u201d were set to 0.1 and 0.9, respectively, following previous object-based landform quantification studies (Dr\u0103gu\u0163 and Eisank, 2012; d'Oleire-Oltmanns et al., 2013).",
+            "startOffset": 44723,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 53209,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "In order to know which SP values and ranges are optimal for drumlin delimitation with MRS, we analyzed the values that were stored as a property for each of the identified terrain segments.",
+            "startOffset": 53020,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 63888,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The outcomes of this study are important for optimizing drumlin delimitation by means of MRS, especially for areas, where no reference data are at hand.",
+            "startOffset": 63736,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 28956,
+            "parents": [],
+            "refoffsets": {
+                "bb0220": {
+                    "endOffset": 28954,
+                    "startOffset": 28933
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In geomorphometry, land-surface segmentation is the process of exhaustively partitioning digital elevation models (DEMs) and derived land-surface parameters (LSPs; e.g. slope, curvature) into spatially discrete terrain segments (Min\u00e1r and Evans, 2008).",
+            "startOffset": 28704,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46729,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Finally, the extracted Si set was intersected with the Rj set to produce the \u201cintersection map\u201d (Fig. 3).",
+            "startOffset": 46624,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 57334,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The analysis of DEMs representing the current land surface, as used in this study, is not always appropriate for drumlin quantification, since the ancient surface may have been smoothed due to postglacial modification, including sedimentation.",
+            "startOffset": 57091,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35258,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Ideally, individual terrain segments perfectly match the spatial extent of landforms.",
+            "startOffset": 35173,
+            "title": "Background"
+        },
+        {
+            "endOffset": 41532,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0240": {
+                    "endOffset": 41505,
+                    "startOffset": 41483
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The software used for deriving the five selected LSPs was SAGA (System for Automated Geoscientific Analyses; Olaya and Conrad, 2009; http://www.saga-gis.org).",
+            "startOffset": 41374,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 61624,
+            "parents": [],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 61622,
+                    "startOffset": 61603
+                }
+            },
+            "secId": "s0070",
+            "sentence": "The ultimate goal of such correlation analysis is to support the design of semantic landform models that hold structural information about landform-defining properties (Eisank et al., 2011).",
+            "startOffset": 61434,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 64186,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "The above conclusions will therefore be valid in other areas, and might be applicable to different landform categories and DEMs.",
+            "startOffset": 64058,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 44470,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Iterative MRS was applied to each LSP in a bottom-up manner by increasing the value of SP from 1 to 200 in an interval of 1.",
+            "startOffset": 44346,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 45369,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This step was concerned with the identification of the set of terrain segments Si that delimit the set of reference drumlins Rj, where i and j range from 1 to 173.",
+            "startOffset": 45206,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 36450,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The study area (Fig. 1) is a formerly glaciated region located in western central Scotland, in the north of the UK.",
+            "startOffset": 36335,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 40416,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 40374,
+                    "startOffset": 40325
+                },
+                "bb0045": {
+                    "endOffset": 40374,
+                    "startOffset": 40325
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Slope Height (SH): provides the relative height above the closest modeled drainage accumulation (B\u00f6hner and Selige, 2006; B\u00f6hner and Antonic, 2009), and therefore, enhances drumlin relief.",
+            "startOffset": 40228,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 49840,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Improvements were the highest for SWI and VDTCN (up to 15%), and the lowest for CI.",
+            "startOffset": 49757,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 40226,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "At this scale the degree of convergence was relatively similar for the areas inside individual drumlin extents.",
+            "startOffset": 40115,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 60508,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Hence, the threshold of 50% is a good compromise between over- and under-estimation of drumlins.",
+            "startOffset": 60412,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29107,
+            "parents": [],
+            "refoffsets": {
+                "bb0255": {
+                    "endOffset": 29076,
+                    "startOffset": 29047
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The available algorithms for land-surface segmentation can be split into two main groups (Romstad and Etzelm\u00fcller, 2012): edge-based and region-based.",
+            "startOffset": 28957,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36911,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0260": {
+                    "endOffset": 36909,
+                    "startOffset": 36872
+                },
+                "bb0285": {
+                    "endOffset": 36909,
+                    "startOffset": 36872
+                }
+            },
+            "secId": "s0020",
+            "sentence": "At both times, ice flow has broadly been directed to the south and east (Sissons and Sissons, 1967; Rose, 1987).",
+            "startOffset": 36799,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 54197,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The distribution is positively skewed and unimodal, reaching the main peak \u2013 corresponding to the maximum drumlin detection rate \u2013 between 5 and 10.",
+            "startOffset": 54049,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 33365,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The main objective of this study is to test the performance of the MRS algorithm with respect to the delimitation of synthetic drumlins based on DEMs and five LSPs.",
+            "startOffset": 33201,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57462,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 57351,
+                    "startOffset": 57335
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Finlayson (2013) suggested that removing the sedimentation layer from the DEMs may improve computer-based drumlin delimitation.",
+            "startOffset": 57335,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56684,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The performance tests on VDTCN and SWI showed that no optimal SPs for MRS-based drumlin delimitation exist.",
+            "startOffset": 56577,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35558,
+            "parents": [],
+            "refoffsets": {
+                "bb0075": {
+                    "endOffset": 35371,
+                    "startOffset": 35351
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Dr\u0103gu\u0163 et al. (2010) devised an unsupervised method that applies a local variance for analyzing the inherent structure of gridded datasets based on iterative MRS to detect characteristic segmentation scales.",
+            "startOffset": 35351,
+            "title": "Background"
+        },
+        {
+            "endOffset": 31313,
+            "parents": [],
+            "refoffsets": {
+                "bb0290": {
+                    "endOffset": 31311,
+                    "startOffset": 31293
+                }
+            },
+            "secId": "s0005",
+            "sentence": "MRS is potentially capable of automatically determining the edges of landforms (i.e. \u201cdelimit\u201d them) in a procedure analogous to manually digitizing their outlines on-screen (e.g. Smith et al., 2006).",
+            "startOffset": 31113,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44587,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "As a result, 200 segmentation levels consisting of increasingly larger terrain segments were generated for each LSP.",
+            "startOffset": 44471,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 63736,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "MRS appears robust to changes in the location and spatial distribution of idealized drumlins in the DEM.",
+            "startOffset": 63632,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 50731,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "No clear trend, i.e. increase or decrease, could be observed, when comparing the accuracies between the two log-transformed CI and NH variants.",
+            "startOffset": 50588,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 56824,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The SP value where most drumlins are delimited by MRS depends on the LSP and its characteristics such as value range and local variability.",
+            "startOffset": 56685,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47263,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "At SP values lower than 13, R15 was intersected by multiple terrain segments that were all too small to fulfill the defined spatial overlap criteria of 50%.",
+            "startOffset": 47107,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 53967,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The vast majority of the 4609 terrain segments that were associated with synthetic drumlins in 100 runs of the testing framework were delimited at SP values ranging from 1 to 50 (97%), with 80.5% delimited at scales from 1 to 20.",
+            "startOffset": 53738,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 34320,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 34318,
+                    "startOffset": 34277
+                },
+                "bb0025": {
+                    "endOffset": 34318,
+                    "startOffset": 34277
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The merging stops when the growing segments exceed a user-specified threshold for the maximum homogeneity of LSP values for grid cells that form the segment (Baatz and Sch\u00e4pe, 2000; Benz et al., 2004).",
+            "startOffset": 34119,
+            "title": "Background"
+        },
+        {
+            "endOffset": 41912,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 41810,
+                    "startOffset": 41787
+                },
+                "bb0140": {
+                    "endOffset": 41850,
+                    "startOffset": 41827
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The filter width of 60 m was selected based on both visual (Hillier and Smith, 2012) and numerical (Hillier and Smith, 2014) analyses that suggest this value to be optimal for the area.",
+            "startOffset": 41727,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 57720,
+            "parents": [],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 57718,
+                    "startOffset": 57670
+                },
+                "bb0140": {
+                    "endOffset": 57718,
+                    "startOffset": 57670
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Filtering was a compromise between reduction of DEM noise and preservation of drumlin reliefs (Hillier and Smith, 2012; Hillier and Smith, 2014).",
+            "startOffset": 57575,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 45972,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 45970,
+                    "startOffset": 45935
+                },
+                "bb0325": {
+                    "endOffset": 45970,
+                    "startOffset": 45935
+                }
+            },
+            "secId": "s0040",
+            "sentence": "By using image object links, the following two spatial overlap criteria were evaluated for each terrain segment S of a segmentation level, and for each reference drumlin R (Weidner, 2008; Clinton et al., 2010):",
+            "startOffset": 45762,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 54816,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Therefore, the proposed method identified one-to-one relations between drumlins and segments.",
+            "startOffset": 54723,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59336,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "However, when combining LSPs for MRS, they can be weighted according to their drumlin detection performance in our tests.",
+            "startOffset": 59215,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51252,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The only exception from this rule was NH.",
+            "startOffset": 51211,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 55896,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Then, up to 50% of drumlins were satisfactorily delimited by single terrain segments.",
+            "startOffset": 55811,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 58334,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 58332,
+                    "startOffset": 58310
+                }
+            },
+            "secId": "s0070",
+            "sentence": "By definition, MRS is sensitive to such surface modifications (Baatz and Sch\u00e4pe, 2000).",
+            "startOffset": 58247,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 36662,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 36660,
+                    "startOffset": 36622
+                },
+                "bb0265": {
+                    "endOffset": 36574,
+                    "startOffset": 36554
+                },
+                "bb0290": {
+                    "endOffset": 36660,
+                    "startOffset": 36622
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Glacial landforms in the area have been mapped in the field (Rose and Smith, 2008), and two times, independently, based on DEMs (Smith et al., 2006; Clark et al., 2009).",
+            "startOffset": 36493,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 43858,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "\u201cColor homogeneity\u201d is measured based on grid cell values; \u201cshape homogeneity\u201d quantifies the deviation of the segment's 2D shape from a perfectly smooth or compact form.",
+            "startOffset": 43688,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 58771,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "As a result, these segments rarely meet the defined mutual spatial overlap criteria, and hence, these drumlins are not delimited by MRS. However, the delimitation performance of MRS on LSPs derived from filtered DEMs is generally better than on LSPs derived from unfiltered DEMs.",
+            "startOffset": 58492,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63631,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Delimited drumlins correspond reasonably to the size and shape of idealized drumlins.",
+            "startOffset": 63546,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33609,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Accuracy metrics quantify the overall spatial agreement between the synthetic drumlins and their corresponding terrain segments.",
+            "startOffset": 33481,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43488,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "SP is a dimensionless parameter which specifies how homogeneous or heterogeneous segments are allowed to be within themselves on average.",
+            "startOffset": 43351,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 55687,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The testing framework is automated, and can potentially be applied to any exercise where segments are to be detected based upon available reference objects.",
+            "startOffset": 55531,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 44722,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "A maximum SP of 200 was used, because up to this scale, the size of terrain segments was comparable to the size of synthetic drumlins.",
+            "startOffset": 44588,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 63454,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Effective value ranges depend on LSP.",
+            "startOffset": 63417,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 49588,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Median filtering of DEMs was assessed by relating for each LSP the segmentation accuracies for the two variants derived from the five original and median filtered DEMs (Fig. 5).",
+            "startOffset": 49411,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 44212,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The higher the value of SP, the generally larger the resultant segments of the segmentation level.",
+            "startOffset": 44114,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 59548,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "A first test on the combined use of LSPs for MRS-based drumlin delimitation shows that accuracy values for the four metrics slightly improve, as compared to the values obtained from MRS of single LSPs (Fig. 11).",
+            "startOffset": 59337,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 44346,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 44322,
+                    "startOffset": 44299
+                },
+                "bb0025": {
+                    "endOffset": 44345,
+                    "startOffset": 44327
+                }
+            },
+            "secId": "s0035",
+            "sentence": "For technical details on the algorithm (including formulas) the reader is referred to Baatz and Sch\u00e4pe (2000) and Benz et al. (2004).",
+            "startOffset": 44213,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 48715,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Values close to zero indicate a high rate of recovery of reference objects by the segmentation.",
+            "startOffset": 48620,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 52354,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "From the 173 synthetic reference drumlins, 66 were successfully linked to their corresponding SWI segment when using a mutual spatial overlap criterion at 50%, whereas 107 drumlins were not detected in the course of iterative MRS and overlap evaluation.",
+            "startOffset": 52101,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 32836,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Instead of observed drumlins the present study investigates synthetic drumlins in a \u201creal\u201d DEM.",
+            "startOffset": 32741,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40708,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "SAGA Wetness Index (SWI): this is an indicator of water accumulation.",
+            "startOffset": 40639,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 47470,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "The area proportions between Si and Rj were used to derive segmentation accuracy metrics for quantifying the quality of MRS-based drumlin delimitation.",
+            "startOffset": 47319,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 63099,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Terrain segments are identified as drumlin-delimiting segments when they cover more than half of a drumlin area by more than half of their own area.",
+            "startOffset": 62951,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 39459,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 39368,
+                    "startOffset": 39333
+                },
+                "bb0185": {
+                    "endOffset": 39368,
+                    "startOffset": 39333
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Regional LSPs, and particularly those that relate to the hydrologic network, are valuable for landform extraction tasks (MacMillan et al., 2004; Evans, 2012), since they consider the position and context of the target landforms in the calculation.",
+            "startOffset": 39212,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 49310,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Obtained accuracies were compared to each other in order to evaluate the effects of median filtering of DEMs, and of log-transformation of LSPs on drumlin delimitation with MRS.",
+            "startOffset": 49133,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 60819,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Higher weights of \u201cshape homogeneity\u201d resulted in less accurate results.",
+            "startOffset": 60747,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30005,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 29940,
+                    "startOffset": 29831
+                },
+                "bb0090": {
+                    "endOffset": 29940,
+                    "startOffset": 29831
+                },
+                "bb0120": {
+                    "endOffset": 29940,
+                    "startOffset": 29831
+                },
+                "bb0315": {
+                    "endOffset": 29940,
+                    "startOffset": 29831
+                }
+            },
+            "secId": "s0005",
+            "sentence": "One of the widely used region-based algorithms for land-surface segmentation is multiresolution segmentation (MRS; Dr\u0103gu\u0163 and Blaschke, 2006; Van Asselen and Seijmonsbergen, 2006; Ger\u00e7ek et al., 2011; Dr\u0103gu\u0163 and Eisank, 2012), as implemented in object-based image analysis (OBIA) software.",
+            "startOffset": 29716,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46813,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This map depicts overlap and over-, and under-estimated areas of Si relative to Rj.",
+            "startOffset": 46730,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 47982,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 47980,
+                    "startOffset": 47960
+                }
+            },
+            "secId": "s0045",
+            "sentence": "The following three area-based measures were used (Table 2): \u201cQuality Rate\u201d (QR), \u201cArea Fit Index\u201d (AFI), and \u201cRoot Mean Square\u201d (D), whereas D is a combined metric that is calculated as the sum of \u201cOver Segmentation\u201d (OS) and that of \u201cUnder Segmentation\u201d (US) (Clinton et al., 2010).",
+            "startOffset": 47698,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 48901,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Moreover, the number of delimited drumlins, i.e. the number of terrain segments fulfilling the defined mutual spatial overlap threshold of 50% (NSi), was used as an evaluation criterion.",
+            "startOffset": 48715,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 39981,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "CI is the only locally derived LSP chosen.",
+            "startOffset": 39939,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 32741,
+            "parents": [],
+            "refoffsets": {
+                "bb0180": {
+                    "endOffset": 32739,
+                    "startOffset": 32695
+                },
+                "bb0210": {
+                    "endOffset": 32739,
+                    "startOffset": 32695
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Drumlins have also been semi-automatically extracted from contour maps by identifying closed-looped contours (Maclachlan and Eyles, 2013; McClenagan, 2013).",
+            "startOffset": 32585,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40114,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Kernel sizes ranging from 3 \u00d7 3 to 31 \u00d7 31 cells were assessed visually, and 21 \u00d7 21 cells were found to produce reasonable results.",
+            "startOffset": 39982,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 53544,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The maximum SP value varied between 27 and 35 for SWI, and between 38 and 62 for VDTCN, depending on the underlying DEM.",
+            "startOffset": 53424,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 55329,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The supervised testing framework allowed for the analysis of the effects of median filtering of DEMs and log-transformation of LSPs on the performance of drumlin delimitation.",
+            "startOffset": 55154,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46447,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "If both criteria were fulfilled, meaning that one segment S existed that covered the majority of a reference drumlin R by more than half of its area, S was selected as a segment that corresponded to a drumlin, and added to the Si set with the current SP value stored as a property.",
+            "startOffset": 46166,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 53328,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Table 3 provides SP statistics for log-transformed variants of SWI and VDTCN, as derived from the median filtered DEMs.",
+            "startOffset": 53209,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 62421,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "In combination with the use of multiple synthetic DEMs that included the same population of drumlins at different locations, we created an ideal experiment for testing drumlin delimitation algorithms such as MRS more widely and effectively.",
+            "startOffset": 62181,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46070,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "AR \u2229 AS > AS/2: the overlap area has to be greater than half the area of the terrain segment, and",
+            "startOffset": 45973,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 53423,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Commonly, the smallest synthetic drumlins were delimited at the lowest possible SP value of 1.",
+            "startOffset": 53329,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 33480,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A supervised method is proposed that finds for each synthetic drumlin the spatially best matching terrain segment.",
+            "startOffset": 33366,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40603,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0040": {
+                    "endOffset": 40601,
+                    "startOffset": 40552
+                },
+                "bb0045": {
+                    "endOffset": 40601,
+                    "startOffset": 40552
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Normalized Height (NH): defines the normalized difference between SH and the valley depth (i.e. the height below summit accumulation; B\u00f6hner and Selige, 2006; B\u00f6hner and Antonic, 2009).",
+            "startOffset": 40418,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 62791,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "This paper assessed the potential of a widely used image segmentation algorithm, multiresolution segmentation (MRS), in delimiting drumlins based on land-surface parameters (LSPs) derived from synthetic DEMs.",
+            "startOffset": 62583,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 32099,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To date, few studies have attempted to automatically extract drumlins from DEMs.",
+            "startOffset": 32019,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33201,
+            "parents": [],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 32991,
+                    "startOffset": 32967
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Hillier and Smith (2012) demonstrated that synthetic drumlins are well suited for evaluating landform quantification methods such as MRS, since the results can be interpreted objectively through the a priori knowledge of the drumlins.",
+            "startOffset": 32967,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34118,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "MRS is a region-growing algorithm that performs iterative merging of adjacent segments (single grid cells in the first iteration) into larger segments.",
+            "startOffset": 33967,
+            "title": "Background"
+        },
+        {
+            "endOffset": 49756,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As can be seen in the figure, filtering of the DEM prior to the derivation of LSPs positively influenced segmentation accuracies for four LSPs (CI, NH, SWI and VDTCN).",
+            "startOffset": 49589,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 50213,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In Fig. 6 results for the two log-transformed LSP variants are compared.",
+            "startOffset": 50141,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 36046,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In their multi-scale approach they compared frequency distributions of LSP cell values between reference polygons and terrain segments.",
+            "startOffset": 35911,
+            "title": "Background"
+        },
+        {
+            "endOffset": 29368,
+            "parents": [],
+            "refoffsets": {
+                "bb0015": {
+                    "endOffset": 29319,
+                    "startOffset": 29278
+                },
+                "bb0125": {
+                    "endOffset": 29244,
+                    "startOffset": 29194
+                },
+                "bb0185": {
+                    "endOffset": 29319,
+                    "startOffset": 29278
+                },
+                "bb0205": {
+                    "endOffset": 29244,
+                    "startOffset": 29194
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Edge-based algorithms identify topographic discontinuities such as slope breaks (e.g. Giles and Franklin, 1998; Matsuura and Aniya, 2012), or hydrological networks (e.g. Band et al., 2000; MacMillan et al., 2004) to structure the terrain surface into segments.",
+            "startOffset": 29108,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39063,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0235": {
+                    "endOffset": 39061,
+                    "startOffset": 39050
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Numerous LSPs exist, and they can basically be divided into \u201clocal\u201d and \u201cregional\u201d parameters (Olaya, 2009).",
+            "startOffset": 38955,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 50141,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Accuracy values for the same metric showed little variations across DEMs, regardless of LSP, suggesting that MRS is robust to differences in the locations and spatial distribution of synthetic drumlins.",
+            "startOffset": 49939,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 50862,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "A comparison of log-transformed SH showed that lower accuracies were obtained for the variant that was based on the filtered DEMs.",
+            "startOffset": 50732,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 37826,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These drumlins were removed from the original DEM to create a \u201cdrumlin-free\u201d DEM.",
+            "startOffset": 37745,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 61898,
+            "parents": [],
+            "refoffsets": {
+                "bb0105": {
+                    "endOffset": 61896,
+                    "startOffset": 61863
+                },
+                "bb0195": {
+                    "endOffset": 61896,
+                    "startOffset": 61863
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Although we have the data and tools at hand, automating the process of manual landform interpretation remains challenging due to questions of scale, ambiguous landform definitions, and vagueness in the spatial extent of various landforms (Mark and Smith, 2004; Evans, 2012).",
+            "startOffset": 61624,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 61433,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "High correlations indicate properties that may be well-suited to object-based landform classification.",
+            "startOffset": 61331,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29716,
+            "parents": [],
+            "refoffsets": {
+                "bb0080": {
+                    "endOffset": 29714,
+                    "startOffset": 29610
+                },
+                "bb0190": {
+                    "endOffset": 29714,
+                    "startOffset": 29610
+                },
+                "bb0220": {
+                    "endOffset": 29714,
+                    "startOffset": 29610
+                },
+                "bb0255": {
+                    "endOffset": 29714,
+                    "startOffset": 29610
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Detailed reviews on the topic of land-surface segmentation have been provided in recent studies (Min\u00e1r and Evans, 2008; MacMillan and Shary, 2009; Dr\u0103gu\u0163 and Eisank, 2011; Romstad and Etzelm\u00fcller, 2012).",
+            "startOffset": 29513,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45627,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0310": {
+                    "endOffset": 45476,
+                    "startOffset": 45463
+                }
+            },
+            "secId": "s0040",
+            "sentence": "eCognition\u00ae software allows automation of the extraction of Si through \u201cimage object links\u201d (Trimble, 2013) which create virtual spatial connections between two independent set of objects (here: Si and Rj) based on user-specified spatial overlap thresholds.",
+            "startOffset": 45370,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 57846,
+            "parents": [],
+            "refoffsets": {
+                "bb0300": {
+                    "endOffset": 57844,
+                    "startOffset": 57823
+                }
+            },
+            "secId": "s0070",
+            "sentence": "It has been reported that British drumlins are shallower than drumlins in other regions of the world (Spagnolo et al., 2012).",
+            "startOffset": 57721,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30870,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 30775,
+                    "startOffset": 30756
+                },
+                "bb0115": {
+                    "endOffset": 30868,
+                    "startOffset": 30828
+                },
+                "bb0160": {
+                    "endOffset": 30868,
+                    "startOffset": 30828
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Although initial work towards automating the selection of knowledge-based aggregation rules has been conducted (Anders et al., 2011), trial-and-error approaches are still predominant (Gao et al., 2011; Laliberte et al., 2012).",
+            "startOffset": 30644,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53737,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The SP values and ranges for SWI and VDTCN were in line with the frequencies of drumlin delimitation relative to SP values (Fig. 10).",
+            "startOffset": 53604,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 40956,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Higher values of SWI can be expected in areas of surface concavity, whereas surface convexities, such as drumlins, can be associated with lower values.",
+            "startOffset": 40805,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 51345,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The spread of NSi values over the five DEMs was higher for the two log-transformed variants.",
+            "startOffset": 51253,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 42435,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Fig. 2 displays the workflow for deriving four variants of each LSP by applying a median filter to DEMs and log-transformation to LSPs.",
+            "startOffset": 42300,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 42503,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For each of the five DEMs a total of 20 LSP variants were computed.",
+            "startOffset": 42436,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 50400,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In case of SWI and VDTCN, both of which are regionally derived LSPs, MRS performed slightly better on the log-transformed filtered variants than on the log-transformed original variants.",
+            "startOffset": 50214,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 52755,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The proportion of over-estimated areas (red) was relatively small, compared to the under-estimated parts.",
+            "startOffset": 52650,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 32966,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These synthetic DEMs represent idealized drumlins in terms of 3D shape, and are representative datasets of an observed landscape.",
+            "startOffset": 32837,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60070,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "When changing the mutual spatial overlap threshold to values lower than 50%, the overall quality of drumlin delimitation improves (Fig. 12b).",
+            "startOffset": 59929,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46623,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Then, the overlap criteria were re-evaluated for each newly derived terrain segment.",
+            "startOffset": 46539,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 50587,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Drumlin delimitation accuracies were the highest (i.e. indices values became the smallest) for log-transformed SWI and VDTCN (values between 0.75 and 0.5) derived from the filtered DEMs.",
+            "startOffset": 50401,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 57970,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "This also holds true for the selected study area: about 50% of the synthetic drumlins exhibited a maximum relief below 5 m.",
+            "startOffset": 57847,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32457,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Both above-mentioned studies employed the MRS algorithm within an OBIA framework.",
+            "startOffset": 32376,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38390,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The locations of idealized drumlins were randomly determined (i.e. not at the locations of the originals), whilst respecting the overall spatial distribution and orientations of the original drumlins and topographic controls.",
+            "startOffset": 38165,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 30643,
+            "parents": [],
+            "refoffsets": {
+                "bb0090": {
+                    "endOffset": 30593,
+                    "startOffset": 30570
+                },
+                "bb0095": {
+                    "endOffset": 30544,
+                    "startOffset": 30461
+                },
+                "bb0280": {
+                    "endOffset": 30544,
+                    "startOffset": 30461
+                },
+                "bb0315": {
+                    "endOffset": 30544,
+                    "startOffset": 30461
+                },
+                "bb0320": {
+                    "endOffset": 30641,
+                    "startOffset": 30612
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Landforms that have been processed in such a way comprise alpine landforms (Van Asselen and Seijmonsbergen, 2006; Schneevoigt et al., 2008; Eisank et al., 2010), physiographic regions (Dr\u0103gu\u0163 and Eisank, 2012), and landslides (Van Den Eeckhaut et al., 2012).",
+            "startOffset": 30385,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57090,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "It is worth noting that MRS-based drumlin recovery of about 50% is within the same range of accuracy as that achieved by manual interpretation; for this work an average recovery rate of 43% was achieved by one expert and one non-expert using the same synthetic DEMs.",
+            "startOffset": 56824,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 51506,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Median filtering of DEMs positively influenced drumlin delimitation for CI and VDTCN, whereas a negative impact was observed for the other three LSPs (Fig. 7a).",
+            "startOffset": 51346,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 36798,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0265": {
+                    "endOffset": 36796,
+                    "startOffset": 36776
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Landforms are of two ages: Younder Dryas [~ 12 ka] in the west and Last Glacial Maximum [~ 14.5 ka] in the east (Rose and Smith, 2008).",
+            "startOffset": 36663,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 57574,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Pre-processing through filtering helped in reducing the clutter that was present in the original synthetic DEMs.",
+            "startOffset": 57462,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 47021,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "At an SP of 13, MRS yielded a terrain segment S15 that covered the majority of R15 by more than half of the segment's area.",
+            "startOffset": 46898,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 59214,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 59212,
+                    "startOffset": 59201
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Using only one LSP might be insufficient in delineating landforms such as drumlins (Dikau, 1989).",
+            "startOffset": 59117,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 60883,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Further tests are needed to confirm these preliminary findings.",
+            "startOffset": 60820,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 29512,
+            "parents": [],
+            "refoffsets": {
+                "bb0215": {
+                    "endOffset": 29510,
+                    "startOffset": 29494
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Region-based methods construct terrain segments by merging adjacent grid cells of similar morphometric characteristics (e.g. Miliaresis, 2001).",
+            "startOffset": 29369,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30174,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 30172,
+                    "startOffset": 30105
+                },
+                "bb0085": {
+                    "endOffset": 30172,
+                    "startOffset": 30105
+                },
+                "bb0120": {
+                    "endOffset": 30172,
+                    "startOffset": 30105
+                }
+            },
+            "secId": "s0005",
+            "sentence": "MRS has been employed to delineate homogeneous terrain segments rather than landforms per se (e.g. Dr\u0103gu\u0163 and Blaschke, 2006; Dr\u0103gu\u0163 et al., 2011; Ger\u00e7ek et al., 2011).",
+            "startOffset": 30006,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31475,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The landforms targeted in the present study are drumlins, elongated subglacial bedforms that classically resemble a half-buried egg with its long-axis horizontal.",
+            "startOffset": 31313,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51975,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Based on these systematic comparisons of segmentation accuracies and the numbers of delimited drumlins, MRS performs best with VDTCN and SWI.",
+            "startOffset": 51834,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 36493,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "It is approximately 13 km by 8 km in size.",
+            "startOffset": 36451,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 38601,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For the present study five synthetic DEMs were tested.",
+            "startOffset": 38547,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 35815,
+            "parents": [],
+            "refoffsets": {
+                "bb0060": {
+                    "endOffset": 35814,
+                    "startOffset": 35783
+                },
+                "bb0090": {
+                    "endOffset": 35765,
+                    "startOffset": 35741
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Application of this method to DEMs and LSPs showed that terrain segments at detected scales may correspond to the size and shape of targeted landforms, i.e. physiographic regions in Dr\u0103gu\u0163 and Eisank (2012), and drumlins in d'Oleire-Oltmanns et al. (2013).",
+            "startOffset": 35559,
+            "title": "Background"
+        },
+        {
+            "endOffset": 47106,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The measured spatial overlap of S15 with R15 at the scale of 13 was 83.5% (Table 1).",
+            "startOffset": 47022,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 64057,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Synthetic DEMs, as used in this study, represent idealized landforms, and are objective and reliable datasets for supervised testing of landform quantification methods.",
+            "startOffset": 63889,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 55154,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Analysis of one-to-many relations, where each drumlin is represented by several terrain segments (over-segmentation), will only be superior to the proposed approach, if optimal rules for the merging of drumlin-intersecting terrain segments can be found.",
+            "startOffset": 54901,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56576,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Ideally, MRS for drumlin delimitation should be multi-scalar with different SP values.",
+            "startOffset": 56490,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 35172,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Specifically, landform delimitation is the process of optimizing land-surface segmentation in such a way that individual terrain segments approximate the size and shape of landforms such as drumlins.",
+            "startOffset": 34973,
+            "title": "Background"
+        },
+        {
+            "endOffset": 63318,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Drumlin delimitation by means of MRS tends to work better on log-transformed LSPs that were regionally derived from median filtered DEMs.",
+            "startOffset": 63181,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 41279,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This LSP is another example of a relative elevation layer that separates drumlin relief from the surrounding area.",
+            "startOffset": 41165,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 37100,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The DEM used, for mapping, and in the creation of the synthetic DEMs was the NEXTmap Britain\u2122 DEM or \u201cNEXTmap\u201d, as derived from single-pass interferometric synthetic aperture radar (IfSAR).",
+            "startOffset": 36911,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 35350,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Two statistical approaches have been employed to optimize MRS towards landform delimitation.",
+            "startOffset": 35258,
+            "title": "Background"
+        },
+        {
+            "endOffset": 39607,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "To be useful in landform extraction with MRS, LSPs should exhibit similar values within drumlins that are distinctly different from values outside.",
+            "startOffset": 39460,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 32018,
+            "parents": [],
+            "refoffsets": {
+                "bb0050": {
+                    "endOffset": 32016,
+                    "startOffset": 31952
+                },
+                "bb0170": {
+                    "endOffset": 32016,
+                    "startOffset": 31952
+                },
+                "bb0290": {
+                    "endOffset": 31853,
+                    "startOffset": 31835
+                },
+                "bb0295": {
+                    "endOffset": 32016,
+                    "startOffset": 31952
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Drumlins have predominantly been mapped in the field (e.g. Smith et al., 2006) and/or manually delineated based on satellite images, aerial photographs and DEM visualizations (Livingstone et al., 2008; Clark et al., 2009; Smith et al., 2009).",
+            "startOffset": 31776,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37233,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0145": {
+                    "endOffset": 37231,
+                    "startOffset": 37217
+                }
+            },
+            "secId": "s0020",
+            "sentence": "This DEM is available as a grid at a horizontal spacing of 5 m, with vertical errors estimated to be less than 1 m (Intermap, 2004).",
+            "startOffset": 37101,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 61147,
+            "parents": [],
+            "refoffsets": {
+                "bb0055": {
+                    "endOffset": 61145,
+                    "startOffset": 61125
+                }
+            },
+            "secId": "s0070",
+            "sentence": "This study has only dealt with segmentation, and quantification of segmentation error relevant to the accuracy of the classification (Clinton et al., 2010).",
+            "startOffset": 60991,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 38954,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The selection of land-surface parameters (LSPs) for landform delimitation using MRS is crucial.",
+            "startOffset": 38859,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 60990,
+            "parents": [],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 60988,
+                    "startOffset": 60974
+                }
+            },
+            "secId": "s0070",
+            "sentence": "Usually, OBIA involves two steps: an initial segmentation and a subsequent classification (Blaschke, 2010).",
+            "startOffset": 60883,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 36286,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "However, since the geomorphological reference was manually derived, some degree of uncertainty had to be accepted in this comparison.",
+            "startOffset": 36153,
+            "title": "Background"
+        },
+        {
+            "endOffset": 37744,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 37709,
+                    "startOffset": 37686
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Then 60 m and 500 m median filters were applied to the DEM to isolate individual drumlins (Hillier and Smith, 2012), leaving their overall 3D shapes.",
+            "startOffset": 37595,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 52649,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Nevertheless, results for the delimited drumlins appear promising, because the overlap area (green) shows that the spatial extents of delimited drumlins and reference drumlins matched quite well.",
+            "startOffset": 52454,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 38547,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0135": {
+                    "endOffset": 38545,
+                    "startOffset": 38522
+                }
+            },
+            "secId": "s0020",
+            "sentence": "By simulating different spatial distributions of the idealized drumlins, multiple synthetic DEMs for the study area were computed (Hillier and Smith, 2012).",
+            "startOffset": 38391,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 37594,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Drumlin outlines were manually digitized from the original DEM.",
+            "startOffset": 37531,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 43210,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "For drumlin delimitation by means of land-surface segmentation, the MRS algorithm is applied to derived LSPs and their variants.",
+            "startOffset": 43082,
+            "title": "Step 1: multi-scale land-surface segmentation"
+        },
+        {
+            "endOffset": 48334,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "refoffsets": {
+                "bb0175": {
+                    "endOffset": 48332,
+                    "startOffset": 48309
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Only AFI can reach negative values, mostly because of under-segmentation of the reference objects (Lucieer and Stein, 2002).",
+            "startOffset": 48210,
+            "title": "Step 3: accuracy assessment of drumlin delimitation"
+        },
+        {
+            "endOffset": 46897,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 4 exemplifies the concept of image object links for one reference drumlin, R15.",
+            "startOffset": 46813,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 50963,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In general, MRS of VDTCN and SWI variants yielded the highest numbers of delimited drumlins (Fig. 7).",
+            "startOffset": 50862,
+            "title": "Effects of median filtering of DEMs and log-transformation of LSPs on drumlin delimitation"
+        },
+        {
+            "endOffset": 52100,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The overall best drumlin delimitation was achieved when segmenting log-transformed SWI based on the filtered DEM 3 (Fig. 8).",
+            "startOffset": 51976,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 63416,
+            "parents": [],
+            "secId": "s0075",
+            "sentence": "Both lower and upper values of scale parameter were suggested for MRS-based drumlin delimitation.",
+            "startOffset": 63319,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 56024,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Regionally derived LSPs such as VDTCN and SWI produced more accurate drumlin delimitation than locally derived LSPs such as CI.",
+            "startOffset": 55897,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 38164,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Synthetic DEMs were produced by inserting the idealized drumlin 3D shapes into the \u201cdrumlin-free\u201d DEM.",
+            "startOffset": 38062,
+            "title": "Study area and synthetic DEMs"
+        },
+        {
+            "endOffset": 39674,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Based on these considerations the following five LSPs were chosen:",
+            "startOffset": 39608,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 41726,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "To attempt to remove these features, a 60 m wide median filter was applied to the DEMs (Fig. 2).",
+            "startOffset": 41630,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 53019,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The main parameter that controls MRS segmentation is SP.",
+            "startOffset": 52963,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 52940,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Similar conclusions can be drawn by analyzing the intersection maps for the log-transformed SWI variants derived from the remaining four median filtered synthetic DEMs shown in Fig. 9.",
+            "startOffset": 52756,
+            "title": "Intersection maps for SWI"
+        },
+        {
+            "endOffset": 58246,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "However, the remaining noise will have disturbed the smooth character of some drumlins relief.",
+            "startOffset": 58152,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 32375,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "employed a knowledge-based workflow to extract drumlins from relative relief.",
+            "startOffset": 32298,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42205,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                }
+            ],
+            "refoffsets": {
+                "bb0250": {
+                    "endOffset": 42203,
+                    "startOffset": 42191
+                },
+                "bb0305": {
+                    "endOffset": 42123,
+                    "startOffset": 42109
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Log-transformation had been recommended to use by Speight (1971), and is implemented in the geomorphometry toolbox for Esri ArcGIS (Reuter, 2009).",
+            "startOffset": 42059,
+            "title": "Preparation of DEMs and LSPs"
+        },
+        {
+            "endOffset": 61330,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Once MRS delineates terrain segments that are similar to the size and shape of target landforms, it is possible to correlate segment properties with the characteristics of landforms.",
+            "startOffset": 61148,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 30384,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Since the resultant segments are often significantly smaller than most targeted landforms, knowledge-based rules are specified to aggregate segments into larger spatial regions that correspond to the landform.",
+            "startOffset": 30175,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45761,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Data and methods"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Performance testing of multiresolution segmentation (MRS)"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Synthetic drumlin polygons were imported into the software to be available for the spatial comparison with generated terrain segments.",
+            "startOffset": 45627,
+            "title": "Step 2: extraction of terrain segments delimiting drumlins"
+        },
+        {
+            "endOffset": 53604,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "Median SP values for the same LSP were similar across DEMs.",
+            "startOffset": 53545,
+            "title": "Scale parameter (SP)"
+        },
+        {
+            "endOffset": 54656,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "This was ensured by constraining the mutual spatial overlap between synthetic drumlins and terrain segments to be larger than 50%.",
+            "startOffset": 54526,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 60746,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "Also, the threshold determining the relative importance of shape over color in MRS (i.e. the \u201cshape homogeneity\u201d) has been adequately defined (Fig. 12a): highest drumlin segmentation accuracies were obtained at the selected value of 0.1.",
+            "startOffset": 60509,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 60228,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "This is because drumlins that have been missed previously are detected at lower thresholds, but overlapping areas significantly reduce with lower thresholds.",
+            "startOffset": 60071,
+            "title": "Discussion"
+        }
+    ],
+    "docId": "S0169555X14001111",
+    "metadata": {
+        "asjc": [
+            "1904"
+        ],
+        "authors": [
+            {
+                "email": "clemens.eisank@sbg.ac.at",
+                "first": "Clemens",
+                "initial": "C.",
+                "last": "Eisank"
+            },
+            {
+                "email": null,
+                "first": "Mike",
+                "initial": "M.",
+                "last": "Smith"
+            },
+            {
+                "email": null,
+                "first": "John",
+                "initial": "J.",
+                "last": "Hillier"
+            }
+        ],
+        "doi": "10.1016/j.geomorph.2014.02.028",
+        "firstpage": "452",
+        "issn": "0169555X",
+        "keywords": [
+            "Geomorphometry",
+            "Land-surface segmentation",
+            "Object-based image analysis (OBIA)",
+            "Region-growing",
+            "Supervised",
+            "Synthetic drumlins"
+        ],
+        "lastpage": "464",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "EART"
+        ],
+        "title": "Assessment of multiresolution segmentation for delimiting drumlins in digital elevation models"
+    }
+}

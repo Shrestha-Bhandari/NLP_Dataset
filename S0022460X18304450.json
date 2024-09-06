@@ -1,0 +1,3027 @@
+{
+    "abstract": "Surface acoustic waves (SAWs) enjoy profound importance across many disciplines, and one of their most prominent applications are the vast ranges of SAW devices made of piezoelectric multilayers. Thus a stable and efficient algorithm of analysing key SAW parameters in arbitrary layered media is of wide interest. This paper introduces such an algorithm based on the spectral collocation method (SCM). It firstly explains the fundamental governing equations and their numerical calculations via the SCM in a self-contained way, and then demonstrates the technique on the well-studied ZnO/diamond/Si material system, where the key factors of phase velocity, electromechanical coupling coefficient and effective permittivity are evaluated and discussed in detail. Compared to the widely employed root-finding approach, it is shown that the SCM is intuitive to formulate and code, and is highly accurate; it delivers all modes at once, and does not suffer from numerical instabilities. The establishment of the method on this simple example also implies potential applications to more general material and geometry types that could be difficult for the conventional approaches.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Lord",
+                    "initial": "L.",
+                    "last": "Rayleigh"
+                }
+            ],
+            "doi": "10.1112/plms/s1-17.1.4",
+            "firstpage": "4",
+            "issn": "00246115",
+            "lastpage": "11",
+            "pub_year": 1885,
+            "title": "On waves propagated along the plane surface of an elastic solid",
+            "volume": "1-17"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "G. W.",
+                    "initial": "G.W.",
+                    "last": "Farnell"
+                }
+            ],
+            "doi": "10.1016/B978-0-12-395666-8.50017-8",
+            "firstpage": "109",
+            "issn": "0893388X",
+            "lastpage": "166",
+            "pub_year": 1970,
+            "title": "Properties of Elastic Surface Waves",
+            "volume": "6"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "William T.",
+                    "initial": "W.T.",
+                    "last": "Thomson"
+                }
+            ],
+            "doi": "10.1063/1.1699629",
+            "firstpage": "89",
+            "issn": "00218979",
+            "lastpage": "93",
+            "pub_year": 1950,
+            "title": "Transmission of elastic waves through a stratified solid medium",
+            "volume": "21"
+        },
+        "bib12": null,
+        "bib13": {
+            "authors": [
+                {
+                    "first": "A. H.",
+                    "initial": "A.H.",
+                    "last": "Fahmy"
+                },
+                {
+                    "first": "E. L.",
+                    "initial": "E.L.",
+                    "last": "Adler"
+                }
+            ],
+            "doi": "10.1063/1.1654482",
+            "firstpage": "495",
+            "issn": "00036951",
+            "lastpage": "497",
+            "pub_year": 1973,
+            "title": "Propagation of acoustic surface waves in multilayers: A matrix description",
+            "volume": "22"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Eric L.",
+                    "initial": "E.L.",
+                    "last": "Adler"
+                }
+            ],
+            "doi": "10.1109/58.63103",
+            "firstpage": "485",
+            "issn": "08853010",
+            "lastpage": "490",
+            "pub_year": 1990,
+            "title": "Matrix Methods Applied to Acoustic Waves in Multilayers",
+            "volume": "37"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Lowe"
+                }
+            ],
+            "doi": "10.1109/58.393096",
+            "firstpage": "525",
+            "issn": "08853010",
+            "lastpage": "542",
+            "pub_year": 1995,
+            "title": "Matrix Techniques for Modeling Ultrasonic Waves in Multilayered Media",
+            "volume": "42"
+        },
+        "bib16": null,
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Bernard",
+                    "initial": "B.",
+                    "last": "Hosten"
+                },
+                {
+                    "first": "Michel",
+                    "initial": "M.",
+                    "last": "Castaings"
+                }
+            ],
+            "doi": "10.1016/S0041-624X(03)00167-7",
+            "firstpage": "501",
+            "issn": "0041624X",
+            "lastpage": "507",
+            "pmid": "12919685",
+            "pub_year": 2003,
+            "title": "Surface impedance matrices to model the propagation in multilayered media",
+            "volume": "41"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Th",
+                    "initial": "T.",
+                    "last": "Pastureaud"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Laude"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Ballandras"
+                }
+            ],
+            "doi": "10.1063/1.1467620",
+            "firstpage": "2544",
+            "issn": "00036951",
+            "lastpage": "2546",
+            "pub_year": 2002,
+            "title": "Stable scattering-matrix method for surface acoustic waves in piezoelectric multilayers",
+            "volume": "80"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "S. I.",
+                    "initial": "S.I.",
+                    "last": "Rokhlin"
+                }
+            ],
+            "doi": "10.1063/1.1522831",
+            "firstpage": "4049",
+            "issn": "00036951",
+            "lastpage": "4051",
+            "pub_year": 2002,
+            "title": "Recursive asymptotic stiffness matrix method for analysis of surface acoustic wave devices on layered piezoelectric media",
+            "volume": "81"
+        },
+        "bib2": null,
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Ivan",
+                    "initial": "I.",
+                    "last": "Bartoli"
+                },
+                {
+                    "first": "Alessandro",
+                    "initial": "A.",
+                    "last": "Marzani"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Lanza di Scalea"
+                },
+                {
+                    "first": "Erasmo",
+                    "initial": "E.",
+                    "last": "Viola"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2006.01.021",
+            "firstpage": "685",
+            "issn": "0022460X",
+            "lastpage": "707",
+            "pub_year": 2006,
+            "title": "Modeling wave propagation in damped waveguides of arbitrary cross-section",
+            "volume": "295"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Lefebvre"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Gazalet"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Gryba"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Sadaune"
+                }
+            ],
+            "doi": "10.1109/58.949742",
+            "firstpage": "1332",
+            "issn": "08853010",
+            "lastpage": "1340",
+            "pmid": "11570758",
+            "pub_year": 2001,
+            "title": "Acoustic wave propagation in continuous functionally graded plates: An extension of the Legendre polynomial approach",
+            "volume": "48"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Lahoucine",
+                    "initial": "L.",
+                    "last": "Elmaimouni"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Lefebvre"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Gryba"
+                }
+            ],
+            "doi": "10.1016/j.wavemoti.2005.01.005",
+            "firstpage": "177",
+            "issn": "01652125",
+            "lastpage": "189",
+            "pub_year": 2005,
+            "title": "A polynomial approach to the analysis of guided waves in anisotropic cylinders of infinite length",
+            "volume": "42"
+        },
+        "bib23": {
+            "authors": [
+                {
+                    "first": "Olivier",
+                    "initial": "O.",
+                    "last": "Bou Matar"
+                },
+                {
+                    "first": "Noura",
+                    "initial": "N.",
+                    "last": "Gasmi"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Goueygou"
+                },
+                {
+                    "first": "Abdelkrim",
+                    "initial": "A.",
+                    "last": "Talbi"
+                }
+            ],
+            "doi": "10.1121/1.4776198",
+            "firstpage": "1415",
+            "issn": "00014966",
+            "lastpage": "1424",
+            "pmid": "23464013",
+            "pub_year": 2013,
+            "title": "Legendre and Laguerre polynomial approach for modeling of wave propagation in layered magneto-electro-elastic media",
+            "volume": "133"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "A. T.I.",
+                    "initial": "A.T.I.",
+                    "last": "Adamou"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1121/1.1777871",
+            "firstpage": "1524",
+            "issn": "00014966",
+            "lastpage": "1535",
+            "pub_year": 2004,
+            "title": "Spectral methods for modelling guided waves in elastic media",
+            "volume": "116"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Oscar A.",
+                    "initial": "O.A.",
+                    "last": "Peverini"
+                },
+                {
+                    "first": "Renato",
+                    "initial": "R.",
+                    "last": "Orta"
+                },
+                {
+                    "first": "Riccardo",
+                    "initial": "R.",
+                    "last": "Tascone"
+                }
+            ],
+            "doi": "10.1121/1.1512293",
+            "firstpage": "2623",
+            "issn": "00014966",
+            "lastpage": "2633",
+            "pmid": "12508983",
+            "pub_year": 2002,
+            "title": "Analysis of piezoelectric strip waveguides based on the effective index and pseudospectral element methods",
+            "volume": "112"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "F. Hernando",
+                    "initial": "F.H.",
+                    "last": "Quintanilla"
+                },
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1121/1.4913777",
+            "firstpage": "1180",
+            "issn": "00014966",
+            "lastpage": "1194",
+            "pub_year": 2015,
+            "title": "Modeling guided elastic waves in generally anisotropic media using a spectral collocation method",
+            "volume": "137"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Hernando Quintanilla"
+                },
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.10.017",
+            "firstpage": "545",
+            "issn": "0022460X",
+            "lastpage": "559",
+            "pub_year": 2016,
+            "title": "Full 3D dispersion curve solutions for guided waves in generally anisotropic media",
+            "volume": "363"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Hernando Quintanilla"
+                },
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1121/1.4973543",
+            "firstpage": "406",
+            "issn": "00014966",
+            "lastpage": "418",
+            "pmid": "28147584",
+            "pub_year": 2017,
+            "title": "The symmetry and coupling properties of solutions in general anisotropic multilayer waveguides",
+            "volume": "141"
+        },
+        "bib29": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Hernando Quintanilla"
+                },
+                {
+                    "first": "Z.",
+                    "initial": "Z.",
+                    "last": "Fan"
+                },
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "R. V.",
+                    "initial": "R.V.",
+                    "last": "Craster"
+                }
+            ],
+            "doi": "10.1098/rspa.2015.0268",
+            "issn": "13645021",
+            "pub_year": 2015,
+            "title": "Guided waves' dispersion curves in anisotropic viscoelastic single- A nd multi-layered media",
+            "volume": "471"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "Zhenggan",
+                    "initial": "Z.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Kuanshuang",
+                    "initial": "K.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jianghua",
+                    "initial": "J.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Guangkai",
+                    "initial": "G.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Jie",
+                    "initial": "J.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1016/j.optlastec.2015.04.026",
+            "firstpage": "173",
+            "issn": "00303992",
+            "lastpage": "178",
+            "pub_year": 2015,
+            "title": "Application of laser ultrasonic technique for non-contact detection of structural surface-breaking cracks",
+            "volume": "73"
+        },
+        "bib30": {
+            "authors": [
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Coquin"
+                },
+                {
+                    "first": "H. F.",
+                    "initial": "H.F.",
+                    "last": "Tiersten"
+                }
+            ],
+            "doi": "10.1121/1.1910447",
+            "firstpage": "921",
+            "issn": "00014966",
+            "lastpage": "939",
+            "pub_year": 1967,
+            "title": "Analysis of the Excitation and Detection of Piezoelectric Surface Waves in Quartz by Means of Surface Electrodes",
+            "volume": "41"
+        },
+        "bib31": {
+            "authors": [
+                {
+                    "first": "J. A.C.",
+                    "initial": "J.A.C.",
+                    "last": "Weideman"
+                },
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Reddy"
+                }
+            ],
+            "doi": "10.1145/365723.365727",
+            "firstpage": "465",
+            "issn": "00983500",
+            "lastpage": "519",
+            "pub_year": 2000,
+            "title": "A MATLAB differentiation matrix suite",
+            "volume": "26"
+        },
+        "bib32": {
+            "authors": [
+                {
+                    "first": "Hideaki",
+                    "initial": "H.",
+                    "last": "Nakahata"
+                },
+                {
+                    "first": "Akihiro",
+                    "initial": "A.",
+                    "last": "Hachigo"
+                },
+                {
+                    "first": "Kenjiro",
+                    "initial": "K.",
+                    "last": "Higaki"
+                },
+                {
+                    "first": "Satoshi",
+                    "initial": "S.",
+                    "last": "Fujii"
+                },
+                {
+                    "first": "Shin ichi",
+                    "initial": "S.i.",
+                    "last": "Shikata"
+                },
+                {
+                    "first": "Naoji",
+                    "initial": "N.",
+                    "last": "Fujimori"
+                }
+            ],
+            "doi": "10.1109/58.384444",
+            "firstpage": "362",
+            "issn": "08853010",
+            "lastpage": "375",
+            "pub_year": 1995,
+            "title": "Theoretical Study on SAW Characteristics of Layered Structures Including a Diamond Layer",
+            "volume": "42"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Nakahata"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Fujii"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Higaki"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Hachigo"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Kitabayashi"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Shikata"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Fujimori"
+                }
+            ],
+            "doi": "10.1088/0268-1242/18/3/314",
+            "firstpage": "S96",
+            "issn": "02681242",
+            "lastpage": "S104",
+            "pub_year": 2003,
+            "title": "Diamond-based surface acoustic wave devices",
+            "volume": "18"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "Eric L.",
+                    "initial": "E.L.",
+                    "last": "Adler"
+                },
+                {
+                    "first": "Leland",
+                    "initial": "L.",
+                    "last": "Solie"
+                }
+            ],
+            "firstpage": "341",
+            "issn": "10510117",
+            "lastpage": "344",
+            "pub_year": 1995,
+            "title": "ZnO on diamond: SAWs and pseudo-SAWs",
+            "volume": "1"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "Tsung Tsong",
+                    "initial": "T.T.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Yung Yu",
+                    "initial": "Y.Y.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1109/58.981392",
+            "firstpage": "142",
+            "issn": "08853010",
+            "lastpage": "149",
+            "pmid": "11833887",
+            "pub_year": 2002,
+            "title": "Exact analysis of dispersive SAW devices on ZnO/diamond/Si-layered structures",
+            "volume": "49"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "Massimiliano",
+                    "initial": "M.",
+                    "last": "Benetti"
+                },
+                {
+                    "first": "Domenico",
+                    "initial": "D.",
+                    "last": "Cannat\u00e0"
+                },
+                {
+                    "first": "Fabio",
+                    "initial": "F.",
+                    "last": "Di Pietrantonio"
+                },
+                {
+                    "first": "Enrico",
+                    "initial": "E.",
+                    "last": "Verona"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2005.1561635",
+            "firstpage": "1806",
+            "issn": "08853010",
+            "lastpage": "1811",
+            "pub_year": 2005,
+            "title": "Growth of AIN piezoelectric film on diamond for high-frequency surface acoustic wave devices",
+            "volume": "52"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "K. A.",
+                    "initial": "K.A.",
+                    "last": "Ingebrigtsen"
+                }
+            ],
+            "doi": "10.1063/1.1658060",
+            "firstpage": "2681",
+            "issn": "00218979",
+            "lastpage": "2686",
+            "pub_year": 1969,
+            "title": "Surface waves in piezoelectrics",
+            "volume": "40"
+        },
+        "bib38": {
+            "authors": [
+                {
+                    "first": "Zuwei",
+                    "initial": "Z.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Zhiyu",
+                    "initial": "Z.",
+                    "last": "Wen"
+                },
+                {
+                    "first": "Chunmei",
+                    "initial": "C.",
+                    "last": "Wang"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2012.07.002",
+            "firstpage": "363",
+            "issn": "0041624X",
+            "lastpage": "368",
+            "pub_year": 2013,
+            "title": "Investigation of surface acoustic waves propagating in ZnO-SiO 2-Si multilayer structure",
+            "volume": "53"
+        },
+        "bib39": {
+            "authors": [
+                {
+                    "first": "Jingting",
+                    "initial": "J.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Aojie",
+                    "initial": "A.",
+                    "last": "Quan"
+                },
+                {
+                    "first": "Chen",
+                    "initial": "C.",
+                    "last": "Fu"
+                },
+                {
+                    "first": "Honglang",
+                    "initial": "H.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1016/j.jallcom.2016.09.118",
+            "firstpage": "558",
+            "issn": "09258388",
+            "lastpage": "564",
+            "pub_year": 2017,
+            "title": "Shear-horizontal surface acoustic wave characteristics of a (110) ZnO/SiO2/Si multilayer structure",
+            "volume": "693"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Jin Yeon",
+                    "initial": "J.Y.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Stanislav I.",
+                    "initial": "S.I.",
+                    "last": "Rokhlin"
+                }
+            ],
+            "doi": "10.1121/1.3245032",
+            "firstpage": "2998",
+            "issn": "00014966",
+            "lastpage": "3007",
+            "pub_year": 2009,
+            "title": "Determination of elastic constants of generally anisotropic inclined lamellar structure using line-focus acoustic microscopy",
+            "volume": "126"
+        },
+        "bib40": {
+            "authors": [
+                {
+                    "first": "Zhangliang",
+                    "initial": "Z.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Yong J.",
+                    "initial": "Y.J.",
+                    "last": "Yuan"
+                }
+            ],
+            "doi": "10.1016/j.bios.2017.07.060",
+            "firstpage": "500",
+            "issn": "09565663",
+            "lastpage": "512",
+            "pmid": "28823975",
+            "pub_year": 2018,
+            "title": "Implementation of guiding layers of surface acoustic wave devices: A review",
+            "volume": "99"
+        },
+        "bib41": {
+            "authors": [
+                {
+                    "first": "Satoshi",
+                    "initial": "S.",
+                    "last": "Hagihara"
+                },
+                {
+                    "first": "Toshihiro",
+                    "initial": "T.",
+                    "last": "Tsuji"
+                },
+                {
+                    "first": "Toru",
+                    "initial": "T.",
+                    "last": "Oizumi"
+                },
+                {
+                    "first": "Nobuo",
+                    "initial": "N.",
+                    "last": "Takeda"
+                },
+                {
+                    "first": "Shingo",
+                    "initial": "S.",
+                    "last": "Akao"
+                },
+                {
+                    "first": "Tsuneo",
+                    "initial": "T.",
+                    "last": "Ohgi"
+                },
+                {
+                    "first": "Kosuke",
+                    "initial": "K.",
+                    "last": "Takayanagi"
+                },
+                {
+                    "first": "Takayuki",
+                    "initial": "T.",
+                    "last": "Yanagisawa"
+                },
+                {
+                    "first": "Noritaka",
+                    "initial": "N.",
+                    "last": "Nakaso"
+                },
+                {
+                    "first": "Yusuke",
+                    "initial": "Y.",
+                    "last": "Tsukahara"
+                },
+                {
+                    "first": "Kazushi",
+                    "initial": "K.",
+                    "last": "Yamanaka"
+                }
+            ],
+            "doi": "10.7567/JJAP.53.07KD08",
+            "issn": "00214922",
+            "pub_year": 2014,
+            "title": "Highly sensitive trace moisture ball surface acoustic wave sensor using SiOx film",
+            "volume": "53"
+        },
+        "bib42": {
+            "authors": [
+                {
+                    "first": "Kosuke",
+                    "initial": "K.",
+                    "last": "Takayanagi"
+                },
+                {
+                    "first": "Shingo",
+                    "initial": "S.",
+                    "last": "Akao"
+                },
+                {
+                    "first": "Takayuki",
+                    "initial": "T.",
+                    "last": "Yanagisawa"
+                },
+                {
+                    "first": "Noritaka",
+                    "initial": "N.",
+                    "last": "Nakaso"
+                },
+                {
+                    "first": "Yusuke",
+                    "initial": "Y.",
+                    "last": "Tsukahara"
+                },
+                {
+                    "first": "Satoshi",
+                    "initial": "S.",
+                    "last": "Hagihara"
+                },
+                {
+                    "first": "Toru",
+                    "initial": "T.",
+                    "last": "Oizumi"
+                },
+                {
+                    "first": "Nobuo",
+                    "initial": "N.",
+                    "last": "Takeda"
+                },
+                {
+                    "first": "Toshihiro",
+                    "initial": "T.",
+                    "last": "Tsuji"
+                },
+                {
+                    "first": "Kazushi",
+                    "initial": "K.",
+                    "last": "Yamanaka"
+                }
+            ],
+            "doi": "10.2320/matertrans.I-M2014807",
+            "firstpage": "988",
+            "issn": "13459678",
+            "lastpage": "993",
+            "pub_year": 2014,
+            "title": "Detection of trace water vapor using siOx-coated ball SAW sensor",
+            "volume": "55"
+        },
+        "bib43": null,
+        "bib44": {
+            "authors": [
+                {
+                    "first": "Hao",
+                    "initial": "H.",
+                    "last": "Jin"
+                },
+                {
+                    "first": "Jian",
+                    "initial": "J.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Xingli",
+                    "initial": "X.",
+                    "last": "He"
+                },
+                {
+                    "first": "Wenbo",
+                    "initial": "W.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Hongwei",
+                    "initial": "H.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "Shurong",
+                    "initial": "S.",
+                    "last": "Dong"
+                },
+                {
+                    "first": "Demiao",
+                    "initial": "D.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Junfeng",
+                    "initial": "J.",
+                    "last": "Geng"
+                },
+                {
+                    "first": "J. K.",
+                    "initial": "J.K.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "W. I.",
+                    "initial": "W.I.",
+                    "last": "Milne"
+                }
+            ],
+            "doi": "10.1038/srep02140",
+            "issn": "20452322",
+            "pub_year": 2013,
+            "title": "Flexible surface acoustic wave resonators built on disposable plastic film for electronics and lab-on-a-chip applications",
+            "volume": "3"
+        },
+        "bib5": null,
+        "bib6": null,
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Leslie Y.",
+                    "initial": "L.Y.",
+                    "last": "Yeo"
+                },
+                {
+                    "first": "James R.",
+                    "initial": "J.R.",
+                    "last": "Friend"
+                }
+            ],
+            "doi": "10.1146/annurev-fluid-010313-141418",
+            "firstpage": "379",
+            "issn": "00664189",
+            "lastpage": "406",
+            "pub_year": 2014,
+            "title": "Surface acoustic wave microfluidics",
+            "volume": "46"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Feng",
+                    "initial": "F.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "Zhangming",
+                    "initial": "Z.",
+                    "last": "Mao"
+                },
+                {
+                    "first": "Yuchao",
+                    "initial": "Y.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Zhiwei",
+                    "initial": "Z.",
+                    "last": "Xie"
+                },
+                {
+                    "first": "James P.",
+                    "initial": "J.P.",
+                    "last": "Lata"
+                },
+                {
+                    "first": "Peng",
+                    "initial": "P.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Liqiang",
+                    "initial": "L.",
+                    "last": "Ren"
+                },
+                {
+                    "first": "Jiayang",
+                    "initial": "J.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Jian",
+                    "initial": "J.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Ming",
+                    "initial": "M.",
+                    "last": "Dao"
+                },
+                {
+                    "first": "Subra",
+                    "initial": "S.",
+                    "last": "Suresh"
+                },
+                {
+                    "first": "Tony Jun",
+                    "initial": "T.J.",
+                    "last": "Huang"
+                }
+            ],
+            "doi": "10.1073/pnas.1524813113",
+            "firstpage": "1522",
+            "issn": "00278424",
+            "lastpage": "1527",
+            "pmid": "26811444",
+            "pub_year": 2016,
+            "title": "Three-dimensional manipulation of single cells using surface acoustic waves",
+            "volume": "113"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Kerstin",
+                    "initial": "K.",
+                    "last": "L\u00e4nge"
+                },
+                {
+                    "first": "Bastian E.",
+                    "initial": "B.E.",
+                    "last": "Rapp"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Rapp"
+                }
+            ],
+            "doi": "10.1007/s00216-008-1911-5",
+            "firstpage": "1509",
+            "issn": "16182642",
+            "lastpage": "1519",
+            "pmid": "18265962",
+            "pub_year": 2008,
+            "title": "Surface acoustic wave biosensors: A review",
+            "volume": "391"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 58874,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This paper has established the SCM for the analyses of SAWs in piezoelectric multilayers.",
+            "startOffset": 58785,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 55345,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "These include:",
+            "startOffset": 55331,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 56066,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib43": {
+                    "endOffset": 56064,
+                    "startOffset": 56062
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "The SCM analysis of the SAW propagation should be based on the polar coordinates of Fig. 6b, where r and \u03b8 corresponds to x1 and x3 in Fig. 1; and the matrix expressions of the wave equation should be re-formulated in the similar fashion as introduced in Section 2.2, but using the curvilinear coordinate system given in Appendix 1 of [43].",
+            "startOffset": 55726,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 46695,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The closeness between the two roots means that it is easy to miss one of them; 2.",
+            "startOffset": 46614,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 45459,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Both the other modes have u2 = 0 and decaying u1 and u3 with depth; the slower one is the conventional Rayleigh wave, and the faster one is the Sezawa mode, which appears because the top ZnO layer has slower wave speeds than the diamond layer below.",
+            "startOffset": 45210,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 46937,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 46771,
+                    "startOffset": 46769
+                },
+                "bib33": {
+                    "endOffset": 46774,
+                    "startOffset": 46772
+                },
+                "bib34": {
+                    "endOffset": 46935,
+                    "startOffset": 46933
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "In fact, in both [32,33], the inaccurately found roots led to the conclusion that the two modes did cross, resulting in subsequent erroneous calculations of K2 and choices of modes [34].",
+            "startOffset": 46751,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 57752,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Moreover, the simple, clamped conditions at the lower boundary of the multilayer mean that the wave motions must be strictly decaying with depth, so the setup is not able to model the pseudo-SAW (also called the leaky SAW), which has a bulk-like partial wave with growing amplitude into the depth.",
+            "startOffset": 57455,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 56995,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The SCM, in contrast, solves the characteristic equation in exactly the same way with non-damping materials (now with complex \u0393 matrices), and deliver the complex wavenumbers directly.",
+            "startOffset": 56811,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 41995,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The eigenvector U contains amplitude profiles of the variables into the depth, which also provides a double check to ensure correct SAW modes are selected.",
+            "startOffset": 41840,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 26490,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It is structured as follows: in Section 2, the analytical wave equation is introduced and reshaped into the simple, general matrix formulation; Section 3 lays out the basic idea of SCM, which transforms the nonlinear wave equation into a linear eigenvalue problem, before prescribing the SAW boundary conditions and solving it.",
+            "startOffset": 26163,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45615,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib36": {
+                    "endOffset": 45544,
+                    "startOffset": 45542
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "Most applications of diamond film-based SAW devices are based on the Sezawa mode [36] since it is lossless as the Rayleigh mode, but has higher velocities.",
+            "startOffset": 45460,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 59909,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Finally, some exciting potential applications of the SCM, as well as its intrinsic limits (e.g. on spurious modes and pseudo-SAWs), are discussed.",
+            "startOffset": 59763,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 21700,
+            "parents": [],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 21378,
+                    "startOffset": 21376
+                },
+                "bib12": {
+                    "endOffset": 21467,
+                    "startOffset": 21462
+                },
+                "bib13": {
+                    "endOffset": 21467,
+                    "startOffset": 21462
+                },
+                "bib14": {
+                    "endOffset": 21467,
+                    "startOffset": 21462
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Its usage was largely replaced by the transfer matrix method (TMM, proposed by Thomson [11] for guided waves, and was subsequently applied on various SAW scenarios in Refs. [12\u201314]), which reshaped the analytical equations into eigenvalue problems of the characteristic matrices, for the benefits of greatly reduced computational difficulty and cost, thus earned itself wide-spread and long-lasting popularities.",
+            "startOffset": 21288,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39513,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Now that all the other interfaces are set, only the bottom of the multilayer remains to be dealt with.",
+            "startOffset": 39411,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 43349,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The mechanical boundary conditions are the same for all these configurations, but the electrical conditions are different, resulting in different SAW performances.",
+            "startOffset": 43186,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 25190,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "So not only all advantages of the conventional spectral methods are inherited, the characteristic SCM wave equation is also more straightforward to formulate and code, the SAW boundary conditions are simpler to prescribe, and mode profiles (e.g. displacements and stress) are directly obtained.",
+            "startOffset": 24896,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55066,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "In this simple example, the SCM has already demonstrated various advantages: it requires minimal efforts to formulate and code, and delivers all modes at once without missing any; it obtains wave motion profiles simultaneously to aid mode identification; and it is unconditionally stable and highly accurate.",
+            "startOffset": 54758,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 42739,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This multilayer structure is of wide interests in high frequency telecommunications, since diamond offers the highest wave velocities of all materials.",
+            "startOffset": 42588,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 26162,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The main contributions that this paper seeks to make to the literature, therefore, are firstly to set up a framework for employing the SCM (which is established for guided waves in elastic media) on the analysis of Rayleigh-type SAWs in anisotropic piezoelectric multilayers, with its extension to magneto-electro-elastic media given; and secondly it provides a demonstration of the method via a comprehensive analysis of key SAW performance parameters in an exemplary multilayer system.",
+            "startOffset": 25675,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24193,
+            "parents": [],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 24006,
+                    "startOffset": 24004
+                },
+                "bib25": {
+                    "endOffset": 24009,
+                    "startOffset": 24007
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The applications of the Legendre-Laguerre polynomial expansion method on guided wave studies are discussed in Refs. [23,25], and it is shown that different modes of the guided wave are obtained simultaneously from a generalised eigenvalue formulation, and that it is guaranteed that no mode will be missed.",
+            "startOffset": 23887,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43003,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Physically, SAWs are introduced into the medium through the IDT coupled with the piezoelectric layer.",
+            "startOffset": 42902,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 23281,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Its unique strength lies in its capability of modelling structures of arbitrary cross-section and elastic symmetry, but the relative complexity of the SAFE formulation appear an overkill for SAW applications, where the waveguides are normally of simple and regular geometries.",
+            "startOffset": 23005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 23886,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 23884,
+                    "startOffset": 23882
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Even though these expansions are not exact, the maintained numerical accuracy is so high that the inexactness is negligible [24].",
+            "startOffset": 23757,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49123,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Calculating K2 through Eq. (25) apparently depends on the positioning of the IDT to determine which vf and vm to compare, which are listed in Fig. 2 for each of the configuration.",
+            "startOffset": 48944,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 22626,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "While they successfully circumvent the instability problem in their own ways, all of these methods generally belong to the category of the root-finding approach, which can be difficult to implement, and modes could be easily missed if great care is not taken; and if the displacement or stress profiles along depth are of interests, additional steps of substituting the roots back and solving the resultant characteristic equations are needed.",
+            "startOffset": 22183,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20379,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 20244,
+                    "startOffset": 20243
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Since 1960s, broad varieties and vast quantities (>3 billion annually as of 2007 [5]) of SAW-based devices have been manufactured, including bandpass filters, matched filters, resonators and delay lines, to name a few.",
+            "startOffset": 20161,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41643,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Spurious results exist in the obtained vp values, which are often with erroneously large imaginary parts and should be rejected outright (when setting up the rejection, be careful that the true SAWs may also have a small imaginary part, normally in the order of <10\u22126, due to numerical errors).",
+            "startOffset": 41349,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 47601,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The association between phase velocity and wave motions into the depth is evident in the displacement plots in Fig. 4.",
+            "startOffset": 47483,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 45209,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The mode with mostly the lowest speed has both u1 and u3 = 0 while u2 \u2260 0, hence is a shear-horizontal (SH) wave, or the Love mode, and it satisfies the boundary conditions because the top ZnO layer's (001) orientation allows decoupled SH waves.",
+            "startOffset": 44964,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 45682,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "These dispersion curves are generated by varying k with HZnO fixed.",
+            "startOffset": 45615,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 42411,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The units suitable for the setup in this study are attached in the Appendix.",
+            "startOffset": 42335,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 43185,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Depending on the positioning of the IDT and a negligibly thin metal layer used to short-circuit an interface, there are four common configurations of the system, as shown in Fig. 2.",
+            "startOffset": 43004,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 45838,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Towards the lower end of the axis where kHZnO \u2192 0, the two higher modes have cut-off upper limits set by the top two layers' Rayleigh and shear velocities.",
+            "startOffset": 45683,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 21287,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 21243,
+                    "startOffset": 21241
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The classic Rayleigh method involved solving an eighth-order analytical characteristic equation at each trial value of a root-finding process [10], hence was computationally very expensive.",
+            "startOffset": 21098,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47275,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In contrast, the SCM's calculation of all eigenvalues guarantees that no mode is missed, and the simultaneously obtained displacement profiles, which should be consistently changing for the same mode (e.g. the displacement u1 has a u1 = 0 node in the ZnO layer for the Rayleigh mode, but not for Sezawa), ensure easy mode identification.",
+            "startOffset": 46938,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 46750,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The kissing modes are difficult to identify correctly.",
+            "startOffset": 46696,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 26941,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "The structure consists of n layers that occupy the space of x3 < 0 to infinity, with the 1st layer at the top, and subsequent indices increasing with depth.",
+            "startOffset": 26785,
+            "title": "Multilayer system configuration"
+        },
+        {
+            "endOffset": 40219,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 40093,
+                    "startOffset": 40091
+                },
+                "bib23": {
+                    "endOffset": 40127,
+                    "startOffset": 40125
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "Given its exponential decay with depth, neither the Perfect Matched Layer (PML) [19] nor the Laguerre polynomials [23] employed specifically for modelling SAWs in an infinite half space were in fact necessary.",
+            "startOffset": 40010,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 24895,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Here the explicit series expansion and reconstruction processes are hidden backstage in the form of differential matrices, and the function values are evaluated and used directly at the discrete collocation points.",
+            "startOffset": 24681,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46380,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "As kHZnO grows, velocities of all three modes decrease as the waves are growingly influenced by the ZnO layer of lower speeds.",
+            "startOffset": 46254,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 50441,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The important point here is that the SCM model is fully capable of capturing the characteristics of the SH modes, and can be used for their analyses.",
+            "startOffset": 50292,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 25674,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Given the advantages of the SCM, it is only logical to import it to the broad applications of SAW, but this has not been reported to the author's knowledge, nor has a full account of SAW characteristics based on spectral methods been given.",
+            "startOffset": 25434,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49445,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the vicinity of kHZnO \u2248 1.25, the sharp fluctuations and local extrema of the K2 is caused by the sudden bend of phase velocity evident in Fig. 3.",
+            "startOffset": 49296,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 43671,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Here a comprehensive examination of all these configurations' key SAW parameters is given via the SCM, including phase velocity and mode shapes, electromechanical coupling coefficients and effective permittivity.",
+            "startOffset": 43459,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 48210,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "However, the numerical stability of the SCM is emphasized here, since the diamond layer in all these cases is an exact example of the large fd problem that is problematic for the conventional TMM if a three-layer setup is used, but they can be easily handled by the SCM.",
+            "startOffset": 47940,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 44811,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 44661,
+                    "startOffset": 44659
+                },
+                "bib26": {
+                    "endOffset": 44664,
+                    "startOffset": 44662
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "They are calculated using N = 50 nodes to ensure both efficiency and accuracy (empirically, \u223c10\u22125 relative error could be achieved with N > 70 for the first a few guided modes in a plate [24,26]; here only these first modes are sought-after, and the SCM models only the top half the plate, so similar accuracy is expected with a smaller N).",
+            "startOffset": 44471,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 52701,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "One fundamental idea of finding \u03b5eff is to solve the eighth-order analytical wave equation with free mechanical yet unspecified electrical boundary condition, enabling the values of D3 and \u03d5 to be found for any arbitrarily given slowness.",
+            "startOffset": 52463,
+            "title": "Effective permittivity of multilayers"
+        },
+        {
+            "endOffset": 24325,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These papers also briefly touched on SAWs, but only briefly to the extent of calculating phase velocity and particle displacements.",
+            "startOffset": 24194,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40680,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Therefore, it can be easily solved by an eigensolver, such as the eig function in Matlab package via a simple command eig(L,M), to obtain either \u03c9 or k as the eigenvalue, and the corresponding displacement vector U as the eigenvector together.",
+            "startOffset": 40437,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 31518,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib27": {
+                    "endOffset": 31454,
+                    "startOffset": 31452
+                },
+                "bib28": {
+                    "endOffset": 31457,
+                    "startOffset": 31455
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "Eq. (9) gives the matrix description of the wave equation that is applicable to many types of guided waves (e.g. Lamb waves [27,28]), depending on the specific boundary conditions prescribed.",
+            "startOffset": 31327,
+            "title": "Fundamental governing equations"
+        },
+        {
+            "endOffset": 34326,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In this case, once appropriate boundary conditions are prescribed into L and M (details later), the equation becomes a simple linear eigenvalue problem between the matrices, with \u03c92 being the eigenvalue and U the eigenvector.",
+            "startOffset": 34101,
+            "title": "The \u03c9 and k formulations"
+        },
+        {
+            "endOffset": 49790,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As for the Love mode, the K2 value is constantly 0 for all configurations, meaning that it cannot be directly excited or detected by the IDT.",
+            "startOffset": 49649,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 42902,
+            "parents": [],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 42783,
+                    "startOffset": 42781
+                }
+            },
+            "secId": "sec4",
+            "sentence": "Material properties are cited from Ref. [32], and other common layered structures, such as AlN/diamond/Si, SiO2/LiNbO3 and ZnO/SiO2/Si, can be similarly analysed.",
+            "startOffset": 42740,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 50858,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib34": {
+                    "endOffset": 50706,
+                    "startOffset": 50704
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "For example, it was reported [34] that for the M-I configuration of the ZnO/diamond/Si system, calculating against fHZnO yielded K2 values of 25%, four times as large as against kHZnO.",
+            "startOffset": 50674,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 46613,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The vicinity of this region exemplify a difficult case for the root-finding methods (including scattering matrix and RASM) because: 1.",
+            "startOffset": 46479,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 47482,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Finally, when kHZnO is large enough (e.g. >2.5), the SAW wavelength become shorter and the energy is mostly trapped in the top ZnO layer, hence their speeds eventually approach the guided wave speeds in ZnO.",
+            "startOffset": 47275,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 56439,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "SAW in damping materials.",
+            "startOffset": 56414,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 56412,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "This makes the wavelengths \u226a ball diameter, and the Cartesian system-based analysis in this paper remains adequate for these cases.",
+            "startOffset": 56281,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 42587,
+            "parents": [],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 42513,
+                    "startOffset": 42508
+                },
+                "bib33": {
+                    "endOffset": 42513,
+                    "startOffset": 42508
+                },
+                "bib34": {
+                    "endOffset": 42513,
+                    "startOffset": 42508
+                },
+                "bib35": {
+                    "endOffset": 42513,
+                    "startOffset": 42508
+                }
+            },
+            "secId": "sec4",
+            "sentence": "The well-studied ZnO(001)/diamond/Si multilayer structure (Si as substrate) [32\u201335] is analysed here as an example to demonstrate the proposed SCM approach.",
+            "startOffset": 42431,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 26661,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As a demonstrative example, the multilayer system of ZnO/diamond/Si is analysed in Section 4, and all the key parameters for SAW applications are evaluated using the SCM.",
+            "startOffset": 26491,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36453,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Here the classic SAW problem is considered, where the top surface of the multilayer is exposed in vacuum with free mechanical conditions and either open- or short-circuit electrical condition; the wave amplitudes diminish exponentially into the depth.",
+            "startOffset": 36202,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 44470,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For the I-F configuration in Fig. 2, the velocity dispersion curves of the first three SAW modes are plotted in Fig. 3a, with the kHZnO value as the horizontal axis.",
+            "startOffset": 44305,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 55725,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "With the SAW guided by a SiOx strip on the equator of a quartz crystal ball, the device demonstrated remarkable sensitivity to moisture.",
+            "startOffset": 55589,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 59762,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "It is found that the SCM offers an intuitive, stable and accurate alternative to the conventional root-finding approach.",
+            "startOffset": 59642,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 59091,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In Section 2 and 3, the governing equations of the wave propagation are deducted, reshaped into a matrix form, and then discretized by the SCM into two numerical formulations for direct calculations of either \u03c9 or k.",
+            "startOffset": 58875,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 51862,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib33": {
+                    "endOffset": 51638,
+                    "startOffset": 51636
+                },
+                "bib36": {
+                    "endOffset": 51680,
+                    "startOffset": 51678
+                },
+                "bib38": {
+                    "endOffset": 51656,
+                    "startOffset": 51654
+                },
+                "bib39": {
+                    "endOffset": 51659,
+                    "startOffset": 51657
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "Fortunately, experimental results across many material systems (e.g. ZnO/diamond/Si [33], ZnO/SiO2/Si [38,39] and AlN/diamond [36]) predominantly show good agreement with the kH calculation, therefore this convention is recommended and the simple experimental evaluations of K2 via vf and vm can be safely used.",
+            "startOffset": 51551,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 23370,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The spectral methods, on the other hand, are of great practical value in this territory.",
+            "startOffset": 23282,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58596,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "However, it needs to be emphasized that the pseudo-SAWs are not a common phenomenon, but only appear on certain cuts of single crystals with relatively high crystal symmetries; besides, their propagations are intrinsically lossy with part of the energy radiated into the substrate.",
+            "startOffset": 58315,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 21097,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Fundamental to all these applications is a stable, efficient and accurate way of analysing key SAW parameters, and many methods have been explored for this purpose.",
+            "startOffset": 20933,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46478,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "At kHZnO \u2248 1.25, the Rayleigh and Sezawa modes have very close velocities, but they do not cross.",
+            "startOffset": 46381,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 28267,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "A fixed coordinate system is adopted in this paper, with the SAW always propagating along x1.",
+            "startOffset": 28174,
+            "title": "Multilayer system configuration"
+        },
+        {
+            "endOffset": 55197,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Thus it presents an attractive alternative to the root-finding approach in the analysis of SAWs across various types of materials.",
+            "startOffset": 55067,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 55407,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "SAW in curved (cylindrical or spherical) coordinate systems.",
+            "startOffset": 55347,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 59376,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "These solutions are equivalent to the A0 and S0-mode guided waves in the large fd region.",
+            "startOffset": 59287,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 26784,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "We consider the classic multilayer configuration shown in Fig. 1.",
+            "startOffset": 26719,
+            "title": "Multilayer system configuration"
+        },
+        {
+            "endOffset": 59641,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The method is then applied on the well-studied ZnO/diamond/Si system, where the phase velocity dispersion relations, electromechanical coupling coefficients and effective permittivity are analysed, and the SCM results compared to existing techniques in literature.",
+            "startOffset": 59377,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 51311,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib37": {
+                    "endOffset": 51022,
+                    "startOffset": 51020
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "Such difference is caused by the SAW velocity dispersion in a layered structure: for a non-dispersive piezoelectric half space (which Eq. (25) was defined upon [37]), both assumptions end up with the same vf and vm regardless of the \u03c9 or k chosen; in a dispersive multilayer, on the other hand, for a particular combination of \u03c9 and k that gives a vf, the corresponding vm very much depends on whether to keep the same \u03c9 or k in the latter calculation.",
+            "startOffset": 50859,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 51550,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib35": {
+                    "endOffset": 51337,
+                    "startOffset": 51335
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "Even though Wu et al. [35] demonstrated that the discrepancies can be reconciled by using exact analytical calculations, the algorithm is difficult to compute and does not have connection to the practically measurable values of vf and vm.",
+            "startOffset": 51312,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 27174,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "Some of the layers can be non-piezoelectric (e.g. diamond), but there must be a piezoelectric one attached to metal electrodes (such as the interdigital transducer, IDT) to allow SAWs to be induced into and detected from the system.",
+            "startOffset": 26942,
+            "title": "Multilayer system configuration"
+        },
+        {
+            "endOffset": 20036,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 19815,
+                    "startOffset": 19814
+                },
+                "bib2": {
+                    "endOffset": 19921,
+                    "startOffset": 19920
+                },
+                "bib3": {
+                    "endOffset": 19996,
+                    "startOffset": 19995
+                },
+                "bib4": {
+                    "endOffset": 20033,
+                    "startOffset": 20032
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Derived by Lord Rayleigh to explain energy propagation in seismology [1], surface acoustic waves (SAWs) have since found wide-spread applications spanning from Earth Sciences [2] to non-destructive evaluations (e.g. detecting surface-breaking cracks [3] or recovering elastic properties [4]).",
+            "startOffset": 19744,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28525,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.1",
+            "sentence": "For considerations along arbitrary crystallographic planes and directions, properties of the material, including the 4th-rank elastic, 3rd-rank piezoelectric, and 2nd rank permittivity tensors, need to be rotated into alignment with the x1 \u2212 x2 \u2212 x3 system.",
+            "startOffset": 28268,
+            "title": "Multilayer system configuration"
+        },
+        {
+            "endOffset": 36652,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The physical meanings of the boundary and interface conditions are explained from top layer to bottom, and are implemented into the SCM model using the \u03c9 formation (Eqs (14) and (18)) as an example.",
+            "startOffset": 36454,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 40436,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Both the \u03c9 and k formulations of the wave equation are expressed as a classic eigenvalue problem, and the introduced SAW boundary conditions have all maintained the linearity.",
+            "startOffset": 40261,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 56810,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "This may add an imaginary part to the wavenumber, and the resultant two-dimensional root-finding process is much more difficult to achieve.",
+            "startOffset": 56671,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 40009,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Physically, this boundary condition is similar to modelling Lamb waves in the top half of the plate in large fd regions, where the A0 and S0 modes overlap and are both equivalent to the Rayleigh wave.",
+            "startOffset": 39809,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 43852,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The accuracy of the results is calibrated against literature when available, and the SCM's advantages over the conventional methods are highlighted through specific demonstrations.",
+            "startOffset": 43672,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 56280,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib41": {
+                    "endOffset": 56249,
+                    "startOffset": 56247
+                },
+                "bib42": {
+                    "endOffset": 56277,
+                    "startOffset": 56275
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "However, such coordinate transformation is often not necessary, since high-frequency SAWs are normally used to avoid propagation interruption by geometries (160 MHz for \u03d51mm ball [41] and 80 MHz for \u03d53.3 mm [42]).",
+            "startOffset": 56067,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 34404,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Eq. (14) is henceforth referred to as the \u03c9 formulation of the wave equation.",
+            "startOffset": 34327,
+            "title": "The \u03c9 and k formulations"
+        },
+        {
+            "endOffset": 25434,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 25315,
+                    "startOffset": 25313
+                },
+                "bib26": {
+                    "endOffset": 25346,
+                    "startOffset": 25341
+                },
+                "bib27": {
+                    "endOffset": 25346,
+                    "startOffset": 25341
+                },
+                "bib28": {
+                    "endOffset": 25346,
+                    "startOffset": 25341
+                },
+                "bib29": {
+                    "endOffset": 25368,
+                    "startOffset": 25366
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Such benefits have been successfully demonstrated using SCM based on Chebyshev polynomials, on guided waves in isotropic [24], generally anisotropic [26\u201328] and viscoelastic [29] materials, in both Cartesian and cylindrical coordinate systems.",
+            "startOffset": 25191,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34100,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Apparently Eq. (14) can be used to obtain \u03c9 (and hence the SAW phase velocity) when k is known.",
+            "startOffset": 34005,
+            "title": "The \u03c9 and k formulations"
+        },
+        {
+            "endOffset": 43458,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 43411,
+                    "startOffset": 43409
+                },
+                "bib32": {
+                    "endOffset": 43417,
+                    "startOffset": 43412
+                },
+                "bib33": {
+                    "endOffset": 43417,
+                    "startOffset": 43412
+                },
+                "bib34": {
+                    "endOffset": 43417,
+                    "startOffset": 43412
+                },
+                "bib35": {
+                    "endOffset": 43417,
+                    "startOffset": 43412
+                }
+            },
+            "secId": "sec4",
+            "sentence": "Fragments of these performances have been covered in Refs. [19,32\u201335], using mainly the root-finding methods.",
+            "startOffset": 43349,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 46254,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Nonetheless, the SCM can handle both treatments, and this kHZnO region is not of major interests since it corresponds to either extremely thin layers or low wave frequencies.",
+            "startOffset": 46080,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 56494,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Flexible electronics are growing into a huge industry.",
+            "startOffset": 56440,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 57455,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Therefore one must examine the modal shapes (eigenvectors from the solver) carefully to sift out the correct modes that are in accordance to the SAW characteristics.",
+            "startOffset": 57290,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 41231,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "After the eigenvalues are obtained, the SAW phase velocity is calculated as vp = \u03c9\u2215k. Multiple solutions of the eigenvalue are given at once, which correspond to all modes of guided waves (not just SAWs) that satisfy the prescribed boundary conditions.",
+            "startOffset": 40979,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 44166,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Apart from the comprehensiveness in the case of piezoelectric media, the reader is also reminded of the generality of the SCM formulation, which can be easily adjusted to accommodate both elastic and magneto-electro-elastic materials, while previously these systems had to be pursued individually and laboriously.",
+            "startOffset": 43853,
+            "title": "Example and results"
+        },
+        {
+            "endOffset": 23756,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "They approximate the displacements along depth of a regular-shaped waveguide as series expansions of spectral bases such as the trigonometric, Legendre or Laguerre polynomials, which effectively reduce the wave equation into one-dimensional numerical partial differential equation, and avoids the erroneous growing exponential partial waves of large fd products and ensuring stability.",
+            "startOffset": 23371,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55588,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib40": {
+                    "endOffset": 55519,
+                    "startOffset": 55517
+                },
+                "bib41": {
+                    "endOffset": 55561,
+                    "startOffset": 55559
+                },
+                "bib42": {
+                    "endOffset": 55564,
+                    "startOffset": 55562
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "Ring waveguides and spherical SAW devices have emerged among other promising new developments in biosensing [40], and an example of a ball SAW sensor [41,42] is sketched in Fig. 6.",
+            "startOffset": 55408,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 20694,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 20690,
+                    "startOffset": 20689
+                },
+                "bib6": {
+                    "endOffset": 20692,
+                    "startOffset": 20691
+                }
+            },
+            "secId": "sec1",
+            "sentence": "These developments most dominantly relied on SAWs in piezoelectric crystals or deposited layers, using materials such as quartz and lithium niobate in early years, and later shifted to those with higher phase velocities (e.g. aluminium nitride and diamond) driven by the demands for higher-frequency devices [5,6].",
+            "startOffset": 20380,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49649,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As mentioned earlier, it is important to be clear that the dispersion curves do not cross, since this decides the correct choice of modes according to the favourable K2 performances across kHZnO regions.",
+            "startOffset": 49446,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 58773,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "So they are not considered a major point of interest in piezoelectric multilayer designs, and certainly do not diminish the advantages and applicability of the SCM in the area.",
+            "startOffset": 58597,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 24680,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The spectral collocation method (SCM) is in many ways an improvement over the explicit polynomial technique, and is particularly suitable for guided wave calculations.",
+            "startOffset": 24513,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47728,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The SAWs stretch well into the diamond layer when kHZnO = 1.0, but are evidently confined in ZnO when kHZnO = 3.5 as deducted.",
+            "startOffset": 47602,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 57052,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "On the other hand, the SCM is not without its own limits.",
+            "startOffset": 56995,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 47939,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "These observations show that the wave motions are well preserved into the first two layers, so only the ZnO/diamond layers are sufficient for modelling the SAWs for these thicknesses, no Si substrate is needed.",
+            "startOffset": 47729,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 22182,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 22070,
+                    "startOffset": 22068
+                },
+                "bib17": {
+                    "endOffset": 22094,
+                    "startOffset": 22092
+                },
+                "bib18": {
+                    "endOffset": 22118,
+                    "startOffset": 22116
+                },
+                "bib19": {
+                    "endOffset": 22172,
+                    "startOffset": 22170
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Techniques proposed to amend this drawback include most notably the global matrix [16], surface impedance [17], scattering matrix [18] and recursive asymptotic stiffness matrix (RASM) [19] methods.",
+            "startOffset": 21985,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46079,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib34": {
+                    "endOffset": 46024,
+                    "startOffset": 46022
+                },
+                "bib35": {
+                    "endOffset": 46027,
+                    "startOffset": 46025
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "Note that there are ambiguities to this end: if k is kept fixed with HZnO varying, the SAW speeds should effectively approach the limits of diamond since HZnO \u2192 0, as shown in Refs. [34,35] with a ZnO layer on an assumed diamond half space.",
+            "startOffset": 45839,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 41348,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 41346,
+                    "startOffset": 41344
+                }
+            },
+            "secId": "sec3.4",
+            "sentence": "Therefore the iterative root-finding process is no longer required and it is guaranteed that no mode is missed [24].",
+            "startOffset": 41232,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 21984,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 21981,
+                    "startOffset": 21979
+                }
+            },
+            "secId": "sec1",
+            "sentence": "However, it is now well-known that in the case of large frequency-thickness combinations, the TMM suffers from numerical instabilities caused by its indiscrimination of all exponential partial waves within the layer (known as the large fd problem in the fields of guided waves [15]).",
+            "startOffset": 21701,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20160,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Some of the most important and successful applications of SAW are in the areas of telecommunications and signal processing.",
+            "startOffset": 20037,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42334,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Similar to the TMM, the SCM requires appropriate units for the physical variables to ensure its matrices are well-conditioned, because the \u0393 matrices contain tensor values of sharply contrasting amplitudes if the standard SI units are used, e.g. elastic stiffnesses are in the orders of 1011 Pa, while electrical permittivity is 10\u221212 F/m.",
+            "startOffset": 41995,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 44963,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The simultaneously obtained discretized displacement vector U are also plotted in Fig. 3(b\u2013d) for three kHZnO locations to help identify the SAW modes.",
+            "startOffset": 44812,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 58314,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Thus, the reader is recommended to resort to the root-finding methods for analysis on the pseudo-SAWs.",
+            "startOffset": 58212,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 49295,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 49293,
+                    "startOffset": 49291
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "The results for all four configurations are shown in Fig. 4, and the Rayleigh and Sezawa results agree with the theoretical and experimental results reported in Ref. [32].",
+            "startOffset": 49124,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 57289,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Firstly, as discussed in Section 3, the SAW solutions are obtained as equivalences to the overlapping A0- and S0-mode guided waves in the large fd region, and this configuration could lead to spurious Lamb wave modes in the multilayers.",
+            "startOffset": 57053,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 39808,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Since the amplitudes of the classic SAW decay exponentially into the medium, if the thickness is large enough (e.g. >2 \u00d7 wavelength), then a simple clamped boundary condition (u1, u2, u3 and \u03d5 all equal to 0) at the bottom surface is sufficient, and is extremely easy to implement into the SCM.",
+            "startOffset": 39514,
+            "title": "Boundary and interface conditions"
+        },
+        {
+            "endOffset": 50673,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Another important issue about K2 is the confusion on whether to calculate it against kHZnO (as has been done in Fig. 4, or equivalently HZnO\u2215\u03bb), or against fHZnO, since the two approaches can lead to significantly different results.",
+            "startOffset": 50441,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 50291,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib38": {
+                    "endOffset": 49983,
+                    "startOffset": 49981
+                },
+                "bib39": {
+                    "endOffset": 50245,
+                    "startOffset": 50243
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "This is reasonable given that the SH wave is decoupled from other partial waves and piezoelectricity in the ZnO(001) layer; however, it has been shown both theoretically and experimentally [38,39] that for orientations such as (110) or (200) in ZnO, the SH modes have K2 values as high as 3.5 and can be excited effectively (In fact, Love mode sensors are widely used in chemical or biochemical sensing because of their minimal energy loss in liquids [39] thanks to the lack of normal displacements).",
+            "startOffset": 49791,
+            "title": "The electromechanical coupling coefficient K2"
+        },
+        {
+            "endOffset": 59286,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "They are both in the form of a classic eigenvalue problem, and can be easily solved to obtain the wanted velocity as the eigenvalue and the displacement vector as the eigenvector simultaneously.",
+            "startOffset": 59092,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 23004,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "SAFE discretizes the cross section of the waveguide with finite or spectral elements in search for the solution to the wave equation.",
+            "startOffset": 22871,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 22870,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 22811,
+                    "startOffset": 22809
+                },
+                "bib21": {
+                    "endOffset": 22868,
+                    "startOffset": 22863
+                },
+                "bib22": {
+                    "endOffset": 22868,
+                    "startOffset": 22863
+                },
+                "bib23": {
+                    "endOffset": 22868,
+                    "startOffset": 22863
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Alternative to these \u2018exact\u2019, partial wave-based methods, numerical techniques have also been applied to study guided waves, such as the Semi-Analytical Finite Element (SAFE) method [20] and the spectral methods of polynomial expansion [21\u201323].",
+            "startOffset": 22626,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56670,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib44": {
+                    "endOffset": 56638,
+                    "startOffset": 56636
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "As fundamental building blocks of the technology, flexible SAW devices are normally achieved by depositing piezoelectric layers on polymers [44], which are often viscoelastic.",
+            "startOffset": 56495,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 24512,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The drawback of the spectral polynomial technique is that the expansion and reconstruction of displacement makes it somewhat cumbersome to apply boundary conditions and interpret results.",
+            "startOffset": 24325,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40979,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 40974,
+                    "startOffset": 40972
+                },
+                "bib19": {
+                    "endOffset": 40977,
+                    "startOffset": 40975
+                }
+            },
+            "secId": "sec3.4",
+            "sentence": "Since the variables of u in each layer are directly accounted for at the interpolated collocation points, no exponential partial waves enter the equation, and the SCM is numerically unconditionally stable without requiring re-alignments of the partial waves needed by the recursive methods [18,19].",
+            "startOffset": 40681,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 41839,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Numerical solutions"
+                }
+            ],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 41804,
+                    "startOffset": 41802
+                }
+            },
+            "secId": "sec3.4",
+            "sentence": "True SAW modes require only minimal efforts to be selected from the remains, since they always have the lowest vp of all guided wave modes (see, for example [29], about filtering of these modes).",
+            "startOffset": 41644,
+            "title": "Solution to the numerical wave equation"
+        },
+        {
+            "endOffset": 52981,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 52843,
+                    "startOffset": 52841
+                },
+                "bib19": {
+                    "endOffset": 52856,
+                    "startOffset": 52854
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "Equivalently, \u03b5eff can also be obtained from the matrix-formed SAW Green's equation, e.g by using the guaranteed-stable scattering matrix [18] or RSAM [19] methods, though they require the recursive alignment of the growing and decaying partial waves in each layer of the system.",
+            "startOffset": 52702,
+            "title": "Effective permittivity of multilayers"
+        },
+        {
+            "endOffset": 44304,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Phase velocity is the primary factor to consider when designing a SAW device.",
+            "startOffset": 44227,
+            "title": "Phase velocity dispersion curve and physical displacements"
+        },
+        {
+            "endOffset": 20933,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 20826,
+                    "startOffset": 20825
+                },
+                "bib8": {
+                    "endOffset": 20840,
+                    "startOffset": 20839
+                },
+                "bib9": {
+                    "endOffset": 20931,
+                    "startOffset": 20930
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Recently, SAWs in miniaturised piezoelectric systems have spurred fascinating research of accurate manipulation of microfluidics [7] and cells [8] in lab-on-a-chip, and highly sensitive Micro Electro-Mechanical Systems (MEMS) sensors [9].",
+            "startOffset": 20695,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31581,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Theoretical formulation"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Those for the SAW will be introduced in the following section.",
+            "startOffset": 31519,
+            "title": "Fundamental governing equations"
+        },
+        {
+            "endOffset": 58211,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "It may seem that an absorbing layer (such as perfectly matched layer) combined with the SCM would provide a fix, but a series of complexities associated with the model (including the anisotropies of the medium, unorthodox wave equation formulations, and the grazing incidence of the leaky wave) make the formulation of a suitable absorbing layer extremely challenging and possibly inaccurate, and likely to deprive the characteristic simplicity from the SCM.",
+            "startOffset": 57753,
+            "title": "Discussions"
+        },
+        {
+            "endOffset": 55330,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Example and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Furthermore, for certain circumstances where the root-finding approach does not work well, the SCM could bring even larger benefits.",
+            "startOffset": 55198,
+            "title": "Discussions"
+        }
+    ],
+    "docId": "S0022460X18304450",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "bo.lan@imperial.ac.uk",
+                "first": "Bo",
+                "initial": "B.",
+                "last": "Lan"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2018.07.007",
+        "firstpage": "16",
+        "issn": "0022460X",
+        "keywords": [
+            "Piezoelectric multilayer",
+            "Spectral collocation method",
+            "Surface acoustic waves"
+        ],
+        "lastpage": "28",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Non-iterative, stable analysis of surface acoustic waves in anisotropic piezoelectric multilayers using spectral collocation method"
+    }
+}

@@ -1,0 +1,3414 @@
+{
+    "abstract": "Social media data represent an important resource for behavioral analysis of the aging population. This paper addresses the problem of age prediction from Twitter dataset, where the prediction issue is viewed as a classification task. For this purpose, an innovative model based on Convolutional Neural Network is devised. To this end, we rely on language-related features and social media specific metadata. More specifically, we introduce two features that have not been previously considered in the literature: the content of URLs and hashtags appearing in tweets. We also employ distributed representations of words and phrases present in tweets, hashtags and URLs, pre-trained on appropriate corpora in order to exploit their semantic information in age prediction. We show that our CNN-based classifier, when compared with baseline models, yields an improvement of up to 12.3% for Dutch dataset, 9.8% for English1 dataset, and 6.6% for English2 dataset in the micro-averaged F1 score.",
+    "author_highlights": [
+        {
+            "endOffset": 41548,
+            "sentence": "The paper addresses age prediction from Twitter dataset using language features and network metadata.",
+            "startOffset": 41447
+        },
+        {
+            "endOffset": 41629,
+            "sentence": "Two new features related to content of URLs and Hashtags have been incorporated.",
+            "startOffset": 41549
+        },
+        {
+            "endOffset": 41704,
+            "sentence": "A new convolution neural network architecture is put forward and assessed.",
+            "startOffset": 41630
+        }
+    ],
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Lazer"
+                },
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Pentland"
+                },
+                {
+                    "first": "Lada",
+                    "initial": "L.",
+                    "last": "Adamic"
+                },
+                {
+                    "first": "Sinan",
+                    "initial": "S.",
+                    "last": "Aral"
+                },
+                {
+                    "first": "Albert L\u00e1szl\u00f3",
+                    "initial": "A.L.",
+                    "last": "Barab\u00e1si"
+                },
+                {
+                    "first": "Devon",
+                    "initial": "D.",
+                    "last": "Brewer"
+                },
+                {
+                    "first": "Nicholas",
+                    "initial": "N.",
+                    "last": "Christakis"
+                },
+                {
+                    "first": "Noshir",
+                    "initial": "N.",
+                    "last": "Contractor"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Fowler"
+                },
+                {
+                    "first": "Myron",
+                    "initial": "M.",
+                    "last": "Gutmann"
+                },
+                {
+                    "first": "Tony",
+                    "initial": "T.",
+                    "last": "Jebara"
+                },
+                {
+                    "first": "Gary",
+                    "initial": "G.",
+                    "last": "King"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Macy"
+                },
+                {
+                    "first": "Deb",
+                    "initial": "D.",
+                    "last": "Roy"
+                },
+                {
+                    "first": "Marshall",
+                    "initial": "M.",
+                    "last": "Van Alstyne"
+                }
+            ],
+            "doi": "10.1126/science.1167742",
+            "firstpage": "721",
+            "issn": "00368075",
+            "lastpage": "723",
+            "pmid": "19197046",
+            "pub_year": 2009,
+            "title": "Social science: Computational social science",
+            "volume": "323"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "Mary",
+                    "initial": "M.",
+                    "last": "Bucholtz"
+                },
+                {
+                    "first": "Kira",
+                    "initial": "K.",
+                    "last": "Hall"
+                }
+            ],
+            "doi": "10.1177/1461445605054407",
+            "firstpage": "585",
+            "issn": "14614456",
+            "lastpage": "614",
+            "pub_year": 2005,
+            "title": "Identity and interaction: A sociocultural linguistic approach",
+            "volume": "7"
+        },
+        "b11": null,
+        "b12": {
+            "authors": [
+                {
+                    "first": "Sara",
+                    "initial": "S.",
+                    "last": "Rosenthal"
+                },
+                {
+                    "first": "Kathleen",
+                    "initial": "K.",
+                    "last": "McKeown"
+                }
+            ],
+            "firstpage": "763",
+            "lastpage": "772",
+            "pub_year": 2011,
+            "title": "Age prediction in blogs: A study of style, content, and online behavior in pre- and post-social media generations",
+            "volume": "1"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Suzanne Evans",
+                    "initial": "S.E.",
+                    "last": "Wagner"
+                }
+            ],
+            "doi": "10.1002/lnc3.343",
+            "firstpage": "371",
+            "issn": "1749818X",
+            "lastpage": "382",
+            "pub_year": 2012,
+            "title": "Age Grading in Sociolinguistic Theory",
+            "volume": "6"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Burrows"
+                }
+            ],
+            "doi": "10.1093/llc/fqi067",
+            "firstpage": "27",
+            "issn": "02681145",
+            "lastpage": "47",
+            "pub_year": 2007,
+            "title": "All the way through: Testing for authorship in different frequency strata",
+            "volume": "22"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "Conrad",
+                    "initial": "C.",
+                    "last": "Sanderson"
+                },
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "Guenter"
+                }
+            ],
+            "firstpage": "482",
+            "lastpage": "491",
+            "pub_year": 2006,
+            "title": "Short text authorship attribution via sequence kernels, Markov chains and author unmasking: An investigation"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Oussalah"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Bhat"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Challis"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Schnier"
+                }
+            ],
+            "doi": "10.1016/j.knosys.2012.07.017",
+            "firstpage": "105",
+            "issn": "09507051",
+            "lastpage": "120",
+            "pub_year": 2013,
+            "title": "A software architecture for Twitter collection, search and geolocation services",
+            "volume": "37"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Oussalah"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Escallier"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Daher"
+                }
+            ],
+            "doi": "10.1016/j.knosys.2016.02.015",
+            "firstpage": "31",
+            "issn": "09507051",
+            "lastpage": "47",
+            "pub_year": 2016,
+            "title": "An automated system for grammatical analysis of Twitter messages. A learning task application",
+            "volume": "101"
+        },
+        "b18": null,
+        "b19": null,
+        "b2": {
+            "authors": [
+                {
+                    "first": "Efthimios",
+                    "initial": "E.",
+                    "last": "Bothos"
+                },
+                {
+                    "first": "Dimitris",
+                    "initial": "D.",
+                    "last": "Apostolou"
+                },
+                {
+                    "first": "Gregoris",
+                    "initial": "G.",
+                    "last": "Mentzas"
+                }
+            ],
+            "doi": "10.1109/MIS.2010.152",
+            "firstpage": "50",
+            "issn": "15411672",
+            "lastpage": "58",
+            "pub_year": 2010,
+            "title": "Using social media to predict future events with agent-based markets",
+            "volume": "25"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "Danish",
+                    "initial": "D.",
+                    "last": "Contractor"
+                },
+                {
+                    "first": "Tanveer A.",
+                    "initial": "T.A.",
+                    "last": "Faruquie"
+                },
+                {
+                    "first": "L. Venkata",
+                    "initial": "L.V.",
+                    "last": "Subramaniam"
+                }
+            ],
+            "firstpage": "189",
+            "lastpage": "196",
+            "pub_year": 2010,
+            "title": "Unsupervised cleansing of noisy text",
+            "volume": "2"
+        },
+        "b21": null,
+        "b22": {
+            "authors": [
+                {
+                    "first": "Maarten",
+                    "initial": "M.",
+                    "last": "Sap"
+                },
+                {
+                    "first": "Gregory",
+                    "initial": "G.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Johannes C.",
+                    "initial": "J.C.",
+                    "last": "Eichstaedt"
+                },
+                {
+                    "first": "Margaret L.",
+                    "initial": "M.L.",
+                    "last": "Kern"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Stillwell"
+                },
+                {
+                    "first": "Michal",
+                    "initial": "M.",
+                    "last": "Kosinski"
+                },
+                {
+                    "first": "Lyle H.",
+                    "initial": "L.H.",
+                    "last": "Ungar"
+                },
+                {
+                    "first": "H. Andrew",
+                    "initial": "H.A.",
+                    "last": "Schwartz"
+                }
+            ],
+            "firstpage": "1146",
+            "lastpage": "1151",
+            "pub_year": 2014,
+            "title": "Developing age and gender predictive lexica over social media"
+        },
+        "b23": {
+            "authors": [
+                {
+                    "first": "Delip",
+                    "initial": "D.",
+                    "last": "Rao"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Yarowsky"
+                },
+                {
+                    "first": "Abhishek",
+                    "initial": "A.",
+                    "last": "Shreevats"
+                },
+                {
+                    "first": "Manaswi",
+                    "initial": "M.",
+                    "last": "Gupta"
+                }
+            ],
+            "doi": "10.1145/1871985.1871993",
+            "firstpage": "37",
+            "lastpage": "44",
+            "pub_year": 2010,
+            "title": "Classifying latent user attributes in Twitter"
+        },
+        "b24": null,
+        "b25": null,
+        "b26": null,
+        "b27": null,
+        "b28": {
+            "authors": [
+                {
+                    "first": "Dong",
+                    "initial": "D.",
+                    "last": "Nguyen"
+                },
+                {
+                    "first": "Dolf",
+                    "initial": "D.",
+                    "last": "Trieschnigg"
+                },
+                {
+                    "first": "A. Seza",
+                    "initial": "A.S.",
+                    "last": "D\u01d2gr\u00fcoz"
+                },
+                {
+                    "first": "Rilana",
+                    "initial": "R.",
+                    "last": "Gravel"
+                },
+                {
+                    "first": "Mar\u00efet",
+                    "initial": "M.",
+                    "last": "Theune"
+                },
+                {
+                    "first": "Theo",
+                    "initial": "T.",
+                    "last": "Meder"
+                },
+                {
+                    "first": "Franciska",
+                    "initial": "F.",
+                    "last": "De Jong"
+                }
+            ],
+            "firstpage": "1950",
+            "lastpage": "1961",
+            "pub_year": 2014,
+            "title": "Why gender and age prediction from tweets is hard: Lessons from a crowdsourcing experiment"
+        },
+        "b29": {
+            "authors": [
+                {
+                    "first": "H. Andrew",
+                    "initial": "H.A.",
+                    "last": "Schwartz"
+                },
+                {
+                    "first": "Johannes C.",
+                    "initial": "J.C.",
+                    "last": "Eichstaedt"
+                },
+                {
+                    "first": "Margaret L.",
+                    "initial": "M.L.",
+                    "last": "Kern"
+                },
+                {
+                    "first": "Lukasz",
+                    "initial": "L.",
+                    "last": "Dziurzynski"
+                },
+                {
+                    "first": "Stephanie M.",
+                    "initial": "S.M.",
+                    "last": "Ramones"
+                },
+                {
+                    "first": "Megha",
+                    "initial": "M.",
+                    "last": "Agrawal"
+                },
+                {
+                    "first": "Achal",
+                    "initial": "A.",
+                    "last": "Shah"
+                },
+                {
+                    "first": "Michal",
+                    "initial": "M.",
+                    "last": "Kosinski"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Stillwell"
+                },
+                {
+                    "first": "Martin E.P.",
+                    "initial": "M.E.P.",
+                    "last": "Seligman"
+                },
+                {
+                    "first": "Lyle H.",
+                    "initial": "L.H.",
+                    "last": "Ungar"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0073791",
+            "issn": "19326203",
+            "pmid": "24086296",
+            "pub_year": 2013,
+            "title": "Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach",
+            "volume": "8"
+        },
+        "b3": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Zaidi"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Oussalah"
+                }
+            ],
+            "doi": "10.1109/IRI.2018.00037",
+            "firstpage": "201",
+            "lastpage": "208",
+            "pub_year": 2018,
+            "title": "Forecasting weekly crude oil using twitter sentiment of U.S. foreign policy and oil companies data"
+        },
+        "b30": {
+            "authors": [
+                {
+                    "first": "Antonio A.",
+                    "initial": "A.A.",
+                    "last": "Morgan-Lopez"
+                },
+                {
+                    "first": "Annice E.",
+                    "initial": "A.E.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Robert F.",
+                    "initial": "R.F.",
+                    "last": "Chew"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Ruddle"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0183537",
+            "issn": "19326203",
+            "pmid": "28850620",
+            "pub_year": 2017,
+            "title": "Predicting age groups of Twitter users based on language and metadata features",
+            "volume": "12"
+        },
+        "b31": {
+            "authors": [
+                {
+                    "first": "Faiyaz",
+                    "initial": "F.",
+                    "last": "Al Zamal"
+                },
+                {
+                    "first": "Wendy",
+                    "initial": "W.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Derek",
+                    "initial": "D.",
+                    "last": "Ruths"
+                }
+            ],
+            "firstpage": "387",
+            "lastpage": "390",
+            "pub_year": 2012,
+            "title": "Homophily and latent attribute inference: Inferring latent attributes of Twitter users from neighbors"
+        },
+        "b32": {
+            "authors": [
+                {
+                    "first": "Svitlana",
+                    "initial": "S.",
+                    "last": "Volkova"
+                },
+                {
+                    "first": "Yoram",
+                    "initial": "Y.",
+                    "last": "Bachrach"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Armstrong"
+                },
+                {
+                    "first": "Vijay",
+                    "initial": "V.",
+                    "last": "Sharma"
+                }
+            ],
+            "firstpage": "4296",
+            "lastpage": "4297",
+            "pub_year": 2015,
+            "title": "Inferring latent user properties from texts published in social media",
+            "volume": "6"
+        },
+        "b33": {
+            "authors": [
+                {
+                    "first": "Elisafina",
+                    "initial": "E.",
+                    "last": "Siswanto"
+                },
+                {
+                    "first": "Masayu Leylia",
+                    "initial": "M.L.",
+                    "last": "Khodra"
+                }
+            ],
+            "doi": "10.1109/ICITEED.2013.6676234",
+            "firstpage": "176",
+            "lastpage": "180",
+            "pub_year": 2013,
+            "title": "Predicting latent attributes of Twitter user by employing lexical features"
+        },
+        "b34": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Jurgens"
+                },
+                {
+                    "first": "Yulia",
+                    "initial": "Y.",
+                    "last": "Tsvetkov"
+                },
+                {
+                    "first": "Dan",
+                    "initial": "D.",
+                    "last": "Jurafsky"
+                }
+            ],
+            "doi": "10.1007/978-3-319-67256-4_43",
+            "firstpage": "537",
+            "issn": "03029743",
+            "lastpage": "558",
+            "pub_year": 2017,
+            "title": "Writer profiling without the writer\u2019s text",
+            "volume": "10540"
+        },
+        "b35": {
+            "authors": [
+                {
+                    "first": "Claudia",
+                    "initial": "C.",
+                    "last": "Peersman"
+                },
+                {
+                    "first": "Walter",
+                    "initial": "W.",
+                    "last": "Daelemans"
+                },
+                {
+                    "first": "Leona",
+                    "initial": "L.",
+                    "last": "Van Vaerenbergh"
+                }
+            ],
+            "doi": "10.1145/2065023.2065035",
+            "firstpage": "37",
+            "lastpage": "44",
+            "pub_year": 2011,
+            "title": "Predicting age and gender in online social networks"
+        },
+        "b36": {
+            "authors": [
+                {
+                    "first": "Jenny",
+                    "initial": "J.",
+                    "last": "Tam"
+                },
+                {
+                    "first": "Craig H.",
+                    "initial": "C.H.",
+                    "last": "Martell"
+                }
+            ],
+            "doi": "10.1109/ICSC.2009.37",
+            "firstpage": "33",
+            "lastpage": "39",
+            "pub_year": 2009,
+            "title": "Age detection in chat"
+        },
+        "b37": null,
+        "b38": {
+            "authors": [
+                {
+                    "first": "Baotian",
+                    "initial": "B.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Zhengdong",
+                    "initial": "Z.",
+                    "last": "Lu"
+                },
+                {
+                    "first": "Hang",
+                    "initial": "H.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Qingcai",
+                    "initial": "Q.",
+                    "last": "Chen"
+                }
+            ],
+            "firstpage": "2042",
+            "issn": "10495258",
+            "lastpage": "2050",
+            "pub_year": 2014,
+            "title": "Convolutional neural network architectures for matching natural language sentences",
+            "volume": "3"
+        },
+        "b39": {
+            "authors": [
+                {
+                    "first": "Yoav",
+                    "initial": "Y.",
+                    "last": "Goldberg"
+                }
+            ],
+            "firstpage": "345",
+            "issn": "10769757",
+            "lastpage": "420",
+            "pub_year": 2016,
+            "title": "A primer on neural network models for natural language processing",
+            "volume": "57"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "Sitaram",
+                    "initial": "S.",
+                    "last": "Asur"
+                },
+                {
+                    "first": "Bernardo A.",
+                    "initial": "B.A.",
+                    "last": "Huberman"
+                }
+            ],
+            "doi": "10.1109/WI-IAT.2010.63",
+            "firstpage": "492",
+            "lastpage": "499",
+            "pub_year": 2010,
+            "title": "Predicting the future with social media",
+            "volume": "1"
+        },
+        "b40": null,
+        "b41": null,
+        "b42": {
+            "authors": [
+                {
+                    "first": "Yoshua",
+                    "initial": "Y.",
+                    "last": "Bengio"
+                },
+                {
+                    "first": "R\u00e9jean",
+                    "initial": "R.",
+                    "last": "Ducharme"
+                },
+                {
+                    "first": "Pascal",
+                    "initial": "P.",
+                    "last": "Vincent"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Jauvin"
+                }
+            ],
+            "doi": "10.1162/153244303322533223",
+            "firstpage": "1137",
+            "issn": "15324435",
+            "lastpage": "1155",
+            "pub_year": 2003,
+            "title": "A Neural Probabilistic Language Model",
+            "volume": "3"
+        },
+        "b43": {
+            "authors": [
+                {
+                    "first": "Ronan",
+                    "initial": "R.",
+                    "last": "Collobert"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Weston"
+                },
+                {
+                    "first": "L\u00e9on",
+                    "initial": "L.",
+                    "last": "Bottou"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Karlen"
+                },
+                {
+                    "first": "Koray",
+                    "initial": "K.",
+                    "last": "Kavukcuoglu"
+                },
+                {
+                    "first": "Pavel",
+                    "initial": "P.",
+                    "last": "Kuksa"
+                }
+            ],
+            "firstpage": "2493",
+            "issn": "15324435",
+            "lastpage": "2537",
+            "pub_year": 2011,
+            "title": "Natural language processing (almost) from scratch",
+            "volume": "12"
+        },
+        "b44": {
+            "authors": [
+                {
+                    "first": "Tomas",
+                    "initial": "T.",
+                    "last": "Mikolov"
+                },
+                {
+                    "first": "Ilya",
+                    "initial": "I.",
+                    "last": "Sutskever"
+                },
+                {
+                    "first": "Kai",
+                    "initial": "K.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Greg",
+                    "initial": "G.",
+                    "last": "Corrado"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Dean"
+                }
+            ],
+            "issn": "10495258",
+            "pub_year": 2013,
+            "title": "Distributed representations ofwords and phrases and their compositionality"
+        },
+        "b45": null,
+        "b46": {
+            "authors": [
+                {
+                    "first": "Luke",
+                    "initial": "L.",
+                    "last": "Sloan"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Morgan"
+                },
+                {
+                    "first": "Pete",
+                    "initial": "P.",
+                    "last": "Burnap"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Williams"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0115545",
+            "issn": "19326203",
+            "pmid": "25729900",
+            "pub_year": 2015,
+            "title": "Who tweets? deriving the demographic characteristics of age, occupation and social class from twitter user meta-data",
+            "volume": "10"
+        },
+        "b47": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Burnap"
+                },
+                {
+                    "first": "Omer",
+                    "initial": "O.",
+                    "last": "Rana"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Williams"
+                },
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Housley"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Morgan"
+                },
+                {
+                    "first": "Luke",
+                    "initial": "L.",
+                    "last": "Sloan"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Conejero"
+                }
+            ],
+            "doi": "10.1080/17445760.2014.902057",
+            "firstpage": "80",
+            "issn": "17445760",
+            "lastpage": "100",
+            "pub_year": 2015,
+            "title": "COSMOS: Towards an integrated and scalable service for analysing social media on demand",
+            "volume": "30"
+        },
+        "b48": null,
+        "b49": {
+            "authors": [
+                {
+                    "first": "John D.",
+                    "initial": "J.D.",
+                    "last": "Burger"
+                },
+                {
+                    "first": "John C.",
+                    "initial": "J.C.",
+                    "last": "Henderson"
+                }
+            ],
+            "firstpage": "15",
+            "lastpage": "20",
+            "pub_year": 2006,
+            "title": "An exploration of observable features related to blogger age",
+            "volume": "SS-06-03"
+        },
+        "b5": null,
+        "b50": null,
+        "b51": {
+            "authors": [
+                {
+                    "first": "James W.",
+                    "initial": "J.W.",
+                    "last": "Pennebaker"
+                },
+                {
+                    "first": "Lori D.",
+                    "initial": "L.D.",
+                    "last": "Stone"
+                }
+            ],
+            "doi": "10.1037/0022-3514.85.2.291",
+            "firstpage": "291",
+            "issn": "00223514",
+            "lastpage": "301",
+            "pmid": "12916571",
+            "pub_year": 2003,
+            "title": "Words of Wisdom: Language Use Over the Life Span",
+            "volume": "85"
+        },
+        "b52": {
+            "authors": [
+                {
+                    "first": "Ulrike",
+                    "initial": "U.",
+                    "last": "Pfeil"
+                },
+                {
+                    "first": "Raj",
+                    "initial": "R.",
+                    "last": "Arjan"
+                },
+                {
+                    "first": "Panayiotis",
+                    "initial": "P.",
+                    "last": "Zaphiris"
+                }
+            ],
+            "doi": "10.1016/j.chb.2008.08.015",
+            "firstpage": "643",
+            "issn": "07475632",
+            "lastpage": "654",
+            "pub_year": 2009,
+            "title": "Age differences in online social networking - A study of user profiles and the social capital divide among teenagers and older users in MySpace",
+            "volume": "25"
+        },
+        "b56": {
+            "authors": [
+                {
+                    "first": "Mayur",
+                    "initial": "M.",
+                    "last": "Rustagi"
+                },
+                {
+                    "first": "R. Rajendra",
+                    "initial": "R.R.",
+                    "last": "Prasath"
+                },
+                {
+                    "first": "Sumit",
+                    "initial": "S.",
+                    "last": "Goswami"
+                },
+                {
+                    "first": "Sudeshna",
+                    "initial": "S.",
+                    "last": "Sarkar"
+                }
+            ],
+            "doi": "10.1007/978-3-642-11164-8_33",
+            "firstpage": "205",
+            "issn": "03029743",
+            "lastpage": "212",
+            "pub_year": 2009,
+            "title": "Learning age and gender of blogger from stylistic variation",
+            "volume": "5909"
+        },
+        "b6": null,
+        "b67": null,
+        "b68": null,
+        "b69": {
+            "authors": [
+                {
+                    "first": "Yu",
+                    "initial": "Y.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Lin",
+                    "initial": "L.",
+                    "last": "Zhu"
+                },
+                {
+                    "first": "Guan",
+                    "initial": "G.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Fang",
+                    "initial": "F.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1155/2017/9240407",
+            "issn": "20900147",
+            "pub_year": 2017,
+            "title": "Multi-Input Convolutional Neural Network for Flower Grading",
+            "volume": "2017"
+        },
+        "b7": null,
+        "b70": {
+            "authors": [
+                {
+                    "first": "Nitish",
+                    "initial": "N.",
+                    "last": "Srivastava"
+                },
+                {
+                    "first": "Geoffrey",
+                    "initial": "G.",
+                    "last": "Hinton"
+                },
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Krizhevsky"
+                },
+                {
+                    "first": "Ilya",
+                    "initial": "I.",
+                    "last": "Sutskever"
+                },
+                {
+                    "first": "Ruslan",
+                    "initial": "R.",
+                    "last": "Salakhutdinov"
+                }
+            ],
+            "firstpage": "1929",
+            "issn": "15324435",
+            "lastpage": "1958",
+            "pub_year": 2014,
+            "title": "Dropout: A simple way to prevent neural networks from overfitting",
+            "volume": "15"
+        },
+        "b71": null,
+        "b72": {
+            "authors": [
+                {
+                    "first": "Katherine",
+                    "initial": "K.",
+                    "last": "Strater"
+                },
+                {
+                    "first": "Heather Richter",
+                    "initial": "H.R.",
+                    "last": "Lipford"
+                }
+            ],
+            "firstpage": "111",
+            "lastpage": "119",
+            "pub_year": 2008,
+            "title": "Strategies and struggles with privacy in an online social networking community",
+            "volume": "1"
+        },
+        "b73": null,
+        "b74": {
+            "authors": [
+                {
+                    "first": "Tehila",
+                    "initial": "T.",
+                    "last": "Minkus"
+                },
+                {
+                    "first": "Kelvin",
+                    "initial": "K.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Keith W.",
+                    "initial": "K.W.",
+                    "last": "Ross"
+                }
+            ],
+            "doi": "10.1145/2736277.2741124",
+            "firstpage": "776",
+            "lastpage": "786",
+            "pub_year": 2015,
+            "title": "Children seen but not heard: When parents compromise children's online privacy"
+        },
+        "b8": {
+            "authors": [
+                {
+                    "first": "Jin",
+                    "initial": "J.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Lingjing",
+                    "initial": "L.",
+                    "last": "Zhan"
+                }
+            ],
+            "issn": "00218499",
+            "pub_year": 2011,
+            "title": "Online persuasion: How the written word drives WOM -evidence from consumer- generated product reviews",
+            "volume": "51"
+        },
+        "b9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 58339,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "According to these authors, hashtags are, similarly to links, connected to the sharing of information and older tweeters apparently are more concerned with information sharing than younger users.",
+            "startOffset": 58144,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57888,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "showed that the use of links and images in their blog data varies across all ages.",
+            "startOffset": 57806,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57420,
+            "parents": [],
+            "refoffsets": {
+                "b49": {
+                    "endOffset": 57141,
+                    "startOffset": 57137
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Authors in [49] have studied blog posts and showed that there is no trend in image sharing, but there is a gentle increase in usage of URLs in posts with respect to age: apart from an inexplicable peak at the age of 24, link sharing increases with age with users older than 35 posting the most.",
+            "startOffset": 57126,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 59734,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Accuracy results on blogs are typically higher than Twitter because of more data available per user.",
+            "startOffset": 59634,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 95340,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We show that using distributed representations incorporated into convolutional neural network improve the accuracy over the baseline bag-of-words model.",
+            "startOffset": 95188,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 89078,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Sentiment scores were evaluated for each tweet and while the average of sentiment score across all 200 recent tweets of a user may give insight into the personality of that user, does not characterize the behavior of his/her group.",
+            "startOffset": 88847,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 52745,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The rest of the paper is organized as follows.",
+            "startOffset": 52699,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64217,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Table 4 shows the distribution of numbers of hashtags, URLs, and media in the tweets for each dataset in different age categories.",
+            "startOffset": 64087,
+            "title": "Data"
+        },
+        {
+            "endOffset": 95187,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this paper, we proposed a novel way to include features derived from hashtags and URLs from tweets for age prediction of Twitter users.",
+            "startOffset": 95049,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 90899,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "From Tables 9\u201311 it is observed that older age groups across all three datasets yield lower accuracy.",
+            "startOffset": 90798,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 91069,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "On the other hand, better performance results are noticed for the 0\u201320 age group (Dutch dataset), 18\u201340 age group (English 1 data), and 18\u201324 age group (English 2 data).",
+            "startOffset": 90900,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 45113,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This suggests that the assumption of text-based age prediction is tenable, although no universally accepted solution emerged.",
+            "startOffset": 44988,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60387,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "These approaches utilize Twitter metadata attributes such as friends/followers ratio, profile image, background color, etc. along with tweet content.",
+            "startOffset": 60238,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58930,
+            "parents": [],
+            "refoffsets": {
+                "b49": {
+                    "endOffset": 58690,
+                    "startOffset": 58686
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For example, [49] have researched the behavior of two groups on Instagram: First, they found that the adult group (25\u201339) displays a wider range of interests in topics and are very diverse: arts/photos/design, locations, mood/emotion, nature, social/people.",
+            "startOffset": 58673,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 65507,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These features were used in conjunction with a supervised machine learning framework to create a model for age detection.",
+            "startOffset": 65386,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 75219,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b37": {
+                    "endOffset": 75094,
+                    "startOffset": 75087
+                },
+                "b69": {
+                    "endOffset": 75094,
+                    "startOffset": 75087
+                }
+            },
+            "secId": "sec3.4",
+            "sentence": "Inspired by [37,69], Fig. 2 illustrates our model based on convolutional neural network (CNN) for predicting the age category of a Twitter user.",
+            "startOffset": 75075,
+            "title": "Convolutional neural network model"
+        },
+        {
+            "endOffset": 48254,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Second, the issue of optimal configuration of generic estimation architecture remains widely open, which motivates further work on this matter.",
+            "startOffset": 48111,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47552,
+            "parents": [],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 47335,
+                    "startOffset": 47328
+                },
+                "b25": {
+                    "endOffset": 47335,
+                    "startOffset": 47328
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Moreover, computational linguistics competitions PAN 2013 and PAN 2014 of author profiling task [24,25] have seen a growing interest in the research community, where the participating teams have proposed various methodologies that vary widely in terms of pre-processing, choice of feature set and classification methods.",
+            "startOffset": 47232,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92766,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Utilizing linguistic, stylometric, and Twitter-specific features along with 1- to \u22123-grams from tweet texts improve the precision and recall over the basic BoW model.",
+            "startOffset": 92600,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 75259,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Our model is innovative in two aspects:",
+            "startOffset": 75220,
+            "title": "Convolutional neural network model"
+        },
+        {
+            "endOffset": 46977,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "constructed a predictive lexica from a dataset of Facebook users who agreed to share their status updates and reported their age and gender.",
+            "startOffset": 46837,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47714,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Especially, in PAN 2014, the age prediction task was defined as a challenging multi-class prediction problem with five classes (18\u201324, 25\u201334, 35\u201349, 50\u201364, 65+).",
+            "startOffset": 47553,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61575,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In total, over 3000 Twitter users were annotated.",
+            "startOffset": 61526,
+            "title": "Data"
+        },
+        {
+            "endOffset": 64433,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "More than half of the total tweets from these age categories have at least one hashtag in them.",
+            "startOffset": 64338,
+            "title": "Data"
+        },
+        {
+            "endOffset": 46513,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 46289,
+                    "startOffset": 46285
+                },
+                "b20": {
+                    "endOffset": 46298,
+                    "startOffset": 46294
+                }
+            },
+            "secId": "sec1",
+            "sentence": "used [18] and [20] pre-processing techniques in order to identify types of creative lexical transformations resulting in OOV tokens in Twitter messages, which are then employed to differentiate between users\u2019 biographical attributes.",
+            "startOffset": 46280,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65870,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "However, we show that our novel features engineered from hashtags and URLs, and feature transformation to distributed representations of words and phrases incorporated in our CNN-based model produce better results on age prediction than the state-of-the-art.",
+            "startOffset": 65612,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 93344,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Despite such pre-created lexica having potential to improve the accuracy for age prediction, we observe that because such lexica were trained on Facebook and our data is from Twitter, they fail to achieve higher accuracy as expected (since there is a difference in discourse styles of Facebook and Twitter).",
+            "startOffset": 93037,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56098,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Possibly due to difficulty in processing the network information in real time, unreliability of profile information together with advances in linguistics that distinguish language use of childhood, adolescence and adulthood, the quasi-majority of reported works employ linguistic features.",
+            "startOffset": 55809,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64515,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Similarly, almost one third of these users cite at least one URL in their tweets.",
+            "startOffset": 64434,
+            "title": "Data"
+        },
+        {
+            "endOffset": 65161,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We identified two broad categories of features, namely, language features, and Twitter-specific features to detect age.",
+            "startOffset": 65042,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 68195,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Our approach to include the URL content and hashtag as novel features makes use of innovative deep learning approach that genuinely combines word embedding and convolution neural network architecture in order to extract useful patterns.",
+            "startOffset": 67959,
+            "title": "Method to extract features from tweet text, hashtags, and URLs"
+        },
+        {
+            "endOffset": 92268,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Based on the hypothesis that a person\u2019s age is correlated with the topics he is interested in, we expect to see improvement in the accuracy.",
+            "startOffset": 92128,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 90310,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "It is observed that all approaches yield higher performance on English1 dataset which can be attributed to its much smaller size (almost half) compared to the other two datasets.",
+            "startOffset": 90132,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 63848,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "For each user, we collected his/her recent 200 tweets.",
+            "startOffset": 63794,
+            "title": "Data"
+        },
+        {
+            "endOffset": 47096,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Age prediction has been widely considered as a classification problem where machine learning techniques were employed.",
+            "startOffset": 46978,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88846,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Distribution of number of tweets with positive, negative, and neutral sentiment is almost similar across all age groups (ref. Table 4.",
+            "startOffset": 88712,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65611,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Previous research has explored SVM, Random Forest, and Logistic Regression methods with these features.",
+            "startOffset": 65508,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 52698,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "While our approach is easily extendable to include other demographic variables such as gender, ethnicity, etc., it is also adaptable to solve other related problems in social media mining ranging from online mental health surveillance, to social spammer detection, and to assist recommendation systems to find similar users on the social media.",
+            "startOffset": 52354,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52906,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 depicts our approach to extract features for age prediction of Twitter users and describes our CNN-based model.",
+            "startOffset": 52785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84807,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "In order to evaluate the performance of novel 2-channel CNN model with the new features proposed on the above datasets, we compare the results with those obtained from (a)Support Vector Machines (SVM) classifier (with linear kernel), (b) Logistic regression, and (c) Random forest, using various combinations of features.",
+            "startOffset": 84486,
+            "title": "Classification results"
+        },
+        {
+            "endOffset": 42550,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 42329,
+                    "startOffset": 42326
+                },
+                "b3": {
+                    "endOffset": 42355,
+                    "startOffset": 42352
+                },
+                "b4": {
+                    "endOffset": 42448,
+                    "startOffset": 42445
+                },
+                "b5": {
+                    "endOffset": 42403,
+                    "startOffset": 42400
+                },
+                "b6": {
+                    "endOffset": 42496,
+                    "startOffset": 42493
+                },
+                "b7": {
+                    "endOffset": 42535,
+                    "startOffset": 42532
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For instance, social media has been employed in stock market prediction [2], Oil price prediction [3], health monitoring [4], disaster management [5], forecast box-office revenues for movies [4], inferring national mood throughout the day [6], measuring behavioral risk factors [7], among others.",
+            "startOffset": 42254,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49415,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 49328,
+                    "startOffset": 49324
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For instance, the application of the comprehensive WWBP linguistic database [29], which is developed using Facebook dataset, to Twitter has shown to be unsatisfactory.",
+            "startOffset": 49248,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60926,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It is evident from the literature review tables (ref. Tables 1 and 2) that, while the previous research has exploited rich set of features such as linguistic, stylometric, and social network features, attention to the following predictors of age attribute is missing: (a) the content of hashtags and URLs embedded in posts (especially, on Twitter), and (b) the use of richer semantic models (such as word embeddings) instead of BoW representation.",
+            "startOffset": 60479,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62197,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "where X can be a (typically) two-digit number or a date of the form DD/MM/YY or DD.MM.YYYY.",
+            "startOffset": 62106,
+            "title": "Data"
+        },
+        {
+            "endOffset": 63794,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 63736,
+                    "startOffset": 63729
+                },
+                "b30": {
+                    "endOffset": 63746,
+                    "startOffset": 63742
+                },
+                "b46": {
+                    "endOffset": 63736,
+                    "startOffset": 63729
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "In the rest of the paper, we refer to our re-created dataset from [27,46], and [30] as Dutch, English1, and English2, respectively.",
+            "startOffset": 63663,
+            "title": "Data"
+        },
+        {
+            "endOffset": 89619,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "This shows that the underlying assumption of multivariate Gaussian distribution of lexical features is not accurate for tweets and regression model trained on reduced feature set fails to achieve the desired fine-grained age prediction.",
+            "startOffset": 89383,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 95842,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Present-day social media platforms facilitate effective social communication by offering several meta-data features that users may avail to make their messages more meaningful.",
+            "startOffset": 95666,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 89932,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Tables 9\u201311, show experiments with SVM, Logistic Regression, Random Forest, and our model.",
+            "startOffset": 89842,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 93036,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 92981,
+                    "startOffset": 92977
+                },
+                "b29": {
+                    "endOffset": 92995,
+                    "startOffset": 92991
+                }
+            },
+            "secId": "sec4.5",
+            "sentence": "Finally, exploiting predictive lexica which are pre-trained for age, such as EMNLP2014 [22] and WWBP [29] help in improving the accuracy slightly.",
+            "startOffset": 92890,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 96907,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Our approach to discard re-tweets but to preserve the reply-to messages helps capturing the linguistic signature of an individual.",
+            "startOffset": 96777,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 96524,
+            "parents": [],
+            "refoffsets": {
+                "b72": {
+                    "endOffset": 96523,
+                    "startOffset": 96519
+                }
+            },
+            "secId": "sec5",
+            "sentence": "Research has shown that since public messaging in social media may reveal significant information about a person, some users modulate their communication strategies to preserve privacy [72].",
+            "startOffset": 96334,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 57805,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 57805,
+                    "startOffset": 57801
+                }
+            },
+            "secId": "sec2",
+            "sentence": "They associated this finding with information sharing and impression management. [12]",
+            "startOffset": 57720,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 60479,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "However, only count values of hashtags and URLs were included ignoring the content thereof.",
+            "startOffset": 60388,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 42723,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "On the other hand, the open access of many of social media platforms has made it possible for people of every age to become author and reader without any formal restriction.",
+            "startOffset": 42550,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59633,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "It is evident from Table 1 that all approaches in the previous research considered bag-of-words (BoW) representation for features.",
+            "startOffset": 59503,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61208,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "A major problem for the age prediction task in Twitter is the limited availability of validated data annotated with the age of users.",
+            "startOffset": 61075,
+            "title": "Data"
+        },
+        {
+            "endOffset": 90659,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Further, there are differences in the method of data collection: English1 dataset relied on self-declared age value in profile descriptions which was manually verified, while English2 dataset was created by applying pattern-matching rules on congratulatory tweets, and Dutch dataset creation relied on external sources such as Facebook or LinkedIn.",
+            "startOffset": 90311,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 42937,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This created an ideal environment for online predators to gain access to sensible user related information, which render internet activities of many vulnerable communities (e.g., kids, teenagers, females) at risk.",
+            "startOffset": 42724,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84925,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "We also use the additional language and social media specific features that have been utilized in the previous works.",
+            "startOffset": 84808,
+            "title": "Classification results"
+        },
+        {
+            "endOffset": 97015,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Further, we capture interest profile of an individual as manifested by hashtags and URLs in his/her tweets.",
+            "startOffset": 96908,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 58143,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 57918,
+                    "startOffset": 57914
+                }
+            },
+            "secId": "sec2",
+            "sentence": "In the case of hashtags, [27] found that hashtags are used more often by older Twitter users: low usage in teens, a steep climb in the 20s, the highest and continuous use through the years up until the oldest participants category (over 60 years of age).",
+            "startOffset": 57889,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 60044,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 59926,
+                    "startOffset": 59922
+                }
+            },
+            "secId": "sec2",
+            "sentence": "For Twitter users, [27] report micro-averaged F1 score for three age categories classification of 86.32% on their own dataset of 2,494 users.",
+            "startOffset": 59903,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64337,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "It is evident from the table that people in the age categories of 20+ and 40+ frequently cite hashtags in their tweets.",
+            "startOffset": 64218,
+            "title": "Data"
+        },
+        {
+            "endOffset": 47924,
+            "parents": [],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 47923,
+                    "startOffset": 47919
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Notable observations of these works include the relative lack of predictive utility of n-gram based models, as well as the high level of accuracy achieved by a group using class similarity based features [26].",
+            "startOffset": 47715,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95666,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 95608,
+                    "startOffset": 95604
+                },
+                "b30": {
+                    "endOffset": 95642,
+                    "startOffset": 95638
+                },
+                "b46": {
+                    "endOffset": 95623,
+                    "startOffset": 95619
+                }
+            },
+            "secId": "sec5",
+            "sentence": "We examined the effect of adding novel features incrementally and conclude that our model outperforms the baseline by 12.3%, 9.8% and 6.6% for Dutch [27], English1 [46], and English2 [30] datasets, respectively.",
+            "startOffset": 95455,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 46660,
+            "parents": [],
+            "refoffsets": {
+                "b21": {
+                    "endOffset": 46568,
+                    "startOffset": 46564
+                }
+            },
+            "secId": "sec1",
+            "sentence": "A multi-corpus based approach was investigated by [21] that include transcribed telephone speech corpus and posts from breast-cancer online forum.",
+            "startOffset": 46514,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92599,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Similar observation is made about including words from the URL titles (column 3).",
+            "startOffset": 92518,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 43628,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 43545,
+                    "startOffset": 43540
+                },
+                "b9": {
+                    "endOffset": 43545,
+                    "startOffset": 43540
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Besides, since the last decade, several large scale corporations, e.g., Amazon and Apple, have massively invested in human factors that comprehend consumer behaviors and predict consumer retention based on user\u2019s activity and registered profile [8,9], where age group plays key role in inferring the community membership of the user.",
+            "startOffset": 43295,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43818,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Nevertheless in the absence of supporting biographical information, as it is the case in many social media platforms, inferring age attributes from textual posts only is rather challenging.",
+            "startOffset": 43629,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85183,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "While the feature representation for SVM, Random Forest, and Logistic Regression is bag-of-ngrams, for CNN, we used distributed representations to capture semantic correlations between words in a dense semantic vector space induced by word embedding models.",
+            "startOffset": 84926,
+            "title": "Classification results"
+        },
+        {
+            "endOffset": 48110,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "First, the issue of eliciting age from author\u2019s posts is tenable from both sociological and computational linguistics perspectives.",
+            "startOffset": 47979,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91684,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "As can be seen from the experimental results utilizing baseline features (Section 4.1) from the tables (A,B, and C in Tables 9\u201311), including the most frequently co-occurring words with hashtags in the user\u2019s tweets into the bag-of-words model (column 2) actually degrades the performance of age-prediction.",
+            "startOffset": 91377,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 56925,
+            "parents": [],
+            "refoffsets": {
+                "b34": {
+                    "endOffset": 56925,
+                    "startOffset": 56921
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Social media content, including Twitter, also exhibits medium-specific features (i.e. metadata) that show a different use wrt. age, as is the case for sharing links and/or images and tagging/hashtag use. [34]",
+            "startOffset": 56717,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50064,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This motivates the current paper which focuses on Twitter data and builds on previous work on age prediction by relying on language related features and social media metadata to classify users in age groups, considering thus age as a categorical variable.",
+            "startOffset": 49809,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44578,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the area of computational linguistics, there is an inherent interest in determining latent attributes of an author, which include his categorical age, where a variety of published work has been focused on linguistic analysis for author age in on- and offline texts, much of which corresponds to lexical and contextual clues, such as analyzing topic and genre or n-gram patterns.",
+            "startOffset": 44197,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42253,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 42252,
+                    "startOffset": 42249
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The availability of many social media datasets (e.g., Twitter, public Facebook pages and blogs) offers golden opportunities to social scientists to study psychological and social questions at an unprecedented scale [1].",
+            "startOffset": 42034,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55808,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Input features employed for age prediction vary from linguistic cues, network (e.g., number of friends, ratio of followers to friends), and user\u2019s profile related information (e.g., background picture, text color).",
+            "startOffset": 55594,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 89382,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "While the results indicate performance improvement by including HashtagCooccurringSet and URLTitlesSet, the final results of including all features (after PCA) are far from desirable.",
+            "startOffset": 89199,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 55593,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Pre-processing of Twitter messages allows to filter out the abundant noise present in social media, and to normalize the orthographic modifications as well as translate the various slang and SMS-like vocabulary into semantically meaningful text.",
+            "startOffset": 55348,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 73098,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Our approach to include the URL content and hashtag as novel features in combination with word embeddings is summarized in Algorithms 1 and 2.",
+            "startOffset": 72956,
+            "title": "Method to extract features from tweet text, hashtags, and URLs"
+        },
+        {
+            "endOffset": 76573,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The details of the layers of the CNN architecture are as follows:",
+            "startOffset": 76508,
+            "title": "Convolutional neural network model"
+        },
+        {
+            "endOffset": 89842,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "In order to capture non-linear correlations between semantic dimensions of different words in a principled manner, we propose to use our CNN model trained with distributed representations (word embedding vectors) of words.",
+            "startOffset": 89620,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 66049,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "All proposed features are investigated (see Section 4.2) using the features analysis technique to determine the best combination of features with the highest discriminative power.",
+            "startOffset": 65870,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 62394,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, we could find 1074 of them still active.",
+            "startOffset": 62345,
+            "title": "Data"
+        },
+        {
+            "endOffset": 91829,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Hashtags are used to index keywords or topics so as to categorize tweets and to allow people to easily follow the topics they are interested in.",
+            "startOffset": 91685,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53046,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Finally, in Section 5, we present our conclusions.",
+            "startOffset": 52996,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44197,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 44196,
+                    "startOffset": 44192
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In this context, age is considered as a social and fluid variable that is shaped depending on the societal context, the culture, individual experiences and social roles [11].",
+            "startOffset": 44023,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58458,
+            "parents": [],
+            "refoffsets": {
+                "b52": {
+                    "endOffset": 58457,
+                    "startOffset": 58453
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Younger people seem to display a certain kind of online identity, something older people are less concerned with [52].",
+            "startOffset": 58340,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 65243,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b28": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b29": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b30": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b31": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b32": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b33": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                },
+                "b34": {
+                    "endOffset": 65242,
+                    "startOffset": 65235
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Many of these features have individually been explored in the literature [27\u201334].",
+            "startOffset": 65162,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 64910,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, while some users actively make use of this feature, other users do not use media in their tweets.",
+            "startOffset": 64804,
+            "title": "Data"
+        },
+        {
+            "endOffset": 65020,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "We also notice that the age-group of a user is not correlated with the number of media included in the tweet.",
+            "startOffset": 64911,
+            "title": "Data"
+        },
+        {
+            "endOffset": 55348,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the second stream of research related to software architecture for age prediction, the developed approaches vary according to type of pre-processing, input features, choice and number of age categories, supervision versus non-supervision scheme, type of supervision algorithm and validation strategy employed.",
+            "startOffset": 55036,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61525,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "They employed external annotators to annotate the chronological age using information available through tweets, the Twitter profile and external social media profiles such as Facebook and LinkedIn.",
+            "startOffset": 61328,
+            "title": "Data"
+        },
+        {
+            "endOffset": 57125,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "show that incoming communications from an individual\u2019s strong ties are more revealing of the individual\u2019s identity, but that this relationship only holds for publicly visible aspects of the identity.",
+            "startOffset": 56926,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 57719,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 57601,
+                    "startOffset": 57597
+                }
+            },
+            "secId": "sec2",
+            "sentence": "On the other hand, work in [27] demonstrated that a sharp rise in the use of links for Dutch Twitter users in their 20s, that stagnates in their 30s.",
+            "startOffset": 57570,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 56717,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 56388,
+                    "startOffset": 56384
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Authors in [29] have shown clear distinctions across four age grouping categories (ages 13\u201318, 19\u201322, 23\u201329, 30\u201365) where they highlighted: (I) the greater use of emoticons and slang among younger groups and, (II) the developmental progression of individuals at different life stages (e.g., school, college, career, marriage, children, family).",
+            "startOffset": 56373,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43294,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore, automatic identification of age groups from social media posts would offer an edge to crime prevention as well as many other activities \u2013 e.g., online tutoring, personalized advertisement, content personalization, and (intelligent) plagiarism detection to identify for instance whether the homework is performed by the student or another person.",
+            "startOffset": 42938,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46279,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 46279,
+                    "startOffset": 46275
+                }
+            },
+            "secId": "sec1",
+            "sentence": "developed pre-processing techniques to normalize orthographic modifications as well as twitter-specific elements (@-usernames and #hashtags) that translate the noisy Twitter texts into standard English and found to work well in classification problems. [19]",
+            "startOffset": 46022,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96776,
+            "parents": [],
+            "refoffsets": {
+                "b73": {
+                    "endOffset": 96700,
+                    "startOffset": 96696
+                },
+                "b74": {
+                    "endOffset": 96775,
+                    "startOffset": 96771
+                }
+            },
+            "secId": "sec5",
+            "sentence": "However, language can still reveal the identify of the users when they engage in one-to-one communication on a public forum; for example, when talking with a close friend [73], or parents\u2019 messages to/about their children violating their privacy [74].",
+            "startOffset": 96525,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 59502,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Table 1 summarizes the key results in terms of age prediction from online social media platforms (blogs, Facebook, and Twitter), highlighting the main features, approach employed and the level of accuracy obtained.",
+            "startOffset": 59288,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 44022,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 44021,
+                    "startOffset": 44017
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Sociolinguistic theory advocates a strong connection between language use and age, or more generally between discourse and identity, where users employ language patterns to construct their identity [10].",
+            "startOffset": 43819,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90131,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "We show the effectiveness of various features in each of these models.",
+            "startOffset": 90061,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59286,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "concluded that hashtags are an important feature to discriminate age since older adults above 67 use mainly hashtags related to politics and leisure in Twitter while people below 55, use mainly hashtags in the context of work related activities and technology.",
+            "startOffset": 59026,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63216,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "More information about the three datasets can be found in Table 3.",
+            "startOffset": 63150,
+            "title": "Data"
+        },
+        {
+            "endOffset": 65385,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These features are mainly derived from tweet contents (tweet text) and meta-information, such as Twitter user profile, network, and activity.",
+            "startOffset": 65244,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 96333,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Another limitation of the proposed work is in its partial reliance on the use of language to identify the age.",
+            "startOffset": 96223,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 88416,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Average number of media files per tweet of a user was not found to be discriminative for age-category classification (ref. Table 7.",
+            "startOffset": 88285,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 88711,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Similarly, we found that average sentiment score of all 200 tweets of a given user does not help in classification.",
+            "startOffset": 88596,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 95038,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Overall, using our CNN-based architecture along with novel features improves the micro-F1 score by 12.3%, 9.8% and 6.6% for Dutch, English1 and English2 datasets, respectively when compared against the best results of SVM, Random Forest, and Logistic Regression models employing bag-of-ngrams representation of baseline features.",
+            "startOffset": 94709,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 46836,
+            "parents": [],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 46836,
+                    "startOffset": 46832
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Next, a domain adaptation approach was used to train a model on these corpora and separate the global features from corpus-specific features that are associated with age. [22]",
+            "startOffset": 46661,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96222,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "While the evaluation of accuracy of our approach is limited by the amount of the labeled data available for age demographics, as a future work, we plan to utilize this approach for prediction of other demographical information such as gender, ethnicity, etc.",
+            "startOffset": 95964,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 44987,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "identified a set of writing and speech patterns, referred to as age-grading, that changes over time as a person learns a language and develops socially.",
+            "startOffset": 44835,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92127,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "In order to overcome the problem of topic drift, we only use tweets in a window of \u221210 to +10 days from the tweet containing the hashtag.",
+            "startOffset": 91990,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 49582,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Second, although, many of these studies acknowledge the importance of metadata in social media posts, they do not explicitly make use of the content of this metadata.",
+            "startOffset": 49416,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61803,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b30": {
+                    "endOffset": 61793,
+                    "startOffset": 61789
+                },
+                "b46": {
+                    "endOffset": 61802,
+                    "startOffset": 61798
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "For the English corpus, we used the datasets from [30] and [46].",
+            "startOffset": 61739,
+            "title": "Data"
+        },
+        {
+            "endOffset": 61738,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "However, not all of these Twitter profiles are currently active, leaving us with the profile information of 2150 users that we have included in our Dutch dataset.",
+            "startOffset": 61576,
+            "title": "Data"
+        },
+        {
+            "endOffset": 92889,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "This confirms the sociolinguistic hypothesis that linguistic and stylometric features serve as indicators of person\u2019s age.",
+            "startOffset": 92767,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 52353,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We employ three existing datasets from two different languages (i.e. English and Dutch) to test the validity of our novel features and classification method against the versatile classification models SVM, Logistic Regression, and Random Forest as a baseline and show that our CNN-based model outperforms the baseline significantly.",
+            "startOffset": 52021,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46021,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 46021,
+                    "startOffset": 46017
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In an attempt to tackle the above challenge, several works have investigated fine-grained specialized natural language processing tools that deal with microblog posts, construction of large scale corpora that includes a variety of noisy terms/abbreviations, and, therefore, devise a sound machine learning architectures for age categorization and prediction. [18]",
+            "startOffset": 45658,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61274,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "We use three datasets: two in English language, and one in Dutch.",
+            "startOffset": 61209,
+            "title": "Data"
+        },
+        {
+            "endOffset": 95454,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Augmenting these features with features derived from URLs and hashtags further improves the precision and recall.",
+            "startOffset": 95341,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 90060,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 90025,
+                    "startOffset": 90021
+                },
+                "b30": {
+                    "endOffset": 90059,
+                    "startOffset": 90055
+                },
+                "b46": {
+                    "endOffset": 90040,
+                    "startOffset": 90036
+                }
+            },
+            "secId": "sec4.5",
+            "sentence": "Each table shows results of these four experiments on each of the three datasets: Dutch [27], English1 [46], and English2 [30].",
+            "startOffset": 89933,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 61922,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 61825,
+                    "startOffset": 61821
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The dataset from [46] was created by applying pattern matching rules to the profile descriptions of the Twitter users.",
+            "startOffset": 61804,
+            "title": "Data"
+        },
+        {
+            "endOffset": 60237,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Table 2 presents a summary of previous work on the use of Twitter metadata for demographic attribute prediction.",
+            "startOffset": 60125,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 66125,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The proposed features are discussed in detail in the following subsections.",
+            "startOffset": 66050,
+            "title": "Feature engineering"
+        },
+        {
+            "endOffset": 52784,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 2, we discuss related work.",
+            "startOffset": 52746,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59025,
+            "parents": [],
+            "refoffsets": {
+                "b41": {
+                    "endOffset": 59025,
+                    "startOffset": 59021
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Second, the majority of the teens\u2019 (13\u201319) hashtags concern mood/emotion and follow/like. [41]",
+            "startOffset": 58931,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62064,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Through a process of iterative testing and refinement, they derived three rules for age extraction using variations of the following phrases:",
+            "startOffset": 61923,
+            "title": "Data"
+        },
+        {
+            "endOffset": 95963,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The proposed method presents a way to include information from URLs and Hashtags for analytics of social media messages.",
+            "startOffset": 95843,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64803,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Twitter allows up to 4 media files to be included in a tweet (photos, videos, or animated GIFs).",
+            "startOffset": 64707,
+            "title": "Data"
+        },
+        {
+            "endOffset": 45374,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 45292,
+                    "startOffset": 45288
+                }
+            },
+            "secId": "sec1",
+            "sentence": "argued that at least 10000 words per author is needed (in [15], an estimate of 5000 words per author) in order to infer reasonable age patterns.",
+            "startOffset": 45230,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56372,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 56209,
+                    "startOffset": 56205
+                }
+            },
+            "secId": "sec2",
+            "sentence": "In this respect, one of the most notable works was carried out as part of World Well-Being Project (WWBP) [29] where an open vocabulary analysis framework was advocated, whereby they link a series of individual words, phrases, and topics that emerge from open text context.",
+            "startOffset": 56099,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48748,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 48726,
+                    "startOffset": 48719
+                },
+                "b23": {
+                    "endOffset": 48697,
+                    "startOffset": 48690
+                },
+                "b27": {
+                    "endOffset": 48726,
+                    "startOffset": 48719
+                },
+                "b35": {
+                    "endOffset": 48697,
+                    "startOffset": 48690
+                },
+                "b36": {
+                    "endOffset": 48747,
+                    "startOffset": 48743
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Similarly, many approaches based on multi-class classification have been proposed, such as SVMs [23,35], logistic regression [12,27] and Naive Bayes [36].",
+            "startOffset": 48594,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48593,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b28": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b29": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b30": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b31": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b32": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b33": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                },
+                "b34": {
+                    "endOffset": 48276,
+                    "startOffset": 48269
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Previous work [27\u201334] has identified several features based on both language and social media specific meta-data that are relevant for the age prediction task including bag-of-words, linguistic features, stylometric features, profile features, (e.g., background color, profile image), social network, and preferences (e.g., liked tweets).",
+            "startOffset": 48255,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68254,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "A general skeleton of the approach is described in Fig. 1.",
+            "startOffset": 68196,
+            "title": "Method to extract features from tweet text, hashtags, and URLs"
+        },
+        {
+            "endOffset": 50121,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Especially, the following contributions are highlighted.",
+            "startOffset": 50065,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49247,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "First, the variety of contexts and discourses poses serious challenges to inter-operability of linguistic features from one study to another.",
+            "startOffset": 49106,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61074,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In order to classify a user into an age group we need a dataset with (a) Twitter user id\u2019s, and (b) corresponding ages.",
+            "startOffset": 60955,
+            "title": "Data"
+        },
+        {
+            "endOffset": 47978,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In summary, the preceding highlights two key findings.",
+            "startOffset": 47924,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49105,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The above studies revealed at least three key limitations and challenges.",
+            "startOffset": 49032,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58672,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Computational work on age prediction has exploited these differences in the use of URLs and hashtags across age groups, but have not considered the content associated to them, that also reflects an age related use.",
+            "startOffset": 58458,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64087,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 64086,
+                    "startOffset": 64079
+                },
+                "b67": {
+                    "endOffset": 64086,
+                    "startOffset": 64079
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Although the Twitter API allows collection of up to 3200 most recent tweets, prior studies have shown that examining more than 100 to 200 posts per user provides minimal gain in model performance when predicting user demographics [22,67].",
+            "startOffset": 63849,
+            "title": "Data"
+        },
+        {
+            "endOffset": 63662,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 63290,
+                    "startOffset": 63283
+                },
+                "b30": {
+                    "endOffset": 63300,
+                    "startOffset": 63296
+                },
+                "b46": {
+                    "endOffset": 63290,
+                    "startOffset": 63283
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Despite the availability of these three age-labeled datasets from [27,46], and [30], a direct comparison of our results with theirs on our re-created datasets is limited owing to: (a) the differences in size due to some users\u2019 data being not available because of account inactivation, privacy mode setting changes, etc., and (b) the unavailability of the actual tweets used by them since the datasets have only published Twitter user-id and age.",
+            "startOffset": 63217,
+            "title": "Data"
+        },
+        {
+            "endOffset": 47232,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 47115,
+                    "startOffset": 47111
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For instance, [23] considered age as a latent attribute of Twitter user and SVM classification were employed to estimate the age class.",
+            "startOffset": 47097,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57569,
+            "parents": [],
+            "refoffsets": {
+                "b50": {
+                    "endOffset": 57466,
+                    "startOffset": 57462
+                },
+                "b51": {
+                    "endOffset": 57472,
+                    "startOffset": 57468
+                }
+            },
+            "secId": "sec2",
+            "sentence": "This result on URLs is supported also by [50], [51], who have continued research on blogging and found that the sharing of links increases with age.",
+            "startOffset": 57421,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 68454,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "We hypothesize that such features can play a role in the age detection task from Twitter data since it includes semantic information that reflects the interests of Twitter users that change with age.",
+            "startOffset": 68255,
+            "title": "Method to extract features from tweet text, hashtags, and URLs"
+        },
+        {
+            "endOffset": 45229,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 45229,
+                    "startOffset": 45225
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Especially, it is widely debatable whether age patterns can be elicited from short social media related posts. [14]",
+            "startOffset": 45114,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49031,
+            "parents": [],
+            "refoffsets": {
+                "b28": {
+                    "endOffset": 48755,
+                    "startOffset": 48751
+                }
+            },
+            "secId": "sec1",
+            "sentence": "As [28] pointed out, the problem of age estimation is very challenging due to the inherent variability of human language together with unstructured text in tweet messages, which raises the question of finding appropriate cues that elicit categorical age and the subsequent reasoning.",
+            "startOffset": 48748,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60124,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "These results were obtained by Logistic Regression trained on unigram features.",
+            "startOffset": 60045,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 45657,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 45656,
+                    "startOffset": 45649
+                },
+                "b17": {
+                    "endOffset": 45656,
+                    "startOffset": 45649
+                }
+            },
+            "secId": "sec1",
+            "sentence": "This order of magnitude is widely unavailable in most of microblog posts, e.g., Twitter, Facebook messages where high proportion of noisy terms is expected in order to restrict the length of the message, which, in turn, challenges standard natural language processing tools [16,17].",
+            "startOffset": 45375,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68473,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "More specifically:",
+            "startOffset": 68455,
+            "title": "Method to extract features from tweet text, hashtags, and URLs"
+        },
+        {
+            "endOffset": 64706,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "With an average length of 8.5 words per tweet in our dataset, it is evident from the table that ignoring hashtags and URLs in tweets for age prediction results in important information loss.",
+            "startOffset": 64516,
+            "title": "Data"
+        },
+        {
+            "endOffset": 52995,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 4 explains our experimental setup and results compared with baseline approaches.",
+            "startOffset": 52907,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88595,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Very few users availed the feature of attaching media to their tweets and such users are from all age groups rather than being restricted to a particular age group (ref. Table 4.",
+            "startOffset": 88417,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 53169,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the context of Twitter based age estimation/prediction, one distinguishes at least two streams of research.",
+            "startOffset": 53059,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49809,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Third, the variety of estimation architecture ranging from the type of preprocessing, number and type of features employed, and machine learning or estimation algorithms testifies of the need for further research on the issue.",
+            "startOffset": 49583,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62344,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 62305,
+                    "startOffset": 62301
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Applying these three age-extraction rules to each user description field in the order presented above, [46] had collected a dataset of 1470 users.",
+            "startOffset": 62198,
+            "title": "Data"
+        },
+        {
+            "endOffset": 89198,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Encouraged by the findings of feature importance evaluation, we carried out ridge regression experiments (ref. Table 8).",
+            "startOffset": 89078,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 44834,
+            "parents": [],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 44597,
+                    "startOffset": 44593
+                },
+                "b13": {
+                    "endOffset": 44834,
+                    "startOffset": 44830
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For instance, [12] analyzed online behavior associated with blogs (which are usually more comprehensive contents than tweets) and found that behavior (number of friends, posts, time of posts, etc.) could effectively be used in binary age classifiers. [13]",
+            "startOffset": 44579,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53464,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The second emphasizes the design and implementation of the software architecture that enables age estimation from pre-processed dataset.",
+            "startOffset": 53328,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53327,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The first one, sometimes, referred to as age-annotation, deals with the construction of dataset that genuinely relates author\u2019s posts to his categorical age.",
+            "startOffset": 53170,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 42033,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the digital era, social media has become a ubiquitous part of our daily life where users constantly interact with Facebook, Twitter, Snapchat, among other social media platforms, sharing their experiences and opinions on various topics.",
+            "startOffset": 41794,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90798,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Also, the dataset creation of Dutch users may introduce a sampling bias since they select the users who are in the same social subnetwork.",
+            "startOffset": 90660,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 92517,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "However, we notice that by bringing in hashtag-relevant words for all hashtags from all 200 recent tweets introduce too much noise: while false negatives decrease resulting in improved recall, false positives increase resulting in poorer precision.",
+            "startOffset": 92269,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 91989,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "In this experiment, we attempt to capture the topics a user is interested in by finding hashtag-relevant words from other tweets that include the same hashtag.",
+            "startOffset": 91830,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 61327,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 61278,
+                    "startOffset": 61274
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "[27] sampled Dutch Twitter users in the fall of 2012.",
+            "startOffset": 61274,
+            "title": "Data"
+        },
+        {
+            "endOffset": 91377,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.5",
+            "sentence": "Clearly, our supervised machine learning approach yields better results when the amount of training data is higher: Table 3 shows that these age groups represent the largest proportions in the respective datasets; whereas for older age groups, the number of data samples is much smaller across all datasets.",
+            "startOffset": 91070,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59902,
+            "parents": [],
+            "refoffsets": {
+                "b56": {
+                    "endOffset": 59785,
+                    "startOffset": 59781
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The highest accuracy (94.13%) was reported by [56] on ICWSM 2009 blog dataset utilizing Naive Bayes model trained on content words, slang words and stylistic features.",
+            "startOffset": 59735,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 85223,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments and results"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Feature sets used in our CNN model are:",
+            "startOffset": 85184,
+            "title": "Classification results"
+        }
+    ],
+    "docId": "S0167739X19304509",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "abhinay.pandya@oulu.fi",
+                "first": "Abhinay",
+                "initial": "A.",
+                "last": "Pandya"
+            },
+            {
+                "email": "mourad.oussalah@oulu.fi",
+                "first": "Mourad",
+                "initial": "M.",
+                "last": "Oussalah"
+            },
+            {
+                "email": "p.monachesi@uu.nl",
+                "first": "Paola",
+                "initial": "P.",
+                "last": "Monachesi"
+            },
+            {
+                "email": "panos.kostakos@oulu.fi",
+                "first": "Panos",
+                "initial": "P.",
+                "last": "Kostakos"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.08.018",
+        "firstpage": "437",
+        "issn": "0167739X",
+        "keywords": [
+            "Age prediction",
+            "Convolutional neural networks",
+            "Social media mining",
+            "Twitter"
+        ],
+        "lastpage": "452",
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "On the use of distributed semantics of tweet metadata for user age prediction"
+    }
+}

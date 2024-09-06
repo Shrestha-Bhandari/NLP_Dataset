@@ -1,0 +1,2497 @@
+{
+    "abstract": "Modelling the effects of solar irradiation plays an important role in various applications. This paper describes a semi-parametric (combined grey-box and spline-based), data-driven technique that can be used to model systems in which the solar gain depends on the sun position. The solar gain factor is introduced, i.e. the absorbed fraction of measured solar irradiation, and estimated as a continuous non-parametric function of the sun position. The implementation of the spline-based solar gain factor in a grey-box model framework is described. The method is tested in two case studies\u2014in a model of the internal temperature of a dwelling in Aalborg, Denmark, and a model of the return temperature of a solar collector field in Solr\u00f8d, Denmark. It is shown that the solar gain factor as a function of sun position is able to account for structural variations in solar gain that may occur due to factors such as shading obstacles and window or absorber orientation. In both test cases, the spline-based solar gain function improved the model accuracy significantly, and largely reduced structural errors in prediction residuals. In addition, the shape of the estimated function provided insight into the dynamics of the system and the local solar input characteristics. Accurate representation of such site characteristics was not possible with any data-driven method found in the literature. Besides the grey-box models used in this study, the solar gain factor can be used in a variety of data-driven models, for example in linear regression models.",
+    "author_highlights": [
+        {
+            "endOffset": 54339,
+            "sentence": "Solar gain was estimated as a function of the azimuth angle with use of splines.",
+            "startOffset": 54259
+        },
+        {
+            "endOffset": 54416,
+            "sentence": "Grey-box models of energy systems improved when solar-gain-splines was used.",
+            "startOffset": 54340
+        },
+        {
+            "endOffset": 54490,
+            "sentence": "Case 1: window orientation captured in the estimated solar gain function.",
+            "startOffset": 54417
+        },
+        {
+            "endOffset": 54600,
+            "sentence": "Case 2: splines outperformed the state-of-the-art incident angle modifier (IAM) of the solar collector field.",
+            "startOffset": 54491
+        }
+    ],
+    "bib_entries": {
+        "b0005": null,
+        "b0010": {
+            "authors": [
+                {
+                    "first": "Peder",
+                    "initial": "P.",
+                    "last": "Bacher"
+                },
+                {
+                    "first": "Henrik",
+                    "initial": "H.",
+                    "last": "Madsen"
+                }
+            ],
+            "doi": "10.1016/j.enbuild.2011.02.005",
+            "firstpage": "1511",
+            "issn": "03787788",
+            "lastpage": "1522",
+            "pub_year": 2011,
+            "title": "Identifying suitable models for the heat dynamics of buildings",
+            "volume": "43"
+        },
+        "b0015": null,
+        "b0020": null,
+        "b0025": null,
+        "b0030": {
+            "authors": [
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Bava"
+                },
+                {
+                    "first": "Simon",
+                    "initial": "S.",
+                    "last": "Furbo"
+                }
+            ],
+            "doi": "10.1016/j.energy.2017.12.025",
+            "firstpage": "816",
+            "issn": "03605442",
+            "lastpage": "825",
+            "pub_year": 2018,
+            "title": "Impact of different improvement measures on the thermal performance of a solar collector field for district heating",
+            "volume": "144"
+        },
+        "b0035": null,
+        "b0040": null,
+        "b0045": {
+            "authors": [
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Coley"
+                },
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Penman"
+                }
+            ],
+            "doi": "10.1016/0360-1323(92)90028-N",
+            "firstpage": "269",
+            "issn": "03601323",
+            "lastpage": "277",
+            "pub_year": 1992,
+            "title": "Second order system identification in the thermal response of real buildings. Paper II: Recursive formulation for on-line building energy management and control",
+            "volume": "27"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "de Andrade"
+                },
+                {
+                    "first": "J. D.",
+                    "initial": "J.D.",
+                    "last": "\u00c1lvarez"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Pagano"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Berenguel"
+                }
+            ],
+            "doi": "10.1016/j.conengprac.2015.06.002",
+            "firstpage": "12",
+            "issn": "09670661",
+            "lastpage": "20",
+            "pub_year": 2015,
+            "title": "Nonlinear controllers for solar thermal plants: A comparative study",
+            "volume": "43"
+        },
+        "b0055": null,
+        "b0060": null,
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Fr\u00e9d\u00e9ric",
+                    "initial": "F.",
+                    "last": "Haldi"
+                },
+                {
+                    "first": "Darren",
+                    "initial": "D.",
+                    "last": "Robinson"
+                }
+            ],
+            "doi": "10.1080/19401493.2011.558213",
+            "firstpage": "323",
+            "issn": "19401493",
+            "lastpage": "338",
+            "pub_year": 2011,
+            "title": "The impact of occupants' behaviour on building energy demand",
+            "volume": "4"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Jim\u00e9nez"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Madsen"
+                }
+            ],
+            "doi": "10.1016/j.buildenv.2006.10.029",
+            "firstpage": "152",
+            "issn": "03601323",
+            "lastpage": "162",
+            "pub_year": 2008,
+            "title": "Models for describing the thermal characteristics of building components",
+            "volume": "43"
+        },
+        "b0075": {
+            "authors": [
+                {
+                    "first": "Alfred",
+                    "initial": "A.",
+                    "last": "Joensen"
+                },
+                {
+                    "first": "Henrik",
+                    "initial": "H.",
+                    "last": "Madsen"
+                },
+                {
+                    "first": "Henrik Aa",
+                    "initial": "H.A.",
+                    "last": "Nielsen"
+                },
+                {
+                    "first": "Torben S.",
+                    "initial": "T.S.",
+                    "last": "Nielsen"
+                }
+            ],
+            "doi": "10.1016/S0005-1098(00)00029-7",
+            "firstpage": "1199",
+            "issn": "00051098",
+            "lastpage": "1204",
+            "pub_year": 2000,
+            "title": "Tracking time-varying parameters with local regression",
+            "volume": "36"
+        },
+        "b0080": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Johnston"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Farmer"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Brooke-Peat"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Miles-Shenton"
+                }
+            ],
+            "doi": "10.1080/09613218.2014.979093",
+            "firstpage": "147",
+            "issn": "09613218",
+            "lastpage": "159",
+            "pub_year": 2016,
+            "title": "Bridging the domestic building fabric performance gap",
+            "volume": "44"
+        },
+        "b0085": null,
+        "b0090": {
+            "authors": [
+                {
+                    "first": "Rich\u00e1rd",
+                    "initial": "R.",
+                    "last": "Kicsiny"
+                }
+            ],
+            "doi": "10.1016/j.solener.2014.10.003",
+            "firstpage": "496",
+            "issn": "0038092X",
+            "lastpage": "506",
+            "pub_year": 2014,
+            "title": "Multiple linear regression based model for solar collectors",
+            "volume": "110"
+        },
+        "b0095": null,
+        "b0100": null,
+        "b0105": {
+            "authors": [
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Madsen"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Holst"
+                }
+            ],
+            "doi": "10.1016/0378-7788(94)00904-X",
+            "firstpage": "67",
+            "issn": "03787788",
+            "lastpage": "79",
+            "pub_year": 1995,
+            "title": "Estimation of continuous-time models for the heat dynamics of a building",
+            "volume": "22"
+        },
+        "b0110": null,
+        "b0115": {
+            "authors": [
+                {
+                    "first": "Olfa",
+                    "initial": "O.",
+                    "last": "Mejri"
+                },
+                {
+                    "first": "Elena",
+                    "initial": "E.",
+                    "last": "Palomo Del Barrio"
+                },
+                {
+                    "first": "Nadia",
+                    "initial": "N.",
+                    "last": "Ghrab-Morcos"
+                }
+            ],
+            "doi": "10.1016/j.enbuild.2010.09.010",
+            "firstpage": "285",
+            "issn": "03787788",
+            "lastpage": "299",
+            "pub_year": 2011,
+            "title": "Energy performance assessment of occupied buildings using model identification techniques",
+            "volume": "43"
+        },
+        "b0120": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Pasamontes"
+                },
+                {
+                    "first": "J. D.",
+                    "initial": "J.D.",
+                    "last": "\u00c1lvarez"
+                },
+                {
+                    "first": "J. L.",
+                    "initial": "J.L.",
+                    "last": "Guzm\u00e1n"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Berenguel"
+                },
+                {
+                    "first": "E. F.",
+                    "initial": "E.F.",
+                    "last": "Camacho"
+                }
+            ],
+            "doi": "10.1016/j.solener.2013.09.024",
+            "firstpage": "577",
+            "issn": "0038092X",
+            "lastpage": "590",
+            "pub_year": 2013,
+            "title": "Hybrid modeling of a solar-thermal heating facility",
+            "volume": "97"
+        },
+        "b0125": {
+            "authors": [
+                {
+                    "first": "Bengt",
+                    "initial": "B.",
+                    "last": "Perers"
+                }
+            ],
+            "doi": "10.1016/S0038-092X(97)00147-3",
+            "firstpage": "163",
+            "issn": "0038092X",
+            "lastpage": "178",
+            "pub_year": 1997,
+            "title": "An improved dynamic solar collector test method for determination of non-linear optical and thermal characteristics with multiple regression",
+            "volume": "59"
+        },
+        "b0130": null,
+        "b0135": null,
+        "b0140": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Rabl"
+                }
+            ],
+            "doi": "10.1115/1.3268237",
+            "firstpage": "52",
+            "issn": "01996231",
+            "lastpage": "66",
+            "pub_year": 1988,
+            "title": "Parameter estimation in buildings: Methods for dynamic analysis of measured energy use",
+            "volume": "110"
+        },
+        "b0145": {
+            "authors": [
+                {
+                    "first": "Staf",
+                    "initial": "S.",
+                    "last": "Roels"
+                },
+                {
+                    "first": "Peder",
+                    "initial": "P.",
+                    "last": "Bacher"
+                },
+                {
+                    "first": "Geert",
+                    "initial": "G.",
+                    "last": "Bauwens"
+                },
+                {
+                    "first": "Sergio",
+                    "initial": "S.",
+                    "last": "Casta\u00f1o"
+                },
+                {
+                    "first": "Maria Jos\u00e9",
+                    "initial": "M.J.",
+                    "last": "Jim\u00e9nez"
+                },
+                {
+                    "first": "Henrik",
+                    "initial": "H.",
+                    "last": "Madsen"
+                }
+            ],
+            "doi": "10.1016/j.enbuild.2017.08.006",
+            "firstpage": "179",
+            "issn": "03787788",
+            "lastpage": "189",
+            "pub_year": 2017,
+            "title": "On site characterisation of the overall heat loss coefficient: Comparison of different assessment methods by a blind validation exercise on a round robin test box",
+            "volume": "153"
+        },
+        "b0150": {
+            "authors": [
+                {
+                    "first": "J. A.",
+                    "initial": "J.A.",
+                    "last": "Ruiz-Arias"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Alsamamra"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Tovar-Pescador"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Pozo-V\u00e1zquez"
+                }
+            ],
+            "doi": "10.1016/j.enconman.2009.11.024",
+            "firstpage": "881",
+            "issn": "01968904",
+            "lastpage": "893",
+            "pub_year": 2010,
+            "title": "Proposal of a regressive model for the hourly diffuse solar radiation under all sky conditions",
+            "volume": "51"
+        },
+        "b0155": null,
+        "b0160": null,
+        "b0165": {
+            "authors": [
+                {
+                    "first": "Robert H.",
+                    "initial": "R.H.",
+                    "last": "Socolow"
+                }
+            ],
+            "doi": "10.1016/0378-7788(78)90003-8",
+            "firstpage": "207",
+            "issn": "03787788",
+            "lastpage": "242",
+            "pub_year": 1978,
+            "title": "The twin rivers program on energy conservation in housing: Highlights and conclusions",
+            "volume": "1"
+        },
+        "b0170": null,
+        "b0175": null
+    },
+    "body_text": [
+        {
+            "endOffset": 66660,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "A key benefit of this non-parametric modelling technique is that no model structure needs to be specified.",
+            "startOffset": 66554,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 93791,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "This can be solved in several ways.",
+            "startOffset": 93756,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59151,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Similarly, for solar collector fields, forecasting models need to describe solar irradiation effects accurately to improve heat output forecasts and system control.",
+            "startOffset": 58987,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69739,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The construction of the cardinal B-spline basis will be discussed in Section 2.1.1, and in Section 2.1.2 a more general construction of B-splines is shown.",
+            "startOffset": 69584,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 93912,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "First, an additional spline curve can be introduced to account for the sun elevation variation of the solar gain factor.",
+            "startOffset": 93792,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 95047,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "These concerns are mostly relevant for climates or measurement periods with low daily variation in solar irradiation, i.e. climates and periods with mainly clear sky conditions.",
+            "startOffset": 94870,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65693,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This paper aims to formulate and test a novel non-parametric method to estimate the solar heat gain in thermal dynamical systems such as buildings and solar collector fields.",
+            "startOffset": 65519,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 68883,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The points at which these piece-wise polynomials connect are called knots.",
+            "startOffset": 68809,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 67345,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Grey-box models are a class of parametric physics-based statistical models, which in form lie between the deterministic white-box models known from simulation tools such as TRNSYS, and entirely data-driven black-box models such as simple linear regression and neural networks.",
+            "startOffset": 67069,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 85208,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "As the solar irradiation intensity is low in this period of the day it is expected that the scaling factor of the basis spline is difficult to estimate.",
+            "startOffset": 85056,
+            "title": "Results"
+        },
+        {
+            "endOffset": 66973,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Hence, only linear operations on the constructed basis splines are carried out in the model fitting procedure, as will be demonstrated later.",
+            "startOffset": 66832,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 68577,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "Next, Section 2.2 presents the resistance-capacity grey-box models and model selection procedure used in this article, which span all remaining steps in Fig. 1.",
+            "startOffset": 68417,
+            "title": "Method"
+        },
+        {
+            "endOffset": 58570,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 58568,
+                    "startOffset": 58465
+                },
+                "b0065": {
+                    "endOffset": 58568,
+                    "startOffset": 58465
+                },
+                "b0080": {
+                    "endOffset": 58568,
+                    "startOffset": 58465
+                },
+                "b0145": {
+                    "endOffset": 58568,
+                    "startOffset": 58465
+                },
+                "b0165": {
+                    "endOffset": 58568,
+                    "startOffset": 58465
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For buildings, models are used to document the energy performance and identify a potential energy performance gap (Roels et al., 2017; Johnston et al., 2016; Haldi and Robinson, 2011; Brohus et al., 2010; Socolow, 1977).",
+            "startOffset": 58350,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65910,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "To the best of our knowledge, and as seen in the literature review, only simple data-driven methods for modelling solar gain in buildings exist, i.e. models in which the solar gain is independent of the sun position.",
+            "startOffset": 65694,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 66553,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Spline functions address both of these issues.",
+            "startOffset": 66507,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 95975,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "In two case studies, this method was implemented and tested in grey-box models that included the solar gain as a function of the azimuth angle.",
+            "startOffset": 95832,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 92412,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "With each model extension, the time of day from which the model starts overestimating the return temperature is postponed.",
+            "startOffset": 92290,
+            "title": "Results"
+        },
+        {
+            "endOffset": 94048,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "The downside of this approach is that it requires significant amounts of data to estimate the splines and adds parameters to the model.",
+            "startOffset": 93913,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 92836,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "The B-splines can also be used in other models in which the parameters are fitted from data, such as linear regressions.",
+            "startOffset": 92716,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 77204,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "When the data set covers all times between sunset and sunrise, the boundary knots are placed at these two moments.",
+            "startOffset": 77090,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 69176,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Splines are attractive for function approximation due to several properties.",
+            "startOffset": 69100,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 81004,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The apartment has a gross floor area of 67 m2 and a total window area of 10.7 m2.",
+            "startOffset": 80923,
+            "title": "Data"
+        },
+        {
+            "endOffset": 62277,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "The present paper details the specific procedure for achieving this.",
+            "startOffset": 62209,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 92540,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "As one might expect, the improvements are less pronounced on cloudy days than on sunny days as plotted here, but still present.",
+            "startOffset": 92413,
+            "title": "Results"
+        },
+        {
+            "endOffset": 94869,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "The splines may account for other effects than solar irradiation such as systematic use patterns (heat gain from people, computers etc.) or systematic measurement errors.",
+            "startOffset": 94699,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 93641,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "When using longer periods of measurements covering several months, there will be a larger range of sun elevations associated with a single azimuth angle.",
+            "startOffset": 93488,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 58987,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This is especially true for well-insulated buildings with low thermal mass and large window areas.",
+            "startOffset": 58889,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80922,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The apartment consists of an open kitchen and living room, a bedroom, a bathroom, a small corridor, and a heated weather porch.",
+            "startOffset": 80795,
+            "title": "Data"
+        },
+        {
+            "endOffset": 80659,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "This semi-parametric model allows the estimation of the azimuth-dependent solar gain factor and the resulting solar gain.",
+            "startOffset": 80538,
+            "title": "Modelling the thermal dynamics of a building"
+        },
+        {
+            "endOffset": 85872,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "As the solar irradiation has a dominant influence on this variable, it can be expected that accurate modelling of shading patterns improves the model performance significantly.",
+            "startOffset": 85696,
+            "title": "Forecasting solar heat generation"
+        },
+        {
+            "endOffset": 65103,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "b0025": {
+                    "endOffset": 65101,
+                    "startOffset": 65069
+                },
+                "b0030": {
+                    "endOffset": 65101,
+                    "startOffset": 65069
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The vast majority of existing models for SHP control do not take shadowing effects into account (Bava, 2017; Bava and Furbo, 2018).",
+            "startOffset": 64972,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 96330,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "A two-state model of an apartment was improved significantly by estimating the solar gain factor with use of a diurnal spline factor instead of the commonly used constant solar gain factor.",
+            "startOffset": 96141,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 75626,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0050",
+                    "title": "Grey-box models"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "The maximum is kept at 12, which typically is sufficient for the specific modelling purposes.",
+            "startOffset": 75533,
+            "title": "Model selection procedure"
+        },
+        {
+            "endOffset": 66059,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For solar collectors, parametric incident angle modifiers (IAM) have been widely applied in the literature, in both steady-state and dynamic models.",
+            "startOffset": 65911,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 61847,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "While these approaches may be sufficient for buildings with limited window area (and therefore limited solar gain), they may fall short for buildings with higher sensitivity to solar irradiation.",
+            "startOffset": 61652,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 68165,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Lastly, in Section 4, the approach is discussed and closing conclusions are drawn in Section 5.",
+            "startOffset": 68070,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 89142,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "In each iteration, the model was extended in several ways, one extended model for each of the remaining extensions.",
+            "startOffset": 89027,
+            "title": "Models"
+        },
+        {
+            "endOffset": 81432,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The total space heating of the apartment was measured every 15 min, and the air temperature in eight locations in the apartment was measured every 5 min.",
+            "startOffset": 81279,
+            "title": "Data"
+        },
+        {
+            "endOffset": 64859,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 64858,
+                    "startOffset": 64837
+                },
+                "b0120": {
+                    "endOffset": 64832,
+                    "startOffset": 64808
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Almost all models intended for control of SHPs present in the scientific literature combine (partial) differential equations with parameters estimated from data, see for example Pasamontes et al. (2013) and Andrade et al. (2015).",
+            "startOffset": 64630,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 85695,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "In the second use case, the aim was to predict the return (outlet) temperature of a solar heat field.",
+            "startOffset": 85594,
+            "title": "Forecasting solar heat generation"
+        },
+        {
+            "endOffset": 85346,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "Furthermore, the confidence band is underestimated, as the scaling factor in this region is reaching the upper parameter search boundary.",
+            "startOffset": 85209,
+            "title": "Results"
+        },
+        {
+            "endOffset": 71948,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The Cox-de Boor recursion formula can be used to define B-splines with non-uniform knot distances and to shift the B-spline along the x-axis.",
+            "startOffset": 71807,
+            "title": "B-splines in a finite domain"
+        },
+        {
+            "endOffset": 80250,
+            "parents": [],
+            "refoffsets": {
+                "b0135": {
+                    "endOffset": 80248,
+                    "startOffset": 80231
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The B-spline basis functions are generated with use of the R-core package splines (version 3.5.1) (R Core Team, 2017).",
+            "startOffset": 80132,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 97254,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "In addition, the splines can be combined with standard IAM functions to achieve even better results.",
+            "startOffset": 97154,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 96141,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "The splines have been used on the global, total, and beam irradiation in different model versions.",
+            "startOffset": 96043,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 95205,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "Finally, it should be noted that it can be difficult to estimate the scaling factors for periods with low solar irradiation, e.g. close to sunrise and sunset.",
+            "startOffset": 95047,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59664,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The following two sections present a literature review on typical implementations of data-driven solar heat gain in thermal building and solar heat plant models.",
+            "startOffset": 59503,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57868,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In many cases, measurements or predictions of the solar irradiation are available, and the effect of solar irradiation needs to be captured in a model.",
+            "startOffset": 57717,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60285,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "Even if the location of the shading obstacles is known, it can still be cumbersome to estimate their thermal effects, just as it is difficult to estimate the effects of other factors such as reflections or dirt on the windows.",
+            "startOffset": 60059,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 59316,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The control must respond to rapid fluctuations in solar irradiation to prevent the collector fluid from boiling, and to ensure a high and stable outlet temperature.",
+            "startOffset": 59152,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70926,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 70924,
+                    "startOffset": 70907
+                }
+            },
+            "secId": "s0035",
+            "sentence": "Another property is that infinitely many cardinal B-splines point-wise add up to unity, when evenly distributed along the x-axis with a distance corresponding to the distance between two neighbouring knots (Christensen, 2010).",
+            "startOffset": 70700,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 65506,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Furthermore, the functions do not allow for asymmetric diurnal variations of efficiency, which may exist due to shading of the collectors.",
+            "startOffset": 65368,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 62208,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "Hence, rather than assuming a constant solar gain factor for the entire enclosed space or the facade of interest, the factor can be described as a function of the sun position.",
+            "startOffset": 62032,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 91517,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "The measurement error occurs due to exposure of the sensor to direct sunlight.",
+            "startOffset": 91439,
+            "title": "Results"
+        },
+        {
+            "endOffset": 77302,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Otherwise the boundary knots are placed at the extremes of the azimuth angle present in the data.",
+            "startOffset": 77205,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 71535,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The following section illustrates this modification of the B-splines.",
+            "startOffset": 71466,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 58252,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The model is tested in two thermal systems: a building and a solar collector field.",
+            "startOffset": 58169,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95453,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "Modelling solar gain is of crucial importance for energy system models.",
+            "startOffset": 95382,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 80794,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "During the period from February 13 to April 1, 2018, measurements were obtained from a two-room apartment in Aalborg, Denmark.",
+            "startOffset": 80668,
+            "title": "Data"
+        },
+        {
+            "endOffset": 64971,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The incidence angle dependence is either neglected, or modelled using IAM functions such as in Eq. (5) and (6).",
+            "startOffset": 64860,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 62923,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "It is common for the collector rows to cast shade on one another at some point in the afternoon as well.",
+            "startOffset": 62819,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 66831,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Furthermore, the splines can model non-linear phenomena, but the nonlinear operations in the construction of basis splines are performed before the model fitting process.",
+            "startOffset": 66661,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 68704,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "Finally, Section 2.3 discusses in detail how the spline functions are implemented in the grey-box model setting in particular.",
+            "startOffset": 68578,
+            "title": "Method"
+        },
+        {
+            "endOffset": 62031,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 61890,
+                    "startOffset": 61864
+                },
+                "b0100": {
+                    "endOffset": 61915,
+                    "startOffset": 61895
+                }
+            },
+            "secId": "s0010",
+            "sentence": "As suggested by Bacher and Andersen (2014) and Madsen et al. (2016), parametric grey-box models could be used in conjunction with non-parametric models of solar gain, such as splines.",
+            "startOffset": 61848,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 81156,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "An unconditioned basement is located below the apartment.",
+            "startOffset": 81099,
+            "title": "Data"
+        },
+        {
+            "endOffset": 65237,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Although these IAM functions may suffice for performance testing and simulation, they may not be accurate enough for control purposes.",
+            "startOffset": 65103,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 75532,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0050",
+                    "title": "Grey-box models"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "For cubic splines with intercept, the minimum number of splines is 4.",
+            "startOffset": 75463,
+            "title": "Model selection procedure"
+        },
+        {
+            "endOffset": 93755,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "As the elevation also affects shading patterns and the incidence angle, one may need to account for this as well.",
+            "startOffset": 93642,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 94284,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "A more convenient approach than introducing a second spline curve is to apply an adaptive model in which parameters are allowed to change over time.",
+            "startOffset": 94136,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 81551,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The internal temperature used in the model was the arithmetic mean temperature of all eight sensors in each time step.",
+            "startOffset": 81433,
+            "title": "Data"
+        },
+        {
+            "endOffset": 71227,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In many use cases, one is only interested in a series of B-splines that covers a finite range of the x-axis.",
+            "startOffset": 71119,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 68808,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Splines are piece-wise polynomials that are continuously differentiable up to a certain order.",
+            "startOffset": 68714,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 71050,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "As demonstrated later, the B-splines are suitable for estimating the solar gain factor as a smooth function of sun position.",
+            "startOffset": 70926,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 80131,
+            "parents": [],
+            "refoffsets": {
+                "b0085": {
+                    "endOffset": 80045,
+                    "startOffset": 80035
+                }
+            },
+            "secId": "s0065",
+            "sentence": "All models are formulated and fitted with use of the package ctsmr (Continuous Time Stochastic Modelling for R, version 0.6.17) (Juhl, 2013), which uses a Kalman filter and maximum likelihood methods for parameter estimation.",
+            "startOffset": 79906,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 73866,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Grey-box models are mathematical representations of a physical system that is described by a number of inputs, outputs and state variables.",
+            "startOffset": 73727,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 69341,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 69339,
+                    "startOffset": 69298
+                },
+                "b0130": {
+                    "endOffset": 69339,
+                    "startOffset": 69298
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The functions are smooth up to a certain order, have compact support, and their formulas are explicit and rather simple (Prautzsch et al., 2002; Christensen, 2010).",
+            "startOffset": 69177,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 97153,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "This makes it capable of accounting for site-specific shading patterns, which largely reduced structural prediction errors.",
+            "startOffset": 97030,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 58888,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As solar heat gain can significantly affect estimated thermal building properties, the model used for solar heat gain needs to be accurate.",
+            "startOffset": 58749,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91276,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "Fig. 11 shows how the model predictions improved due to the added solar gain function.",
+            "startOffset": 91190,
+            "title": "Results"
+        },
+        {
+            "endOffset": 68257,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "This section presents the used modelling procedure, which is also outlined in Fig. 1.",
+            "startOffset": 68172,
+            "title": "Method"
+        },
+        {
+            "endOffset": 67068,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This study implements and tests the spline-based solar gain factor in a grey-box model setting.",
+            "startOffset": 66973,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 71465,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "However, the sum of a finite set of cardinal B-splines will go to zero at the boundary regions as seen in Fig. 2A. Therefore, the cardinal B-splines near the boundaries need to be modified to add up to unity for the entire finite domain.",
+            "startOffset": 71228,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 94136,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "This will increase the computation time and may even result in an unidentifiable model.",
+            "startOffset": 94049,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 66507,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In addition, the solar gain factor, i.e. the share of measured solar irradiation that is absorbed in the system, depends on the sun position non-linearly.",
+            "startOffset": 66353,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 68069,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In Section 3 the approach is applied to two use cases: modelling the effect of solar irradiation on the internal temperature of a dwelling in Aalborg, Denmark (Section 3.1), and forecasting the heat production from a solar collector field in the municipality of Solr\u00f8d, Denmark (Section 3.2).",
+            "startOffset": 67777,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 91624,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "This could be accounted for in future improvements of the model, but is outside the scope of this article.",
+            "startOffset": 91518,
+            "title": "Results"
+        },
+        {
+            "endOffset": 95691,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "This paper shows that the approaches for solar gain modelling in the literature can be improved significantly by taking the position of the sun into account when modelling the thermal dynamics of an apartment and a solar collector field.",
+            "startOffset": 95454,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 58168,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper, presents and implements a data-driven model for dynamical thermal systems, that include a sun position dependent solar gain.",
+            "startOffset": 58032,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74104,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This paper focuses on grey-box models with states in continuous time and observations in discrete time.",
+            "startOffset": 74001,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 62986,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Finally, dirt or snow on the panels may affect the solar gain.",
+            "startOffset": 62924,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 58031,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the relation between solar gain and measured solar irradiation is typically non-linear and dependent on the position of the sun and site characteristics.",
+            "startOffset": 57869,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62581,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Solar irradiation is the main factor that determines the heat production of a solar heat plant (SHP), so it is crucial to include the effects of solar radiation in detail when modelling the return temperature (also called outlet temperature) of a solar heat field.",
+            "startOffset": 62317,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 75462,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0050",
+                    "title": "Grey-box models"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In order to choose the optimal number of B-splines to approximate a functional relationship present in the data, several possibilities are implemented and compared.",
+            "startOffset": 75298,
+            "title": "Model selection procedure"
+        },
+        {
+            "endOffset": 62818,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Furthermore, the position of the sun affects the solar gain due to possible shading objects around the collectors.",
+            "startOffset": 62704,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 94698,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "An important note regarding the estimated spline curve is that its physical interpretation is not always straightforward.",
+            "startOffset": 94577,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 92715,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "First of all, it is noted that although the splined solar gain factor was applied in grey-box models here, the used of the method is not limited to this model type.",
+            "startOffset": 92551,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 69583,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 69581,
+                    "startOffset": 69547
+                },
+                "b0130": {
+                    "endOffset": 69581,
+                    "startOffset": 69547
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Given a knot sequence, one can construct a set of B-splines that form a basis for all splines with this same knot sequence (Boor, 2007; Prautzsch et al., 2002).",
+            "startOffset": 69423,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 94382,
+            "parents": [],
+            "refoffsets": {
+                "b0075": {
+                    "endOffset": 94381,
+                    "startOffset": 94360
+                }
+            },
+            "secId": "s0110",
+            "sentence": "One example of adaptive time-varying parameters estimation is presented by Joensen et al. (2000).",
+            "startOffset": 94285,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 97029,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "The key difference compared to the methods from ISO 9806:2017 and most models in the literature is that the spline-based solar gain factor has a higher degree of freedom than frequently used single-parameter incidence angle modifier (IAM) functions.",
+            "startOffset": 96780,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 61651,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "Both of the above approaches assume that the solar gain is independent of the sun position.",
+            "startOffset": 61560,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 66352,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "As the relationship between solar gain and measured solar irradiation is sun position dependent and site-specific, it is often not feasible to choose a parametric representation of this relationship.",
+            "startOffset": 66153,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 92945,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "In the present article, the splined solar gain factor only affected a single state in the state-space models.",
+            "startOffset": 92836,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 72081,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The above criterion is relaxed from strictly increasing to non-decreasing knots, so that knots may be positioned at equal locations.",
+            "startOffset": 71949,
+            "title": "B-splines in a finite domain"
+        },
+        {
+            "endOffset": 85055,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "It is noted that solar gain factor for the morning hours (azimuth angle from 100\u00b0 to 110\u00b0) is rather high and oscillates.",
+            "startOffset": 84934,
+            "title": "Results"
+        },
+        {
+            "endOffset": 95371,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "This may be prevented by placing the boundary knots closer towards the south, and fitting a constant or linear solar gain factor to the periods outside these bounds.",
+            "startOffset": 95206,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 58349,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In both systems, the heat dynamics related to solar irradiation are modelled for various reasons.",
+            "startOffset": 58252,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79547,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "This Section describes the implementation of the spline-based approach for solar gain modelling of two dynamical thermal systems.",
+            "startOffset": 79418,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 68983,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 68981,
+                    "startOffset": 68971
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Splines are in practice used for interpolation, smoothing, and function approximation (Boor, 2007).",
+            "startOffset": 68884,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 77089,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Only cubic B-splines with equidistant knots are used here.",
+            "startOffset": 77031,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 59965,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "The solar gain factor of an enclosed space (often called solar aperture, effective window area, or gA-value) can be seen as the equivalent area of a perfectly transparent surface that transmits the same amount of solar energy as the actual windows of the space.",
+            "startOffset": 59704,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 96539,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "The estimated solar gain curve showed good agreement with the authors expectations for the specific apartment with east- and west-facing windows, as the peak in solar gain occurred during morning and evening.",
+            "startOffset": 96331,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 96042,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "This function is estimated using coefficients on a B-spline basis.",
+            "startOffset": 95976,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 96779,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "For a return temperature model of a solar collector field, it has been shown that the splines account for local shading patterns caused by the panels themselves and trees next to the field, while also accounting for incidence angle effects.",
+            "startOffset": 96539,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 71118,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The estimated function is obtained by summing the scaled B-splines.",
+            "startOffset": 71051,
+            "title": "Cardinal B-splines"
+        },
+        {
+            "endOffset": 74366,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The stochastic nature of these models furthermore allows for the application of statistical methods for structural model identification, such as the likelihood ratio test.",
+            "startOffset": 74195,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 76363,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 2E visualised how a set of basis splines is scaled such that the resulting spline fits a certain data set.",
+            "startOffset": 76252,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 75268,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "For the purposes of this paper, a basic knowledge of random variables suffices.",
+            "startOffset": 75189,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 89026,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "All extensions were applied to the base model in an iterative manner that is visualised in Fig. 9.",
+            "startOffset": 88928,
+            "title": "Models"
+        },
+        {
+            "endOffset": 57716,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Solar irradiation is a crucial factor in the field of building engineering, renewable energy generation, and many other applications.",
+            "startOffset": 57583,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79766,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In the second case (Section 3.2), splines are applied to model the solar gain in a solar collector field.",
+            "startOffset": 79661,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 74000,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The state variables are described by first order differential or difference equations for continuous and discrete time, respectively.",
+            "startOffset": 73867,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 69422,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The proposed method is based on a specific type of spline function: the B-spline.",
+            "startOffset": 69341,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 79906,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In the following sections the used data and applied models are described for each case, along with results of the model selection procedure.",
+            "startOffset": 79766,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 74194,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "In a grey-box model, a noise term is added to the\u2014otherwise deterministic\u2014white-box model.",
+            "startOffset": 74104,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 72177,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Splines"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In order to still use Eq. (9) in this generalised case, division by zero is considered as zero.",
+            "startOffset": 72082,
+            "title": "B-splines in a finite domain"
+        },
+        {
+            "endOffset": 69100,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This paper concerns the latter challenge, and aims to estimate the solar gain factor from data as a smooth function.",
+            "startOffset": 68984,
+            "title": "Splines"
+        },
+        {
+            "endOffset": 60058,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0010",
+            "sentence": "For inverse problem solving, the location of windows and shading obstacles are often unknown.",
+            "startOffset": 59965,
+            "title": "Solar gain in thermal building models"
+        },
+        {
+            "endOffset": 67776,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In Section 2 the proposed method is discussed, including the mathematics behind the applied B-spline functions (Section 2.1), the applied grey-box model (Section 2.2), and the actual implementation of splines in state-space models (Section 2.3).",
+            "startOffset": 67531,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 77030,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In the following, the spline-based approach is described for modelling solar gain in a resistance-capacity (RC) grey-box model.",
+            "startOffset": 76903,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 85558,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "This is seen in the general low solar gain levels in the interval from 100\u00b0 to 110\u00b0, in the lower plot in Fig. 6.",
+            "startOffset": 85445,
+            "title": "Results"
+        },
+        {
+            "endOffset": 58748,
+            "parents": [],
+            "refoffsets": {
+                "b0010": {
+                    "endOffset": 58746,
+                    "startOffset": 58679
+                },
+                "b0105": {
+                    "endOffset": 58746,
+                    "startOffset": 58679
+                },
+                "b0145": {
+                    "endOffset": 58746,
+                    "startOffset": 58679
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For instance, this has been done using data-driven thermal dynamic building models such as grey-box models (Roels et al., 2017; Bacher and Madsen, 2011; Madsen and Holst, 1995).",
+            "startOffset": 58571,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65367,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The functions used currently are tuned by a single parameter and therefore only a limited amount of function shapes are possible.",
+            "startOffset": 65238,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 66153,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "However, these IAMs are not able to account for potential shading patterns on the collectors.",
+            "startOffset": 66060,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 93085,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "It is however a simple adaptation to assign the solar gain to the system in more complex ways, e.g. by assigning it to more than one state.",
+            "startOffset": 92946,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 93488,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "One should in this case be aware of potential overfitting when spline knots are placed too closely together, as the individual basis splines would be fitted to fewer data points.",
+            "startOffset": 93310,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 75188,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 75186,
+                    "startOffset": 75131
+                },
+                "b0170": {
+                    "endOffset": 75186,
+                    "startOffset": 75131
+                }
+            },
+            "secId": "s0050",
+            "sentence": "Further theory on stochastic differentiation and integration can be found in for example (Kloeden et al., 1994 and Zastawniak and Brzezniak, 1998).",
+            "startOffset": 75041,
+            "title": "Grey-box models"
+        },
+        {
+            "endOffset": 95831,
+            "parents": [],
+            "secId": "s0115",
+            "sentence": "This paper has proposed B-splines as a non-parametric method to estimate the relation between measured solar irradiation and the solar gain.",
+            "startOffset": 95691,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 80537,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The following sections show how the models improve when the solar gain is modelled with splines.",
+            "startOffset": 80441,
+            "title": "Modelling the thermal dynamics of a building"
+        },
+        {
+            "endOffset": 80440,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "In this case study, the physical parameters of a building, such as heat loss coefficients, heat capacities, and time constants, were estimated.",
+            "startOffset": 80297,
+            "title": "Modelling the thermal dynamics of a building"
+        },
+        {
+            "endOffset": 81098,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Similar heated apartments are located on the north side, south side, and above the apartment.",
+            "startOffset": 81005,
+            "title": "Data"
+        },
+        {
+            "endOffset": 91189,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "Model performance was compared using prediction with perfect forecasts of the inputs, that is, using the actual measurements as inputs.",
+            "startOffset": 91054,
+            "title": "Results"
+        },
+        {
+            "endOffset": 94577,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "In that way the scaling factors of the B-splines will be specific to shorter time periods of data, so that the azimuth angle again largely determines the shading pattern within this time period.",
+            "startOffset": 94383,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 89299,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "The extension with the lowest p-value were selected, and the procedure was repeated until no extensions were significant or all extensions were implemented.",
+            "startOffset": 89143,
+            "title": "Models"
+        },
+        {
+            "endOffset": 68416,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "First, Section 2.1 introduces spline functions and the construction and usage of a B-spline basis for data fitting, corresponding to the first step in Fig. 1.",
+            "startOffset": 68258,
+            "title": "Method"
+        },
+        {
+            "endOffset": 76467,
+            "parents": [
+                {
+                    "id": "s0025",
+                    "title": "Method"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For the case of modelling the solar gain in a given energy system, the exact same approach can be used.",
+            "startOffset": 76364,
+            "title": "Implementing splines in state-space models"
+        },
+        {
+            "endOffset": 91438,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0090",
+                    "title": "Forecasting solar heat generation"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "Note that all models, including the final model, overestimate the return temperature at the end of the day due to a measurement error in the ambient temperature.",
+            "startOffset": 91277,
+            "title": "Results"
+        },
+        {
+            "endOffset": 93309,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "While only equidistant spline knot sequences are used in this article, the location of the knots can perhaps be optimised by concentrating more knots around azimuth angles for which fast changes in the shading pattern occur.",
+            "startOffset": 93085,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59503,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As solar irradiation is the dominating effect on the outlet temperature, an accurate model of the absorbed solar energy can improve predictions and hence operation of solar heat systems.",
+            "startOffset": 59317,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62703,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The solar incidence angle on the panel largely influences the share of reflected irradiation, and thereby the solar gain.",
+            "startOffset": 62582,
+            "title": "Solar gain in solar heat plant models"
+        },
+        {
+            "endOffset": 67531,
+            "parents": [
+                {
+                    "id": "s0005",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Grey-box models are often relatively simple and computationally lightweight, they have excellent forecasting properties, and parameters that are directly related to physical properties.",
+            "startOffset": 67346,
+            "title": "Motivation"
+        },
+        {
+            "endOffset": 81279,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The floor plan of the apartment is shown in Fig. 3, including window sizes and the physical parameters used for modelling.",
+            "startOffset": 81157,
+            "title": "Data"
+        },
+        {
+            "endOffset": 85444,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Case study"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Modelling the thermal dynamics of a building"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "However, due to the low irradiation intensity, the effect on the model states is limited as well.",
+            "startOffset": 85347,
+            "title": "Results"
+        },
+        {
+            "endOffset": 79660,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In the first case (Section 3.1), the splines are included in a model of the heat dynamics of a single apartment.",
+            "startOffset": 79548,
+            "title": "Case study"
+        }
+    ],
+    "docId": "S0038092X19311235",
+    "metadata": {
+        "asjc": [
+            "2105",
+            "2500"
+        ],
+        "authors": [
+            {
+                "email": "chrras@dtu.dk",
+                "first": "Christoffer",
+                "initial": "C.",
+                "last": "Rasmussen"
+            },
+            {
+                "email": "linfr@dtu.dk",
+                "first": "Linde",
+                "initial": "L.",
+                "last": "Fr\u00f6lke"
+            },
+            {
+                "email": "pbac@dtu.dk",
+                "first": "Peder",
+                "initial": "P.",
+                "last": "Bacher"
+            },
+            {
+                "email": "hmad@dtu.dk",
+                "first": "Henrik",
+                "initial": "H.",
+                "last": "Madsen"
+            },
+            {
+                "email": "car@byg.dtu.dk",
+                "first": "Carsten",
+                "initial": "C.",
+                "last": "Rode"
+            }
+        ],
+        "doi": "10.1016/j.solener.2019.11.023",
+        "firstpage": "249",
+        "issn": "0038092X",
+        "keywords": [
+            "Building energy",
+            "Grey-box modelling",
+            "Solar gain modelling",
+            "Solar heat collectors",
+            "Splines",
+            "Thermal dynamics"
+        ],
+        "lastpage": "258",
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "ENER",
+            "MATE"
+        ],
+        "title": "Semi-parametric modelling of sun position dependent solar gain using B-splines in grey-box models"
+    }
+}

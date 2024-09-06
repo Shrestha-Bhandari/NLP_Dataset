@@ -1,0 +1,1832 @@
+{
+    "abstract": "This paper deals with the reconfiguration analysis of a 4-DOF (degrees-of-freedom) 3-RER parallel manipulator (PM) with equilateral triangular base and moving platform (ETBP), which is a special case of a 4-DOF PM in the literature. The 4-DOF 3-RER PM is composed of a base and a moving platform connected by three 3-RER legs, each of which is a serial kinematic chain composed of a revolute (R) joint, a planar (E) joint and an R joint in sequence. At first, a set of constraint equations of the 3-RER PM with ETBP is derived with the orientation of the moving platform represented using a Euler parameter quaternion (also Euler-Rodrigues quaternion) and then solved in closed form. It is found that the 3-RER PM with ETBP has three 4-DOF operation modes if both the base and moving platform are identical or two 4-DOF operation modes if the base and moving platform are not identical. The motion characteristics of the moving platform are obtained using the kinematic interpretation of Euler parameter quaternions with certain number of constant zero components, which was presented in a recent paper by the author of this paper. The transition configurations among different operation modes are also identified.",
+    "author_highlights": [
+        {
+            "endOffset": 26433,
+            "sentence": "A 4-DOF 3-RER parallel mechanism was found to have two or three operation modes.",
+            "startOffset": 26353
+        },
+        {
+            "endOffset": 26512,
+            "sentence": "All the operation modes were obtained without using computer algebral systems.",
+            "startOffset": 26434
+        },
+        {
+            "endOffset": 26587,
+            "sentence": "Transition configurations of the 3-RER parallel mechanism were identified.",
+            "startOffset": 26513
+        },
+        {
+            "endOffset": 26655,
+            "sentence": "Euler parameters were found efficient for reconfiguration analysis.",
+            "startOffset": 26588
+        }
+    ],
+    "bib_entries": {
+        "bb0005": null,
+        "bb0010": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                },
+                {
+                    "first": "Cl\u00e9ment M.",
+                    "initial": "C.M.",
+                    "last": "Gosselin"
+                },
+                {
+                    "first": "Pierre Luc",
+                    "initial": "P.L.",
+                    "last": "Richard"
+                }
+            ],
+            "doi": "10.1115/1.2717228",
+            "firstpage": "595",
+            "issn": "10500472",
+            "lastpage": "601",
+            "pub_year": 2007,
+            "title": "Type synthesis of parallel mechanisms with multiple operation modes",
+            "volume": "129"
+        },
+        "bb0015": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                }
+            ],
+            "doi": "10.1115/1.4025219",
+            "issn": "19424302",
+            "pub_year": 2013,
+            "title": "Type synthesis of 3-DOF parallel manipulators with both a planar operation mode and a spatial translational operation mode",
+            "volume": "5"
+        },
+        "bb0020": null,
+        "bb0025": {
+            "authors": [
+                {
+                    "first": "Sameh",
+                    "initial": "S.",
+                    "last": "Refaat"
+                },
+                {
+                    "first": "Jacques M.",
+                    "initial": "J.M.",
+                    "last": "Herv\u00e9"
+                },
+                {
+                    "first": "Saeid",
+                    "initial": "S.",
+                    "last": "Nahavandi"
+                },
+                {
+                    "first": "Hieu",
+                    "initial": "H.",
+                    "last": "Trinh"
+                }
+            ],
+            "doi": "10.1017/S0263574706003286",
+            "firstpage": "461",
+            "issn": "02635747",
+            "lastpage": "466",
+            "pub_year": 2007,
+            "title": "Two-mode overconstrained three-DOFs rotational-translational linear-motor-based parallel-kinematics mechanism for machine tool applications",
+            "volume": "25"
+        },
+        "bb0030": {
+            "authors": [
+                {
+                    "first": "Qinchuan",
+                    "initial": "Q.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Jacques Marie",
+                    "initial": "J.M.",
+                    "last": "Herv\u00e9"
+                }
+            ],
+            "doi": "10.1109/TRO.2008.2008737",
+            "firstpage": "158",
+            "issn": "15523098",
+            "lastpage": "164",
+            "pub_year": 2009,
+            "title": "Parallel mechanisms with bifurcation of Schoenflies motion",
+            "volume": "25"
+        },
+        "bb0035": {
+            "authors": [
+                {
+                    "first": "Grigore",
+                    "initial": "G.",
+                    "last": "Gogu"
+                }
+            ],
+            "doi": "10.1115/1.4003180",
+            "issn": "19424302",
+            "pub_year": 2011,
+            "title": "Maximally regular T2R1-Type parallel manipulators with bifurcated spatial motion",
+            "volume": "3"
+        },
+        "bb0040": {
+            "authors": [
+                {
+                    "first": "Dongming",
+                    "initial": "D.",
+                    "last": "Gan"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "Darwin G.",
+                    "initial": "D.G.",
+                    "last": "Caldwell"
+                }
+            ],
+            "doi": "10.1115/1.4003920",
+            "issn": "10500472",
+            "pub_year": 2011,
+            "title": "Constraint-based limb synthesis and mobility-change-aimed mechanism construction",
+            "volume": "133"
+        },
+        "bb0045": {
+            "authors": [
+                {
+                    "first": "Ketao",
+                    "initial": "K.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Jian S.",
+                    "initial": "J.S.",
+                    "last": "Dai"
+                },
+                {
+                    "first": "Yuefa",
+                    "initial": "Y.",
+                    "last": "Fang"
+                }
+            ],
+            "doi": "10.1115/1.4007920",
+            "issn": "10500472",
+            "pub_year": 2013,
+            "title": "Geometric constraint and mobility variation of Two 3SvPS v metamorphic parallel mechanisms",
+            "volume": "135"
+        },
+        "bb0050": {
+            "authors": [
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Grosch"
+                },
+                {
+                    "first": "Raffaele",
+                    "initial": "R.",
+                    "last": "Di Gregorio"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "L\u00f3pez"
+                },
+                {
+                    "first": "Federico",
+                    "initial": "F.",
+                    "last": "Thomas"
+                }
+            ],
+            "doi": "10.1109/ROBOT.2010.5509305",
+            "firstpage": "4697",
+            "issn": "10504729",
+            "lastpage": "4702",
+            "pub_year": 2010,
+            "title": "Motion planning for a novel reconfigurable parallel manipulator with lockable revolute joints"
+        },
+        "bb0055": {
+            "authors": [
+                {
+                    "first": "Allan Daniel",
+                    "initial": "A.D.",
+                    "last": "Finistauri"
+                },
+                {
+                    "first": "Fengfeng",
+                    "initial": "F.",
+                    "last": "Xi"
+                }
+            ],
+            "doi": "10.1115/1.4024734",
+            "issn": "19424302",
+            "pub_year": 2013,
+            "title": "Reconfiguration analysis of a fully reconfigurable parallel robot",
+            "volume": "5"
+        },
+        "bb0060": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                },
+                {
+                    "first": "Yan",
+                    "initial": "Y.",
+                    "last": "Jin"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2015.04.019",
+            "firstpage": "323",
+            "issn": "0094114X",
+            "lastpage": "333",
+            "pub_year": 2016,
+            "title": "Type Synthesis of 3-DOF multi-mode translational/spherical parallel mechanisms with lockable joints",
+            "volume": "96"
+        },
+        "bb0065": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2013.12.010",
+            "firstpage": "188",
+            "issn": "0094114X",
+            "lastpage": "201",
+            "pub_year": 2014,
+            "title": "Reconfiguration analysis of a 3-DOF parallel mechanism using Euler parameter quaternions and algebraic geometry method",
+            "volume": "74"
+        },
+        "bb0070": null,
+        "bb0075": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Carbonari"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Callegari"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Palmieri"
+                },
+                {
+                    "first": "M. C.",
+                    "initial": "M.C.",
+                    "last": "Palpacelli"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2014.04.011",
+            "firstpage": "173",
+            "issn": "0094114X",
+            "lastpage": "183",
+            "pub_year": 2014,
+            "title": "A new class of reconfigurable parallel kinematic machines",
+            "volume": "79"
+        },
+        "bb0080": {
+            "authors": [
+                {
+                    "first": "Luca",
+                    "initial": "L.",
+                    "last": "Carbonari"
+                },
+                {
+                    "first": "Massimo",
+                    "initial": "M.",
+                    "last": "Callegari"
+                },
+                {
+                    "first": "Giacomo",
+                    "initial": "G.",
+                    "last": "Palmieri"
+                },
+                {
+                    "first": "Matteo Claudio",
+                    "initial": "M.C.",
+                    "last": "Palpacelli"
+                }
+            ],
+            "doi": "10.1109/TRO.2014.2357092",
+            "firstpage": "1541",
+            "issn": "15523098",
+            "lastpage": "1547",
+            "pub_year": 2014,
+            "title": "Analysis of kinematics and reconfigurability of a spherical parallel manipulator",
+            "volume": "30"
+        },
+        "bb0085": {
+            "authors": [
+                {
+                    "first": "Latifah",
+                    "initial": "L.",
+                    "last": "Nurahmi"
+                },
+                {
+                    "first": "Josef",
+                    "initial": "J.",
+                    "last": "Schadlbauer"
+                },
+                {
+                    "first": "St\u00e9phane",
+                    "initial": "S.",
+                    "last": "Caro"
+                },
+                {
+                    "first": "Manfred",
+                    "initial": "M.",
+                    "last": "Husty"
+                },
+                {
+                    "first": "Philippe",
+                    "initial": "P.",
+                    "last": "Wenger"
+                }
+            ],
+            "doi": "10.1115/1.4029305",
+            "issn": "19424302",
+            "pub_year": 2015,
+            "title": "Kinematic analysis of the 3-RPS cube parallel manipulator",
+            "volume": "7"
+        },
+        "bb0090": {
+            "authors": [
+                {
+                    "first": "Manfred L.",
+                    "initial": "M.L.",
+                    "last": "Husty"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Pfurner"
+                },
+                {
+                    "first": "Hans Peter",
+                    "initial": "H.P.",
+                    "last": "Schr\u00f6cker"
+                },
+                {
+                    "first": "Katrin",
+                    "initial": "K.",
+                    "last": "Brunnthaler"
+                }
+            ],
+            "doi": "10.1017/S0263574707003530",
+            "firstpage": "661",
+            "issn": "02635747",
+            "lastpage": "675",
+            "pub_year": 2007,
+            "title": "Algebraic methods in mechanism analysis and synthesis",
+            "volume": "25"
+        },
+        "bb0095": {
+            "authors": [
+                {
+                    "first": "Jacques Marie",
+                    "initial": "J.M.",
+                    "last": "Herv\u00e9"
+                }
+            ],
+            "doi": "10.1016/0094-114X(82)90002-7",
+            "firstpage": "179",
+            "issn": "0094114X",
+            "lastpage": "184",
+            "pub_year": 1982,
+            "title": "Intrinsic formulation of problems of geometry and kinematics of mechanisms",
+            "volume": "17"
+        },
+        "bb0100": null,
+        "bb0105": null,
+        "bb0110": null,
+        "bb0115": {
+            "authors": [
+                {
+                    "first": "Andrew J.",
+                    "initial": "A.J.",
+                    "last": "Sommese"
+                },
+                {
+                    "first": "Charles W.",
+                    "initial": "C.W.",
+                    "last": "Wampler"
+                }
+            ],
+            "doi": "10.1142/5763",
+            "firstpage": "1",
+            "lastpage": "402",
+            "pub_year": 2005,
+            "title": "The numerical solution of systems of polynomials: Arising in engineering and science"
+        },
+        "bb0120": {
+            "authors": [
+                {
+                    "first": "Wolfram",
+                    "initial": "W.",
+                    "last": "Decker"
+                },
+                {
+                    "first": "Gerhard",
+                    "initial": "G.",
+                    "last": "Pfister"
+                }
+            ],
+            "doi": "10.1017/CBO9781139565769",
+            "firstpage": "1",
+            "lastpage": "118",
+            "pub_year": 2013,
+            "title": "A first course in computational algebraic geometry"
+        },
+        "bb0125": {
+            "authors": [
+                {
+                    "first": "Qinchuan",
+                    "initial": "Q.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Zhen",
+                    "initial": "Z.",
+                    "last": "Huang"
+                }
+            ],
+            "firstpage": "755",
+            "issn": "10504729",
+            "lastpage": "760",
+            "pub_year": 2003,
+            "title": "Type synthesis of 4-DOF parallel manipulators",
+            "volume": "1"
+        },
+        "bb0130": {
+            "authors": [
+                {
+                    "first": "Ting Li",
+                    "initial": "T.L.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "An Xin",
+                    "initial": "A.X.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Fang Hua",
+                    "initial": "F.H.",
+                    "last": "Yao"
+                },
+                {
+                    "first": "Qiong",
+                    "initial": "Q.",
+                    "last": "Jin"
+                },
+                {
+                    "first": "Yu Feng",
+                    "initial": "Y.F.",
+                    "last": "Luo"
+                }
+            ],
+            "firstpage": "1295",
+            "lastpage": "1302",
+            "pub_year": 2001,
+            "title": "Structure synthesis of 4-DOF (3-translation and 1-rotation) parallel robot mechanisms based on the units of single-opened-chain",
+            "volume": "2"
+        },
+        "bb0135": {
+            "authors": [
+                {
+                    "first": "Xianwen",
+                    "initial": "X.",
+                    "last": "Kong"
+                },
+                {
+                    "first": "Cl\u00e9ment M.",
+                    "initial": "C.M.",
+                    "last": "Gosselin"
+                }
+            ],
+            "doi": "10.1109/TRA.2003.820853",
+            "firstpage": "181",
+            "issn": "1042296X",
+            "lastpage": "190",
+            "pub_year": 2004,
+            "title": "Type synthesis of 3T1R 4-DOF parallel manipulators based on screw theory",
+            "volume": "20"
+        },
+        "bb0140": null,
+        "bb0145": {
+            "authors": [
+                {
+                    "first": "Kerry W.",
+                    "initial": "K.W.",
+                    "last": "Spring"
+                }
+            ],
+            "doi": "10.1016/0094-114X(86)90084-4",
+            "firstpage": "365",
+            "issn": "0094114X",
+            "lastpage": "373",
+            "pub_year": 1986,
+            "title": "Euler parameters and the use of quaternion algebra in the manipulation of finite rotations: A review",
+            "volume": "21"
+        },
+        "bb0150": {
+            "authors": [
+                {
+                    "first": "W. F.",
+                    "initial": "W.F.",
+                    "last": "Phillips"
+                },
+                {
+                    "first": "C. E.",
+                    "initial": "C.E.",
+                    "last": "Hailey"
+                },
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Gebert"
+                }
+            ],
+            "doi": "10.2514/2.2824",
+            "firstpage": "718",
+            "issn": "00218669",
+            "lastpage": "737",
+            "pub_year": 2001,
+            "title": "Review of attitude representations used for aircraft kinematics",
+            "volume": "38"
+        },
+        "bb0155": null
+    },
+    "body_text": [
+        {
+            "endOffset": 45525,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The moving platform of the 3-RER PM with non-identical ETBP undergoes 4-DOF 3T1R motion in both operation modes.",
+            "startOffset": 45413,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 45152,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As in Section 4, one can obtain that the DOF of the moving platform of the 3-RER PM with non-identical ETBP (or the DOF of the 3-RER PM with identical ETBP) in each of these two operation modes is equal to 4.",
+            "startOffset": 44944,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 28525,
+            "parents": [],
+            "refoffsets": {
+                "bb0110": {
+                    "endOffset": 28356,
+                    "startOffset": 28352
+                },
+                "bb0115": {
+                    "endOffset": 28393,
+                    "startOffset": 28389
+                },
+                "bb0120": {
+                    "endOffset": 28434,
+                    "startOffset": 28430
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the reconfiguration analysis, the methods based on algebraic geometry [22] or numerical algebraic geometry [23] as well as computer algebra systems [24] are usually used to solve positive dimensional solutions of a set of polynomial equations.",
+            "startOffset": 28279,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37477,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The DOF of the moving platform of the 3-RER PM with identical ETBP (or the DOF of the 3-RER PM with identical ETBP) is equal to the number of variables, including x, y, z, e0, e1, e2 and e3, that describe the motion of the moving platform undergoing free motion subtracted by the total number of independent constraints by Eq. (2) and those imposed on the moving platform by the three legs.",
+            "startOffset": 37087,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 45798,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "In Section 5.1, it has been found that the 3-RER PM with non-identical ETBP has two operation modes.",
+            "startOffset": 45698,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 46759,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "In the latter case, the PM cannot switch between its two operation modes without disconnecting or reassembling.",
+            "startOffset": 46648,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 46545,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "It has been found that the PM has three 4-DOF operation modes if the base and moving platform are identical or two 4-DOF operation modes if the base and moving platform are not identical.",
+            "startOffset": 46358,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33970,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "X- and XP-axes pass through joint centers B1 and P1 respectively.",
+            "startOffset": 33905,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 29913,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The 3-RER PM is composed of a base and a moving platform connected by three 3-RER legs, each of which is a serial kinematic chain composed of a revolute (R) joint, a planar (E) joint and an R joint in sequence.",
+            "startOffset": 29703,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46647,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The transition configurations among different operation modes have been obtained for the former case.",
+            "startOffset": 46546,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 46357,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The reconfiguration analysis of a 4-DOF 3-RER PM with ETBP has been studied in detail without using computer algebra systems.",
+            "startOffset": 46232,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 37687,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "It is apparent that the three constraint equations, including Eq. (2) and two constraints imposed on the moving platform by the three legs (Eqs. (16)\u2013(18)), associated with each operation mode are independent.",
+            "startOffset": 37478,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 33092,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The joint centers, Pi (i=1, 2 and 3), of R joints on the moving platform are the intersection of the joint axes and a plane perpendicular to these axes.",
+            "startOffset": 32940,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 40537,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The acting line of the constraint force of a leg passes through the intersection, Ii, of the axes of R joints on the base and moving platform and is perpendicular to the plane of motion of the E joint.",
+            "startOffset": 40336,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 43215,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Each leg imposes a constraint couple on the moving platform, and the total constraints imposed on the moving platform can be represented by one independent constraint couple perpendicular to the axes of all the R joints including those within the E joints.",
+            "startOffset": 42959,
+            "title": "Case nm=2"
+        },
+        {
+            "endOffset": 28188,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This work provided a framework for the reconfiguration analysis of PMs with multiple operation modes.",
+            "startOffset": 28087,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31007,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, conclusions will be drawn.",
+            "startOffset": 30972,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39070,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "A description of motion of the moving platform in all the three operation modes has been obtained and given in Table 2.",
+            "startOffset": 38951,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 36102,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "In the following sections, we will discuss two cases: 3-RER PM with identical ETBP (rP = 1) and 3-RER PM with non-identical ETBP (0 < rP < 1).",
+            "startOffset": 35960,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 40684,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The above wrench system imposed on the moving platform requires that all the lines of action of these constraint forces are parallel and coplanar.",
+            "startOffset": 40538,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 41120,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In Section 4.1, it has been found that the 4-DOF 3-RER PM with identical ETBP has three 4-DOF operation modes.",
+            "startOffset": 41010,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 32797,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The axes of the R joints on the base (moving platform) are all parallel.",
+            "startOffset": 32725,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 33346,
+            "parents": [],
+            "refoffsets": {
+                "bb0125": {
+                    "endOffset": 33345,
+                    "startOffset": 33332
+                },
+                "bb0130": {
+                    "endOffset": 33345,
+                    "startOffset": 33332
+                },
+                "bb0135": {
+                    "endOffset": 33345,
+                    "startOffset": 33332
+                },
+                "bb0140": {
+                    "endOffset": 33345,
+                    "startOffset": 33332
+                }
+            },
+            "secId": "s0015",
+            "sentence": "This PM is in fact a special case of 3T1R PMs proposed in Refs. [25,26,27,28].",
+            "startOffset": 33268,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 28729,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is noted that the formulations of the set of constraint equations of mechanisms proposed in these works are quite different and usually lead to constraint equations with different number of variables.",
+            "startOffset": 28526,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28086,
+            "parents": [],
+            "refoffsets": {
+                "bb0070": {
+                    "endOffset": 28027,
+                    "startOffset": 28023
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Ref. [14], the reconfiguration analysis of the SNU PM was presented.",
+            "startOffset": 28015,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38529,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Eq. (16) is in fact Case No. 10 of the Euler parameter quaternions in Table 1.",
+            "startOffset": 38451,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 39180,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Fig. 3 illustrates three configurations each in one operation mode of the 4-DOF 3-RER PM with identical ETBP.",
+            "startOffset": 39071,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 43885,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Due to link interference in operation mode 1, it can only switch physically between its two operation modes, operation modes 2 and 3, through transition configuration T(2\u039b3) without disconnecting and reassembling.",
+            "startOffset": 43672,
+            "title": "Case nm=3"
+        },
+        {
+            "endOffset": 32257,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 32135,
+                    "startOffset": 32131
+                }
+            },
+            "secId": "s0010",
+            "sentence": "The kinematic interpretation of four out of 15 cases of Euler parameter quaternions [13], which are relevant to the reconfiguration analysis of the 4-DOF 3-RER PM with ETBP, is given in Table 1 for convenience.",
+            "startOffset": 32047,
+            "title": "Classification of Euler parameter quaternions"
+        },
+        {
+            "endOffset": 37087,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Eqs. (16), (17) and (18) represent the total constraints imposed on the moving platform by the three legs of the 3-RER PM with identical ETBP in operation modes 1, 2 and 3 respectively.",
+            "startOffset": 36902,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 40879,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This indicates that in operation mode 3, the plane of motion of the three E joints are parallel, and the plane defined by I1, I2 and I3 are perpendicular to the planes of motion of the E joints.",
+            "startOffset": 40685,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 29242,
+            "parents": [],
+            "refoffsets": {
+                "bb0095": {
+                    "endOffset": 29241,
+                    "startOffset": 29237
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Some are better than others to solve particular kinematic problems [19].",
+            "startOffset": 29170,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27601,
+            "parents": [],
+            "refoffsets": {
+                "bb0010": {
+                    "endOffset": 27092,
+                    "startOffset": 27087
+                },
+                "bb0015": {
+                    "endOffset": 27231,
+                    "startOffset": 27228
+                },
+                "bb0020": {
+                    "endOffset": 27147,
+                    "startOffset": 27144
+                },
+                "bb0025": {
+                    "endOffset": 27187,
+                    "startOffset": 27180
+                },
+                "bb0030": {
+                    "endOffset": 27187,
+                    "startOffset": 27180
+                },
+                "bb0035": {
+                    "endOffset": 27187,
+                    "startOffset": 27180
+                },
+                "bb0040": {
+                    "endOffset": 27474,
+                    "startOffset": 27471
+                },
+                "bb0045": {
+                    "endOffset": 27500,
+                    "startOffset": 27497
+                },
+                "bb0050": {
+                    "endOffset": 27528,
+                    "startOffset": 27518
+                },
+                "bb0055": {
+                    "endOffset": 27528,
+                    "startOffset": 27518
+                },
+                "bb0060": {
+                    "endOffset": 27562,
+                    "startOffset": 27558
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Parallel mechanisms (PMs) with multiple operation modes [2,3] (also called PMs that change their group of motion [4], PMs with bifurcation of motion [5,6,7], or disassembly-free reconfigurable PMs [3]) are a novel class of reconfigurable PMs which need fewer actuators and less time for changeover than the existing reconfigurable PMs1 .",
+            "startOffset": 27031,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42958,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In a transition configuration (Fig. 4), the axes of all the R joints on the base and moving platform are parallel, and the planes of motion of E joints in all the legs are parallel.",
+            "startOffset": 42777,
+            "title": "Case nm=2"
+        },
+        {
+            "endOffset": 32622,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "In each leg, the axes of the two R joints are located on the same plane parallel to the plane of motion of the E joint.",
+            "startOffset": 32503,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 37783,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Therefore, the DOF of the moving platform of the 3-RER PM in each operation mode is 4( =7 \u2212 3).",
+            "startOffset": 37688,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 43671,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The 3-RER PM with identical ETBP has three operation modes theoretically.",
+            "startOffset": 43598,
+            "title": "Case nm=3"
+        },
+        {
+            "endOffset": 44944,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Eqs. (27) and (28) represent the total constraints imposed on the moving platform by the three legs of the 3-RER PM with non-identical ETBP in operation modes 1 and 2 respectively.",
+            "startOffset": 44764,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 30177,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It was astonishing to realize that there is a one-to-one correspondence between these 15 operation modes of the 3-RER PM and the 15 cases of Euler parameter quaternions.",
+            "startOffset": 30008,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38371,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "With the aid of kinematic interpretation of Euler parameter quaternions with different number of zero components (see Table 1), we can reveal the motion characteristics of all the operation modes of the 3-RER PM with identical ETBP.",
+            "startOffset": 38139,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 27777,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Several issues in the research on PMs with multiple operation modes, such as reconfiguration analysis and practical reconfiguration technologies, have not been fully explored.",
+            "startOffset": 27602,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40335,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Leg i (i=1, 2 and 3) usually imposes a constraint force, which is represented using a dotted arrow in Fig. 3 (c), on the moving platform.",
+            "startOffset": 40198,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 43598,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Since the 3-RER PM with identical ETBP has three operation modes and there is no transition configuration between operation modes 1 and 2, there is no transition configuration in which the 3-RER PM can switch among three operation modes from the same transition configuration.",
+            "startOffset": 43322,
+            "title": "Case nm=3"
+        },
+        {
+            "endOffset": 46978,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This work may help reveal insights of PMs with multiple operation modes and further promote the application of Euler parameter quaternions in the analysis and design of PMs, especially PMs with multiple operation modes.",
+            "startOffset": 46759,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 38950,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The above example shows that the kinematic interpretation of Euler parameter quaternions provides an efficient way for revealing the motion characteristics of different operation modes of the 4-DOF 3-RER PM.",
+            "startOffset": 38743,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 41353,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This section will deal with the transition configuration analysis of the 4-DOF 3-RER PM to reveal whether the PM can switch from one operation mode to the other and, if yes, how to switch the PM from one operation mode to the other.",
+            "startOffset": 41121,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 32408,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "A 4-DOF 3-RER PM with ETBP (Fig. 2) is composed of a moving platform connected to the base by three RER legs.",
+            "startOffset": 32299,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 40197,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Since the moving platform has 4 DOF including 2-DOF rotation, the wrench system imposed on the moving platform must be of order 2 and includes one constraint couple.",
+            "startOffset": 40032,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 45412,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "With the aid of kinematic interpretation of Euler parameter quaternions with different number of zero components (see Table 1), the motion characteristics of both operation modes of the 3-RER PM with non-identical ETBP have been obtained and given in Table 4.",
+            "startOffset": 45153,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 35959,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Eqs. (14) and (2) are the equations for the reconfiguration analysis of the 3-RER PM with ETBP.",
+            "startOffset": 35864,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 33904,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The Z- and ZP-axes are, respectively, parallel to the axes of the three R joints on the base and those on the moving platform.",
+            "startOffset": 33778,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 39703,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "refoffsets": {
+                "bb0030": {
+                    "endOffset": 39702,
+                    "startOffset": 39699
+                },
+                "bb0125": {
+                    "endOffset": 39649,
+                    "startOffset": 39639
+                },
+                "bb0130": {
+                    "endOffset": 39649,
+                    "startOffset": 39639
+                },
+                "bb0135": {
+                    "endOffset": 39649,
+                    "startOffset": 39639
+                },
+                "bb0140": {
+                    "endOffset": 39678,
+                    "startOffset": 39674
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The 4-DOF motion of the moving platform in operation modes 1 and 2 are called 3T1R motion [25,26,27], PPPR equivalent motion [28] or Schoenies motion [6].",
+            "startOffset": 39549,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 45908,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Based on the analysis in Section 4.2, there is no transition configuration between these two operation modes.",
+            "startOffset": 45799,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 27030,
+            "parents": [],
+            "refoffsets": {
+                "bb0005": {
+                    "endOffset": 27029,
+                    "startOffset": 27026
+                }
+            },
+            "secId": "s0005",
+            "sentence": "During the past decade, significant advances have been made in the research on reconfigurable mechanisms and robots to meet the need for developing reconfigurable manufacturing systems to reduce the changeover time in production change [1].",
+            "startOffset": 26790,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 33267,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "In this paper, we focus on the case that B1B2B3 and P1P2P3 are both equilateral triangles and the radius of their circumference circles are denoted by rb and rP respectively.",
+            "startOffset": 33093,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 44763,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The above two sets of equations, together with Eq. (2), represent two operation modes of the 3-RER PM with non-identical ETBP: (a) Operation mode 1 satisfying Eqs. (27) and (2) (see Fig. 5 (a)) as well as (b) Operation mode 2 satisfying Eqs. (28) and (2) (see Fig. 5 (b)).",
+            "startOffset": 44491,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 30556,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 30538,
+                    "startOffset": 30534
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Section 2, the kinematic interpretation of different cases of Euler parameter quaternions with different numbers of constant zero components [13] will be recalled.",
+            "startOffset": 30390,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30971,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By representing the position and orientation of the moving platform using the Cartesian coordinates of a point on the moving platform and a Euler parameter quaternion respectively, the reconfiguration analysis of the 3-RER PM with identical ETBP and 3-RER PM with non-identical ETBP will be dealt with in Sections 4 and 5 respectively.",
+            "startOffset": 30636,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 34324,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Let the location of the coordinate system OP \u2212 XPYPZP in the coordinate system O \u2212 XY Z be represented by the position of OP, denoted by OP = {x y z}T, and the orientation of the moving platform, denoted by the Euler parameter quaternion q (see Eq. (1)).",
+            "startOffset": 34070,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 43306,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Therefore, the moving platform has five instantaneous DOF in the transition configuration.",
+            "startOffset": 43216,
+            "title": "Case nm=2"
+        },
+        {
+            "endOffset": 45662,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The transformation matrices, Ti (i=1 and 2), of the moving platform in both operation modes are given in Eqs. (19) and (20) respectively.",
+            "startOffset": 45525,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 28014,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 27806,
+                    "startOffset": 27802
+                },
+                "bb0070": {
+                    "endOffset": 27852,
+                    "startOffset": 27848
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Reconfiguration analysis [13] (also called complete kinematic analysis [14]), i.e., to find all the operation modes and the transition configurations of the PM, is a fundamental issue in the research on PMs with multiple operation modes.",
+            "startOffset": 27777,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38023,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Since each leg imposes one constraint on the moving platform and the number of independent constraints in the total constraints imposed on the moving platforms by the three legs is 2, the 3-RER PM with identical ETBP PM is overconstrained.",
+            "startOffset": 37784,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 38743,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "This means that the moving platform in this operation mode will undergo a half-turn rotation about the X-axis followed by a rotation by 2atan2(e2,e1) about the Z-axis and subsequent 3-DOF translation (Fig. 3 (a)).",
+            "startOffset": 38530,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 39869,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The motion of the moving platform in operation mode 3, which is a 4-DOF spatial motion different from the 4-DOF 3T1R motion has not been presented in the literature.",
+            "startOffset": 39704,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 28278,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 28211,
+                    "startOffset": 28198
+                },
+                "bb0075": {
+                    "endOffset": 28211,
+                    "startOffset": 28198
+                },
+                "bb0080": {
+                    "endOffset": 28211,
+                    "startOffset": 28198
+                },
+                "bb0085": {
+                    "endOffset": 28211,
+                    "startOffset": 28198
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Refs. [13,15,16,17], the reconfiguration analysis of several other PMs was dealt with.",
+            "startOffset": 28189,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30389,
+            "parents": [],
+            "refoffsets": {
+                "bb0125": {
+                    "endOffset": 30388,
+                    "startOffset": 30375
+                },
+                "bb0130": {
+                    "endOffset": 30388,
+                    "startOffset": 30375
+                },
+                "bb0135": {
+                    "endOffset": 30388,
+                    "startOffset": 30375
+                },
+                "bb0140": {
+                    "endOffset": 30388,
+                    "startOffset": 30375
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This paper aims to investigate the reconfiguration analysis of a 4-DOF 3-RER PM with ETBP (equilateral triangular base and platform), which is a special case of PMs for generating 4-DOF 3T1R motion [25,26,27,28].",
+            "startOffset": 30177,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46220,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Due to link interference in operation mode 1 (Fig. 5 (a)), the 4-DOF 3-RER PM with non-identical ETBP can only work in operation mode 2 (Fig. 5 (b)).",
+            "startOffset": 46071,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 40974,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The above characteristics can also be proved using algebraic approach by first calculating Ii.",
+            "startOffset": 40880,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 33705,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Let O \u2212 XY Z and OP \u2212 XPYPZP denote the coordinate frames fixed on the base and moving platform respectively.",
+            "startOffset": 33596,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 29512,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 29254,
+                    "startOffset": 29250
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Ref. [13], the Euler parameter quaternions (also Euler\u2013Rodrigues quaternions) have been classified into 15 cases according to the number of their constant zero components and the kinematic interpretation of all the cases of Euler parameter quaternions has been given.",
+            "startOffset": 29242,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 36901,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The above three sets of equations, together with Eq. (2), represent three operation modes of the 3-RER PM with identical ETBP: (a) Operation mode 1 satisfying Eqs. (16) and (2), (b) Operation mode 2 satisfying Eqs. (17)) and (2) as well as (c) Operation mode 3 satisfying Eqs. (18) and (2).",
+            "startOffset": 36611,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 30635,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 3, the description of a 4-DOF 3-RER PM with ETBP will be presented.",
+            "startOffset": 30557,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 40032,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "refoffsets": {
+                "bb0140": {
+                    "endOffset": 40030,
+                    "startOffset": 40023
+                },
+                "bb0155": {
+                    "endOffset": 40030,
+                    "startOffset": 40023
+                }
+            },
+            "secId": "s0025",
+            "sentence": "In the following, the geometric characteristics of the PM in operation mode 3 (Fig. 3 (c)) will be revealed based on screw theory (see for example Refs. [28,31]).",
+            "startOffset": 39870,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 29702,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The above results have also been used to the reconfiguration analysis of a 3-DOF (degrees-of-freedom) 3-RER PM with orthogonal base and moving platform, which has 15 3-DOF operations modes.",
+            "startOffset": 29513,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46071,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Reconfiguration analysis of a 3-RER PM with non-identical ETBP"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Once the 3-RER PM with non-identical ETBP is assembled in one operation mode, it cannot switch to the other operation mode without disconnecting and reassembling.",
+            "startOffset": 45909,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 47136,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "The type synthesis of PMs generating the same 4-DOF motion as the 4-DOF 3-RER PM with identical ETBP in operation mode 3 also deserves further investigation.",
+            "startOffset": 46979,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 33596,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "As it will be shown later in Sections 4 and 5, this 3-RER PM may have three 4-DOF operation modes, including two 3T1R operation modes, if the base and moving platform are identical or two 3T1R modes if the base and moving platform are not identical.",
+            "startOffset": 33347,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 29104,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 28921,
+                    "startOffset": 28917
+                },
+                "bb0070": {
+                    "endOffset": 28847,
+                    "startOffset": 28834
+                },
+                "bb0075": {
+                    "endOffset": 28847,
+                    "startOffset": 28834
+                },
+                "bb0080": {
+                    "endOffset": 28847,
+                    "startOffset": 28834
+                },
+                "bb0085": {
+                    "endOffset": 28847,
+                    "startOffset": 28834
+                },
+                "bb0090": {
+                    "endOffset": 28901,
+                    "startOffset": 28897
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For example, Study coordinates are used to represent the motion of the moving platform of a PM in Refs. [14,15,16,17] and for kinematic analysis and synthesis in Ref. [18], while in Ref. [13] , the position and orientation of the moving platform are represented using the Cartesian coordinates of a point on the moving platform and a Euler parameter quaternion respectively.",
+            "startOffset": 28730,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 32939,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The joint centers, Bi (i=1, 2 and 3), of R joints on the base are the intersection of the joint axes and a plane perpendicular to these axes.",
+            "startOffset": 32798,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 33777,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "O and OP are located at the centers of the triangles B1B2B3 and P1P2P3.",
+            "startOffset": 33706,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 32724,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "An E joint is represented by a sub-chain composed of three R joints with parallel axes in this paper.",
+            "startOffset": 32623,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 34070,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "w1, w2 and w3 denote the unit vectors along XP-, YP- and ZP-axes in the coordinate system O \u2212 XY Z.",
+            "startOffset": 33971,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 30007,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The axes of the R joints on the base and the moving platform are all orthogonal respectively.",
+            "startOffset": 29914,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 38450,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Let us take Operation mode 1, which satisfies Eqs. (16) and (2), as an example.",
+            "startOffset": 38371,
+            "title": "Operation mode analysis"
+        },
+        {
+            "endOffset": 29169,
+            "parents": [],
+            "refoffsets": {
+                "bb0100": {
+                    "endOffset": 29154,
+                    "startOffset": 29147
+                },
+                "bb0105": {
+                    "endOffset": 29154,
+                    "startOffset": 29147
+                }
+            },
+            "secId": "s0005",
+            "sentence": "There are a variety of mathematical tools [20,21] in kinematics.",
+            "startOffset": 29105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 32502,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Each RER leg is a serial chain composed of an R joint, an E joint and an R joint in sequence.",
+            "startOffset": 32409,
+            "title": "Description of a 4-DOF 3-RER PM with ETBP"
+        },
+        {
+            "endOffset": 42776,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                },
+                {
+                    "id": "s0030",
+                    "title": "Transition configuration analysis"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "All the transition configurations between each pair of different operation modes have been obtained and are shown in Table 3.",
+            "startOffset": 42651,
+            "title": "Case nm=2"
+        },
+        {
+            "endOffset": 41549,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "To find the transition configurations among two operation modes is to solve the set of constraint equations composed of the two sets of constraint equations associated with these operation modes.",
+            "startOffset": 41354,
+            "title": "Transition configuration analysis"
+        },
+        {
+            "endOffset": 31277,
+            "parents": [],
+            "refoffsets": {
+                "bb0065": {
+                    "endOffset": 31276,
+                    "startOffset": 31272
+                },
+                "bb0145": {
+                    "endOffset": 31159,
+                    "startOffset": 31151
+                },
+                "bb0150": {
+                    "endOffset": 31159,
+                    "startOffset": 31151
+                }
+            },
+            "secId": "s0010",
+            "sentence": "In this section, we will first recall the definition and operation of Euler parameter quaternions [29, 30] as well as kinematic interpretation of the Euler parameter quaternions with different number of zero components [13].",
+            "startOffset": 31053,
+            "title": "Classification of Euler parameter quaternions"
+        },
+        {
+            "endOffset": 36456,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "The reconfiguration analysis of the 3-RER PM with identical ETBP can be carried out using the set of constraint equations (Eqs. (15) and (2)) of the 3-RER PM.",
+            "startOffset": 36298,
+            "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+        },
+        {
+            "endOffset": 38138,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Reconfiguration analysis of a 3-RER PM with identical ETBP"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For simplicity reasons, Eq. (2) will be omitted from all the sets of equations in the remaining part of this paper.",
+            "startOffset": 38023,
+            "title": "Operation mode analysis"
+        }
+    ],
+    "docId": "S0094114X15002931",
+    "metadata": {
+        "asjc": [
+            "1502",
+            "1706",
+            "2210",
+            "2211"
+        ],
+        "authors": [
+            {
+                "email": "X.Kong@hw.ac.uk",
+                "first": "Xianwen",
+                "initial": "X.",
+                "last": "Kong"
+            }
+        ],
+        "doi": "10.1016/j.mechmachtheory.2015.12.007",
+        "firstpage": "180",
+        "issn": "0094114X",
+        "keywords": [
+            "Euler parameters",
+            "Operation mode",
+            "Parallel manipulator with multiple operation modes",
+            "Quaternion",
+            "Reconfiguration analysis"
+        ],
+        "lastpage": "189",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "CENG",
+            "COMP",
+            "ENGI"
+        ],
+        "title": "Reconfiguration analysis of a 4-DOF 3-RER parallel manipulator with equilateral triangular base and moving platform"
+    }
+}

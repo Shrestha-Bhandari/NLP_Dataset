@@ -1,0 +1,1759 @@
+{
+    "abstract": "Daylight redirecting components (DRCs) are characterised by complex transmissive and reflective behaviour that is difficult to predict accurately largely due to their highly directional scattering, and the caustics this produces. This paper examines the application of progressive photon mapping as a state of the art forward raytracing technique to efficiently simulate the behaviour of such DRCs, and how this approach can support architects in assessing their performance.Progressive photon mapping is an iterative variant of static photon mapping that effects noise reduction through accumulation of results, as well as a reduction in bias inherent to all density estimation methods by reducing the associated bandwidth at a predetermined rate. This not only results in simplified parametrisation for the user, but also provides a preview of the progressively refined simulation, thus making the tool accessible to non-experts as well.We demonstrate the effectiveness of this technique with an implementation based on the R. adiancephoton mapping extension and a case study involving retroreflecting prismatic blinds as a representative DRC.",
+    "author_highlights": [
+        {
+            "endOffset": 40423,
+            "sentence": "Progressive photon mapping simplifies parametrisation for non-expert users.",
+            "startOffset": 40348
+        },
+        {
+            "endOffset": 40487,
+            "sentence": "Decomposition into smaller subtasks relaxes memory limitations.",
+            "startOffset": 40424
+        },
+        {
+            "endOffset": 40560,
+            "sentence": "Sigma-weighted accumulation of density estimates results in lower noise.",
+            "startOffset": 40488
+        },
+        {
+            "endOffset": 40620,
+            "sentence": "Reduction of bandwidth results in reduced bias in caustics.",
+            "startOffset": 40561
+        },
+        {
+            "endOffset": 40657,
+            "sentence": "Iterations are executed in parallel.",
+            "startOffset": 40621
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Appelfeld"
+                },
+                {
+                    "first": "Svend",
+                    "initial": "S.",
+                    "last": "Svendsen"
+                }
+            ],
+            "doi": "10.1016/j.enbuild.2013.05.017",
+            "firstpage": "309",
+            "issn": "03787788",
+            "lastpage": "316",
+            "pub_year": 2013,
+            "title": "Performance of a daylight-redirecting glass-shading system",
+            "volume": "64"
+        },
+        "b0010": {
+            "authors": [
+                {
+                    "first": "Ying Chieh",
+                    "initial": "Y.C.",
+                    "last": "Chan"
+                },
+                {
+                    "first": "Athanasios",
+                    "initial": "A.",
+                    "last": "Tzempelikos"
+                }
+            ],
+            "doi": "10.1016/j.solener.2012.07.021",
+            "firstpage": "3109",
+            "issn": "0038092X",
+            "lastpage": "3124",
+            "pub_year": 2012,
+            "title": "A hybrid ray-tracing and radiosity method for calculating radiation transport and illuminance distribution in spaces with venetian blinds",
+            "volume": "86"
+        },
+        "b0015": null,
+        "b0020": {
+            "authors": [
+                {
+                    "first": "Henrik Wann",
+                    "initial": "H.W.",
+                    "last": "Jensen"
+                }
+            ],
+            "doi": "10.1145/1103900.1103920",
+            "pub_year": 2004,
+            "title": "A practical guide to global illumination using ray tracing and photon mapping"
+        },
+        "b0025": null,
+        "b0030": {
+            "authors": [
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "de Boer"
+                }
+            ],
+            "doi": "10.1016/j.enbuild.2006.03.018",
+            "firstpage": "849",
+            "issn": "03787788",
+            "lastpage": "868",
+            "pub_year": 2006,
+            "title": "Modelling indoor illumination by complex fenestration systems based on bidirectional photometric data",
+            "volume": "38"
+        },
+        "b0035": {
+            "authors": [
+                {
+                    "first": "Toshiya",
+                    "initial": "T.",
+                    "last": "Hachisuka"
+                },
+                {
+                    "first": "Shinji",
+                    "initial": "S.",
+                    "last": "Ogaki"
+                },
+                {
+                    "first": "Henrik Wann",
+                    "initial": "H.W.",
+                    "last": "Jensen"
+                }
+            ],
+            "doi": "10.1145/1409060.1409083",
+            "issn": "07300301",
+            "pub_year": 2008,
+            "title": "Progressive photon mapping",
+            "volume": "27"
+        },
+        "b0040": null,
+        "b0045": {
+            "authors": [
+                {
+                    "first": "Anton S.",
+                    "initial": "A.S.",
+                    "last": "Kaplanyan"
+                },
+                {
+                    "first": "Carsten",
+                    "initial": "C.",
+                    "last": "Dachsbacher"
+                }
+            ],
+            "doi": "10.1145/2451236.2451242",
+            "issn": "07300301",
+            "pub_year": 2013,
+            "title": "Adaptive progressive photon mapping",
+            "volume": "32"
+        },
+        "b0050": null,
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Klammt"
+                },
+                {
+                    "first": "Andreas",
+                    "initial": "A.",
+                    "last": "Neyer"
+                },
+                {
+                    "first": "Helmut F.O.",
+                    "initial": "H.F.O.",
+                    "last": "M\u00fcller"
+                }
+            ],
+            "doi": "10.1016/j.solener.2012.02.034",
+            "firstpage": "1660",
+            "issn": "0038092X",
+            "lastpage": "1666",
+            "pub_year": 2012,
+            "title": "Redirection of sunlight by microstructured components - Simulation, fabrication and experimental results",
+            "volume": "86"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Claude",
+                    "initial": "C.",
+                    "last": "Knaus"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Zwicker"
+                }
+            ],
+            "doi": "10.1145/1966394.1966404",
+            "issn": "07300301",
+            "pub_year": 2011,
+            "title": "Progressive photon mapping: A probabilistic approach",
+            "volume": "30"
+        },
+        "b0065": null,
+        "b0070": null,
+        "b0075": null,
+        "b0080": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "McNeil"
+                },
+                {
+                    "first": "C. J.",
+                    "initial": "C.J.",
+                    "last": "Jonsson"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Appelfeld"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Ward"
+                },
+                {
+                    "first": "E. S.",
+                    "initial": "E.S.",
+                    "last": "Lee"
+                }
+            ],
+            "doi": "10.1016/j.solener.2013.09.032",
+            "firstpage": "404",
+            "issn": "0038092X",
+            "lastpage": "414",
+            "pub_year": 2013,
+            "title": "A validation of a ray-tracing tool used to generate bi-directional scattering distribution functions for complex fenestration systems",
+            "volume": "98"
+        },
+        "b0085": null,
+        "b0090": {
+            "authors": [
+                {
+                    "first": "Roland",
+                    "initial": "R.",
+                    "last": "Schregle"
+                }
+            ],
+            "doi": "10.1111/j.1467-8659.2003.00720.x",
+            "firstpage": "729",
+            "issn": "01677055",
+            "lastpage": "742",
+            "pub_year": 2003,
+            "title": "Bias Compensation for Photon Maps",
+            "volume": "22"
+        },
+        "b0095": null,
+        "b0100": {
+            "authors": [
+                {
+                    "first": "Roland",
+                    "initial": "R.",
+                    "last": "Schregle"
+                },
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Wienold"
+                }
+            ],
+            "doi": "10.1111/j.1467-8659.2004.00807.x",
+            "firstpage": "761",
+            "issn": "01677055",
+            "lastpage": "781",
+            "pub_year": 2004,
+            "title": "Physical validation of global illumination methods: Measurement and error analysis",
+            "volume": "23"
+        },
+        "b0105": {
+            "authors": [
+                {
+                    "first": "Yuehong",
+                    "initial": "Y.",
+                    "last": "Su"
+                },
+                {
+                    "first": "Gang",
+                    "initial": "G.",
+                    "last": "Pei"
+                },
+                {
+                    "first": "Saffa B.",
+                    "initial": "S.B.",
+                    "last": "Riffat"
+                },
+                {
+                    "first": "Hulin",
+                    "initial": "H.",
+                    "last": "Huang"
+                }
+            ],
+            "doi": "10.1016/j.egypro.2011.12.977",
+            "firstpage": "572",
+            "issn": "18766102",
+            "lastpage": "577",
+            "pub_year": 2012,
+            "title": "Radiance/Pmap simulation of a novel lens-walled compound parabolic concentrator (lens-walled CPC)",
+            "volume": "14"
+        },
+        "b0110": {
+            "authors": [
+                {
+                    "first": "Gregory J.",
+                    "initial": "G.J.",
+                    "last": "Ward"
+                }
+            ],
+            "doi": "10.1145/192161.192286",
+            "firstpage": "459",
+            "lastpage": "472",
+            "pub_year": 1994,
+            "title": "The RADIANCE lighting simulation and rendering system"
+        },
+        "b0115": {
+            "authors": [
+                {
+                    "first": "Stephen",
+                    "initial": "S.",
+                    "last": "Wittkopf"
+                },
+                {
+                    "first": "Lars",
+                    "initial": "L.",
+                    "last": "Oliver Grobe"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Geisler-Moroder"
+                },
+                {
+                    "first": "Rapha\u00ebl",
+                    "initial": "R.",
+                    "last": "Compagnon"
+                },
+                {
+                    "first": "J\u00e9r\u00f4me",
+                    "initial": "J.",
+                    "last": "K\u00e4mpf"
+                },
+                {
+                    "first": "Friedrich",
+                    "initial": "F.",
+                    "last": "Linhart"
+                },
+                {
+                    "first": "Jean Louis",
+                    "initial": "J.L.",
+                    "last": "Scartezzini"
+                }
+            ],
+            "doi": "10.1016/j.solener.2010.03.008",
+            "firstpage": "986",
+            "issn": "0038092X",
+            "lastpage": "996",
+            "pub_year": 2010,
+            "title": "Ray tracing study for non-imaging daylight collectors",
+            "volume": "84"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 69483,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "Progressive photon mapping not only yielded similar results in this test but also effected nearly a twofold speedup (5.5 vs 11.8 min) over static photon mapping.",
+            "startOffset": 69322,
+            "title": "Validation with static photon mapping"
+        },
+        {
+            "endOffset": 50671,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This behaviour is difficult to simulate accurately with backward raytracing due to the inability to predict ray directions which contribute to a caustic, making it an ideal case study for forward ray tracing, and therefore photon mapping.",
+            "startOffset": 50433,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 42893,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Forward raytracing is particularly effective at modelling highly specular DRCs with strong redirection to produce concentrated highlights (caustics), which can compromise an office occupant\u2019s visual comfort.",
+            "startOffset": 42686,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46615,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "There are few documented cases of photon mapping being used as forward raytracer in daylight simulation.",
+            "startOffset": 46511,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 44367,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 44136,
+                    "startOffset": 44122
+                }
+            },
+            "secId": "s0010",
+            "sentence": "de Boer (2006) presented a new method for modelling DRCs by representing the light transmitted though the system as a luminous intensity distribution obtained with raytracing, effectively presaging the genBSDF solution now bundled with Radiance.",
+            "startOffset": 44122,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 63391,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "It is simpler to implement, has a much more compact (and above all, bounded) memory footprint, and exhibits similar noise rejection characteristics at a computational load marginally higher than nonselective averaging.",
+            "startOffset": 63173,
+            "title": "Sigma-weighted average"
+        },
+        {
+            "endOffset": 70360,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "We believe that such a tool will be well received in the daylight simulation community by experts and novices alike.",
+            "startOffset": 70244,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 49537,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "For reasons we will elaborate on, we consider it an evolution from the previous photon mapping extension to Radiance that will benefit architects and lighting engineers alike in terms of ease of use and efficient workflow.",
+            "startOffset": 49315,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 49890,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These are characterised by retroreflection of direct sunlight at high incident angles, and redirection of indirect sky light towards the interior (see Fig. 1).",
+            "startOffset": 49731,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 45485,
+            "parents": [],
+            "refoffsets": {
+                "b0010": {
+                    "endOffset": 45412,
+                    "startOffset": 45385
+                }
+            },
+            "secId": "s0010",
+            "sentence": "A hybrid simulation using raytracing and radiosity was used by Chan and Tzempelikos (2012) to assess glare from specular venetian blinds in various configurations.",
+            "startOffset": 45322,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 42102,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The accurate simulation of daylight redirecting components (DRCs) is essential in assessing their performance and predicting their energy saving potential through daylight autonomy.",
+            "startOffset": 41921,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58286,
+            "parents": [],
+            "refoffsets": {
+                "b0015": {
+                    "endOffset": 58149,
+                    "startOffset": 58132
+                }
+            },
+            "secId": "s0065",
+            "sentence": "The static Radiance photon map is usually used with a low resolution global photon map visualised indirectly via an ambient bounce (often referred to as final gather (Christensen, 1999)), and a dedicated high resolution caustic photon map accounting exclusively for specular light transport, which is visualised directly.",
+            "startOffset": 57965,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 46074,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 45926,
+                    "startOffset": 45897
+                }
+            },
+            "secId": "s0010",
+            "sentence": "More recently, Appelfeld and Svendsen (2013) characterised glare and energy savings for light redirecting glass shading systems using Radiance\u2019s 3-phase method for annual daylight utilisation.",
+            "startOffset": 45882,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 60273,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "One drawback of sigma clip is that it will omit all pixels which fall outside the deviation tolerance from the mean, potentially resulting in no pixels contributing to the average and leaving gaps in combined images.",
+            "startOffset": 60057,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 45051,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Such DRCs could not be simulated with comparable accuracy and computation time using a backward raytracer due to excessive noise.",
+            "startOffset": 44922,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 51718,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Inexperienced users will no doubt be frustrated by this need to \u201ccommit\u201d themselves to a fixed photon map size, as it depends on a number of factors, including the scene extent, the geometry, the material properties, and the light sources.",
+            "startOffset": 51479,
+            "title": "Fixed photon map size"
+        },
+        {
+            "endOffset": 67851,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "The user would also lack a visual feedback of the expected quality of the renderings if the parametrisation were infact sound, implying a degree of uncertainty until the results are available.",
+            "startOffset": 67659,
+            "title": "Visual convergence"
+        },
+        {
+            "endOffset": 52880,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 52808,
+                    "startOffset": 52783
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The notion of combining density estimates from several smaller photon maps was first proposed by Christensen et al. (2004) to handle very complex photon maps which won\u2019t fit into memory at once.",
+            "startOffset": 52686,
+            "title": "Combining photon maps"
+        },
+        {
+            "endOffset": 57702,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The convergence criteria specified by the user include a threshold for the deviation between consecutive combined images, since this error drops on average as iteration progresses.",
+            "startOffset": 57522,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 47731,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "It combines multiple smaller photon maps to approximate a much larger one which may not fit into memory using the traditional approach.",
+            "startOffset": 47596,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 43933,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The standard photon mapping approach has since been superseded by recent developments in the computer graphics community; progressive photon mapping is now the state of the art forward raytracing approach, which overcomes a number of issues with the original implementation that improve its usability for non-experts, notably in the context of daylight simulation.",
+            "startOffset": 43569,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46738,
+            "parents": [],
+            "refoffsets": {
+                "b0090": {
+                    "endOffset": 46736,
+                    "startOffset": 46722
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Photon mapping is particularly efficient at simulating caustics, albeit subject to a bias/noise tradeoff (Schregle, 2003).",
+            "startOffset": 46616,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 43248,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The technique mimics light particle transport by recording indirect hitpoints along with their associated energy, and uses density estimation to reconstruct the resulting irradiance on the surfaces.",
+            "startOffset": 43050,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42368,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Raytracing techniques have proven to be particularly expedient in this application as they accurately model the light transport within the components (assuming an accurate representation of material properties) and how it propagates in a typical office environment.",
+            "startOffset": 42103,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65091,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "While the script computes the bandwidth as floating point value for each iteration, the nearest neighbour lookups for density estimation can only search for an integer number of photons.",
+            "startOffset": 64905,
+            "title": "Analysis of bandwidth reduction"
+        },
+        {
+            "endOffset": 46283,
+            "parents": [],
+            "refoffsets": {
+                "b0080": {
+                    "endOffset": 46094,
+                    "startOffset": 46074
+                }
+            },
+            "secId": "s0010",
+            "sentence": "McNeil et al. (2013) described the recently developed genBSDF tool from the Radiance suite to obtain bidirectional scattering distribution functions (BSDFs) from fenestration systems and DRCs using raytracing.",
+            "startOffset": 46074,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 53496,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "By accumulating and averaging the photon densities of a number of smaller photon maps, we can effectively increase the number of samples, thus lowering the noise independently of the bandwidth.",
+            "startOffset": 53303,
+            "title": "Noise reduction through accumulation"
+        },
+        {
+            "endOffset": 55493,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The dependence of each iteration solely on the initial bandwidth implies inherent parallelism which can be easily leveraged with commodity multi-core CPUs.",
+            "startOffset": 55338,
+            "title": "Bias reduction through bandwidth reduction"
+        },
+        {
+            "endOffset": 50121,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Retroreflection is effected for light incident at high angles by the specular prismatic profile on the upper side of each lamella, which effectively constitutes a Fresnel mirror whose focal point lies just outside the fenestration.",
+            "startOffset": 49890,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 47109,
+            "parents": [],
+            "refoffsets": {
+                "b0105": {
+                    "endOffset": 47005,
+                    "startOffset": 46989
+                }
+            },
+            "secId": "s0010",
+            "sentence": "A more recent application of the Radiance photon map was documented by Su et al. (2012), who used the tool to evaluate the optical performance of lens-walled compound parabolic concentrators.",
+            "startOffset": 46918,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 59049,
+            "parents": [],
+            "refoffsets": {
+                "b0085": {
+                    "endOffset": 58963,
+                    "startOffset": 58938
+                }
+            },
+            "secId": "s0065",
+            "sentence": "We have implemented the progressive Radiance photon map as a proof of concept in a Perl script using the Perl Data Language (2014) to accumulate the rendered images and evaluate the deviation using matrix operations.",
+            "startOffset": 58833,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 51776,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Even experienced users must exercise good judgement here.",
+            "startOffset": 51719,
+            "title": "Fixed photon map size"
+        },
+        {
+            "endOffset": 58491,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In our progressive photon mapping approach we instead directly visualise the global photon map without generating a caustic photon map, as the former already includes caustics, albeit at lower resolution.",
+            "startOffset": 58287,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 48886,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 48699,
+                    "startOffset": 48675
+                }
+            },
+            "secId": "s0010",
+            "sentence": "An alternative interpretation of progressive photon mapping was presented by Knaus and Zwicker (2011), who developed a statistical model for the variance and bias from photon density estimates to study their asymptotic behaviour as more photons are generated and the bandwidth is reduced.",
+            "startOffset": 48598,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 53719,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Crucial to this is the generation of disparate photon distributions by individually seeding the random number generator for each forward pass, as identical photon distributions will effect no reduction in noise whatsoever.",
+            "startOffset": 53497,
+            "title": "Noise reduction through accumulation"
+        },
+        {
+            "endOffset": 46848,
+            "parents": [],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 46847,
+                    "startOffset": 46820
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Validated results of the photon mapping extension to Radiance were documented by Schregle and Wienold (2004).",
+            "startOffset": 46739,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 69189,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "The significant deviations are caused by aliasing in the specular component of the blinds due to undersampled primary rays in the static rendering (although this can be increased with an appropriate rpict parameter).",
+            "startOffset": 68973,
+            "title": "Validation with static photon mapping"
+        },
+        {
+            "endOffset": 48492,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 48103,
+                    "startOffset": 48091
+                }
+            },
+            "secId": "s0010",
+            "sentence": "At the same time, the density estimate bandwidth1 (radius or number of nearest photons) is gradually reduced to mitigate bias.",
+            "startOffset": 47870,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 49192,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The approach is considerably simpler than Hachisuka\u2019s as there is no need to maintain local statistics from previously generated photon maps, and the iterations are independent and can thus be performed in parallel; this is leveraged in our implementation, which draws heavily on Knaus and Zwicker\u2019s work.",
+            "startOffset": 48887,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 45882,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Chan and Tzempelikos also validated their results against simulations with Radiance.",
+            "startOffset": 45798,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 70749,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "It would make sense to extend the functionality to include these in subsequent renderings (e.g at higher resolutions or from different viewpoints), rather than regenerating the photon maps from scratch.",
+            "startOffset": 70547,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 52660,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Progressive photon mapping addresses the above mentioned practical issues by leveraging the following insights into the nature of photon mapping:",
+            "startOffset": 52515,
+            "title": "Fundamentals of progressive photon mapping"
+        },
+        {
+            "endOffset": 70926,
+            "parents": [],
+            "refoffsets": {
+                "b0025": {
+                    "endOffset": 70925,
+                    "startOffset": 70914
+                }
+            },
+            "secId": "s0110",
+            "sentence": "The Perl Data Language, while effective at handling large matrices, depends on many nonstandard Perl modules to run the script, which must be manually installed via CPAN (2014).",
+            "startOffset": 70749,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 48598,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "As Hachisuka points out, the accumulated density estimates converge to an unbiased solution in the limit.",
+            "startOffset": 48493,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 69887,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "Our proof-of-concept implementation based on the validated Radiance photon map shows great potential as a valuable daylight planning tool for components exhibiting strong redirection.",
+            "startOffset": 69704,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 50289,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "At the same time, light incident from low angles is reflected towards the diffuse underside of the lamella immediately above, whence it is scattered into the interior.",
+            "startOffset": 50122,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 45640,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Specular light transport is raytraced, while diffuse transport (from the underside of the blinds and room surfaces) is obtained from a radiosity solution.",
+            "startOffset": 45486,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 69322,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "Maximum deviations of around 30% are noticeable in the dark interior behind the blinds, which are attributed to low frequency noise.",
+            "startOffset": 69190,
+            "title": "Validation with static photon mapping"
+        },
+        {
+            "endOffset": 57965,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In addition, the user can prematurely terminate the progression by a keypress once (s) he is satisfied with the results.",
+            "startOffset": 57845,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 67506,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "As can be seen in this progression, noise in the density estimates is reduced through accumulation and selective averaging, while the bias is mitigated by bandwidth reduction, thus preserving the caustics visible on the window frame which characterise the blinds\u2019 retroreflective behaviour.",
+            "startOffset": 67216,
+            "title": "Visual convergence"
+        },
+        {
+            "endOffset": 47408,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Su astutely noted that some deviations were probably attributed to the local bias inherent in the photon map\u2019s density estimates.",
+            "startOffset": 47279,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 70084,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "In addition to the efficient simulation of caustics fundamental to all photon mapping variants, progressive photon mapping provides a preview rendering of the simulation as it undergoes refinement.",
+            "startOffset": 69887,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 63172,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "We have found sigma-weighted averaging to be a good alternative to sigma clip when combining images.",
+            "startOffset": 63072,
+            "title": "Sigma-weighted average"
+        },
+        {
+            "endOffset": 70456,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "Having served as a testbed, our current implementation in script form needs further development.",
+            "startOffset": 70360,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 44814,
+            "parents": [],
+            "refoffsets": {
+                "b0115": {
+                    "endOffset": 44652,
+                    "startOffset": 44630
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Wittkopf et al. (2010) simulated light pipes and ducts fitted with different collector types using a commercial forward raytracer (Photopia) to obtain luminous intensity distributions.",
+            "startOffset": 44630,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 56934,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The generated photon map is then visualised with the current density estimate bandwidth using rpict.",
+            "startOffset": 56834,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 60832,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "This sophistication comes at a price as it does require maintaining a stack of images in memory, since recomputing the mean and standard deviation for each iteration requires all images.",
+            "startOffset": 60646,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 70546,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "While the partial photon maps generated at each iteration are saved, they are not reused.",
+            "startOffset": 70457,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 60401,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "One simple solution included in our study was to draw on the single pixel with the lowest deviation (i.e. closest to the mean).",
+            "startOffset": 60274,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 43428,
+            "parents": [],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 43426,
+                    "startOffset": 43412
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The forward raytracing solution presented in this paper is based on a photon mapping extension to the Radiance rendering system originally developed by the author (Schregle, 2004).",
+            "startOffset": 43248,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49730,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "b0065": {
+                    "endOffset": 49657,
+                    "startOffset": 49645
+                }
+            },
+            "secId": "s0020",
+            "sentence": "In this paper, we draw upon retroreflecting prismatic blinds (K\u00f6ster, 2004) as a representative DRC for exposition of our photon mapping algorithm.",
+            "startOffset": 49583,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 69703,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "We have presented an application of progressive photon mapping for the accurate simulation of daylight redirecting components, using retroreflecting prismatic blinds as a representative case study.",
+            "startOffset": 69506,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 59611,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "While this is fast and simple to implement, it is very susceptible to noise from outlying pixels, especially due to numerical instabilities as the density estimate bandwidth gets very low.",
+            "startOffset": 59423,
+            "title": "Average"
+        },
+        {
+            "endOffset": 59714,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "More sophisticated algorithms perform selective averaging, resulting in much stronger noise rejection.",
+            "startOffset": 59612,
+            "title": "Average"
+        },
+        {
+            "endOffset": 50887,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Standard (static) photon mapping as implemented in the Radiance photon map has a number of fundamental limitations which pose a challenge particularly to novice users:",
+            "startOffset": 50720,
+            "title": "Current limitations of the Radiance photon map"
+        },
+        {
+            "endOffset": 51311,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "With extreme photon map sizes, the mkpmap forward raytracer and photon map generator will typically run out of memory during the forward pass after a substantial runtime.",
+            "startOffset": 51141,
+            "title": "Memory constraints"
+        },
+        {
+            "endOffset": 43049,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 42921,
+                    "startOffset": 42909
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Photon mapping (Jensen, 2001) is a forward raytracing technique which supplements a standard backward raytracer, resulting in bidirectional light transport.",
+            "startOffset": 42893,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44466,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The results were validated with Radiance using measured BRDFs with wavelet based data compression.",
+            "startOffset": 44368,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 50432,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The prismatic structure therefore makes the blinds angularly selective, and in practice they require minor adjustment of the inclination angle.",
+            "startOffset": 50289,
+            "title": "Retroreflecting prismatic blinds"
+        },
+        {
+            "endOffset": 60646,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "In general, this fallback is only noticeable in the early stages of iteration before the density estimates stabilise.",
+            "startOffset": 60529,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 49314,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "To our knowledge there are currently no documented instances of progressive photon mapping applied to daylight simulation.",
+            "startOffset": 49192,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 58833,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "While this results in a noisier and coarser representation of global illumination per iteration, the effect is mitigated by accumulation, and at considerably lower cost than with final gather.",
+            "startOffset": 58641,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 44630,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In his introduction, de Boer points out the necessity of supplementing existing backward raytracers with a forward raytracing pass for accurate simulation of DRCs.",
+            "startOffset": 44467,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 61223,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "While the results with sigma clip were clearly superior to those obtained through nonselective averaging, the overhead made it impractical to the degree that it was only usable at very low resolutions and/or few iterations.",
+            "startOffset": 61000,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 51478,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "A user must decide a priori how many photons to store, often to realise the resulting quality is insufficient, requiring a new run of mkpmap.",
+            "startOffset": 51337,
+            "title": "Fixed photon map size"
+        },
+        {
+            "endOffset": 59422,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "A straightforward way to combine the renderings of the photon density estimates is to simply average them as shown in Fig. 3.",
+            "startOffset": 59297,
+            "title": "Average"
+        },
+        {
+            "endOffset": 52172,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Setting the bandwidth too high will reduce the noise but introduce blurring, which constitutes a systematic error or bias (see Fig. 2).",
+            "startOffset": 52037,
+            "title": "Noise vs. bias"
+        },
+        {
+            "endOffset": 53262,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Thus a large photon map can be effectively broken up into smaller ones which can be handled independently within a reduced memory footprint.",
+            "startOffset": 53122,
+            "title": "Combining photon maps"
+        },
+        {
+            "endOffset": 47278,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In their work, they compared the results with those obtained from the Photopia forward raytracer and theoretical estimates; in both cases the deviations were within 5%.",
+            "startOffset": 47110,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 71026,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "This requires expert knowledge of Perl which cannot be generally expected from the target audience.",
+            "startOffset": 70927,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 53921,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "By reducing the bandwidth over a number of accumulated density estimates, the bias is reduced, while at the same time the noise drops through accumulation.",
+            "startOffset": 53766,
+            "title": "Bias reduction through bandwidth reduction"
+        },
+        {
+            "endOffset": 71205,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "To address these issues, we plan a more robust and extensible reimplementation in a higher-level scripting language such as Python, or in Radiance\u2019s native C programming language.",
+            "startOffset": 71026,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 43569,
+            "parents": [],
+            "refoffsets": {
+                "b0110": {
+                    "endOffset": 43489,
+                    "startOffset": 43479
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It extends the Radiance backward raytracing core (Ward, 1994) with a forward raytracer for bidirectional light transport as described above.",
+            "startOffset": 43429,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53121,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Assuming uniform density, a density estimate with a large bandwidth from one large photon map corresponds to the accumulated density estimates from several smaller constituent photon maps with proportionally reduced bandwidths (see Fig. 3).",
+            "startOffset": 52881,
+            "title": "Combining photon maps"
+        },
+        {
+            "endOffset": 55703,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0045",
+                    "title": "Fundamentals of progressive photon mapping"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Furthermore, it requires no modification to an existing photon mapping implementation beyond the ability to generate different photon distributions for each iteration, effectively treating it as a \u201cblack box\u201d.",
+            "startOffset": 55494,
+            "title": "Bias reduction through bandwidth reduction"
+        },
+        {
+            "endOffset": 56833,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Each iteration generates a photon map via mkpmap with an individual seed for the random number generator in order to avoid regenerating the same photon distribution.",
+            "startOffset": 56668,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 61000,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "Not surprisingly, the computational load and memory consumption grows with each iteration, severely limiting the resolution of the renderings and number of iterations.",
+            "startOffset": 60833,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 51140,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "There is obviously a limit to how many photons can be generated and stored, either due to limited physical memory (in which case excessive paging to/from disk rapidly and severely degrades performance) or an OS-imposed soft limit.",
+            "startOffset": 50910,
+            "title": "Memory constraints"
+        },
+        {
+            "endOffset": 57249,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "The generated images are then accumulated in another concurrent thread to merge the density estimates from the constituent photon maps, and a preview is displayed using a simple linear tone-mapping with gamma correction.",
+            "startOffset": 57029,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 47595,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 47480,
+                    "startOffset": 47457
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Progressive photon mapping was first proposed by Hachisuka et al. (2008) as an iterative extension of the standard static photon mapping approach as implemented in the Radiance extension.",
+            "startOffset": 47408,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 70243,
+            "parents": [],
+            "secId": "s0110",
+            "sentence": "As a result, the user is relieved of the intricate parametrisation of static photon mapping and can readily assess the quality of the simulation \u201con the fly\u201d.",
+            "startOffset": 70085,
+            "title": "Conclusion and outlook"
+        },
+        {
+            "endOffset": 59255,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "PDL is considerably more flexible and efficient at manipulating large datasets than using Perl arrays, and includes modules for data file import/export, bitmap display, and multithreading with shared data.",
+            "startOffset": 59050,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 47869,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Through iteration, the process mitigates the noise inherent in Monte Carlo raytracing by combining successive results and averaging them.",
+            "startOffset": 47732,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 52036,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "As a characteristic of Monte Carlo simulations, noise generally results from insufficient sampling; in the case of the photon map, this implies too few photons in the photon map overall and/or for the density estimate due to a low bandwidth.",
+            "startOffset": 51795,
+            "title": "Noise vs. bias"
+        },
+        {
+            "endOffset": 44921,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The results were then used to characterise the systems based on transmitted flux as performance criterion.",
+            "startOffset": 44815,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 58640,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "This avoids the additional expense of the ambient component\u2019s stratified daughter rays, which would be significant if performed for every iteration.",
+            "startOffset": 58492,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 45797,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "As the latter disregards all specular components, simulations using only radiosity revealed significant errors of up to 40% compared to the hybrid approach.",
+            "startOffset": 45641,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 67658,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "It would be challenging for a non-expert user to make an educated guess at a suitable number of photons for this simulation using static photon mapping.",
+            "startOffset": 67506,
+            "title": "Visual convergence"
+        },
+        {
+            "endOffset": 68097,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "With progressive photon mapping, the user has the ability to ascertain the final quality of the rendering at an early stage, and can interrupt the progression, affording him/her a more immediate level of control compared to static photon mapping.",
+            "startOffset": 67851,
+            "title": "Visual convergence"
+        },
+        {
+            "endOffset": 44122,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "A number of publications have documented raytracing simulations applied to a broad spectrum of DRCs, notably those with strong redirection for which raytracing is best suited.",
+            "startOffset": 43947,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 42685,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Although light transport along a ray is inherently bidirectional (reversing the direction of light propagation does not invalidate the model), there is a distinction between backward and forward raytracers; the former emit rays at the view or measurement point(s), whereas the latter emit rays from the light sources.",
+            "startOffset": 42368,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52470,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Background"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Current limitations of the Radiance photon map"
+                }
+            ],
+            "refoffsets": {
+                "b0090": {
+                    "endOffset": 52367,
+                    "startOffset": 52353
+                }
+            },
+            "secId": "s0040",
+            "sentence": "While noise is visually objectionable, bias is equally problematic as it distorts the local energy distribution represented by the photons collected in a nearest neighbour lookup (Schregle, 2003); caustics, in particular, will be diminished in intensity, resulting in compromised numeric accuracy.",
+            "startOffset": 52173,
+            "title": "Noise vs. bias"
+        },
+        {
+            "endOffset": 45322,
+            "parents": [],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 45071,
+                    "startOffset": 45051
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Klammt et al. (2012) simulated microstructured light redirecting devices using 2D raytracing; a comparison of the results with measurements indicated good agreement aside from deviations introduced by manufacturing tolerances, which are amplified by specular redirection.",
+            "startOffset": 45051,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 46918,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The simulation tool outlined in this paper is based on this software.",
+            "startOffset": 46849,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 57844,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "In case the error plateaus due to excessive variance introduced by bandwidth reduction, a hard limit is imposed by a maximum iteration count.",
+            "startOffset": 57703,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 65215,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0095",
+            "sentence": "Therefore, the bandwidth is clamped to its ceiling for actual rendering, and is consequently plotted as such in the figure.",
+            "startOffset": 65092,
+            "title": "Analysis of bandwidth reduction"
+        },
+        {
+            "endOffset": 60528,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Overview of our implementation"
+                },
+                {
+                    "id": "s0070",
+                    "title": "Combining density estimates"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "While this leads to visible discontinuities in the combined images it is considerably less disturbing than outright omissions.",
+            "startOffset": 60402,
+            "title": "Sigma clip"
+        },
+        {
+            "endOffset": 46511,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The resulting data was validated against analytically derived solutions for trivial cases, and against a commercial raytracer and goniometric measurements for more complex cases such as specular blinds and microperforated film.",
+            "startOffset": 46284,
+            "title": "Previous work"
+        },
+        {
+            "endOffset": 57028,
+            "parents": [],
+            "secId": "s0065",
+            "sentence": "Iterations can be parallelised into a number of concurrent threads to accelerate convergence.",
+            "startOffset": 56935,
+            "title": "Overview of our implementation"
+        },
+        {
+            "endOffset": 68972,
+            "parents": [
+                {
+                    "id": "s0090",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0105",
+            "sentence": "It is clear that the results are not only visually similar, but also numerically, as evidenced in the falsecolour image of the relative deviations, which lie on average at ca. 4%.",
+            "startOffset": 68793,
+            "title": "Validation with static photon mapping"
+        }
+    ],
+    "docId": "S0038092X15000559",
+    "metadata": {
+        "asjc": [
+            "2105",
+            "2500"
+        ],
+        "authors": [
+            {
+                "email": "roland.schregle@hslu.ch",
+                "first": "R.",
+                "initial": "R.",
+                "last": "Schregle"
+            },
+            {
+                "email": null,
+                "first": "L.",
+                "initial": "L.",
+                "last": "Grobe"
+            },
+            {
+                "email": null,
+                "first": "S.",
+                "initial": "S.",
+                "last": "Wittkopf"
+            }
+        ],
+        "doi": "10.1016/j.solener.2015.01.041",
+        "firstpage": "327",
+        "issn": "0038092X",
+        "keywords": [
+            "Caustics",
+            "Daylight simulation",
+            "Light redirection",
+            "Monte Carlo",
+            "Physically based rendering",
+            "Raytracing"
+        ],
+        "lastpage": "336",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "ENER",
+            "MATE"
+        ],
+        "title": "Progressive photon mapping for daylight redirecting components"
+    }
+}

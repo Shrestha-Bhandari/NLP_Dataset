@@ -1,0 +1,4412 @@
+{
+    "abstract": "Knowledge graphs are an increasingly important source of data and context information in Data Science. A first step in data analysis is data exploration, in which visualization plays a key role. Currently, Semantic Web technologies are prevalent for modeling and querying knowledge graphs; however, most visualization approaches in this area tend to be overly simplified and targeted to small-sized representations. In this work, we describe and evaluate the performance of a Big Data architecture applied to large-scale knowledge graph visualization. To do so, we have implemented a graph processing pipeline in the Apache Spark framework and carried out several experiments with real-world and synthetic graphs. We show that distributed implementations of the graph building, metric calculation and layout stages can efficiently manage very large graphs, even without applying partitioning or incremental processing strategies.",
+    "author_highlights": [
+        {
+            "endOffset": 48807,
+            "sentence": "We present a distributed framework for the generation of graph visualizations.",
+            "startOffset": 48729
+        },
+        {
+            "endOffset": 48887,
+            "sentence": "We study the performance of the pre-processing, measure calculation and layout.",
+            "startOffset": 48808
+        },
+        {
+            "endOffset": 48952,
+            "sentence": "Experimental results show that graph layout is a critical stage.",
+            "startOffset": 48888
+        },
+        {
+            "endOffset": 49029,
+            "sentence": "High performance is achieved without applying graph optimization strategies.",
+            "startOffset": 48953
+        }
+    ],
+    "bib_entries": {
+        "b1": null,
+        "b10": {
+            "authors": [
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Newman"
+                },
+                {
+                    "first": "Timothy",
+                    "initial": "T.",
+                    "last": "Baldwin"
+                },
+                {
+                    "first": "Lawrence",
+                    "initial": "L.",
+                    "last": "Cavedon"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Huang"
+                },
+                {
+                    "first": "Sarvnaz",
+                    "initial": "S.",
+                    "last": "Karimi"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Martinez"
+                },
+                {
+                    "first": "Falk",
+                    "initial": "F.",
+                    "last": "Scholer"
+                },
+                {
+                    "first": "Justin",
+                    "initial": "J.",
+                    "last": "Zobel"
+                }
+            ],
+            "doi": "10.1016/j.websem.2010.03.005",
+            "firstpage": "169",
+            "issn": "15708268",
+            "lastpage": "175",
+            "pub_year": 2010,
+            "title": "Visualizing search results and document collections using topic maps",
+            "volume": "8"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Charalampos",
+                    "initial": "C.",
+                    "last": "Nikolaou"
+                },
+                {
+                    "first": "Kallirroi",
+                    "initial": "K.",
+                    "last": "Dogani"
+                },
+                {
+                    "first": "Konstantina",
+                    "initial": "K.",
+                    "last": "Bereta"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Garbis"
+                },
+                {
+                    "first": "Manos",
+                    "initial": "M.",
+                    "last": "Karpathiotakis"
+                },
+                {
+                    "first": "Kostis",
+                    "initial": "K.",
+                    "last": "Kyzirakos"
+                },
+                {
+                    "first": "Manolis",
+                    "initial": "M.",
+                    "last": "Koubarakis"
+                }
+            ],
+            "doi": "10.1016/j.websem.2015.09.004",
+            "firstpage": "35",
+            "issn": "15708268",
+            "lastpage": "52",
+            "pub_year": 2015,
+            "title": "Sextant: Visualizing time-evolving linked geospatial data",
+            "volume": "35"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Konrad",
+                    "initial": "K.",
+                    "last": "Abicht"
+                },
+                {
+                    "first": "Claus",
+                    "initial": "C.",
+                    "last": "Stadler"
+                },
+                {
+                    "first": "S\u00f6ren",
+                    "initial": "S.",
+                    "last": "Auer"
+                },
+                {
+                    "first": "Axel C.Ngonga",
+                    "initial": "A.C.N.",
+                    "last": "Ngomo"
+                },
+                {
+                    "first": "Tommaso",
+                    "initial": "T.",
+                    "last": "Soru"
+                }
+            ],
+            "doi": "10.1145/2740908.2742848",
+            "firstpage": "219",
+            "lastpage": "222",
+            "pub_year": 2015,
+            "title": "CubeViz - Exploration and Visualization of Statistical Linked Data"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Carolina",
+                    "initial": "C.",
+                    "last": "Cruz-Neira"
+                },
+                {
+                    "first": "Daniel J.",
+                    "initial": "D.J.",
+                    "last": "Sandin"
+                },
+                {
+                    "first": "Thomas A.",
+                    "initial": "T.A.",
+                    "last": "DeFanti"
+                },
+                {
+                    "first": "Robert V.",
+                    "initial": "R.V.",
+                    "last": "Kenyon"
+                },
+                {
+                    "first": "John C.",
+                    "initial": "J.C.",
+                    "last": "Hart"
+                }
+            ],
+            "doi": "10.1145/129888.129892",
+            "firstpage": "64",
+            "issn": "00010782",
+            "lastpage": "72",
+            "pub_year": 1992,
+            "title": "The CAVE: Audio Visual Experience Automatic Virtual Environment",
+            "volume": "35"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Alessandro",
+                    "initial": "A.",
+                    "last": "Febretti"
+                },
+                {
+                    "first": "Arthur",
+                    "initial": "A.",
+                    "last": "Nishimoto"
+                },
+                {
+                    "first": "Terrance",
+                    "initial": "T.",
+                    "last": "Thigpen"
+                },
+                {
+                    "first": "Jonas",
+                    "initial": "J.",
+                    "last": "Talandis"
+                },
+                {
+                    "first": "Lance",
+                    "initial": "L.",
+                    "last": "Long"
+                },
+                {
+                    "first": "Jd",
+                    "initial": "J.",
+                    "last": "Pirtle"
+                },
+                {
+                    "first": "Tom",
+                    "initial": "T.",
+                    "last": "Peterka"
+                },
+                {
+                    "first": "Alan",
+                    "initial": "A.",
+                    "last": "Verlo"
+                },
+                {
+                    "first": "Maxine",
+                    "initial": "M.",
+                    "last": "Brown"
+                },
+                {
+                    "first": "Dana",
+                    "initial": "D.",
+                    "last": "Plepys"
+                },
+                {
+                    "first": "Dan",
+                    "initial": "D.",
+                    "last": "Sandin"
+                },
+                {
+                    "first": "Luc",
+                    "initial": "L.",
+                    "last": "Renambot"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Leigh"
+                }
+            ],
+            "doi": "10.1117/12.2005484",
+            "issn": "0277786X",
+            "pub_year": 2013,
+            "title": "CAVE2: A hybrid reality environment for immersive simulation and information analysis",
+            "volume": "8649"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "Grant",
+                    "initial": "G.",
+                    "last": "Wallace"
+                },
+                {
+                    "first": "Otto J.",
+                    "initial": "O.J.",
+                    "last": "Anshus"
+                },
+                {
+                    "first": "Peng",
+                    "initial": "P.",
+                    "last": "Bi"
+                },
+                {
+                    "first": "Han",
+                    "initial": "H.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Yuqun",
+                    "initial": "Y.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Douglas",
+                    "initial": "D.",
+                    "last": "Clark"
+                },
+                {
+                    "first": "Perry",
+                    "initial": "P.",
+                    "last": "Cook"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Finkelstein"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Funkhouser"
+                },
+                {
+                    "first": "Anoop",
+                    "initial": "A.",
+                    "last": "Gupta"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Hibbs"
+                },
+                {
+                    "first": "Kai",
+                    "initial": "K.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Zhiyan",
+                    "initial": "Z.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Rudrajit",
+                    "initial": "R.",
+                    "last": "Samanta"
+                },
+                {
+                    "first": "Rahul",
+                    "initial": "R.",
+                    "last": "Sukthankar"
+                },
+                {
+                    "first": "Olga",
+                    "initial": "O.",
+                    "last": "Troyanskaya"
+                }
+            ],
+            "doi": "10.1109/MCG.2005.89",
+            "firstpage": "24",
+            "issn": "02721716",
+            "lastpage": "33",
+            "pmid": "16060571",
+            "pub_year": 2005,
+            "title": "Tools and applications for large-scale display walls",
+            "volume": "25"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Kai Uwe",
+                    "initial": "K.U.",
+                    "last": "Doerr"
+                },
+                {
+                    "first": "Falko",
+                    "initial": "F.",
+                    "last": "Kuester"
+                }
+            ],
+            "doi": "10.1109/TVCG.2010.59",
+            "firstpage": "320",
+            "issn": "10772626",
+            "lastpage": "332",
+            "pmid": "20421679",
+            "pub_year": 2011,
+            "title": "CGLX: A scalable, high-performance visualization framework for networked display environments",
+            "volume": "17"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Dan",
+                    "initial": "D.",
+                    "last": "McGinn"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Birch"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Akroyd"
+                },
+                {
+                    "first": "Miguel",
+                    "initial": "M.",
+                    "last": "Molina-Solana"
+                },
+                {
+                    "first": "Yike",
+                    "initial": "Y.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "William J.",
+                    "initial": "W.J.",
+                    "last": "Knottenbelt"
+                }
+            ],
+            "doi": "10.1089/big.2015.0056",
+            "firstpage": "109",
+            "issn": "21676461",
+            "lastpage": "119",
+            "pmid": "27441715",
+            "pub_year": 2016,
+            "title": "Visualizing Dynamic Bitcoin Transaction Patterns",
+            "volume": "4"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Miguel",
+                    "initial": "M.",
+                    "last": "Molina-Solana"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Birch"
+                },
+                {
+                    "first": "Yi ke",
+                    "initial": "Y.k.",
+                    "last": "Guo"
+                }
+            ],
+            "doi": "10.1016/j.asoc.2016.12.044",
+            "firstpage": "227",
+            "issn": "15684946",
+            "lastpage": "235",
+            "pub_year": 2017,
+            "title": "Improving data exploration in graphs with fuzzy logic and large-scale visualisation",
+            "volume": "53"
+        },
+        "b19": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Von Landesberger"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Kuijper"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Schreck"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Kohlhammer"
+                },
+                {
+                    "first": "J. J.",
+                    "initial": "J.J.",
+                    "last": "Van Wijk"
+                },
+                {
+                    "first": "J. D.",
+                    "initial": "J.D.",
+                    "last": "Fekete"
+                },
+                {
+                    "first": "D. W.",
+                    "initial": "D.W.",
+                    "last": "Fellner"
+                }
+            ],
+            "doi": "10.1111/j.1467-8659.2011.01898.x",
+            "firstpage": "1719",
+            "issn": "01677055",
+            "lastpage": "1749",
+            "pub_year": 2011,
+            "title": "Visual analysis of large graphs: State-of-the-art and future research challenges",
+            "volume": "30"
+        },
+        "b2": {
+            "authors": [
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Leigh"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Luc",
+                    "initial": "L.",
+                    "last": "Renambot"
+                },
+                {
+                    "first": "Tom",
+                    "initial": "T.",
+                    "last": "Peterka"
+                },
+                {
+                    "first": "Byungil",
+                    "initial": "B.",
+                    "last": "Jeong"
+                },
+                {
+                    "first": "Daniel J.",
+                    "initial": "D.J.",
+                    "last": "Sandin"
+                },
+                {
+                    "first": "Jonas",
+                    "initial": "J.",
+                    "last": "Talandis"
+                },
+                {
+                    "first": "Ratko",
+                    "initial": "R.",
+                    "last": "Jagodic"
+                },
+                {
+                    "first": "Sungwon",
+                    "initial": "S.",
+                    "last": "Nam"
+                },
+                {
+                    "first": "Hyejung",
+                    "initial": "H.",
+                    "last": "Hur"
+                },
+                {
+                    "first": "Yiwen",
+                    "initial": "Y.",
+                    "last": "Sun"
+                }
+            ],
+            "doi": "10.1109/JPROC.2012.2191609",
+            "firstpage": "115",
+            "issn": "00189219",
+            "lastpage": "129",
+            "pub_year": 2013,
+            "title": "Scalable resolution display walls",
+            "volume": "101"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Pienta"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Abello"
+                },
+                {
+                    "first": "Minsuk",
+                    "initial": "M.",
+                    "last": "Kahng"
+                },
+                {
+                    "first": "Duen Horng",
+                    "initial": "D.H.",
+                    "last": "Chau"
+                }
+            ],
+            "doi": "10.1109/35021BIGCOMP.2015.7072812",
+            "firstpage": "271",
+            "lastpage": "278",
+            "pub_year": 2015,
+            "title": "Scalable graph exploration and visualization: Sensemaking challenges and opportunities"
+        },
+        "b21": {
+            "authors": [
+                {
+                    "first": "Reynold S.",
+                    "initial": "R.S.",
+                    "last": "Xin"
+                },
+                {
+                    "first": "Joseph E.",
+                    "initial": "J.E.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Franklin"
+                },
+                {
+                    "first": "Ion",
+                    "initial": "I.",
+                    "last": "Stoica"
+                }
+            ],
+            "doi": "10.1145/2484425.2484427",
+            "pub_year": 2013,
+            "title": "GraphX: A resilient distributed graph system on spark"
+        },
+        "b22": null,
+        "b23": {
+            "authors": [
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Holzschuher"
+                },
+                {
+                    "first": "Ren\u00e9",
+                    "initial": "R.",
+                    "last": "Peinl"
+                }
+            ],
+            "doi": "10.1016/j.jcss.2015.06.006",
+            "firstpage": "45",
+            "issn": "00220000",
+            "lastpage": "68",
+            "pub_year": 2016,
+            "title": "Querying a graph database - Language selection and performance considerations",
+            "volume": "82"
+        },
+        "b24": {
+            "authors": [
+                {
+                    "first": "Sher Afgun",
+                    "initial": "S.A.",
+                    "last": "Khan"
+                },
+                {
+                    "first": "Muhammad Abdul",
+                    "initial": "M.A.",
+                    "last": "Qadir"
+                },
+                {
+                    "first": "Muhammad Azeem",
+                    "initial": "M.A.",
+                    "last": "Abbas"
+                },
+                {
+                    "first": "Muhammad Tanvir",
+                    "initial": "M.T.",
+                    "last": "Afzal"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0179578",
+            "issn": "19326203",
+            "pmid": "28632751",
+            "pub_year": 2017,
+            "title": "OWL2 benchmarking for the evaluation of knowledge based systems",
+            "volume": "12"
+        },
+        "b25": {
+            "authors": [
+                {
+                    "first": "Bo",
+                    "initial": "B.",
+                    "last": "Fu"
+                },
+                {
+                    "first": "Natalya F.",
+                    "initial": "N.F.",
+                    "last": "Noy"
+                },
+                {
+                    "first": "Margaret Anne",
+                    "initial": "M.A.",
+                    "last": "Storey"
+                }
+            ],
+            "doi": "10.3233/SW-140163",
+            "firstpage": "23",
+            "issn": "15700844",
+            "lastpage": "41",
+            "pub_year": 2017,
+            "title": "Eye tracking the user experience - An evaluation of ontology visualization techniques",
+            "volume": "8"
+        },
+        "b26": {
+            "authors": [
+                {
+                    "first": "John F.",
+                    "initial": "J.F.",
+                    "last": "Sowa"
+                }
+            ],
+            "doi": "10.1016/S1574-6526(07)03005-2",
+            "firstpage": "213",
+            "issn": "15746526",
+            "lastpage": "237",
+            "pub_year": 2008,
+            "title": "Chapter 5 Conceptual Graphs",
+            "volume": "3"
+        },
+        "b27": null,
+        "b28": null,
+        "b29": null,
+        "b3": null,
+        "b30": null,
+        "b31": {
+            "authors": [
+                {
+                    "first": "Renars",
+                    "initial": "R.",
+                    "last": "Liepi\u0146\u0161"
+                },
+                {
+                    "first": "Mikus",
+                    "initial": "M.",
+                    "last": "Grasmanis"
+                },
+                {
+                    "first": "Uldis",
+                    "initial": "U.",
+                    "last": "Bojars"
+                }
+            ],
+            "firstpage": "37",
+            "issn": "16130073",
+            "lastpage": "42",
+            "pub_year": 2014,
+            "title": "OWLGrEd ontology visualizer",
+            "volume": "1268"
+        },
+        "b32": {
+            "authors": [
+                {
+                    "first": "Steffen",
+                    "initial": "S.",
+                    "last": "Lohmann"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Negru"
+                },
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Haag"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Ertl"
+                }
+            ],
+            "doi": "10.3233/SW-150200",
+            "firstpage": "399",
+            "issn": "15700844",
+            "lastpage": "419",
+            "pub_year": 2016,
+            "title": "Visualizing ontologies with VOWL",
+            "volume": "7"
+        },
+        "b33": null,
+        "b34": {
+            "authors": [
+                {
+                    "first": "Sergey",
+                    "initial": "S.",
+                    "last": "Krivov"
+                },
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Williams"
+                },
+                {
+                    "first": "Ferdinando",
+                    "initial": "F.",
+                    "last": "Villa"
+                }
+            ],
+            "doi": "10.1016/j.websem.2007.03.005",
+            "firstpage": "54",
+            "issn": "15708268",
+            "lastpage": "57",
+            "pub_year": 2007,
+            "title": "GrOWL: A tool for visualization and editing of OWL ontologies",
+            "volume": "5"
+        },
+        "b35": {
+            "authors": [
+                {
+                    "first": "Ajaz",
+                    "initial": "A.",
+                    "last": "Hussain"
+                },
+                {
+                    "first": "Khalid",
+                    "initial": "K.",
+                    "last": "Latif"
+                },
+                {
+                    "first": "Aimal Tariq",
+                    "initial": "A.T.",
+                    "last": "Rextin"
+                },
+                {
+                    "first": "Amir",
+                    "initial": "A.",
+                    "last": "Hayat"
+                },
+                {
+                    "first": "Masoon",
+                    "initial": "M.",
+                    "last": "Alam"
+                }
+            ],
+            "doi": "10.12785/amis/080145",
+            "firstpage": "355",
+            "issn": "19350090",
+            "lastpage": "367",
+            "pub_year": 2014,
+            "title": "Scalable visualization of semantic nets using power-law graphs",
+            "volume": "8"
+        },
+        "b36": null,
+        "b37": null,
+        "b38": null,
+        "b39": {
+            "authors": [
+                {
+                    "first": "Aba Sah",
+                    "initial": "A.S.",
+                    "last": "Dadzie"
+                },
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Rowe"
+                }
+            ],
+            "doi": "10.3233/SW-2011-0037",
+            "firstpage": "89",
+            "issn": "15700844",
+            "lastpage": "124",
+            "pub_year": 2011,
+            "title": "Approaches to visualising Linked Data: A survey",
+            "volume": "2"
+        },
+        "b4": {
+            "authors": [
+                {
+                    "first": "Daniel A.",
+                    "initial": "D.A.",
+                    "last": "Keim"
+                }
+            ],
+            "doi": "10.1145/381641.381656",
+            "firstpage": "38",
+            "issn": "00010782",
+            "lastpage": "44",
+            "pub_year": 2001,
+            "title": "Visual Exploration of Large Data Sets",
+            "volume": "44"
+        },
+        "b40": null,
+        "b41": {
+            "authors": [
+                {
+                    "first": "Jakub",
+                    "initial": "J.",
+                    "last": "Kl\u00edmek"
+                },
+                {
+                    "first": "Ji\u0159\u00ed",
+                    "initial": "J.",
+                    "last": "Helmich"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Ne\u010dask\u00fd"
+                }
+            ],
+            "doi": "10.1007/978-3-642-41242-4_14",
+            "firstpage": "147",
+            "issn": "03029743",
+            "lastpage": "151",
+            "pub_year": 2013,
+            "title": "Payola: Collaborative linked data analysis and visualization framework",
+            "volume": "7955"
+        },
+        "b42": null,
+        "b43": null,
+        "b44": {
+            "authors": [
+                {
+                    "first": "Michael E.",
+                    "initial": "M.E.",
+                    "last": "Smoot"
+                },
+                {
+                    "first": "Keiichiro",
+                    "initial": "K.",
+                    "last": "Ono"
+                },
+                {
+                    "first": "Johannes",
+                    "initial": "J.",
+                    "last": "Ruscheinski"
+                },
+                {
+                    "first": "Peng Liang",
+                    "initial": "P.L.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Trey",
+                    "initial": "T.",
+                    "last": "Ideker"
+                }
+            ],
+            "doi": "10.1093/bioinformatics/btq675",
+            "firstpage": "431",
+            "issn": "13674803",
+            "lastpage": "432",
+            "pmid": "21149340",
+            "pub_year": 2011,
+            "title": "Cytoscape 2.8: New features for data integration and network visualization",
+            "volume": "27"
+        },
+        "b45": null,
+        "b46": {
+            "authors": [
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Dud\u00e1\u015e"
+                },
+                {
+                    "first": "Ond\u0159Ej",
+                    "initial": "O.",
+                    "last": "Zamazal"
+                },
+                {
+                    "first": "Vojt\u011bCh",
+                    "initial": "V.",
+                    "last": "Sv\u00e1tek"
+                }
+            ],
+            "firstpage": "137",
+            "issn": "03029743",
+            "lastpage": "152",
+            "pub_year": 2014,
+            "title": "Roadmapping and navigating in the ontology visualization landscape",
+            "volume": "8876"
+        },
+        "b47": {
+            "authors": [
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Haag"
+                },
+                {
+                    "first": "Steffen",
+                    "initial": "S.",
+                    "last": "Lohmann"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Negru"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Ertl"
+                }
+            ],
+            "doi": "10.1007/978-3-319-17966-7_9",
+            "firstpage": "83",
+            "issn": "03029743",
+            "lastpage": "98",
+            "pub_year": 2015,
+            "title": "OntoViBe 2: Advancing the ontology visualization benchmark",
+            "volume": "8982"
+        },
+        "b48": null,
+        "b49": null,
+        "b5": {
+            "authors": [
+                {
+                    "first": "Ben",
+                    "initial": "B.",
+                    "last": "Shneiderman"
+                }
+            ],
+            "firstpage": "336",
+            "issn": "10492615",
+            "lastpage": "343",
+            "pub_year": 1996,
+            "title": "Eyes have it: a task by data type taxonomy for information visualizations"
+        },
+        "b50": {
+            "authors": [
+                {
+                    "first": "Nikos",
+                    "initial": "N.",
+                    "last": "Bikakis"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Liagouris"
+                },
+                {
+                    "first": "Maria",
+                    "initial": "M.",
+                    "last": "Krommyda"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Papastefanatos"
+                },
+                {
+                    "first": "Timos",
+                    "initial": "T.",
+                    "last": "Sellis"
+                }
+            ],
+            "doi": "10.1109/ICDE.2016.7498340",
+            "firstpage": "1342",
+            "lastpage": "1345",
+            "pub_year": 2016,
+            "title": "GraphVizdb: A scalable platform for interactive large graph visualization"
+        },
+        "b51": {
+            "authors": [
+                {
+                    "first": "Fatma",
+                    "initial": "F.",
+                    "last": "Ghorbel"
+                },
+                {
+                    "first": "Fay\u00e7al",
+                    "initial": "F.",
+                    "last": "Hamdi"
+                },
+                {
+                    "first": "Nebrasse",
+                    "initial": "N.",
+                    "last": "Ellouze"
+                },
+                {
+                    "first": "Elisabeth",
+                    "initial": "E.",
+                    "last": "M\u00e9tais"
+                },
+                {
+                    "first": "Faiez",
+                    "initial": "F.",
+                    "last": "Gargouri"
+                }
+            ],
+            "doi": "10.1016/j.procs.2017.08.079",
+            "firstpage": "854",
+            "issn": "18770509",
+            "lastpage": "863",
+            "pub_year": 2017,
+            "title": "Visualizing Large-scale Linked Data with Memo Graph",
+            "volume": "112"
+        },
+        "b52": {
+            "authors": [
+                {
+                    "first": "Josep Maria",
+                    "initial": "J.M.",
+                    "last": "Brunetti"
+                },
+                {
+                    "first": "S\u00f6ren",
+                    "initial": "S.",
+                    "last": "Auer"
+                },
+                {
+                    "first": "Roberto",
+                    "initial": "R.",
+                    "last": "Garc\u00eda"
+                },
+                {
+                    "first": "Jakub",
+                    "initial": "J.",
+                    "last": "Kl\u00edmek"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Ne\u010dask\u00fd"
+                }
+            ],
+            "doi": "10.1145/2539150.2539162",
+            "firstpage": "309",
+            "lastpage": "318",
+            "pub_year": 2013,
+            "title": "Formal linked data visualization model"
+        },
+        "b53": {
+            "authors": [
+                {
+                    "first": "Marko A.",
+                    "initial": "M.A.",
+                    "last": "Rodriguez"
+                }
+            ],
+            "doi": "10.1145/2815072.2815073",
+            "firstpage": "1",
+            "lastpage": "10",
+            "pub_year": 2015,
+            "title": "The gremlin graph traversal machine and language (Invited Talk)"
+        },
+        "b54": null,
+        "b55": null,
+        "b56": {
+            "authors": [
+                {
+                    "first": "Ankur",
+                    "initial": "A.",
+                    "last": "Dave"
+                },
+                {
+                    "first": "Alekh",
+                    "initial": "A.",
+                    "last": "Jindal"
+                },
+                {
+                    "first": "Erran Li",
+                    "initial": "E.L.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Reynold",
+                    "initial": "R.",
+                    "last": "Xin"
+                },
+                {
+                    "first": "Joseph",
+                    "initial": "J.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "Matei",
+                    "initial": "M.",
+                    "last": "Zaharia"
+                }
+            ],
+            "doi": "10.1145/2960414.2960416",
+            "pub_year": 2016,
+            "title": "GraphFrames: An integrated API for mixing graph and relational queries",
+            "volume": "24-"
+        },
+        "b57": null,
+        "b58": null,
+        "b59": null,
+        "b6": {
+            "authors": [
+                {
+                    "first": "Petar",
+                    "initial": "P.",
+                    "last": "Ristoski"
+                },
+                {
+                    "first": "Heiko",
+                    "initial": "H.",
+                    "last": "Paulheim"
+                }
+            ],
+            "doi": "10.1016/j.websem.2016.01.001",
+            "firstpage": "1",
+            "issn": "15708268",
+            "lastpage": "22",
+            "pub_year": 2016,
+            "title": "Semantic Web in data mining and knowledge discovery: A comprehensive survey",
+            "volume": "36"
+        },
+        "b60": {
+            "authors": [
+                {
+                    "first": "David S.",
+                    "initial": "D.S.",
+                    "last": "Wishart"
+                },
+                {
+                    "first": "Yannick D.",
+                    "initial": "Y.D.",
+                    "last": "Feunang"
+                },
+                {
+                    "first": "An C.",
+                    "initial": "A.C.",
+                    "last": "Guo"
+                },
+                {
+                    "first": "Elvis J.",
+                    "initial": "E.J.",
+                    "last": "Lo"
+                },
+                {
+                    "first": "Ana",
+                    "initial": "A.",
+                    "last": "Marcu"
+                },
+                {
+                    "first": "Jason R.",
+                    "initial": "J.R.",
+                    "last": "Grant"
+                },
+                {
+                    "first": "Tanvir",
+                    "initial": "T.",
+                    "last": "Sajed"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Carin",
+                    "initial": "C.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Zinat",
+                    "initial": "Z.",
+                    "last": "Sayeeda"
+                },
+                {
+                    "first": "Nazanin",
+                    "initial": "N.",
+                    "last": "Assempour"
+                },
+                {
+                    "first": "Ithayavani",
+                    "initial": "I.",
+                    "last": "Iynkkaran"
+                },
+                {
+                    "first": "Yifeng",
+                    "initial": "Y.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "MacIejewski"
+                },
+                {
+                    "first": "Nicola",
+                    "initial": "N.",
+                    "last": "Gale"
+                },
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Wilson"
+                },
+                {
+                    "first": "Lucy",
+                    "initial": "L.",
+                    "last": "Chin"
+                },
+                {
+                    "first": "Ryan",
+                    "initial": "R.",
+                    "last": "Cummings"
+                },
+                {
+                    "first": "DIana",
+                    "initial": "D.",
+                    "last": "Le"
+                },
+                {
+                    "first": "Allison",
+                    "initial": "A.",
+                    "last": "Pon"
+                },
+                {
+                    "first": "Craig",
+                    "initial": "C.",
+                    "last": "Knox"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Wilson"
+                }
+            ],
+            "doi": "10.1093/nar/gkx1037",
+            "firstpage": "D1074",
+            "issn": "03051048",
+            "lastpage": "D1082",
+            "pmid": "29126136",
+            "pub_year": 2018,
+            "title": "DrugBank 5.0: A major update to the DrugBank database for 2018",
+            "volume": "46"
+        },
+        "b61": {
+            "authors": [
+                {
+                    "first": "Vincent D.",
+                    "initial": "V.D.",
+                    "last": "Blondel"
+                },
+                {
+                    "first": "Jean Loup",
+                    "initial": "J.L.",
+                    "last": "Guillaume"
+                },
+                {
+                    "first": "Renaud",
+                    "initial": "R.",
+                    "last": "Lambiotte"
+                },
+                {
+                    "first": "Etienne",
+                    "initial": "E.",
+                    "last": "Lefebvre"
+                }
+            ],
+            "doi": "10.1088/1742-5468/2008/10/P10008",
+            "issn": "17425468",
+            "pub_year": 2008,
+            "title": "Fast unfolding of communities in large networks",
+            "volume": "2008"
+        },
+        "b62": {
+            "authors": [
+                {
+                    "first": "Lucretia",
+                    "initial": "L.",
+                    "last": "Udrescu"
+                },
+                {
+                    "first": "Laura",
+                    "initial": "L.",
+                    "last": "Sb\u00e2rcea"
+                },
+                {
+                    "first": "Alexandru",
+                    "initial": "A.",
+                    "last": "Top\u00eerceanu"
+                },
+                {
+                    "first": "Alexandru",
+                    "initial": "A.",
+                    "last": "Iovanovici"
+                },
+                {
+                    "first": "Ludovic",
+                    "initial": "L.",
+                    "last": "Kurunczi"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Bogdan"
+                },
+                {
+                    "first": "Mihai",
+                    "initial": "M.",
+                    "last": "Udrescu"
+                }
+            ],
+            "doi": "10.1038/srep32745",
+            "issn": "20452322",
+            "pmid": "27599720",
+            "pub_year": 2016,
+            "title": "Clustering drug-drug interaction networks with energy model layouts: Community analysis and drug repurposing",
+            "volume": "6"
+        },
+        "b63": {
+            "authors": [
+                {
+                    "first": "Dip Sankar",
+                    "initial": "D.S.",
+                    "last": "Banerjee"
+                },
+                {
+                    "first": "Ashutosh",
+                    "initial": "A.",
+                    "last": "Kumar"
+                },
+                {
+                    "first": "Meher",
+                    "initial": "M.",
+                    "last": "Chaitanya"
+                },
+                {
+                    "first": "Shashank",
+                    "initial": "S.",
+                    "last": "Sharma"
+                },
+                {
+                    "first": "Kishore",
+                    "initial": "K.",
+                    "last": "Kothapalli"
+                }
+            ],
+            "doi": "10.1016/j.jpdc.2014.11.006",
+            "firstpage": "81",
+            "issn": "07437315",
+            "lastpage": "93",
+            "pub_year": 2015,
+            "title": "Work efficient parallel algorithms for large graph exploration on emerging heterogeneous architectures",
+            "volume": "76"
+        },
+        "b64": {
+            "authors": [
+                {
+                    "first": "Konstantin",
+                    "initial": "K.",
+                    "last": "Shvachko"
+                },
+                {
+                    "first": "Hairong",
+                    "initial": "H.",
+                    "last": "Kuang"
+                },
+                {
+                    "first": "Sanjay",
+                    "initial": "S.",
+                    "last": "Radia"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Chansler"
+                }
+            ],
+            "doi": "10.1109/MSST.2010.5496972",
+            "pub_year": 2010,
+            "title": "The Hadoop distributed file system"
+        },
+        "b65": null,
+        "b66": {
+            "authors": [
+                {
+                    "first": "Tomasz",
+                    "initial": "T.",
+                    "last": "Kajdanowicz"
+                },
+                {
+                    "first": "Przemyslaw",
+                    "initial": "P.",
+                    "last": "Kazienko"
+                },
+                {
+                    "first": "Wojciech",
+                    "initial": "W.",
+                    "last": "Indyk"
+                }
+            ],
+            "doi": "10.1016/j.future.2013.08.007",
+            "firstpage": "324",
+            "issn": "0167739X",
+            "lastpage": "337",
+            "pub_year": 2014,
+            "title": "Parallel processing of large graphs",
+            "volume": "32"
+        },
+        "b67": {
+            "authors": [
+                {
+                    "first": "Vinod Kumar",
+                    "initial": "V.K.",
+                    "last": "Vavilapalli"
+                },
+                {
+                    "first": "Arun C.",
+                    "initial": "A.C.",
+                    "last": "Murthy"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Douglas"
+                },
+                {
+                    "first": "Sharad",
+                    "initial": "S.",
+                    "last": "Agarwal"
+                },
+                {
+                    "first": "Mahadev",
+                    "initial": "M.",
+                    "last": "Konar"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Evans"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Graves"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "Hitesh",
+                    "initial": "H.",
+                    "last": "Shah"
+                },
+                {
+                    "first": "Siddharth",
+                    "initial": "S.",
+                    "last": "Seth"
+                },
+                {
+                    "first": "Bikas",
+                    "initial": "B.",
+                    "last": "Saha"
+                },
+                {
+                    "first": "Carlo",
+                    "initial": "C.",
+                    "last": "Curino"
+                },
+                {
+                    "first": "Owen",
+                    "initial": "O.",
+                    "last": "O'Malley"
+                },
+                {
+                    "first": "Sanjay",
+                    "initial": "S.",
+                    "last": "Radia"
+                },
+                {
+                    "first": "Benjamin",
+                    "initial": "B.",
+                    "last": "Reed"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Baldeschwieler"
+                }
+            ],
+            "doi": "10.1145/2523616.2523633",
+            "pub_year": 2013,
+            "title": "Apache hadoop YARN: Yet another resource negotiator"
+        },
+        "b68": {
+            "authors": [
+                {
+                    "first": "Joseph E.",
+                    "initial": "J.E.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "Reynold S.",
+                    "initial": "R.S.",
+                    "last": "Xin"
+                },
+                {
+                    "first": "Ankur",
+                    "initial": "A.",
+                    "last": "Dave"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Crankshaw"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Franklin"
+                },
+                {
+                    "first": "Ion",
+                    "initial": "I.",
+                    "last": "Stoica"
+                }
+            ],
+            "firstpage": "599",
+            "lastpage": "613",
+            "pub_year": 2014,
+            "title": "GraphX: Graph processing in a distributed dataflow framework"
+        },
+        "b69": {
+            "authors": [
+                {
+                    "first": "Alessio",
+                    "initial": "A.",
+                    "last": "Arleo"
+                },
+                {
+                    "first": "Walter",
+                    "initial": "W.",
+                    "last": "Didimo"
+                },
+                {
+                    "first": "Giuseppe",
+                    "initial": "G.",
+                    "last": "Liotta"
+                },
+                {
+                    "first": "Fabrizio",
+                    "initial": "F.",
+                    "last": "Montecchiani"
+                }
+            ],
+            "doi": "10.1016/j.ins.2016.11.012",
+            "firstpage": "124",
+            "issn": "00200255",
+            "lastpage": "141",
+            "pub_year": 2017,
+            "title": "Large graph visualizations using a distributed computing platform",
+            "volume": "381"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Krzysztof",
+                    "initial": "K.",
+                    "last": "Janowicz"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Van Harmelen"
+                },
+                {
+                    "first": "James A.",
+                    "initial": "J.A.",
+                    "last": "Hendler"
+                },
+                {
+                    "first": "Pascal",
+                    "initial": "P.",
+                    "last": "Hitzler"
+                }
+            ],
+            "firstpage": "5",
+            "issn": "07384602",
+            "lastpage": "14",
+            "pub_year": 2015,
+            "title": "Why the data train needs semantic rails",
+            "volume": "36"
+        },
+        "b70": {
+            "authors": [
+                {
+                    "first": "Mathieu",
+                    "initial": "M.",
+                    "last": "Jacomy"
+                },
+                {
+                    "first": "Tommaso",
+                    "initial": "T.",
+                    "last": "Venturini"
+                },
+                {
+                    "first": "Sebastien",
+                    "initial": "S.",
+                    "last": "Heymann"
+                },
+                {
+                    "first": "Mathieu",
+                    "initial": "M.",
+                    "last": "Bastian"
+                }
+            ],
+            "doi": "10.1371/journal.pone.0098679",
+            "issn": "19326203",
+            "pmid": "24914678",
+            "pub_year": 2014,
+            "title": "ForceAtlas2, a continuous graph layout algorithm for handy network visualization designed for the Gephi software",
+            "volume": "9"
+        },
+        "b71": null,
+        "b72": {
+            "authors": [
+                {
+                    "first": "Alison",
+                    "initial": "A.",
+                    "last": "Callahan"
+                },
+                {
+                    "first": "Jos\u00e9",
+                    "initial": "J.",
+                    "last": "Cruz-Toledo"
+                },
+                {
+                    "first": "Michel",
+                    "initial": "M.",
+                    "last": "Dumontier"
+                }
+            ],
+            "doi": "10.1186/2041-1480-4-S1-S1",
+            "issn": "20411480",
+            "pub_year": 2013,
+            "title": "Ontology-Based Querying with Bio2RDF's Linked Open Data",
+            "volume": "4"
+        },
+        "b73": {
+            "authors": [
+                {
+                    "first": "Jens",
+                    "initial": "J.",
+                    "last": "Lehmann"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Isele"
+                },
+                {
+                    "first": "Max",
+                    "initial": "M.",
+                    "last": "Jakob"
+                },
+                {
+                    "first": "Anja",
+                    "initial": "A.",
+                    "last": "Jentzsch"
+                },
+                {
+                    "first": "Dimitris",
+                    "initial": "D.",
+                    "last": "Kontokostas"
+                },
+                {
+                    "first": "Pablo N.",
+                    "initial": "P.N.",
+                    "last": "Mendes"
+                },
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "Hellmann"
+                },
+                {
+                    "first": "Mohamed",
+                    "initial": "M.",
+                    "last": "Morsey"
+                },
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Van Kleef"
+                },
+                {
+                    "first": "S\u00f6ren",
+                    "initial": "S.",
+                    "last": "Auer"
+                },
+                {
+                    "first": "Christian",
+                    "initial": "C.",
+                    "last": "Bizer"
+                }
+            ],
+            "doi": "10.3233/SW-140134",
+            "firstpage": "167",
+            "issn": "15700844",
+            "lastpage": "195",
+            "pub_year": 2015,
+            "title": "DBpedia - A large-scale, multilingual knowledge base extracted from Wikipedia",
+            "volume": "6"
+        },
+        "b74": null,
+        "b75": {
+            "authors": [
+                {
+                    "first": "R\u00e9ka",
+                    "initial": "R.",
+                    "last": "Albert"
+                },
+                {
+                    "first": "Albert L\u00e1szl\u00f3",
+                    "initial": "A.L.",
+                    "last": "Barab\u00e1si"
+                }
+            ],
+            "doi": "10.1103/RevModPhys.74.47",
+            "firstpage": "47",
+            "issn": "00346861",
+            "lastpage": "97",
+            "pub_year": 2002,
+            "title": "Statistical mechanics of complex networks",
+            "volume": "74"
+        },
+        "b76": {
+            "authors": [
+                {
+                    "first": "Jure",
+                    "initial": "J.",
+                    "last": "Leskovec"
+                },
+                {
+                    "first": "Rok",
+                    "initial": "R.",
+                    "last": "Sosi\u010d"
+                }
+            ],
+            "doi": "10.1145/2898361",
+            "issn": "21576904",
+            "pub_year": 2016,
+            "title": "SNAP: A general-purpose network analysis and graph-mining library",
+            "volume": "8"
+        },
+        "b77": {
+            "authors": [
+                {
+                    "first": "Alessio",
+                    "initial": "A.",
+                    "last": "Arleo"
+                },
+                {
+                    "first": "Walter",
+                    "initial": "W.",
+                    "last": "Didimo"
+                },
+                {
+                    "first": "Giuseppe",
+                    "initial": "G.",
+                    "last": "Liotta"
+                },
+                {
+                    "first": "Fabrizio",
+                    "initial": "F.",
+                    "last": "Montecchiani"
+                }
+            ],
+            "doi": "10.1007/978-3-319-73915-1_21",
+            "firstpage": "256",
+            "issn": "03029743",
+            "lastpage": "271",
+            "pub_year": 2018,
+            "title": "GiViP: A visual profiler for distributed graph processing systems",
+            "volume": "10692"
+        },
+        "b8": null,
+        "b9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 59360,
+            "parents": [],
+            "refoffsets": {
+                "b51": {
+                    "endOffset": 59201,
+                    "startOffset": 59199
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Memo Graph [51] follows a different approach: it extracts relevant descriptors from the graph to generate a summarized model, thus avoiding dealing with the whole structure.",
+            "startOffset": 59187,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 53188,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This paper presents the results of evaluating the computational performance of large-scale graph processing technologies for different visualization tasks.",
+            "startOffset": 53033,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76051,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In this case, the query stage was carried out offline, producing three RDF files that were stored in the HDFS filesystem.",
+            "startOffset": 75930,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 61649,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Graph layout Graph layout is the calculation of the spatial position of the vertices to offer a pleasant depiction and to facilitate the interpretation of the underlying information by the human users.",
+            "startOffset": 61448,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 63990,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b63": {
+                    "endOffset": 63988,
+                    "startOffset": 63986
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "In this work we have focused on the first type of approaches, but improvements and extensions based on the second ones could be integrated into the proposed architecture [63].",
+            "startOffset": 63815,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 79514,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "In this case we also stored the graphs as files in HDFS, which were loaded to build the GraphX graphs.",
+            "startOffset": 79412,
+            "title": "SNAP graphs"
+        },
+        {
+            "endOffset": 57759,
+            "parents": [],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 57648,
+                    "startOffset": 57646
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Gephi, a general-purpose graph visualization tool [40], supports data retrieval from several sources, calculation of graph measurements, and automatic graph layout.",
+            "startOffset": 57595,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63384,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b62": {
+                    "endOffset": 63269,
+                    "startOffset": 63267
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The results corresponds to the findings in [62], which discovered 9 functional drug categories from the analysis and visualization of the drug interaction graph.",
+            "startOffset": 63223,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 66451,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Renderer delivers the drawing to the available screens (one or several).",
+            "startOffset": 66375,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 72380,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "We have used 100 executor threads (max.)",
+            "startOffset": 72340,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 85111,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Although these works focus on interactive and multi-granular visualizations, and in principle present worse performance numbers, it would be interesting to perform a more detailed comparison of the advantages and the drawbacks of each approach, in order to identify the cases in which spatial partitions and levels are necessary and to evaluate further improvements (shared variables, message-passing, heuristic edge and vertex sets cuts, etc.).",
+            "startOffset": 84666,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 84167,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The results are consistent through several experiments over real-world and synthetic datasets with heterogeneous graph topologies.",
+            "startOffset": 84037,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 52206,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Such proposals have been shown effective in domains in which large amounts of intensively-interrelated data are generated.",
+            "startOffset": 52084,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75815,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Table A.3 includes detailed information about size and density of these graphs.",
+            "startOffset": 75736,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 57243,
+            "parents": [],
+            "refoffsets": {
+                "b29": {
+                    "endOffset": 56879,
+                    "startOffset": 56877
+                },
+                "b30": {
+                    "endOffset": 56996,
+                    "startOffset": 56994
+                },
+                "b31": {
+                    "endOffset": 57010,
+                    "startOffset": 57008
+                },
+                "b32": {
+                    "endOffset": 57024,
+                    "startOffset": 57022
+                },
+                "b33": {
+                    "endOffset": 57060,
+                    "startOffset": 57058
+                },
+                "b34": {
+                    "endOffset": 57075,
+                    "startOffset": 57073
+                },
+                "b35": {
+                    "endOffset": 57151,
+                    "startOffset": 57149
+                },
+                "b36": {
+                    "endOffset": 57164,
+                    "startOffset": 57162
+                },
+                "b37": {
+                    "endOffset": 57183,
+                    "startOffset": 57181
+                },
+                "b38": {
+                    "endOffset": 57219,
+                    "startOffset": 57217
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Analogously, Prot\u00e9g\u00e9 [29] has several plugins and compatible applications to visualize different aspects of ontologies as graphs: Ontoviz [30], OWLGrEd [31] and VOWL [32] for complex concepts; Ontograf [33] and GrOWL [34] for interoperable representations; NavigOWL for automatic graph layout [35]; OWLViz [36] and Jambalaya [37] for taxonomies; and OWLPropViz [38] for object properties.",
+            "startOffset": 56855,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64918,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b21": {
+                    "endOffset": 64916,
+                    "startOffset": 64911
+                },
+                "b55": {
+                    "endOffset": 64916,
+                    "startOffset": 64911
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Spark includes GraphX, a library for graph management over HDFS which also provides graph processing algorithms [21,55].",
+            "startOffset": 64798,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 70981,
+            "parents": [],
+            "refoffsets": {
+                "b54": {
+                    "endOffset": 70964,
+                    "startOffset": 70962
+                }
+            },
+            "secId": "sec4",
+            "sentence": "Jung (the Java Universal Network/Graph Framework) is a Java library that provides optimized implementations of algorithms from graph theory, data mining and social network analysis [54]; e.g. PageRank.",
+            "startOffset": 70780,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 67018,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b66": {
+                    "endOffset": 67016,
+                    "startOffset": 67014
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The programming language of choice has been Scala, which is recommended for high-performance computation with Spark [66].",
+            "startOffset": 66897,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 85333,
+            "parents": [],
+            "refoffsets": {
+                "b76": {
+                    "endOffset": 85331,
+                    "startOffset": 85329
+                }
+            },
+            "secId": "sec6",
+            "sentence": "New graph management libraries for Spark, such as GraphFrames, should also be considered, as well are more specific and diverse topologies [76].",
+            "startOffset": 85189,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 75721,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Page to page relations, representing links between Wikipedia pages.",
+            "startOffset": 75654,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 66251,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Layout is developed as a separated component, because usually it is not directly supported by graph libraries.",
+            "startOffset": 66141,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 51989,
+            "parents": [],
+            "refoffsets": {
+                "b13": {
+                    "endOffset": 51959,
+                    "startOffset": 51957
+                },
+                "b14": {
+                    "endOffset": 51974,
+                    "startOffset": 51972
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Early works in this topic were developed by the Electronic Visualization Laboratory at the University of Illinois at Chicago, resulting in the CAVE [13] and CAVE2 [14] environments.",
+            "startOffset": 51808,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64439,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Hadoop was designed under the principle that \u201cmoving computation is cheaper than moving data\u201d.",
+            "startOffset": 64345,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 64797,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 64795,
+                    "startOffset": 64787
+                },
+                "b65": {
+                    "endOffset": 64795,
+                    "startOffset": 64787
+                },
+                "b66": {
+                    "endOffset": 64795,
+                    "startOffset": 64787
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The Apache Spark framework complements Hadoop by offering both pure in-memory computation and more flexible ways to divide the computation beyond the relatively simple MapReduce pattern [22,65,66].",
+            "startOffset": 64600,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 83249,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This is not an argument against such research approaches, which can be necessary if interactive graph exploration at different granularity levels is addressed (as in graphVizdb and Memo Graph).",
+            "startOffset": 83056,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 72339,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The cluster itself relies on Cloudera CDH 5.13.1 (Spark 2.2.0).",
+            "startOffset": 72276,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 52734,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In these works, we showed how filtering, grouping and highlighting specific patterns help to increase the usability of large graph visualizations.",
+            "startOffset": 52588,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65195,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Fig. 3 depicts an architecture materializing the visualization pipeline in a Big Data setup.",
+            "startOffset": 65103,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 52343,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, the increasing potential of new Big Data technologies for distributed data collection and processing calls for new initiatives.",
+            "startOffset": 52207,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56029,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "For the purpose of this paper, we will assume Linked Data and Semantic Web ontologies as the most recent incarnation of knowledge graphs.",
+            "startOffset": 55892,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 69705,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Optimized extensions of the algorithm could be considered.",
+            "startOffset": 69647,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 63552,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The increasing size of datasets makes it necessary to implement the visualization pipeline in such a way that it can process large-scale graphs.",
+            "startOffset": 63408,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 52083,
+            "parents": [],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 52081,
+                    "startOffset": 52074
+                },
+                "b16": {
+                    "endOffset": 52081,
+                    "startOffset": 52074
+                },
+                "b2": {
+                    "endOffset": 52081,
+                    "startOffset": 52074
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Other examples of visualization environments have been described in the literature [2,15,16].",
+            "startOffset": 51990,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56303,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Linked data has been typically visualized in this way.",
+            "startOffset": 56249,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62734,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "GraphDL simplifies graph building by allowing the explicit representation of vertices and edges and by providing parsers from GraphDL representations to other formats; e.g. TinkerPop, GraphML and GraphX.",
+            "startOffset": 62531,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 76684,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The data source was the DBPedia 2016\u201304 image curated by Ontology2,8 loaded in an Amazon Web Service (AWS) machine running a Virtuoso triplestore.",
+            "startOffset": 76446,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 62948,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b60": {
+                    "endOffset": 62877,
+                    "startOffset": 62875
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The graph represents drug to drug interactions in DrugBank [60], encompassing 1,038 vertices (drugs) and 22,927 edges (interactions).",
+            "startOffset": 62815,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 70320,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "We run a variant of the implementation described in Section 3.3 to measure execution time for different graph types and sizes.",
+            "startOffset": 70194,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 76446,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Accordingly, the Load stage subsumes the previous Query and Build.",
+            "startOffset": 76380,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 79593,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Note that in several cases load time is higher than processing time (Fig. 11).",
+            "startOffset": 79515,
+            "title": "SNAP graphs"
+        },
+        {
+            "endOffset": 57997,
+            "parents": [],
+            "refoffsets": {
+                "b41": {
+                    "endOffset": 57803,
+                    "startOffset": 57801
+                },
+                "b42": {
+                    "endOffset": 57879,
+                    "startOffset": 57877
+                },
+                "b43": {
+                    "endOffset": 57959,
+                    "startOffset": 57957
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Similar graph-oriented tools are Payola [41], which enables a complete ecosystem of visualization plugins; LDVizWiz [42], aimed to support non-specialists consuming linked open data; and OntoTrix [43], based on vertex adjacency matrices.",
+            "startOffset": 57760,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61954,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b58": {
+                    "endOffset": 61952,
+                    "startOffset": 61950
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Within this family, we can find the Fruchterman\u2013Reingold, the Kamada and Kawai, and the Yifan Hu algorithms [58].",
+            "startOffset": 61841,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 75881,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Listings B.2\u2013B.4 describe the SPARQL queries to obtain the graphs.",
+            "startOffset": 75815,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 49800,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These are two phases which require a transfer of knowledge between data scientists and domain experts.",
+            "startOffset": 49698,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52587,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 52557,
+                    "startOffset": 52555
+                },
+                "b18": {
+                    "endOffset": 52585,
+                    "startOffset": 52583
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Recently, our research group proved that graph visualizations, backed by a large-scale visualization environment, can be very helpful to understand the dynamics of different phenomena; e.g. Bitcoin transactions [17] and online discussions [18].",
+            "startOffset": 52343,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73778,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The data server had the configuration recommended by the creators of Virtuoso image7 : c3.large instance equipped with 32 GB of SSD disk, 2 CPUs, 3.75 GB of RAM, and 1 Mbps (max.)",
+            "startOffset": 73507,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 49507,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 49373,
+                    "startOffset": 49372
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Leigh et al. stressed that visualization serves at least three important purposes [2]: (i) quick verification of simulation models; (ii) quick delivery of simulation results; and (iii) easier communication to a layman.",
+            "startOffset": 49289,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67860,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In the reduce stage, triples describing the same element of the graph \u2013 a vertex or an edge \u2013 are parsed together along their property value and inserted into a GraphX data structure.",
+            "startOffset": 67677,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 75482,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "refoffsets": {
+                "b73": {
+                    "endOffset": 75472,
+                    "startOffset": 75470
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "In these experiments, we have extracted three knowledge graphs from DBPedia [73], namely:",
+            "startOffset": 75393,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 80410,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "What is more interesting is that we tested that our distributed layout algorithm scales well, yielding execution times comparable to the PageRank included in GraphX (Fig. 7 (b)).",
+            "startOffset": 80232,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 80704,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Nevertheless, the first priority should be to improve the triplestore configuration to reduce query time.",
+            "startOffset": 80599,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 84407,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Therefore, it is not intended for visualizing complex semantics, for which existing ontology development environments like TopBraid or Prot\u00e9g\u00e9 are more suited.",
+            "startOffset": 84248,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 82902,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Our implementation was also faster than the reported times of graphVizdb and GiLA, although the results should not be directly compared due to different overall purpose, programming languages and hardware configurations.",
+            "startOffset": 82682,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 59650,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the next section, we present a processing pipeline for graph visualization and a distributed architecture based on Big Data technologies that improves these proposals.",
+            "startOffset": 59480,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 72080,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The experiments have been carried out on our Spark cluster, a cluster of six machines: one driver and five executors.",
+            "startOffset": 71963,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 60386,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In the Semantic Web context, this will be usually carried out by issuing a SELECT SPARQL query to a triplestore or a federated linked database.",
+            "startOffset": 60243,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 54416,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 54414,
+                    "startOffset": 54409
+                },
+                "b24": {
+                    "endOffset": 54414,
+                    "startOffset": 54409
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In this work we do not consider the performance of graph retrieval from permanent storage \u2014 evaluations of graph databases and linked data engines can be found in the literature [23,24].",
+            "startOffset": 54230,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71462,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "First, we compare the results of the distributed and the sequential implementation of the processing pipeline with the Drugbank dataset, concluding that the sequential implementation is not able to deal even with relatively small graphs.",
+            "startOffset": 71225,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 74333,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "We can compare these sequential execution times with the distributed implementations of the PageRank and the Fruchterman\u2013Reingoldalgorithms.",
+            "startOffset": 74193,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 65921,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The Graph Builder translate these triples, coming from HDFS or directly from the RDF query Engine, into a graph structure.",
+            "startOffset": 65799,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 65384,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Note that GraphX could be replaced by another graph processing library; e.g. GraphFrames.",
+            "startOffset": 65295,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 82264,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In general, we can say that satisfactory layout times were achieved \u2013 in terms of time required to create the visualizations (cf. Gephi API with large graphs) and compared to the native implementations of algorithms such as PageRank \u2013 , even though: (a) we did not create any custom partition of the graph to distribute the computation according to the graph topology; (b) we did not reduce the neighborhood of each vertex to optimize the computation of the distance matrix.",
+            "startOffset": 81790,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 54551,
+            "parents": [],
+            "refoffsets": {
+                "b25": {
+                    "endOffset": 54549,
+                    "startOffset": 54547
+                }
+            },
+            "secId": "sec1",
+            "sentence": "We also leave out of the scope of the paper the study of the usability of the resulting graphs, for which we refer the reader to [25].",
+            "startOffset": 54417,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76379,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This was purposely done to evaluate graph loading from the filesystem instead of the triplestore performance and the network latency.",
+            "startOffset": 76246,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 84036,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We have seen that large graphs with millions of vertices and edges can be processed at a low cost with state-of-the-art Big Data technologies to generate compelling visualizations.",
+            "startOffset": 83856,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 63222,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b61": {
+                    "endOffset": 63160,
+                    "startOffset": 63158
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "Colors are assigned to communities detected by the Louvain method [61], and layout is done with the Fruchterman\u2013Reingold algorithm.",
+            "startOffset": 63091,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 86139,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The DO will help us to investigate how people work and interact with large graph visualizations, how they can be improved for visual analytics, and which capabilities should be optimized in the graph-processing software.",
+            "startOffset": 85919,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 68054,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "GraphX natively includes implementations for several graph processing algorithms; e.g. PageRank, connected components, label propagation, SVD++, strongly connected components and triangle count.",
+            "startOffset": 67860,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 70193,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Specifically, we focus on the RDF Engine, the Graph Builder, the PageRank calculation, and the Fruchterman\u2013Reingold Layout.",
+            "startOffset": 70070,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 73789,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "bandwidth.",
+            "startOffset": 73779,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 74578,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "In Fig. 6 (a) we can see that the sequential layout takes more than 1 min to process the complete graph; in contrast, the Spark implementation of the layout process is significantly faster and remains almost constant for the DrugBank subgraphs.",
+            "startOffset": 74334,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 79411,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Table A.5 shows the performance of the processing stages in our Spark cluster.",
+            "startOffset": 79333,
+            "title": "SNAP graphs"
+        },
+        {
+            "endOffset": 59887,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "We can distinguish five stages in the generation of graph-based visualizations from linked data: data retrieval, graph building, calculation of metrics, layout and rendering.",
+            "startOffset": 59713,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 85453,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We plan to continue our research work by studying the usability of the resulting graph visualizations (cf. Fig. 13 (d)).",
+            "startOffset": 85333,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 66580,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This stage can be sequential or distributed since it does not require complex calculations nor having the whole graph in memory.",
+            "startOffset": 66452,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 53631,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The main contributions of the paper are the following:",
+            "startOffset": 53577,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61840,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "A classic family of graph layout algorithms is force-based vertex placement, which computes attractive and repulsive forces for pairs of vertices to determine how close they should be drawn.",
+            "startOffset": 61650,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 68594,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b58": {
+                    "endOffset": 68567,
+                    "startOffset": 68565
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The FG Layout module is a distributed implementation of the Fruchterman\u2013Reingold force-directed algorithm [58] based on GraphX (Fig. 4).",
+            "startOffset": 68458,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 62234,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Usually, a visualization library starts a layered process to translate the higher-level drawing primitives into instructions that are sent to the graphics driver and executed by the graphics card connected to the screen.",
+            "startOffset": 62014,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 85918,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The DO features a distributed data processing and rendering cluster connected to 64 46\u201d high definition screens that enable a 313\u00b0 immersive space with a total resolution of 132 M pixels across 37.31 m2.",
+            "startOffset": 85715,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 86339,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "We will also further develop the GraphDL ontology and the associated toolbox, since they offer a useful framework to describe, produce and transform graphs in a flexible way by using a common format.",
+            "startOffset": 86140,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 58447,
+            "parents": [],
+            "refoffsets": {
+                "b46": {
+                    "endOffset": 58445,
+                    "startOffset": 58443
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Comparative analyses of visualization tools, including ontology modeling and knowledge graph exploration software, yield the conclusion that there is no one-size-fits-all solution, and the selection of tools will depend on the purpose [46].",
+            "startOffset": 58207,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 71121,
+            "parents": [],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 71073,
+                    "startOffset": 71071
+                }
+            },
+            "secId": "sec4",
+            "sentence": "Gephi offers a Java library of graph layout algorithms that we can use programmatically [40], including the Fruchterman\u2013Reingold algorithm.",
+            "startOffset": 70982,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 67184,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The RDF query Engine is implemented with the Eclipse RDF4J5 framework \u2013 formerly known as Sesame \u2013 , a widely-used RDF API.",
+            "startOffset": 67019,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 58207,
+            "parents": [],
+            "refoffsets": {
+                "b44": {
+                    "endOffset": 58112,
+                    "startOffset": 58110
+                },
+                "b45": {
+                    "endOffset": 58205,
+                    "startOffset": 58203
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Specifically targeted at the Life Sciences domain, Cytoscape can connect to SPARQL endpoints and create graphs [44], and PrEVIEw can visualize data retrieved from the Life Sciences Linked Open Data cloud [45].",
+            "startOffset": 57998,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 80852,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "It would also be convenient to study in more detail the impact of the maximum number of iterations parameter of the Fruchterman\u2013Reingold algorithm.",
+            "startOffset": 80705,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 68821,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Next, it calculates repulsive forces for each pair of vertices and attractive forces for each edge, which are used to obtain the updated positions of the vertices.",
+            "startOffset": 68658,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 80231,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "As expected, the distributed implementation based on Spark and GraphX outperformed the sequential implementation even with the relatively small DrugBank dataset.",
+            "startOffset": 80070,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 66896,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "We have selected GraphX because it is already a part of the Spark framework.",
+            "startOffset": 66820,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 67239,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The software is publicly available in our repository.6",
+            "startOffset": 67185,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 68458,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Replacing PageRank and/or adding other algorithms to the implementation is straightforward.",
+            "startOffset": 68367,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 55273,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The paper finishes with a summary of the conclusions and a description of prospective directions for future work.",
+            "startOffset": 55160,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70069,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The experiments presented in this section aim at characterizing the stages of the graph visualization process in the Big Data setup.",
+            "startOffset": 69937,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 76985,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The data server had the configuration recommended by Ontology2: r3.xlarge instance equipped with 80 GB of SSD disk, 4 CPUs and 30.5 GB of RAM.",
+            "startOffset": 76843,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 55891,
+            "parents": [],
+            "refoffsets": {
+                "b27": {
+                    "endOffset": 55889,
+                    "startOffset": 55887
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Description Logic languages, considered the de facto standard ontology languages, also pursue the goal of providing well-defined semantics for expressive ontologies [27].",
+            "startOffset": 55721,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 70509,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "It can transparently work with directed and undirected graphs.",
+            "startOffset": 70447,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 74746,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Fig. 6 (b) shows that PageRank calculations are fast in both cases, although the time spent by the sequential implementation increases linearly with size of the graph.",
+            "startOffset": 74579,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 82445,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "For instance, execution times below 25 s were achieved for each processing stage of the DBPedia page-to-page network, which has more than 12 million vertices and 172 million edges.",
+            "startOffset": 82265,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 83561,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In such scenario, the huge number of edges would make ineffective the layout algorithm, and it would be useless to render the whole graph on the screen.",
+            "startOffset": 83409,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 84247,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Our proposal addresses the performance problems of large graph data exploration.",
+            "startOffset": 84167,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 55060,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4, we perform several experiments with graph extracted from different data resources: DBPedia knowledge graphs, synthetic graphs, and graphs from the Stanford Large Network Dataset Collection.",
+            "startOffset": 54857,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55559,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Predecessors of computable ontologies \u2013 such as semantic networks, dependency graphs, and frames \u2013 provide a graphical notation, which can be seen as an initial attempt to visualize knowledge graphs.",
+            "startOffset": 55360,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 71750,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The results are promising, but the topology of these graphs does not allow us to generalize them.",
+            "startOffset": 71653,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 82681,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Furthermore, we were able to work with the com-Friendster network (>65 million vertices and >1.8 billion edges).",
+            "startOffset": 82569,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 60932,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b53": {
+                    "endOffset": 60818,
+                    "startOffset": 60816
+                },
+                "b54": {
+                    "endOffset": 60831,
+                    "startOffset": 60829
+                },
+                "b55": {
+                    "endOffset": 60878,
+                    "startOffset": 60876
+                },
+                "b56": {
+                    "endOffset": 60898,
+                    "startOffset": 60896
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "The objective of this task is to encode the graph in machine-processable format supported by a specific-purpose graph processing library; e.g. Apache TinkerPop [53] or Jung [54] for sequential implementations, or GraphX [55] or GraphFrames [56] for distributed implementations.",
+            "startOffset": 60655,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 62530,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b59": {
+                    "endOffset": 62402,
+                    "startOffset": 62400
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "To support this task, we can use GraphDL [59], an OWL ontology that allows describing graphs by means of a simple vocabulary denoting vertices, edges, and their properties.",
+            "startOffset": 62358,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 51659,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Regarding visualization, hardware and software tools are being created to deal with large-scale datasets and to visualize them on large screens and video-walls.",
+            "startOffset": 51499,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66819,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "To implement the architecture in Fig. 3, we have used Apache Spark as the general engine for large-scale data processing and GraphX for graph management.",
+            "startOffset": 66666,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 69925,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b69": {
+                    "endOffset": 69728,
+                    "startOffset": 69726
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "For instance, GiLA [69] creates a custom partition of the edge list based on the graph properties to better balance the processing load, instead of using the default partitioning strategy of the distributed file system.",
+            "startOffset": 69706,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 68366,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b68": {
+                    "endOffset": 68364,
+                    "startOffset": 68362
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "We have selected PageRank for the experiments in this paper because it is a widely known algorithm which exhibits a typical graph processing pattern: running time linearly increases with respect to the number of edges, and the relative amount of computation and communication is constant across iterations [68].",
+            "startOffset": 68055,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 68934,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This process is repeated for a fixed number of iterations or until the vertex positions are not anymore updated.",
+            "startOffset": 68822,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 59186,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This platform supports management and visualization of large linked data graphs by creating a spatial partition of the vertex set, which is afterwards used to allow incremental navigation at different granularity levels.",
+            "startOffset": 58966,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63814,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Similarly, parallel algorithms, enabling concurrent processing of graph sections, allow us to efficiently deal with large graphs.",
+            "startOffset": 63685,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 54720,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the next section, we review some related works on visualization of linked data and ontologies by means of graphs.",
+            "startOffset": 54604,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56461,
+            "parents": [],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 56459,
+                    "startOffset": 56458
+                }
+            },
+            "secId": "sec2",
+            "sentence": "In contrast to RDF, the depiction of OWL (Ontology Web Language) models is not straightforward because of its capability to define complex relationships [9].",
+            "startOffset": 56304,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50276,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 50170,
+                    "startOffset": 50169
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In this context, visual data exploration can be viewed as an evolving hypothesis-generation process [4], during which hypotheses can be validated or rejected on a visual basis, and new ones can be introduced.",
+            "startOffset": 50068,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72626,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The sequential version was executed in an iMac equipped with an i7 4 GHz processor, 24 GB of RAM and a 512 GB of SSD disk, and running macOS High Sierra and Java 8.",
+            "startOffset": 72462,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 53033,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Furthermore, until recently we lacked a clear characterization of the efficiency of the graph generation process, and a wider analysis of the Big Data tools that can help to mitigate performance issues.",
+            "startOffset": 52831,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58965,
+            "parents": [],
+            "refoffsets": {
+                "b50": {
+                    "endOffset": 58963,
+                    "startOffset": 58961
+                }
+            },
+            "secId": "sec2",
+            "sentence": "A proposal to address these problems is graphVizdb [50].",
+            "startOffset": 58909,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49288,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 49286,
+                    "startOffset": 49285
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Visualization is a fundamental task in the scientific discovery process, although it was not until the late 80s when it was properly established as a research area [1].",
+            "startOffset": 49120,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49697,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 49695,
+                    "startOffset": 49694
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In Data Science, visualization is particularly valuable in the exploration and presentation of the results stages; that is, at the beginning and at the end of the data analysis process [3].",
+            "startOffset": 49508,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55720,
+            "parents": [],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 55718,
+                    "startOffset": 55716
+                }
+            },
+            "secId": "sec2",
+            "sentence": "In this regard, Sowa\u2019s conceptual graphs bring together the interpretability of visual semantic networks and the formal underpinnings of first-order logic [26].",
+            "startOffset": 55560,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67676,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In the map stage, incoming triples are distributed over the cluster nodes, which identify the kind of information conveyed by the triples \u2013 i.e. it is a vertex, an edge, a property, a property value, etc. \u2013 and tag them accordingly.",
+            "startOffset": 67444,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 61446,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Similarly, other calculations can be performed on the graph edges to determine their features (weight, appearance, etc.), and then applied to define their visual aspect.",
+            "startOffset": 61277,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 62357,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The graph building stage does not assume any particular procedure to create graphs from raw data or triples.",
+            "startOffset": 62249,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 82568,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Moreover, the execution time of the layout stage was similar to the GraphX native PageRank function applied to this graph.",
+            "startOffset": 82446,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65798,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The RDF Engine retrieves triples describing the knowledge graph from the triplestore.",
+            "startOffset": 65713,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 55159,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Next, in Section 5 we discuss the results, highlight the main outcomes and identify open problems.",
+            "startOffset": 55061,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57594,
+            "parents": [],
+            "refoffsets": {
+                "b39": {
+                    "endOffset": 57592,
+                    "startOffset": 57590
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Some challenges of Linked Data visualization are context adaptation, users and data heterogeneity, supporting different tasks (query, combination, filtering, etc.), and more recently, performance [39].",
+            "startOffset": 57393,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 64110,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Big Data frameworks include two key elements: (1) a distributed file system; and (2) a distributed computation paradigm.",
+            "startOffset": 63990,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 83408,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This would be the case of big dense graphs, such as the largest one tested in this work \u2014 synthetic graph with 100,000 vertices and more than 2 billion edges.",
+            "startOffset": 83250,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 70634,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "For comparison purposes, a sequential implementation using TinkerPop, Jung and Gephi for graph processing was also developed.",
+            "startOffset": 70509,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 49944,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Indeed, data scientists need to validate their assumptions and findings with the experts in order to redesign, repeat, or conclude the process.",
+            "startOffset": 49801,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56854,
+            "parents": [],
+            "refoffsets": {
+                "b28": {
+                    "endOffset": 56737,
+                    "startOffset": 56735
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The TopBraid Composer ontology development tool [28] supports visualization of knowledge graphs in a notation similar to UML (Unified Modeling Language) class diagrams.",
+            "startOffset": 56686,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 61276,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 61274,
+                    "startOffset": 61272
+                },
+                "b57": {
+                    "endOffset": 61214,
+                    "startOffset": 61212
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "For example, the size and the color of the vertices can be adjusted according to their degree; by using a more sophisticated ranking procedure, like the PageRank algorithm [57]; or from a combination of different relevance measures [18].",
+            "startOffset": 61039,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 70446,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "As explained above, this implementation used Spark and GraphX for the graph representation, PageRank calculation, and layout.",
+            "startOffset": 70321,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 75651,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Person to person relations, representing connections between relevant persons.",
+            "startOffset": 75573,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 75929,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Execution times are also detailed in Table A.3.",
+            "startOffset": 75882,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 51807,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Visual spaces, supported by distributed data processing clusters, are fostering speed, accuracy, comprehension and confidence on the data analysis.",
+            "startOffset": 51660,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71652,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Afterwards, we run more experiments with the distributed implementation and the full version of DBPedia, from which we extracted three meaningful graphs with millions of vertices and edges.",
+            "startOffset": 71463,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 58576,
+            "parents": [],
+            "refoffsets": {
+                "b47": {
+                    "endOffset": 58537,
+                    "startOffset": 58532
+                },
+                "b48": {
+                    "endOffset": 58537,
+                    "startOffset": 58532
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Existing visualization benchmarks are more focused on coverage than on performance [47,48], and detailed evaluations are scarce.",
+            "startOffset": 58448,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 65103,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b67": {
+                    "endOffset": 64975,
+                    "startOffset": 64973
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Job scheduling in Spark is usually performed by YARN [67], which receives a Spark program, builds a directed acyclic graph of Spark jobs, and manages the cluster resources to run them.",
+            "startOffset": 64919,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 56686,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The OWL language specification does not state a graphical representation, which has favored the creation of different ways to visualize ontological models depending on the purpose and the meaning of the underlying knowledge.",
+            "startOffset": 56462,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 63090,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Data has been retrieved from the public Bio2RDF SPARQL endpoint1 and processed with Gephi.",
+            "startOffset": 62949,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 61038,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Graph calculations Different graph measures can be calculated on the graph to improve the visualization.",
+            "startOffset": 60934,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 80598,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Further optimizations of the distributed layout algorithm (e.g. data partitions, see below) and the cluster configuration (e.g. higher-capability nodes vs more nodes) could be considered.",
+            "startOffset": 80411,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 76245,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "These files were afterwards loaded and parsed to build each graph by a modified version of the Graph Builder \u2013 described in Section 3.3 \u2013 able to read from HDFS instead of from the triplestore.",
+            "startOffset": 76052,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 60654,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Graph building: Afterwards, a graph is built from the retrieved data, which can be in-memory or stored in files as plain text (vertices and edge pairs), triples, etc.",
+            "startOffset": 60488,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 55359,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Linked data visualization techniques date as early as ontology languages.",
+            "startOffset": 55286,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 58909,
+            "parents": [],
+            "refoffsets": {
+                "b49": {
+                    "endOffset": 58746,
+                    "startOffset": 58744
+                }
+            },
+            "secId": "sec2",
+            "sentence": "It has not been emphasized until recently that the existing approaches, including those mentioned above, have very limited capability to manage large amounts of data [49], since they do not aim at addressing issues related to performance and scalability; e.g. memory overflow, use of external storage, or efficient automatic layout.",
+            "startOffset": 58577,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 67443,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The Graph Builder applies a map-reduce strategy to create a GraphX graph from different sources (plain text or triples).",
+            "startOffset": 67323,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 56248,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 56246,
+                    "startOffset": 56245
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Simpler models in the RDF (Resource Description Framework) and RDF-Schema languages, not bound to a Description Logic, do not entail complex semantics, and therefore they can be directly depicted as directed graphs [8].",
+            "startOffset": 56029,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52830,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Nevertheless, we also experienced that the scalability of the implemented platforms is limited.",
+            "startOffset": 52735,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65713,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The triplestore could also be distributed, which is supported by tools such as Virtuoso,2 Blazegraph,3 and Stardog4 although we do not explore these capabilities in this work.",
+            "startOffset": 65385,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 64344,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b64": {
+                    "endOffset": 64186,
+                    "startOffset": 64184
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The Apache Hadoop framework is a family of software that implement both [64]: HDFS (Hadoop Distributed File System), a fault-resilient file system for storage; and MapReduce, an abstract paradigm to implement distributed computation.",
+            "startOffset": 64111,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 85188,
+            "parents": [],
+            "refoffsets": {
+                "b77": {
+                    "endOffset": 85186,
+                    "startOffset": 85184
+                }
+            },
+            "secId": "sec6",
+            "sentence": "To do so, specific-purpose profiling tools such as GiViP could be used [77].",
+            "startOffset": 85112,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 57392,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Visualization tools for exploration and analysis of large linked data are focused on browsing data registers, rather than depicting deeper semantics.",
+            "startOffset": 57243,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 72462,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "with 1 core each, allowing up to 20 GB for the driver and 6 GB for the executors.",
+            "startOffset": 72381,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 60142,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "These stages may not be always present or may be executed iteratively.",
+            "startOffset": 60072,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 83717,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Data visualization plays a prominent role in data exploration and has only increased its importance with the advent of Big Data.",
+            "startOffset": 83589,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 54603,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The remainder of the paper is structured as follows.",
+            "startOffset": 54551,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72275,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "All nodes are identical and each one has 3 TB of disk (Seagate, RAID 1 @ 7200RPM), 100 GB of RAM (Micron @ 1600 MHz), 24 cores (Intel Xeon, E5-2620 v2 @ 2.10 GHz) and a network speed of 10 GB/s.",
+            "startOffset": 72081,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 62013,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Rendering: Finally, the graph is displayed on the screen.",
+            "startOffset": 61956,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 64599,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Accordingly, it provides a uniform access to the data while facilitating the division of the computing tasks and the gathering of the results across a cluster.",
+            "startOffset": 64440,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 79333,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "refoffsets": {
+                "b76": {
+                    "endOffset": 79331,
+                    "startOffset": 79329
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "Therefore, we evaluated the distributed implementation with a selection of assorted graphs with heterogeneous sizes and topologies from the Stanford Large Network Dataset, a publicly available set of social and information real-world networks distributed with the Stanford Network Analysis Platform (SNAP) [76].",
+            "startOffset": 79022,
+            "title": "SNAP graphs"
+        },
+        {
+            "endOffset": 71963,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Therefore, we conducted two additional tests with: (1) synthetically-generated graphs with higher density values; (2) a selection of real-world graphs from the Stanford Network Analysis Project (SNAP) repository.",
+            "startOffset": 71751,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 60242,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Data retrieval: The first step to create a linked data graph is retrieving data.",
+            "startOffset": 60162,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 85714,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "To do so, we will leverage the capabilities of the Data Observatory (DO),10 a large-scale visualization environment built at the Data Science Institute at Imperial College London.",
+            "startOffset": 85454,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 53250,
+            "parents": [],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 53248,
+                    "startOffset": 53243
+                },
+                "b20": {
+                    "endOffset": 53248,
+                    "startOffset": 53243
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Such research work is an open challenge in this area [19,20].",
+            "startOffset": 53189,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53396,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Our analysis focuses on the performance of the data preparation, calculation of graph metrics, and graph layout stages for different graph types.",
+            "startOffset": 53251,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60071,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "refoffsets": {
+                "b52": {
+                    "endOffset": 59986,
+                    "startOffset": 59984
+                }
+            },
+            "secId": "sec3.1",
+            "sentence": "This workflow is consistent with the Linked Data Visualization Model proposed in [52], which describes the visualization process of RDF and linked data in a generic way.",
+            "startOffset": 59902,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 68995,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Our implementation follows the same steps, adapted to Spark:",
+            "startOffset": 68935,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 70779,
+            "parents": [],
+            "refoffsets": {
+                "b53": {
+                    "endOffset": 70722,
+                    "startOffset": 70720
+                }
+            },
+            "secId": "sec4",
+            "sentence": "Apache TinkerPop is an open source graph computing framework written in Java/Groovy [53] and can be seen as a non-distributed version of GraphX.",
+            "startOffset": 70635,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 83055,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Therefore, we can conclude that very large graph structures, extracted from real-world problems, can be processed without the need of spatial partitions.",
+            "startOffset": 82902,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 50067,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Visual data exploration is particularly useful when little is known about the source data and the analysis goals are vague.",
+            "startOffset": 49944,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54856,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 3, we propose a generic graph visualization pipeline, an architecture based on Big Data technologies, and an implementation.",
+            "startOffset": 54721,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66374,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "(A straightforward implementation of the Fruchterman\u2013Reingold layout algorithm in Spark is presented in the next section.)",
+            "startOffset": 66252,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 83855,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This paper has studied the performance of a framework based on Apache Spark and GraphX for visualization of large-scale knowledge graphs.",
+            "startOffset": 83718,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 59479,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Nevertheless, both frameworks are developed in a non-distributed fashion, which results in quite high execution times.",
+            "startOffset": 59361,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 84541,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In contrast, it significantly improves the current state of the art of non-distributed exploration tools such as Gephi and Cytoscape.",
+            "startOffset": 84408,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 75570,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Artist to artist relations, representing influences between artists",
+            "startOffset": 75503,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 71225,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 71223,
+                    "startOffset": 71215
+                },
+                "b70": {
+                    "endOffset": 71223,
+                    "startOffset": 71215
+                },
+                "b71": {
+                    "endOffset": 71223,
+                    "startOffset": 71215
+                }
+            },
+            "secId": "sec4",
+            "sentence": "These tools are easily interoperable and have shown good performance in previous benchmarks [23,70,71].",
+            "startOffset": 71122,
+            "title": "Experiments"
+        },
+        {
+            "endOffset": 84665,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In the last two years, other proposals aimed at large graph visualization have been presented, such as graphvizDB and GiLA.",
+            "startOffset": 84542,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 73506,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "refoffsets": {
+                "b72": {
+                    "endOffset": 73424,
+                    "startOffset": 73422
+                }
+            },
+            "secId": "sec4.1",
+            "sentence": "The data source was the linked data version of DrugBank created by the Bio2RDF initiative [72], loaded into an Amazon Web Service (AWS) machine running a Virtuoso triplestore.",
+            "startOffset": 73331,
+            "title": "DrugBank"
+        },
+        {
+            "endOffset": 62814,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Fig. 2 shows an example of the application of the graph visualization pipeline.",
+            "startOffset": 62735,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 79021,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "refoffsets": {
+                "b75": {
+                    "endOffset": 78775,
+                    "startOffset": 78773
+                }
+            },
+            "secId": "sec4.4",
+            "sentence": "The Erd\u00f6s\u2013R\u00e9nyi model has some limitations for modeling real-world problems [75], since the resulting graphs have low clustering (unlike many social networks), and the vertex degree distribution does not have long tails (as it happens in semantic networks, protein to protein interactions or computer networks, to name some).",
+            "startOffset": 78696,
+            "title": "SNAP graphs"
+        },
+        {
+            "endOffset": 53577,
+            "parents": [],
+            "refoffsets": {
+                "b21": {
+                    "endOffset": 53494,
+                    "startOffset": 53492
+                },
+                "b22": {
+                    "endOffset": 53533,
+                    "startOffset": 53531
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For the experiments, we developed a software package implementing these tasks based on GraphX [21], the API included in Apache Spark [22] for graphs and graph-parallel computation.",
+            "startOffset": 53397,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63684,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Big Data frameworks provide support for managing massive amounts of data in reasonable time by using clusters of distributed nodes.",
+            "startOffset": 63553,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 50437,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 50304,
+                    "startOffset": 50303
+                }
+            },
+            "secId": "sec1",
+            "sentence": "According to Shneiderman [5], visual data exploration is a three-step procedure encompassing data overview, facet zoom and filter, and on-demand detail request.",
+            "startOffset": 50277,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66648,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "A detailed study of this component remains as future research work.",
+            "startOffset": 66581,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 60486,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The result of this query is a set of triples describing the entities and relationships of interest.",
+            "startOffset": 60387,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 66016,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Different measures can be calculated for the graph, such as PageRank and connected components.",
+            "startOffset": 65922,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 68657,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This algorithm starts with a random placement of the vertices.",
+            "startOffset": 68595,
+            "title": "Implementation"
+        },
+        {
+            "endOffset": 51498,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The growth of available data is a common issue in Data Science, Semantic Web and Data Visualization, and so the necessity of frameworks capable of dealing with this overabundance.",
+            "startOffset": 51319,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59901,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "(See Fig. 1.)",
+            "startOffset": 59888,
+            "title": "Visualization pipeline"
+        },
+        {
+            "endOffset": 76791,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experiments"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "This edition includes more than 1 billion facts, a 168% increase over the public DBPedia SPARQL endpoint.9",
+            "startOffset": 76685,
+            "title": "DBPedia"
+        },
+        {
+            "endOffset": 65294,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The architecture implements the graph data processing stages in the Hadoop / Spark / GraphX stack.",
+            "startOffset": 65196,
+            "title": "Big Data architecture"
+        },
+        {
+            "endOffset": 66140,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Knowledge graph visualization process"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The information resulting from these operations can be added to the graph and used in later computations, including layout.",
+            "startOffset": 66017,
+            "title": "Big Data architecture"
+        }
+    ],
+    "docId": "S0167739X17323610",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "jgomez@decsai.ugr.es",
+                "first": "Juan",
+                "initial": "J.",
+                "last": "G\u00f3mez-Romero"
+            },
+            {
+                "email": "m.molina-solana@imperial.ac.uk",
+                "first": "Miguel",
+                "initial": "M.",
+                "last": "Molina-Solana"
+            },
+            {
+                "email": "axelfrancois.oehmichen11@imperial.ac.uk",
+                "first": "Axel",
+                "initial": "A.",
+                "last": "Oehmichen"
+            },
+            {
+                "email": "y.guo@imperial.ac.uk",
+                "first": "Yike",
+                "initial": "Y.",
+                "last": "Guo"
+            }
+        ],
+        "doi": "10.1016/j.future.2018.06.015",
+        "firstpage": "224",
+        "issn": "0167739X",
+        "keywords": [
+            "Big data",
+            "Graphs",
+            "Linked data",
+            "Performance analysis",
+            "Visualization"
+        ],
+        "lastpage": "238",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Visualizing large knowledge graphs: A performance analysis"
+    }
+}

@@ -1,0 +1,4049 @@
+{
+    "abstract": "Biologists are increasingly confronted with the challenge of quickly understanding genome-wide biological data, which usually involve a large number of genomic coordinates (e.g. genes) but a much smaller number of samples. To meet the need for data of this shape, we present an open-source package called 'supraHex' for training, analysing and visualising omics data. This package devises a supra-hexagonal map to self-organise the input data, offers scalable functionalities for post-analysing the map, and more importantly, allows for overlaying additional data for multilayer omics data comparisons. Via applying to DNA replication timing data of mouse embryogenesis, we demonstrate that supraHex is capable of simultaneously carrying out gene clustering and sample correlation, providing intuitive visualisation at each step of the analysis. By overlaying CpG and expression data onto the trained replication-timing map, we also show that supraHex is able to intuitively capture an inherent relationship between late replication, low CpG density promoters and low expression levels. As part of the Bioconductor project, supraHex makes accessible to a wide community in a simple way, what would otherwise be a complex framework for the ultrafast understanding of any tabular omics data, both scientifically and artistically. This package can run on Windows, Mac and Linux, and is freely available together with many tutorials on featuring real examples at http://supfam.org/supraHex. \u00a9 2013 The Authors.",
+    "author_highlights": [
+        {
+            "endOffset": 12881,
+            "sentence": "supraHex is an open-source R/Bioconductor package for tabular omics data analysis.",
+            "startOffset": 12799
+        },
+        {
+            "endOffset": 12944,
+            "sentence": "A supra-hexagonal map is designed to self-organise omics data.",
+            "startOffset": 12882
+        },
+        {
+            "endOffset": 13011,
+            "sentence": "The supraHex map analyses both genes and samples at the same time.",
+            "startOffset": 12945
+        },
+        {
+            "endOffset": 13102,
+            "sentence": "The supraHex map can be overlaid by additional data for multilayer omics data comparisons.",
+            "startOffset": 13012
+        },
+        {
+            "endOffset": 13187,
+            "sentence": "supraHex can tell inherent relations between replication timing, CpG and expression.",
+            "startOffset": 13103
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Schena"
+                },
+                {
+                    "first": "Dari",
+                    "initial": "D.",
+                    "last": "Shalon"
+                },
+                {
+                    "first": "Ronald W.",
+                    "initial": "R.W.",
+                    "last": "Davis"
+                },
+                {
+                    "first": "Patrick O.",
+                    "initial": "P.O.",
+                    "last": "Brown"
+                }
+            ],
+            "doi": "10.1126/science.270.5235.467",
+            "firstpage": "467",
+            "issn": "00368075",
+            "lastpage": "470",
+            "pmid": "7569999",
+            "pub_year": 1995,
+            "title": "Quantitative monitoring of gene expression patterns with a complementary DNA microarray",
+            "volume": "270"
+        },
+        "b0010": {
+            "authors": [
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Lockhart"
+                },
+                {
+                    "first": "Helin",
+                    "initial": "H.",
+                    "last": "Dong"
+                },
+                {
+                    "first": "Michael C.",
+                    "initial": "M.C.",
+                    "last": "Byrne"
+                },
+                {
+                    "first": "Maximillian T.",
+                    "initial": "M.T.",
+                    "last": "Follettie"
+                },
+                {
+                    "first": "Michael V.",
+                    "initial": "M.V.",
+                    "last": "Gallo"
+                },
+                {
+                    "first": "Mark S.",
+                    "initial": "M.S.",
+                    "last": "Chee"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Mittmann"
+                },
+                {
+                    "first": "Chunwei",
+                    "initial": "C.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Michiko",
+                    "initial": "M.",
+                    "last": "Kobayashi"
+                },
+                {
+                    "first": "Heidi",
+                    "initial": "H.",
+                    "last": "Horton"
+                },
+                {
+                    "first": "Eugene L.",
+                    "initial": "E.L.",
+                    "last": "Brown"
+                }
+            ],
+            "doi": "10.1038/nbt1296-1675",
+            "firstpage": "1675",
+            "issn": "10870156",
+            "lastpage": "1680",
+            "pmid": "9634850",
+            "pub_year": 1996,
+            "title": "Expression monitoring by hybridization to high-density oligonucleotide arrays",
+            "volume": "14"
+        },
+        "b0015": {
+            "authors": [
+                {
+                    "first": "Zhong",
+                    "initial": "Z.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Gerstein"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Snyder"
+                }
+            ],
+            "doi": "10.1038/nrg2484",
+            "firstpage": "57",
+            "issn": "14710056",
+            "lastpage": "63",
+            "pmid": "19015660",
+            "pub_year": 2009,
+            "title": "RNA-Seq: A revolutionary tool for transcriptomics",
+            "volume": "10"
+        },
+        "b0020": {
+            "authors": [
+                {
+                    "first": "Jay",
+                    "initial": "J.",
+                    "last": "Shendure"
+                },
+                {
+                    "first": "Hanlee",
+                    "initial": "H.",
+                    "last": "Ji"
+                }
+            ],
+            "doi": "10.1038/nbt1486",
+            "firstpage": "1135",
+            "issn": "10870156",
+            "lastpage": "1145",
+            "pmid": "18846087",
+            "pub_year": 2008,
+            "title": "Next-generation DNA sequencing",
+            "volume": "26"
+        },
+        "b0025": null,
+        "b0030": null,
+        "b0035": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Quackenbush"
+                }
+            ],
+            "doi": "10.1038/ng1032",
+            "firstpage": "496",
+            "issn": "10614036",
+            "lastpage": "501",
+            "pmid": "12454644",
+            "pub_year": 2002,
+            "title": "Microarray data normalization and transformation",
+            "volume": "32"
+        },
+        "b0040": {
+            "authors": [
+                {
+                    "first": "Robert C.",
+                    "initial": "R.C.",
+                    "last": "Gentleman"
+                },
+                {
+                    "first": "Vincent J.",
+                    "initial": "V.J.",
+                    "last": "Carey"
+                },
+                {
+                    "first": "Douglas M.",
+                    "initial": "D.M.",
+                    "last": "Bates"
+                },
+                {
+                    "first": "Ben",
+                    "initial": "B.",
+                    "last": "Bolstad"
+                },
+                {
+                    "first": "Marcel",
+                    "initial": "M.",
+                    "last": "Dettling"
+                },
+                {
+                    "first": "Sandrine",
+                    "initial": "S.",
+                    "last": "Dudoit"
+                },
+                {
+                    "first": "Byron",
+                    "initial": "B.",
+                    "last": "Ellis"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "Gautier"
+                },
+                {
+                    "first": "Yongchao",
+                    "initial": "Y.",
+                    "last": "Ge"
+                },
+                {
+                    "first": "Jeff",
+                    "initial": "J.",
+                    "last": "Gentry"
+                },
+                {
+                    "first": "Kurt",
+                    "initial": "K.",
+                    "last": "Hornik"
+                },
+                {
+                    "first": "Torsten",
+                    "initial": "T.",
+                    "last": "Hothorn"
+                },
+                {
+                    "first": "Wolfgang",
+                    "initial": "W.",
+                    "last": "Huber"
+                },
+                {
+                    "first": "Stefano",
+                    "initial": "S.",
+                    "last": "Iacus"
+                },
+                {
+                    "first": "Rafael",
+                    "initial": "R.",
+                    "last": "Irizarry"
+                },
+                {
+                    "first": "Friedrich",
+                    "initial": "F.",
+                    "last": "Leisch"
+                },
+                {
+                    "first": "Cheng",
+                    "initial": "C.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Martin",
+                    "initial": "M.",
+                    "last": "Maechler"
+                },
+                {
+                    "first": "Anthony J.",
+                    "initial": "A.J.",
+                    "last": "Rossini"
+                },
+                {
+                    "first": "Gunther",
+                    "initial": "G.",
+                    "last": "Sawitzki"
+                },
+                {
+                    "first": "Colin",
+                    "initial": "C.",
+                    "last": "Smith"
+                },
+                {
+                    "first": "Gordon",
+                    "initial": "G.",
+                    "last": "Smyth"
+                },
+                {
+                    "first": "Luke",
+                    "initial": "L.",
+                    "last": "Tierney"
+                },
+                {
+                    "first": "Jean Y.H.",
+                    "initial": "J.Y.H.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Jianhua",
+                    "initial": "J.",
+                    "last": "Zhang"
+                }
+            ],
+            "firstpage": "R80",
+            "issn": "14656914",
+            "pmid": "15461798",
+            "pub_year": 2004,
+            "title": "Bioconductor: open software development for computational biology and bioinformatics.",
+            "volume": "5"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "Juha",
+                    "initial": "J.",
+                    "last": "Vesanto"
+                },
+                {
+                    "first": "Mika",
+                    "initial": "M.",
+                    "last": "Sulkava"
+                }
+            ],
+            "firstpage": "951",
+            "issn": "03029743",
+            "lastpage": "956",
+            "pub_year": 2002,
+            "title": "Distance matrix based clustering of the Self-Organizing Map",
+            "volume": "2415"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "Tarjei S.",
+                    "initial": "T.S.",
+                    "last": "Mikkelsen"
+                },
+                {
+                    "first": "Manching",
+                    "initial": "M.",
+                    "last": "Ku"
+                },
+                {
+                    "first": "David B.",
+                    "initial": "D.B.",
+                    "last": "Jaffe"
+                },
+                {
+                    "first": "Biju",
+                    "initial": "B.",
+                    "last": "Issac"
+                },
+                {
+                    "first": "Erez",
+                    "initial": "E.",
+                    "last": "Lieberman"
+                },
+                {
+                    "first": "Georgia",
+                    "initial": "G.",
+                    "last": "Giannoukos"
+                },
+                {
+                    "first": "Pablo",
+                    "initial": "P.",
+                    "last": "Alvarez"
+                },
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Brockman"
+                },
+                {
+                    "first": "Tae Kyung",
+                    "initial": "T.K.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Richard P.",
+                    "initial": "R.P.",
+                    "last": "Koche"
+                },
+                {
+                    "first": "William",
+                    "initial": "W.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Mendenhall"
+                },
+                {
+                    "first": "Aisling",
+                    "initial": "A.",
+                    "last": "O'Donovan"
+                },
+                {
+                    "first": "Aviva",
+                    "initial": "A.",
+                    "last": "Presser"
+                },
+                {
+                    "first": "Carsten",
+                    "initial": "C.",
+                    "last": "Russ"
+                },
+                {
+                    "first": "Xiaohui",
+                    "initial": "X.",
+                    "last": "Xie"
+                },
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Meissner"
+                },
+                {
+                    "first": "Marius",
+                    "initial": "M.",
+                    "last": "Wernig"
+                },
+                {
+                    "first": "Rudolf",
+                    "initial": "R.",
+                    "last": "Jaenisch"
+                },
+                {
+                    "first": "Chad",
+                    "initial": "C.",
+                    "last": "Nusbaum"
+                },
+                {
+                    "first": "Eric S.",
+                    "initial": "E.S.",
+                    "last": "Lander"
+                },
+                {
+                    "first": "Bradley E.",
+                    "initial": "B.E.",
+                    "last": "Bernstein"
+                }
+            ],
+            "doi": "10.1038/nature06008",
+            "firstpage": "553",
+            "issn": "00280836",
+            "lastpage": "560",
+            "pmid": "17603471",
+            "pub_year": 2007,
+            "title": "Genome-wide maps of chromatin state in pluripotent and lineage-committed cells",
+            "volume": "448"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Ichiro",
+                    "initial": "I.",
+                    "last": "Hiratani"
+                },
+                {
+                    "first": "Tyrone",
+                    "initial": "T.",
+                    "last": "Ryba"
+                },
+                {
+                    "first": "Mari",
+                    "initial": "M.",
+                    "last": "Itoh"
+                },
+                {
+                    "first": "Joy",
+                    "initial": "J.",
+                    "last": "Rathjen"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Kulik"
+                },
+                {
+                    "first": "Bernadett",
+                    "initial": "B.",
+                    "last": "Papp"
+                },
+                {
+                    "first": "Eden",
+                    "initial": "E.",
+                    "last": "Fussner"
+                },
+                {
+                    "first": "David P.",
+                    "initial": "D.P.",
+                    "last": "Bazett-Jones"
+                },
+                {
+                    "first": "Kathrin",
+                    "initial": "K.",
+                    "last": "Plath"
+                },
+                {
+                    "first": "Stephen",
+                    "initial": "S.",
+                    "last": "Dalton"
+                },
+                {
+                    "first": "Peter D.",
+                    "initial": "P.D.",
+                    "last": "Rathjen"
+                },
+                {
+                    "first": "David M.",
+                    "initial": "D.M.",
+                    "last": "Gilbert"
+                }
+            ],
+            "doi": "10.1101/gr.099796.109",
+            "firstpage": "155",
+            "issn": "10889051",
+            "lastpage": "169",
+            "pmid": "19952138",
+            "pub_year": 2010,
+            "title": "Genome-wide dynamics of replication timing revealed by in vitro models of mouse embryogenesis",
+            "volume": "20"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "Pablo",
+                    "initial": "P.",
+                    "last": "Tamayo"
+                },
+                {
+                    "first": "Donna",
+                    "initial": "D.",
+                    "last": "Slonim"
+                },
+                {
+                    "first": "Jill",
+                    "initial": "J.",
+                    "last": "Mesirov"
+                },
+                {
+                    "first": "Qing",
+                    "initial": "Q.",
+                    "last": "Zhu"
+                },
+                {
+                    "first": "Sutisak",
+                    "initial": "S.",
+                    "last": "Kitareewan"
+                },
+                {
+                    "first": "Ethan",
+                    "initial": "E.",
+                    "last": "Dmitrovsky"
+                },
+                {
+                    "first": "Eric S.",
+                    "initial": "E.S.",
+                    "last": "Lander"
+                },
+                {
+                    "first": "Todd R.",
+                    "initial": "T.R.",
+                    "last": "Golub"
+                }
+            ],
+            "doi": "10.1073/pnas.96.6.2907",
+            "firstpage": "2907",
+            "issn": "00278424",
+            "lastpage": "2912",
+            "pmid": "10077610",
+            "pub_year": 1999,
+            "title": "Interpreting patterns of gene expression with self-organizing maps: Methods and application to hematopoietic differentiation",
+            "volume": "96"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Dunham"
+                },
+                {
+                    "first": "Anshul",
+                    "initial": "A.",
+                    "last": "Kundaje"
+                },
+                {
+                    "first": "Shelley F.",
+                    "initial": "S.F.",
+                    "last": "Aldred"
+                },
+                {
+                    "first": "Patrick J.",
+                    "initial": "P.J.",
+                    "last": "Collins"
+                },
+                {
+                    "first": "Carrie A.",
+                    "initial": "C.A.",
+                    "last": "Davis"
+                },
+                {
+                    "first": "Francis",
+                    "initial": "F.",
+                    "last": "Doyle"
+                },
+                {
+                    "first": "Charles B.",
+                    "initial": "C.B.",
+                    "last": "Epstein"
+                },
+                {
+                    "first": "Seth",
+                    "initial": "S.",
+                    "last": "Frietze"
+                },
+                {
+                    "first": "Jennifer",
+                    "initial": "J.",
+                    "last": "Harrow"
+                },
+                {
+                    "first": "Rajinder",
+                    "initial": "R.",
+                    "last": "Kaul"
+                },
+                {
+                    "first": "Jainab",
+                    "initial": "J.",
+                    "last": "Khatun"
+                },
+                {
+                    "first": "Bryan R.",
+                    "initial": "B.R.",
+                    "last": "Lajoie"
+                },
+                {
+                    "first": "Stephen G.",
+                    "initial": "S.G.",
+                    "last": "Landt"
+                },
+                {
+                    "first": "Bum Kyu",
+                    "initial": "B.K.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Florencia",
+                    "initial": "F.",
+                    "last": "Pauli"
+                },
+                {
+                    "first": "Kate R.",
+                    "initial": "K.R.",
+                    "last": "Rosenbloom"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Sabo"
+                },
+                {
+                    "first": "Alexias",
+                    "initial": "A.",
+                    "last": "Safi"
+                },
+                {
+                    "first": "Amartya",
+                    "initial": "A.",
+                    "last": "Sanyal"
+                },
+                {
+                    "first": "Noam",
+                    "initial": "N.",
+                    "last": "Shoresh"
+                },
+                {
+                    "first": "Jeremy M.",
+                    "initial": "J.M.",
+                    "last": "Simon"
+                },
+                {
+                    "first": "Lingyun",
+                    "initial": "L.",
+                    "last": "Song"
+                },
+                {
+                    "first": "Nathan D.",
+                    "initial": "N.D.",
+                    "last": "Trinklein"
+                },
+                {
+                    "first": "Robert C.",
+                    "initial": "R.C.",
+                    "last": "Altshuler"
+                },
+                {
+                    "first": "Ewan",
+                    "initial": "E.",
+                    "last": "Birney"
+                },
+                {
+                    "first": "James B.",
+                    "initial": "J.B.",
+                    "last": "Brown"
+                },
+                {
+                    "first": "Chao",
+                    "initial": "C.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "Sarah",
+                    "initial": "S.",
+                    "last": "Djebali"
+                },
+                {
+                    "first": "Xianjun",
+                    "initial": "X.",
+                    "last": "Dong"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Ernst"
+                },
+                {
+                    "first": "Terrence S.",
+                    "initial": "T.S.",
+                    "last": "Furey"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Gerstein"
+                },
+                {
+                    "first": "Belinda",
+                    "initial": "B.",
+                    "last": "Giardine"
+                },
+                {
+                    "first": "Melissa",
+                    "initial": "M.",
+                    "last": "Greven"
+                },
+                {
+                    "first": "Ross C.",
+                    "initial": "R.C.",
+                    "last": "Hardison"
+                },
+                {
+                    "first": "Robert S.",
+                    "initial": "R.S.",
+                    "last": "Harris"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Herrero"
+                },
+                {
+                    "first": "Michael M.",
+                    "initial": "M.M.",
+                    "last": "Hoffman"
+                },
+                {
+                    "first": "Sowmya",
+                    "initial": "S.",
+                    "last": "Iyer"
+                },
+                {
+                    "first": "Manolis",
+                    "initial": "M.",
+                    "last": "Kellis"
+                },
+                {
+                    "first": "Pouya",
+                    "initial": "P.",
+                    "last": "Kheradpour"
+                },
+                {
+                    "first": "Timo",
+                    "initial": "T.",
+                    "last": "Lassmann"
+                },
+                {
+                    "first": "Qunhua",
+                    "initial": "Q.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Xinying",
+                    "initial": "X.",
+                    "last": "Lin"
+                },
+                {
+                    "first": "Georgi K.",
+                    "initial": "G.K.",
+                    "last": "Marinov"
+                },
+                {
+                    "first": "Angelika",
+                    "initial": "A.",
+                    "last": "Merkel"
+                },
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Mortazavi"
+                },
+                {
+                    "first": "Stephen C.J.",
+                    "initial": "S.C.J.",
+                    "last": "Parker"
+                },
+                {
+                    "first": "Timothy E.",
+                    "initial": "T.E.",
+                    "last": "Reddy"
+                },
+                {
+                    "first": "Joel",
+                    "initial": "J.",
+                    "last": "Rozowsky"
+                },
+                {
+                    "first": "Felix",
+                    "initial": "F.",
+                    "last": "Schlesinger"
+                },
+                {
+                    "first": "Robert E.",
+                    "initial": "R.E.",
+                    "last": "Thurman"
+                },
+                {
+                    "first": "Jie",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Lucas D.",
+                    "initial": "L.D.",
+                    "last": "Ward"
+                },
+                {
+                    "first": "Troy W.",
+                    "initial": "T.W.",
+                    "last": "Whitfield"
+                },
+                {
+                    "first": "Steven P.",
+                    "initial": "S.P.",
+                    "last": "Wilder"
+                },
+                {
+                    "first": "Weisheng",
+                    "initial": "W.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Hualin S.",
+                    "initial": "H.S.",
+                    "last": "Xi"
+                },
+                {
+                    "first": "Kevin Y.",
+                    "initial": "K.Y.",
+                    "last": "Yip"
+                },
+                {
+                    "first": "Jiali",
+                    "initial": "J.",
+                    "last": "Zhuang"
+                },
+                {
+                    "first": "Bradley E.",
+                    "initial": "B.E.",
+                    "last": "Bernstein"
+                },
+                {
+                    "first": "Eric D.",
+                    "initial": "E.D.",
+                    "last": "Green"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Gunter"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Snyder"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Pazin"
+                },
+                {
+                    "first": "Rebecca F.",
+                    "initial": "R.F.",
+                    "last": "Lowdon"
+                },
+                {
+                    "first": "Laura A.L.",
+                    "initial": "L.A.L.",
+                    "last": "Dillon"
+                },
+                {
+                    "first": "Leslie B.",
+                    "initial": "L.B.",
+                    "last": "Adams"
+                },
+                {
+                    "first": "Caroline J.",
+                    "initial": "C.J.",
+                    "last": "Kelly"
+                },
+                {
+                    "first": "Julia",
+                    "initial": "J.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Judith R.",
+                    "initial": "J.R.",
+                    "last": "Wexler"
+                },
+                {
+                    "first": "Peter J.",
+                    "initial": "P.J.",
+                    "last": "Good"
+                },
+                {
+                    "first": "Elise A.",
+                    "initial": "E.A.",
+                    "last": "Feingold"
+                },
+                {
+                    "first": "Gregory E.",
+                    "initial": "G.E.",
+                    "last": "Crawford"
+                },
+                {
+                    "first": "Job",
+                    "initial": "J.",
+                    "last": "Dekker"
+                },
+                {
+                    "first": "Laura",
+                    "initial": "L.",
+                    "last": "Elnitski"
+                },
+                {
+                    "first": "Peggy J.",
+                    "initial": "P.J.",
+                    "last": "Farnham"
+                },
+                {
+                    "first": "Morgan C.",
+                    "initial": "M.C.",
+                    "last": "Giddings"
+                },
+                {
+                    "first": "Thomas R.",
+                    "initial": "T.R.",
+                    "last": "Gingeras"
+                },
+                {
+                    "first": "Roderic",
+                    "initial": "R.",
+                    "last": "Guig\u00f3"
+                },
+                {
+                    "first": "Timothy J.",
+                    "initial": "T.J.",
+                    "last": "Hubbard"
+                },
+                {
+                    "first": "W. James",
+                    "initial": "W.J.",
+                    "last": "Kent"
+                },
+                {
+                    "first": "Jason D.",
+                    "initial": "J.D.",
+                    "last": "Lieb"
+                },
+                {
+                    "first": "Elliott H.",
+                    "initial": "E.H.",
+                    "last": "Margulies"
+                },
+                {
+                    "first": "Richard M.",
+                    "initial": "R.M.",
+                    "last": "Myers"
+                },
+                {
+                    "first": "John A.",
+                    "initial": "J.A.",
+                    "last": "Stamatoyannopoulos"
+                },
+                {
+                    "first": "Scott A.",
+                    "initial": "S.A.",
+                    "last": "Tenenbaum"
+                },
+                {
+                    "first": "Zhiping",
+                    "initial": "Z.",
+                    "last": "Weng"
+                },
+                {
+                    "first": "Kevin P.",
+                    "initial": "K.P.",
+                    "last": "White"
+                },
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Wold"
+                },
+                {
+                    "first": "Yanbao",
+                    "initial": "Y.",
+                    "last": "Yu"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Wrobel"
+                },
+                {
+                    "first": "Brian A.",
+                    "initial": "B.A.",
+                    "last": "Risk"
+                },
+                {
+                    "first": "Harsha P.",
+                    "initial": "H.P.",
+                    "last": "Gunawardena"
+                },
+                {
+                    "first": "Heather C.",
+                    "initial": "H.C.",
+                    "last": "Kuiper"
+                },
+                {
+                    "first": "Christopher W.",
+                    "initial": "C.W.",
+                    "last": "Maier"
+                },
+                {
+                    "first": "Ling",
+                    "initial": "L.",
+                    "last": "Xie"
+                },
+                {
+                    "first": "Xian",
+                    "initial": "X.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Tarjei S.",
+                    "initial": "T.S.",
+                    "last": "Mikkelsen"
+                },
+                {
+                    "first": "Shawn",
+                    "initial": "S.",
+                    "last": "Gillespie"
+                },
+                {
+                    "first": "Alon",
+                    "initial": "A.",
+                    "last": "Goren"
+                },
+                {
+                    "first": "Oren",
+                    "initial": "O.",
+                    "last": "Ram"
+                },
+                {
+                    "first": "Xiaolan",
+                    "initial": "X.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Li",
+                    "initial": "L.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Robbyn",
+                    "initial": "R.",
+                    "last": "Issner"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Coyne"
+                },
+                {
+                    "first": "Timothy",
+                    "initial": "T.",
+                    "last": "Durham"
+                },
+                {
+                    "first": "Manching",
+                    "initial": "M.",
+                    "last": "Ku"
+                },
+                {
+                    "first": "Thanh",
+                    "initial": "T.",
+                    "last": "Truong"
+                },
+                {
+                    "first": "Matthew L.",
+                    "initial": "M.L.",
+                    "last": "Eaton"
+                },
+                {
+                    "first": "Alex",
+                    "initial": "A.",
+                    "last": "Dobin"
+                },
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Tanzer"
+                },
+                {
+                    "first": "Julien",
+                    "initial": "J.",
+                    "last": "Lagarde"
+                },
+                {
+                    "first": "Wei",
+                    "initial": "W.",
+                    "last": "Lin"
+                },
+                {
+                    "first": "Chenghai",
+                    "initial": "C.",
+                    "last": "Xue"
+                },
+                {
+                    "first": "Brian A.",
+                    "initial": "B.A.",
+                    "last": "Williams"
+                },
+                {
+                    "first": "Chris",
+                    "initial": "C.",
+                    "last": "Zaleski"
+                },
+                {
+                    "first": "Maik",
+                    "initial": "M.",
+                    "last": "R\u00f6der"
+                },
+                {
+                    "first": "Felix",
+                    "initial": "F.",
+                    "last": "Kokocinski"
+                },
+                {
+                    "first": "Rehab F.",
+                    "initial": "R.F.",
+                    "last": "Abdelhamid"
+                },
+                {
+                    "first": "Tyler",
+                    "initial": "T.",
+                    "last": "Alioto"
+                },
+                {
+                    "first": "Igor",
+                    "initial": "I.",
+                    "last": "Antoshechkin"
+                },
+                {
+                    "first": "Michael T.",
+                    "initial": "M.T.",
+                    "last": "Baer"
+                },
+                {
+                    "first": "Philippe",
+                    "initial": "P.",
+                    "last": "Batut"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Bell"
+                },
+                {
+                    "first": "Kimberly",
+                    "initial": "K.",
+                    "last": "Bell"
+                },
+                {
+                    "first": "Sudipto",
+                    "initial": "S.",
+                    "last": "Chakrabortty"
+                },
+                {
+                    "first": "Jacqueline",
+                    "initial": "J.",
+                    "last": "Chrast"
+                },
+                {
+                    "first": "Joao",
+                    "initial": "J.",
+                    "last": "Curado"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Derrien"
+                },
+                {
+                    "first": "Jorg",
+                    "initial": "J.",
+                    "last": "Drenkow"
+                },
+                {
+                    "first": "Erica",
+                    "initial": "E.",
+                    "last": "Dumais"
+                },
+                {
+                    "first": "Jackie",
+                    "initial": "J.",
+                    "last": "Dumais"
+                },
+                {
+                    "first": "Radha",
+                    "initial": "R.",
+                    "last": "Duttagupta"
+                },
+                {
+                    "first": "Megan",
+                    "initial": "M.",
+                    "last": "Fastuca"
+                },
+                {
+                    "first": "Kata",
+                    "initial": "K.",
+                    "last": "Fejes-Toth"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Ferreira"
+                },
+                {
+                    "first": "Sylvain",
+                    "initial": "S.",
+                    "last": "Foissac"
+                },
+                {
+                    "first": "Melissa J.",
+                    "initial": "M.J.",
+                    "last": "Fullwood"
+                },
+                {
+                    "first": "Hui",
+                    "initial": "H.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "Assaf",
+                    "initial": "A.",
+                    "last": "Gordon"
+                },
+                {
+                    "first": "C\u00e9dric",
+                    "initial": "C.",
+                    "last": "Howald"
+                },
+                {
+                    "first": "Sonali",
+                    "initial": "S.",
+                    "last": "Jha"
+                },
+                {
+                    "first": "Rory",
+                    "initial": "R.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Philipp",
+                    "initial": "P.",
+                    "last": "Kapranov"
+                },
+                {
+                    "first": "Brandon",
+                    "initial": "B.",
+                    "last": "King"
+                },
+                {
+                    "first": "Colin",
+                    "initial": "C.",
+                    "last": "Kingswood"
+                },
+                {
+                    "first": "Guoliang",
+                    "initial": "G.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Oscar J.",
+                    "initial": "O.J.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Eddie",
+                    "initial": "E.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Jonathan B.",
+                    "initial": "J.B.",
+                    "last": "Preall"
+                },
+                {
+                    "first": "Kimberly",
+                    "initial": "K.",
+                    "last": "Presaud"
+                },
+                {
+                    "first": "Paolo",
+                    "initial": "P.",
+                    "last": "Ribeca"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Robyr"
+                },
+                {
+                    "first": "Xiaoan",
+                    "initial": "X.",
+                    "last": "Ruan"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Sammeth"
+                },
+                {
+                    "first": "Kuljeet Singh",
+                    "initial": "K.S.",
+                    "last": "Sandhu"
+                },
+                {
+                    "first": "Lorain",
+                    "initial": "L.",
+                    "last": "Schaeffer"
+                },
+                {
+                    "first": "Lei Hoon",
+                    "initial": "L.H.",
+                    "last": "See"
+                },
+                {
+                    "first": "Atif",
+                    "initial": "A.",
+                    "last": "Shahab"
+                },
+                {
+                    "first": "Jorgen",
+                    "initial": "J.",
+                    "last": "Skancke"
+                },
+                {
+                    "first": "Ana Maria",
+                    "initial": "A.M.",
+                    "last": "Suzuki"
+                },
+                {
+                    "first": "Hazuki",
+                    "initial": "H.",
+                    "last": "Takahashi"
+                },
+                {
+                    "first": "Hagen",
+                    "initial": "H.",
+                    "last": "Tilgner"
+                },
+                {
+                    "first": "Diane",
+                    "initial": "D.",
+                    "last": "Trout"
+                },
+                {
+                    "first": "Nathalie",
+                    "initial": "N.",
+                    "last": "Walters"
+                },
+                {
+                    "first": "Huaien",
+                    "initial": "H.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Yoshihide",
+                    "initial": "Y.",
+                    "last": "Hayashizaki"
+                },
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Reymond"
+                },
+                {
+                    "first": "Stylianos E.",
+                    "initial": "S.E.",
+                    "last": "Antonarakis"
+                },
+                {
+                    "first": "Gregory J.",
+                    "initial": "G.J.",
+                    "last": "Hannon"
+                },
+                {
+                    "first": "Yijun",
+                    "initial": "Y.",
+                    "last": "Ruan"
+                },
+                {
+                    "first": "Piero",
+                    "initial": "P.",
+                    "last": "Carninci"
+                },
+                {
+                    "first": "Cricket A.",
+                    "initial": "C.A.",
+                    "last": "Sloan"
+                },
+                {
+                    "first": "Katrina",
+                    "initial": "K.",
+                    "last": "Learned"
+                },
+                {
+                    "first": "Venkat S.",
+                    "initial": "V.S.",
+                    "last": "Malladi"
+                },
+                {
+                    "first": "Matthew C.",
+                    "initial": "M.C.",
+                    "last": "Wong"
+                },
+                {
+                    "first": "Galt P.",
+                    "initial": "G.P.",
+                    "last": "Barber"
+                },
+                {
+                    "first": "Melissa S.",
+                    "initial": "M.S.",
+                    "last": "Cline"
+                },
+                {
+                    "first": "Timothy R.",
+                    "initial": "T.R.",
+                    "last": "Dreszer"
+                },
+                {
+                    "first": "Steven G.",
+                    "initial": "S.G.",
+                    "last": "Heitner"
+                },
+                {
+                    "first": "Donna",
+                    "initial": "D.",
+                    "last": "Karolchik"
+                },
+                {
+                    "first": "Vanessa M.",
+                    "initial": "V.M.",
+                    "last": "Kirkup"
+                },
+                {
+                    "first": "Laurence R.",
+                    "initial": "L.R.",
+                    "last": "Meyer"
+                },
+                {
+                    "first": "Jeffrey C.",
+                    "initial": "J.C.",
+                    "last": "Long"
+                },
+                {
+                    "first": "Morgan",
+                    "initial": "M.",
+                    "last": "Maddren"
+                },
+                {
+                    "first": "Brian J.",
+                    "initial": "B.J.",
+                    "last": "Raney"
+                },
+                {
+                    "first": "Linda L.",
+                    "initial": "L.L.",
+                    "last": "Grasfeder"
+                },
+                {
+                    "first": "Paul G.",
+                    "initial": "P.G.",
+                    "last": "Giresi"
+                },
+                {
+                    "first": "Anna",
+                    "initial": "A.",
+                    "last": "Battenhouse"
+                },
+                {
+                    "first": "Nathan C.",
+                    "initial": "N.C.",
+                    "last": "Sheffield"
+                },
+                {
+                    "first": "Kimberly A.",
+                    "initial": "K.A.",
+                    "last": "Showers"
+                },
+                {
+                    "first": "Darin",
+                    "initial": "D.",
+                    "last": "London"
+                },
+                {
+                    "first": "Akshay A.",
+                    "initial": "A.A.",
+                    "last": "Bhinge"
+                },
+                {
+                    "first": "Christopher",
+                    "initial": "C.",
+                    "last": "Shestak"
+                },
+                {
+                    "first": "Matthew R.",
+                    "initial": "M.R.",
+                    "last": "Schaner"
+                },
+                {
+                    "first": "Seul Ki",
+                    "initial": "S.K.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Zhuzhu Z.",
+                    "initial": "Z.Z.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Piotr A.",
+                    "initial": "P.A.",
+                    "last": "Mieczkowski"
+                },
+                {
+                    "first": "Joanna O.",
+                    "initial": "J.O.",
+                    "last": "Mieczkowska"
+                },
+                {
+                    "first": "Zheng",
+                    "initial": "Z.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Ryan M.",
+                    "initial": "R.M.",
+                    "last": "McDaniell"
+                },
+                {
+                    "first": "Yunyun",
+                    "initial": "Y.",
+                    "last": "Ni"
+                },
+                {
+                    "first": "Naim U.",
+                    "initial": "N.U.",
+                    "last": "Rashid"
+                },
+                {
+                    "first": "Min Jae",
+                    "initial": "M.J.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Sheera",
+                    "initial": "S.",
+                    "last": "Adar"
+                },
+                {
+                    "first": "Zhancheng",
+                    "initial": "Z.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Tianyuan",
+                    "initial": "T.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Deborah",
+                    "initial": "D.",
+                    "last": "Winter"
+                },
+                {
+                    "first": "Damian",
+                    "initial": "D.",
+                    "last": "Keefe"
+                },
+                {
+                    "first": "Vishwanath R.",
+                    "initial": "V.R.",
+                    "last": "Iyer"
+                },
+                {
+                    "first": "Meizhen",
+                    "initial": "M.",
+                    "last": "Zheng"
+                },
+                {
+                    "first": "Ping",
+                    "initial": "P.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Gertz"
+                },
+                {
+                    "first": "Jost",
+                    "initial": "J.",
+                    "last": "Vielmetter"
+                },
+                {
+                    "first": "E. Christopher",
+                    "initial": "E.C.",
+                    "last": "Partridge"
+                },
+                {
+                    "first": "Katherine E.",
+                    "initial": "K.E.",
+                    "last": "Varley"
+                },
+                {
+                    "first": "Clarke",
+                    "initial": "C.",
+                    "last": "Gasper"
+                },
+                {
+                    "first": "Anita",
+                    "initial": "A.",
+                    "last": "Bansal"
+                },
+                {
+                    "first": "Shirley",
+                    "initial": "S.",
+                    "last": "Pepke"
+                },
+                {
+                    "first": "Preti",
+                    "initial": "P.",
+                    "last": "Jain"
+                },
+                {
+                    "first": "Henry",
+                    "initial": "H.",
+                    "last": "Amrhein"
+                },
+                {
+                    "first": "Kevin M.",
+                    "initial": "K.M.",
+                    "last": "Bowling"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Anaya"
+                },
+                {
+                    "first": "Marie K.",
+                    "initial": "M.K.",
+                    "last": "Cross"
+                },
+                {
+                    "first": "Michael A.",
+                    "initial": "M.A.",
+                    "last": "Muratet"
+                },
+                {
+                    "first": "Kimberly M.",
+                    "initial": "K.M.",
+                    "last": "Newberry"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "McCue"
+                },
+                {
+                    "first": "Amy S.",
+                    "initial": "A.S.",
+                    "last": "Nesmith"
+                },
+                {
+                    "first": "Katherine I.",
+                    "initial": "K.I.",
+                    "last": "Fisher-Aylor"
+                },
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Pusey"
+                },
+                {
+                    "first": "Gilberto",
+                    "initial": "G.",
+                    "last": "DeSalvo"
+                },
+                {
+                    "first": "Stephanie L.",
+                    "initial": "S.L.",
+                    "last": "Parker"
+                },
+                {
+                    "first": "Sreeram",
+                    "initial": "S.",
+                    "last": "Balasubramanian"
+                },
+                {
+                    "first": "Nicholas S.",
+                    "initial": "N.S.",
+                    "last": "Davis"
+                },
+                {
+                    "first": "Sarah K.",
+                    "initial": "S.K.",
+                    "last": "Meadows"
+                },
+                {
+                    "first": "Tracy",
+                    "initial": "T.",
+                    "last": "Eggleston"
+                },
+                {
+                    "first": "J. Scott",
+                    "initial": "J.S.",
+                    "last": "Newberry"
+                },
+                {
+                    "first": "Shawn E.",
+                    "initial": "S.E.",
+                    "last": "Levy"
+                },
+                {
+                    "first": "Devin M.",
+                    "initial": "D.M.",
+                    "last": "Absher"
+                },
+                {
+                    "first": "Wing H.",
+                    "initial": "W.H.",
+                    "last": "Wong"
+                },
+                {
+                    "first": "Matthew J.",
+                    "initial": "M.J.",
+                    "last": "Blow"
+                },
+                {
+                    "first": "Axel",
+                    "initial": "A.",
+                    "last": "Visel"
+                },
+                {
+                    "first": "Len A.",
+                    "initial": "L.A.",
+                    "last": "Pennachio"
+                },
+                {
+                    "first": "Hanna M.",
+                    "initial": "H.M.",
+                    "last": "Petrykowska"
+                },
+                {
+                    "first": "Alexej",
+                    "initial": "A.",
+                    "last": "Abyzov"
+                },
+                {
+                    "first": "Bronwen",
+                    "initial": "B.",
+                    "last": "Aken"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Barrell"
+                },
+                {
+                    "first": "Gemma",
+                    "initial": "G.",
+                    "last": "Barson"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Berry"
+                },
+                {
+                    "first": "Alexandra",
+                    "initial": "A.",
+                    "last": "Bignell"
+                },
+                {
+                    "first": "Veronika",
+                    "initial": "V.",
+                    "last": "Boychenko"
+                },
+                {
+                    "first": "Giovanni",
+                    "initial": "G.",
+                    "last": "Bussotti"
+                },
+                {
+                    "first": "Claire",
+                    "initial": "C.",
+                    "last": "Davidson"
+                },
+                {
+                    "first": "Gloria",
+                    "initial": "G.",
+                    "last": "Despacio-Reyes"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Diekhans"
+                },
+                {
+                    "first": "Iakes",
+                    "initial": "I.",
+                    "last": "Ezkurdia"
+                },
+                {
+                    "first": "Adam",
+                    "initial": "A.",
+                    "last": "Frankish"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Gilbert"
+                },
+                {
+                    "first": "Jose Manuel",
+                    "initial": "J.M.",
+                    "last": "Gonzalez"
+                },
+                {
+                    "first": "Ed",
+                    "initial": "E.",
+                    "last": "Griffiths"
+                },
+                {
+                    "first": "Rachel",
+                    "initial": "R.",
+                    "last": "Harte"
+                },
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Hendrix"
+                },
+                {
+                    "first": "Toby",
+                    "initial": "T.",
+                    "last": "Hunt"
+                },
+                {
+                    "first": "Irwin",
+                    "initial": "I.",
+                    "last": "Jungreis"
+                },
+                {
+                    "first": "Mike",
+                    "initial": "M.",
+                    "last": "Kay"
+                },
+                {
+                    "first": "Ekta",
+                    "initial": "E.",
+                    "last": "Khurana"
+                },
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Leng"
+                },
+                {
+                    "first": "Michael F.",
+                    "initial": "M.F.",
+                    "last": "Lin"
+                },
+                {
+                    "first": "Jane",
+                    "initial": "J.",
+                    "last": "Loveland"
+                },
+                {
+                    "first": "Zhi",
+                    "initial": "Z.",
+                    "last": "Lu"
+                },
+                {
+                    "first": "Deepa",
+                    "initial": "D.",
+                    "last": "Manthravadi"
+                },
+                {
+                    "first": "Marco",
+                    "initial": "M.",
+                    "last": "Mariotti"
+                },
+                {
+                    "first": "Jonathan",
+                    "initial": "J.",
+                    "last": "Mudge"
+                },
+                {
+                    "first": "Gaurab",
+                    "initial": "G.",
+                    "last": "Mukherjee"
+                },
+                {
+                    "first": "Cedric",
+                    "initial": "C.",
+                    "last": "Notredame"
+                },
+                {
+                    "first": "Baikang",
+                    "initial": "B.",
+                    "last": "Pei"
+                },
+                {
+                    "first": "Jose Manuel",
+                    "initial": "J.M.",
+                    "last": "Rodriguez"
+                },
+                {
+                    "first": "Gary",
+                    "initial": "G.",
+                    "last": "Saunders"
+                },
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Sboner"
+                },
+                {
+                    "first": "Stephen",
+                    "initial": "S.",
+                    "last": "Searle"
+                },
+                {
+                    "first": "Cristina",
+                    "initial": "C.",
+                    "last": "Sisu"
+                },
+                {
+                    "first": "Catherine",
+                    "initial": "C.",
+                    "last": "Snow"
+                },
+                {
+                    "first": "Charlie",
+                    "initial": "C.",
+                    "last": "Steward"
+                },
+                {
+                    "first": "Electra",
+                    "initial": "E.",
+                    "last": "Tapanari"
+                },
+                {
+                    "first": "Michael L.",
+                    "initial": "M.L.",
+                    "last": "Tress"
+                },
+                {
+                    "first": "Marijke J.",
+                    "initial": "M.J.",
+                    "last": "Van Baren"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Washietl"
+                },
+                {
+                    "first": "Laurens",
+                    "initial": "L.",
+                    "last": "Wilming"
+                },
+                {
+                    "first": "Amonida",
+                    "initial": "A.",
+                    "last": "Zadissa"
+                },
+                {
+                    "first": "Zhengdong",
+                    "initial": "Z.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Brent"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Haussler"
+                },
+                {
+                    "first": "Alfonso",
+                    "initial": "A.",
+                    "last": "Valencia"
+                },
+                {
+                    "first": "Nick",
+                    "initial": "N.",
+                    "last": "Addleman"
+                },
+                {
+                    "first": "Roger P.",
+                    "initial": "R.P.",
+                    "last": "Alexander"
+                },
+                {
+                    "first": "Raymond K.",
+                    "initial": "R.K.",
+                    "last": "Auerbach"
+                },
+                {
+                    "first": "Suganthi",
+                    "initial": "S.",
+                    "last": "Balasubramanian"
+                },
+                {
+                    "first": "Keith",
+                    "initial": "K.",
+                    "last": "Bettinger"
+                },
+                {
+                    "first": "Nitin",
+                    "initial": "N.",
+                    "last": "Bhardwaj"
+                },
+                {
+                    "first": "Alan P.",
+                    "initial": "A.P.",
+                    "last": "Boyle"
+                },
+                {
+                    "first": "Alina R.",
+                    "initial": "A.R.",
+                    "last": "Cao"
+                },
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Cayting"
+                },
+                {
+                    "first": "Alexandra",
+                    "initial": "A.",
+                    "last": "Charos"
+                },
+                {
+                    "first": "Yong",
+                    "initial": "Y.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "Catharine",
+                    "initial": "C.",
+                    "last": "Eastman"
+                },
+                {
+                    "first": "Ghia",
+                    "initial": "G.",
+                    "last": "Euskirchen"
+                },
+                {
+                    "first": "Joseph D.",
+                    "initial": "J.D.",
+                    "last": "Fleming"
+                },
+                {
+                    "first": "Fabian",
+                    "initial": "F.",
+                    "last": "Grubert"
+                },
+                {
+                    "first": "Lukas",
+                    "initial": "L.",
+                    "last": "Habegger"
+                },
+                {
+                    "first": "Manoj",
+                    "initial": "M.",
+                    "last": "Hariharan"
+                },
+                {
+                    "first": "Arif",
+                    "initial": "A.",
+                    "last": "Harmanci"
+                },
+                {
+                    "first": "Sushma",
+                    "initial": "S.",
+                    "last": "Iyengar"
+                },
+                {
+                    "first": "Victor X.",
+                    "initial": "V.X.",
+                    "last": "Jin"
+                },
+                {
+                    "first": "Konrad J.",
+                    "initial": "K.J.",
+                    "last": "Karczewski"
+                },
+                {
+                    "first": "Maya",
+                    "initial": "M.",
+                    "last": "Kasowski"
+                },
+                {
+                    "first": "Phil",
+                    "initial": "P.",
+                    "last": "Lacroute"
+                },
+                {
+                    "first": "Hugo",
+                    "initial": "H.",
+                    "last": "Lam"
+                },
+                {
+                    "first": "Nathan",
+                    "initial": "N.",
+                    "last": "Lamarre-Vincent"
+                },
+                {
+                    "first": "Jin",
+                    "initial": "J.",
+                    "last": "Lian"
+                },
+                {
+                    "first": "Marianne",
+                    "initial": "M.",
+                    "last": "Lindahl-Allen"
+                },
+                {
+                    "first": "Renqiang",
+                    "initial": "R.",
+                    "last": "Min"
+                },
+                {
+                    "first": "Benoit",
+                    "initial": "B.",
+                    "last": "Miotto"
+                },
+                {
+                    "first": "Hannah",
+                    "initial": "H.",
+                    "last": "Monahan"
+                },
+                {
+                    "first": "Zarmik",
+                    "initial": "Z.",
+                    "last": "Moqtaderi"
+                },
+                {
+                    "first": "Xinmeng J.",
+                    "initial": "X.J.",
+                    "last": "Mu"
+                },
+                {
+                    "first": "Henriette",
+                    "initial": "H.",
+                    "last": "O'Geen"
+                },
+                {
+                    "first": "Zhengqing",
+                    "initial": "Z.",
+                    "last": "Ouyang"
+                },
+                {
+                    "first": "Dorrelyn",
+                    "initial": "D.",
+                    "last": "Patacsil"
+                },
+                {
+                    "first": "Debasish",
+                    "initial": "D.",
+                    "last": "Raha"
+                },
+                {
+                    "first": "Lucia",
+                    "initial": "L.",
+                    "last": "Ramirez"
+                },
+                {
+                    "first": "Brian",
+                    "initial": "B.",
+                    "last": "Reed"
+                },
+                {
+                    "first": "Minyi",
+                    "initial": "M.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Teri",
+                    "initial": "T.",
+                    "last": "Slifer"
+                },
+                {
+                    "first": "Heather",
+                    "initial": "H.",
+                    "last": "Witt"
+                },
+                {
+                    "first": "Linfeng",
+                    "initial": "L.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Xiaoqin",
+                    "initial": "X.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Koon Kiu",
+                    "initial": "K.K.",
+                    "last": "Yan"
+                },
+                {
+                    "first": "Xinqiong",
+                    "initial": "X.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Kevin",
+                    "initial": "K.",
+                    "last": "Struhl"
+                },
+                {
+                    "first": "Sherman M.",
+                    "initial": "S.M.",
+                    "last": "Weissman"
+                },
+                {
+                    "first": "Luiz O.",
+                    "initial": "L.O.",
+                    "last": "Penalva"
+                },
+                {
+                    "first": "Subhradip",
+                    "initial": "S.",
+                    "last": "Karmakar"
+                },
+                {
+                    "first": "Raj R.",
+                    "initial": "R.R.",
+                    "last": "Bhanvadia"
+                },
+                {
+                    "first": "Alina",
+                    "initial": "A.",
+                    "last": "Choudhury"
+                },
+                {
+                    "first": "Marc",
+                    "initial": "M.",
+                    "last": "Domanus"
+                },
+                {
+                    "first": "Lijia",
+                    "initial": "L.",
+                    "last": "Ma"
+                },
+                {
+                    "first": "Jennifer",
+                    "initial": "J.",
+                    "last": "Moran"
+                },
+                {
+                    "first": "Alec",
+                    "initial": "A.",
+                    "last": "Victorsen"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Auer"
+                },
+                {
+                    "first": "Lazaro",
+                    "initial": "L.",
+                    "last": "Centanin"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Eichenlaub"
+                },
+                {
+                    "first": "Franziska",
+                    "initial": "F.",
+                    "last": "Gruhl"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Heermann"
+                },
+                {
+                    "first": "Burkhard",
+                    "initial": "B.",
+                    "last": "Hoeckendorf"
+                },
+                {
+                    "first": "Daigo",
+                    "initial": "D.",
+                    "last": "Inoue"
+                },
+                {
+                    "first": "Tanja",
+                    "initial": "T.",
+                    "last": "Kellner"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Kirchmaier"
+                },
+                {
+                    "first": "Claudia",
+                    "initial": "C.",
+                    "last": "Mueller"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Reinhardt"
+                },
+                {
+                    "first": "Lea",
+                    "initial": "L.",
+                    "last": "Schertel"
+                },
+                {
+                    "first": "Stephanie",
+                    "initial": "S.",
+                    "last": "Schneider"
+                },
+                {
+                    "first": "Rebecca",
+                    "initial": "R.",
+                    "last": "Sinn"
+                },
+                {
+                    "first": "Beate",
+                    "initial": "B.",
+                    "last": "Wittbrodt"
+                },
+                {
+                    "first": "Jochen",
+                    "initial": "J.",
+                    "last": "Wittbrodt"
+                },
+                {
+                    "first": "Gaurav",
+                    "initial": "G.",
+                    "last": "Jain"
+                },
+                {
+                    "first": "Gayathri",
+                    "initial": "G.",
+                    "last": "Balasundaram"
+                },
+                {
+                    "first": "Daniel L.",
+                    "initial": "D.L.",
+                    "last": "Bates"
+                },
+                {
+                    "first": "Rachel",
+                    "initial": "R.",
+                    "last": "Byron"
+                },
+                {
+                    "first": "Theresa K.",
+                    "initial": "T.K.",
+                    "last": "Canfield"
+                },
+                {
+                    "first": "Morgan J.",
+                    "initial": "M.J.",
+                    "last": "Diegel"
+                },
+                {
+                    "first": "Douglas",
+                    "initial": "D.",
+                    "last": "Dunn"
+                },
+                {
+                    "first": "Abigail K.",
+                    "initial": "A.K.",
+                    "last": "Ebersol"
+                },
+                {
+                    "first": "Tristan",
+                    "initial": "T.",
+                    "last": "Frum"
+                },
+                {
+                    "first": "Kavita",
+                    "initial": "K.",
+                    "last": "Garg"
+                },
+                {
+                    "first": "Erica",
+                    "initial": "E.",
+                    "last": "Gist"
+                },
+                {
+                    "first": "R. Scott",
+                    "initial": "R.S.",
+                    "last": "Hansen"
+                },
+                {
+                    "first": "Lisa",
+                    "initial": "L.",
+                    "last": "Boatman"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Haugen"
+                },
+                {
+                    "first": "Richard",
+                    "initial": "R.",
+                    "last": "Humbert"
+                },
+                {
+                    "first": "Audra K.",
+                    "initial": "A.K.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Ericka M.",
+                    "initial": "E.M.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Tattyana V.",
+                    "initial": "T.V.",
+                    "last": "Kutyavin"
+                },
+                {
+                    "first": "Kristen",
+                    "initial": "K.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Dimitra",
+                    "initial": "D.",
+                    "last": "Lotakis"
+                },
+                {
+                    "first": "Matthew T.",
+                    "initial": "M.T.",
+                    "last": "Maurano"
+                },
+                {
+                    "first": "Shane J.",
+                    "initial": "S.J.",
+                    "last": "Neph"
+                },
+                {
+                    "first": "Fiedencio V.",
+                    "initial": "F.V.",
+                    "last": "Neri"
+                },
+                {
+                    "first": "Eric D.",
+                    "initial": "E.D.",
+                    "last": "Nguyen"
+                },
+                {
+                    "first": "Hongzhu",
+                    "initial": "H.",
+                    "last": "Qu"
+                },
+                {
+                    "first": "Alex P.",
+                    "initial": "A.P.",
+                    "last": "Reynolds"
+                },
+                {
+                    "first": "Vaughn",
+                    "initial": "V.",
+                    "last": "Roach"
+                },
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Rynes"
+                },
+                {
+                    "first": "Minerva E.",
+                    "initial": "M.E.",
+                    "last": "Sanchez"
+                },
+                {
+                    "first": "Richard S.",
+                    "initial": "R.S.",
+                    "last": "Sandstrom"
+                },
+                {
+                    "first": "Anthony O.",
+                    "initial": "A.O.",
+                    "last": "Shafer"
+                },
+                {
+                    "first": "Andrew B.",
+                    "initial": "A.B.",
+                    "last": "Stergachis"
+                },
+                {
+                    "first": "Sean",
+                    "initial": "S.",
+                    "last": "Thomas"
+                },
+                {
+                    "first": "Benjamin",
+                    "initial": "B.",
+                    "last": "Vernot"
+                },
+                {
+                    "first": "Jeff",
+                    "initial": "J.",
+                    "last": "Vierstra"
+                },
+                {
+                    "first": "Shinny",
+                    "initial": "S.",
+                    "last": "Vong"
+                },
+                {
+                    "first": "Hao",
+                    "initial": "H.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Molly A.",
+                    "initial": "M.A.",
+                    "last": "Weaver"
+                },
+                {
+                    "first": "Yongqi",
+                    "initial": "Y.",
+                    "last": "Yan"
+                },
+                {
+                    "first": "Miaohua",
+                    "initial": "M.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Joshua M.",
+                    "initial": "J.M.",
+                    "last": "Akey"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Bender"
+                },
+                {
+                    "first": "Michael O.",
+                    "initial": "M.O.",
+                    "last": "Dorschner"
+                },
+                {
+                    "first": "Mark",
+                    "initial": "M.",
+                    "last": "Groudine"
+                },
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "MacCoss"
+                },
+                {
+                    "first": "Patrick",
+                    "initial": "P.",
+                    "last": "Navas"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Stamatoyannopoulos"
+                },
+                {
+                    "first": "Kathryn",
+                    "initial": "K.",
+                    "last": "Beal"
+                },
+                {
+                    "first": "Alvis",
+                    "initial": "A.",
+                    "last": "Brazma"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Flicek"
+                },
+                {
+                    "first": "Nathan",
+                    "initial": "N.",
+                    "last": "Johnson"
+                },
+                {
+                    "first": "Margus",
+                    "initial": "M.",
+                    "last": "Lukk"
+                },
+                {
+                    "first": "Nicholas M.",
+                    "initial": "N.M.",
+                    "last": "Luscombe"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Sobral"
+                },
+                {
+                    "first": "Juan M.",
+                    "initial": "J.M.",
+                    "last": "Vaquerizas"
+                },
+                {
+                    "first": "Serafim",
+                    "initial": "S.",
+                    "last": "Batzoglou"
+                },
+                {
+                    "first": "Arend",
+                    "initial": "A.",
+                    "last": "Sidow"
+                },
+                {
+                    "first": "Nadine",
+                    "initial": "N.",
+                    "last": "Hussami"
+                },
+                {
+                    "first": "Sofia",
+                    "initial": "S.",
+                    "last": "Kyriazopoulou-Panagiotopoulou"
+                },
+                {
+                    "first": "Max W.",
+                    "initial": "M.W.",
+                    "last": "Libbrecht"
+                },
+                {
+                    "first": "Marc A.",
+                    "initial": "M.A.",
+                    "last": "Schaub"
+                },
+                {
+                    "first": "Webb",
+                    "initial": "W.",
+                    "last": "Miller"
+                },
+                {
+                    "first": "Peter J.",
+                    "initial": "P.J.",
+                    "last": "Bickel"
+                },
+                {
+                    "first": "Balazs",
+                    "initial": "B.",
+                    "last": "Banfai"
+                },
+                {
+                    "first": "Nathan P.",
+                    "initial": "N.P.",
+                    "last": "Boley"
+                },
+                {
+                    "first": "Haiyan",
+                    "initial": "H.",
+                    "last": "Huang"
+                },
+                {
+                    "first": "Jingyi Jessica",
+                    "initial": "J.J.",
+                    "last": "Li"
+                },
+                {
+                    "first": "William Stafford",
+                    "initial": "W.S.",
+                    "last": "Noble"
+                },
+                {
+                    "first": "Jeffrey A.",
+                    "initial": "J.A.",
+                    "last": "Bilmes"
+                },
+                {
+                    "first": "Orion J.",
+                    "initial": "O.J.",
+                    "last": "Buske"
+                },
+                {
+                    "first": "Avinash D.",
+                    "initial": "A.D.",
+                    "last": "Sahu"
+                },
+                {
+                    "first": "Peter V.",
+                    "initial": "P.V.",
+                    "last": "Kharchenko"
+                },
+                {
+                    "first": "Peter J.",
+                    "initial": "P.J.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Dannon",
+                    "initial": "D.",
+                    "last": "Baker"
+                },
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Lucas",
+                    "initial": "L.",
+                    "last": "Lochovsky"
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                },
+                {
+                    "first": null,
+                    "initial": null,
+                    "last": null
+                }
+            ],
+            "doi": "10.1038/nature11247",
+            "firstpage": "57",
+            "issn": "00280836",
+            "lastpage": "74",
+            "pmid": "22955616",
+            "pub_year": 2012,
+            "title": "An integrated encyclopedia of DNA elements in the human genome",
+            "volume": "489"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "Hai",
+                    "initial": "H.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Ying",
+                    "initial": "Y.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Chunliang",
+                    "initial": "C.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Shijun",
+                    "initial": "S.",
+                    "last": "Fu"
+                },
+                {
+                    "first": "Zuqing",
+                    "initial": "Z.",
+                    "last": "Yang"
+                },
+                {
+                    "first": "Gang",
+                    "initial": "G.",
+                    "last": "Jin"
+                },
+                {
+                    "first": "Kankan",
+                    "initial": "K.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Ji",
+                    "initial": "J.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Ying",
+                    "initial": "Y.",
+                    "last": "Jin"
+                }
+            ],
+            "doi": "10.1016/j.devcel.2010.06.014",
+            "firstpage": "174",
+            "issn": "15345807",
+            "lastpage": "184",
+            "pmid": "20643359",
+            "pub_year": 2010,
+            "title": "Transcriptome Analysis of Early Organogenesis in Human Embryos",
+            "volume": "19"
+        },
+        "b0075": null,
+        "b0080": {
+            "authors": [
+                {
+                    "first": "Ron",
+                    "initial": "R.",
+                    "last": "Wehrens"
+                },
+                {
+                    "first": "Lutgarde M.C.",
+                    "initial": "L.M.C.",
+                    "last": "Buydens"
+                }
+            ],
+            "doi": "10.18637/jss.v021.i05",
+            "firstpage": "1",
+            "issn": "15487660",
+            "lastpage": "19",
+            "pub_year": 2007,
+            "title": "Self- and super-organizing maps in R: The kohonen package",
+            "volume": "21"
+        },
+        "b0085": {
+            "authors": [
+                {
+                    "first": "M. J.L.",
+                    "initial": "M.J.L.",
+                    "last": "de Hoon"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Imoto"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Nolan"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Miyano"
+                }
+            ],
+            "doi": "10.1093/bioinformatics/bth078",
+            "firstpage": "1453",
+            "issn": "13674803",
+            "lastpage": "1454",
+            "pmid": "14871861",
+            "pub_year": 2004,
+            "title": "Open source clustering software",
+            "volume": "20"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 15225,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The forms of raw data may differ in the preprocessing as required, but the downstream (analysable) data can universally be stored in a table-like matrix, which digitises expression levels or other bioactivities of genomic coordinates (e.g. genes for simplicity) across the samples.",
+            "startOffset": 14944,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 18320,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The package takes as input a matrix of values for genes versus samples, and sets up the pipeline for the learning process: initialisation, training and many auxiliary functions.",
+            "startOffset": 18143,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 16224,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Commonly the structure imposed for visualising a 2-D map is a square grid, but a giant hexagon formed by smaller hexagons is prevalent in many natural and man-made objects, such as a honeycomb or at Giant\u2019s Causeway.",
+            "startOffset": 16008,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 23526,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "On the website the reader can find the workflow of R commands used in each case (and the corresponding results/visuals).",
+            "startOffset": 23406,
+            "title": "Public accessibility of the package and tutorial-like applications on real cases"
+        },
+        {
+            "endOffset": 19764,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The patterns can be visualised by line plots and bar plots.",
+            "startOffset": 19705,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 16008,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 15924,
+                    "startOffset": 15921
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A self-organising learning algorithm [6] is well-suited for this purpose as it imposes an orderly structure on the clusters.",
+            "startOffset": 15884,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 15674,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Sanity checking and an initial quick exploration are essential first steps on the route to an eventual downstream discovery and final interpretation.",
+            "startOffset": 15525,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25827,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "The left panel in Fig. 3A is the result after overlaying the HCP vector onto the replication-timing map, showing the probability that nodes (and genes thereof) will have an HCP.",
+            "startOffset": 25650,
+            "title": "Results"
+        },
+        {
+            "endOffset": 16321,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Inspired by this, we devised a supra-hexagonal map that seamlessly consists of smaller hexagons.",
+            "startOffset": 16225,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26289,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "In this context, the replication-timing map overlaid with the expression data produces an expression map.",
+            "startOffset": 26184,
+            "title": "Results"
+        },
+        {
+            "endOffset": 25478,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "CpG data are vectors containing logical information (Fig. 1B).",
+            "startOffset": 25416,
+            "title": "Results"
+        },
+        {
+            "endOffset": 21814,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Within this landscape, the geometric locations of samples delineate their relationships.",
+            "startOffset": 21726,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 16682,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 16630,
+                    "startOffset": 16627
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Omics data reveal biological information on a global scale, and the rationale behind data normalisation [7] is that most genes do not change or do so randomly.",
+            "startOffset": 16523,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 18692,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Each map node is associated with two coordinates: one in 2D output space (i.e. what we can see), and the other in high-dimensional input space (i.e. what we can imagine; represented as prototype vectors with the same dimension as the input data vectors).",
+            "startOffset": 18438,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 27307,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Taking into account the fact that the additional data were not used in the training of the map, the information revealed in Fig. 3 is truly reflective of the inherent relationships between late replication, low CpG density promoters and low expression levels.",
+            "startOffset": 27048,
+            "title": "Results"
+        },
+        {
+            "endOffset": 21725,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Samples are organised such that those with similar profiles are closer to each other within this layout (called the \u2018sample landscape\u2019).",
+            "startOffset": 21589,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 27648,
+            "parents": [],
+            "refoffsets": {
+                "b0060": {
+                    "endOffset": 27563,
+                    "startOffset": 27559
+                },
+                "b0065": {
+                    "endOffset": 27647,
+                    "startOffset": 27640
+                },
+                "b0070": {
+                    "endOffset": 27647,
+                    "startOffset": 27640
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The concept of self-organising omics data is not new [12] but nonetheless fascinating that even today it remains a powerful technique [13,14].",
+            "startOffset": 27506,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 18142,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "For details on the algorithm as well as the topology and training tailored to this architectural design, the reader is referred to the Reference Manual (Supplementary material 1).",
+            "startOffset": 17963,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 25040,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Thirdly, cell types of the same category share similar replication-timing profiles/signatures, and are thus placed together at a specific location of this 2D landscape (framed by the outermost black lines).",
+            "startOffset": 24834,
+            "title": "Results"
+        },
+        {
+            "endOffset": 21439,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "These include: some commonly used metrics (e.g. Pearson correlation, Euclidean and cityblock distance, and cosine similarity); some rank-based correlations (i.e. Spearman rho and Kendall tau); and mutual information as a general measure of dependency.",
+            "startOffset": 21188,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 26470,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "This expression map is also artificially associated with codebook matrix but it has the dimension of the overlaid (expression) data rather than the input (replication timing) data.",
+            "startOffset": 26290,
+            "title": "Results"
+        },
+        {
+            "endOffset": 17710,
+            "parents": [],
+            "refoffsets": {
+                "b0040": {
+                    "endOffset": 17709,
+                    "startOffset": 17706
+                }
+            },
+            "secId": "s0005",
+            "sentence": "As an open-source R package, supraHex is distributed as part of the Bioconductor project [8].",
+            "startOffset": 17617,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 19138,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These visualisations fall into two general categories: across nodes and within nodes.",
+            "startOffset": 19053,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 23630,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The users are encouraged to reproduce and adapt these workflows for analysing their own omics datasets.",
+            "startOffset": 23527,
+            "title": "Public accessibility of the package and tutorial-like applications on real cases"
+        },
+        {
+            "endOffset": 15390,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This tabular matrix of genes \u00d7 samples usually contains a large number of genes (i.e. large p features) but a much smaller number of samples (i.e. small n samples).",
+            "startOffset": 15226,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 23228,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Along with the package, there are a detailed description of the package functions in the Reference Manual (Supplementary material 1) and a task-oriented description of the package functionalities in the User Manual (see Supplementary material 2).",
+            "startOffset": 22982,
+            "title": "Public accessibility of the package and tutorial-like applications on real cases"
+        },
+        {
+            "endOffset": 28051,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "It is easy to use, visually friendly at all steps of the analysis, and most importantly, provides self-explanatory and reproducible results.",
+            "startOffset": 27911,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 16522,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It has symmetric beauty around the center, from which individual hexagons radiate outwards (Fig. 1A); this makes the supra-hexagonal map suitable for modelling symmetric data, particularly omics data.",
+            "startOffset": 16322,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20365,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The idea is to first identify local minima of distances between map nodes, and treat these as seeds to group the remaining nodes into meta-clusters that cover the whole map.",
+            "startOffset": 20192,
+            "title": "Partitioning of the map into gene meta-clusters"
+        },
+        {
+            "endOffset": 19329,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The first is to visualise the single-value properties associated with each map node; each node (hexagon) is numbered (as shown and explained in Fig. 1A) so that it can easily be referred to.",
+            "startOffset": 19139,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 19953,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The Reference Manual contains advanced-usage instructions for customising the plotting of patterns.",
+            "startOffset": 19854,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 25649,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "The HCP vector indicates whether or not a gene contains a high CpG density promoter (HCP), while the LCP vector suggests the presence of a low CpG density promoter (LCP).",
+            "startOffset": 25479,
+            "title": "Results"
+        },
+        {
+            "endOffset": 17385,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Also, supraHex can be applied to multilayer omics datasets (such as in Fig. 1B).",
+            "startOffset": 17305,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 21069,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This can be done based on either the sample-wise vectors of the codebook/input matrix, or on the covariance matrix thereof.",
+            "startOffset": 20946,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 25415,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Next, we overlaid CpG data onto the trained replication-timing map.",
+            "startOffset": 25348,
+            "title": "Results"
+        },
+        {
+            "endOffset": 17304,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This package produces a map in which: (i) genes with similar data patterns self-organise to the same or nearby nodes in the map, and (ii) the distribution of genes across the 2D map is representative of the high-dimensional input space.",
+            "startOffset": 17068,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 17001,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To make use of this symmetry of the gene-sample matrix in high-dimensional input space, we use a self-organising learning algorithm but based on the supra-hexagonal layout.",
+            "startOffset": 16829,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20552,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b0045": {
+                    "endOffset": 20551,
+                    "startOffset": 20548
+                }
+            },
+            "secId": "s0025",
+            "sentence": "Starting from the seeds, each remaining node can either simply be grouped with the best-matching seed, or the partitioning can be done using the region-growing algorithm proposed in [9].",
+            "startOffset": 20366,
+            "title": "Partitioning of the map into gene meta-clusters"
+        },
+        {
+            "endOffset": 27505,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The open-source package \u2018supraHex\u2019, our contribution to the Bioconductor project, is intended to meet the challenging demand for a way to intuitively and quickly understanding omics data.",
+            "startOffset": 27318,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 20191,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "As well as clustering genes into each node (hexagon), supraHex is also able to perform a partitioning operation on the trained map to obtain gene meta-clusters covering regions of the map.",
+            "startOffset": 20003,
+            "title": "Partitioning of the map into gene meta-clusters"
+        },
+        {
+            "endOffset": 18437,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The output of the learning is the mapping of similar input data onto neighboring regions of the supra-hexagonal map.",
+            "startOffset": 18321,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 23842,
+            "parents": [],
+            "refoffsets": {
+                "b0050": {
+                    "endOffset": 23841,
+                    "startOffset": 23834
+                },
+                "b0055": {
+                    "endOffset": 23841,
+                    "startOffset": 23834
+                }
+            },
+            "secId": "s0045",
+            "sentence": "To showcase the multifaceted functionalities supported by supraHex (Fig. 1), we used published multilayer omics datasets on DNA replication timing, promoter CpG classification and gene expression [10,11].",
+            "startOffset": 23638,
+            "title": "Results"
+        },
+        {
+            "endOffset": 17067,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This is one of the key functionalities of the package \u2018supraHex\u2019.",
+            "startOffset": 17002,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 17962,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 17900,
+                    "startOffset": 17897
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The package \u2018supraHex\u2019 is a pure R implementation of a self-organising learning algorithm [6] applied to the symmetric topology of the supra-hexagonal map.",
+            "startOffset": 17807,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 19052,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "supraHex provides several options for visualising the map generated from the training process.",
+            "startOffset": 18958,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 28473,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Being an R/Bioconductor package, we anticipate that supraHex will deliver to a very broad bioinformatics community an intuitive and ultrafast understanding of any tabular omics data, both scientifically and aesthetically.",
+            "startOffset": 28252,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 26183,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "A more general kind of data for overlaying are the expression data in Fig. 1B.",
+            "startOffset": 26105,
+            "title": "Results"
+        },
+        {
+            "endOffset": 18910,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "So in essence, supraHex converts the gene-sample matrix into the codebook matrix that is associated with the supra-hexagonal map.",
+            "startOffset": 18781,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 15777,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A long list of genes requires that dimension of the information to be compressed, e.g. via clustering.",
+            "startOffset": 15675,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 24833,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Secondly, early-replicated genes are mostly mapped onto the top part of the map, while the late-replicated genes are consistently clustered in the bottom-left corner of the map.",
+            "startOffset": 24656,
+            "title": "Results"
+        },
+        {
+            "endOffset": 19853,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "When a pattern spans both negative and positive values, the zero axis is also displayed.",
+            "startOffset": 19765,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 26816,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Firstly, we can see that consistently late replications (in the bottom-left corner) consistently have low expression across samples.",
+            "startOffset": 26684,
+            "title": "Results"
+        },
+        {
+            "endOffset": 16828,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In other words, most genes will map to the centre with radial symmetry, giving a visual normalisation against which non-random changes stand out.",
+            "startOffset": 16683,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 21588,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Using the covariance matrix can vastly reduce the cost of training the layout, which is essential when the input data matrix is prohibitively large.",
+            "startOffset": 21440,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 27047,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Secondly, the reordering of sample-specific components recovers some known relationships, such as the sequence of neural differentiation of the embryonic stem cell line D3 (the path from ESC_D3 via EBM3_D3 and EBM6_D3 to EBM9_D3).",
+            "startOffset": 26817,
+            "title": "Results"
+        },
+        {
+            "endOffset": 20761,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For visualising meta-clusters, the map is colour-coded by region with the seeds highlighted as well.",
+            "startOffset": 20661,
+            "title": "Partitioning of the map into gene meta-clusters"
+        },
+        {
+            "endOffset": 23981,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "These datasets consist of digitised replication timing, promoter CpG status and expression levels of 17,292 genes in a variety of samples.",
+            "startOffset": 23843,
+            "title": "Results"
+        },
+        {
+            "endOffset": 22546,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The overlaying onto each map node is realised by: first calculating the neighborhood-kernel-weighted hits/counts of the input data, then calculating the accumulated values (similarly weighted by the neighborhood kernel) of the additional data to be mapped onto that node, and finally obtaining the overlaid values via normalisation of the accumulated values by hits.",
+            "startOffset": 22180,
+            "title": "Overlaying additional data onto the trained map for exploring relationships between input and additional data"
+        },
+        {
+            "endOffset": 25348,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Simultaneous inspection of the genes within the supra-hexagonal map and the samples within the landscape reveals: (i) what constitutes the replication-timing signature common to a category of cell types (such as pluripotent cells), and (ii) how signatures change across these different cell type categories.",
+            "startOffset": 25041,
+            "title": "Results"
+        },
+        {
+            "endOffset": 28251,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "As demonstrated here, the map produced by supraHex can be used to analyse both genes and samples at the same time, and can also be overlaid with additional data for multilayer omics data comparisons.",
+            "startOffset": 28052,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 17616,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this paper we demonstrate that supraHex makes it easy to carry out integrated tasks such as: gene clustering/meta-clustering, sample correlations and visualisations, and the overlaying of additional data onto the map (Fig. 1C).",
+            "startOffset": 17386,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26599,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "As before, this artificial codebook matrix can be used for sample-specific component reordering and visualisation (see Fig. 3B).",
+            "startOffset": 26471,
+            "title": "Results"
+        },
+        {
+            "endOffset": 19535,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The map distance tells how far each map node is away from its neighbors in high-dimensional input space, while the \u2018hit\u2019 histogram over the map shows how many input data vectors are best hitting each node.",
+            "startOffset": 19330,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 22775,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The reason for weighting by the neighborhood kernel is to avoid rigid overlaying which could result from focusing on the best-matching map nodes only; there may exist several closest best-matching nodes for an input data vector.",
+            "startOffset": 22547,
+            "title": "Overlaying additional data onto the trained map for exploring relationships between input and additional data"
+        },
+        {
+            "endOffset": 23405,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In addition to this, a dedicated webpage (http://supfam.org/supraHex) provides applications to many real cases including the example presented in the following Results section.",
+            "startOffset": 23229,
+            "title": "Public accessibility of the package and tutorial-like applications on real cases"
+        },
+        {
+            "endOffset": 24655,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Firstly, genes with early replication timing outnumber those with late replication timing, irrespective of the cell type analysed.",
+            "startOffset": 24525,
+            "title": "Results"
+        },
+        {
+            "endOffset": 26683,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Remarkably, purely based on the overlaid expression map, two features become clear.",
+            "startOffset": 26600,
+            "title": "Results"
+        },
+        {
+            "endOffset": 20660,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The purpose of the region-growing algorithm is to ensure that each meta-cluster is continuous over the map.",
+            "startOffset": 20553,
+            "title": "Partitioning of the map into gene meta-clusters"
+        },
+        {
+            "endOffset": 24524,
+            "parents": [],
+            "refoffsets": {
+                "b0055": {
+                    "endOffset": 24370,
+                    "startOffset": 24366
+                }
+            },
+            "secId": "s0045",
+            "sentence": "Comparing the supraHex output to the heatmap display shown in the original publication [11], it can be seen that several features associated with input replication-timing can be revealed more intuitively in the output from the supraHex analysis.",
+            "startOffset": 24279,
+            "title": "Results"
+        },
+        {
+            "endOffset": 22179,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "In the example shown in Fig. 1B, the input data used for training are DNA replication timing, and the two additional sources to be overlaid are CpG data and expression data.",
+            "startOffset": 22006,
+            "title": "Overlaying additional data onto the trained map for exploring relationships between input and additional data"
+        },
+        {
+            "endOffset": 22981,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The package \u2018supraHex\u2019 is regularly maintained and freely available via the Bioconductor website (http://bioconductor.org).",
+            "startOffset": 22858,
+            "title": "Public accessibility of the package and tutorial-like applications on real cases"
+        },
+        {
+            "endOffset": 24084,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "We first chose the DNA replication timing data matrix as the input for training a supra-hexagonal map.",
+            "startOffset": 23982,
+            "title": "Results"
+        },
+        {
+            "endOffset": 18780,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Prototype vectors in the map nodes collectively constitute a so-called codebook matrix.",
+            "startOffset": 18693,
+            "title": "The supra-hexagonal map trained via a self-organising learning algorithm"
+        },
+        {
+            "endOffset": 22005,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "The overlaying of additional data enables comparisons of multilayer omics data.",
+            "startOffset": 21926,
+            "title": "Overlaying additional data onto the trained map for exploring relationships between input and additional data"
+        },
+        {
+            "endOffset": 27834,
+            "parents": [],
+            "refoffsets": {
+                "b0075": {
+                    "endOffset": 27697,
+                    "startOffset": 27693
+                },
+                "b0080": {
+                    "endOffset": 27711,
+                    "startOffset": 27707
+                },
+                "b0085": {
+                    "endOffset": 27731,
+                    "startOffset": 27727
+                }
+            },
+            "secId": "s0050",
+            "sentence": "However, previous tools (such as somtoolbox [15], Kohonen [16] and Cluster3.0 [17]) compromise on availability, visual novelty, or functional scalability (see Table 1 for a comparison).",
+            "startOffset": 27649,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 19704,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The second type of visualisation is for illustrating the patterns (in the prototype vectors) associated with each map node, such as those stored in the codebook matrix.",
+            "startOffset": 19536,
+            "title": "Visualisations at and across nodes of the map"
+        },
+        {
+            "endOffset": 27910,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Instead, supraHex is tailored to the new challenges of omics data analysis.",
+            "startOffset": 27835,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 25941,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "In Fig. 2 it is evident that consistently late replications (in the bottom-left corner) are mostly devoid of HCP.",
+            "startOffset": 25828,
+            "title": "Results"
+        },
+        {
+            "endOffset": 14943,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 14833,
+                    "startOffset": 14828
+                },
+                "b0010": {
+                    "endOffset": 14833,
+                    "startOffset": 14828
+                },
+                "b0015": {
+                    "endOffset": 14890,
+                    "startOffset": 14885
+                },
+                "b0020": {
+                    "endOffset": 14890,
+                    "startOffset": 14885
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Conventional microarray platforms [1,2] and recent next-generation sequencing technologies [3,4] are producing ever-increasing amounts of omics data.",
+            "startOffset": 14794,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 26105,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "In contrast, when overlaying the LCP vector, we see that consistently late replications are highly indicative of the presence of LCPs (the right panel in Fig. 3A).",
+            "startOffset": 25942,
+            "title": "Results"
+        },
+        {
+            "endOffset": 15883,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The clustering of genes still needs to be visualised, done by projection onto a 2-dimensional (2D) space.",
+            "startOffset": 15778,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 20945,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The concept of using supraHex for visualising sample correlation is to lay out the samples on a new 2D square lattice (as in the examples shown in Figs. 2 and 3B).",
+            "startOffset": 20782,
+            "title": "Sample correlation"
+        },
+        {
+            "endOffset": 24278,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "As a result of step (V) in Fig. 1C, the reordering and visualisation of sample-specific components of the map are able to reveal intuitive information about both genes and samples (see Fig. 2).",
+            "startOffset": 24085,
+            "title": "Results"
+        },
+        {
+            "endOffset": 15524,
+            "parents": [],
+            "refoffsets": {
+                "b0025": {
+                    "endOffset": 15442,
+                    "startOffset": 15439
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This \u2018large p, small n\u2019 data analysis challenge [5] is a common barrier to biologists in checking and exploring their own omics data.",
+            "startOffset": 15391,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 21187,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Materials and methods"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "supraHex provides a choice for calculation of the covariance matrix based on a variety of different distance metrics.",
+            "startOffset": 21070,
+            "title": "Sample correlation"
+        }
+    ],
+    "docId": "S0006291X13020056",
+    "metadata": {
+        "asjc": [
+            "1303",
+            "1304",
+            "1307",
+            "1312"
+        ],
+        "authors": [
+            {
+                "email": "hfang@cs.bris.ac.uk",
+                "first": "Hai",
+                "initial": "H.",
+                "last": "Fang"
+            },
+            {
+                "email": null,
+                "first": "Julian",
+                "initial": "J.",
+                "last": "Gough"
+            }
+        ],
+        "doi": "10.1016/j.bbrc.2013.11.103",
+        "firstpage": "285",
+        "issn": "0006291X",
+        "keywords": [
+            "Bioinformatics",
+            "Clustering",
+            "DNA replication timing",
+            "Gene expression",
+            "Sample correlation",
+            "Visualisation"
+        ],
+        "lastpage": "289",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "BIOC"
+        ],
+        "title": "SupraHex: An R/Bioconductor package for tabular omics data analysis using a supra-hexagonal map"
+    }
+}

@@ -1,0 +1,1754 @@
+{
+    "abstract": "The KArlsruhe TRItium Neutrino experiment (KATRIN) aims to measure the effective electron anti-neutrino mass with an unprecedented sensitivity of 0.2 eV/c2, using \u03b2-electrons from tritium decay. Superconducting magnets will guide the electrons through a vacuum beamline from the windowless gaseous tritium source through differential and cryogenic pumping sections to a high resolution spectrometer. At the same time tritium gas has to be prevented from entering the spectrometer. Therefore, the pumping sections have to reduce the tritium flow by at least 14 orders of magnitude. This paper describes various simulation methods in the molecular flow regime used to determine the expected gas flow reduction in the pumping sections for deuterium (commissioning runs) and for radioactive tritium. Simulations with MolFlow+ and with an analytical model are compared with each other, and with the stringent requirements of the KATRIN experiment.",
+    "author_highlights": [
+        {
+            "endOffset": 55105,
+            "sentence": "Simulation of the gas flow of D2 and T2 in differential and the cryogenic pumping in the KATRIN experiment.",
+            "startOffset": 54998
+        },
+        {
+            "endOffset": 55206,
+            "sentence": "The total gas flow is reduced by more than 14 orders of magnitude with the combined pumping systems.",
+            "startOffset": 55106
+        },
+        {
+            "endOffset": 55323,
+            "sentence": "Tritium migration along the beam line due to the sojourn time on Ar-frost and \u03b2-induced desorption are investigated.",
+            "startOffset": 55207
+        },
+        {
+            "endOffset": 55419,
+            "sentence": "Two simulation methods are compared; TPMC simulation with MolFlow+, and a custom-made C++ code.",
+            "startOffset": 55324
+        }
+    ],
+    "bib_entries": {
+        "bib1": null,
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Oleg B.",
+                    "initial": "O.B.",
+                    "last": "Malyshev"
+                }
+            ],
+            "doi": "10.1016/j.vacuum.2005.11.055",
+            "firstpage": "752",
+            "issn": "0042207X",
+            "lastpage": "758",
+            "pub_year": 2007,
+            "title": "Characterisation of a turbo-molecular pumps by a minimum of parameters",
+            "volume": "81"
+        },
+        "bib11": null,
+        "bib12": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Wolf"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Bornschein"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Drexlin"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Gehring"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Gr\u00f6\u00dfle"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Horn"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Kernert"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Riegel"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Neeb"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Wagner"
+                }
+            ],
+            "doi": "10.1016/j.vacuum.2011.07.063",
+            "firstpage": "361",
+            "issn": "0042207X",
+            "lastpage": "369",
+            "pub_year": 2011,
+            "title": "Investigation of turbo-molecular pumps in strong magnetic fields",
+            "volume": "86"
+        },
+        "bib13": null,
+        "bib14": {
+            "authors": [
+                {
+                    "first": "J. H.",
+                    "initial": "J.H.",
+                    "last": "De Boer"
+                }
+            ],
+            "doi": "10.1016/S0360-0564(08)60538-6",
+            "firstpage": "17",
+            "issn": "03600564",
+            "lastpage": "161",
+            "pub_year": 1956,
+            "title": "Adsorption Phenomena",
+            "volume": "8"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "Carsten",
+                    "initial": "C.",
+                    "last": "R\u00f6ttele"
+                }
+            ],
+            "doi": "10.1088/1742-6596/888/1/012228",
+            "issn": "17426588",
+            "pub_year": 2017,
+            "title": "Results of the first Cool-down of the KATRIN Cryogenic Pumping Section",
+            "volume": "888"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Kersevan"
+                },
+                {
+                    "first": "J. L.",
+                    "initial": "J.L.",
+                    "last": "Pons"
+                }
+            ],
+            "doi": "10.1116/1.3153280",
+            "firstpage": "1017",
+            "issn": "07342101",
+            "lastpage": "1023",
+            "pub_year": 2009,
+            "title": "Introduction to MOLFLOW+: New graphical processing unit-based Monte Carlo code for simulating molecular flows and for calculating angular coefficients in the compute unified device architecture environment",
+            "volume": "27"
+        },
+        "bib17": null,
+        "bib18": null,
+        "bib19": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Ch",
+                    "initial": "C.",
+                    "last": "Day"
+                }
+            ],
+            "doi": "10.1116/1.2956628",
+            "firstpage": "1319",
+            "issn": "07342101",
+            "lastpage": "1325",
+            "pub_year": 2008,
+            "title": "Test particle Monte Carlo study of the cryogenic pumping system of the Karlsruhe tritium neutrino experiment",
+            "volume": "26"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Drexlin"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Hannen"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Mertens"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Weinheimer"
+                }
+            ],
+            "doi": "10.1155/2013/293986",
+            "issn": "16877357",
+            "pub_year": 2013,
+            "title": "Current direct neutrino mass experiments",
+            "volume": "2013"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Oleg B.",
+                    "initial": "O.B.",
+                    "last": "Malyshev"
+                }
+            ],
+            "doi": "10.1116/1.2816945",
+            "firstpage": "68",
+            "issn": "07342101",
+            "lastpage": "77",
+            "pub_year": 2008,
+            "title": "Tritium migration along the cryopumping section",
+            "volume": "26"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Greenwood"
+                }
+            ],
+            "doi": "10.1016/S0042-207X(02)00173-2",
+            "firstpage": "217",
+            "issn": "0042207X",
+            "lastpage": "222",
+            "pub_year": 2002,
+            "title": "The correct and incorrect generation of a cosine distribution of scattered particles for Monte-Carlo modelling of vacuum systems",
+            "volume": "67"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Babutzka"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Bahr"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Bonn"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Bornschein"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Dieter"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Drexlin"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Eitel"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Fischer"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Gl\u00fcck"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Grohmann"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "H\u00f6tzel"
+                },
+                {
+                    "first": "T. M.",
+                    "initial": "T.M.",
+                    "last": "James"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "K\u00e4fer"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Leber"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Monreal"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Priester"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "R\u00f6llig"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Schl\u00f6sser"
+                },
+                {
+                    "first": "U.",
+                    "initial": "U.",
+                    "last": "Schmitt"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Sharipov"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Steidl"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Sturm"
+                },
+                {
+                    "first": "H. H.",
+                    "initial": "H.H.",
+                    "last": "Telle"
+                },
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Titov"
+                }
+            ],
+            "doi": "10.1088/1367-2630/14/10/103046",
+            "issn": "13672630",
+            "pub_year": 2012,
+            "title": "Monitoring of the operating parameters of the KATRIN Windowless Gaseous TRItium Source",
+            "volume": "14"
+        },
+        "bib4": null,
+        "bib5": null,
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Woosik",
+                    "initial": "W.",
+                    "last": "Gil"
+                },
+                {
+                    "first": "Jochen",
+                    "initial": "J.",
+                    "last": "Bonn"
+                },
+                {
+                    "first": "Beate",
+                    "initial": "B.",
+                    "last": "Bornschein"
+                },
+                {
+                    "first": "Rainer",
+                    "initial": "R.",
+                    "last": "Gehring"
+                },
+                {
+                    "first": "Oleg",
+                    "initial": "O.",
+                    "last": "Kazachenko"
+                },
+                {
+                    "first": "Jonny",
+                    "initial": "J.",
+                    "last": "Kleinfeller"
+                },
+                {
+                    "first": "Sergiy",
+                    "initial": "S.",
+                    "last": "Putselyk"
+                }
+            ],
+            "doi": "10.1109/TASC.2009.2038581",
+            "firstpage": "316",
+            "issn": "10518223",
+            "lastpage": "319",
+            "pub_year": 2010,
+            "title": "The cryogenic pumping section of the KATRIN experiment",
+            "volume": "20"
+        },
+        "bib7": null,
+        "bib8": null,
+        "bib9": {
+            "authors": [
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Chr",
+                    "initial": "C.",
+                    "last": "Day"
+                },
+                {
+                    "first": "V.",
+                    "initial": "V.",
+                    "last": "Hauer"
+                },
+                {
+                    "first": "O. B.",
+                    "initial": "O.B.",
+                    "last": "Malyshev"
+                },
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Reid"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Sharipov"
+                }
+            ],
+            "doi": "10.1016/j.vacuum.2005.11.044",
+            "firstpage": "864",
+            "issn": "0042207X",
+            "lastpage": "869",
+            "pub_year": 2006,
+            "title": "Monte Carlo simulation of gas flow through the KATRIN DPS2-F differential pumping system",
+            "volume": "80"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 99452,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This simplification includes the assumption of a time independent, mean surface coverage per beam tube section, as described in Sec. 5.2.2.",
+            "startOffset": 99313,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 91570,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.1",
+            "sentence": "In the commissioning simulation, the inlet valve V2 and the outlet valve V4 are assumed to be closed, while they are opened during the neutrino mass measurement simulation.",
+            "startOffset": 91398,
+            "title": "MolFlow+"
+        },
+        {
+            "endOffset": 58665,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The large flow reduction along the beam tube forced us to subdivide the simulation of a long beam tube into several independent steps and concatenate the results in the subsequent analysis.",
+            "startOffset": 58476,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99312,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "A necessary simplification had to be made in order to attain the reduction factor for radioactive adsorbates.",
+            "startOffset": 99203,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 58385,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 describes the general design and the vacuum system of both pumping systems.",
+            "startOffset": 58300,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63789,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "The cryogenic system includes two liquid helium (LHe) vessels; the first one at 4.5 K, the second one at 3 K.",
+            "startOffset": 63680,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 102840,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Further measurements and detailed comparisons with the models will help us to reduce the uncertainties of the input parameters, which would ultimately lead to more accurate predictions.",
+            "startOffset": 102655,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 60400,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "Incoming and outgoing beamlines of PP1-4 change direction at the pump ports by 20\u00b0.",
+            "startOffset": 60317,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 60872,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "The beamline of the DPS-2F, between the WGTS and the CPS cryostat, is 7.3 m long.",
+            "startOffset": 60791,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 60963,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "Each beam tube consists of a central tube, connected via bellows to a flange on each side.",
+            "startOffset": 60873,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 65753,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "A CAD model of the cold trap geometry is imported; the model includes the magnetic coils 2\u20135, the inner radiation shields, part of the 3 K-cooling loop connected to the beam tube, and the beam tube.",
+            "startOffset": 65555,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 67752,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "Except for these hot spots, most of the beamline areas, in particular those with the fins, are in a temperature range between 3 and 4 K.",
+            "startOffset": 67616,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 59007,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The geometry is hard-coded in C++, optimizing the speed of the simulation.",
+            "startOffset": 58933,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60316,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 60314,
+                    "startOffset": 60312
+                },
+                "bib9": {
+                    "endOffset": 60311,
+                    "startOffset": 60310
+                }
+            },
+            "secId": "sec2.1.1",
+            "sentence": "Pump port 0 was added at a late stage during the design of the pumping section, which is why in previous publications the DPS2-F is mostly described with only four pump ports [9,10].",
+            "startOffset": 60134,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 60791,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "Electrostatic dipoles (half-pipe-shaped stainless-steel electrodes) and ring-shaped electrodes remove tritium ions by either drifting them towards the walls where they are neutralized, or reflecting them back towards the source.",
+            "startOffset": 60563,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 70143,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "The TPMC models"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "After the simulation of an appropriate number of particle tracks, the results, represented by the three counters of each facet, are in general used to determine conductances, effective pumping speeds, and partial pressures.",
+            "startOffset": 69920,
+            "title": "Simulation with MolFlow+"
+        },
+        {
+            "endOffset": 60562,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "This geometry prevents a direct line of sight and increases the number of collisions with the walls, and thus, the pumping probability for the neutral molecules.",
+            "startOffset": 60401,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 62000,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 61998,
+                    "startOffset": 61996
+                }
+            },
+            "secId": "sec2.1.2",
+            "sentence": "The superconducting magnets surrounding the beamline provide a guiding field of up to 5.5 T [11].",
+            "startOffset": 61903,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 64368,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "At PP1 and PP2 there are cold cathode gauges (MKS 421 inverted magnetron) to monitor the pressure in front of and behind the cold trap.",
+            "startOffset": 64233,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 91163,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.1",
+            "sentence": "Two different scenarios were simulated with MolFlow+.",
+            "startOffset": 91110,
+            "title": "MolFlow+"
+        },
+        {
+            "endOffset": 61206,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "The entire DPS2-F has a weight of about 104 kg and is fixed to the floor with earthquake protections.",
+            "startOffset": 61105,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 70243,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "The TPMC models"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Details of the analysis methods for the DPS2-F and the CPS are described in the following sections.",
+            "startOffset": 70144,
+            "title": "Simulation with MolFlow+"
+        },
+        {
+            "endOffset": 58475,
+            "parents": [],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 58450,
+                    "startOffset": 58449
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The Test Particle Monte Carlo (TPMC) simulation with MolFlow+ [8] is described in Sec. 3.",
+            "startOffset": 58386,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87784,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "With the Semi-Analytical Tracking Model, the migration time of a single particle along the entire CPS is calculated.",
+            "startOffset": 87668,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 90370,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "and 4, two different approaches were introduced.",
+            "startOffset": 90322,
+            "title": "Results"
+        },
+        {
+            "endOffset": 85690,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "The TPMC models"
+                },
+                {
+                    "id": "sec3.3",
+                    "title": "The CPS model"
+                }
+            ],
+            "secId": "sec3.3.4",
+            "sentence": "With the additional decay-induced desorptions, the effective sojourn time will no longer increase with falling temperatures but converges towards a limit as is shown in Fig. 7.",
+            "startOffset": 85514,
+            "title": "Tritium decay"
+        },
+        {
+            "endOffset": 58932,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An alternative simulation method for the CPS is introduced in Sec. 4.",
+            "startOffset": 58863,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66530,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In order to minimize the differences between the simulated and the measured temperatures, the ambient temperatures for the different beam tube sections vary between 70 and 90 K.",
+            "startOffset": 66353,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 62341,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The last part of the transport and pumping section is the cryogenic pumping section (CPS), which has to reduce the residual gas flow by more than seven orders of magnitude.",
+            "startOffset": 62169,
+            "title": "The cryogenic pumping section"
+        },
+        {
+            "endOffset": 65355,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 65317,
+                    "startOffset": 65315
+                }
+            },
+            "secId": "sec2.2.3",
+            "sentence": "During the first activation of the 3 K-cooling system, the measured temperatures on the beam tube did not reach the expected 3 K [15], but varied between 3.4 K and 6.2 K.",
+            "startOffset": 65185,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 90639,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Table 1 gives an overview of the results.",
+            "startOffset": 90598,
+            "title": "DPS2-F"
+        },
+        {
+            "endOffset": 67364,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In beam tube section 5, a 180 mm stretch of the cooling loop is not brazed to the beam tube due to a repair in this area, which leads to a large area on the right side that has a temperature above 5 K. Regions near the cooling loop reach the expected 3 K while the temperature increases further away.",
+            "startOffset": 67064,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 88102,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The particle is reflected back into the DPS2-F, where it reaches PP4 and is pumped out by the TMP.",
+            "startOffset": 88004,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 66665,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In Fig. 4, the deviations to the measurement results are shown.",
+            "startOffset": 66602,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 67615,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "Due to the narrower windings of the cooling loop towards the end of the beam tube sections, there are areas which are homogeneous at 3 K. Hot spots arise as a result of bolts connecting the warmer inner radiation shield to the beam tube sections 2-4.",
+            "startOffset": 67365,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 66802,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "The errors correspond to the temperature gradient along the 30.0 mm \u00d7 14.8 mm \u00d7 19.5 mm copper sensor housing connected to the beamline.",
+            "startOffset": 66666,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 63679,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "The gold plated inner surface provides a clean surface for argon frost crystallization, as well as reducing the diffusion of hydrogen isotopes into the stainless steel.",
+            "startOffset": 63511,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 88001,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Only these events contribute to the determination of the reduction factor.",
+            "startOffset": 87927,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 87926,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The particle leaves the CPS through valve V4 into the pre-spectrometer.",
+            "startOffset": 87855,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 91397,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.1",
+            "sentence": "The other scenario is the commissioning measurement with D2; the parameters of interest are the pressures at both pump ports.",
+            "startOffset": 91272,
+            "title": "MolFlow+"
+        },
+        {
+            "endOffset": 68053,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The software is designed for particle tracking in the molecular flow regime.",
+            "startOffset": 67977,
+            "title": "The TPMC models"
+        },
+        {
+            "endOffset": 58862,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the analysis of the CPS simulation the time dependence of the reduction factor was introduced, assuming a slow migration of the adsorbed and redesorbed tritium towards the spectrometer section.",
+            "startOffset": 58666,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60133,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "The DPS2-F has five pump ports (PP0, PP1, \u2026, PP4), which are aligned perpendicular to the interconnecting beamlines (BT1-5) as can be seen in Fig. 2.",
+            "startOffset": 59984,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 87853,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The simulation of a particle track can have four different outcomes:",
+            "startOffset": 87785,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 90597,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "The DPS2-F simulation has been split into four parts as described in Sec. 3.2.",
+            "startOffset": 90519,
+            "title": "DPS2-F"
+        },
+        {
+            "endOffset": 90310,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In the following, the simulation results of the flow reduction of both DPS2-F and CPS are presented.",
+            "startOffset": 90210,
+            "title": "Results"
+        },
+        {
+            "endOffset": 102544,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "The simulations are essential to infer the actual flow reduction factors from the measured pressure ratios.",
+            "startOffset": 102437,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 59133,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It also allows the simulation of time-dependent properties that are difficult to characterize with MolFlow+ in a single pass.",
+            "startOffset": 59008,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66282,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "The heat load from elements, which are not explicitly simulated in the geometry model, is taken into account by assuming a uniform thermal black body radiation with a specific temperature.",
+            "startOffset": 66094,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 67868,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "This simulated temperature profile is used in the next sections to calculate the reduction factor of the cold trap.",
+            "startOffset": 67753,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 67976,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 67974,
+                    "startOffset": 67972
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The TPMC models have been simulated with the software package MolFlow+ (version 2.5.6) [16].",
+            "startOffset": 67884,
+            "title": "The TPMC models"
+        },
+        {
+            "endOffset": 99130,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Compared to the D2 simulations with MolFlow+, the Semi-Analytical Tracking Model for tritiated isotopologues has a significantly lower reduction factor, as shown in Fig. 13.",
+            "startOffset": 98957,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 65897,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "The simulation is initialized with a fixed temperature of 4.5 K for the magnets and 3 K for the pipes of the cooling loops around the beamline.",
+            "startOffset": 65754,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 67063,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "The first one can be explained by the higher radiative heat loads on these regions due to the gaps between the inner radiation shields and the magnets.",
+            "startOffset": 66912,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 94814,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.2",
+            "sentence": "Therefore the uncertainty of any extrapolation would span several orders of magnitude.",
+            "startOffset": 94728,
+            "title": "Semi-Analytical Tracking Model"
+        },
+        {
+            "endOffset": 65184,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In each beam tube section of the cold trap the temperature is monitored by three rhodium-iron sensors with 50 mK accuracy.",
+            "startOffset": 65062,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 59305,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The implications of the results and systematic uncertainties, due to some simplifications used in the model, are discussed in Sec. 6.",
+            "startOffset": 59172,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59171,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Sec. 5, the results are presented.",
+            "startOffset": 59134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66352,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In COMSOL Multiphysics\u00ae this parameter is called ambient temperature.",
+            "startOffset": 66283,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 61104,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "The smallest diameter of the beamline is 85 mm, defined by the beamline instrumentation.",
+            "startOffset": 61016,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 62518,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "For this purpose, a cold argon frost layer prepared on the inner beamline surface, with an area of about 2 m2 that is maintained at 3 K, adsorbs the incoming tritium molecules.",
+            "startOffset": 62342,
+            "title": "The cryogenic pumping section"
+        },
+        {
+            "endOffset": 66602,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In this way the non-negligible radiation of the pump ports is included.",
+            "startOffset": 66531,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 90321,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In Secs. 3",
+            "startOffset": 90311,
+            "title": "Results"
+        },
+        {
+            "endOffset": 91271,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.1",
+            "sentence": "The first one is the standard neutrino mass measurement; the parameter of interest is the reduction factor.",
+            "startOffset": 91164,
+            "title": "MolFlow+"
+        },
+        {
+            "endOffset": 102436,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "In order to retrieve more accurate parameters, measurements of the reduction of deuterium will be compared to simulations of the pressure ratios close to the inlet and outlet flanges of the pumping sections.",
+            "startOffset": 102229,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 66093,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "To reduce the calculation time, radiation is only allowed between opposite surfaces, e.g. between magnetic coils and inner radiation shield, while the radiation inside the beam tube is neglected.",
+            "startOffset": 65898,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 99202,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "The reduction factor for tritium still exceeds the requirements by far.",
+            "startOffset": 99131,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 88229,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The simulation is aborted because the particle takes longer to leave the CPS than the initially set maximal migration time.",
+            "startOffset": 88106,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 64134,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "For safety reasons the argon layer will be regenerated after 60 days of measurement time, which corresponds to an accumulated tritium activity below 1 Curie stored on the cold trap.",
+            "startOffset": 63953,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 68112,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Its basic concepts are described in the following section.",
+            "startOffset": 68054,
+            "title": "The TPMC models"
+        },
+        {
+            "endOffset": 64460,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "TMPs are installed to both pump ports, but are turned off during standard KATRIN operation.",
+            "startOffset": 64369,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 90510,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The DPS2-F results are solely based on MolFlow+ simulations, while the CPS results were complemented by the Semi-Analytical Tracking Model.",
+            "startOffset": 90371,
+            "title": "Results"
+        },
+        {
+            "endOffset": 62137,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 62135,
+                    "startOffset": 62133
+                }
+            },
+            "secId": "sec2.1.2",
+            "sentence": "A passive magnetic shield encases each TMP to prevent eddy currents from heating, and possible crashing, of the fast-moving rotors [12].",
+            "startOffset": 62001,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 94472,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.2",
+            "sentence": "To cover the expected range of the desorption energy (see Sec. 3.3.3), a set of simulations reaching from Edes = 1200 J mol\u22121 to Edes = 1600 J  mol\u22121 has been performed.",
+            "startOffset": 94303,
+            "title": "Semi-Analytical Tracking Model"
+        },
+        {
+            "endOffset": 66911,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "The largest discrepancies are located in the regions near to the beam tube bends and in beam tube section 5.",
+            "startOffset": 66803,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 88328,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Semi-Analytical Tracking Model of the CPS"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The particle decays while still in the CPS, most likely being adsorbed on the argon frost layer.",
+            "startOffset": 88232,
+            "title": "Reduction factor calculation"
+        },
+        {
+            "endOffset": 64232,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "The other beam tube elements are cooled with liquid nitrogen and therefore operated at about 77 K.",
+            "startOffset": 64134,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 63510,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "The main part of the vacuum system of the CPS is the 3 m long cold trap (sections 2-5), covered by an argon frost layer at 3 K.",
+            "startOffset": 63383,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 61015,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "The central tubes have an inner diameter of 100 mm.",
+            "startOffset": 60964,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 99538,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "This approach overestimates the surface coverage and results in a conservative limit.",
+            "startOffset": 99453,
+            "title": "Discussion"
+        },
+        {
+            "endOffset": 61278,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "The differential pumping section"
+                }
+            ],
+            "secId": "sec2.1.1",
+            "sentence": "A computer-aided design (CAD) drawing of the DPS2-F is shown in Fig. 2.",
+            "startOffset": 61207,
+            "title": "Geometry"
+        },
+        {
+            "endOffset": 65554,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.3",
+            "sentence": "In order to investigate the origin of the temperature discrepancy, the heat transfer module of the commercial simulation program COMSOL Multiphysics\u00ae was used with a finite-element-method simulation.",
+            "startOffset": 65355,
+            "title": "Cold trap temperature"
+        },
+        {
+            "endOffset": 63952,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "The pumping sections"
+                },
+                {
+                    "id": "sec2.2",
+                    "title": "The cryogenic pumping section"
+                }
+            ],
+            "secId": "sec2.2.2",
+            "sentence": "In order to reach 3 K in the second LHe vessel the 4.5 K helium is pumped down to a pressure of 0.16 bar and circulated through the cooling loop of the cold trap.",
+            "startOffset": 63790,
+            "title": "Vacuum system"
+        },
+        {
+            "endOffset": 94727,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Results"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "CPS"
+                }
+            ],
+            "secId": "sec5.2.2",
+            "sentence": "For non-radioactive gases with desorption energies above 1200 J mol\u22121, this simulation method is not suitable since the probability function used to calculate the reduction (see Eq. (19)) has no entries close to the region from t = 0 days to t = 60 days.",
+            "startOffset": 94473,
+            "title": "Semi-Analytical Tracking Model"
+        },
+        {
+            "endOffset": 102654,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "The preliminary results of the ongoing measurements with deuterium support the findings of these simulations.",
+            "startOffset": 102545,
+            "title": "Conclusions"
+        }
+    ],
+    "docId": "S0042207X18313873",
+    "metadata": {
+        "asjc": [
+            "2508",
+            "3104",
+            "3105"
+        ],
+        "authors": [
+            {
+                "email": "fabian.friedel@kit.edu",
+                "first": "F.",
+                "initial": "F.",
+                "last": "Friedel"
+            },
+            {
+                "email": "carsten.roettele@kit.edu",
+                "first": "C.",
+                "initial": "C.",
+                "last": "R\u00f6ttele"
+            },
+            {
+                "email": "lutz.schimpf@kit.edu",
+                "first": "L.",
+                "initial": "L.",
+                "last": "Schimpf"
+            },
+            {
+                "email": null,
+                "first": "J.",
+                "initial": "J.",
+                "last": "Wolf"
+            },
+            {
+                "email": null,
+                "first": "G.",
+                "initial": "G.",
+                "last": "Drexlin"
+            },
+            {
+                "email": null,
+                "first": "M.",
+                "initial": "M.",
+                "last": "Hackenjos"
+            },
+            {
+                "email": null,
+                "first": "A.",
+                "initial": "A.",
+                "last": "Jansen"
+            },
+            {
+                "email": null,
+                "first": "M.",
+                "initial": "M.",
+                "last": "Steidl"
+            },
+            {
+                "email": null,
+                "first": "K.",
+                "initial": "K.",
+                "last": "Valerius"
+            }
+        ],
+        "doi": "10.1016/j.vacuum.2018.10.002",
+        "firstpage": "161",
+        "issn": "0042207X",
+        "keywords": [
+            "Cryogenic pump",
+            "KATRIN experiment",
+            "Pumping speed",
+            "TPMC simulation",
+            "Tritium"
+        ],
+        "lastpage": "172",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "MATE",
+            "PHYS"
+        ],
+        "title": "Time-dependent simulation of the flow reduction of D2 and T2 in the KATRIN experiment"
+    }
+}

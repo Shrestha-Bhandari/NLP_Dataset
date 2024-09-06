@@ -1,0 +1,1941 @@
+{
+    "abstract": "The transient analysis of sliding beams represents a challenging problem of structural mechanics. Typically, the sliding motion superimposed by large flexible deformation requires numerical methods as, e.g., finite elements, to obtain approximate solutions. By means of the classical sliding spaghetti problem, the present paper provides a guideline to the numerical modeling with conventional finite element codes. For this purpose, two approaches, one using solid elements and one using beam elements, respectively, are employed in the analysis, and the characteristics of each approach are addressed. The contact formulation realizing the interaction of the beam with its support demands particular attention in the context of sliding structures. Additionally, the paper employs the sliding-beam formulation as a third approach, which avoids the numerical difficulties caused by the large sliding motion through a suitable coordinate transformation. The present paper briefly outlines the theoretical fundamentals of the respective approaches for the modeling of sliding structures and gives a detailed comparison by means of the sliding spaghetti serving as a representative example. The specific advantages and limitations of the different approaches with regard to accuracy and computational efficiency are discussed in detail. Through the comparison, the sliding-beam formulation, which proves as an effective approach for the modeling, can be validated for the general problem of a sliding structure subjected to large deformation.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                },
+                {
+                    "first": "C. M.",
+                    "initial": "C.M.",
+                    "last": "Leech"
+                },
+                {
+                    "first": "Y. I.",
+                    "initial": "Y.I.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1016/0016-0032(74)90104-5",
+            "firstpage": "201",
+            "issn": "00160032",
+            "lastpage": "220",
+            "pub_year": 1974,
+            "title": "On the dynamics of an axially moving beam",
+            "volume": "297"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Vu-Quoc"
+                }
+            ],
+            "doi": "10.1115/1.3171871",
+            "firstpage": "855",
+            "issn": "00218936",
+            "lastpage": "863",
+            "pub_year": 1986,
+            "title": "On the dynamics of flexible beams under large overall motions-the plane case: Part II",
+            "volume": "53"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Behdinan"
+                },
+                {
+                    "first": "M. C.",
+                    "initial": "M.C.",
+                    "last": "Stylianou"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                }
+            ],
+            "doi": "10.1006/jsvi.1997.1167",
+            "firstpage": "517",
+            "issn": "0022460X",
+            "lastpage": "539",
+            "pub_year": 1997,
+            "title": "Dynamics of flexible sliding beams - Non-linear analysis part I: Formulation",
+            "volume": "208"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "D. B.",
+                    "initial": "D.B.",
+                    "last": "McIver"
+                }
+            ],
+            "doi": "10.1007/BF01535286",
+            "firstpage": "249",
+            "issn": "00220833",
+            "lastpage": "261",
+            "pub_year": 1973,
+            "title": "Hamilton's principle for systems of changing mass",
+            "volume": "7"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Behdinan"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                }
+            ],
+            "doi": "10.1006/jsvi.1997.1168",
+            "firstpage": "541",
+            "issn": "0022460X",
+            "lastpage": "565",
+            "pub_year": 1997,
+            "title": "Dynamics of flexible sliding beams - Non-linear analysis part II: Transient response",
+            "volume": "208"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Behdinan"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                }
+            ],
+            "doi": "10.1002/(SICI)1097-0207(19981215)43:7<1309::AID-NME456>3.0.CO;2-2",
+            "firstpage": "1309",
+            "issn": "00295981",
+            "lastpage": "1333",
+            "pub_year": 1998,
+            "title": "A finite element formulation for sliding beams, Part I",
+            "volume": "43"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "G\u00fcrg\u00f6ze"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Y\u00fcksel"
+                }
+            ],
+            "doi": "10.1006/jsvi.1999.2155",
+            "firstpage": "467",
+            "issn": "0022460X",
+            "lastpage": "482",
+            "pub_year": 1999,
+            "title": "Transverse vibrations of a flexible beam sliding through a prismatic joint",
+            "volume": "223"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Humer"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Irschik"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2011.01.015",
+            "firstpage": "1301",
+            "issn": "00207683",
+            "lastpage": "1310",
+            "pub_year": 2011,
+            "title": "Large deformation and stability of an extensible elastica with an unknown length",
+            "volume": "48"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Humer"
+                }
+            ],
+            "doi": "10.1007/s00707-011-0520-0",
+            "firstpage": "209",
+            "issn": "00015970",
+            "lastpage": "223",
+            "pub_year": 2011,
+            "title": "Elliptic integral solution of the extensible elastica with a variable length under a concentrated force",
+            "volume": "222"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Humer"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2012.08.026",
+            "firstpage": "622",
+            "issn": "0022460X",
+            "lastpage": "641",
+            "pub_year": 2013,
+            "title": "Dynamic modeling of beams with non-material, deformation-dependent boundary conditions",
+            "volume": "332"
+        },
+        "bib19": null,
+        "bib2": {
+            "authors": [
+                {
+                    "first": "C. D.",
+                    "initial": "C.D.",
+                    "last": "Mote"
+                }
+            ],
+            "doi": "10.1016/0016-0032(65)90273-5",
+            "firstpage": "430",
+            "issn": "00160032",
+            "lastpage": "444",
+            "pub_year": 1965,
+            "title": "A study of band saw vibrations",
+            "volume": "279"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Sivakumar S.K.",
+                    "initial": "S.S.K.",
+                    "last": "Tadikonda"
+                },
+                {
+                    "first": "Haim",
+                    "initial": "H.",
+                    "last": "Baruh"
+                }
+            ],
+            "doi": "10.1115/1.2897364",
+            "firstpage": "422",
+            "issn": "00220434",
+            "lastpage": "427",
+            "pub_year": 1992,
+            "title": "Dynamics and control of a translating flexible beam with a prismatic joint",
+            "volume": "114"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Theodore"
+                },
+                {
+                    "first": "J. H.",
+                    "initial": "J.H.",
+                    "last": "Arakeri"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Ghosal"
+                }
+            ],
+            "doi": "10.1006/jsvi.1996.0128",
+            "firstpage": "363",
+            "issn": "0022460X",
+            "lastpage": "376",
+            "pub_year": 1996,
+            "title": "The modelling of axially translating flexible beams",
+            "volume": "191"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Eric",
+                    "initial": "E.",
+                    "last": "Reissner"
+                }
+            ],
+            "doi": "10.1007/BF01602645",
+            "firstpage": "795",
+            "issn": "00442275",
+            "lastpage": "804",
+            "pub_year": 1972,
+            "title": "On one-dimensional finite-strain beam theory: The plane problem",
+            "volume": "23"
+        },
+        "bib23": null,
+        "bib24": null,
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1007/978-3-540-71001-1",
+            "firstpage": "1",
+            "lastpage": "559",
+            "pub_year": 2008,
+            "title": "Nonlinear finite element methods"
+        },
+        "bib26": null,
+        "bib27": null,
+        "bib28": {
+            "authors": [
+                {
+                    "first": "Hans M.",
+                    "initial": "H.M.",
+                    "last": "Hilber"
+                },
+                {
+                    "first": "Thomas J.R.",
+                    "initial": "T.J.R.",
+                    "last": "Hughes"
+                },
+                {
+                    "first": "Robert L.",
+                    "initial": "R.L.",
+                    "last": "Taylor"
+                }
+            ],
+            "doi": "10.1002/eqe.4290050306",
+            "firstpage": "283",
+            "issn": "00988847",
+            "lastpage": "292",
+            "pub_year": 1977,
+            "title": "Improved numerical dissipation for time integration algorithms in structural dynamics",
+            "volume": "5"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "Osborne",
+                    "initial": "O.",
+                    "last": "Reynolds"
+                }
+            ],
+            "firstpage": "142",
+            "issn": "00160032",
+            "lastpage": "145",
+            "pub_year": 1875,
+            "title": "On the efficiency of belts or straps as communicators of work",
+            "volume": "99"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Keith W.",
+                    "initial": "K.W.",
+                    "last": "Buffinton"
+                },
+                {
+                    "first": "Thomas R.",
+                    "initial": "T.R.",
+                    "last": "Kane"
+                }
+            ],
+            "doi": "10.1016/0020-7683(85)90069-1",
+            "firstpage": "617",
+            "issn": "00207683",
+            "lastpage": "643",
+            "pub_year": 1985,
+            "title": "Dynamics of a beam moving over supports",
+            "volume": "21"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "Rex J.",
+                    "initial": "R.J.",
+                    "last": "Theodore"
+                },
+                {
+                    "first": "Ashitava",
+                    "initial": "A.",
+                    "last": "Ghosal"
+                }
+            ],
+            "doi": "10.1109/3477.558822",
+            "firstpage": "296",
+            "issn": "10834419",
+            "lastpage": "305",
+            "pub_year": 1997,
+            "title": "Modeling of flexible-link manipulators with prismatic joints",
+            "volume": "27"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Stylianou"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                }
+            ],
+            "doi": "10.1006/jsvi.1994.1497",
+            "firstpage": "433",
+            "issn": "0022460X",
+            "lastpage": "453",
+            "pub_year": 1994,
+            "title": "Finite element analysis of an axially moving beam, Part I: Time Integration",
+            "volume": "178"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Stylianou"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Tabarrok"
+                }
+            ],
+            "doi": "10.1006/jsvi.1994.1498",
+            "firstpage": "455",
+            "issn": "0022460X",
+            "lastpage": "481",
+            "pub_year": 1994,
+            "title": "Finite element analysis of an axially moving beam, Part II: Stability analysis",
+            "volume": "178"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Vu-Quoc"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Li"
+                }
+            ],
+            "doi": "10.1016/0045-7825(94)00051-N",
+            "firstpage": "65",
+            "issn": "00457825",
+            "lastpage": "118",
+            "pub_year": 1995,
+            "title": "Dynamics of sliding geometrically-exact beams: large angle maneuver and parametric resonance",
+            "volume": "120"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Vu-Quoc"
+                }
+            ],
+            "doi": "10.1115/1.3171870",
+            "firstpage": "849",
+            "issn": "00218936",
+            "lastpage": "854",
+            "pub_year": 1986,
+            "title": "On the dynamics of flexible beams under large overall motions-the plane case: Part I",
+            "volume": "53"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 92079,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 4 presents a thorough comparison of the respective advantages and disadvantages of the three formulations studied in the paper.",
+            "startOffset": 91944,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86305,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 86220,
+                    "startOffset": 86217
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A similar approach was pursued by Buffinton and Kane [4] who analyzed a moving Euler-Bernoulli beam on two supports using linear beam theory.",
+            "startOffset": 86164,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101529,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Governing equations of the beam"
+                }
+            ],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 101414,
+                    "startOffset": 101408
+                },
+                "bib9": {
+                    "endOffset": 101414,
+                    "startOffset": 101408
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Reissner's beam formulation can be regarded as a generalization of Timoshenko's theory to large deformation, for which Simo and Vu-Quoc [9,10] presented an efficient finite element formulation, which is also referred to as \u201cgeometrically-exact beam theory\u201d.",
+            "startOffset": 101272,
+            "title": "Non-linear beam formulation"
+        },
+        {
+            "endOffset": 95382,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Applying this notion of a prismatic joint to problems of sliding beams implies that the rotation of cross-section at the opening of the guide vanishes since the guide is fixed in space.",
+            "startOffset": 95197,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 112108,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 112107,
+                    "startOffset": 112103
+                }
+            },
+            "secId": "s0040",
+            "sentence": "ABAQUS provides a classical node-to-surface (node-to-segment in 2D problems) contact algorithm, which is referred to as \u201chard contact\u201d, i.e, the penetration of a surface (master) by contact nodes (slave) is prevented either through algebraic constraint conditions or by means of penalization, see, e.g., [25].",
+            "startOffset": 111799,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 97240,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 97193,
+                    "startOffset": 97186
+                },
+                "bib23": {
+                    "endOffset": 97193,
+                    "startOffset": 97186
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Two further solutions for sliding beams are obtained from structural mechanics formulations based on Reissner's theory [22,23] for planar problems of shear-deformable beams.",
+            "startOffset": 97067,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 93328,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The more general formulation allows to also study problems in which the sliding motion is not fully prescribed kinematically at the orifice such that the inside and outside part may mutually influence each other.",
+            "startOffset": 93116,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 83024,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In particular, the focus lies on beam-like structures subjected to a planar, possibly large deformation.",
+            "startOffset": 82920,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95720,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "As the part of the beam located inside the guide is fully accounted for in the present investigation, the paper also addresses the influence of constraints on the rotation on the behavior of the structure.",
+            "startOffset": 95515,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 121911,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 121776,
+                    "startOffset": 121764
+                },
+                "bib22": {
+                    "endOffset": 121776,
+                    "startOffset": 121764
+                },
+                "bib23": {
+                    "endOffset": 121776,
+                    "startOffset": 121764
+                },
+                "bib9": {
+                    "endOffset": 121776,
+                    "startOffset": 121764
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Employing the geometrically exact theory [22,23,9,10], the rotation of the cross-section at the opening of the guide is independent of the axial displacement and the transverse deflection.",
+            "startOffset": 121723,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 112468,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The contact algorithm consists of two major parts: (1) detection of nodes and elements that are in contact and (2) contact enforcement.",
+            "startOffset": 112333,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 95057,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In the context of rigid bodies, a prismatic joint is a lower kinematic pair that allows two components to perform a relative translation in a single direction but prohibits any relative rotation.",
+            "startOffset": 94862,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 98229,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The following sections rather focus on key aspects (e.g., material behavior) that are required to reproduce the results of the present investigation possibly with other numerical tools than used herein.",
+            "startOffset": 98027,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 143881,
+            "parents": [
+                {
+                    "id": "s0065",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Dynamic analysis of the sliding beam"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "To describe the amplitude errors, the distances between the tip positions obtained from the three approaches are compared.",
+            "startOffset": 143759,
+            "title": "Accuracy of the dynamic solutions"
+        },
+        {
+            "endOffset": 91640,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Naturally, the proper representation of kinematic constraints on the deformation is crucial in problems of sliding structures.",
+            "startOffset": 91514,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83491,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Another well-known example from everyday life similar to the spaghetti problem is that of a winding retraction of a tape measure.",
+            "startOffset": 83362,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83129,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The classical sliding spaghetti problem serves as a benchmark example for the subsequent investigations.",
+            "startOffset": 83025,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 153682,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "In view of the highly dynamic process and the large flexible deformation, the agreement of the three modeling approaches employed is remarkable.",
+            "startOffset": 153538,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 86494,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the analysis, they used free-free modes of a beam with constant length which are constant in time with kinematic constraints being imposed to satisfy the supporting boundary conditions.",
+            "startOffset": 86306,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92243,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By means of the results, the paper provides a guideline for the modeling of sliding beams for the three different approaches employed in the present investigation.",
+            "startOffset": 92080,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92665,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The term \u201csliding spaghetti\u201d refers to beam-like structures that are retracted through an orifice into some sort of guide, see Fig. 1(a).",
+            "startOffset": 92528,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 117789,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The smooth sliding motion of the node along the funnel transition zone at the guide opening avoids significant jumps of the contact force.",
+            "startOffset": 117651,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 122097,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The present paper particularly questions the typical assumption of the angle of rotation being zero at the opening of the guide, since shear deformation may be present within the guide.",
+            "startOffset": 121912,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 84086,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "From the modeling perspective, the sliding spaghetti problem involves several inherent difficulties that need to be addressed in the analysis.",
+            "startOffset": 83944,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95196,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "For flexible bodies, this concept is typically localized such that kinematic constraints are imposed using the directions of local frames.",
+            "startOffset": 95058,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 88114,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 87954,
+                    "startOffset": 87950
+                }
+            },
+            "secId": "s0005",
+            "sentence": "G\u00fcrg\u00f6ze and Y\u00fcksel [15] investigated the vibrations of a beam sliding through a prismatic joint using the extended Hamiltons principle and solving the equations with a modal approach.",
+            "startOffset": 87931,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101271,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Governing equations of the beam"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In the structural mechanics formulation of beams, the notions of stresses and strains are relinquished in favour of cross-sectional stress resultants and generalized strain measures that are associated with the beam's axis.",
+            "startOffset": 101048,
+            "title": "Non-linear beam formulation"
+        },
+        {
+            "endOffset": 88315,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 88314,
+                    "startOffset": 88307
+                },
+                "bib17": {
+                    "endOffset": 88314,
+                    "startOffset": 88307
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Static problems of structures that can move relative to their supports were studied, e.g., in [16,17].",
+            "startOffset": 88213,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91513,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Afterwards, the theoretical background of each of the three approaches used for the modeling of sliding beams are briefly described along with the respective finite element formulations employed in the numerical analysis.",
+            "startOffset": 91292,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87161,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 87133,
+                    "startOffset": 87127
+                },
+                "bib8": {
+                    "endOffset": 87019,
+                    "startOffset": 87016
+                },
+                "bib9": {
+                    "endOffset": 87133,
+                    "startOffset": 87127
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Vu-Quoc and Li [8] presented a fully non-linear dynamic formulation for sliding beams based on the geometrically-exact theory [9,10] for shear-deformable beams.",
+            "startOffset": 87001,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98336,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For more details on the individual approaches, the reader is referred to references provided in the paper.",
+            "startOffset": 98230,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 96765,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In the following, the left side of the beam refers to the already retracted part of the beam, the outside part that still remains to be retracted is also denoted as the right side.",
+            "startOffset": 96585,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 117339,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "To improve the convergence of sliding beam simulations with 2D-solid elements, the geometry of the opening of the guide is adjusted to provide as smooth transition as shown in Fig. 6.",
+            "startOffset": 117156,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 93486,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The entire beam is also considered in the present comparison, which, of course, requires kinematic constraints imposed by the guide to be specified in detail.",
+            "startOffset": 93328,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 96915,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The present paper compares three different approaches for the description of sliding structures.",
+            "startOffset": 96819,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 153537,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "A comparison of these results with those of the 2D-solid representation of the structure suggests that the above two beam-based formulations are capable of capturing the behavior of the sliding spaghetti qualitatively and, to a large extent, also quantitatively.",
+            "startOffset": 153275,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 117155,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "While the sudden presence of a contact force mainly affects the accuracy when using beam elements, transient analyses with solid elements often fail to converge if the deformation of the structure is large.",
+            "startOffset": 116949,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 122430,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "On the other hand, the 2D-solid representation of the structure and the corresponding contact formulation provides additional insight into the actual behavior, since the thickness of the beam is resolved.",
+            "startOffset": 122226,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 85261,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To alleviate numerical analysis, formulations specifically addressing the characteristics of sliding structures have been developed.",
+            "startOffset": 85129,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 111660,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The straightforward way to describe the interaction of the beam with the frictionless joint is by means of a contact approach.",
+            "startOffset": 111534,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 85532,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A complete review of the numerous contributions to the field of sliding structure is beyond the scope of the present paper.",
+            "startOffset": 85409,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94861,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 94860,
+                    "startOffset": 94848
+                },
+                "bib20": {
+                    "endOffset": 94860,
+                    "startOffset": 94848
+                },
+                "bib21": {
+                    "endOffset": 94860,
+                    "startOffset": 94848
+                },
+                "bib8": {
+                    "endOffset": 94860,
+                    "startOffset": 94848
+                }
+            },
+            "secId": "s0010",
+            "sentence": "In previous contributions to problems of sliding beams, the guide has also been referred to as a prismatic joint [20,8,21,18].",
+            "startOffset": 94735,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 112332,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Even though the same contact formulation is used in combination with both 2D-solid elements and beam elements, the individual characteristics of the respective type of finite elements needs to be considered in the modeling.",
+            "startOffset": 112109,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 93824,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Despite the seemingly simple nature of the guide, a more precise description that reflects the characteristics of the respective approach for the modeling of the beam needs be given.",
+            "startOffset": 93642,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 122225,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "On the one hand, the beam formulations allow to study the influence of the kinematic constraint on the rotation at the opening.",
+            "startOffset": 122098,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 83762,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "During the retraction of the structure, transverse vibrations of the part that yet remains to be retracted are gradually excited.",
+            "startOffset": 83633,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82477,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "By the term sliding structures, one typically refers to problems of beam or plate-like bodies that undergo a large translational motion with a superimposed flexible deformation.",
+            "startOffset": 82300,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92813,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 92721,
+                    "startOffset": 92716
+                },
+                "bib8": {
+                    "endOffset": 92721,
+                    "startOffset": 92716
+                }
+            },
+            "secId": "s0010",
+            "sentence": "Many previous contributions on sliding structures [1,8] studied only the outside part of the beam, which has not been retrieved into the guide yet.",
+            "startOffset": 92666,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 94734,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Regardless of the approach used in the modeling, the interaction of the beam and the guide is assumed to be frictionless.",
+            "startOffset": 94613,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 98026,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The present paper does not intend to present a complete derivation of the governing equation.",
+            "startOffset": 97933,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 85994,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 85894,
+                    "startOffset": 85891
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In the early contribution on vibrations of spacecraft antennas being deployed or retracted, Tabarrok et al. [1] used the Euler-Bernoulli beam theory for large deformation adopting Eulerian (spatial) coordinates.",
+            "startOffset": 85783,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92527,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "For this purpose, the sliding spaghetti problem is adopted in the subsequent investigations.",
+            "startOffset": 92435,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 88212,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Again, the axial sliding motion of the beam was prescribed kinematically in their investigations.",
+            "startOffset": 88115,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117950,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Introducing the radius of the circular extension as an additional parameter, however, immediately raises the question of how to choose the radius appropriately.",
+            "startOffset": 117790,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 116522,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "If 2D-solid elements are used to discretize the beam domain, the problems encountered with a contact formulation for the modeling of the guide will be the same as for beam elements; on the other hand, the convergence will be affected much more severely since the structure's domain is also discretized in thickness direction.",
+            "startOffset": 116197,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 91822,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For this reason, the paper discusses the modeling of the constraints by means of a contact formulation, and several key aspects of the respective approaches are explained in detail.",
+            "startOffset": 91641,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97066,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "As a first approach, an approximation of the geometrically non-linear relations of elasticity is constructed using conventional solid finite elements.",
+            "startOffset": 96916,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 154243,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "In the vicinity of the opening of the guide, the beam's cross-section show significant warping and localized deformation on the top and bottom surfaces of the structure; these effects cannot be represented by a beam model.",
+            "startOffset": 154021,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 94513,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "If the structure is modelled as a one-dimensional continuum using a beam theory, the usual kinematic assumptions concerning the deformation of a cross-section allow to impose the constraints on the beam's axis instead of its top and bottom surfaces.",
+            "startOffset": 94264,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 85408,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Within the last decades, many different strategies have been presented to facilitate both analytical and numerical analyses of sliding structures.",
+            "startOffset": 85262,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91291,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The present paper is organized as follows: To motivate the subsequent investigations and to illustrate the challenges of large deformation problems of sliding structures, the example problem of a beam being retrieved into a guide \u2013 the sliding spaghetti problem \u2013 is first introduced in detail.",
+            "startOffset": 90997,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101741,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0020",
+                    "title": "Governing equations of the beam"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "According to Timoshenko's kinematic hypothesis, cross-sections initially plane and perpendicular to the beam's axis remain plane but not necessarily perpendicular to the axis in the course of motion, see Fig. 2.",
+            "startOffset": 101530,
+            "title": "Non-linear beam formulation"
+        },
+        {
+            "endOffset": 88978,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "While restricting to slender beams that are rigid in shear, the extension allows for a larger range of boundary conditions as compared to earlier contributions.",
+            "startOffset": 88818,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82299,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The dynamics of sliding structures has been an important topic in structural mechanics due to its relevance in numerous engineering applications.",
+            "startOffset": 82154,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 154020,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "Results of the 2D-solid model clearly show that the kinematic assumptions inherent to the beam theory are no longer satisfied once the beam is already largely retracted into the guide.",
+            "startOffset": 153836,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 87717,
+            "parents": [],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 87623,
+                    "startOffset": 87619
+                },
+                "bib12": {
+                    "endOffset": 87649,
+                    "startOffset": 87645
+                }
+            },
+            "secId": "s0005",
+            "sentence": "An alternative derivation of the equations of motion of sliding beams by Behdinan et al. [11] is based on McIver's [12] extension of Hamilton's principle for systems with a variable mass.",
+            "startOffset": 87530,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 121722,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib27": {
+                    "endOffset": 121637,
+                    "startOffset": 121633
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Antman [27] discussed the appropriate choice of boundary conditions in non-linear beam problems.",
+            "startOffset": 121626,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 82919,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The present paper compares different approaches for the numerical modeling of dynamic problems of sliding structures.",
+            "startOffset": 82802,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92434,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "First of all, a suitable example problem needs to be chosen for the comparison of different approaches for the modeling of sliding structures.",
+            "startOffset": 92292,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 82802,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The nature of structures being transported in a preferred direction is intrinsic to many industrial processes as rolling in metal forming and paper production, for instance.",
+            "startOffset": 82629,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83632,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Both processes, i.e., sucking in a spaghetti and winding up a tape measure, share a common feature that is typical of this kind of problems.",
+            "startOffset": 83492,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 116626,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "It turns out that the strategy proposed for beam elements is insufficient when using 2D-solid elements.",
+            "startOffset": 116523,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 94052,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Among the formulations used in what follows, the representation of the beam as a planar solid adopting the assumption of a plane state of stress requires a model of the guide that is probably closest to real-world applications.",
+            "startOffset": 93825,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 84261,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Obviously, problems of sliding structures involve large displacements due to the underlying translational motion, which is possibly accompanied by large flexible deformation.",
+            "startOffset": 84087,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87930,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 87801,
+                    "startOffset": 87797
+                },
+                "bib14": {
+                    "endOffset": 87860,
+                    "startOffset": 87856
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To obtain approximate solutions of dynamics, they employed a Galerkin's method [13] and compared two kinds of finite element formulations [14], i.e, beam elements with a variable and a fixed length, respectively.",
+            "startOffset": 87718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86163,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Their numerical analysis of the linearized problem by means of Ritz' method employs shape functions that depend on the instantaneous length of the considered structure.",
+            "startOffset": 85995,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95514,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Shear-deformable structures, however, may exhibit a rotation of the cross-section at the opening and, hence, also inside the guide.",
+            "startOffset": 95383,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 112593,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Sliding beams undergo large deformations and the contact detection is complex as a large number of nodes have to be checked.",
+            "startOffset": 112469,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 153835,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "The limitations of the beam theory can be noted towards the end of the retraction process when the beam part outside the guide becomes relatively short.",
+            "startOffset": 153683,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 94613,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Therefore, it is equivalent to prohibit any lateral deflection of the beam's axis inside the guide.",
+            "startOffset": 94514,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 152729,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "For the 2D-solid model, a smooth rounded shape of the guide's opening is required since the vibrations of the sliding structure become severe enough for widely-used numerical methods to fail to provide approximate solutions with a reasonable amount computational effort otherwise.",
+            "startOffset": 152449,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 82628,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 82578,
+                    "startOffset": 82575
+                },
+                "bib2": {
+                    "endOffset": 82607,
+                    "startOffset": 82604
+                },
+                "bib3": {
+                    "endOffset": 82627,
+                    "startOffset": 82624
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Early investigations on sliding structures were dealing with the deployment of flexible antennas [1], vibrations of band saws [2] and belt drives [3].",
+            "startOffset": 82478,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97932,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In what follows, the fundamentals of the three different formulations used for the modeling of the beam-like structure in the subsequent comparison are outlined briefly.",
+            "startOffset": 97763,
+            "title": "Governing equations of the beam"
+        },
+        {
+            "endOffset": 117427,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Instead of sharp corners, the guide is extended by a circular funnel-like contact zone.",
+            "startOffset": 117340,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 91943,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In particular, the modeling of the opening of the guide affects the accuracy of the subsequent numerical investigations.",
+            "startOffset": 91823,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 116820,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Similar as with beam elements, the 2D-solid elements at the opening of the guide may penetrate the rigid boundaries of the guide before its nodes are fully located within the guide, see Fig. 5.",
+            "startOffset": 116627,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 84447,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For this reason, some numerical method is required to determine approximate solutions.",
+            "startOffset": 84361,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 152911,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "In view of the modification of the geometry at the opening of the guide, not only the numerical convergence but also the model convergence has been examined for the present problem.",
+            "startOffset": 152730,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 87405,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In their comprehensive study, which inspires much of the present work, they proposed two equivalent derivations for the equations of motion based on a stretched material (Lagrangian) coordinate and spatial (Eulerian) coordinates, respectively.",
+            "startOffset": 87162,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88455,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The contributions mentioned above share the fact that only a selected part of the structure under consideration is regarded in the analysis.",
+            "startOffset": 88315,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92909,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The sliding spaghetti can then be regarded as a cantilever with a variable (decreasing) length.",
+            "startOffset": 92814,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 112718,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The contact enforcement can be realized with various methods, namely the penalty method or by means of Lagrange multipliers.",
+            "startOffset": 112594,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 111798,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 111767,
+                    "startOffset": 111763
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For the 2D-solid as well as the conventional beam model, the contact formulations available in ABAQUS [19] are used in the present paper.",
+            "startOffset": 111661,
+            "title": "Interaction with the guide"
+        },
+        {
+            "endOffset": 83361,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Inspired by the unfortunate event of spaghetti sauce being scattered from a noodle that is sucked into the mouth, the term sliding spaghetti is used for problems of beam-like structures that are retrieved into some kind of orifice.",
+            "startOffset": 83130,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87000,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "They solved the equations using the finite element method, with a constant number of finite elements used on the part of the structure outside of the joint.",
+            "startOffset": 86844,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88817,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 88748,
+                    "startOffset": 88744
+                },
+                "bib8": {
+                    "endOffset": 88816,
+                    "startOffset": 88813
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To describe the entire sliding spaghetti and the mutual influence of its inside part and outside part, Humer [18] presented a generalization of the formulation of Vu-Quoc and Li [8].",
+            "startOffset": 88635,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87529,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The coordinate transformation present in the paper enables the use of conventional beam elements in the numerical analysis.",
+            "startOffset": 87406,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84911,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As a consequence, support reactions imposed by kinematic constraints are not prescribed at fixed material points, but their points of action relative to the structure vary due to the sliding motion.",
+            "startOffset": 84713,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85129,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Owing to these typical properties of sliding structures, a straight-forward modeling adopting a conventional finite element formulation of solid mechanics involves several pitfalls that need to be carefully addressed.",
+            "startOffset": 84912,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93641,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Clearly, the guide's primary function is to prevent a transverse deflection of that portion of the structure, which is currently located within the guide.",
+            "startOffset": 93487,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 85782,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The common idea followed in many approaches is to represent the quantities involved not as a function of the material coordinate of the considered structure, but to use another suitably transformed coordinate as independent spatial variable instead.",
+            "startOffset": 85533,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117650,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Due to the extension of the contact zone, a node already experiences contact forces before the corresponding element has been fully retracted.",
+            "startOffset": 117508,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 116948,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As soon as node j enters the contact zone, it is subjected to a contact force which immediately tries to eliminate the overlap.",
+            "startOffset": 116821,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 93115,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 92935,
+                    "startOffset": 92931
+                },
+                "bib8": {
+                    "endOffset": 92999,
+                    "startOffset": 92996
+                }
+            },
+            "secId": "s0010",
+            "sentence": "More recently, Humer [18] has extended the sliding-beam formulation of Vu-Quoc and Li [8] to consider the entire structure by including the part of the beam that has already been retracted in the analysis.",
+            "startOffset": 92910,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 84712,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Typical approaches, e.g., finite elements, employ a spatial discretization of the body under consideration, which relates to a second crucial feature of sliding structures, i.e., the relative motion with respect to their supports, which are usually fixed in space.",
+            "startOffset": 84448,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118091,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "To provide an answer to that question, the influence of the radius on the numerical results is discussed in detail in the following section.",
+            "startOffset": 117951,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 86652,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 86518,
+                    "startOffset": 86515
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Theodore and Ghosal [5] studied a flexible link manipulator sliding through a prismatic joint, with the manipulator being modeled as an Euler-Bernoulli beam.",
+            "startOffset": 86495,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84360,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Large deformation problems in structural dynamics typically do not admit solutions in closed-form.",
+            "startOffset": 84262,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86843,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 86681,
+                    "startOffset": 86676
+                },
+                "bib7": {
+                    "endOffset": 86681,
+                    "startOffset": 86676
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Stylianou and Tabarrok [6,7] presented a linear formulation for the flexural vibrations of an Euler-Bernoulli beam being retracted into a prismatic joint following a prescribed axial motion.",
+            "startOffset": 86653,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 153064,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "The results of the convergence study provide a guideline for the modeling of similar problems of sliding structures when using contact-based approaches.",
+            "startOffset": 152912,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 121421,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "If the part inside the guide is not regarded, however, the beam's motion needs to be completely prescribed kinematically at the opening of the guide.",
+            "startOffset": 121272,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 121271,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 121150,
+                    "startOffset": 121136
+                },
+                "bib11": {
+                    "endOffset": 121150,
+                    "startOffset": 121136
+                },
+                "bib13": {
+                    "endOffset": 121150,
+                    "startOffset": 121136
+                },
+                "bib14": {
+                    "endOffset": 121150,
+                    "startOffset": 121136
+                },
+                "bib8": {
+                    "endOffset": 121150,
+                    "startOffset": 121136
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Many previous contributions to the sliding spaghetti problem [8,1,14,11,13] share the fact that only the outside part of the beam yet to be retracted into the guide was considered in the modeling.",
+            "startOffset": 121075,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 117507,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                },
+                {
+                    "id": "s0040",
+                    "title": "Interaction with the guide"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The rounded opening can be regarded as a regularization of the guide's opening.",
+            "startOffset": 117428,
+            "title": "Contact for solid elements"
+        },
+        {
+            "endOffset": 153275,
+            "parents": [],
+            "secId": "s0105",
+            "sentence": "The present investigation further reveals that the kinematic constraints imposed on the rotation of the cross-section momentarily located at the opening of the guide have a significant influence on the results.",
+            "startOffset": 153065,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 121625,
+            "parents": [
+                {
+                    "id": "s0015",
+                    "title": "Problem formulation"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Hence, boundary conditions for the axial displacement and the angle of rotation of the cross-section instantaneously at the opening of the guide must be provided in addition to the transverse deflection.",
+            "startOffset": 121422,
+            "title": "Rotation of the cross-section at the opening"
+        },
+        {
+            "endOffset": 88634,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the case of the spaghetti problem, for instance, only the part outside the guide opening (mouth) would be described whereas the portion already sucked in is not accounted for.",
+            "startOffset": 88456,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94263,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In this case, the guide constrains the displacement of the beam's top and bottom surfaces (contours) in lateral direction, i.e., the corresponding surfaces of the beam and the guide cannot penetrate each other.",
+            "startOffset": 94053,
+            "title": "Benchmark example: the sliding spaghetti problem"
+        },
+        {
+            "endOffset": 83944,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Typically, both the frequency and the amplitude of the vibrations compared to the remaining length of the structure substantially increase towards the end of the retraction process.",
+            "startOffset": 83763,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0022460X17305357",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "ivo.steinbrecher@jku.at",
+                "first": "Ivo",
+                "initial": "I.",
+                "last": "Steinbrecher"
+            },
+            {
+                "email": null,
+                "first": "Alexander",
+                "initial": "A.",
+                "last": "Humer"
+            },
+            {
+                "email": null,
+                "first": "Loc",
+                "initial": "L.",
+                "last": "Vu-Quoc"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2017.07.010",
+        "firstpage": "270",
+        "issn": "0022460X",
+        "keywords": [
+            "Contact",
+            "Finite elements",
+            "Large deformation",
+            "Numerical modeling",
+            "Sliding structures",
+            "Sliding-beam formulation"
+        ],
+        "lastpage": "290",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "On the numerical modeling of sliding beams: A comparison of different approaches"
+    }
+}

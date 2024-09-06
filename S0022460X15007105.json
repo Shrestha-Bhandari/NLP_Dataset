@@ -1,0 +1,1746 @@
+{
+    "abstract": "This paper introduces a method for the identification of the parameters of nonlinear structures using a probabilistic Bayesian framework, employing a Markov chain Monte Carlo algorithm. This approach uses analytical models to describe the unforced, undamped dynamic responses of structures in the frequency-amplitude domain, known as the backbone curves. The analytical models describing these backbone curves are then fitted to measured responses, found using the resonant-decay method. To investigate the proposed identification method, a nonlinear two-degree-of-freedom example structure is simulated numerically and analytical expressions describing the backbone curves are found. These expressions are then used, in conjunction with the backbone curve data found through simulated experiment, to estimate the system parameters. It is shown that the use of these computationally-cheap analytical expressions allows for an extremely efficient method for modelling the dynamic behaviour, providing an identification procedure that is both fast and accurate. Furthermore, for the example structure, it is shown that the estimated parameters may be used to accurately predict the existence of dynamic behaviours that are well-away from the backbone curve data provided; specifically the existence of an isola is predicted.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Wright"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Cooper"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Desforges"
+                }
+            ],
+            "doi": "10.1006/mssp.1998.1214",
+            "firstpage": "217",
+            "issn": "08883270",
+            "lastpage": "240",
+            "pub_year": 1999,
+            "title": "Normal-mode force appropriation - theory and application",
+            "volume": "13"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Matthew",
+                    "initial": "M.",
+                    "last": "Muto"
+                },
+                {
+                    "first": "James L.",
+                    "initial": "J.L.",
+                    "last": "Beck"
+                }
+            ],
+            "doi": "10.1177/1077546307079400",
+            "firstpage": "7",
+            "issn": "10775463",
+            "lastpage": "34",
+            "pub_year": 2008,
+            "title": "Bayesian updating and model class selection for hysteretic structural models using stochastic simulation",
+            "volume": "14"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Worden"
+                },
+                {
+                    "first": "J. J.",
+                    "initial": "J.J.",
+                    "last": "Hensman"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2012.03.019",
+            "firstpage": "153",
+            "issn": "08883270",
+            "lastpage": "169",
+            "pub_year": 2012,
+            "title": "Parameter estimation and model selection for a class of hysteretic systems using Bayesian inference",
+            "volume": "32"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "P. L.",
+                    "initial": "P.L.",
+                    "last": "Green"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2014.07.010",
+            "firstpage": "133",
+            "issn": "08883270",
+            "lastpage": "146",
+            "pub_year": 2015,
+            "title": "Bayesian system identification of a nonlinear dynamica system using a novel variant of Simulated Annealing",
+            "volume": "52-53"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Jianye",
+                    "initial": "J.",
+                    "last": "Ching"
+                },
+                {
+                    "first": "Yi Chu",
+                    "initial": "Y.C.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9399(2007)133:7(816)",
+            "firstpage": "816",
+            "issn": "07339399",
+            "lastpage": "832",
+            "pub_year": 2007,
+            "title": "Transitional Markov chain Monte Carlo method for Bayesian model updating, model class selection, and model averaging",
+            "volume": "133"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Panagiotis",
+                    "initial": "P.",
+                    "last": "Angelikopoulos"
+                },
+                {
+                    "first": "Costas",
+                    "initial": "C.",
+                    "last": "Papadimitriou"
+                },
+                {
+                    "first": "Petros",
+                    "initial": "P.",
+                    "last": "Koumoutsakos"
+                }
+            ],
+            "doi": "10.1063/1.4757266",
+            "issn": "00219606",
+            "pmid": "23061835",
+            "pub_year": 2012,
+            "title": "Bayesian uncertainty quantification and propagation in molecular dynamics simulations: A high performance computing framework",
+            "volume": "137"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "P. L.",
+                    "initial": "P.L.",
+                    "last": "Green"
+                },
+                {
+                    "first": "E. J.",
+                    "initial": "E.J.",
+                    "last": "Cross"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Worden"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2014.10.003",
+            "firstpage": "109",
+            "issn": "08883270",
+            "lastpage": "122",
+            "pub_year": 2015,
+            "title": "Bayesian system identification of dynamical systems using highly informative training data",
+            "volume": "56"
+        },
+        "bib16": null,
+        "bib17": null,
+        "bib18": {
+            "authors": [
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Jezequel"
+                },
+                {
+                    "first": "C. H.",
+                    "initial": "C.H.",
+                    "last": "Lamarque"
+                }
+            ],
+            "doi": "10.1016/0022-460X(91)90446-Q",
+            "firstpage": "429",
+            "issn": "0022460X",
+            "lastpage": "459",
+            "pub_year": 1991,
+            "title": "Analysis of non-linear dynamical systems by the normal form theory",
+            "volume": "149"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Simon A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "David J.",
+                    "initial": "D.J.",
+                    "last": "Wagg"
+                }
+            ],
+            "doi": "10.1098/rspa.2010.0270",
+            "firstpage": "1141",
+            "issn": "13645021",
+            "lastpage": "1163",
+            "pub_year": 2011,
+            "title": "Applying the method of normal forms to second-order nonlinear vibration problems",
+            "volume": "467"
+        },
+        "bib2": null,
+        "bib20": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Cammarano"
+                },
+                {
+                    "first": "T. L.",
+                    "initial": "T.L.",
+                    "last": "Hill"
+                },
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Wagg"
+                }
+            ],
+            "doi": "10.1007/s11071-014-1295-3",
+            "firstpage": "311",
+            "issn": "0924090X",
+            "lastpage": "320",
+            "pub_year": 2014,
+            "title": "Bifurcations of backbone curves for systems of coupled nonlinear two mass oscillator",
+            "volume": "77"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "T. L.",
+                    "initial": "T.L.",
+                    "last": "Hill"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Cammarano"
+                },
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Wagg"
+                }
+            ],
+            "doi": "10.1098/rspa.2014.0659",
+            "issn": "13645021",
+            "pub_year": 2015,
+            "title": "Out-of-unison resonance in weakly nonlinear coupled oscillators",
+            "volume": "471"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Kerschen"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Peeters"
+                },
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Golinval"
+                },
+                {
+                    "first": "A. F.",
+                    "initial": "A.F.",
+                    "last": "Vakakis"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2008.04.002",
+            "firstpage": "170",
+            "issn": "08883270",
+            "lastpage": "194",
+            "pub_year": 2009,
+            "title": "Nonlinear normal modes, Part I: A useful framework for the structural dynamicist",
+            "volume": "23"
+        },
+        "bib23": null,
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Juli\u00e1n M.",
+                    "initial": "J.M.",
+                    "last": "Londo\u00f1o"
+                },
+                {
+                    "first": "Simon A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "Jonathan E.",
+                    "initial": "J.E.",
+                    "last": "Cooper"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.03.015",
+            "firstpage": "224",
+            "issn": "0022460X",
+            "lastpage": "238",
+            "pub_year": 2015,
+            "title": "Identification of backbone curves of nonlinear systems from resonance decay responses",
+            "volume": "348"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "P. D.",
+                    "initial": "P.D.",
+                    "last": "McFadden"
+                },
+                {
+                    "first": "M. S.",
+                    "initial": "M.S.",
+                    "last": "Williams"
+                }
+            ],
+            "doi": "10.1016/S0141-0296(02)00194-3",
+            "firstpage": "713",
+            "issn": "01410296",
+            "lastpage": "728",
+            "pub_year": 2003,
+            "title": "A review of time-frequency methods for structural vibration analysis",
+            "volume": "25"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "M. F.",
+                    "initial": "M.F.",
+                    "last": "Platten"
+                },
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Wright"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Dimitriadis"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Cooper"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2007.11.016",
+            "firstpage": "8",
+            "issn": "08883270",
+            "lastpage": "29",
+            "pub_year": 2009,
+            "title": "Identification of multi-degree of freedom non-linear systems using an extended modal space model",
+            "volume": "23"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Neild"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Wagg"
+                }
+            ],
+            "doi": "10.1007/s11071-013-0818-7",
+            "firstpage": "649",
+            "issn": "0924090X",
+            "lastpage": "663",
+            "pub_year": 2013,
+            "title": "A generalized frequency detuning method for multidegree-of-freedom oscillators with nonlinear stiffness",
+            "volume": "73"
+        },
+        "bib28": null,
+        "bib29": {
+            "authors": [
+                {
+                    "first": "Nicholas",
+                    "initial": "N.",
+                    "last": "Metropolis"
+                },
+                {
+                    "first": "Arianna W.",
+                    "initial": "A.W.",
+                    "last": "Rosenbluth"
+                },
+                {
+                    "first": "Marshall N.",
+                    "initial": "M.N.",
+                    "last": "Rosenbluth"
+                },
+                {
+                    "first": "Augusta H.",
+                    "initial": "A.H.",
+                    "last": "Teller"
+                },
+                {
+                    "first": "Edward",
+                    "initial": "E.",
+                    "last": "Teller"
+                }
+            ],
+            "doi": "10.1063/1.1699114",
+            "firstpage": "1087",
+            "issn": "00219606",
+            "lastpage": "1092",
+            "pub_year": 1953,
+            "title": "Equation of state calculations by fast computing machines",
+            "volume": "21"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Kerschen"
+                },
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Golinval"
+                },
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Worden"
+                }
+            ],
+            "doi": "10.1006/jsvi.2000.3490",
+            "firstpage": "597",
+            "issn": "0022460X",
+            "lastpage": "613",
+            "pub_year": 2001,
+            "title": "Theoretical and experimental identification of a non-linear beam",
+            "volume": "244"
+        },
+        "bib30": null,
+        "bib31": null,
+        "bib32": {
+            "authors": [
+                {
+                    "first": "Ellen",
+                    "initial": "E.",
+                    "last": "Simoen"
+                },
+                {
+                    "first": "Costas",
+                    "initial": "C.",
+                    "last": "Papadimitriou"
+                },
+                {
+                    "first": "Geert",
+                    "initial": "G.",
+                    "last": "Lombaert"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2013.03.019",
+            "firstpage": "4136",
+            "issn": "0022460X",
+            "lastpage": "4152",
+            "pub_year": 2013,
+            "title": "On prediction error correlation in Bayesian model updating",
+            "volume": "332"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Kuether"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Renson"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Detroux"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Grappasonni"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Kerschen"
+                },
+                {
+                    "first": "M. S.",
+                    "initial": "M.S.",
+                    "last": "Allen"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.04.035",
+            "firstpage": "299",
+            "issn": "0022460X",
+            "lastpage": "310",
+            "pub_year": 2015,
+            "title": "Nonlinear normal modes, modal interactions and isolated resonance curves",
+            "volume": "351"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "Nicholas A.",
+                    "initial": "N.A.",
+                    "last": "Alexander"
+                },
+                {
+                    "first": "Frank",
+                    "initial": "F.",
+                    "last": "Schilder"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2008.05.018",
+            "firstpage": "445",
+            "issn": "0022460X",
+            "lastpage": "462",
+            "pub_year": 2009,
+            "title": "Exploring the performance of a nonlinear tuned mass damper",
+            "volume": "319"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Stephen A.",
+                    "initial": "S.A.",
+                    "last": "Billings"
+                }
+            ],
+            "doi": "10.1002/9781118535561",
+            "firstpage": "1",
+            "lastpage": "555",
+            "pub_year": 2013,
+            "title": "Nonlinear system identification: NARMAX methods in the time, frequency, and spatio-temporal domains"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "Gaetan",
+                    "initial": "G.",
+                    "last": "Kerschen"
+                },
+                {
+                    "first": "Jean Claude",
+                    "initial": "J.C.",
+                    "last": "Golinval"
+                }
+            ],
+            "doi": "10.1007/s11071-005-1919-8",
+            "firstpage": "129",
+            "issn": "0924090X",
+            "lastpage": "142",
+            "pub_year": 2005,
+            "title": "Generation of accurate finite element models of nonlinear systems - Application to an aeroplane-like structure",
+            "volume": "39"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Ga\u00ebtan",
+                    "initial": "G.",
+                    "last": "Kerschen"
+                },
+                {
+                    "first": "Keith",
+                    "initial": "K.",
+                    "last": "Worden"
+                },
+                {
+                    "first": "Alexander F.",
+                    "initial": "A.F.",
+                    "last": "Vakakis"
+                },
+                {
+                    "first": "Jean Claude",
+                    "initial": "J.C.",
+                    "last": "Golinval"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2005.04.008",
+            "firstpage": "505",
+            "issn": "08883270",
+            "lastpage": "592",
+            "pub_year": 2006,
+            "title": "Past, present and future of nonlinear system identification in structural dynamics",
+            "volume": "20"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Feldman"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2007.01.028",
+            "firstpage": "357",
+            "issn": "0022460X",
+            "lastpage": "370",
+            "pub_year": 2007,
+            "title": "Identification of weakly nonlinearities in multiple coupled oscillators",
+            "volume": "303"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "M. F.",
+                    "initial": "M.F.",
+                    "last": "Platten"
+                },
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Wright"
+                },
+                {
+                    "first": "J. E.",
+                    "initial": "J.E.",
+                    "last": "Cooper"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Dimitriadis"
+                }
+            ],
+            "doi": "10.2514/1.42024",
+            "firstpage": "1614",
+            "issn": "00218669",
+            "lastpage": "1626",
+            "pub_year": 2009,
+            "title": "Identification of a nonlinear wing structure using an extended modal model",
+            "volume": "46"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Ka Veng",
+                    "initial": "K.V.",
+                    "last": "Yuen"
+                },
+                {
+                    "first": "James L.",
+                    "initial": "J.L.",
+                    "last": "Beck"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9399(2003)129:1(9)",
+            "firstpage": "9",
+            "issn": "07339399",
+            "lastpage": "20",
+            "pub_year": 2003,
+            "title": "Updating properties of nonlinear dynamical systems with uncertain input",
+            "volume": "129"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 70416,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Two nonlinear oscillators, each with two degrees-of-freedom, are considered in this work.",
+            "startOffset": 70327,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69401,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Due to the complexity of modelling nonlinear systems, these simulations often require numerical integration through time at great computational expense.",
+            "startOffset": 69249,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72604,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The underlying linear structure is composed of two identical springs and viscous dampers that ground the masses, as well as a spring and a viscous damper connecting the masses.",
+            "startOffset": 72428,
+            "title": "The example systems"
+        },
+        {
+            "endOffset": 74789,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 74746,
+                    "startOffset": 74742
+                }
+            },
+            "secId": "s0020",
+            "sentence": "This employs a numerical integration routine, specifically MATLAB\u05f3s integration algorithm implementing Runge\u2013Kutta (4,5) [23], to simulate the procedure detailed below.",
+            "startOffset": 74621,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 68593,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 68528,
+                    "startOffset": 68525
+                },
+                "bib4": {
+                    "endOffset": 68548,
+                    "startOffset": 68545
+                },
+                "bib5": {
+                    "endOffset": 68592,
+                    "startOffset": 68589
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Existing approaches to the problem in multi-degree-of-freedom systems include the restoring force method [3], NARMAX methods [4] and the conditioned reverse path method [5].",
+            "startOffset": 68420,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84591,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "The approach used for this has a Bayesian framework, as discussed in the following section.",
+            "startOffset": 84500,
+            "title": "Calculating the backbone curves"
+        },
+        {
+            "endOffset": 68807,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 68806,
+                    "startOffset": 68800
+                },
+                "bib11": {
+                    "endOffset": 68806,
+                    "startOffset": 68800
+                },
+                "bib12": {
+                    "endOffset": 68806,
+                    "startOffset": 68800
+                },
+                "bib7": {
+                    "endOffset": 68763,
+                    "startOffset": 68758
+                },
+                "bib8": {
+                    "endOffset": 68763,
+                    "startOffset": 68758
+                },
+                "bib9": {
+                    "endOffset": 68806,
+                    "startOffset": 68800
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Methods that are of specific interest to this work include the nonlinear resonant decay method [7,8], and the use of Bayesian approaches [9\u201312].",
+            "startOffset": 68663,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71463,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 4 is dedicated to the discussion of the Bayesian parameter estimation approach taken here, with specific details regarding the formulation adopted to accommodate the analytical model.",
+            "startOffset": 71272,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100582,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Additionally, the second-order normal form technique, used to find the analytical expressions for the backbone curves, has a matrix-based formulation that is well-suited to computer automation, hence allowing this approach to be extended to larger, more complex systems.",
+            "startOffset": 100312,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 90977,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 3 shows that the true value of \u03b11 (which is 0.5) is outside of the limits of the estimated values, whereas one would expect the true value to lie within these limits.",
+            "startOffset": 90806,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 90047,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Here, a uniform prior distribution is utilised.",
+            "startOffset": 90000,
+            "title": "Parameter identification for the example systems"
+        },
+        {
+            "endOffset": 74904,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Additionally, Gaussian white noise is added to the data before processing, to simulate noise generated by sensors.",
+            "startOffset": 74790,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 89534,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "It is important to note that, as each sample generated using MCMC requires a model run, the method proposed here is very computationally efficient, as each model run simply requires the evaluation of Eqs. (11).",
+            "startOffset": 89324,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 98918,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "These analytical expressions are computationally efficient to evaluate, hence the identification procedure is carried out extremely rapidly.",
+            "startOffset": 98778,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 84819,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "Here, we find the parameters describing the equation of motion in the physical coordinates, Eq. (4); however, if one requires a modal model then the parameters describing the modal equation of motion, Eq. (5), may be identified.",
+            "startOffset": 84591,
+            "title": "Calculating the backbone curves"
+        },
+        {
+            "endOffset": 69248,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Alternatively a Markov chain Monte Carlo (MCMC) method may be used, alongside simulations of the system, to sample from the posterior.",
+            "startOffset": 69114,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88094,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "This reduces the complexity of the problem, as the residual terms, \u03f51 and \u03f52, can be found directly from the substitution of the data and parameters into Eqs. (16), without the need for algebraic manipulation.",
+            "startOffset": 87885,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 99454,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This is demonstrated in the results presented here, as the true values of the parameters lie outside of the range of estimated parameters.",
+            "startOffset": 99316,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 99585,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "It is also demonstrated, however, that the resulting errors are small and their influence on the dynamic responses are negligible.",
+            "startOffset": 99455,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 71951,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The results of the parameter identification for the example systems are presented in Section 5 where it is shown that the predictions of the responses of the system, made using the estimated parameters, are accurate in response regions well-away from those described by the data.",
+            "startOffset": 71672,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92096,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "These are shown in Fig. 4, where solid-green and dashed-red lines represent the backbone curves described by the true and estimated parameters respectively.",
+            "startOffset": 91940,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 98777,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This approach utilises the backbone curves of a system, which may be obtained experimentally, and modelled using analytical expressions derived using the second-order normal form technique.",
+            "startOffset": 98588,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 80902,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This approach may be used to reduce the experimental and computational costs.",
+            "startOffset": 80825,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 94601,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Also, the approximate nature of the model again results in true parameter values that lie outside of the limits of the estimated values.",
+            "startOffset": 94465,
+            "title": "Parameter identification for system 3NL"
+        },
+        {
+            "endOffset": 93569,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Specifically, for future work, the authors aim to investigate the assumption that the standard deviations of the prediction-error model are independent of the amplitude response of the system.",
+            "startOffset": 93377,
+            "title": "Uncertainty propagation for system 1NL"
+        },
+        {
+            "endOffset": 75208,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Here, as the linear parameters of the system are known, see Table 1, this step is omitted.",
+            "startOffset": 75118,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 98587,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "In this work, an approach for the Bayesian identification of the nonlinear parameters of dynamic structures has been introduced.",
+            "startOffset": 98459,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 70610,
+            "parents": [],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 70609,
+                    "startOffset": 70606
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This procedure is similar to the resonant decay method, as detailed in [8].",
+            "startOffset": 70535,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98431,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Therefore, it is an important feature of identification methods to predict parameters with sufficient accuracy that they may, in turn, be used to predict the existence of such features, well-away from the available data.",
+            "startOffset": 98211,
+            "title": "Forced responses for system 3NL"
+        },
+        {
+            "endOffset": 69993,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this paper, a method is introduced that allows Bayesian system identification to be conducted in a computationally efficient manner without the need for model surrogates, or the need to use fewer experimental data.",
+            "startOffset": 69776,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72124,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Specifically, backbone curves that are not described by the measured data can be obtained, using the estimated parameters \u2013 demonstrated here by the prediction of an isola.",
+            "startOffset": 71952,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71102,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 70868,
+                    "startOffset": 70864
+                },
+                "bib20": {
+                    "endOffset": 70962,
+                    "startOffset": 70955
+                },
+                "bib21": {
+                    "endOffset": 70962,
+                    "startOffset": 70955
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Here, however, we use the second-order normal form technique [19] as it is not only able to analytically describe modal interactions in backbone curves [20,21], but it is also suited for automation due to its matrix-based formulation \u2013 an essential property for the identification of larger systems.",
+            "startOffset": 70803,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91939,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 91938,
+                    "startOffset": 91934
+                }
+            },
+            "secId": "s0040",
+            "sentence": "In order to investigate the significance of the error in the estimation of the nonlinear parameters, the backbone curves were calculated for both the true and estimated parameters using the numerical continuation software AUTO-07p [31].",
+            "startOffset": 91703,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 72427,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Fig. 1 shows a two-degree-of-freedom oscillator with a symmetric, linear structure and three nonlinear springs.",
+            "startOffset": 72316,
+            "title": "The example systems"
+        },
+        {
+            "endOffset": 71671,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This discussion also examines the use of the residuals of the expressions describing the backbone curves, thus eliminating the need for explicit solutions which can be computationally demanding to calculate.",
+            "startOffset": 71464,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98210,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "Furthermore, reaching the isola experimentally would prove challenging, and hence, even if its existence is known, experimental data describing an isola are often not available for identification.",
+            "startOffset": 98014,
+            "title": "Forced responses for system 3NL"
+        },
+        {
+            "endOffset": 69776,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, computational expense still proves limiting for the application of these Bayesian methods to large nonlinear systems with many unknown parameters.",
+            "startOffset": 69621,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 99121,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "As such, the probabilistic estimation of the nonlinear parameters of two example cases demonstrated here \u2013 where each system has three unknown nonlinear parameters \u2013 is completed in a matter of seconds.",
+            "startOffset": 98919,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 100311,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This is due to its use of analytical models, which remove the need for expensive numerical solving routines, and the use of the residuals of the expressions, which overcome the need to find explicit solutions.",
+            "startOffset": 100102,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 73111,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The two masses have displacements x1 and x2, and both are of mass m. Sinusoidal forcing at frequency \u03a9f is applied to the masses at amplitudes P1 and P2 as shown.",
+            "startOffset": 72949,
+            "title": "The example systems"
+        },
+        {
+            "endOffset": 72948,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Additionally, two nonlinear cubic springs, with constants \u03b11 and \u03b13, ground the masses and a nonlinear cubic spring, with constant \u03b12, connects the masses.",
+            "startOffset": 72793,
+            "title": "The example systems"
+        },
+        {
+            "endOffset": 68982,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Bayesian methods for parameter identification problems seek to determine the probability that a particular set of parameter values are \u201ccorrect\u201d, given some experimental data.",
+            "startOffset": 68807,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93376,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0045",
+            "sentence": "Any discrepancies (where data are outside the confidence bounds) may be due to erroneous assumptions about the prediction-error model.",
+            "startOffset": 93242,
+            "title": "Uncertainty propagation for system 1NL"
+        },
+        {
+            "endOffset": 94464,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "As with system 1NL, the mean estimated values are very close to the true values and the low variance suggests a high confidence (i.e. the effects of the parameters are well-represented by the data).",
+            "startOffset": 94266,
+            "title": "Parameter identification for system 3NL"
+        },
+        {
+            "endOffset": 94158,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The results of this are shown in Fig. 6, where the blue and green histograms show the identified values for the nonlinear parameters and standard deviations of the likelihood respectively.",
+            "startOffset": 93970,
+            "title": "Parameter identification for system 3NL"
+        },
+        {
+            "endOffset": 92338,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It can be seen that the two sets of backbone curves are very similar and, importantly, it can also be seen that they are close at amplitude and response frequencies well-beyond those described by the data, which are represented by blue dots.",
+            "startOffset": 92097,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 99315,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "As discussed, one disadvantage of this approach is that the analytical expressions provide an approximate description of the backbone curves, thus introducing error into the model of the system.",
+            "startOffset": 99121,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 68419,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 68345,
+                    "startOffset": 68340
+                },
+                "bib2": {
+                    "endOffset": 68345,
+                    "startOffset": 68340
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Whilst a number of reliable and efficient approaches have been developed for the identification of the linear characteristics of nonlinear systems, for example [1,2], the identification of nonlinearities still poses a number of challenges.",
+            "startOffset": 68180,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88252,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Furthermore we define the prior as having a uniform distribution.",
+            "startOffset": 88187,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 93969,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The data used for the identification of system 3NL were also found through simulated experiment, in a similar procedure to that applied to system 1NL, as described in Section 2.",
+            "startOffset": 93792,
+            "title": "Parameter identification for system 3NL"
+        },
+        {
+            "endOffset": 93750,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 93749,
+                    "startOffset": 93745
+                }
+            },
+            "secId": "s0045",
+            "sentence": "This could involve analysing a set of different prediction-error models, thus allowing the probability of these competing models to assessed (also using a Bayesian framework) [32].",
+            "startOffset": 93570,
+            "title": "Uncertainty propagation for system 1NL"
+        },
+        {
+            "endOffset": 91521,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Additionally, the estimated values of \u03b12 and \u03b13 are very low suggesting that their identification was also accurate.",
+            "startOffset": 91405,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 99808,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "This is shown through a comparison of the backbone curves of the systems using both the true and estimated parameter values, and shows a strong agreement at responses well-beyond those represented by the experimental data.",
+            "startOffset": 99586,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 68179,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As nonlinear behaviour in structural dynamics becomes increasingly important, so does the need to accurately describe its characteristics.",
+            "startOffset": 68041,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90806,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This indicates that the effects of these parameters are well-represented by the backbone curve data, and hence there is little uncertainty regarding their value.",
+            "startOffset": 90645,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 90257,
+            "parents": [],
+            "secId": "s0035",
+            "sentence": "Table 2 shows that the prior limits have been set such that the nonlinear parameters are positive, as the backbone curves depicted by the experimental data show a hardening nonlinear behaviour in both systems.",
+            "startOffset": 90048,
+            "title": "Parameter identification for the example systems"
+        },
+        {
+            "endOffset": 88186,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "It is this approach that is adopted here, i.e. Eq. (17) is used to evaluate the likelihood.",
+            "startOffset": 88095,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 72268,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, conclusions are drawn in Section 6 and discussion is given to the potential future applications of the approach outlined in this work.",
+            "startOffset": 72125,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84499,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "Eqs. (11) and (12) are used in conjunction with the resonant decay data to identify the nonlinear parameters.",
+            "startOffset": 84390,
+            "title": "Calculating the backbone curves"
+        },
+        {
+            "endOffset": 98013,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0055",
+            "sentence": "As, in this projection, the isola describes a high-amplitude response, predicting that its existence is important.",
+            "startOffset": 97899,
+            "title": "Forced responses for system 3NL"
+        },
+        {
+            "endOffset": 89951,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The speed of the method proposed here is such that all of the MCMC simulations shown subsequently were conducted in a matter of seconds \u2013 this is without any parallel processing or the use of model emulators.",
+            "startOffset": 89743,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 70327,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This approach results in significantly lower computational expense than those using time-domain numerical models.",
+            "startOffset": 70214,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70534,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These are introduced in Section 2, along with a procedure for the acquisition of data describing the backbone curves.",
+            "startOffset": 70417,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91703,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "refoffsets": {
+                "bib27": {
+                    "endOffset": 91702,
+                    "startOffset": 91698
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For cases where there is a greater discrepancy between the true and the approximate model, the second-order normal form technique may be computed to a higher order of accuracy [27].",
+            "startOffset": 91522,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 91404,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The relative error of \u03b11 is low, at less than 2 percent, suggesting a successful identification procedure.",
+            "startOffset": 91298,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 90537,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Additionally, Table 3 shows, for each of the parameters, the true and mean estimated values along with the relative error of the mean estimated values.",
+            "startOffset": 90386,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 94265,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Table 4 also gives the true, mean estimated, and relative error for each of the parameters for system 3NL.",
+            "startOffset": 94159,
+            "title": "Parameter identification for system 3NL"
+        },
+        {
+            "endOffset": 100101,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Not only has it been shown that this approach is extremely fast and accurate, it also lends itself to application to much larger systems.",
+            "startOffset": 99964,
+            "title": "Conclusions and future work"
+        },
+        {
+            "endOffset": 71272,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A brief outline of the application of the second-order normal form technique to the example system is given in Section 3, and further details are provided in Appendix A.",
+            "startOffset": 71103,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68662,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 68661,
+                    "startOffset": 68658
+                }
+            },
+            "secId": "s0005",
+            "sentence": "An extensive review of these, and other approaches, is given in [6].",
+            "startOffset": 68594,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69113,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The resulting probability density function, referred to as the posterior, is difficult to find analytically for nonlinear systems.",
+            "startOffset": 68983,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90385,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Fig. 3 shows histograms of the results of the identification procedure for system 1NL.",
+            "startOffset": 90299,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 72792,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The grounding springs and connecting spring have stiffness constants k1 and k2 respectively, and the grounding dampers and connecting damper have damping constants c1 and c2 respectively.",
+            "startOffset": 72605,
+            "title": "The example systems"
+        },
+        {
+            "endOffset": 90644,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It can be seen from Fig. 3 that the variances of the estimated values of the nonlinear parameters are low.",
+            "startOffset": 90538,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 91297,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Therefore, the parameter estimates describe an optimisation of the fit between the true system and the approximate model, leading to the discrepancy between the true and estimated values.",
+            "startOffset": 91110,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 91109,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Parameter identification for the example systems"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The reason for this is that the second-order normal form technique, used to describe the backbone curves, is an approximate method.",
+            "startOffset": 90978,
+            "title": "Parameter identification for system 1NL"
+        },
+        {
+            "endOffset": 89742,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "However, if one were attempting to infer parameter estimates using time history data, for example, each model run would require the numerical time-domain integration of the equations of motion of the system.",
+            "startOffset": 89535,
+            "title": "Bayesian system identification"
+        },
+        {
+            "endOffset": 69620,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 69619,
+                    "startOffset": 69612
+                },
+                "bib13": {
+                    "endOffset": 69541,
+                    "startOffset": 69534
+                },
+                "bib14": {
+                    "endOffset": 69541,
+                    "startOffset": 69534
+                },
+                "bib15": {
+                    "endOffset": 69619,
+                    "startOffset": 69612
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This issue can be mediated, to an extent, through the use of surrogate models and algorithms which are suitable for parallelisation [13,14], or through using carefully selected subsets of the experimental data [12,15].",
+            "startOffset": 69402,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70213,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The method proposed here relies on inferring parameter estimates from experimentally measured backbone curves (i.e. the unforced, undamped response of nonlinear systems) and analytical expressions describing the curves.",
+            "startOffset": 69994,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75117,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 75116,
+                    "startOffset": 75113
+                }
+            },
+            "secId": "s0020",
+            "sentence": "This paper concerns the identification of nonlinear characteristics, and is based on the assumption that the underlying linear system is either known or can be found, for example using the methods proposed in [1].",
+            "startOffset": 74904,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 80596,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The systems considered here are discrete, however the same technique may be applied to continuous systems, provided that the linear modal displacements may be estimated.",
+            "startOffset": 80427,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 70802,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 70801,
+                    "startOffset": 70794
+                },
+                "bib17": {
+                    "endOffset": 70801,
+                    "startOffset": 70794
+                },
+                "bib18": {
+                    "endOffset": 70801,
+                    "startOffset": 70794
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A number of techniques may be used for developing analytical models for the backbone curves; for example, harmonic balancing, multiple scales or the first-order normal form technique [16\u201318].",
+            "startOffset": 70611,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74620,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The data used for the identification process in this paper have been collected through simulated experiment.",
+            "startOffset": 74512,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 80824,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Measuring backbone curves"
+                }
+            ],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 80823,
+                    "startOffset": 80819
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Additionally, as the technique presented here is concerned with identifying nonlinear parameters, only backbone curves that exhibit nonlinear behaviour, and their constituent linear modes, require experimental measurement [26].",
+            "startOffset": 80597,
+            "title": "An experimental method for measuring backbone curves"
+        },
+        {
+            "endOffset": 99964,
+            "parents": [],
+            "secId": "s0060",
+            "sentence": "Specifically, an isolated backbone curve is predicted for one case, and it is shown that this corresponds to an isola in the forced response of the system.",
+            "startOffset": 99809,
+            "title": "Conclusions and future work"
+        }
+    ],
+    "docId": "S0022460X15007105",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "tom.hill@bristol.ac.uk",
+                "first": "T. L.",
+                "initial": "T.L.",
+                "last": "Hill"
+            },
+            {
+                "email": null,
+                "first": "P. L.",
+                "initial": "P.L.",
+                "last": "Green"
+            },
+            {
+                "email": null,
+                "first": "A.",
+                "initial": "A.",
+                "last": "Cammarano"
+            },
+            {
+                "email": null,
+                "first": "S. A.",
+                "initial": "S.A.",
+                "last": "Neild"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2015.09.007",
+        "firstpage": "156",
+        "issn": "0022460X",
+        "lastpage": "170",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Fast Bayesian identification of a class of elastic weakly nonlinear systems using backbone curves"
+    }
+}

@@ -1,0 +1,2415 @@
+{
+    "abstract": "Active noise control is a methodology to attenuate low frequency noise. The attenuation is usually achieved near the sensor which is used in the controller. In order to achieve the desired attenuation inside a desired zone without locating a sensor inside, a method called active shielding can be used. It works by controlling the pressure at boundaries of the desired zone. This article presents a novel method for implementing active shielding only using pressure sensors. It is based on a new concept called implicit control, which takes into account the locations of sensors. Some simulations validate the presented method for free fields.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Guicking"
+                }
+            ],
+            "doi": "10.1121/1.399195",
+            "firstpage": "2251",
+            "issn": "00014966",
+            "lastpage": "2254",
+            "pub_year": 1990,
+            "title": "On the invention of active noise control by Paul Lueg",
+            "volume": "87"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Nithin V.",
+                    "initial": "N.V.",
+                    "last": "George"
+                },
+                {
+                    "first": "Ganapati",
+                    "initial": "G.",
+                    "last": "Panda"
+                }
+            ],
+            "doi": "10.1016/j.sigpro.2012.08.013",
+            "firstpage": "363",
+            "issn": "01651684",
+            "lastpage": "377",
+            "pub_year": 2013,
+            "title": "Advances in active noise control: A survey, with emphasis on recent nonlinear techniques",
+            "volume": "93"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Elliott"
+                },
+                {
+                    "first": "Christopher C.",
+                    "initial": "C.C.",
+                    "last": "Boucher"
+                },
+                {
+                    "first": "Philip A.",
+                    "initial": "P.A.",
+                    "last": "Nelson"
+                }
+            ],
+            "doi": "10.1109/78.134467",
+            "firstpage": "1041",
+            "issn": "1053587X",
+            "lastpage": "1052",
+            "pub_year": 1992,
+            "title": "The behavior of a multiple channel active control system",
+            "volume": "40"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Elliott"
+                },
+                {
+                    "first": "Christopher C.",
+                    "initial": "C.C.",
+                    "last": "Boucher"
+                }
+            ],
+            "doi": "10.1109/89.326611",
+            "firstpage": "521",
+            "issn": "10636676",
+            "lastpage": "530",
+            "pub_year": 1994,
+            "title": "Interaction Between Multiple Feedforward Active Control Systems",
+            "volume": "2"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Montazeri"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Poshtan"
+                },
+                {
+                    "first": "M. H.",
+                    "initial": "M.H.",
+                    "last": "Kahaei"
+                }
+            ],
+            "firstpage": "135",
+            "lastpage": "139",
+            "pub_year": 2003,
+            "title": "Optimal placement of loudspeakers and microphones in an enclosure using genetic algorithm",
+            "volume": "1"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Desheng",
+                    "initial": "D.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Murray",
+                    "initial": "M.",
+                    "last": "Hodgson"
+                }
+            ],
+            "doi": "10.1121/1.2114587",
+            "firstpage": "3653",
+            "issn": "00014966",
+            "lastpage": "3661",
+            "pub_year": 2005,
+            "title": "Optimal active noise control in large rooms using a \"locally global\" control strategy",
+            "volume": "118"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Garcia-Bonito"
+                },
+                {
+                    "first": "S. J.",
+                    "initial": "S.J.",
+                    "last": "Elliott"
+                },
+                {
+                    "first": "C. C.",
+                    "initial": "C.C.",
+                    "last": "Boucher"
+                }
+            ],
+            "doi": "10.1121/1.418357",
+            "firstpage": "3498",
+            "issn": "00014966",
+            "lastpage": "3516",
+            "pub_year": 1997,
+            "title": "Generation of zones of quiet using a virtual microphone arrangement",
+            "volume": "101"
+        },
+        "bib16": null,
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Cornelis D.",
+                    "initial": "C.D.",
+                    "last": "Petersen"
+                },
+                {
+                    "first": "Rufus",
+                    "initial": "R.",
+                    "last": "Fraanje"
+                },
+                {
+                    "first": "Ben S.",
+                    "initial": "B.S.",
+                    "last": "Cazzolato"
+                },
+                {
+                    "first": "Anthony C.",
+                    "initial": "A.C.",
+                    "last": "Zander"
+                },
+                {
+                    "first": "Colin H.",
+                    "initial": "C.H.",
+                    "last": "Hansen"
+                }
+            ],
+            "doi": "10.1016/j.ymssp.2007.06.007",
+            "firstpage": "490",
+            "issn": "08883270",
+            "lastpage": "508",
+            "pub_year": 2008,
+            "title": "A Kalman filter approach to virtual sensing for active noise control",
+            "volume": "22"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Moreau"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Ghan"
+                },
+                {
+                    "first": "B. S.",
+                    "initial": "B.S.",
+                    "last": "Cazzolato"
+                },
+                {
+                    "first": "A. C.",
+                    "initial": "A.C.",
+                    "last": "Zander"
+                }
+            ],
+            "doi": "10.1121/1.3123404",
+            "firstpage": "3742",
+            "issn": "00014966",
+            "lastpage": "3755",
+            "pub_year": 2009,
+            "title": "Active noise control in a pure tone diffuse sound field using virtual sensing",
+            "volume": "125"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Debi Prasad",
+                    "initial": "D.P.",
+                    "last": "Das"
+                },
+                {
+                    "first": "Danielle J.",
+                    "initial": "D.J.",
+                    "last": "Moreau"
+                },
+                {
+                    "first": "Ben S.",
+                    "initial": "B.S.",
+                    "last": "Cazzolato"
+                }
+            ],
+            "doi": "10.1121/1.4731227",
+            "firstpage": "779",
+            "issn": "00014966",
+            "lastpage": "788",
+            "pmid": "22894200",
+            "pub_year": 2012,
+            "title": "A nonlinear active noise control algorithm for virtual microphones controlling chaotic noise",
+            "volume": "132"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "Philippe",
+                    "initial": "P.",
+                    "last": "De Heering"
+                }
+            ],
+            "doi": "10.1121/1.405819",
+            "firstpage": "2989",
+            "issn": "00014966",
+            "pub_year": 1993,
+            "title": "Comments on \u201cOn the invention of active noise control by Paul Lueg\u201d [J. Acoust. Soc. Am. 87, 2251\u20132254 (1990)]",
+            "volume": "93"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "C. D.",
+                    "initial": "C.D.",
+                    "last": "Kestell"
+                },
+                {
+                    "first": "B. S.",
+                    "initial": "B.S.",
+                    "last": "Cazzolato"
+                },
+                {
+                    "first": "C. H.",
+                    "initial": "C.H.",
+                    "last": "Hansen"
+                }
+            ],
+            "doi": "10.1121/1.1326950",
+            "firstpage": "232",
+            "issn": "00014966",
+            "lastpage": "243",
+            "pmid": "11206151",
+            "pub_year": 2001,
+            "title": "Active noise control in a free field with virtual sensors",
+            "volume": "109"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "Jacqueline M.",
+                    "initial": "J.M.",
+                    "last": "Munn"
+                },
+                {
+                    "first": "Ben S.",
+                    "initial": "B.S.",
+                    "last": "Cazzolato"
+                },
+                {
+                    "first": "Colin D.",
+                    "initial": "C.D.",
+                    "last": "Kestell"
+                },
+                {
+                    "first": "Colin H.",
+                    "initial": "C.H.",
+                    "last": "Hansen"
+                }
+            ],
+            "doi": "10.1121/1.1523386",
+            "firstpage": "35",
+            "issn": "00014966",
+            "lastpage": "38",
+            "pmid": "12558240",
+            "pub_year": 2003,
+            "title": "Virtual error sensing for active noise control in a one-dimensional waveguide: Performance prediction versus measurement (L)",
+            "volume": "113"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Yuan"
+                }
+            ],
+            "doi": "10.1121/1.1768946",
+            "firstpage": "934",
+            "issn": "00014966",
+            "lastpage": "941",
+            "pmid": "15376659",
+            "pub_year": 2004,
+            "title": "Virtual sensing for broadband noise control in a lightly damped enclosure",
+            "volume": "116"
+        },
+        "bib23": null,
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Nobuhiro",
+                    "initial": "N.",
+                    "last": "Miyazaki"
+                },
+                {
+                    "first": "Yoshinobu",
+                    "initial": "Y.",
+                    "last": "Kajikawa"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2014.11.023",
+            "firstpage": "65",
+            "issn": "0022460X",
+            "lastpage": "83",
+            "pub_year": 2015,
+            "title": "Head-mounted active noise control system with virtual sensing technique",
+            "volume": "339"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "M. J.M.",
+                    "initial": "M.J.M.",
+                    "last": "Jessel"
+                },
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Mangiante"
+                }
+            ],
+            "doi": "10.1016/0022-460X(72)90633-5",
+            "firstpage": "383",
+            "issn": "0022460X",
+            "lastpage": "390",
+            "pub_year": 1972,
+            "title": "Active sound absorbers in an air duct",
+            "volume": "23"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Canevet"
+                }
+            ],
+            "doi": "10.1016/S0022-460X(78)80042-X",
+            "firstpage": "333",
+            "issn": "0022460X",
+            "lastpage": "345",
+            "pub_year": 1978,
+            "title": "Active sound absorption in an air conditioning duct",
+            "volume": "58"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Uosukainen"
+                }
+            ],
+            "firstpage": "105",
+            "issn": "00017884",
+            "lastpage": "112",
+            "pub_year": 1997,
+            "title": "Modified JMC Method in Active Control of Sound",
+            "volume": "83"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Ise"
+                }
+            ],
+            "firstpage": "78",
+            "issn": "00017884",
+            "lastpage": "87",
+            "pub_year": 1999,
+            "title": "A principle of sound field control based on the Kirchhoff-Helmholtz integral equation and the theory of inverse systems",
+            "volume": "85"
+        },
+        "bib29": {
+            "authors": [
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Epain"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Friot"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2006.06.066",
+            "firstpage": "587",
+            "issn": "0022460X",
+            "lastpage": "604",
+            "pub_year": 2007,
+            "title": "Active control of sound inside a sphere via control of the acoustic pressure at the boundary surface",
+            "volume": "299"
+        },
+        "bib3": null,
+        "bib30": {
+            "authors": [
+                {
+                    "first": "M. L.",
+                    "initial": "M.L.",
+                    "last": "Munjala"
+                },
+                {
+                    "first": "L. J.",
+                    "initial": "L.J.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1121/1.396694",
+            "firstpage": "1086",
+            "issn": "00014966",
+            "lastpage": "1093",
+            "pub_year": 1988,
+            "title": "An analytical, one\u2014dimensional, standing\u2014wave model of a linear active noise control system in a duct",
+            "volume": "84"
+        },
+        "bib31": null,
+        "bib32": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Lon\u010dari\u0107"
+                },
+                {
+                    "first": "V. S.",
+                    "initial": "V.S.",
+                    "last": "Ryaben'kii"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Tsynkov"
+                }
+            ],
+            "doi": "10.1137/S0036139900367589",
+            "firstpage": "563",
+            "issn": "00361399",
+            "lastpage": "596",
+            "pub_year": 2001,
+            "title": "Active shielding and control of noise",
+            "volume": "62"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Lim"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Utyuzhnikov"
+                },
+                {
+                    "first": "Y. W.",
+                    "initial": "Y.W.",
+                    "last": "Lam"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Turan"
+                }
+            ],
+            "doi": "10.1121/1.3531933",
+            "firstpage": "717",
+            "issn": "00014966",
+            "lastpage": "725",
+            "pmid": "21361431",
+            "pub_year": 2011,
+            "title": "Multi-domain active sound control and noise shielding",
+            "volume": "129"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Lim"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Utyuzhnikov"
+                },
+                {
+                    "first": "Y. W.",
+                    "initial": "Y.W.",
+                    "last": "Lam"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Kelly"
+                }
+            ],
+            "doi": "10.1121/1.4892934",
+            "firstpage": "1101",
+            "issn": "00014966",
+            "lastpage": "1111",
+            "pub_year": 2014,
+            "title": "Potential-based methodology for active sound control in three dimensional settings",
+            "volume": "136"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "V. S.",
+                    "initial": "V.S.",
+                    "last": "Ryaben'kii"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Utyuzhnikov"
+                }
+            ],
+            "doi": "10.1016/j.apnum.2006.05.002",
+            "firstpage": "374",
+            "issn": "01689274",
+            "lastpage": "382",
+            "pub_year": 2007,
+            "title": "Differential and finite-difference problems of active shielding",
+            "volume": "57"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "V. S.",
+                    "initial": "V.S.",
+                    "last": "Ryaben'kii"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Tsynkov"
+                },
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Utyuzhnikov"
+                }
+            ],
+            "doi": "10.1016/j.aml.2006.05.019",
+            "firstpage": "511",
+            "issn": "08939659",
+            "lastpage": "515",
+            "pub_year": 2007,
+            "title": "Inverse source problem and active shielding for composite domains",
+            "volume": "20"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Loghmani"
+                },
+                {
+                    "first": "Mohammad",
+                    "initial": "M.",
+                    "last": "Danesh"
+                },
+                {
+                    "first": "Moon K.",
+                    "initial": "M.K.",
+                    "last": "Kwak"
+                },
+                {
+                    "first": "Mehdi",
+                    "initial": "M.",
+                    "last": "Keshmiri"
+                }
+            ],
+            "doi": "10.1088/0964-1726/25/4/045020",
+            "issn": "09641726",
+            "pub_year": 2016,
+            "title": "Active structural acoustic control of a smart cylindrical shell using a virtual microphone",
+            "volume": "25"
+        },
+        "bib38": null,
+        "bib39": {
+            "authors": [
+                {
+                    "first": "Alexandre J.M.",
+                    "initial": "A.J.M.",
+                    "last": "Antunes"
+                },
+                {
+                    "first": "Regina C.P.",
+                    "initial": "R.C.P.",
+                    "last": "Leal-Toledo"
+                },
+                {
+                    "first": "Otton Teixeira",
+                    "initial": "O.T.",
+                    "last": "Da Silveira Filho"
+                },
+                {
+                    "first": "Elson Magalh \u00c3es",
+                    "initial": "E.M.A.",
+                    "last": "Toledo"
+                }
+            ],
+            "doi": "10.1016/j.procs.2014.05.056",
+            "firstpage": "627",
+            "issn": "18770509",
+            "lastpage": "636",
+            "pub_year": 2014,
+            "title": "Finite difference method for solving acoustic wave equation using locally adjustable time-steps",
+            "volume": "29"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "Sen M.",
+                    "initial": "S.M.",
+                    "last": "Kuo"
+                },
+                {
+                    "first": "Dennis R.",
+                    "initial": "D.R.",
+                    "last": "Morgan"
+                }
+            ],
+            "doi": "10.1109/5.763310",
+            "firstpage": "943",
+            "issn": "00189219",
+            "lastpage": "973",
+            "pub_year": 1999,
+            "title": "Active noise control: a tutorial review",
+            "volume": "87"
+        },
+        "bib40": null,
+        "bib41": {
+            "authors": [
+                {
+                    "first": "Stephen J.",
+                    "initial": "S.J.",
+                    "last": "Elliott"
+                },
+                {
+                    "first": "Jordan",
+                    "initial": "J.",
+                    "last": "Cheer"
+                }
+            ],
+            "doi": "10.1121/1.4916274",
+            "firstpage": "1936",
+            "issn": "00014966",
+            "lastpage": "1946",
+            "pub_year": 2015,
+            "title": "Modeling local active sound control with remote sensors in spatially random pressure fields",
+            "volume": "137"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "L. J.",
+                    "initial": "L.J.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1121/1.400508",
+            "firstpage": "257",
+            "issn": "00014966",
+            "lastpage": "265",
+            "pub_year": 1991,
+            "title": "Development of the filtered-U algorithm for active noise control",
+            "volume": "89"
+        },
+        "bib6": null,
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Steven A.",
+                    "initial": "S.A.",
+                    "last": "Lane"
+                },
+                {
+                    "first": "Robert L.",
+                    "initial": "R.L.",
+                    "last": "Clark"
+                }
+            ],
+            "doi": "10.1109/ACC.1998.703107",
+            "firstpage": "2606",
+            "issn": "07431619",
+            "lastpage": "2610",
+            "pub_year": 1998,
+            "title": "Active control of a reverberant enclosure using an approximate constant volume velocity source",
+            "volume": "4"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "A. M.",
+                    "initial": "A.M.",
+                    "last": "Sampath"
+                },
+                {
+                    "first": "R. K.",
+                    "initial": "R.K.",
+                    "last": "Prasanth"
+                },
+                {
+                    "first": "R. K.",
+                    "initial": "R.K.",
+                    "last": "Mehra"
+                }
+            ],
+            "firstpage": "679",
+            "lastpage": "683",
+            "pub_year": 1998,
+            "title": "Robust interior noise control using system identification and Linear Matrix Inequality (LMI) based control",
+            "volume": "1"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Tansel",
+                    "initial": "T.",
+                    "last": "Yucelen"
+                },
+                {
+                    "first": "Farzad",
+                    "initial": "F.",
+                    "last": "Pourboghrat"
+                }
+            ],
+            "doi": "10.1109/ACC.2009.5160439",
+            "firstpage": "5492",
+            "issn": "07431619",
+            "lastpage": "5497",
+            "pub_year": 2009,
+            "title": "Active noise blocking: Non-minimal modeling, robust control, and implementation"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 85433,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "The controls establish an active boundary, shielding the region from the noise\u201d.",
+            "startOffset": 85353,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 103588,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "This produces the variation for \u0394x.",
+            "startOffset": 103553,
+            "title": "The distance between control locations"
+        },
+        {
+            "endOffset": 100430,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For all frequencies the noise is attenuated, but this attenuation varies with respect to the frequency.",
+            "startOffset": 100327,
+            "title": "Two dimensional system"
+        },
+        {
+            "endOffset": 74388,
+            "parents": [],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 74387,
+                    "startOffset": 74380
+                },
+                "bib12": {
+                    "endOffset": 74387,
+                    "startOffset": 74380
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In order to increase the silent zone (locations where the noise is attenuated), multichannel control have been used [11,12].",
+            "startOffset": 74264,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73968,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 73913,
+                    "startOffset": 73909
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A detailed description of these algorithms are found in [10], which is a review that includes nonlinear algorithms.",
+            "startOffset": 73853,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75645,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It takes into account the sound pressure measured by a sensor.",
+            "startOffset": 75583,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113870,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Thus, it is needed to obtain a method to decrease the number of actuators and sensors to control the boundary locations.",
+            "startOffset": 113750,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 79952,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "All of them produces a solution and not a control algorithm.",
+            "startOffset": 79892,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 102308,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The local behavior inside the silent zone is also evaluated at center of desired silent zone, see Fig. 8.",
+            "startOffset": 102203,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 103124,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "They also lead in the direction of the theoretical approach of the Theorem 1, which is proven for three dimensional system in Appendix A.",
+            "startOffset": 102987,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 113054,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "This relationship will be studied using an analytical analysis in future work.",
+            "startOffset": 112976,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 80382,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Furthermore, it only uses pressure sensors, instead of the particle velocity sensors.",
+            "startOffset": 80297,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73428,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "is a review which depicts several issues in this field for both schemes.",
+            "startOffset": 73356,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75385,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This method is carried out by first measuring the sound pressure at a different location.",
+            "startOffset": 75296,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81280,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, some conclusions are given in Section 6.",
+            "startOffset": 81231,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 102425,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "There, the pressure sinusoid signals are shown for 125 Hz, 250 Hz and 500 Hz, when the control system is on and off.",
+            "startOffset": 102309,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 78382,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These active shielding approaches seek to minimize the total sound pressure (noise) in the region.",
+            "startOffset": 78284,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89555,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Assuming the silent zone is a square, the next procedure shows how to obtain the desired model.",
+            "startOffset": 89460,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 107273,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Thus, a simulation between these two methodologies is carried out in this section.",
+            "startOffset": 107191,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 73542,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In order to attenuate the pressure at a sensor location inside an enclosure, several algorithms have been created.",
+            "startOffset": 73428,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97315,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "This evaluation consists of examining the value of the attenuation, with respect to an emitted sinusoid noise signal.",
+            "startOffset": 97198,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 107785,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "408 noise sources form a circle with 6 m of radius.",
+            "startOffset": 107734,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 100326,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The pressures represented by continuous lines are without control and dotted line is with the influence of the controller.",
+            "startOffset": 100204,
+            "title": "Two dimensional system"
+        },
+        {
+            "endOffset": 79600,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The method developed in this paper aims to avoid the additional cost and complexity of including velocity sensors and dipole control sources, and as a consequence it will sacrifice the generality of automatically preserving wanted sound in the shielded region.",
+            "startOffset": 79340,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73094,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "To produce an active attenuation, there are two schemes, feedback and feed-forward.",
+            "startOffset": 73011,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75514,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This signal is then transformed to obtain an approximation of the pressure at a desired location to be used as the error signal.",
+            "startOffset": 75386,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81406,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Before understanding how the proposed active shielding system works, it is necessary to define a new concept:",
+            "startOffset": 81297,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 103760,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Also, this variation is evaluated for different frequencies and the parameter to compare the different cases is the percentage of area achieved of the desired silent zone.",
+            "startOffset": 103589,
+            "title": "The distance between control locations"
+        },
+        {
+            "endOffset": 107190,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "In this paper, the active shielding is proposed as an alternative solution for virtual sensing.",
+            "startOffset": 107095,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 83398,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "where \u03c10 is the air density; c is the speed of sound; Q1 and Q2 are the source strength; \u03b7 is the wave number; and \u03c9 is the frequency of sound.",
+            "startOffset": 83255,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 74059,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the attenuation of the sound is only accomplished at or near the sensor location.",
+            "startOffset": 73969,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 109140,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "It can be remarked that although the virtual sensing is the optimum at sensor locations based on an estimation, there is a similitude in the silent zone generated between the optimum at the virtual sensors locations and the optimum using active shielding at silent zone boundary.",
+            "startOffset": 108861,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 109561,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "It means, depends on the control algorithm, the size of the boundaries and \u0394x, which must achieve the restriction in Eq. (31).",
+            "startOffset": 109435,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 110152,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Using this analysis, it is evident that the active shielding methods are convenient when the sensor locations at boundary of silent zone are less than the needed by virtual sensors to cover the same area inside.",
+            "startOffset": 109941,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 110293,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Specifically, in the example shown in this section, active shielding method uses a multichannel controller with 12 sensors and 12 actuators.",
+            "startOffset": 110153,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 74932,
+            "parents": [],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 74879,
+                    "startOffset": 74875
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A similar procedure is applied in [14], but it applies two consecutive optimization stages.",
+            "startOffset": 74841,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76634,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The solution is a modification of the remote microphone algorithm.",
+            "startOffset": 76568,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75175,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Thus, the sources and sensors are located optimally where the simulation results indicate.",
+            "startOffset": 75085,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80859,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is based on the wave equation instead of Helmholtz equation.",
+            "startOffset": 80796,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 103552,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Using a boundary formed by the sensors with the same length from previous simulations, the values of I, J and L are changed.",
+            "startOffset": 103428,
+            "title": "The distance between control locations"
+        },
+        {
+            "endOffset": 107508,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "This comparison is carried out to show advantages of active shielding through an example.",
+            "startOffset": 107419,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 96963,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "Towards validating analytically the proposed Theorem 1, several simulations will be carried out.",
+            "startOffset": 96867,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 80707,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Regarding the limitation of other active shielding systems proposed in state of the art, this article shows that it can use any controller based on an optimization process to obtain the attenuation inside the silent zone (see the controller in Appendix B, which is the solution obtained for algorithms similar to the FxLMS).",
+            "startOffset": 80383,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113242,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "This will be analyzed in future work.",
+            "startOffset": 113205,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 107733,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "The results can be visualized in Figs. 13 and 14.",
+            "startOffset": 107684,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 102883,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This result completely agrees with the two dimensional system and fits with the behavior shown in Fig. 7.",
+            "startOffset": 102778,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 113520,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "The issue of this paper has an alternative solution using virtual sensing, in future works will be detailed the cases where it is convenient to use one or the other.",
+            "startOffset": 113355,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 76437,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 76363,
+                    "startOffset": 76359
+                },
+                "bib19": {
+                    "endOffset": 76437,
+                    "startOffset": 76433
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Another proposal is based on the correlation of the pressure at different locations [18], but it is limited by the distance between real and virtual sensors. [19]",
+            "startOffset": 76275,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72820,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The active noise control is a methodology to attenuate the noise using the property of superposition.",
+            "startOffset": 72719,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77784,
+            "parents": [],
+            "refoffsets": {
+                "bib27": {
+                    "endOffset": 77783,
+                    "startOffset": 77779
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Pressure and velocity detectors and monopole and dipole actuators are generally required to facilitate the sound field control [27].",
+            "startOffset": 77652,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77448,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It works on the principle of boundary control with actuators on the boundary surface using information gathered from sensors on the boundary surface.",
+            "startOffset": 77299,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113204,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Second, when the sensors are located at pressure nodes there will be a problem for the controllers and may therefore limits the method's application.",
+            "startOffset": 113055,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 76274,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "uses a Kalman filter as the estimator of the pressure, which also needs to establish a model of the system.",
+            "startOffset": 76167,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77651,
+            "parents": [],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 77498,
+                    "startOffset": 77494
+                },
+                "bib26": {
+                    "endOffset": 77515,
+                    "startOffset": 77511
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The method developed by Jessel and Mangiante [25] and Canevet [26], known as the JMC method, uses Huygens' principle to formulate control of sound field in a zone with secondary sources on the boundary.",
+            "startOffset": 77449,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 109940,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 109939,
+                    "startOffset": 109935
+                },
+                "bib17": {
+                    "endOffset": 109903,
+                    "startOffset": 109899
+                }
+            },
+            "secId": "s0040",
+            "sentence": "The number of operation varies for each virtual sensing algorithm according to the transformation, e.g. it has different value for a Kalman filter [17] than a filter as the method in [16].",
+            "startOffset": 109752,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 113935,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Besides, a massive multichannel control has problems converging.",
+            "startOffset": 113871,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 74611,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Then, increasing the silent zone without using microphones at the user locations is a problem mentioned by several authors.",
+            "startOffset": 74488,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78283,
+            "parents": [],
+            "refoffsets": {
+                "bib30": {
+                    "endOffset": 78282,
+                    "startOffset": 78278
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It cannot be located at the same position as that of a node [30].",
+            "startOffset": 78218,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75263,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Increasing the silent zone is possible by estimating the pressure at a desired location.",
+            "startOffset": 75175,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75909,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 75883,
+                    "startOffset": 75879
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A modification called remote microphone [16] applies the same concept.",
+            "startOffset": 75839,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80296,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The solution is a novel active shielding method which reduces the hardware complexity respect to virtual sensing methods because it avoids the estimation process.",
+            "startOffset": 80134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85352,
+            "parents": [],
+            "refoffsets": {
+                "bib34": {
+                    "endOffset": 85183,
+                    "startOffset": 85179
+                }
+            },
+            "secId": "s0015",
+            "sentence": "According to [34], active shielding is a method where an \u201carea involves a given region of space (bounded or unbounded) to be shielded from unwanted external noise by the active controls.",
+            "startOffset": 85166,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 108303,
+            "parents": [],
+            "refoffsets": {
+                "bib41": {
+                    "endOffset": 108302,
+                    "startOffset": 108298
+                }
+            },
+            "secId": "s0040",
+            "sentence": "While, for virtual sensing, it is obtained using the optimum value to decrease noise energy according to [41].",
+            "startOffset": 108193,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 79339,
+            "parents": [],
+            "refoffsets": {
+                "bib33": {
+                    "endOffset": 79228,
+                    "startOffset": 79221
+                },
+                "bib34": {
+                    "endOffset": 79228,
+                    "startOffset": 79221
+                }
+            },
+            "secId": "s0005",
+            "sentence": "As demonstrated in [33,34], both monopole and dipole sources were also required to successfully realize the active shielding in practice.",
+            "startOffset": 79202,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80795,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Moreover, this result is differentiated by an analysis that includes the time variable.",
+            "startOffset": 80708,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74688,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 74643,
+                    "startOffset": 74639
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A solution was proposed in [13], where an optimization problem is suggested.",
+            "startOffset": 74612,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112718,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "However, a deeper analysis allows a better understanding of this phenomenon and gives future applications.",
+            "startOffset": 112612,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 107418,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Here, it presents simulations for different frequencies using same locations for sensors and actuators for active shielding and virtual sensing.",
+            "startOffset": 107274,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 112611,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "This paper has shown basic concepts for the application of active shielding through implicit control.",
+            "startOffset": 112510,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 79019,
+            "parents": [],
+            "refoffsets": {
+                "bib32": {
+                    "endOffset": 78766,
+                    "startOffset": 78762
+                },
+                "bib33": {
+                    "endOffset": 78835,
+                    "startOffset": 78828
+                },
+                "bib34": {
+                    "endOffset": 78835,
+                    "startOffset": 78828
+                },
+                "bib35": {
+                    "endOffset": 78835,
+                    "startOffset": 78828
+                },
+                "bib36": {
+                    "endOffset": 78835,
+                    "startOffset": 78828
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The method of using generalized Calderon's potentials and boundary projection operators [32], and the discrete formulation based on difference potentials [33\u201336], are a general class of active shielding methods that has the advantage of automatically preserving wanted sound in the region while attenuating unwanted sound coming into the region.",
+            "startOffset": 78674,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74487,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Let's center the attention in the case that sensors cannot be located at the position of the users.",
+            "startOffset": 74388,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 102697,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The pressure at center of desired silent zone has similar behavior to the whole silent zone, shown in Fig. 6.",
+            "startOffset": 102588,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 100565,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "At low frequencies, the attenuation is higher, which agrees with the general behavior of the attenuation inside the whole silent zone.",
+            "startOffset": 100431,
+            "title": "Two dimensional system"
+        },
+        {
+            "endOffset": 84178,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "As a consequence of the implicit control phenomenon, a related issue appears:",
+            "startOffset": 84101,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 109751,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "On the other hand, virtual sensing implies more operations by sensor location due to the transformation to the measured signals to obtain the estimated pressure at virtual sensor locations.",
+            "startOffset": 109562,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 112975,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "However, it does not show the theoretical reason why the distance affects the performance of the active shielding system in such a way.",
+            "startOffset": 112840,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 78217,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Munjal and Erikson developed another approach based on electroacoustic analogies, but it is limited by sensor position.",
+            "startOffset": 78098,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80956,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This article is divided as follows: the next section defines the concept called implicit control.",
+            "startOffset": 80859,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73680,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 73679,
+                    "startOffset": 73676
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Some of them are based on adaptive filters such as the filtered X Least Mean Squares (LMS) algorithm, Filtered U LMS algorithm, etc. [5].",
+            "startOffset": 73543,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84291,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "How to find the locations to be controlled in order to obtain implicit control in a desired silent zone?",
+            "startOffset": 84187,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 73852,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "According to these references, these algorithms obtain an attenuation around 20 dB at the sensor location.",
+            "startOffset": 73746,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113354,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Also, this article shows an approach for a free field environment, but it is not shown when surfaces interfere.",
+            "startOffset": 113243,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 73745,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 73744,
+                    "startOffset": 73739
+                },
+                "bib7": {
+                    "endOffset": 73744,
+                    "startOffset": 73739
+                },
+                "bib8": {
+                    "endOffset": 73744,
+                    "startOffset": 73739
+                },
+                "bib9": {
+                    "endOffset": 73744,
+                    "startOffset": 73739
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Other algorithms are based on robust control theory, e.g. [6\u20139].",
+            "startOffset": 73681,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97920,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "It implies the control signal is the optimum value to minimize the pressure at boundary locations.",
+            "startOffset": 97822,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 78097,
+            "parents": [],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 78096,
+                    "startOffset": 78092
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In this case, only pressure sensors and monopole actuators are required, but the formulation suffers from the integral equation's inherent failure at the characteristic frequencies of the interior region [29].",
+            "startOffset": 77888,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 110576,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Then, it is shown that the computational cost is satisfactorily reduced.",
+            "startOffset": 110504,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 80050,
+            "parents": [],
+            "refoffsets": {
+                "bib38": {
+                    "endOffset": 80049,
+                    "startOffset": 80045
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In order to make the control system more robust, it is desired to obtain a feedback control [38].",
+            "startOffset": 79953,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97068,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "The idea is taking benefit of the relation between the implicit control and the active shielding method.",
+            "startOffset": 96964,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 102986,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The results using a three dimensional system totally agree with the results for two dimensional system.",
+            "startOffset": 102883,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 113749,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Another problem is that the attenuation at the boundaries is not always obtained, usually because the actuators are less than the sensors.",
+            "startOffset": 113611,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97748,
+            "parents": [],
+            "refoffsets": {
+                "bib41": {
+                    "endOffset": 97747,
+                    "startOffset": 97743
+                }
+            },
+            "secId": "s0020",
+            "sentence": "If the whole desired silent zone achieves satisfactory attenuation, then it means that the implicit control is also achieved and the theory exposed in Section 3 is valid.It is important to remark that attenuation higher than 10 dB is not assumed to be 100% attenuation, but this is a common limit for a desired attenuation used by other authors, e.g. [41].",
+            "startOffset": 97392,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 75582,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 75581,
+                    "startOffset": 75577
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The first algorithm was called virtual microphone arrangement [15].",
+            "startOffset": 75515,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79891,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "From these methods in active shielding, it is important to remark that they have a limitation.",
+            "startOffset": 79797,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 110400,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "On the other hand, virtual sensing uses a multichannel control algorithm with 25 sensors and 12 actuators.",
+            "startOffset": 110294,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 73010,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 73009,
+                    "startOffset": 73006
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Specifically, the noise generated by a source is attenuated by adding another source which generates an \u201canti-noise\u201d wave [3].",
+            "startOffset": 72884,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89459,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "It means, writing Eq. (12) for any i and j inside the desired silent zone as a space state model is enough to ensure the relationship in Eq. (5).",
+            "startOffset": 89314,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 74263,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Inside enclosures with large volume, the mentioned ANC systems only control the noise at locations near the sensors.",
+            "startOffset": 74147,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 109434,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Generalizing, the computational cost of an active shielding system is the computational cost of the controller specified for the number of sensors.",
+            "startOffset": 109287,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 95373,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Furthermore, using a controller for the pressure at boundaries is an active shielding method because it does not need additional information, such as the pressure inside the desired silent zone.",
+            "startOffset": 95179,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 76871,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "deals with the problem that attenuating the noise using high number of virtual sensors requires high computational cost.",
+            "startOffset": 76751,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77193,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 77037,
+                    "startOffset": 77033
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To solve it, [24] proposes an approximation of a mathematical model of the identification system by using a head and torso simulator instead of human ears in the experiment.",
+            "startOffset": 77020,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77298,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Another important methodology for active control of sound field in a discrete region is active shielding.",
+            "startOffset": 77193,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107683,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "For this simulation, it uses a similar scheme to the one proposed in Section 4.1.",
+            "startOffset": 107602,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 81110,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 4, several simulations validate the active shielding method.",
+            "startOffset": 81039,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77019,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Another issue is that the estimation is carried out using a sensor, but the real receiver is a human, which can produce a change on the estimation.",
+            "startOffset": 76872,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81230,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Furthermore, a comparison between virtual sensing and the proposed active shielding method is carried out in Section 5.",
+            "startOffset": 81111,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97197,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "Therefore, using an active noise control system focused on the pressure at the boundaries, the desired silent zone is evaluated.",
+            "startOffset": 97069,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 103427,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "Using similar simulations to those shown previously for two and three dimensional systems, different values of \u0394x are tested.",
+            "startOffset": 103302,
+            "title": "The distance between control locations"
+        },
+        {
+            "endOffset": 73355,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 73355,
+                    "startOffset": 73352
+                }
+            },
+            "secId": "s0005",
+            "sentence": "They are differentiated because feed-forward scheme produces the control signal as a transformation of a reference signal of the emitted noise, while feedback scheme only uses information of acoustic pressure at the desired silent location through sensors. [4]",
+            "startOffset": 73095,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76166,
+            "parents": [],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 76166,
+                    "startOffset": 76162
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, it uses a transformation of the estimation of primary noise to avoid the assumption that the sound pressure components generated by the primary source are equal at both locations, and this transformation is not determined if it is not causal. [17]",
+            "startOffset": 75910,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95178,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "This also proves that controlling the noise at the boundaries of a desired square silent zone is a sufficient condition to control the noise inside this square.",
+            "startOffset": 95018,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 97391,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "If it is higher than 10 dB, then it is considered satisfactory attenuation.",
+            "startOffset": 97316,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 97821,
+            "parents": [],
+            "secId": "s0020",
+            "sentence": "These simulations are based on the control method proposed in Appendix B.",
+            "startOffset": 97748,
+            "title": "Validation"
+        },
+        {
+            "endOffset": 100203,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "There, it is shown the sinusoid signals noise for 125 Hz, 250 Hz and 500 Hz, when the control system is on and off.",
+            "startOffset": 100088,
+            "title": "Two dimensional system"
+        },
+        {
+            "endOffset": 108557,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Both methodologies obtain a desired silent zone when the frequency is very low (63 and 100 Hz).",
+            "startOffset": 108462,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 81556,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Implicit control: It is the phenomenon that obtaining a specific value of variable implies getting a desired value for another variable.",
+            "startOffset": 81420,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 112839,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "First, the statistical analysis in Section 4.3 produces Eq. (31), which will help the design an active shielding method.",
+            "startOffset": 112719,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 75032,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The first stage takes into account only the sources positions, and the second the sensor locations.",
+            "startOffset": 74933,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79201,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, similar to the JMC method, these approaches have the disadvantage of requiring both pressure and velocity sensors on the boundary surface to guarantee a universal solution.",
+            "startOffset": 79020,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77887,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 77886,
+                    "startOffset": 77882
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Active shielding can also be derived from a formulation of Kirchhoff-Helmholtz integral equation [28].",
+            "startOffset": 77785,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75295,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is known as virtual sensing.",
+            "startOffset": 75264,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95497,
+            "parents": [],
+            "secId": "s0015",
+            "sentence": "Additionally, the same procedure can be followed to obtain the result in a three dimensional system as shown in Appendix A.",
+            "startOffset": 95374,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 80133,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper deals with the attenuation of noise of a zone inside a microphone array.",
+            "startOffset": 80050,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107974,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "The sensors are located forming the boundaries of another square with two meters side length.",
+            "startOffset": 107881,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 108646,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "At the frequencies of 160 and 250 Hz, attenuating the whole silent zone is not achieved.",
+            "startOffset": 108558,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 76750,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 76744,
+                    "startOffset": 76737
+                },
+                "bib21": {
+                    "endOffset": 76744,
+                    "startOffset": 76737
+                },
+                "bib22": {
+                    "endOffset": 76744,
+                    "startOffset": 76737
+                },
+                "bib23": {
+                    "endOffset": 76750,
+                    "startOffset": 76746
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Other algorithms have been presented but only applied to one dimensional or not enclosed systems e.g. [20\u201322]. [23]",
+            "startOffset": 76635,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 108461,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "The generated silent zone for the frequencies 63, 100, 160 and 250 Hz are visualized in Figs. 13 and 14 for active shielding and virtual sensing respectively.",
+            "startOffset": 108303,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 78673,
+            "parents": [],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 78520,
+                    "startOffset": 78516
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In some cases, it may be possible to use directional measurements to separate the unwanted and wanted sound components in the region [31], but such application is limited since in most realistic cases the wanted component cannot be completely separated out by directional measurement alone.",
+            "startOffset": 78383,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113610,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "For future works, implicit control will be evaluated under the non-free field conditions.",
+            "startOffset": 113521,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 75084,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This can be applied using a simulation of the room.",
+            "startOffset": 75033,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 107602,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "However, this is not conclusive, is just to show an example as a first step for future works.",
+            "startOffset": 107509,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 75838,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Its limitation is due to the assumption that the sound pressure generated by the noise sources is equal for the virtual and real sensor locations (desired and measured locations respectively).",
+            "startOffset": 75646,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100087,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In order to better explain local behavior inside the silent zone, the pressure at center of desired silent zone is simulated, see Fig. 5.",
+            "startOffset": 99950,
+            "title": "Two dimensional system"
+        },
+        {
+            "endOffset": 102777,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This means higher attenuation at low frequencies and lower at high frequencies.",
+            "startOffset": 102698,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 79796,
+            "parents": [],
+            "refoffsets": {
+                "bib37": {
+                    "endOffset": 79700,
+                    "startOffset": 79696
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Recently, an active shielding was applied also based on virtual sensing for a cylindrical shell [37], which is a method restricted to cylindrical shape and include the problems of virtual sensing.",
+            "startOffset": 79600,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81038,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This concept is used to propose a novel method for active shielding in Section 3.",
+            "startOffset": 80957,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 108860,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Previous section explains the reason why attenuation of active shielding is limited, but it is interesting that the virtual sensing method also does not obtain a significant difference in the achieved silent zone.",
+            "startOffset": 108647,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 107880,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "The array of 12 actuators is the boundary of a square, which each side is a three meters line.",
+            "startOffset": 107786,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 74146,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Usually, the user, who is exposed to the noise, is not located at the sensor position.",
+            "startOffset": 74060,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89313,
+            "parents": [],
+            "refoffsets": {
+                "bib38": {
+                    "endOffset": 89230,
+                    "startOffset": 89226
+                }
+            },
+            "secId": "s0015",
+            "sentence": "According to [38], the relation exposed in Eq. (5) has an analogous relation in a space state model.",
+            "startOffset": 89213,
+            "title": "Active shielding based on implicit control"
+        },
+        {
+            "endOffset": 108123,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "In order to apply the virtual sensing method, the desired silent zone is full of a square of 5 \u00d7 5 virtual sensors (25 virtual sensors are located).",
+            "startOffset": 107975,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 108192,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "The control signal for active shielding is the method in Appendix B.",
+            "startOffset": 108124,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 109286,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Regarding the computational cost, it is one of the most important issues to decide which technique is convenient according to hardware limitation.",
+            "startOffset": 109140,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 81799,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "It is important to remark that the pressure at each location is defined as a different variable.",
+            "startOffset": 81703,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 110503,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "Moreover, it requires the computational cost for the estimation of the error signal at this locations.",
+            "startOffset": 110401,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 114034,
+            "parents": [],
+            "secId": "s0045",
+            "sentence": "Consequently, it is recommended to focus future research on distributed and decentralized control.",
+            "startOffset": 113936,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 102587,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Again (as the two dimensional system), the pressures represented by continuous lines are without control and dotted line is with the influence of the controller.",
+            "startOffset": 102426,
+            "title": "Three dimensional system"
+        },
+        {
+            "endOffset": 72883,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 72882,
+                    "startOffset": 72877
+                },
+                "bib2": {
+                    "endOffset": 72882,
+                    "startOffset": 72877
+                }
+            },
+            "secId": "s0005",
+            "sentence": "First approaches were published by Paul Leug and Coanda [1,2].",
+            "startOffset": 72821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74840,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This mentions the possibility to optimize the sound pressure using the sensors and actuators (also called secondary sources) as optimization variables.",
+            "startOffset": 74689,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81967,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "The aim of this new concept is to be applied as a method to ensure that attenuating the boundaries of a desired silent zone, any location inside it is also attenuated.",
+            "startOffset": 81800,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 76567,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "introduces a nonlinear estimation to solve the problem of the non-causality relation between the measured and estimated pressure.",
+            "startOffset": 76438,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 110634,
+            "parents": [],
+            "secId": "s0040",
+            "sentence": "A more detailed cases will be the subject of future work.",
+            "startOffset": 110577,
+            "title": "Comparison between virtual sensing and active shielding"
+        },
+        {
+            "endOffset": 81702,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "For active noise control, it occurs when attenuating (controlling) the pressure at the sensor location, implies the attenuation at other location.",
+            "startOffset": 81556,
+            "title": "Implicit control"
+        },
+        {
+            "endOffset": 103301,
+            "parents": [
+                {
+                    "id": "s0020",
+                    "title": "Validation"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "According to previous simulations, one of the questions to be solved is: which value for \u0394x is valid to achieve the desired silent zone?",
+            "startOffset": 103165,
+            "title": "The distance between control locations"
+        }
+    ],
+    "docId": "S0022460X17305229",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "rquintana@javeriana.edu.co",
+                "first": "Ricardo",
+                "initial": "R.",
+                "last": "Quintana"
+            },
+            {
+                "email": null,
+                "first": "Yiu",
+                "initial": "Y.",
+                "last": "Lam"
+            },
+            {
+                "email": null,
+                "first": "Diego",
+                "initial": "D.",
+                "last": "Patino"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2017.07.006",
+        "firstpage": "1",
+        "issn": "0022460X",
+        "keywords": [
+            "Active noise control",
+            "Active shielding",
+            "Finite difference method",
+            "Implicit control"
+        ],
+        "lastpage": "19",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Fundamentals of active shielding based on implicit control"
+    }
+}

@@ -1,0 +1,526 @@
+{
+    "abstract": "We attempt to shed new light on the notion of \u2018tree-like\u2019 metric spaces by focusing on an approach that does not use the four-point condition. Our key question is: Given metric space M on n points, when does a fully labelled positive-weighted tree T exist on the same n vertices that precisely realises M using its shortest path metric? We prove that if a spanning tree representation, T, of M exists, then it is isomorphic to the unique minimum spanning tree in the weighted complete graph associated with M, and we introduce a fourth-point condition that is necessary and sufficient to ensure the existence of T whenever each distance in M is unique. In other words, a finite median graph, in which each geodesic distance is distinct, is simply a tree. Provided that the tie-breaking assumption holds, the fourth-point condition serves as a criterion for measuring the goodness-of-fit of the minimum spanning tree to M, i.e., the spanning tree-likeness of M. It is also possible to evaluate the spanning path-likeness of M. These quantities can be measured in O(n4) and O(n3) time, respectively.",
+    "bib_entries": {
+        "br000005": null,
+        "br000010": null,
+        "br000015": {
+            "authors": [
+                {
+                    "first": "Hans J\u00fcrgen",
+                    "initial": "H.J.",
+                    "last": "Bandelt"
+                },
+                {
+                    "first": "Victor",
+                    "initial": "V.",
+                    "last": "Chepoi"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Eppstein"
+                }
+            ],
+            "doi": "10.1137/090760301",
+            "firstpage": "1399",
+            "issn": "08954801",
+            "lastpage": "1440",
+            "pub_year": 2010,
+            "title": "Combinatorics and geometry of finite and infinite squaregraphs",
+            "volume": "24"
+        },
+        "br000020": null,
+        "br000025": null,
+        "br000030": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Buneman"
+                }
+            ],
+            "doi": "10.1016/0095-8956(74)90047-1",
+            "firstpage": "48",
+            "issn": "00958956",
+            "lastpage": "50",
+            "pub_year": 1974,
+            "title": "A note on the metric properties of trees",
+            "volume": "17"
+        },
+        "br000035": null,
+        "br000040": null,
+        "br000045": null,
+        "br000050": null,
+        "br000055": null,
+        "br000060": null,
+        "br000065": {
+            "authors": [
+                {
+                    "first": "Joseph B.",
+                    "initial": "J.B.",
+                    "last": "Kruskal"
+                }
+            ],
+            "doi": "10.1090/S0002-9939-1956-0078686-7",
+            "firstpage": "48",
+            "issn": "00029939",
+            "lastpage": "50",
+            "pub_year": 1956,
+            "title": "On the shortest spanning subtree of a graph and the traveling salesman problem",
+            "volume": "7"
+        },
+        "br000070": {
+            "authors": [
+                {
+                    "first": "Peng",
+                    "initial": "P.",
+                    "last": "Qiu"
+                },
+                {
+                    "first": "Erin F.",
+                    "initial": "E.F.",
+                    "last": "Simonds"
+                },
+                {
+                    "first": "Sean C.",
+                    "initial": "S.C.",
+                    "last": "Bendall"
+                },
+                {
+                    "first": "Kenneth D.",
+                    "initial": "K.D.",
+                    "last": "Gibbs"
+                },
+                {
+                    "first": "Robert V.",
+                    "initial": "R.V.",
+                    "last": "Bruggner"
+                },
+                {
+                    "first": "Michael D.",
+                    "initial": "M.D.",
+                    "last": "Linderman"
+                },
+                {
+                    "first": "Karen",
+                    "initial": "K.",
+                    "last": "Sachs"
+                },
+                {
+                    "first": "Garry P.",
+                    "initial": "G.P.",
+                    "last": "Nolan"
+                },
+                {
+                    "first": "Sylvia K.",
+                    "initial": "S.K.",
+                    "last": "Plevritis"
+                }
+            ],
+            "doi": "10.1038/nbt.1991",
+            "firstpage": "886",
+            "issn": "10870156",
+            "lastpage": "893",
+            "pmid": "21964415",
+            "pub_year": 2011,
+            "title": "Extracting a cellular hierarchy from high-dimensional cytometry data with SPADE",
+            "volume": "29"
+        },
+        "br000075": null,
+        "br000080": {
+            "authors": [
+                {
+                    "first": "J. M.S.",
+                    "initial": "J.M.S.",
+                    "last": "Sim\u00f5es Pereira"
+                }
+            ],
+            "doi": "10.1016/S0021-9800(69)80092-X",
+            "firstpage": "303",
+            "issn": "00219800",
+            "lastpage": "310",
+            "pub_year": 1969,
+            "title": "A note on the tree realizability of a distance matrix",
+            "volume": "6"
+        },
+        "br000085": null,
+        "br000090": null
+    },
+    "body_text": [
+        {
+            "endOffset": 48717,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In this paper, we examine the sub-type of tree metrics that does not rely on the four-point condition.",
+            "startOffset": 48615,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47329,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "For example, a complete graph with a uniform edge length clearly satisfies the four-point condition, but it only becomes tree-like after an extra vertex is added.",
+            "startOffset": 47167,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49193,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "These concepts, which are part of our original results, are defined and discussed in Section  2.",
+            "startOffset": 49097,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61164,
+            "parents": [
+                {
+                    "id": "s000010",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "s000025",
+            "sentence": "Proposition 2.15 states that a metric space is uniquely realised by the only MST if it is a spanning tree metric space.",
+            "startOffset": 61045,
+            "title": "Basic geodesic graphs"
+        },
+        {
+            "endOffset": 46529,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In short, a metric on a finite set can be realised by the shortest path metric in a positive-weighted tree if and only if it satisfies the four-point condition.",
+            "startOffset": 46369,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49717,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This implies that every finite median graph, in which the shortest path lengths between all pairs of vertices are distinct, is necessarily a tree (Corollary 3.3).",
+            "startOffset": 49555,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46729,
+            "parents": [],
+            "refoffsets": {
+                "br000045": {
+                    "endOffset": 46728,
+                    "startOffset": 46725
+                },
+                "br000075": {
+                    "endOffset": 46629,
+                    "startOffset": 46625
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The four-point condition is not only frequently utilised in the context of evolutionary trees  [15], but is also known for its direct connection to the theory of Gromov hyperbolic metric spaces  [9].",
+            "startOffset": 46530,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49096,
+            "parents": [],
+            "refoffsets": {
+                "br000040": {
+                    "endOffset": 48998,
+                    "startOffset": 48995
+                },
+                "br000065": {
+                    "endOffset": 48880,
+                    "startOffset": 48876
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Our work is based on three components: the tie-breaking assumption, which has been popular in algorithmic applications since the work provided by Kruskal in  [13]; what we call the fourth-point condition, which can typically be found in the definition of median metric spaces  [8]; and a simple trick for metric-preserving edge removal, which applies to any finite metric space.",
+            "startOffset": 48718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47577,
+            "parents": [],
+            "refoffsets": {
+                "br000010": {
+                    "endOffset": 47576,
+                    "startOffset": 47573
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The same applies to block graphs (i.e., unweighted graphs in which all bi-connected components are complete subgraphs)  [2].",
+            "startOffset": 47453,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46226,
+            "parents": [],
+            "refoffsets": {
+                "br000025": {
+                    "endOffset": 46225,
+                    "startOffset": 46222
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Historically, graphs as finite metric spaces have been studied extensively  [5].",
+            "startOffset": 46146,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49976,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "We define and discuss the notion of the spanning tree-likeness of a finite metric space in Section  4.",
+            "startOffset": 49874,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47452,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "In this case, the four-point condition does not ensure that a metric is realised by a fully labelled tree on the same set.",
+            "startOffset": 47330,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46969,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Given this background, a metric space that satisfies the four-point condition is commonly considered tree-like.",
+            "startOffset": 46858,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46368,
+            "parents": [],
+            "refoffsets": {
+                "br000030": {
+                    "endOffset": 46367,
+                    "startOffset": 46364
+                },
+                "br000060": {
+                    "endOffset": 46320,
+                    "startOffset": 46310
+                },
+                "br000080": {
+                    "endOffset": 46320,
+                    "startOffset": 46310
+                },
+                "br000085": {
+                    "endOffset": 46320,
+                    "startOffset": 46310
+                },
+                "br000090": {
+                    "endOffset": 46320,
+                    "startOffset": 46310
+                }
+            },
+            "secId": "s000005",
+            "sentence": "Although we approach them differently, we would like to emphasise, amongst others  [12,16\u201318], the classical result provided by Buneman  [6].",
+            "startOffset": 46227,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48615,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "If an input\u2013a metric on a set of cities\u2013is the shortest path metric in a tree on the city set, the length of the optimal tour must equal twice the length of the MST.",
+            "startOffset": 48450,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48124,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Thus far, this problem has not been properly recognised, much less addressed.",
+            "startOffset": 48047,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48208,
+            "parents": [],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 48194,
+                    "startOffset": 48191
+                },
+                "br000050": {
+                    "endOffset": 48207,
+                    "startOffset": 48203
+                }
+            },
+            "secId": "s000005",
+            "sentence": "The only two exceptions to this are the recent work described in  [1] and in  [10].",
+            "startOffset": 48125,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48046,
+            "parents": [],
+            "refoffsets": {
+                "br000070": {
+                    "endOffset": 47896,
+                    "startOffset": 47892
+                }
+            },
+            "secId": "s000005",
+            "sentence": "This may not create an issue in conventional phylogenetics, but considering the recent surge of renewed biological interest in minimum spanning tree (MST)-based tree estimation  [14], determining when a metric space is realised by a positive weighted tree on the same set is not only a natural undertaking but also a meaningful one.",
+            "startOffset": 47714,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49554,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Our goal is to prove the following: A finite metric space under the tie-breaking rule is realised by the MST if and only if it satisfies the fourth point condition (Theorem 3.1).",
+            "startOffset": 49376,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48449,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This question seems to be non-trivial, not only because it cannot be answered using Buneman\u2019s theorem, but also because it is equivalent to determining a method for recognising a special case of the metric travelling salesman problem (TSP).",
+            "startOffset": 48209,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61249,
+            "parents": [
+                {
+                    "id": "s000010",
+                    "title": "Preliminaries"
+                }
+            ],
+            "refoffsets": {
+                "br000005": {
+                    "endOffset": 61247,
+                    "startOffset": 61244
+                }
+            },
+            "secId": "s000025",
+            "sentence": "Note that we do not need Buneman\u2019s four-point condition in the argument (cf.   [1]).",
+            "startOffset": 61165,
+            "title": "Basic geodesic graphs"
+        },
+        {
+            "endOffset": 49873,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "This result also yields a stronger condition for understanding when a finite metric space is realised, especially by a spanning path graph (Corollary 3.5).",
+            "startOffset": 49718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52713,
+            "parents": [
+                {
+                    "id": "s000010",
+                    "title": "Preliminaries"
+                }
+            ],
+            "secId": "s000020",
+            "sentence": "Fig. 1",
+            "startOffset": 52707,
+            "title": "The fourth point condition"
+        },
+        {
+            "endOffset": 47714,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "Thus, it does not characterise the distance within trees but rather the shortest path metrics induced by a more general class of graphs.",
+            "startOffset": 47578,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64401,
+            "parents": [],
+            "secId": "s000030",
+            "sentence": "As was mentioned in Remark 2.7, the fourth-point condition is not sufficient per se, but is necessary to ensure that a finite metric space is induced by the shortest path metric in a tree (cf.  a cycle graph on four vertices with a uniform edge length).",
+            "startOffset": 64148,
+            "title": "Main results"
+        },
+        {
+            "endOffset": 47166,
+            "parents": [],
+            "refoffsets": {
+                "br000025": {
+                    "endOffset": 47165,
+                    "startOffset": 47156
+                },
+                "br000055": {
+                    "endOffset": 47165,
+                    "startOffset": 47156
+                },
+                "br000075": {
+                    "endOffset": 47165,
+                    "startOffset": 47156
+                }
+            },
+            "secId": "s000005",
+            "sentence": "However, an important caveat should be addressed: the four-point condition is necessary and sufficient to ensure the existence of a partially labelled tree that realises a given metric  [5,11,15].",
+            "startOffset": 46970,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49375,
+            "parents": [],
+            "secId": "s000005",
+            "sentence": "As expected, if it exists, a fully labelled positive-weighted tree that realises a finite metric space is the unique MST in its associated weighted complete graph (Proposition 2.15).",
+            "startOffset": 49193,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46858,
+            "parents": [],
+            "refoffsets": {
+                "br000035": {
+                    "endOffset": 46857,
+                    "startOffset": 46851
+                },
+                "br000055": {
+                    "endOffset": 46857,
+                    "startOffset": 46851
+                }
+            },
+            "secId": "s000005",
+            "sentence": "It is also widely known that there is a unique tree representation for every metric satisfying the four-point condition  [7,11].",
+            "startOffset": 46730,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0166218X17301567",
+    "metadata": {
+        "asjc": [
+            "2604",
+            "2607"
+        ],
+        "authors": [
+            {
+                "email": "hayamizu@ism.ac.jp",
+                "first": "Momoko",
+                "initial": "M.",
+                "last": "Hayamizu"
+            },
+            {
+                "email": "fukumizu@ism.ac.jp",
+                "first": "Kenji",
+                "initial": "K.",
+                "last": "Fukumizu"
+            }
+        ],
+        "doi": "10.1016/j.dam.2017.04.001",
+        "firstpage": "51",
+        "issn": "0166218X",
+        "keywords": [
+            "Median graph",
+            "Minimum spanning tree",
+            "Tree-like metric space"
+        ],
+        "lastpage": "57",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "On minimum spanning tree-like metric spaces"
+    }
+}

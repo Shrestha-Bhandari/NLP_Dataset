@@ -1,0 +1,2684 @@
+{
+    "abstract": "We present a new hybrid method for dilute gas flows that couples a continuum-fluid description to the direct simulation Monte Carlo (DSMC) technique. Instead of using a domain-decomposition framework, we adopt a heterogeneous approach with micro resolution that can capture non-equilibrium or non-continuum fluid behaviour both close to bounding walls and in the bulk. A continuum-fluid model is applied across the entire domain, while DSMC is applied in spatially-distributed micro regions. Using a field-wise coupling approach, each micro element provides a local correction to a continuum sub-region, the dimensions of which are identical to the micro element itself. Interpolating this local correction between the micro elements then produces a correction that can be applied over the entire continuum domain. Key advantages of this method include its suitability for flow problems with varying degrees of scale separation, and that the location of the micro elements is not restricted to the nodes of the computational mesh. Also, the size of the micro elements adapts dynamically with the local molecular mean free path. We demonstrate the method on heat transfer problems in dilute gas flows, where the coupling is performed through the computed heat fluxes. Our test case is micro Fourier flow over a range of rarefaction and temperature conditions: this case is simple enough to enable validation against a pure DSMC simulation, and our results show that the hybrid method can deal with both missing boundary and constitutive information.",
+    "author_highlights": [
+        {
+            "endOffset": 65496,
+            "sentence": "A heterogeneous hybrid that couples a continuum-fluid solver with DSMC for gases.",
+            "startOffset": 65415
+        },
+        {
+            "endOffset": 65575,
+            "sentence": "DSMC elements of any size can be placed near walls or in the bulk of the flow.",
+            "startOffset": 65497
+        },
+        {
+            "endOffset": 65652,
+            "sentence": "The method is described using heat flux coupling for heat transfer problems.",
+            "startOffset": 65576
+        },
+        {
+            "endOffset": 65735,
+            "sentence": "As a simple validation case, the method is tested for micro Fourier flow in a gas.",
+            "startOffset": 65653
+        },
+        {
+            "endOffset": 65812,
+            "sentence": "The method compensates for inaccurate boundary and constitutive information.",
+            "startOffset": 65736
+        }
+    ],
+    "bib_entries": {
+        "b0005": {
+            "authors": [
+                {
+                    "first": "Ozgur",
+                    "initial": "O.",
+                    "last": "Aktas"
+                },
+                {
+                    "first": "N. R.",
+                    "initial": "N.R.",
+                    "last": "Aluru"
+                }
+            ],
+            "doi": "10.1006/jcph.2002.7030",
+            "firstpage": "342",
+            "issn": "00219991",
+            "lastpage": "372",
+            "pub_year": 2002,
+            "title": "A combined continuum/DSMC technique for multiscale analysis of microfluidic filters",
+            "volume": "178"
+        },
+        "b0010": {
+            "authors": [
+                {
+                    "first": "Erik",
+                    "initial": "E.",
+                    "last": "Arlemark"
+                },
+                {
+                    "first": "Gennady",
+                    "initial": "G.",
+                    "last": "Markelov"
+                },
+                {
+                    "first": "Silvia",
+                    "initial": "S.",
+                    "last": "Nedea"
+                }
+            ],
+            "doi": "10.1088/1742-6596/362/1/012040",
+            "issn": "17426588",
+            "pub_year": 2012,
+            "title": "Rebuilding of Rothe's nozzle measurements with OpenFOAM software",
+            "volume": "362"
+        },
+        "b0015": {
+            "authors": [
+                {
+                    "first": "Nikolaos",
+                    "initial": "N.",
+                    "last": "Asproulis"
+                },
+                {
+                    "first": "Marco",
+                    "initial": "M.",
+                    "last": "Kalweit"
+                },
+                {
+                    "first": "Dimitris",
+                    "initial": "D.",
+                    "last": "Drikakis"
+                }
+            ],
+            "doi": "10.1016/j.advengsoft.2010.10.010",
+            "firstpage": "85",
+            "issn": "09659978",
+            "lastpage": "92",
+            "pub_year": 2012,
+            "title": "A hybrid molecular continuum method using point wise coupling",
+            "volume": "46"
+        },
+        "b0020": null,
+        "b0025": {
+            "authors": [
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Graham B.",
+                    "initial": "G.B.",
+                    "last": "MacPherson"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1080/08927021003752812",
+            "firstpage": "745",
+            "issn": "08927022",
+            "lastpage": "757",
+            "pub_year": 2010,
+            "title": "Controllers for imposing continuum-to-molecular boundary conditions in arbitrary fluid flow geometries",
+            "volume": "36"
+        },
+        "b0030": {
+            "authors": [
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Duncan A.",
+                    "initial": "D.A.",
+                    "last": "Lockerby"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2012.09.009",
+            "firstpage": "400",
+            "issn": "00219991",
+            "lastpage": "413",
+            "pub_year": 2013,
+            "title": "A multiscale method for micro/nano flows of high aspect ratio",
+            "volume": "233"
+        },
+        "b0035": {
+            "authors": [
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Duncan A.",
+                    "initial": "D.A.",
+                    "last": "Lockerby"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2013.08.022",
+            "firstpage": "149",
+            "issn": "00219991",
+            "lastpage": "165",
+            "pub_year": 2013,
+            "title": "Fluid simulations with atomistic resolution: A hybrid multiscale method with field-wise coupling",
+            "volume": "255"
+        },
+        "b0040": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Delgado-Buscalioni"
+                },
+                {
+                    "first": "P. V.",
+                    "initial": "P.V.",
+                    "last": "Coveney"
+                }
+            ],
+            "firstpage": "467041",
+            "issn": "1063651X",
+            "lastpage": "4670413",
+            "pub_year": 2003,
+            "title": "Continuum-particle hybrid coupling for mass, momentum, and energy transfers in unsteady fluid flow",
+            "volume": "67"
+        },
+        "b0045": {
+            "authors": [
+                {
+                    "first": "E. G.",
+                    "initial": "E.G.",
+                    "last": "Flekk\u00d8y"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Wagner"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Feder"
+                }
+            ],
+            "doi": "10.1209/epl/i2000-00434-8",
+            "firstpage": "271",
+            "issn": "02955075",
+            "lastpage": "276",
+            "pub_year": 2000,
+            "title": "Hybrid model for combined particle and continuum dynamics",
+            "volume": "52"
+        },
+        "b0050": {
+            "authors": [
+                {
+                    "first": "Alejandro L.",
+                    "initial": "A.L.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "John B.",
+                    "initial": "J.B.",
+                    "last": "Bell"
+                },
+                {
+                    "first": "William Y.",
+                    "initial": "W.Y.",
+                    "last": "Crutchfield"
+                },
+                {
+                    "first": "Berni J.",
+                    "initial": "B.J.",
+                    "last": "Alder"
+                }
+            ],
+            "doi": "10.1006/jcph.1999.6305",
+            "firstpage": "134",
+            "issn": "00219991",
+            "lastpage": "155",
+            "pub_year": 1999,
+            "title": "Adaptive Mesh and Algorithm Refinement Using Direct Simulation Monte Carlo",
+            "volume": "154"
+        },
+        "b0055": {
+            "authors": [
+                {
+                    "first": "Nicolas G.",
+                    "initial": "N.G.",
+                    "last": "Hadjiconstantinou"
+                },
+                {
+                    "first": "Anthony T.",
+                    "initial": "A.T.",
+                    "last": "Patera"
+                }
+            ],
+            "doi": "10.1142/S0129183197000837",
+            "firstpage": "967",
+            "issn": "01291831",
+            "lastpage": "976",
+            "pub_year": 1997,
+            "title": "Heterogeneous atomistic-continuum representations for dense fluid systems",
+            "volume": "8"
+        },
+        "b0060": {
+            "authors": [
+                {
+                    "first": "D. B.",
+                    "initial": "D.B.",
+                    "last": "Hash"
+                },
+                {
+                    "first": "H. A.",
+                    "initial": "H.A.",
+                    "last": "Hassan"
+                }
+            ],
+            "doi": "10.2514/3.781",
+            "firstpage": "242",
+            "issn": "08878722",
+            "lastpage": "249",
+            "pub_year": 1996,
+            "title": "Assessment of schemes for coupling Monte Carlo and navier-stokes solution methods",
+            "volume": "10"
+        },
+        "b0065": {
+            "authors": [
+                {
+                    "first": "David A.",
+                    "initial": "D.A.",
+                    "last": "Kessler"
+                },
+                {
+                    "first": "Elaine S.",
+                    "initial": "E.S.",
+                    "last": "Oran"
+                },
+                {
+                    "first": "Carolyn R.",
+                    "initial": "C.R.",
+                    "last": "Kaplan"
+                }
+            ],
+            "doi": "10.1017/S0022112010002934",
+            "firstpage": "262",
+            "issn": "00221120",
+            "lastpage": "293",
+            "pub_year": 2010,
+            "title": "Towards the development of a multiscale, multiphysics method for the simulation of rarefied gas flows",
+            "volume": "661"
+        },
+        "b0070": {
+            "authors": [
+                {
+                    "first": "Y. Y.",
+                    "initial": "Y.Y.",
+                    "last": "Lian"
+                },
+                {
+                    "first": "K. C.",
+                    "initial": "K.C.",
+                    "last": "Tseng"
+                },
+                {
+                    "first": "Y. S.",
+                    "initial": "Y.S.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "M. Z.",
+                    "initial": "M.Z.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "J. S.",
+                    "initial": "J.S.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Gary",
+                    "initial": "G.",
+                    "last": "Cheng"
+                }
+            ],
+            "firstpage": "341",
+            "issn": "0094243X",
+            "lastpage": "346",
+            "pub_year": 2009,
+            "title": "An improved parallelized hybrid DSMC-NS algorithm",
+            "volume": "1084"
+        },
+        "b0075": {
+            "authors": [
+                {
+                    "first": "Duncan A.",
+                    "initial": "D.A.",
+                    "last": "Lockerby"
+                },
+                {
+                    "first": "Carlos A.",
+                    "initial": "C.A.",
+                    "last": "Duque-Daza"
+                },
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2012.11.032",
+            "firstpage": "344",
+            "issn": "00219991",
+            "lastpage": "365",
+            "pub_year": 2013,
+            "title": "Time-step coupling for hybrid simulations of multiscale flows",
+            "volume": "237"
+        },
+        "b0080": null,
+        "b0085": {
+            "authors": [
+                {
+                    "first": "Sean T.",
+                    "initial": "S.T.",
+                    "last": "O'Connell"
+                },
+                {
+                    "first": "Peter A.",
+                    "initial": "P.A.",
+                    "last": "Thompson"
+                }
+            ],
+            "doi": "10.1103/PhysRevE.52.R5792",
+            "firstpage": "R5792",
+            "issn": "1063651X",
+            "lastpage": "R5795",
+            "pub_year": 1995,
+            "title": "Molecular dynamics-continuum hybrid computations: A tool for studying complex fluid flows",
+            "volume": "52"
+        },
+        "b0090": null,
+        "b0095": {
+            "authors": [
+                {
+                    "first": "Alexander",
+                    "initial": "A.",
+                    "last": "Patronis"
+                },
+                {
+                    "first": "Duncan A.",
+                    "initial": "D.A.",
+                    "last": "Lockerby"
+                },
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2013.08.033",
+            "firstpage": "558",
+            "issn": "00219991",
+            "lastpage": "571",
+            "pub_year": 2013,
+            "title": "Hybrid continuum-molecular modelling of multiscale internal gas flows",
+            "volume": "255"
+        },
+        "b0100": {
+            "authors": [
+                {
+                    "first": "Weiqing",
+                    "initial": "W.",
+                    "last": "Ren"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Weinan"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2004.10.001",
+            "firstpage": "1",
+            "issn": "00219991",
+            "lastpage": "26",
+            "pub_year": 2005,
+            "title": "Heterogeneous multiscale method for the modeling of complex fluids and micro-fluidics",
+            "volume": "204"
+        },
+        "b0105": {
+            "authors": [
+                {
+                    "first": "Roberto",
+                    "initial": "R.",
+                    "last": "Roveda"
+                },
+                {
+                    "first": "David B.",
+                    "initial": "D.B.",
+                    "last": "Goldstein"
+                },
+                {
+                    "first": "Philip L.",
+                    "initial": "P.L.",
+                    "last": "Varghese"
+                }
+            ],
+            "doi": "10.2514/2.3349",
+            "firstpage": "258",
+            "issn": "00224650",
+            "lastpage": "265",
+            "pub_year": 1998,
+            "title": "Hybrid euler/particle approach for continuum/rarefied flows",
+            "volume": "35"
+        },
+        "b0110": {
+            "authors": [
+                {
+                    "first": "T. J.",
+                    "initial": "T.J.",
+                    "last": "Scanlon"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Roohi"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "White"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Darbandi"
+                },
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.compfluid.2010.07.014",
+            "firstpage": "2078",
+            "issn": "00457930",
+            "lastpage": "2089",
+            "pub_year": 2010,
+            "title": "An open source, parallel DSMC code for rarefied gas flows in arbitrary geometries",
+            "volume": "39"
+        },
+        "b0115": {
+            "authors": [
+                {
+                    "first": "T. E.",
+                    "initial": "T.E.",
+                    "last": "Schwartzentruber"
+                },
+                {
+                    "first": "L. C.",
+                    "initial": "L.C.",
+                    "last": "Scalabrin"
+                },
+                {
+                    "first": "I. D.",
+                    "initial": "I.D.",
+                    "last": "Boyd"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2007.01.022",
+            "firstpage": "1159",
+            "issn": "00219991",
+            "lastpage": "1174",
+            "pub_year": 2007,
+            "title": "A modular particle-continuum numerical method for hypersonic non-equilibrium gas flows",
+            "volume": "225"
+        },
+        "b0120": {
+            "authors": [
+                {
+                    "first": "Quanhua",
+                    "initial": "Q.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Iain D.",
+                    "initial": "I.D.",
+                    "last": "Boyd"
+                }
+            ],
+            "doi": "10.1006/jcph.2002.7061",
+            "firstpage": "400",
+            "issn": "00219991",
+            "lastpage": "425",
+            "pub_year": 2002,
+            "title": "A direct simulation method for subsonic, microscale gas flows",
+            "volume": "179"
+        },
+        "b0125": {
+            "authors": [
+                {
+                    "first": "Quanhua",
+                    "initial": "Q.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Iain D.",
+                    "initial": "I.D.",
+                    "last": "Boyd"
+                },
+                {
+                    "first": "Graham V.",
+                    "initial": "G.V.",
+                    "last": "Candler"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2003.09.005",
+            "firstpage": "256",
+            "issn": "00219991",
+            "lastpage": "277",
+            "pub_year": 2004,
+            "title": "A hybrid continuum/particle approach for modeling subsonic, rarefied gas flows",
+            "volume": "194"
+        },
+        "b0130": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Smoluchowski von Smolan"
+                }
+            ],
+            "doi": "10.1002/andp.18983000110",
+            "firstpage": "101",
+            "issn": "00033804",
+            "lastpage": "130",
+            "pub_year": 1898,
+            "title": "Ueber W\u00e4rmeleitung in verd\u00fcnnten Gasen",
+            "volume": "300"
+        },
+        "b0135": null,
+        "b0140": {
+            "authors": [
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Werder"
+                },
+                {
+                    "first": "Jens H.",
+                    "initial": "J.H.",
+                    "last": "Walther"
+                },
+                {
+                    "first": "Petros",
+                    "initial": "P.",
+                    "last": "Koumoutsakos"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2004.11.019",
+            "firstpage": "373",
+            "issn": "00219991",
+            "lastpage": "390",
+            "pub_year": 2005,
+            "title": "Hybrid atomistic-continuum method for the simulation of dense fluid flows",
+            "volume": "205"
+        },
+        "b0145": {
+            "authors": [
+                {
+                    "first": "Craig",
+                    "initial": "C.",
+                    "last": "White"
+                },
+                {
+                    "first": "Matthew K.",
+                    "initial": "M.K.",
+                    "last": "Borg"
+                },
+                {
+                    "first": "Thomas J.",
+                    "initial": "T.J.",
+                    "last": "Scanlon"
+                },
+                {
+                    "first": "Jason M.",
+                    "initial": "J.M.",
+                    "last": "Reese"
+                }
+            ],
+            "doi": "10.1016/j.compfluid.2012.10.023",
+            "firstpage": "261",
+            "issn": "00457930",
+            "lastpage": "271",
+            "pub_year": 2013,
+            "title": "A DSMC investigation of gas flows in micro-channels with bends",
+            "volume": "71"
+        },
+        "b0150": {
+            "authors": [
+                {
+                    "first": "H. S.",
+                    "initial": "H.S.",
+                    "last": "Wijesinghe"
+                },
+                {
+                    "first": "R. D.",
+                    "initial": "R.D.",
+                    "last": "Hornung"
+                },
+                {
+                    "first": "A. L.",
+                    "initial": "A.L.",
+                    "last": "Garcia"
+                },
+                {
+                    "first": "N. G.",
+                    "initial": "N.G.",
+                    "last": "Hadjiconstantinou"
+                }
+            ],
+            "doi": "10.1115/1.1792275",
+            "firstpage": "768",
+            "issn": "00982202",
+            "lastpage": "777",
+            "pub_year": 2004,
+            "title": "Three-dimensional hybrid continuum-atomistic simulations for multiscale hydrodynamics",
+            "volume": "126"
+        },
+        "b0155": {
+            "authors": [
+                {
+                    "first": "J. S.",
+                    "initial": "J.S.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Y. Y.",
+                    "initial": "Y.Y.",
+                    "last": "Lian"
+                },
+                {
+                    "first": "G.",
+                    "initial": "G.",
+                    "last": "Cheng"
+                },
+                {
+                    "first": "R. P.",
+                    "initial": "R.P.",
+                    "last": "Koomullil"
+                },
+                {
+                    "first": "K. C.",
+                    "initial": "K.C.",
+                    "last": "Tseng"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2006.04.013",
+            "firstpage": "579",
+            "issn": "00219991",
+            "lastpage": "607",
+            "pub_year": 2006,
+            "title": "Development and verification of a coupled DSMC-NS scheme using unstructured mesh",
+            "volume": "219"
+        },
+        "b0160": {
+            "authors": [
+                {
+                    "first": "Shugo",
+                    "initial": "S.",
+                    "last": "Yasuda"
+                },
+                {
+                    "first": "Ryoichi",
+                    "initial": "R.",
+                    "last": "Yamamoto"
+                }
+            ],
+            "doi": "10.1063/1.3003218",
+            "issn": "10706631",
+            "pub_year": 2008,
+            "title": "A model for hybrid simulations of molecular dynamics and computational fluid dynamics",
+            "volume": "20"
+        },
+        "b0165": {
+            "authors": [
+                {
+                    "first": "B. A.",
+                    "initial": "B.A.",
+                    "last": "Younglove"
+                },
+                {
+                    "first": "H. J.M.",
+                    "initial": "H.J.M.",
+                    "last": "Hanley"
+                }
+            ],
+            "doi": "10.1063/1.555765",
+            "firstpage": "1323",
+            "issn": "00472689",
+            "lastpage": "1337",
+            "pub_year": 1986,
+            "title": "The Viscosity and Thermal Conductivity Coefficients of Gaseous and Liquid Argon",
+            "volume": "15"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 95047,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "An example computational domain set-up is shown in Fig. 2, where we have a micro element at each wall, and one in the bulk.",
+            "startOffset": 94924,
+            "title": "Numerical implementation"
+        },
+        {
+            "endOffset": 87031,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Fig. 1a shows a typical \u2018bulk\u2019 micro element in 2D.",
+            "startOffset": 86980,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 70567,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This coupling is typically established by matching fluxes of fluid mass, momentum, and energy, or by matching state properties.",
+            "startOffset": 70440,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70827,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, despite its popularity, a fundamental disadvantage of this micro\u2013macro decomposition approach is that computational efficiency can only be increased above that of a full molecular simulation when non-continuum flow is confined to \u2018near-wall\u2019 regions.",
+            "startOffset": 70568,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76706,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "As a starting point we consider problems in which the gas is essentially motionless, with large applied temperature gradients placing the focus on heat transfer.",
+            "startOffset": 76545,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84017,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "In our framework, the continuum description is applied across the entire macro domain, while DSMC is performed in dispersed micro elements (the arrangement of which depends on the flow problem being investigated).",
+            "startOffset": 83804,
+            "title": "Coupling framework"
+        },
+        {
+            "endOffset": 88458,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Boundary information is also obtained from these measurement cells: we extract the temperature of the gas in contact with the wall from the wall-adjacent cell faces.",
+            "startOffset": 88293,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 88135,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Similarly, the sampling zone of each micro element is divided into a grid of measurement cells.",
+            "startOffset": 88040,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 69041,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In the literature, two different hybrid frameworks have emerged for fluid flows: (a) the domain-decomposition technique, and (b) the Heterogeneous Multiscale Method (HMM).",
+            "startOffset": 68870,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 119439,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Much greater speed-ups can be expected when simulating larger, more realistic engineering problems.",
+            "startOffset": 119340,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 74195,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This method was, however, developed to simulate transient flows where a time-accurate solution is sought, and so any computational advantage over a full DSMC simulation is achieved only through decoupling of the time scales; the length scales remain fully coupled, with both the continuum description and DSMC employed over the same region of space.",
+            "startOffset": 73846,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72151,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this case, a continuum model is applied across the entire flow field, and the molecular solver is applied in spatially-distributed micro regions.",
+            "startOffset": 72003,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113777,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "It should be noted however that even with only two near-wall elements the hybrid solution still provides a considerable improvement over the NSF solution.",
+            "startOffset": 113623,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 111846,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "However, even if the bulk of the domain is near-equilibrium, higher temperature conditions might result in a non-linear variation of conductivity with temperature.",
+            "startOffset": 111683,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 73622,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Despite its advantages over domain-decomposition techniques, there has been little development of HMM-type hybrids that use DSMC as the molecular treatment.",
+            "startOffset": 73466,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73466,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, in flow problems with smaller, or mixed, degrees of spatial scale separation, the molecular resolution required can result in the micro elements overlapping, making HMM more expensive and less accurate than a pure molecular treatment.",
+            "startOffset": 73223,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84227,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "The underlying methodology presented here is general and may be applied to 1D, 2D, or 3D problems.",
+            "startOffset": 84129,
+            "title": "Coupling framework"
+        },
+        {
+            "endOffset": 71792,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Such flows are generally beyond the reach of domain-decomposition as the majority (or perhaps all) of the flowfield can be considered \u2018near-wall\u2019.",
+            "startOffset": 71646,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85157,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "A natural evolution to the correct particle distribution and macroscopic state at the boundaries of an element is possible by establishing an artificial relaxation region (zone) around the element.",
+            "startOffset": 84960,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 84128,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "As discussed in the Introduction, we propose a new strategy to achieve two-way coupling between these domains.",
+            "startOffset": 84018,
+            "title": "Coupling framework"
+        },
+        {
+            "endOffset": 72658,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Generally, these studies consider flow problems where momentum transport is dominant and the transfer of heat is negligible.",
+            "startOffset": 72534,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71137,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In highly non-equilibrium flows, or when the temperature dependence of fluid properties such as dynamic viscosity or thermal conductivity is not known a priori (for example, in unusual chemically-reacting gas mixtures), the traditional fluid constitutive relations may be inaccurate in the bulk of the domain.",
+            "startOffset": 70828,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88039,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "refoffsets": {
+                "b0025": {
+                    "endOffset": 87931,
+                    "startOffset": 87914
+                }
+            },
+            "secId": "s0030",
+            "sentence": "Using particle controllers (Borg et al., 2010), the appropriate temperature is then set in each control cell to create the desired temperature variation.",
+            "startOffset": 87886,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 75505,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Also, the location of each micro element is not restricted to the nodes of the computational mesh: both the position and size of the micro elements can be optimised for each problem, independently of the continuum mesh.",
+            "startOffset": 75286,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73222,
+            "parents": [],
+            "refoffsets": {
+                "b0015": {
+                    "endOffset": 73062,
+                    "startOffset": 73040
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This point-wise coupling approach (Asproulis et al., 2012) is ideal when there is a large degree of spatial scale separation in the system, providing significant computational savings over a pure molecular simulation.",
+            "startOffset": 73005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 114032,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Computational savings therefore come only from length-scale separation.",
+            "startOffset": 113961,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 86794,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Complete relaxation needs to occur over the extent of the relaxation zone such that the particle distribution in the sampling zone is dictated solely by the applied continuum state.",
+            "startOffset": 86613,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 76934,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "With negligible transport of momentum, our coupling is performed through the heat flux: we impose the local temperature fields on the micro elements and measure the consequent heat flux from the relaxed DSMC particle ensembles.",
+            "startOffset": 76707,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85705,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Suitable boundary conditions to the sampling zone are generated by enforcing the continuum variation of macroscopic properties (i.e. in our case, the continuum temperature field) across the surrounding relaxation zone.",
+            "startOffset": 85487,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 87378,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In summary, the sampling zone in a micro DSMC element is surrounded by the relaxation zone over which the local continuum fields are imposed, and a chosen particle distribution is applied at the outer boundaries.",
+            "startOffset": 87166,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 118532,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "For heat-transfer problems, the coupling in our method is performed through the computed heat fluxes.",
+            "startOffset": 118431,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 76261,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "While the IMM is designed to simulate problems where the largest length scale is in the flow direction, our new method has no such restriction and so provides a more general approach.",
+            "startOffset": 76078,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86104,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This imposed distribution introduces error in the local distribution close to these boundaries, and so it is important that the particle state within the sampling zone is sufficiently independent of this introduced error.",
+            "startOffset": 85883,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 82873,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "However, the inherent statistical scatter associated with the method means that a large number of independent samples are usually required to capture smooth fields, particularly for low speed flows.",
+            "startOffset": 82675,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 78661,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper is organised as follows.",
+            "startOffset": 78626,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113334,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "In fact, in comparison with the initial NSF solution, this configuration provides an order of magnitude reduction in the mean error.",
+            "startOffset": 113202,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 79025,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For simplicity, one-dimensional heat transfer is considered when validating the method in Section 3, with results compared with pure DSMC simulations at equivalent conditions.",
+            "startOffset": 78850,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 120295,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The modelling of thin bow shockwaves at the front of a planetary re-entry vehicle is another example which could benefit from the development of this hybrid as it encompasses both complex fluid behaviour (including chemical reactions of many gas species) and a high aspect ratio geometry.",
+            "startOffset": 120007,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 118159,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Therefore, unlike traditional HMM techniques, our method is able to simulate problems with any degree of scale separation.",
+            "startOffset": 118037,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 120406,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Our method also has the potential to be used in an inverse manner to obtain the transport properties of a gas.",
+            "startOffset": 120296,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 75285,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This means that, unlike point wise coupling, HMM\u2013FWC is suitable for dealing with flow problems with varying degrees of spatial scale separation.",
+            "startOffset": 75140,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 112003,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "If so, the use of linear interpolation of the flux-correction field between opposite near-wall elements is not likely to produce the most accurate solution.",
+            "startOffset": 111847,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 113447,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "This increased accuracy is the result of the higher quality flux-correction representation, as shown in Fig. 14.",
+            "startOffset": 113335,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 119212,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Due to the small degree of scale separation in the Fourier flow cases considered here, the computational speed-ups observed (over the full DSMC simulations) were modest.",
+            "startOffset": 119043,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 82674,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 82502,
+                    "startOffset": 82491
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Using expressions provided by Bird (1998), local hydrodynamic properties (including the temperature and the heat flux) can be recovered in DSMC by averaging microscopic data over all of the particles in each cell.",
+            "startOffset": 82461,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 67717,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "While the conventional hydrodynamic equations are generally excellent for modelling the majority of fluid flow problems, the presence of localised regions of non-continuum or non-equilibrium flow can result in some degree of inaccuracy.",
+            "startOffset": 67481,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70439,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These micro and macro sub-domains are independent but communicate through an overlap region that enables mutual coupling.",
+            "startOffset": 70318,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72914,
+            "parents": [],
+            "refoffsets": {
+                "b0100": {
+                    "endOffset": 72912,
+                    "startOffset": 72870
+                },
+                "b0160": {
+                    "endOffset": 72912,
+                    "startOffset": 72870
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Coupling is therefore based on momentum: velocity fields or strain-rates are prescribed in each micro region, and the resultant stress is used to apply a correction back into the hydrodynamic momentum equation (Ren and E, 2005; Yasuda and Yamamoto, 2008).",
+            "startOffset": 72659,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 113960,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In this paper we have not exploited time-scale separation \u2014 the full-scale and the hybrid element simulations are run for the same number of DSMC time-steps.",
+            "startOffset": 113803,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 76004,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This includes problems where the fluid behaviour is unknown in the bulk, i.e. the traditional constitutive relations fail due to non-equilibrium effects (for example, in the wake of a re-entry vehicle), or the transport properties are unknown (for example, in unusual gas mixtures).",
+            "startOffset": 75722,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82461,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Particle movements are computed deterministically, while interparticle collisions are treated statistically within numerical mesh cells.",
+            "startOffset": 82325,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 113622,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The accuracy of the hybrid could be further improved by increasing the molecular resolution either by increasing the element lengths, or by adding more bulk elements, or both.",
+            "startOffset": 113447,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 81599,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "As we focus on heat transfer in dilute gases, we use DSMC as our molecular model in the micro elements.",
+            "startOffset": 81496,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 85776,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "refoffsets": {
+                "b0025": {
+                    "endOffset": 85774,
+                    "startOffset": 85757
+                }
+            },
+            "secId": "s0030",
+            "sentence": "This is done by implementing particle controllers (Borg et al., 2010).",
+            "startOffset": 85706,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 111682,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "For the cases in Sections 3.2.1 and 3.2.2, we used only two near-wall elements in our hybrid approach.",
+            "startOffset": 111580,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 73004,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Each HMM micro region supplies information to a computational node on the continuum mesh.",
+            "startOffset": 72915,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85379,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "It is not essential that the gas state in these relaxation zones accurately represent the conditions in the corresponding macro domain; their sole purpose is to develop the boundary conditions for the core of the element.",
+            "startOffset": 85158,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 88997,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In Fig. 1, the measurement and control cells are shown to have the same dimensions, but this does not have to be the case.",
+            "startOffset": 88875,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 84466,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "It is crucial that the flux-correction information is extracted from DSMC elements in which the gas state is properly representative of the local conditions in the macro domain.",
+            "startOffset": 84289,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 71359,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Domain-decomposition techniques are also inappropriate for simulating flow through micro or nanoscale geometries that have a high aspect ratio, e.g. one dimension of the geometry is orders of magnitude larger than another.",
+            "startOffset": 71137,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117322,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Future simulations of larger, more realistic, 2D and 3D problems will highlight any computational advantages of our multiscale approach.",
+            "startOffset": 117186,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 81883,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The fundamental concept is to track a large number of numerical particles, storing their position, velocity, and internal state as they move through a computational mesh.",
+            "startOffset": 81713,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 75721,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Our method is designed to cope with inaccuracy in the traditional flow boundary conditions and/or constitutive relations, and is therefore able to deal with problems that are beyond the reach of domain-decomposition.",
+            "startOffset": 75505,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75139,
+            "parents": [],
+            "refoffsets": {
+                "b0035": {
+                    "endOffset": 74909,
+                    "startOffset": 74891
+                }
+            },
+            "secId": "s0005",
+            "sentence": "We adopt the field wise coupling (HMM\u2013FWC) approach developed by Borg et al. (2013) for liquid flows: rather than supplying a correction to a node on the continuum mesh, each micro element instead corrects a continuum sub-region, the spatial dimensions of which are identical to those of the micro element itself.",
+            "startOffset": 74826,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69480,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Founded on the kinetic theory of dilute gases, DSMC reduces computational expense by adopting a stochastic approximation for the molecular collision process.",
+            "startOffset": 69323,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74323,
+            "parents": [],
+            "refoffsets": {
+                "b0095": {
+                    "endOffset": 74233,
+                    "startOffset": 74211
+                }
+            },
+            "secId": "s0005",
+            "sentence": "More recently, Patronis et al. (2013) adapted the Internal-flow Multiscale Method (IMM) to simulate dilute gas flows with DSMC.",
+            "startOffset": 74196,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117185,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "It is important to note, however, that these Fourier flow cases have been chosen simply to test and validate the hybrid methodology itself.",
+            "startOffset": 117046,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 113095,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Once again, the accuracy of the hybrid is more clearly visible from the mean percentage error, shown for each iteration in Fig. 13.",
+            "startOffset": 112964,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 95212,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This element arrangement is an example only \u2014 the appropriate arrangement will in practise depend on the case itself, as will be discussed further in Section 3.2.1.",
+            "startOffset": 95048,
+            "title": "Numerical implementation"
+        },
+        {
+            "endOffset": 82031,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "During a simulation, the particles collide with each other and with bounding surfaces while maintaining conservation of mass, momentum, and energy.",
+            "startOffset": 81884,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 119339,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This problem was, however, selected only to provide a simple example on which to test and validate the underlying methodology.",
+            "startOffset": 119213,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68870,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Essentially, the aim is to combine the best of both solvers: the computational efficiency associated with continuum methods, and the detail and accuracy of molecular techniques.",
+            "startOffset": 68693,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87165,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Similarly, Fig. 1b shows an example computational domain set-up for a 2D problem, including both bulk and \u2018near-wall\u2019 micro elements.",
+            "startOffset": 87032,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 74825,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this paper we propose a new form of the HMM technique, with DSMC providing the molecular description.",
+            "startOffset": 74721,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78732,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 2, we discuss the macro and micro descriptions of the flow.",
+            "startOffset": 78662,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 114200,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The dimensions of the Fourier flow test cases considered here have been restricted by the need for a full-scale DSMC simulation in order to validate the hybrid method.",
+            "startOffset": 114033,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 83449,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Consequently, each DSMC simulation in this paper is performed in two stages: a transient period enables the simulation to reach steady-state, and then a longer averaging period reduces the statistical scatter in the measured hydrodynamic properties.",
+            "startOffset": 83200,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 69592,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Typically, thermodynamic non-equilibrium effects occur in the vicinity of bounding surfaces or other interfaces.",
+            "startOffset": 69480,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83199,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "For continuum-molecular hybrids, the smoothing of statistical fluctuations is particularly important as the transfer of noisy data to the continuum fluid description may result in instability.",
+            "startOffset": 83007,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 72343,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These micro regions provide the missing data that is required for closure of the local continuum model, either in the form of unknown boundary conditions, or unknown constitutive information.",
+            "startOffset": 72152,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87885,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "To impose the local continuum temperature field, we divide the relaxation zone in each micro element into a grid of control cells as shown in Fig. 1.",
+            "startOffset": 87736,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 119043,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Generally, good agreement with the equivalent full-scale DSMC simulations was observed, with the exact level of accuracy depending on the micro element arrangement.",
+            "startOffset": 118879,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 70115,
+            "parents": [],
+            "refoffsets": {
+                "b0005": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0040": {
+                    "endOffset": 69850,
+                    "startOffset": 69705
+                },
+                "b0045": {
+                    "endOffset": 69850,
+                    "startOffset": 69705
+                },
+                "b0050": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0055": {
+                    "endOffset": 69850,
+                    "startOffset": 69705
+                },
+                "b0060": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0070": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0085": {
+                    "endOffset": 69850,
+                    "startOffset": 69705
+                },
+                "b0105": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0115": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0120": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0125": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0135": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0140": {
+                    "endOffset": 69850,
+                    "startOffset": 69705
+                },
+                "b0150": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                },
+                "b0155": {
+                    "endOffset": 70113,
+                    "startOffset": 69870
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Recognising this behaviour, domain-decomposition has become the most popular hybrid framework for both liquids (O\u2019Connell and Thompson, 1995; Hadjiconstantinou and Patera, 1997; Flekk\u00f8y et al., 2000; Delgado-Buscalioni and Coveney, 2003; Werder et al., 2005) and dilute gases (Wadsworth and Erwin, 1990; Hash and Hassan, 1996; Garcia et al., 1999; Aktas and Aluru, 2002; Roveda et al., 1998; Sun et al., 2004; Sun and Boyd, 2002; Wijesinghe et al., 2004; Wu et al., 2006; Schwartzentruber et al., 2007; Lian et al., 2008).",
+            "startOffset": 69593,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 85487,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Sampling of property fields is performed only in the core region, which we refer to as the \u2018sampling zone\u2019.",
+            "startOffset": 85380,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 74484,
+            "parents": [],
+            "refoffsets": {
+                "b0030": {
+                    "endOffset": 74366,
+                    "startOffset": 74348
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Originally developed by Borg et al. (2013) for liquid flows, IMM adopts a framework similar to HMM but is tailored to model flows in high-aspect-ratio channels.",
+            "startOffset": 74324,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76432,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It could therefore be useful when the largest length scale is transverse to the flow direction; for example, the flow through microscale cracks that can appear in valves.",
+            "startOffset": 76262,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118612,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "As a simple validation test, the method was demonstrated on micro Fourier flow.",
+            "startOffset": 118533,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 112120,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Accuracy should be improved by the addition of micro elements within the bulk, i.e. increasing the micro resolution.",
+            "startOffset": 112004,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 113201,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "As we would expect, the addition of a bulk micro element results in a more accurate temperature solution.",
+            "startOffset": 113096,
+            "title": "Extreme temperature conditions"
+        },
+        {
+            "endOffset": 86980,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Once the hybrid method has converged, the artificiality of the outer relaxation zone dissolves seamlessly into the true particle distribution and fluid state in the inner sampling zone.",
+            "startOffset": 86795,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 119827,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Extension to 2D/3D then presents some additional challenges, including the application of mass, momentum, and heat transfer boundary conditions within 2D/3D relaxation zones, and 2D/3D interpolation of the correction fields between sampling zones.",
+            "startOffset": 119580,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 73845,
+            "parents": [],
+            "refoffsets": {
+                "b0065": {
+                    "endOffset": 73653,
+                    "startOffset": 73632
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In 2010, Kessler et al. (2010) proposed the Coupled Multiscale Multiphysics Method (CM3) that couples both momentum and heat transfer, with DSMC providing corrections to both the hydrodynamic momentum and energy equations.",
+            "startOffset": 73623,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 117791,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Based on a HMM\u2013FWC approach, we have proposed a hybrid multiscale method that couples a continuum-fluid solver with the DSMC particle technique.",
+            "startOffset": 117647,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 72002,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The less-common HMM framework overcomes the limitations of domain-decomposition by adopting a micro-resolution approach that can be employed anywhere in the domain \u2014 near bounding surfaces, or in the bulk flow.",
+            "startOffset": 71792,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70317,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this method, the simulation domain is partitioned \u2014 a molecular solver is applied in the regions closest to the surfaces, while a conventional continuum fluid solver is implemented in the remainder.",
+            "startOffset": 70116,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82324,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "A major advantage of the method is that two key approximations significantly reduce computational expense: (a) each simulated particle typically represents a large number of real gas molecules, and (b) molecular motion and intermolecular collisions can be decoupled over small time intervals.",
+            "startOffset": 82032,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 85882,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "A particle distribution does, however, need to be applied at the outer boundaries of the relaxation zone.",
+            "startOffset": 85777,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 118284,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The micro resolution can be adjusted for each problem to obtain the desired balance between accuracy and computational cost.",
+            "startOffset": 118160,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67902,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Such regions appear when the flow is far from local thermodynamic equilibrium, for example, when there are large gradients in fluid properties, or when surface effects become dominant.",
+            "startOffset": 67718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69322,
+            "parents": [],
+            "refoffsets": {
+                "b0020": {
+                    "endOffset": 69261,
+                    "startOffset": 69251
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This deterministic method is, however, inefficient for dilute gas flows, and the direct simulation Monte Carlo (DSMC) method (Bird, 1998) can instead provide a coarse-grained molecular description.",
+            "startOffset": 69125,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95441,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "For this 1D problem, each near-wall element comprises a single sampling zone and a single relaxation zone, while each bulk element consists of a single sampling zone with a relaxation zone on either side, as indicated in Fig. 2.",
+            "startOffset": 95213,
+            "title": "Numerical implementation"
+        },
+        {
+            "endOffset": 69124,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For liquids, molecular dynamics (MD) is the appropriate molecular simulation tool.",
+            "startOffset": 69042,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74721,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Although large computational savings are presented, this method is tailored specifically to deal with cases where the length scale in the direction of flow is significantly larger than the length scales transverse to the flow direction.",
+            "startOffset": 74485,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84673,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "There is, however, a fundamental problem in creating such elements: the particle distribution required at the boundaries of the element cannot be extracted directly from the macroscopic continuum flowfield.",
+            "startOffset": 84467,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 118431,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Another useful feature of our approach is that the size of the micro elements adapts dynamically depending on the local mean free path of the gas.",
+            "startOffset": 118285,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 114441,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The computational savings provided by the hybrid on this particular heat transfer problem are therefore modest.",
+            "startOffset": 114330,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 81712,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "DSMC has become the dominant method for simulating dilute gas flows that lie in the continuum-transition regime.",
+            "startOffset": 81600,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 83006,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Therefore, time averaging is typically used for steady state problems, while ensemble averaging is used for transient flow problems.",
+            "startOffset": 82874,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 76544,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The form of the method we present in this paper is tailored to model heat transfer problems in dilute gas flows.",
+            "startOffset": 76432,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87573,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "However, in order to capture regions of non-equilibrium that often appear at solid bounding surfaces or walls, the sampling zone in a near-wall micro element must be adjacent to the wall itself.",
+            "startOffset": 87379,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 68107,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Although molecular simulation tools can provide an accurate modelling alternative in these cases, they are usually much too computationally expensive for resolving engineering spatial and temporal scales.",
+            "startOffset": 67903,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78849,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We then present the general three-dimensional form of our multiscale coupling framework and its iterative algorithm.",
+            "startOffset": 78733,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71645,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This class of flow presents a challenge as it requires simultaneous solution of the microscopic processes occurring over the smallest dimension and the macroscopic processes occurring over the largest dimension, and is often too computationally intensive for a full molecular approach.",
+            "startOffset": 71360,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 114329,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "With the degree of length-scale separation fairly small, the required micro elements occupy a significant portion of the domain.",
+            "startOffset": 114201,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 88874,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "This has the benefit of enabling us to define the resolution of the macroscopic fields that we both extract and impose, and to control the noise in our measurements, without affecting the accuracy of the DSMC calculations (i.e. the particle collision rate).",
+            "startOffset": 88617,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 72533,
+            "parents": [],
+            "refoffsets": {
+                "b0015": {
+                    "endOffset": 72531,
+                    "startOffset": 72446
+                },
+                "b0030": {
+                    "endOffset": 72531,
+                    "startOffset": 72446
+                },
+                "b0100": {
+                    "endOffset": 72531,
+                    "startOffset": 72446
+                },
+                "b0160": {
+                    "endOffset": 72531,
+                    "startOffset": 72446
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Existing HMM studies in the literature are mainly for liquid flows, using MD as the molecular solver (Ren and E, 2005; Yasuda and Yamamoto, 2008; Asproulis et al., 2012; Borg et al., 2013).",
+            "startOffset": 72344,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 118036,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The key advantage of this hybrid over existing continuum-DSMC hybrids is that DSMC micro elements of any size can be placed at any location in the flow, i.e. close to walls or in the bulk of the domain, independent of the continuum description.",
+            "startOffset": 117792,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68432,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Scale separation occurs when the variation of hydrodynamic properties across small regions of space or periods of time is only very loosely coupled with the flow behaviour on a much larger spatial or temporal scale.",
+            "startOffset": 68217,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88292,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "We then extract the averaged hydrodynamic properties from each measurement cell, enabling us to capture the property fields across the entire sampling zone.",
+            "startOffset": 88136,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 83783,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This is used to perform all of the micro and full-scale DSMC simulations in this paper.",
+            "startOffset": 83696,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 68216,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Multiscale methodologies that exploit \u2018scale separation\u2019 have therefore been developed over the past decade.",
+            "startOffset": 68108,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 84960,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "In our method, we circumvent this problem by not imposing an exact particle distribution at these boundaries; instead, we allow the distribution to be dictated by the macroscopic continuum fields alone.",
+            "startOffset": 84758,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 86612,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "If the relaxation zone is large enough (i.e. several molecular mean free paths), the form of the imposed distribution1 is irrelevant \u2014 its effect will decay through the zone as the particle state gradually relaxes through interparticle collisions.",
+            "startOffset": 86105,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 120006,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "However, with this development, the method has the potential to tackle a variety of problems, such as the flow of complex gas mixtures, or the flow through micro heat exchangers.",
+            "startOffset": 119828,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68692,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A traditional continuum description is employed in macro flow regions, and a molecular treatment is applied in small-scale micro or nano regions.",
+            "startOffset": 68547,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77108,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "(Full coupling of mass, momentum, and heat transfer is a subject for future work.)",
+            "startOffset": 77026,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79063,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 4 we draw our conclusions.",
+            "startOffset": 79026,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87736,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "The arrangement of the micro elements is clearly crucial to the overall accuracy of our method, and the appropriate arrangement will vary from problem to problem.",
+            "startOffset": 87574,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 118770,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "For a range of rarefaction and temperature conditions, we have shown the method\u2019s ability to compensate for inaccurate boundary and constitutive information.",
+            "startOffset": 118613,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 89358,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "If these cells are not collocated, we simply interpolate between the meshes.",
+            "startOffset": 89282,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 119579,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Before tackling 2D and 3D problems, the method needs to be developed to enable full coupling of mass and momentum, as well as heat transfer.",
+            "startOffset": 119439,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 76077,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The method is also suitable for simulating high aspect ratio geometries.",
+            "startOffset": 76005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77025,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A suitable correction is then applied to the hydrodynamic conservation of energy equation.",
+            "startOffset": 76935,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 83695,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                }
+            ],
+            "refoffsets": {
+                "b0010": {
+                    "endOffset": 83693,
+                    "startOffset": 83630
+                },
+                "b0090": {
+                    "endOffset": 83492,
+                    "startOffset": 83477
+                },
+                "b0110": {
+                    "endOffset": 83693,
+                    "startOffset": 83630
+                },
+                "b0145": {
+                    "endOffset": 83693,
+                    "startOffset": 83630
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The open-source C++ toolbox OpenFOAM (2013) incorporates a DSMC solver, dsmcFoam, which has been validated for various benchmark cases, including hypersonic and microchannel flows (Scanlon et al., 2010; Arlemark et al., 2012; White et al., 2013).",
+            "startOffset": 83449,
+            "title": "DSMC technique"
+        },
+        {
+            "endOffset": 68546,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Often referred to as \u2018hybrids\u2019, these multiscale methods combine continuum and molecular descriptions of the flow.",
+            "startOffset": 68432,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88616,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Essentially, these measurement and control cells form a measurement/control mesh that is completely independent of the computational mesh used by DSMC itself.",
+            "startOffset": 88458,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 94923,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Discretizing the domain in one-dimensional space, the macroscopic computational mesh consists of N macro nodes, including a node at each wall.",
+            "startOffset": 94781,
+            "title": "Numerical implementation"
+        },
+        {
+            "endOffset": 118878,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The hybrid procedure was found to converge very quickly, inside 3 iterations for all test cases considered.",
+            "startOffset": 118771,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 84757,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "For this reason, macro-to-micro coupling remains a challenge in multiscale hybrids.",
+            "startOffset": 84674,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 89281,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Multiscale methodology"
+                },
+                {
+                    "id": "s0025",
+                    "title": "Coupling framework"
+                }
+            ],
+            "secId": "s0030",
+            "sentence": "Also, in Fig. 1b, the measurement and control cells are shown to be collocated with the computational cells of the continuum mesh; although this simplifies the transfer of data between the micro elements and the continuum description, it is only for convenience and is not essential.",
+            "startOffset": 88998,
+            "title": "Macro-to-micro coupling: constraint of the micro elements"
+        },
+        {
+            "endOffset": 117635,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "refoffsets": {
+                "b0075": {
+                    "endOffset": 117634,
+                    "startOffset": 117612
+                }
+            },
+            "secId": "s0075",
+            "sentence": "In transient flows, when temporal variations in the macroscopic property fields are much slower than the molecular time scales, computational savings can also be obtained by exploiting time scale separation, i.e. by controlling the time-steps in the macro and micro models as described by Lockerby et al. (2013).",
+            "startOffset": 117323,
+            "title": "Computational savings"
+        },
+        {
+            "endOffset": 117045,
+            "parents": [
+                {
+                    "id": "s0045",
+                    "title": "Validation: one-dimensional Fourier flow"
+                },
+                {
+                    "id": "s0055",
+                    "title": "Results"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In summary, while several cases in this paper demonstrate moderate computational savings from the hybrid method, a number of cases are more computationally expensive than the equivalent full-scale DSMC simulation.",
+            "startOffset": 116832,
+            "title": "Computational savings"
+        }
+    ],
+    "docId": "S0142727X14000836",
+    "metadata": {
+        "asjc": [
+            "1507",
+            "2210",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "stephanie.docherty@strath.ac.uk",
+                "first": "Stephanie Y.",
+                "initial": "S.Y.",
+                "last": "Docherty"
+            },
+            {
+                "email": null,
+                "first": "Matthew K.",
+                "initial": "M.K.",
+                "last": "Borg"
+            },
+            {
+                "email": null,
+                "first": "Duncan A.",
+                "initial": "D.A.",
+                "last": "Lockerby"
+            },
+            {
+                "email": null,
+                "first": "Jason M.",
+                "initial": "J.M.",
+                "last": "Reese"
+            }
+        ],
+        "doi": "10.1016/j.ijheatfluidflow.2014.06.003",
+        "firstpage": "114",
+        "issn": "0142727X",
+        "keywords": [
+            "DSMC",
+            "Heat flux coupling",
+            "Heterogeneous multiscale simulation",
+            "Hybrid methods",
+            "Rarefied gas dynamics"
+        ],
+        "lastpage": "125",
+        "openaccess": "Full",
+        "pub_year": 2014,
+        "subjareas": [
+            "CENG",
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Multiscale simulation of heat transfer in a rarefied gas"
+    }
+}

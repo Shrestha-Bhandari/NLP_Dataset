@@ -1,0 +1,3556 @@
+{
+    "abstract": "Modelling of thin joining zones is one application of Cohesive Zone Elements (CZE). It is shown that Traction Separation Laws (TSLs) used as constitutive models in most CZEs that can be found in literature cannot fully capture all damage causing deformation modes induced by forming of hybrid components. In this contribution we present an approach to overcome this deficiency by using bulk material models within a Cohesive Zone Element. Numerical examples demonstrate the excellent properties of the method by comparing the new formulation with volumetric modelling of a joining zone.",
+    "author_highlights": [
+        {
+            "endOffset": 43684,
+            "sentence": "Membrane like forces and out of plane shear forces are relevant for bulk forming.",
+            "startOffset": 43603
+        },
+        {
+            "endOffset": 43764,
+            "sentence": "Most material models used in Cohesive Zone Elements cannot process these loads.",
+            "startOffset": 43685
+        },
+        {
+            "endOffset": 43848,
+            "sentence": "Internal Thickness Extrapolation combines Cohesive Zone Elements and bulk material.",
+            "startOffset": 43765
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "B. A.",
+                    "initial": "B.A.",
+                    "last": "Behrens"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Huskic"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Frischkorn"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Duran"
+                }
+            ],
+            "firstpage": "704",
+            "issn": "14364980",
+            "lastpage": "708",
+            "pub_year": 2015,
+            "title": "Extrusion of hybrid semi-finished workpieces",
+            "volume": "105"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "Tim",
+                    "initial": "T.",
+                    "last": "Heitbreder"
+                },
+                {
+                    "first": "Niels Saabye",
+                    "initial": "N.S.",
+                    "last": "Ottosen"
+                },
+                {
+                    "first": "Matti",
+                    "initial": "M.",
+                    "last": "Ristinmaa"
+                },
+                {
+                    "first": "J\u00f6rn",
+                    "initial": "J.",
+                    "last": "Mosler"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2016.10.027",
+            "firstpage": "284",
+            "issn": "00207683",
+            "lastpage": "293",
+            "pub_year": 2017,
+            "title": "Consistent elastoplastic cohesive zone model at finite deformations \u2013 Variational formulation",
+            "volume": "106-107"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Wei\u00dfenfels"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1016/j.compgeo.2014.11.015",
+            "firstpage": "187",
+            "issn": "0266352X",
+            "lastpage": "198",
+            "pub_year": 2015,
+            "title": "Methods to project plasticity models onto the contact surface applied to soil structure interactions",
+            "volume": "65"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Wei\u00dfenfels"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1007/s00466-015-1140-7",
+            "firstpage": "873",
+            "issn": "01787675",
+            "lastpage": "885",
+            "pub_year": 2015,
+            "title": "A contact layer element for large deformations",
+            "volume": "55"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Randolph R.",
+                    "initial": "R.R.",
+                    "last": "Settgast"
+                },
+                {
+                    "first": "Mark M.",
+                    "initial": "M.M.",
+                    "last": "Rashid"
+                }
+            ],
+            "doi": "10.1016/j.engfracmech.2009.02.024",
+            "firstpage": "1614",
+            "issn": "00137944",
+            "lastpage": "1635",
+            "pub_year": 2009,
+            "title": "Continuum coupled cohesive zone elements for analysis of fracture in solid bodies",
+            "volume": "76"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Oliver"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Armero"
+                }
+            ],
+            "doi": "10.1007/BF00372173",
+            "firstpage": "277",
+            "issn": "01787675",
+            "lastpage": "296",
+            "pub_year": 1993,
+            "title": "An analysis of strong discontinuities induced by strain-softening in rate-independent inelastic solids",
+            "volume": "12"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "A. E.",
+                    "initial": "A.E.",
+                    "last": "Huespe"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Needleman"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Oliver"
+                },
+                {
+                    "first": "P. J.",
+                    "initial": "P.J.",
+                    "last": "S\u00e1nchez"
+                }
+            ],
+            "doi": "10.1016/j.ijplas.2009.03.005",
+            "firstpage": "2349",
+            "issn": "07496419",
+            "lastpage": "2365",
+            "pub_year": 2009,
+            "title": "A finite thickness band method for ductile fracture analysis",
+            "volume": "25"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "Marco",
+                    "initial": "M.",
+                    "last": "Paggi"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1016/j.commatsci.2010.12.024",
+            "firstpage": "1625",
+            "issn": "09270256",
+            "lastpage": "1633",
+            "pub_year": 2011,
+            "title": "A nonlocal cohesive zone model for finite thickness interfaces - Part I: Mathematical formulation and validation with molecular dynamics",
+            "volume": "50"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Marco",
+                    "initial": "M.",
+                    "last": "Paggi"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1016/j.commatsci.2010.12.021",
+            "firstpage": "1634",
+            "issn": "09270256",
+            "lastpage": "1643",
+            "pub_year": 2011,
+            "title": "A nonlocal cohesive zone model for finite thickness interfaces - Part II: FE implementation and application to polycrystalline materials",
+            "volume": "50"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Leppin"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1016/0045-7949(96)00110-1",
+            "firstpage": "1169",
+            "issn": "00457949",
+            "lastpage": "1175",
+            "pub_year": 1996,
+            "title": "Numerical simulation of rapid crack propagation in viscoplastic materials",
+            "volume": "61"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Zden\u011bk P.",
+                    "initial": "Z.P.",
+                    "last": "Ba\u017eant"
+                },
+                {
+                    "first": "B. H.",
+                    "initial": "B.H.",
+                    "last": "Oh"
+                }
+            ],
+            "doi": "10.1007/BF02486267",
+            "firstpage": "155",
+            "issn": "00255432",
+            "lastpage": "177",
+            "pub_year": 1983,
+            "title": "Crack band theory for fracture of concrete",
+            "volume": "16"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "D. S.",
+                    "initial": "D.S.",
+                    "last": "Dugdale"
+                }
+            ],
+            "doi": "10.1016/0022-5096(60)90013-2",
+            "firstpage": "100",
+            "issn": "00225096",
+            "lastpage": "104",
+            "pub_year": 1960,
+            "title": "Yielding of steel sheets containing slits",
+            "volume": "8"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Oliver"
+                }
+            ],
+            "doi": "10.1002/nme.1620280214",
+            "firstpage": "461",
+            "issn": "00295981",
+            "lastpage": "474",
+            "pub_year": 1989,
+            "title": "A consistent characteristic length for smeared cracking models",
+            "volume": "28"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Miehe"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Schr\u00f6der"
+                }
+            ],
+            "doi": "10.1007/BF00789125",
+            "firstpage": "267",
+            "issn": "09391533",
+            "lastpage": "285",
+            "pub_year": 1994,
+            "title": "Post-critical discontinuous localization analysis of small-strain softening elastoplastic solids",
+            "volume": "64"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Ragnar",
+                    "initial": "R.",
+                    "last": "Larsson"
+                },
+                {
+                    "first": "Kenneth",
+                    "initial": "K.",
+                    "last": "Runesson"
+                },
+                {
+                    "first": "Niels Saabye",
+                    "initial": "N.S.",
+                    "last": "Ottosen"
+                }
+            ],
+            "doi": "10.1002/nme.1620361209",
+            "firstpage": "2087",
+            "issn": "00295981",
+            "lastpage": "2105",
+            "pub_year": 1993,
+            "title": "Discontinuous displacement approximation for capturing plastic localization",
+            "volume": "36"
+        },
+        "bib23": {
+            "authors": [
+                {
+                    "first": "O. L.",
+                    "initial": "O.L.",
+                    "last": "Manzoli"
+                },
+                {
+                    "first": "A. L.",
+                    "initial": "A.L.",
+                    "last": "Gamino"
+                },
+                {
+                    "first": "E. A.",
+                    "initial": "E.A.",
+                    "last": "Rodrigues"
+                },
+                {
+                    "first": "G. K.S.",
+                    "initial": "G.K.S.",
+                    "last": "Claro"
+                }
+            ],
+            "doi": "10.1016/j.compstruc.2011.12.001",
+            "firstpage": "70",
+            "issn": "00457949",
+            "lastpage": "82",
+            "pub_year": 2012,
+            "title": "Modeling of interfaces in two-dimensional problems using solid finite elements with high aspect ratio",
+            "volume": "94-95"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Esmaeili"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Steinmann"
+                },
+                {
+                    "first": "Ali",
+                    "initial": "A.",
+                    "last": "Javili"
+                }
+            ],
+            "doi": "10.1007/s00466-016-1342-7",
+            "firstpage": "361",
+            "issn": "01787675",
+            "lastpage": "383",
+            "pub_year": 2017,
+            "title": "Non-coherent energetic interfaces accounting for degradation",
+            "volume": "59"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Rice"
+                }
+            ],
+            "doi": "10.1115/1.3173668",
+            "firstpage": "98",
+            "issn": "00218936",
+            "lastpage": "103",
+            "pub_year": 1988,
+            "title": "Elastic fracture mechanics concepts for interfacial cracks",
+            "volume": "55"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "Sebastian",
+                    "initial": "S.",
+                    "last": "Herbst"
+                },
+                {
+                    "first": "Christopher Neal",
+                    "initial": "C.N.",
+                    "last": "Dovletoglou"
+                },
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "N\u00fcrnberger"
+                }
+            ],
+            "doi": "10.1007/s13632-017-0378-1",
+            "firstpage": "367",
+            "issn": "21929262",
+            "lastpage": "374",
+            "pub_year": 2017,
+            "title": "Method for Semi-Automated Measurement and Statistical Evaluation of Iron Aluminum Intermetallic Compound Layer Thickness and Morphology",
+            "volume": "6"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "Bernd Arno",
+                    "initial": "B.A.",
+                    "last": "Behrens"
+                },
+                {
+                    "first": "Anas",
+                    "initial": "A.",
+                    "last": "Bouguecha"
+                },
+                {
+                    "first": "Conrad",
+                    "initial": "C.",
+                    "last": "Frischkorn"
+                },
+                {
+                    "first": "Adis",
+                    "initial": "A.",
+                    "last": "Huskic"
+                },
+                {
+                    "first": "Anna",
+                    "initial": "A.",
+                    "last": "Stakhieva"
+                },
+                {
+                    "first": "Deniz",
+                    "initial": "D.",
+                    "last": "Duran"
+                }
+            ],
+            "pub_year": 2016,
+            "title": "Tailored forming technology for three dimensional components: Approaches to heating and forming"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Van Den Bosch"
+                },
+                {
+                    "first": "P. J.G.",
+                    "initial": "P.J.G.",
+                    "last": "Schreurs"
+                },
+                {
+                    "first": "M. G.D.",
+                    "initial": "M.G.D.",
+                    "last": "Geers"
+                }
+            ],
+            "doi": "10.1007/s00466-007-0184-8",
+            "firstpage": "171",
+            "issn": "01787675",
+            "lastpage": "180",
+            "pub_year": 2008,
+            "title": "On the development of a 3D cohesive zone element in the presence of large deformations",
+            "volume": "42"
+        },
+        "bib29": null,
+        "bib3": {
+            "authors": [
+                {
+                    "first": "G. I.",
+                    "initial": "G.I.",
+                    "last": "Barenblatt"
+                }
+            ],
+            "doi": "10.1016/S0065-2156(08)70121-2",
+            "firstpage": "55",
+            "issn": "00652156",
+            "lastpage": "129",
+            "pub_year": 1962,
+            "title": "The Mathematical Theory of Equilibrium Cracks in Brittle Fracture",
+            "volume": "7"
+        },
+        "bib30": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "van den Bosch"
+                },
+                {
+                    "first": "P. J.G.",
+                    "initial": "P.J.G.",
+                    "last": "Schreurs"
+                },
+                {
+                    "first": "M. G.D.",
+                    "initial": "M.G.D.",
+                    "last": "Geers"
+                }
+            ],
+            "doi": "10.1016/j.euromechsol.2006.09.003",
+            "firstpage": "1",
+            "issn": "09977538",
+            "lastpage": "19",
+            "pub_year": 2007,
+            "title": "A cohesive zone model with a large displacement formulation accounting for interfacial fibrilation",
+            "volume": "26"
+        },
+        "bib31": {
+            "authors": [
+                {
+                    "first": "Kyoungsoo",
+                    "initial": "K.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Glaucio H.",
+                    "initial": "G.H.",
+                    "last": "Paulino"
+                },
+                {
+                    "first": "Jeffery R.",
+                    "initial": "J.R.",
+                    "last": "Roesler"
+                }
+            ],
+            "doi": "10.1016/j.jmps.2008.10.003",
+            "firstpage": "891",
+            "issn": "00225096",
+            "lastpage": "908",
+            "pub_year": 2009,
+            "title": "A unified potential-based cohesive model of mixed-mode fracture",
+            "volume": "57"
+        },
+        "bib32": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1007/978-3-540-71001-1",
+            "firstpage": "1",
+            "lastpage": "559",
+            "pub_year": 2008,
+            "title": "Nonlinear finite element methods"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "Jo\u017ee",
+                    "initial": "J.",
+                    "last": "Korelc"
+                },
+                {
+                    "first": "Stanislaw",
+                    "initial": "S.",
+                    "last": "Stupkiewicz"
+                }
+            ],
+            "doi": "10.1002/nme.4653",
+            "firstpage": "960",
+            "issn": "00295981",
+            "lastpage": "987",
+            "pub_year": 2014,
+            "title": "Closed-form matrix exponential and its application in finite-strain plasticity",
+            "volume": "98"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "J. C.",
+                    "initial": "J.C.",
+                    "last": "Simo"
+                }
+            ],
+            "doi": "10.1016/0045-7825(92)90123-2",
+            "firstpage": "61",
+            "issn": "00457825",
+            "lastpage": "112",
+            "pub_year": 1992,
+            "title": "Algorithms for static and dynamic multiplicative plasticity that preserve the classical return mapping schemes of the infinitesimal theory",
+            "volume": "99"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "Albrecht",
+                    "initial": "A.",
+                    "last": "Bertram"
+                }
+            ],
+            "doi": "10.1007/3-540-27525-8",
+            "firstpage": "1",
+            "lastpage": "326",
+            "pub_year": 2005,
+            "title": "Elasticity and plasticity of large deformations: An introduction"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "Jean",
+                    "initial": "J.",
+                    "last": "Lemaitre"
+                },
+                {
+                    "first": "Rodrigue",
+                    "initial": "R.",
+                    "last": "Desmorat"
+                }
+            ],
+            "doi": "10.1007/b138882",
+            "firstpage": "1",
+            "lastpage": "380",
+            "pub_year": 2005,
+            "title": "Engineering damage mechanics: Ductile, creep, fatigue and brittle failures"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "Jo\u017ee",
+                    "initial": "J.",
+                    "last": "Korelc"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Wriggers"
+                }
+            ],
+            "doi": "10.1007/978-3-319-39005-5",
+            "firstpage": "1",
+            "lastpage": "346",
+            "pub_year": 2016,
+            "title": "Automation of finite element methods"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Needleman"
+                }
+            ],
+            "doi": "10.1115/1.3173064",
+            "firstpage": "525",
+            "issn": "00218936",
+            "lastpage": "531",
+            "pub_year": 1987,
+            "title": "A continuum model for void nucleation by inclusion debonding",
+            "volume": "54"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Ortiz"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Pandolfi"
+                }
+            ],
+            "doi": "10.1002/(SICI)1097-0207(19990330)44:9<1267::AID-NME486>3.0.CO;2-7",
+            "firstpage": "1267",
+            "issn": "00295981",
+            "lastpage": "1282",
+            "pub_year": 1999,
+            "title": "Finite-deformation irreversible cohesive elements for three-dimensional crack-propagation analysis",
+            "volume": "44"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Needleman"
+                }
+            ],
+            "doi": "10.1016/j.piutam.2014.01.020",
+            "firstpage": "221",
+            "issn": "22109838",
+            "lastpage": "246",
+            "pub_year": 2014,
+            "title": "Some issues in cohesive surface modeling",
+            "volume": "10"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "N.",
+                    "initial": "N.",
+                    "last": "Chandra"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Li"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Shet"
+                },
+                {
+                    "first": "H.",
+                    "initial": "H.",
+                    "last": "Ghonem"
+                }
+            ],
+            "doi": "10.1016/S0020-7683(02)00149-X",
+            "firstpage": "2827",
+            "issn": "00207683",
+            "lastpage": "2855",
+            "pub_year": 2002,
+            "title": "Some issues in the application of cohesive zone models for metal-ceramic interfaces",
+            "volume": "39"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Kyoungsoo",
+                    "initial": "K.",
+                    "last": "Park"
+                },
+                {
+                    "first": "Glaucio H.",
+                    "initial": "G.H.",
+                    "last": "Paulino"
+                }
+            ],
+            "doi": "10.1115/1.4023110",
+            "issn": "00036900",
+            "pub_year": 2011,
+            "title": "Cohesive zone models: A critical review of traction-separation relationships across fracture surfaces",
+            "volume": "64"
+        },
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Niels Saabye",
+                    "initial": "N.S.",
+                    "last": "Ottosen"
+                },
+                {
+                    "first": "Matti",
+                    "initial": "M.",
+                    "last": "Ristinmaa"
+                },
+                {
+                    "first": "J\u00f6rn",
+                    "initial": "J.",
+                    "last": "Mosler"
+                }
+            ],
+            "doi": "10.1016/j.jmps.2016.02.034",
+            "firstpage": "124",
+            "issn": "00225096",
+            "lastpage": "141",
+            "pub_year": 2016,
+            "title": "Framework for non-coherent interface models at finite displacement jumps and finite strains",
+            "volume": "90"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 70450,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Symmetry boundary conditions are applied horizontally and vertically.",
+            "startOffset": 70381,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 72919,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "Only a slice of the block is simulated and the displacements normal to it are fixed to generate plane strain conditions.",
+            "startOffset": 72799,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 46896,
+            "parents": [],
+            "refoffsets": {
+                "bib11": {
+                    "endOffset": 46804,
+                    "startOffset": 46802
+                },
+                "bib12": {
+                    "endOffset": 46849,
+                    "startOffset": 46847
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Wei\u00dfenfels and Wriggers projected plasticity models onto contact surfaces [11] to apply them in contact layer elements [12] for simulation of soil structure interaction.",
+            "startOffset": 46727,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73570,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "InTEx with a constant extrapolation thickness results in an overlap of the geometry at the joining zone.",
+            "startOffset": 73466,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 45568,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "They classically define the traction versus normal separation and traction versus tangential separation.",
+            "startOffset": 45464,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80433,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "It is discussed that Cohesive Zone Elements with Traction Separation Laws cannot fully capture all the damage causing deformation modes that frequently occur in a joining zone during Tailored Forming.",
+            "startOffset": 80233,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63206,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Slight vertical movement of the node leads to a thickness reduction for both methods.",
+            "startOffset": 63121,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 72284,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The deviation furthermore depends on the joining zone thickness but is small in general.",
+            "startOffset": 72196,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 76920,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.1",
+            "sentence": "The void evolution related variables are set to q1 = 1.5 and q2 = 1 and the initial porosity to f0 = 0.1.",
+            "startOffset": 76815,
+            "title": "Gurson model"
+        },
+        {
+            "endOffset": 73202,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "The nodes at the top are moved downwards, which means the sandwich is flattened (Fig. 15).",
+            "startOffset": 73112,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 53274,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "A priori the stare of stress triaxiality is not known in a forming process, it also may vary within the joining zone or even in one point over time.",
+            "startOffset": 53126,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 79653,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "Both effects result from the earlier failure of a thinner layer as it faster exceeds a void volume fraction that causes rupture.",
+            "startOffset": 79525,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 70940,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "It shows the geometry and the mesh for the considered part at the beginning and at the end of the forming process with volumetric elements for the joining zone.",
+            "startOffset": 70780,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 69607,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "The numerically same damage value as before is calculated for InTEx with a retained extrapolation thickness as well as with a retained extrapolation volume.",
+            "startOffset": 69451,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 47057,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This approach promises a good handling of the out of plane loadings but makes it difficult to evaluate damage induced by in plane shearing or normal separation.",
+            "startOffset": 46897,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70717,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Joining zone thicknesses of 0.1 \u03bcm\u20136.4 \u03bcm are investigated to cover approximately twice of the expected range according to section 2.",
+            "startOffset": 70584,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 52265,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Cohesive energy: The work, the cohesive stresses perform during the separation process,",
+            "startOffset": 52178,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 53126,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 53124,
+                    "startOffset": 53122
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Alternative formulations define one TSL for combined normal and tangential separations (e.g. if the cohesion is based on fibrils that are acting in the direction of the total separation and where the load carrying capacity depends on the total separation but is independent of the separation direction) [28].",
+            "startOffset": 52818,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 77175,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.1",
+            "sentence": "With a non zero porosity the hydrostatic stress \u03c3H has an impact on yielding and so, using an associated flow rule, the model becomes plastically compressible by changing the void volume.",
+            "startOffset": 76988,
+            "title": "Gurson model"
+        },
+        {
+            "endOffset": 80057,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "The 1.0 mm thick adhesive in Fig. 23 right did not start to fail, just the four rightmost elements experienced plasticity and have an increased void volume fraction; hence still a large surface area is carrying load.",
+            "startOffset": 79841,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 54307,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "As such, bulk material models are able to process more information than a TSL and it would be advantageous to be able to apply a bulk material model within a cohesive zone.",
+            "startOffset": 54135,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 50016,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 50014,
+                    "startOffset": 50013
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Tailored Forming is a manufacturing process where two metallic materials are joined and formed subsequently [1].",
+            "startOffset": 49904,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 74322,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The adhesive is modeled using the Lemaitre model described before.",
+            "startOffset": 74256,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 48405,
+            "parents": [],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 48242,
+                    "startOffset": 48240
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Leppin and Wriggers [18] used deformation from the surrounding material as a fracture criterion that releases so far rigidly connected nodes and establishes a contact element in between.",
+            "startOffset": 48219,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53770,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In small deformation elasto-plasticity including damage, the stress tensor for bulk material in general depends on the total strains, plastic strains, possibly other internal variables and potentially the temperature and other field quantities.",
+            "startOffset": 53526,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 55160,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Bulk material models on the other hand need volumetric elements, which is a disadvantage for meshing especially if parameter studies involving the joining zone thickness shall be carried out.",
+            "startOffset": 54969,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 75857,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "Again two beams are joined using e.g. an adhesive (green in Fig. 22, no crack initiation zone).",
+            "startOffset": 75762,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 47523,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Here, the Cohesive Zone Element should already initially be in place as the material in the layer is considered to have a different behaviour than the surrounding material.",
+            "startOffset": 47351,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58491,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "Fig. 6 shows the thickness directions perpendicular to the cohesive surface for a sample element shape.",
+            "startOffset": 58388,
+            "title": "Cohesive surface and thickness direction"
+        },
+        {
+            "endOffset": 81293,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Using a constant extrapolation volume during the extrapolation minimises geometrical overlap in loadcases with normal strains and mixed mode loading.",
+            "startOffset": 81144,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 76814,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.1",
+            "sentence": "A Young's modulus of 5 GPa, a yield stress of 100 MPa and a Poisson's ratio to 0.35 are assumed as in the example before.",
+            "startOffset": 76693,
+            "title": "Gurson model"
+        },
+        {
+            "endOffset": 78294,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.2",
+            "sentence": "During the delamination the material is subjected to large strain changes within one step.",
+            "startOffset": 78204,
+            "title": "Estimation of plastic variables and porosity"
+        },
+        {
+            "endOffset": 72648,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "Fig. 14 shows three different meshes of a sandwich structure.",
+            "startOffset": 72587,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 44251,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "However, the joining zone is heavily loaded during forming.",
+            "startOffset": 44192,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51012,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Due to the significantly different material properties of the joining partners, it is very likely that large stresses occur close to or directly in the joining zone.",
+            "startOffset": 50847,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 70584,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The joining zone is again first modeled with volumetric elements; afterwards a comparison with initially flat InTEx elements is made.",
+            "startOffset": 70451,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 81576,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Simulating an intended Tailored Forming process with the expected joining zone thickness and an appropriate mesh size around, a deviation of about 0.01% is achieved.",
+            "startOffset": 81411,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 51545,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "For a better representation CZEs are often shown with a small instead of a zero thickness (Fig. 4).",
+            "startOffset": 51446,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 76322,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "refoffsets": {
+                "bib36": {
+                    "endOffset": 76282,
+                    "startOffset": 76280
+                }
+            },
+            "secId": "sec6.5",
+            "sentence": "Hence the adhesive is subjected to tension, where e.g. a Gurson model [36] can be applied to investigate failure.",
+            "startOffset": 76209,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 78364,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.2",
+            "sentence": "A local iteration is necessary compared to a Traction Separation Law.",
+            "startOffset": 78295,
+            "title": "Estimation of plastic variables and porosity"
+        },
+        {
+            "endOffset": 55286,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Additionally, thin 3D finite elements might lead to numerical difficulties in case of large deformations and mesh distorsion.",
+            "startOffset": 55161,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 51811,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the cohesive surface two different deformation modes are defined:",
+            "startOffset": 51743,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 55646,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Applying InTEx, a new geometry is created that is considered only on the element level of each cohesive element.",
+            "startOffset": 55534,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 48720,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 48567,
+                    "startOffset": 48565
+                },
+                "bib20": {
+                    "endOffset": 48613,
+                    "startOffset": 48611
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The same applies to the crack band method [19] and generally to smeared cracking models [20], where the discontinuity of a crack within one solid material is handled as softening within a thin band.",
+            "startOffset": 48522,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74489,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The Young's modulus is set to 5 GPa, the yield stress to 100 MPa and the Poisson's ratio to 0.35 which reflects the material behaviour of polymers (like an adhesive).",
+            "startOffset": 74323,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 44789,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The joining zone thickness depends on manufacturing process parameters but is small in general.",
+            "startOffset": 44694,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70215,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "For the surrounding material, von Mises plasticity with yield stresses of 300 MPa/100 MPa and Young's moduli of 210 GPa/70 GPa is assumed for steel/aluminium.",
+            "startOffset": 70057,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 45463,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "CZEs use Traction Separation Laws (TSLs) to describe the constitutive behaviour.",
+            "startOffset": 45383,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79840,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "The 0.1 mm thick adhesive in Fig. 23 left already completely failed in the 4 rightmost elements, three further elements experienced plasticity and have an increased void volume fraction.",
+            "startOffset": 79654,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 51612,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "After some loading, the initially matching nodes may have some gap.",
+            "startOffset": 51545,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 79316,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "The state after applying a vertical displacement of \u00b10.3 mm on the upper right and lower right node depends on the thickness of the adhesive.",
+            "startOffset": 79175,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 44978,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "An initially flat element like a Cohesive Zone Element (CZE) is therefore beneficial for meshing, especially if parameter studies involving the joining zone thickness shall be carried out.",
+            "startOffset": 44790,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47691,
+            "parents": [],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 47689,
+                    "startOffset": 47687
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In the Strong Discontinuity Approach (SDA), Simo and coworkers allowed for discontinuous deformation within volumetric elements described by bulk material models [14].",
+            "startOffset": 47524,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46577,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 46575,
+                    "startOffset": 46574
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In contrast to TSLs they use relative variables (strain) instead of absolute ones (displacement jump) [6].",
+            "startOffset": 46471,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 63743,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Therefore an advantage of one method with respect to the other regarding incompressibility cannot be expected.",
+            "startOffset": 63633,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 54727,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "An approach that enables this combination is presented in the next section.",
+            "startOffset": 54652,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 72798,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "The joining zone is again first modeled with volumetric elements (grey elements, 6.4 mm thickness); afterwards initially flat InTEx elements are used.",
+            "startOffset": 72648,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 50782,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The usual forming processes for Tailored Forming components are pressure dominant, especially normal to the joining zone.",
+            "startOffset": 50661,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 51983,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 51981,
+                    "startOffset": 51979
+                },
+                "bib7": {
+                    "endOffset": 51978,
+                    "startOffset": 51977
+                }
+            },
+            "secId": "sec3",
+            "sentence": "For each of these deformation modes a Traction Separation Law (TSL) is used as a constitutive relation [7,28].",
+            "startOffset": 51873,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 74908,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The joined component is constrained in vertical direction close to its ends and loaded vertically at the center by a displacement (Fig. 19).",
+            "startOffset": 74768,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 47350,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 47132,
+                    "startOffset": 47130
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Settgast and Rashid developed continuum coupled Cohesive Zone Elements [13], which consider the material state in bulk material to determine when and where Cohesive Zone Elements shall be inserted; the stress state is then calculated in relation to the bulk material model and the separation.",
+            "startOffset": 47058,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47844,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 47842,
+                    "startOffset": 47840
+                }
+            },
+            "secId": "sec1",
+            "sentence": "A similar objective is aimed in the finite thickness band method with the difference that weak discontinuities within volumetric elements are used [15].",
+            "startOffset": 47692,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48521,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This formulation does not allow to use a different material for the failure zone than for the surrounding material.",
+            "startOffset": 48406,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52637,
+            "parents": [],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 52635,
+                    "startOffset": 52633
+                }
+            },
+            "secId": "sec3",
+            "sentence": "In this context it is recommended to calibrate the TSL based on a unit cell model containing voids and employing an elasto-plastic constitutive equation or equivalently using a Gurson model [29].",
+            "startOffset": 52442,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 73111,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "Symmetry boundary conditions are applied on the left and on the bottom edge, so that an aluminium-steel-aluminium sandwich structure is represented.",
+            "startOffset": 72963,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 45382,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 45316,
+                    "startOffset": 45315
+                }
+            },
+            "secId": "sec1",
+            "sentence": "A recent review paper from Needleman [6] describes the development from the early beginnings until today.",
+            "startOffset": 45277,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68510,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "A yield stress of 200 MPa, a Young's modulus of 140 GPa and damage evolution variables of S = 1 and s = 1 are used for the joining zone material.",
+            "startOffset": 68365,
+            "title": "Numerical examples"
+        },
+        {
+            "endOffset": 46307,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To adequately simulate deformation and damaging behaviour during Tailored Forming, additional force components have to be considered, but the restriction to elastic plastic collinearity is not acceptable.",
+            "startOffset": 46103,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69772,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "As a more realistic example regarding the intended Tailored Forming process, a quarter of a slice of the bearing bush in Fig. 2 is simulated.",
+            "startOffset": 69631,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 75531,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "For comparison a load deflection curve with deactivated damage in the adhesive (S = 100) is shown.",
+            "startOffset": 75433,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 53499,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Due to this and the deficiencies described in section 1, available cohesive zone models are not capable of reflecting the damaging process of a Tailored Forming joining zone.",
+            "startOffset": 53325,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 74255,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The beams are assumed to behave purely elastic (Young's modulus 70 GPa), they have a length of 20 mm and a thickness of 2 mm each.",
+            "startOffset": 74125,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 80156,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "As a larger surface area (compared to a thinner layer) carries load, a higher load is transmitted.",
+            "startOffset": 80058,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 62571,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Different discretised geometries (left in Table 1) are used to compare the extrapolated geometries for the discussed strategies of Internal Thickness Extrapolation (center and right).",
+            "startOffset": 62388,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 62864,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Horizontal movement of the node shows the first difference.",
+            "startOffset": 62805,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 63462,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "The retained extrapolation volume approach only compensates the volume change induced by a cohesive surface area change.",
+            "startOffset": 63342,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 62938,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Using the first approach, the thickness remains constant - by definition.",
+            "startOffset": 62865,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 47936,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Though, extra elements with a different material at specified positions are necessary here.",
+            "startOffset": 47845,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50563,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Forming is done after the joining process.",
+            "startOffset": 50521,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 75613,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "A smooth transition to a plastic behaviour with linear hardening can be observed.",
+            "startOffset": 75532,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 63961,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "Imagining the discretised geometry in Table 1 is flat (in the initial and maybe also in the current configuration), the extrapolated geometry still has a thickness and a volume.",
+            "startOffset": 63784,
+            "title": "Mechanics in the extrapolated geometry"
+        },
+        {
+            "endOffset": 69844,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "It focusses normal strains instead of shearing in the previous section.",
+            "startOffset": 69773,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 73792,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "For InTEx with a constant extrapolation volume the overlap is considerably smaller and it occurs only in the rightmost element of the finest mesh which has an overhang of about a third of the element size due to shearing.",
+            "startOffset": 73571,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 46727,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Though there are some concepts to combine them:",
+            "startOffset": 46680,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44191,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This processing order allows for new designs of hybrid material components.",
+            "startOffset": 44116,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46470,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Here, elasto-plasticity does not require collinear elastic and plastic deformation.",
+            "startOffset": 46387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50660,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The process chain for the production of a hybrid bearing bush for example is depicted in Fig. 2.",
+            "startOffset": 50564,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 59423,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The general procedure of the extrapolation process is shown in Fig. 8.",
+            "startOffset": 59353,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 75232,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The decreases occur when an element undergoes severe damage and thus has a reduced load carrying capacity.",
+            "startOffset": 75126,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 69184,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "It is fixed normal to the visible plane to generate plane strain conditions.",
+            "startOffset": 69108,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 62703,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "For testing purposes node 6 is moved (subsequent rows).",
+            "startOffset": 62648,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 81052,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Furthermore standard Cohesive Zone Element tests can be carried out using InTEx where the results strongly depend on the layer thickness.",
+            "startOffset": 80915,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 68790,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "In the following examples Poisson ratios of 0.3 are assumed for the joining zone as well as for the surrounding material if not specified differently.",
+            "startOffset": 68640,
+            "title": "Numerical examples"
+        },
+        {
+            "endOffset": 51119,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This may lead to damage, delamination or fracture processes at the interface between the joining partners.",
+            "startOffset": 51013,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 53324,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This complicates the calibration and use of TSLs.",
+            "startOffset": 53275,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 60148,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The length in the initial configuration should be set according to the physical thickness of the represented layer, i.e. a material parameter.",
+            "startOffset": 60006,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 49113,
+            "parents": [],
+            "refoffsets": {
+                "bib23": {
+                    "endOffset": 48980,
+                    "startOffset": 48978
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Manzoli et al. [23] used bulk material models for the simulation of interfaces but incorporated them in volumetric elements that are thin but not flat.",
+            "startOffset": 48962,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51873,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Tangential separation (in two directions).",
+            "startOffset": 51831,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 71101,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The simulations are equivalently done using initially flat InTEx elements (Fig. 13 left).",
+            "startOffset": 71012,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 80780,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Internal Thickness Extrapolation (InTEx) enables this combination.",
+            "startOffset": 80714,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49428,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This allows to describe the relevant deformation and damage modes but it necessitates the definition of two different material models for one single material.",
+            "startOffset": 49270,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51208,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 51176,
+                    "startOffset": 51173
+                },
+                "bib8": {
+                    "endOffset": 51176,
+                    "startOffset": 51173
+                },
+                "bib9": {
+                    "endOffset": 51176,
+                    "startOffset": 51173
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Cohesive Zone Elements (CZEs) [7\u20139] are initially absolutely flat.",
+            "startOffset": 51142,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 45787,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Recent models are potential based; normal and tangential tractions as well as material tangents are gained by taking derivatives of this potential.",
+            "startOffset": 45640,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57043,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "This geometry is used as the initial configuration for the bulk material model.",
+            "startOffset": 56964,
+            "title": "Cohesive surface and thickness direction"
+        },
+        {
+            "endOffset": 73908,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The end notch flexure test is frequently used to test Cohesive Zone Elements (Fig. 19).",
+            "startOffset": 73821,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 64665,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "The deformation gradient could be used for any formulation with any deformation measure and material model.",
+            "startOffset": 64558,
+            "title": "Mechanics in the extrapolated geometry"
+        },
+        {
+            "endOffset": 58612,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Specific possibilities to perform Internal Thickness Extrapolation have to be investigated.",
+            "startOffset": 58521,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 63342,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Further vertical movement - even if the discretised geometry has a negative thickness - just causes further reduction of the thickness.",
+            "startOffset": 63207,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 72507,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Furthermore it is worth noting that the damage just slightly depends on the joining zone thickness.",
+            "startOffset": 72408,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 68942,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "To verify the element formulation under different load conditions and to investigate mesh dependency, different examples are chosen.",
+            "startOffset": 68810,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 69450,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "The same simulation is done with a flat discretisation (Fig. 11) and Internal Thickness Extrapolation to reconstruct the physical geometry as it was in Fig. 10.",
+            "startOffset": 69290,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 73278,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "The same simulations are done using initially flat InTEx elements (Fig. 16).",
+            "startOffset": 73202,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 73465,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "InTEx elements with a constant extrapolation thickness and with a constant extrapolation volume lead to a very similar deformed shape (Figs. 17 and 18) as volumetric modelling (Fig. 15).",
+            "startOffset": 73279,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 45148,
+            "parents": [],
+            "refoffsets": {
+                "bib2": {
+                    "endOffset": 45038,
+                    "startOffset": 45037
+                },
+                "bib3": {
+                    "endOffset": 45062,
+                    "startOffset": 45061
+                },
+                "bib4": {
+                    "endOffset": 45077,
+                    "startOffset": 45076
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Based on cohesive fracture formulations from Dugdale 1960 [2] and Barenblatt 1962 [3], Needleman [4] introduced Cohesive Zone Elements in finite element analysis in 1987.",
+            "startOffset": 44978,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79415,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "The crack proceeds further for a lower thickness (Fig. 23 left) than for a higher (Fig. 23 right).",
+            "startOffset": 79317,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 70380,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The bearing bush is widened radially during the forming process (to an inner radius of 8 mm, arrows in Fig. 12 left).",
+            "startOffset": 70263,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 71916,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "In both cases no material penetration (negative determinant of the deformation gradient) occurs, just geometrical overlap that is extrapolated to positive volumes according to section 5.2.4.",
+            "startOffset": 71726,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 50272,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Various material combinations (20MnCr5-AW6082, C22-41Cr4, C22-X45CrSi9-3), joining processes (friction stir welding, laser welding, deposition welding, coextrusion) and forming processes (cross-wedge rolling, die forging, extrusion) are under examination.",
+            "startOffset": 50017,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 78563,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.2",
+            "sentence": "For the estimation it is assumed that the elastic deformation gradient remains constant.",
+            "startOffset": 78475,
+            "title": "Estimation of plastic variables and porosity"
+        },
+        {
+            "endOffset": 46679,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Hence, volumetric material models are not directly combinable with initially flat elements like CZEs.",
+            "startOffset": 46578,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71470,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The observations from Fig. 13 are reflected.",
+            "startOffset": 71426,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 44694,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Residual strains existing before or resulting from the process and damaging behaviour of the surrounding material are out of the scope here.",
+            "startOffset": 44554,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69900,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The example is again forced in plane strain conditions.",
+            "startOffset": 69845,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 75761,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "The double cantilever beam test, which is also a frequently used test for Cohesive Zone Elements, is investigated.",
+            "startOffset": 75647,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 51445,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The first half of the nodes (1\u20264) represents the connection to one joining partner, the second half (5\u20268) to the other.",
+            "startOffset": 51326,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 63632,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "The total volume of the extrapolated element geometry is not fixed, it can change due to elastic or plastic deformations (e.g. in double cantilever beam example in 6.5).",
+            "startOffset": 63463,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 75912,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "InTEx with retained extrapolation volume is used here.",
+            "startOffset": 75858,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 44442,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To evaluate the possibility of damage in a coarse scale simulation, a model has to be developed that captures the complex microstructural behaviour effectively on a macroscopic length scale.",
+            "startOffset": 44252,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60005,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The thickness direction n from section 5.1 is used as the direction for \u03ba in the current configuration (N is used for K in the initial configuration).",
+            "startOffset": 59855,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 74972,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "Shearing starts at the left half of the joining zone (Fig. 20).",
+            "startOffset": 74909,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 80552,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Bulk material models process more information about the deformation and are therefore beneficial for this application.",
+            "startOffset": 80434,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 55420,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "A possibility to overcome this limitation is to use flat elements and extrapolate the thickness internally within the finite element.",
+            "startOffset": 55287,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 46102,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 46100,
+                    "startOffset": 46098
+                },
+                "bib9": {
+                    "endOffset": 46097,
+                    "startOffset": 46096
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In the case of elasto-plasticity, the elastic and plastic displacement has to be collinear [9,10].",
+            "startOffset": 46004,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52817,
+            "parents": [],
+            "refoffsets": {
+                "bib30": {
+                    "endOffset": 52812,
+                    "startOffset": 52810
+                },
+                "bib31": {
+                    "endOffset": 52815,
+                    "startOffset": 52813
+                }
+            },
+            "secId": "sec3",
+            "sentence": "For mixed mode analyses (combinations of normal and tangential separations), the tangential separation may directly be part of the TSL for normal separation and vice versa [30,31].",
+            "startOffset": 52637,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 58708,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "Out of many theoretically possible strategies, the two most auspicious ones are presented here.",
+            "startOffset": 58613,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 71607,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The overlap using InTEx with constant extrapolation thickness (T) is nearly equal to the thickness reduction of the volumetric elements.",
+            "startOffset": 71471,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 44553,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The focus of this contribution is the damage evolution in the joining zone resulting from the forming process.",
+            "startOffset": 44443,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59652,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The black solid lines represent the discretised geometry of one element and the green dotted lines its extrapolated geometry (thickened to incorporate the volumetric bulk material model even if the discretised geometry is flat).",
+            "startOffset": 59424,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 69066,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "Fig. 10 shows a volumetric element (left) that is subjected to a shear load (right).",
+            "startOffset": 68982,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 72408,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "It is in the range of 0.01% or below for the thicknesses of up to 3.2 \u03bcm that are expected to occur according to section 2.",
+            "startOffset": 72285,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 75316,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "During these load steps the concerned material is subjected to a large deformation.",
+            "startOffset": 75233,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 48133,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 48068,
+                    "startOffset": 48066
+                },
+                "bib17": {
+                    "endOffset": 48071,
+                    "startOffset": 48069
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Paggi and Wriggers developed and applied a cohesive model for finite thickness interfaces to be used in zero thickness elements [16,17] where tangential and normal separation are considered in 2D.",
+            "startOffset": 47937,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62805,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "The initial extrapolated geometries are shown in the background to simplify the detection of changes.",
+            "startOffset": 62704,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 52441,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "These parameters are heavily dependent on the triaxiality of the stress state.",
+            "startOffset": 52363,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 80222,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "In total a larger energy can be dissipated by a thicker adhesive.",
+            "startOffset": 80157,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 54575,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A drawback of bulk material models concerning a 2D manifold is that derivatives also in normal direction to the cohesive zone are required to calculate the 3D strain tensor.",
+            "startOffset": 54402,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 52102,
+            "parents": [],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 52100,
+                    "startOffset": 52098
+                }
+            },
+            "secId": "sec3",
+            "sentence": "TSLs relate tractions to displacement jumps; they are formulated using functions (e.g. polynomials) depending on [29]:",
+            "startOffset": 51984,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 72586,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "In the next example a mixed mode load case is investigated.",
+            "startOffset": 72527,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 52177,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Cohesive strength: The maximum stress during the whole separation process,",
+            "startOffset": 52103,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 76159,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "The beams are assumed to behave purely elastic (Young's modulus 70 GPa), they have a length of 18 mm and a thickness of 4 mm each.",
+            "startOffset": 76029,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 62647,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "The initial extrapolated geometry is the same for both methods (first row).",
+            "startOffset": 62572,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 74535,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The extrapolation thickness is set to 0.1 mm.",
+            "startOffset": 74490,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 57233,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.1",
+            "sentence": "In the current configuration (Fig. 5c) the same extrapolation is applied to generate a volumetric geometry (Fig. 5d), that can be used to define the deformation for the bulk material model.",
+            "startOffset": 57044,
+            "title": "Cohesive surface and thickness direction"
+        },
+        {
+            "endOffset": 59796,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The lighter drawn element on the left sides shows that the compatibility condition holds for the discretised but not for the extrapolated nodes.",
+            "startOffset": 59652,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 59854,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "The vector \u03ba has a certain length and a certain direction.",
+            "startOffset": 59796,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 74768,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The damage evolution variables are set to S = 0.5 and s = 1.",
+            "startOffset": 74708,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 70263,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The joining zone material is assumed as before.",
+            "startOffset": 70216,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 78474,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.2",
+            "sentence": "Thus a good estimation of the state variables is needed to accelerate the iteration but also to stabilise it.",
+            "startOffset": 78365,
+            "title": "Estimation of plastic variables and porosity"
+        },
+        {
+            "endOffset": 45639,
+            "parents": [],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 45637,
+                    "startOffset": 45636
+                }
+            },
+            "secId": "sec1",
+            "sentence": "An overview of functions used for that is given by Chandra et al. [7].",
+            "startOffset": 45569,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50461,
+            "parents": [],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 50459,
+                    "startOffset": 50457
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Joining steel and aluminium (20MnCr5-AW6082) using friction stir welding, a joining zone thickness distribution with an upper bound of 3.0 \u03bcm\u20133.4 \u03bcm results after some heat treatment [26].",
+            "startOffset": 50273,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 51743,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The points (S1\u2026S4) in the middle between the initially matching nodes define a virtual surface, often called the cohesive surface.",
+            "startOffset": 51613,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 71425,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The change of the node distances is used for this measure.",
+            "startOffset": 71367,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 69230,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "The upper nodes are moved 15 mm to the right.",
+            "startOffset": 69185,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 75432,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "For a volumetric material model, where each state has to be iterated, this leads to an additional numerical effort.",
+            "startOffset": 75317,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 48851,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 48846,
+                    "startOffset": 48844
+                },
+                "bib22": {
+                    "endOffset": 48849,
+                    "startOffset": 48847
+                }
+            },
+            "secId": "sec1",
+            "sentence": "There are also ideas to calculate a deformation gradient based on the kinematic assumption of a finite width of the layer [21,22].",
+            "startOffset": 48721,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54651,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "As a consequence, bulk material models cannot directly be applied to a CZE.",
+            "startOffset": 54576,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 45276,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 45274,
+                    "startOffset": 45273
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Three dimensional irreversible Cohesive Zone Elements for finite deformations were developed by Ortiz and Pandolfi in 1999 [5].",
+            "startOffset": 45149,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48961,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Though they are restricted to 2D and small strains, they are used for the simulation of plastic localisation.",
+            "startOffset": 48852,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54134,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Bulk material models in general relate tensorial quantities expressing the state of a material point in 3D.",
+            "startOffset": 54027,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 51325,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the case of an eight noded element, they look like quadrilateral elements with two nodes at each corner (Fig. 3).",
+            "startOffset": 51209,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 74080,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The difference to InTEx with retained extrapolation thickness is small as the cohesive surface area change is small.",
+            "startOffset": 73964,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 81143,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "A reasonable choice for the layer thickness is the physical thickness of the joining zone.",
+            "startOffset": 81053,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 54968,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "As described in section 3, Traction Separation Laws (TSLs) in Cohesive Zone Elements (CZEs) cannot fully capture all the relevant deformation modes for the damaging process of a Tailored Forming joining zone.",
+            "startOffset": 54760,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 73963,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "Here InTEx with retained extrapolation volume is used.",
+            "startOffset": 73909,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 76513,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "This matches the recommendation to calibrate Traction Separation Laws with a Gurson model (Section 3) but goes beyond that as automatic adaption to the current hydrostatic state is realised.",
+            "startOffset": 76323,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 49565,
+            "parents": [],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 49563,
+                    "startOffset": 49561
+                }
+            },
+            "secId": "sec1",
+            "sentence": "With a focus on elastic brittle material, fracture mechanics could also be applied which leads to complex stress intensity factors [25].",
+            "startOffset": 49429,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71982,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "For each case the damage in all joining zone elements is the same.",
+            "startOffset": 71916,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 76208,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "In this test separation of the beams is studied.",
+            "startOffset": 76160,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 54401,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "It would e.g. allow to capture in-plane stretching even if no material separation is present.",
+            "startOffset": 54308,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 58801,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "During the discussion just a side view of the element is considered for simplicity (Fig. 7).",
+            "startOffset": 58709,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 63121,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                },
+                {
+                    "id": "sec5.2",
+                    "title": "Extrapolation possibilities"
+                }
+            ],
+            "secId": "sec5.2.4",
+            "sentence": "Keeping the extrapolation volume constant, the extrapolated geometry is getting thicker as the cohesive surface has a reduced size (here equivalent to the length of the dashed line).",
+            "startOffset": 62939,
+            "title": "Comparison of extrapolation methods"
+        },
+        {
+            "endOffset": 74707,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "A crack initiation zone is realised on the left side (two elements with a yield stress reduced by a factor of 1000, red in Fig. 19, the sound elements are drawn in green).",
+            "startOffset": 74536,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 50521,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "One sample measurement of the thickness is shown in Fig. 1.",
+            "startOffset": 50462,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 50847,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In some cases the surface area of the joining zone is increased.",
+            "startOffset": 50783,
+            "title": "Tailored Forming joining zone"
+        },
+        {
+            "endOffset": 54027,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 53867,
+                    "startOffset": 53866
+                },
+                "bib9": {
+                    "endOffset": 53940,
+                    "startOffset": 53939
+                }
+            },
+            "secId": "sec4",
+            "sentence": "This is in contrast to TSLs, where a traction vector is related to a displacement jump vector [6] on a geometrical manifold (models according to the Ottosen framework [9] are neglected here due to the restriction of collinear elastic and plastic openings).",
+            "startOffset": 53771,
+            "title": "Volumetric material models"
+        },
+        {
+            "endOffset": 44115,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 44113,
+                    "startOffset": 44112
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Tailored Forming is a manufacturing process where two metallic materials are joined and formed subsequently [1].",
+            "startOffset": 44003,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81410,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Compared to volumetric modelling, the deviation in the determined damage depends on the thickness of the thin layer.",
+            "startOffset": 81294,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 49776,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In this contribution a novel approach to incorporate bulk material in a flat element is presented along with some examples demonstrating the possibilities that a bulk material model for a joining zone may offer.",
+            "startOffset": 49565,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45831,
+            "parents": [],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 45829,
+                    "startOffset": 45828
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Examples are given by Park and Paulino [8].",
+            "startOffset": 45788,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48218,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This concept is limited to the loading directions of usual Traction Separation Laws.",
+            "startOffset": 48134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46003,
+            "parents": [],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 46001,
+                    "startOffset": 46000
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Membrane like forces and out of plane shear forces are taken into account by Ottosen et al. [9].",
+            "startOffset": 45907,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75125,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "The load deflection curve depicts elastic behaviour up to a certain load limit followed by multiple load decreases and increases (blue graph in Fig. 21).",
+            "startOffset": 74972,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 52363,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Critical separation: The separation between the interface partners at which total rupture occurs.",
+            "startOffset": 52266,
+            "title": "Cohesive Zone Elements"
+        },
+        {
+            "endOffset": 79524,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.3",
+            "sentence": "The load deflection curve (Fig. 24) shows higher maximum and later decreasing forces for a thicker adhesive.",
+            "startOffset": 79416,
+            "title": "Double cantilever beam - simulation"
+        },
+        {
+            "endOffset": 72195,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The deviation of the damage is slightly bigger for InTEx with a constant extrapolation volume (V) compared to InTEx with a constant extrapolation thickness (T).",
+            "startOffset": 72035,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 80713,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Though they use strains that are relative measures and hence are usually not applicable in combination with initially flat elements like Cohesive Zone Elements.",
+            "startOffset": 80553,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60224,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.2",
+            "sentence": "If and how this changes in the current configuration needs to be discussed.",
+            "startOffset": 60149,
+            "title": "Extrapolation possibilities"
+        },
+        {
+            "endOffset": 74124,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.4",
+            "sentence": "Two beams are joined using e.g. an adhesive.",
+            "startOffset": 74080,
+            "title": "Example: end notch flexure"
+        },
+        {
+            "endOffset": 45906,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These models consider tractions for normal and tangential separation only.",
+            "startOffset": 45832,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69290,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "A damage of D = 0.11356 results after the shearing process.",
+            "startOffset": 69231,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 71366,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Table 2 shows the joining zone thickness reduction for all simulations.",
+            "startOffset": 71295,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 68640,
+            "parents": [],
+            "secId": "sec6",
+            "sentence": "Only one integration point per element is employed, so the results can easily be compared as there is only one value per element.",
+            "startOffset": 68511,
+            "title": "Numerical examples"
+        },
+        {
+            "endOffset": 76029,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.5",
+            "sentence": "The difference to InTEx with retained extrapolation thickness is small as the cohesive surface area change is small.",
+            "startOffset": 75913,
+            "title": "Example: double cantilever beam"
+        },
+        {
+            "endOffset": 49269,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 49133,
+                    "startOffset": 49131
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Esmaeili et al. [24] combined classical cohesive modelling for normal and tangential directions with bulk material behaviour for the additional directions.",
+            "startOffset": 49114,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71725,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "There is also an overlap using InTEx with constant extrapolation volume (V) but it is smaller by orders of magnitude.",
+            "startOffset": 71608,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 72963,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.3",
+            "sentence": "The mesh has a total size of 40 mm \u00d7 40 mm.",
+            "startOffset": 72920,
+            "title": "Example: sandwich"
+        },
+        {
+            "endOffset": 72035,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The results of the simulations are shown in Table 3.",
+            "startOffset": 71983,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 71295,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "InTEx with a constant extrapolation thickness (Fig. 13 center) leads to a visible overlap; this cannot be observed to a significant extent using a constant extrapolation volume (Fig. 13 right).",
+            "startOffset": 71102,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 46386,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Volumetric material models are able to take all deformation modes into account.",
+            "startOffset": 46307,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55533,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This is discussed extensively and as an acronym InTEx (Internal Thickness Extrapolation) will be used hereafter.",
+            "startOffset": 55421,
+            "title": "Internal Thickness Extrapolation"
+        },
+        {
+            "endOffset": 80914,
+            "parents": [],
+            "secId": "sec7",
+            "sentence": "Different approaches for InTEx were derived and their resulting properties were demonstrated for Tailored Forming relevant load cases.",
+            "startOffset": 80780,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64277,
+            "parents": [
+                {
+                    "id": "sec5",
+                    "title": "Internal Thickness Extrapolation"
+                }
+            ],
+            "secId": "sec5.3",
+            "sentence": "This allows to calculate relative1 tensorial measures describing the strain so that bulk material models can be used in (initially) flat elements like CZEs (cf. motivation in section 4).",
+            "startOffset": 63962,
+            "title": "Mechanics in the extrapolated geometry"
+        },
+        {
+            "endOffset": 68981,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "First a simple shear test is executed.",
+            "startOffset": 68943,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 69107,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.1",
+            "sentence": "The element has a size of 80 mm \u00d7 10 mm.",
+            "startOffset": 69067,
+            "title": "Example: shearing"
+        },
+        {
+            "endOffset": 49874,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The formulation works in 3D, with large strains and can be combined with any bulk material model.",
+            "startOffset": 49777,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 76987,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                },
+                {
+                    "id": "sec6.5",
+                    "title": "Example: double cantilever beam"
+                }
+            ],
+            "secId": "sec6.5.1",
+            "sentence": "Setting f = 0, the yield function reduces to von Mises plasticity.",
+            "startOffset": 76921,
+            "title": "Gurson model"
+        },
+        {
+            "endOffset": 70779,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "Additionally 100 \u03bcm is used for better visibility in Fig. 12.",
+            "startOffset": 70718,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 71012,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The surface area is increased and the thickness reduced during forming.",
+            "startOffset": 70941,
+            "title": "Example: bearing bush"
+        },
+        {
+            "endOffset": 70056,
+            "parents": [
+                {
+                    "id": "sec6",
+                    "title": "Numerical examples"
+                }
+            ],
+            "secId": "sec6.2",
+            "sentence": "The core consists of steel (inner radius 3 mm), outside there is aluminium (outer radius 11 mm), in between is the thin joining zone (at a radius of 5 mm).",
+            "startOffset": 69901,
+            "title": "Example: bearing bush"
+        }
+    ],
+    "docId": "S0168874X18303706",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "toeller@ikm.uni-hannover.de",
+                "first": "Felix",
+                "initial": "F.",
+                "last": "T\u00f6ller"
+            },
+            {
+                "email": null,
+                "first": "Stefan",
+                "initial": "S.",
+                "last": "L\u00f6hnert"
+            },
+            {
+                "email": null,
+                "first": "Peter",
+                "initial": "P.",
+                "last": "Wriggers"
+            }
+        ],
+        "doi": "10.1016/j.finel.2018.12.002",
+        "firstpage": "42",
+        "issn": "0168874X",
+        "keywords": [
+            "Bulk material models",
+            "Cohesive Zone Elements",
+            "Internal Thickness Extrapolation (InTEx)",
+            "Joining zone",
+            "Tailored Forming",
+            "Traction Separation Laws"
+        ],
+        "lastpage": "54",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "Bulk material models in Cohesive Zone Elements for simulation of joining zones"
+    }
+}

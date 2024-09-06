@@ -1,0 +1,3380 @@
+{
+    "abstract": "The creation of a process model is a process consisting of five distinct phases, i.e., problem understanding, method finding, modeling, reconciliation, and validation. To enable a fine-grained analysis of process model creation based on phases or the development of phase-specific modeling support, an automatic approach to detect phases is needed. While approaches exist to automatically detect modeling and reconciliation phases based on user interactions, the detection of phases without user interactions (i.e., problem understanding, method finding, and validation) is still a problem. Exploiting a combination of user interactions and eye tracking data, this paper presents a two-step approach that is able to automatically detect the sequence of phases a modeler is engaged in during model creation. The evaluation of our approach shows promising results both in terms of quality as well as computation time demonstrating its feasibility.",
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Fettke"
+                }
+            ],
+            "doi": "10.17705/1cais.02543",
+            "firstpage": "571",
+            "issn": "15293181",
+            "lastpage": "592",
+            "pub_year": 2009,
+            "title": "How conceptual modeling is used",
+            "volume": "25"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "W. M.P.",
+                    "initial": "W.M.P.",
+                    "last": "Van der Aalst"
+                },
+                {
+                    "first": "A. H.M.",
+                    "initial": "A.H.M.",
+                    "last": "Ter Hofstede"
+                },
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Kiepuszewski"
+                },
+                {
+                    "first": "A. P.",
+                    "initial": "A.P.",
+                    "last": "Barros"
+                }
+            ],
+            "doi": "10.1023/A:1022883727209",
+            "firstpage": "5",
+            "issn": "09268782",
+            "lastpage": "51",
+            "pub_year": 2003,
+            "title": "Workflow patterns",
+            "volume": "14"
+        },
+        "b11": null,
+        "b12": {
+            "authors": [
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Weber"
+                },
+                {
+                    "first": "Manfred",
+                    "initial": "M.",
+                    "last": "Reichert"
+                },
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Mendling"
+                },
+                {
+                    "first": "Hajo A.",
+                    "initial": "H.A.",
+                    "last": "Reijers"
+                }
+            ],
+            "doi": "10.1016/j.compind.2010.12.012",
+            "firstpage": "467",
+            "issn": "01663615",
+            "lastpage": "486",
+            "pub_year": 2011,
+            "title": "Refactoring large process model repositories",
+            "volume": "62"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Marian",
+                    "initial": "M.",
+                    "last": "Petre"
+                }
+            ],
+            "doi": "10.1145/203241.203251",
+            "firstpage": "33",
+            "issn": "00010782",
+            "lastpage": "44",
+            "pub_year": 1995,
+            "title": "Why Looking Isn't Always Seeing: Readership Skills and Graphical Programming",
+            "volume": "38"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Mendling"
+                },
+                {
+                    "first": "Hajo A.",
+                    "initial": "H.A.",
+                    "last": "Reijers"
+                },
+                {
+                    "first": "Jorge",
+                    "initial": "J.",
+                    "last": "Cardoso"
+                }
+            ],
+            "firstpage": "48",
+            "issn": "03029743",
+            "lastpage": "63",
+            "pub_year": 2007,
+            "title": "What makes process models understandable?",
+            "volume": "4714"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Krogstie"
+                },
+                {
+                    "first": "Guttorm",
+                    "initial": "G.",
+                    "last": "Sindre"
+                },
+                {
+                    "first": "H\u00e5vard",
+                    "initial": "H.",
+                    "last": "J\u00f8rgensen"
+                }
+            ],
+            "doi": "10.1057/palgrave.ejis.3000598",
+            "firstpage": "91",
+            "issn": "0960085X",
+            "lastpage": "102",
+            "pub_year": 2006,
+            "title": "Process models representing knowledge for action: A revised quality framework",
+            "volume": "15"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Jakob",
+                    "initial": "J.",
+                    "last": "Pinggera"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Zugal"
+                },
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Weber"
+                }
+            ],
+            "firstpage": "13",
+            "issn": "16130073",
+            "lastpage": "18",
+            "pub_year": 2010,
+            "title": "Investigating the process of process modeling with cheetah experimental platform- Tool paper",
+            "volume": "603"
+        },
+        "b17": null,
+        "b18": {
+            "authors": [
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Weber"
+                },
+                {
+                    "first": "Jakob",
+                    "initial": "J.",
+                    "last": "Pinggera"
+                },
+                {
+                    "first": "Manuel",
+                    "initial": "M.",
+                    "last": "Neurauter"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Zugal"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "Martini"
+                },
+                {
+                    "first": "Marco",
+                    "initial": "M.",
+                    "last": "Furtner"
+                },
+                {
+                    "first": "Pierre",
+                    "initial": "P.",
+                    "last": "Sachse"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Schnitzer"
+                }
+            ],
+            "doi": "10.1109/HICSS.2016.81",
+            "firstpage": "600",
+            "issn": "15301605",
+            "lastpage": "609",
+            "pub_year": 2016,
+            "title": "Fixation patterns during process model creation: Initial steps toward neuro-adaptive process modeling environments",
+            "volume": "2016-"
+        },
+        "b19": null,
+        "b2": null,
+        "b20": null,
+        "b21": null,
+        "b22": null,
+        "b23": null,
+        "b24": {
+            "authors": [
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Hofmann"
+                },
+                {
+                    "first": "Bernhard",
+                    "initial": "B.",
+                    "last": "Sch\u00f6lkopf"
+                },
+                {
+                    "first": "Alexander J.",
+                    "initial": "A.J.",
+                    "last": "Smola"
+                }
+            ],
+            "doi": "10.1214/009053607000000677",
+            "firstpage": "1171",
+            "issn": "00905364",
+            "lastpage": "1220",
+            "pub_year": 2008,
+            "title": "Kernel methods in machine learning",
+            "volume": "36"
+        },
+        "b25": {
+            "authors": [
+                {
+                    "first": "Tin Kam",
+                    "initial": "T.K.",
+                    "last": "Ho"
+                }
+            ],
+            "doi": "10.1109/ICDAR.1995.598994",
+            "firstpage": "278",
+            "issn": "15205363",
+            "lastpage": "282",
+            "pub_year": 1995,
+            "title": "Random decision forests",
+            "volume": "1"
+        },
+        "b26": {
+            "authors": [
+                {
+                    "first": "L. R.",
+                    "initial": "L.R.",
+                    "last": "Rabiner"
+                },
+                {
+                    "first": "B. H.",
+                    "initial": "B.H.",
+                    "last": "Juang"
+                }
+            ],
+            "doi": "10.1109/MASSP.1986.1165342",
+            "firstpage": "4",
+            "issn": "07407467",
+            "lastpage": "16",
+            "pub_year": 1986,
+            "title": "An Introduction to Hidden Markov Models",
+            "volume": "3"
+        },
+        "b27": {
+            "authors": [
+                {
+                    "first": "Sean R.",
+                    "initial": "S.R.",
+                    "last": "Eddy"
+                }
+            ],
+            "doi": "10.1016/S0959-440X(96)80056-X",
+            "firstpage": "361",
+            "issn": "0959440X",
+            "lastpage": "365",
+            "pmid": "8804822",
+            "pub_year": 1996,
+            "title": "Hidden Markov models",
+            "volume": "6"
+        },
+        "b28": {
+            "authors": [
+                {
+                    "first": "Janusz",
+                    "initial": "J.",
+                    "last": "Kacprzyk"
+                },
+                {
+                    "first": "Witold",
+                    "initial": "W.",
+                    "last": "Pedrycz"
+                }
+            ],
+            "doi": "10.1007/978-3-662-43505-2",
+            "firstpage": "1",
+            "lastpage": "1633",
+            "pub_year": 2015,
+            "title": "Springer handbook of computational intelligence"
+        },
+        "b29": null,
+        "b3": {
+            "authors": [
+                {
+                    "first": "S. J.B.A.",
+                    "initial": "S.J.B.A.",
+                    "last": "Hoppenbrouwers"
+                },
+                {
+                    "first": "H. A.",
+                    "initial": "H.A.",
+                    "last": "Proper"
+                },
+                {
+                    "first": "Th P.",
+                    "initial": "T.P.",
+                    "last": "Van Der Weide"
+                }
+            ],
+            "doi": "10.1007/11568322_9",
+            "firstpage": "128",
+            "issn": "03029743",
+            "lastpage": "143",
+            "pub_year": 2005,
+            "title": "A fundamental view on the process of conceptual modeling",
+            "volume": "3716"
+        },
+        "b30": null,
+        "b31": null,
+        "b32": {
+            "authors": [
+                {
+                    "first": "Fabian",
+                    "initial": "F.",
+                    "last": "Pedregosa"
+                },
+                {
+                    "first": "Gael",
+                    "initial": "G.",
+                    "last": "Varoquaux"
+                },
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Gramfort"
+                },
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Michel"
+                },
+                {
+                    "first": "Bertrand",
+                    "initial": "B.",
+                    "last": "Thirion"
+                },
+                {
+                    "first": "Olivier",
+                    "initial": "O.",
+                    "last": "Grisel"
+                },
+                {
+                    "first": "Mathieu",
+                    "initial": "M.",
+                    "last": "Blondel"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Prettenhofer"
+                },
+                {
+                    "first": "Ron",
+                    "initial": "R.",
+                    "last": "Weiss"
+                },
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Dubourg"
+                },
+                {
+                    "first": "Jake",
+                    "initial": "J.",
+                    "last": "Vanderplas"
+                },
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Passos"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Cournapeau"
+                },
+                {
+                    "first": "Matthieu",
+                    "initial": "M.",
+                    "last": "Brucher"
+                },
+                {
+                    "first": "Matthieu",
+                    "initial": "M.",
+                    "last": "Perrot"
+                },
+                {
+                    "first": "\u00c9douard",
+                    "initial": "E.",
+                    "last": "Duchesnay"
+                }
+            ],
+            "firstpage": "2825",
+            "issn": "15324435",
+            "lastpage": "2830",
+            "pub_year": 2011,
+            "title": "Scikit-learn: Machine learning in Python",
+            "volume": "12"
+        },
+        "b33": null,
+        "b4": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Rittgen"
+                }
+            ],
+            "firstpage": "561",
+            "issn": "03029743",
+            "lastpage": "573",
+            "pub_year": 2007,
+            "title": "Negotiating models",
+            "volume": "4495"
+        },
+        "b5": {
+            "authors": [
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Recker"
+                },
+                {
+                    "first": "Norizan",
+                    "initial": "N.",
+                    "last": "Safrudin"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Rosemann"
+                }
+            ],
+            "doi": "10.1016/j.is.2011.07.001",
+            "firstpage": "557",
+            "issn": "03064379",
+            "lastpage": "573",
+            "pub_year": 2012,
+            "title": "How novices design business processes",
+            "volume": "37"
+        },
+        "b6": {
+            "authors": [
+                {
+                    "first": "Pnina",
+                    "initial": "P.",
+                    "last": "Soffer"
+                },
+                {
+                    "first": "Maya",
+                    "initial": "M.",
+                    "last": "Kaner"
+                },
+                {
+                    "first": "Yair",
+                    "initial": "Y.",
+                    "last": "Wand"
+                }
+            ],
+            "doi": "10.1007/978-3-642-28108-2_35",
+            "firstpage": "357",
+            "issn": "18651348",
+            "lastpage": "369",
+            "pub_year": 2012,
+            "title": "Towards understanding the process of process modeling: Theoretical and empirical considerations",
+            "volume": "99"
+        },
+        "b7": null,
+        "b8": {
+            "authors": [
+                {
+                    "first": "Jakob",
+                    "initial": "J.",
+                    "last": "Pinggera"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Zugal"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Weidlich"
+                },
+                {
+                    "first": "Dirk",
+                    "initial": "D.",
+                    "last": "Fahland"
+                },
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Weber"
+                },
+                {
+                    "first": "Jan",
+                    "initial": "J.",
+                    "last": "Mendling"
+                },
+                {
+                    "first": "Hajo A.",
+                    "initial": "H.A.",
+                    "last": "Reijers"
+                }
+            ],
+            "doi": "10.1007/978-3-642-28108-2_36",
+            "firstpage": "370",
+            "issn": "18651348",
+            "lastpage": "382",
+            "pub_year": 2012,
+            "title": "Tracing the process of process modeling with modeling phase diagrams",
+            "volume": "99"
+        },
+        "b9": {
+            "authors": [
+                {
+                    "first": "Barbara",
+                    "initial": "B.",
+                    "last": "Weber"
+                },
+                {
+                    "first": "Manuel",
+                    "initial": "M.",
+                    "last": "Neurauter"
+                },
+                {
+                    "first": "Andrea",
+                    "initial": "A.",
+                    "last": "Burattin"
+                },
+                {
+                    "first": "Jakob",
+                    "initial": "J.",
+                    "last": "Pinggera"
+                },
+                {
+                    "first": "Christopher",
+                    "initial": "C.",
+                    "last": "Davis"
+                }
+            ],
+            "doi": "10.1007/978-3-319-67431-5_6",
+            "firstpage": "47",
+            "issn": "21954968",
+            "lastpage": "53",
+            "pub_year": 2017,
+            "title": "Measuring and explaining cognitive load during design activities: A fine-grained approach",
+            "volume": "25"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 67701,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "One additional feature is included: the number of features with value set to 0.",
+            "startOffset": 67622,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 44686,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e768",
+            "sentence": "To develop a process model, modelers need to understand the problem (i.e., both the requirements and the process model created so far).",
+            "startOffset": 44551,
+            "title": "Problem understanding."
+        },
+        {
+            "endOffset": 49119,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "The sequence of fixations of a modeler is denoted as scan-path.",
+            "startOffset": 49056,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 40701,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 40700,
+                    "startOffset": 40697
+                }
+            },
+            "secId": "sec1",
+            "sentence": "For example, while domain knowledge plays presumably an important role in problem understanding, process modeling knowledge and experience will be a relevant factor for modeling phases [7].",
+            "startOffset": 40512,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47622,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Interactions for laying out edges, moving model elements, renaming activities, and updating edge conditions are classified as reconciliation actions.1",
+            "startOffset": 47472,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 52965,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In both cases, we formally describe these data as sequences.",
+            "startOffset": 52905,
+            "title": "Preliminary definitions"
+        },
+        {
+            "endOffset": 68097,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "As a result of the high-level phase detection algorithm, we obtain a sequence of phases classified as either modeling, reconciliation, or comprehension.",
+            "startOffset": 67945,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 76929,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "However, eye tracking technologies are getting increasingly powerful enabling the mapping of eye tracking data onto real-world objects as well.",
+            "startOffset": 76786,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 69284,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "A formalization of this approach is reported in Algorithm 3: given a log of transitions (line 1, Alg.",
+            "startOffset": 69183,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 57188,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Fixations and transitions of an eye tracking session can be calculated from the raw recordings of the eye tracker and are stored in temporal order in a log of fixations and transitions respectively.",
+            "startOffset": 56990,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 70391,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "With this evaluation we want to answer the following two research questions:",
+            "startOffset": 70315,
+            "title": "Experimental evaluation"
+        },
+        {
+            "endOffset": 74054,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For both, the training and prediction times, we used the wall-clock as the measure, i.e., the time difference between the time at which the task finished and the time the task started.",
+            "startOffset": 73870,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 43182,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The remainder of the paper is structured as follows.",
+            "startOffset": 43130,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52284,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Additionally, Appendix A gives an intuition of how the multi-modal phase detection approach works in contrast to the state of the art approach: it shows a detailed example of a process modeling session including data on how the modeler interacted with the modeling platform.",
+            "startOffset": 52010,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 79135,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The automatic phase detection will allow a more fine-grained analysis of modeling sessions.",
+            "startOffset": 79044,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 41901,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The central research question of this paper can be formulated as follows: \u201cIs it possible to automatically and accurately detect the different modeling phases of single modeling instances?\u201d.",
+            "startOffset": 41711,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78209,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Exploiting this data source, the literature reports techniques to gather information regarding the different modeling phases taking place (i.e., comprehension, modeling, reconciliation).",
+            "startOffset": 78023,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 61077,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This whole procedure is repeated for the entire session, resulting in a sequence of candidate phases.",
+            "startOffset": 60976,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 38724,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Process models play an important role in facilitating communication between different stakeholders and in documenting the organization\u2019s business processes.",
+            "startOffset": 38568,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79808,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "At the same time, we plan to investigate different possibilities to improve the overall quality of the phase detection, as well as the introduction of new techniques, resulting in even more accurate inferences.",
+            "startOffset": 79598,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 45728,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 45570,
+                    "startOffset": 45566
+                }
+            },
+            "secId": "d1e786",
+            "sentence": "For instance, when using BPMN (Business Process Model and Notation) [11], modelers might insert an activity into the model and embed it into a conditional branch using gateways and sequence flows to implement an optional activity.",
+            "startOffset": 45498,
+            "title": "Modeling."
+        },
+        {
+            "endOffset": 62278,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "For each sliding window, a set of features is extracted (line 6, Alg.",
+            "startOffset": 62209,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 40293,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The formalization of a process model is a flexible process during which the different phases are iteratively executed.",
+            "startOffset": 40175,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77597,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "To mitigate this problem we asked two experts to independently label the instances and reach consensus.",
+            "startOffset": 77494,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 76384,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In conclusions, we can answer question Q2 by showing the performance (both in terms of time requirements and quality) of the different techniques we devised.",
+            "startOffset": 76227,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 41016,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 40875,
+                    "startOffset": 40870
+                },
+                "b8": {
+                    "endOffset": 40875,
+                    "startOffset": 40870
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In [7,8], an algorithm for automatically detecting modeling and reconciliation phases from interactions with the modeling platform has been proposed.",
+            "startOffset": 40867,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52826,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The multi-modal data we are dealing with consists of each modality of an ordered sequence of events.",
+            "startOffset": 52726,
+            "title": "Preliminary definitions"
+        },
+        {
+            "endOffset": 39650,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 39649,
+                    "startOffset": 39646
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The formalization phase of a process model, also denoted as process of process modeling (PPM), in turn, can be characterized as cognitive design activity during which a designer creates a formal process model from informal requirements descriptions [5].",
+            "startOffset": 39397,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55574,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Log of Interactions",
+            "startOffset": 55555,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 68913,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The low-level phases identification approach starts by filtering the log of transitions for only those that occurred within the comprehension phase under examination (cf. Fig. 6a).",
+            "startOffset": 68733,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 52474,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This section introduces our approach for phase detection based on multi-modal data (i.e., model interactions combined with eye tracking data).",
+            "startOffset": 52332,
+            "title": "Identification of phases using multi-modal data"
+        },
+        {
+            "endOffset": 59817,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "1) and replaces each of them with a sequence of low-level phases (i.e., problem understanding, method finding, syntactic and semantic validation) by applying one of the low-level phase detection algorithms (line 4, Alg.",
+            "startOffset": 59598,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 41329,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Longer time periods characterized by an absence of interactions, i.e., problem understanding, method finding, and validation, cannot be differentiated and are labeled as comprehension.",
+            "startOffset": 41145,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78022,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Historically, the analysis of the process of process modeling relied just on the recording of user\u2019s interactions with the modeling tools.",
+            "startOffset": 77884,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 39200,
+            "parents": [],
+            "refoffsets": {
+                "b3": {
+                    "endOffset": 39199,
+                    "startOffset": 39196
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In formalization phases, the extracted information is then used to create a formal process model [3].",
+            "startOffset": 39099,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46444,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "refoffsets": {
+                "b15": {
+                    "endOffset": 46443,
+                    "startOffset": 46439
+                }
+            },
+            "secId": "d1e808",
+            "sentence": "In particular, in line with the SEQUAL framework [15] and grounded in semiotic theory, modelers might perform checks for identifying syntactical, semantical, and pragmatic quality issues in the process model [15].",
+            "startOffset": 46231,
+            "title": "Validation."
+        },
+        {
+            "endOffset": 62208,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "If the window size, in turn, is too long then phases might not be properly separated.",
+            "startOffset": 62123,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 42177,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We then validated our approach in two experiments.",
+            "startOffset": 42127,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 57536,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Log of Transitions",
+            "startOffset": 57518,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 79514,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In particular, the automatic phase detection can provide important contextual information to be able to identify how to best support the modeler in her specific situation through feedback, interventions, or adaptations.",
+            "startOffset": 79295,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 43736,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This section introduces the process of process modeling as typically presented in the literature including its five phases: problem understanding, method finding, modeling, reconciliation, and validation (cf. Section 2.1).",
+            "startOffset": 43514,
+            "title": "Background and related work"
+        },
+        {
+            "endOffset": 57218,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Log of Fixations",
+            "startOffset": 57202,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 75985,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Table 3 depicts the results.",
+            "startOffset": 75957,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 52904,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "These events can be interactions with the modeling tool or eye tracking data.",
+            "startOffset": 52827,
+            "title": "Preliminary definitions"
+        },
+        {
+            "endOffset": 74247,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Additionally, we measure the wall-clock time needed by classifiers to predict the phases of a subject not used for training.",
+            "startOffset": 74123,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 61281,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "2 provides a more formal description of the high-level phase detection and is detailed in the following.",
+            "startOffset": 61177,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 45018,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e777",
+            "sentence": "In method finding phases, modelers decompose the problem into smaller sub-problems and develop a solution that is independent of the concrete modeling notation.",
+            "startOffset": 44858,
+            "title": "Method finding."
+        },
+        {
+            "endOffset": 72352,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Table 2 depicts the distribution of high-level phases and the distribution of low-level phases among subjects.",
+            "startOffset": 72242,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 72241,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The data-set manually enriched represents the gold standard used for computing the qualitative performance of our approaches.",
+            "startOffset": 72116,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 50879,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Similarly, during method finding, fixations were on parts of the textual description, followed by fixations on the modeling platform and the toolbox.",
+            "startOffset": 50730,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 62122,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Choosing a too small window size might lead to phases not being recognized (because of a lack of representative features).",
+            "startOffset": 62000,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 70786,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The data set used for our evaluation stems from a modeling session experiment where we collected model interactions and eye tracking data from novice modelers.",
+            "startOffset": 70627,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 60749,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In the first step, the algorithm identifies a sliding window (cf. \u2460 in Fig. 5a).",
+            "startOffset": 60669,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 48724,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "To address the limitations of the na\u00efve approach introduced in Section 2.2, we propose an approach based on multi-modal data.",
+            "startOffset": 48599,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 74499,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Fig. 8 shows the time performance for training the classifiers and for predicting the phases (except for Na\u00efve Bayes due to lack of interest given its accuracy performance).",
+            "startOffset": 74326,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 76467,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The CRF approach achieves the best accuracy while showing a good time performance.",
+            "startOffset": 76385,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 42393,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The validation of the approach against real data, referring to process modeling sessions, yielded promising results, both in terms of quality and computation time thus demonstrating the feasibility of our technique.",
+            "startOffset": 42178,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51451,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "An example of such visualization is reported in Fig. 3.",
+            "startOffset": 51396,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 55311,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In this paper we address the problem of dividing a modeling session into phases (i.e., find the partition in the session) introduced in Section 2.1 considering the user\u2019s interactions with the modeling platform as well as eye tracking data.",
+            "startOffset": 55071,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 60975,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The sliding window is then classified as any of the high-level phases using a pre-trained classifier (cf. \u2462 in Fig. 5a).",
+            "startOffset": 60855,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 61171,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In a subsequent step, adjacent phases with the same phase type are merged (cf. \u2463 in Fig. 5b).",
+            "startOffset": 61078,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 71667,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "To extract our ground truth knowledge, i.e., the \u201cgold standard\u201d for our dataset, we started from video recordings of different subjects.",
+            "startOffset": 71530,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 48555,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "Our work overcomes these limitations and presents an approach that can automatically detect all phases.",
+            "startOffset": 48452,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 69362,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "3).",
+            "startOffset": 69359,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 73869,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Besides accuracy, we also evaluate the time needed for training and prediction.",
+            "startOffset": 73790,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 77034,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Thus, it is realistic to assume that our approach can be applied in more dynamic settings in the future.",
+            "startOffset": 76930,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 40174,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 40173,
+                    "startOffset": 40170
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Research on model formalization has resulted in a description of the PPM and the identification of five distinct phases (i.e., problem understanding, method finding, modeling, reconciliation, and validation) [7].",
+            "startOffset": 39962,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72904,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 72750,
+                    "startOffset": 72735
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "To answer research question Q1, we use the state of the art automated phase detection approach by [7, Sec. 6.3.1] introduced in Section 2.2, which is based on user interactions only, and compare its results with those obtained by the approach presented in this paper.",
+            "startOffset": 72637,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 71765,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For this experiment we use data generated by 5 subjects randomly selected among the participants.",
+            "startOffset": 71668,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 77719,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The process underlying the creation of process models has recently received a lot of attention.",
+            "startOffset": 77624,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 63038,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Once the algorithm for high-level phase detection has provided a classification for the entire modeling session, there can be contiguous phases that were classified with the same type which are merged (line 10 in Alg.",
+            "startOffset": 62821,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 69460,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The sequence of features is fed to a sequence labeler which associates each element with a class.",
+            "startOffset": 69363,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 69732,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Such a sequence of labels is post-processed by merging equivalent contiguous labels, thus creating time intervals describing the actual low-level phases (line 4, Alg.",
+            "startOffset": 69566,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 76093,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The prediction for the Markovian (baseline) approach is very slow, because it employs a brute-force method.",
+            "startOffset": 75986,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 75419,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Therefore, to define a baseline, we defined a \u201cbrute-force\u201d algorithm called Markovian which tries all possible partitions and selects the most likely one, assuming Markov property (i.e., the future state only depends on the current one), as described in Appendix B.",
+            "startOffset": 75153,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 42578,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Our novel approach for automatic identification of phases makes a more fine-grained analysis of the process of process modeling possible and allows to take phase-specifics into account.",
+            "startOffset": 42393,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74678,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "With increasing window sizes the time needed for training and prediction decreases since it becomes easier to classify the time window (due to the presence of more observations).",
+            "startOffset": 74500,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 76227,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "CRF represents a very good trade-off: even though it is not as fast as HMM, both the training and the prediction times are very good.",
+            "startOffset": 76094,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 47471,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "More specifically, interactions for creating model elements, deleting model elements, reconnecting edges, and adding/deleting edge conditions are classified as modeling actions.",
+            "startOffset": 47294,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 49322,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Areas of Interest (AOI) are a tool that is frequently used for the analysis of eye tracking data.",
+            "startOffset": 49225,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 56155,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As a second source of input, we consider eye tracking data as detailed in the following, more specifically fixations and transitions.",
+            "startOffset": 56022,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 62326,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "2) and the phase type is detected (line 7, Alg.",
+            "startOffset": 62279,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 41525,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "A comprehensive analysis of the process of process modeling, however, requires the detection of all five phases and not only those during which interactions with the modeling platform take place.",
+            "startOffset": 41330,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61729,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "To obtain candidate high-level phases our algorithm uses a sliding window approach which allows to capture the optimal separation of partitions among events3  and to obtain maximum flexibility in the selection of the classification algorithms and the features to use.",
+            "startOffset": 61282,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 72587,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Specifically, to answer Q1 we will consider only the high-level phases, whereas to answer Q2 we will operate on the low-level phases.",
+            "startOffset": 72454,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 70044,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "The set of features includes the source and the target AOIs of the current transition as well as the source and the target AOIs for the 2 previous and the 2 following transitions.",
+            "startOffset": 69865,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 48451,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 48358,
+                    "startOffset": 48354
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "Moreover, this assumption makes the technique unreliable in many circumstances, e.g., when a short comprehension phase is surrounded by reconciliation or modeling phases, as documented in [17] (in this case the na\u00efve approach incorporates the comprehension phase into the surrounding).",
+            "startOffset": 48166,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 73028,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "For the actual comparison, we adopted the accuracy measure, i.e., the ratio of correctly classified phases over all phases.",
+            "startOffset": 72905,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 49055,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Using eye tracking it is possible to identify fixations, i.e., points on the screen modelers focus their attention on.",
+            "startOffset": 48937,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 76666,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "The main limitation of the approaches presented stems from the assumption that all phase types can be induced by interactions with the modeling platform and eye movements on the screen.",
+            "startOffset": 76481,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 69565,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "3).",
+            "startOffset": 69562,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 68272,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "In this section, we introduce our approach for low-level phase detection which further refines comprehension phases into problem understanding, method finding and validation.",
+            "startOffset": 68098,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 69183,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Finally, these points are merged into proper phases (cf. \u2462 in Fig. 6b).",
+            "startOffset": 69112,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 79597,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This represents the main long-term goal and future working direction of the paper.",
+            "startOffset": 79515,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 47185,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "With respect to the modeling platform, the creation of a process model consists of a series of model interactions, e.g., adding activities and edges or moving elements for laying out the process model (cf. Table 1 for an overview of possible interaction types).",
+            "startOffset": 46924,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 39961,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "During process model formalization the designer engages with the modeling platform (that provides a modeling notation as well as associated tool support) to improve the process being modeled.",
+            "startOffset": 39770,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59597,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In a second step, the algorithm selects only the comprehension phases (line 2, Alg.",
+            "startOffset": 59514,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 51148,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Finally, during syntactic validation, fixations showed up on the modeling canvas and occasionally on the toolbox, while during semantic validation, the fixations occurred on the textual description and the modeling canvas with numerous switches between these two AOIs.",
+            "startOffset": 50880,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 69736,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "3).",
+            "startOffset": 69733,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 71530,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The log of transitions was computed based on the log of fixations.",
+            "startOffset": 71464,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 75957,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "The training and prediction procedure is repeated 5 times, and the average is taken.",
+            "startOffset": 75873,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 71937,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The video recordings were manually classified by two experts independently and discrepancies between the two classifications were resolved by a consensus building process.",
+            "startOffset": 71766,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 46678,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e808",
+            "sentence": "Fig. 1 depicts an example sequence of phases executed for one particular modeling session.",
+            "startOffset": 46588,
+            "title": "Validation."
+        },
+        {
+            "endOffset": 60668,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Figs. 5a and 5b highlight the overall idea of our approach for high-level phase detection which can be divided into 4 steps.",
+            "startOffset": 60544,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 62402,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "2) using a standard classification technique available in machine learning.",
+            "startOffset": 62327,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 77246,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "A technical limitation of the approaches is the potential impact of the window size on the identification of high-level phases: a bad decision on this regard can lead to poor results (also for low-level phases).",
+            "startOffset": 77035,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 39018,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "It consists of two phases \u2014 elicitation and formalization.",
+            "startOffset": 38960,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43966,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Moreover, it introduces an existing approach for detecting modeling and reconciliation phases based on model interactions, which will serve as a baseline for the machine learning approach proposed in this paper (cf. Section 2.2).",
+            "startOffset": 43737,
+            "title": "Background and related work"
+        },
+        {
+            "endOffset": 69111,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Each sub-sequence of transition is converted into a sequence of features (cf. \u2460 in Fig. 6b) and a sequence classifier attaches a possible low-level phase type to each transition (cf. \u2461 in Fig. 6b).",
+            "startOffset": 68914,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 52010,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "This further highlighted the potential of using eye tracking data as the basis for an automatic phase detection approach.",
+            "startOffset": 51889,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 62734,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "At the end of each iteration, the algorithm appends the new phase to the sequence of phases (line 8).",
+            "startOffset": 62633,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 50130,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "As a first step in the development of a phase detection approach based on multi-modal data, we conducted an exploratory study where we collected data from 116 student modelers and analyzed the comprehension phases we obtained from applying the na\u00efve phase detection algorithm outlined in Section 2.2 manually.",
+            "startOffset": 49821,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 46048,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "refoffsets": {
+                "b12": {
+                    "endOffset": 45977,
+                    "startOffset": 45973
+                },
+                "b13": {
+                    "endOffset": 46047,
+                    "startOffset": 46040
+                },
+                "b14": {
+                    "endOffset": 46047,
+                    "startOffset": 46040
+                }
+            },
+            "secId": "d1e795",
+            "sentence": "This includes changes to an activity label for resolving non-intention revealing naming of activities [12], but also relates to the secondary notation of process models [13,14].",
+            "startOffset": 45871,
+            "title": "Reconciliation."
+        },
+        {
+            "endOffset": 61999,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The selection of the sliding window size plays an important role: since each sliding window is classified as a single phase, its length represents the minimum duration of a high-level phase (or partition).",
+            "startOffset": 61794,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 72115,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "For the manual labeling, we used the descriptions of the phases introduced in Section 2.1, i.e., problem understanding, method finding, modeling, reconciliation, and validation.",
+            "startOffset": 71938,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 58534,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The general algorithm describing the overall approach is reported in Algorithm 1.",
+            "startOffset": 58453,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 74325,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "We repeat this procedure 5 times and the average wall-clock time is computed.",
+            "startOffset": 74248,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 39769,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 39768,
+                    "startOffset": 39765
+                }
+            },
+            "secId": "sec1",
+            "sentence": "This requires the designer to create a mental model of the domain and to externalize it as a formal process model [6].",
+            "startOffset": 39651,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 41144,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This approach exploits the interactions with the modeling platform to differentiate between modeling and reconciliation phases.",
+            "startOffset": 41017,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49224,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Fig. 2 shows an example of a scan-path during a brief session, with fixations represented as black dots.",
+            "startOffset": 49120,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 45870,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e795",
+            "sentence": "Reconciliation phases are concerned with improving the understandability of the process model and facilitate subsequent phases.",
+            "startOffset": 45743,
+            "title": "Reconciliation."
+        },
+        {
+            "endOffset": 78707,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "On the one hand, we are now able to extract phase types that were not identifiable with state of the art techniques (i.e., problem understanding, method finding, semantic and syntactic validation), thus delivering additional useful information to the analysis.",
+            "startOffset": 78447,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 68593,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "To detect the low-level phases we devised two approaches, graphically depicted in Fig. 6b.",
+            "startOffset": 68503,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 78896,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "On the other hand, the new analysis technique and the exploitation of the new data source resulted in superior accuracy in identifying the phase types with respect to the state of the art.",
+            "startOffset": 78708,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 47293,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "The na\u00efve approach maps the interactions with the modeling platform to the phases presented in Section 2.1.",
+            "startOffset": 47186,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 38959,
+            "parents": [],
+            "refoffsets": {
+                "b2": {
+                    "endOffset": 38958,
+                    "startOffset": 38955
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Process model development is an iterative and collaborative process which involves many stakeholders like domain specialists and system analysts [2].",
+            "startOffset": 38810,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59850,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "1; for details see Section 3.4).",
+            "startOffset": 59818,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 48937,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 48935,
+                    "startOffset": 48931
+                }
+            },
+            "secId": "sec2.3",
+            "sentence": "More specifically, we explored the possibility of using eye tracking data (in addition to model interactions) to distinguish between the phases of problem understanding, method finding, and validation (cf. [18]).",
+            "startOffset": 48725,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 50729,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "For example, our exploratory study showed that during problem understanding, the fixations were primarily on the textual description as modelers are building an internal representation of the problem.",
+            "startOffset": 50529,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 49534,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "In our case AOIs refer to the textual description of the task, the modeling area, and the toolbox, as represented in Fig. 2.",
+            "startOffset": 49410,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 67779,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This feature can be seen as a way of quantifying the absence of interactions.",
+            "startOffset": 67702,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 59879,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Low-Level Phase",
+            "startOffset": 59864,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 66180,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The second group of features refers to the information coming from eye tracking:",
+            "startOffset": 66100,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 61737,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In Alg.",
+            "startOffset": 61730,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 77411,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Finally, it is important to mention that the manual labeling of the gold standard represents a limitation regarding the generalizability of our experimental results.",
+            "startOffset": 77246,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 56178,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Fixations",
+            "startOffset": 56169,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 72453,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Please note that in order to answer the two research questions we will use only parts of the dataset.",
+            "startOffset": 72352,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 39396,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 39340,
+                    "startOffset": 39337
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The elicitation phase requires good communication between stakeholders and has been described in the literature as a negotiation process [4] in which different modeling alternatives are discussed.",
+            "startOffset": 39200,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78446,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "With the contribution presented in this paper, we showed how to process the data in a completely new fashion, also incorporating a new source of information, i.e. eye tracking, resulting in a twofold improvement of the state of the art.",
+            "startOffset": 78210,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 41710,
+            "parents": [],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 41591,
+                    "startOffset": 41586
+                },
+                "b8": {
+                    "endOffset": 41591,
+                    "startOffset": 41586
+                }
+            },
+            "secId": "sec1",
+            "sentence": "To overcome the limitations of the existing state of the art [7,8] this paper aims at the development of an automatic approach for phase detection in a single process modeling instance.",
+            "startOffset": 41525,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46587,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e808",
+            "sentence": "As mentioned previously the creation of a process model is a flexible process during which the above described phases are iteratively executed.",
+            "startOffset": 46444,
+            "title": "Validation."
+        },
+        {
+            "endOffset": 43486,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 5 concludes the paper and sketches possible future work.",
+            "startOffset": 43422,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 58641,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "It expects the logs of interactions, transitions and fixations as well as the minimum duration of a phase.",
+            "startOffset": 58535,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 51395,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 51394,
+                    "startOffset": 51390
+                }
+            },
+            "secId": "sec2.3",
+            "sentence": "To further investigate fixation patterns that could form the basis of an automatic phase detection approach, we developed a visualization tool to represent transitions between AOIs together with the model interactions in an integrated manner [17].",
+            "startOffset": 51148,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 68732,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 68675,
+                    "startOffset": 68665
+                },
+                "b26": {
+                    "endOffset": 68675,
+                    "startOffset": 68665
+                },
+                "b27": {
+                    "endOffset": 68675,
+                    "startOffset": 68665
+                },
+                "b28": {
+                    "endOffset": 68675,
+                    "startOffset": 68665
+                },
+                "b29": {
+                    "endOffset": 68719,
+                    "startOffset": 68712
+                },
+                "b30": {
+                    "endOffset": 68719,
+                    "startOffset": 68712
+                }
+            },
+            "secId": "sec3.4",
+            "sentence": "We rephrased our problem as sequence labeling and applied either (HMM) [23,26\u201328] or Conditional Random Fields (CRFs) [29,30] to solve it.",
+            "startOffset": 68594,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 44529,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b7": {
+                    "endOffset": 44528,
+                    "startOffset": 44525
+                }
+            },
+            "secId": "sec2.1",
+            "sentence": "Existing research on the process of process modeling describes the act of creating a process model as a flexible process consisting of five distinct phases which are iteratively performed, i.e., they can be executed repeatedly and can be skipped for some iterations as needed [7].",
+            "startOffset": 44249,
+            "title": "Process of process modeling"
+        },
+        {
+            "endOffset": 51888,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "Afterward, several method finding phases occurred and all share a similar fixation pattern: the modeler first focused on the model or the text, then the focus briefly (and possibly repeatably) shifted to the toolbox (in order to understand the \u201ctools\u201d that can be used), and to the text (to map the requirements to the available tools).",
+            "startOffset": 51552,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 46923,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 46910,
+                    "startOffset": 46906
+                },
+                "b7": {
+                    "endOffset": 46730,
+                    "startOffset": 46727
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "In [7] a na\u00efve approach to automatically detect modeling and reconciliation phases from a log of interactions obtained from the modeling platform Cheetah Experimental Platform (CEP) [16] is proposed.",
+            "startOffset": 46724,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 49409,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 49408,
+                    "startOffset": 49404
+                }
+            },
+            "secId": "sec2.3",
+            "sentence": "AOIs refer to sub-regions of the stimulus (in our context the modeling platform) [19].",
+            "startOffset": 49323,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 45497,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e786",
+            "sentence": "Once modelers have developed a solution for the problem, they can interact with the modeling platform to implement it by creating an external representation of the problem stored in their working memory.",
+            "startOffset": 45294,
+            "title": "Modeling."
+        },
+        {
+            "endOffset": 58968,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In a first step, similarly to the state of the art, the algorithm detects a set of partitions with just high-level phases, i.e., modeling, reconciliation and comprehension phases (cf. line 1, Alg.",
+            "startOffset": 58772,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 77884,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Specifically, the importance of process models, for communication and documentation purposes, drives the need for improving their correctness and understandability.",
+            "startOffset": 77720,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 42126,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To answer this research question we first developed a novel, machine-learning approach that exploits model interactions along with eye tracking data and slices the overall process modeling instance into a sequence of phases.",
+            "startOffset": 41902,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49821,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "For example, Fig. 2 shows transitions from text to toolbox, from toolbox to model, from model to toolbox, and from toolbox to model.",
+            "startOffset": 49689,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 61793,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "2 the iteration over all windows is reported in line 5.",
+            "startOffset": 61738,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 45285,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 45192,
+                    "startOffset": 45188
+                }
+            },
+            "secId": "d1e777",
+            "sentence": "This can involve the hierarchically structuring of a process model, but also horizontally dividing the problem into sub-problems that can be mapped to workflow patterns [10] (e.g., embedding an activity into a conditional fragment for creating an optional activity).",
+            "startOffset": 45019,
+            "title": "Method finding."
+        },
+        {
+            "endOffset": 50407,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 50405,
+                    "startOffset": 50401
+                }
+            },
+            "secId": "sec2.3",
+            "sentence": "Our preliminary findings from this exploratory study suggested that the fixation patterns we identified are related to the phases of problem understanding, method finding, and validation and can thus form the basis for automatically detecting the respective phases (cf. [18]).",
+            "startOffset": 50131,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 69358,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "3), it first converts it into a sequence of feature vectors (line 2, Alg.",
+            "startOffset": 69285,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 58377,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "More specifically, we aim to partition the logs such that each partition corresponds to one phase (where the events belonging to this partition are in line with the phase description outlined in Section 2.1) and adjacent partitions are of different phase types.",
+            "startOffset": 58116,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 39098,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In elicitation phases, statements about the domain are generated and validated.",
+            "startOffset": 39019,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74822,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In conclusion, our results showed that question Q1 can be answered positively, i.e., the new approach outperforms the state of the art approach.",
+            "startOffset": 74678,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 58115,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We can formalize this problem as finding a sequence of phases from a log of interactions, a log of fixations, and a log of transitions.",
+            "startOffset": 57980,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 62820,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This procedure is repeated until the end of the modeling session is reached (line 5).",
+            "startOffset": 62735,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 43130,
+            "parents": [],
+            "refoffsets": {
+                "b9": {
+                    "endOffset": 43129,
+                    "startOffset": 43126
+                }
+            },
+            "secId": "sec1",
+            "sentence": "An automated detection of such fine-grained phases within process modeling sessions is also a precondition for the development of a context-aware modeling platform that is able to detect the current context (i.e., the modeling phase the modeler is currently engaged in) and support the modeler in a phase-specific manner through recommendations, interventions, or even adaptations of the modeling platform (for example, the optimal tool support for validation is presumably different from tool support for problem understanding or method finding) [9].",
+            "startOffset": 42579,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51551,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "It shows a problem understanding phase at the beginning with the attention of the user on the text.",
+            "startOffset": 51452,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 77493,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "Such labeling might be affected by human perception since it is a manual process.",
+            "startOffset": 77412,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 70171,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Additionally, we added 2 features to indicate if the given transition is the first or the last within the comprehension phase.",
+            "startOffset": 70045,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 79294,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Moreover, this can be used to provide better modeling experience through phase-specific modeling support which, in turn, will result in better process models.",
+            "startOffset": 79136,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 67908,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Considering all the features described each sliding window extracts from the logs a feature vector with 76 numerical components.",
+            "startOffset": 67780,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 79043,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Leveraging the technique reported in this paper allows the automatic detection of the different phases a user is performing during a modeling task.",
+            "startOffset": 78896,
+            "title": "Conclusion and future work"
+        },
+        {
+            "endOffset": 74122,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "We repeat the training procedure 5 times and calculate the average.",
+            "startOffset": 74055,
+            "title": "Question Q1: Comparison to the state of the art"
+        },
+        {
+            "endOffset": 75872,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "For evaluating the time performance, we trained on the data of 4 subjects and used the fifth for the prediction.",
+            "startOffset": 75760,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 70994,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "This experiment took place in 2015 at the University of Innsbruck (Austria) and 116 psychology students (participation was voluntary) were asked to model a mortgage process (after receiving proper training).",
+            "startOffset": 70787,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 38809,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 38808,
+                    "startOffset": 38805
+                }
+            },
+            "secId": "sec1",
+            "sentence": "They are used for redesigning business processes as well as for automating them [1].",
+            "startOffset": 38725,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46230,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "secId": "d1e808",
+            "sentence": "In validation phases, modelers evaluate the quality of the externalized process model and assess if the model indeed provides a correct solution to the considered problem.",
+            "startOffset": 46059,
+            "title": "Validation."
+        },
+        {
+            "endOffset": 58771,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Please note that we expect the logs to have synchronized time (i.e., they capture different angles of the same modeling session).",
+            "startOffset": 58642,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 55336,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Interaction",
+            "startOffset": 55325,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 76785,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.4",
+            "sentence": "While this assumption is realistic in some settings (e.g., teaching exercises), it might not hold in the general case.",
+            "startOffset": 76667,
+            "title": "Limitations"
+        },
+        {
+            "endOffset": 53118,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Just as an example, a sequence of interactions is graphically visualized in Fig. A.10a and a sequence of eye tracking data is represented in Fig. A.10b.",
+            "startOffset": 52966,
+            "title": "Preliminary definitions"
+        },
+        {
+            "endOffset": 44219,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Finally, it discusses existing exploratory research on phase detection considering multi-modal data (i.e., model interactions as well as eye tracking data), which served as a starting point for developing our phase detection approach (cf. Section 2.3).",
+            "startOffset": 43967,
+            "title": "Background and related work"
+        },
+        {
+            "endOffset": 63042,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "2).",
+            "startOffset": 63039,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 61176,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Alg.",
+            "startOffset": 61172,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 47900,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 47851,
+                    "startOffset": 47848
+                }
+            },
+            "secId": "sec2.2",
+            "sentence": "Identified actions are then aggregated to phases using the algorithm proposed in [8]; thresholds are used to avoid very short phases.",
+            "startOffset": 47767,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 60854,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In a second step, different features are extracted for the identified sliding window (cf. \u2461 in Fig. 5a).",
+            "startOffset": 60750,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 62632,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 62467,
+                    "startOffset": 62460
+                },
+                "b21": {
+                    "endOffset": 62631,
+                    "startOffset": 62621
+                },
+                "b22": {
+                    "endOffset": 62498,
+                    "startOffset": 62491
+                },
+                "b23": {
+                    "endOffset": 62631,
+                    "startOffset": 62621
+                },
+                "b24": {
+                    "endOffset": 62587,
+                    "startOffset": 62583
+                },
+                "b25": {
+                    "endOffset": 62631,
+                    "startOffset": 62621
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "The classifiers we tested in this paper are: Na\u00efve Bayes [20,21]; Multilayer Perceptron [21,22]; Support Vector Machines (SVMs) [21,23] (with ANOVA \u2013 ANalysis Of VAriance \u2013 kernel [24]); Random Forests and Extra Trees [21,23,25].",
+            "startOffset": 62403,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 70314,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This section describes the evaluation of the algorithms for the classification task of the high- and low-level phases.",
+            "startOffset": 70196,
+            "title": "Experimental evaluation"
+        },
+        {
+            "endOffset": 71463,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The fixations were mapped onto the AOI (cf. Fig. 2) using the coordinates of the fixation provided by Tobii Studio, thus obtaining a representation as described in Definition 3.5.",
+            "startOffset": 71284,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 40352,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "A single instance of the PPM is called a modeling session.",
+            "startOffset": 40294,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44843,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                },
+                {
+                    "id": "sec2.1",
+                    "title": "Process of process modeling"
+                }
+            ],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 44842,
+                    "startOffset": 44839
+                }
+            },
+            "secId": "d1e768",
+            "sentence": "During problem understanding, modelers build an internal representation (i.e., a mental model) of the problem to be modeled within their working memory [6].",
+            "startOffset": 44687,
+            "title": "Problem understanding."
+        },
+        {
+            "endOffset": 49688,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "refoffsets": {
+                "b19": {
+                    "endOffset": 49687,
+                    "startOffset": 49683
+                }
+            },
+            "secId": "sec2.3",
+            "sentence": "Having AOIs allows the extraction of metrics specific for each AOI (e.g., amount of fixations on text) and the analysis of transitions between AOIs [19].",
+            "startOffset": 49535,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 58452,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "We approach the problem by decomposing it into a hierarchy of sub-problems.",
+            "startOffset": 58377,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 40511,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Since each phase is characterized by different underlying cognitive processes, the factors determining a modeler\u2019s performance might vary for different phases.",
+            "startOffset": 40352,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60543,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "In order to extract the high-level phases out of a modeling session, we translate the problem at hand into a series of classification problems.",
+            "startOffset": 60400,
+            "title": "Identification of high-level phases using multi-modal data"
+        },
+        {
+            "endOffset": 68502,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "Since, by definition, comprehension phases are characterized by no interaction with the modeling tool, to detect low-level phases we can rely only on the eye tracking data and, in particular, we focused on the log of transitions.",
+            "startOffset": 68273,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 69561,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "In our case, the labels correspond to the low-level phases we are interested to detect (line 3, Alg.",
+            "startOffset": 69461,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 52700,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "We first provide preliminary definitions used in the remaining paper (cf. Section 3.1), then report a formal problem definition (cf. Section 3.2), before presenting our approach for phase detection (cf. Sections 3.3 and 3.4).",
+            "startOffset": 52475,
+            "title": "Identification of phases using multi-modal data"
+        },
+        {
+            "endOffset": 40867,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "To enable a fine-grained analysis of the process of process modeling including its different modeling phases, the automatic detection of all five phases is required.",
+            "startOffset": 40702,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69864,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.4",
+            "sentence": "As described in the previous section also for the low-level phases identification we went through a feature engineering process.",
+            "startOffset": 69736,
+            "title": "Identification of low-level phases"
+        },
+        {
+            "endOffset": 50528,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.3",
+            "sentence": "In particular, the way how the modelers\u2019 eyes transitioned between AOIs (i.e., model, text, toolbox) appeared promising.",
+            "startOffset": 50408,
+            "title": "Phase detection based on multi-modal data"
+        },
+        {
+            "endOffset": 59031,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "High-Level Phase",
+            "startOffset": 59015,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 57979,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Using interactions, fixations, and transitions our goal is to automatically detect the phases introduced in Section 2.1.",
+            "startOffset": 57859,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 56562,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Transition",
+            "startOffset": 56552,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 59001,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Identification of phases using multi-modal data"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "1; for details see Section 3.3).",
+            "startOffset": 58969,
+            "title": "Problem formalization"
+        },
+        {
+            "endOffset": 71283,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The log of interactions was directly obtained from CEP after the modeling session (cf. Section 2.2); eye tracking data was collected using a Tobii TX300 eye tracker and the log of fixations (i.e., time-series of fixations including coordinates) was obtained with the help of Tobii Studio.",
+            "startOffset": 70995,
+            "title": "Data-set and ground truth"
+        },
+        {
+            "endOffset": 48165,
+            "parents": [
+                {
+                    "id": "sec2",
+                    "title": "Background and related work"
+                }
+            ],
+            "secId": "sec2.2",
+            "sentence": "While modeling and reconciliation phases can be detected by this na\u00efve approach, all time periods characterized by the absence of interactions, i.e., problem understanding, method finding, and validation, cannot be differentiated, but are subsumed as comprehension.",
+            "startOffset": 47900,
+            "title": "Phase detection based on model interactions"
+        },
+        {
+            "endOffset": 75152,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Experimental evaluation"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In contrast to the high-level phases classification, the low-level phases classification cannot be performed with the state of the art approach since the low-level phase classification operates only during comprehension phases (i.e., when no interaction takes place).",
+            "startOffset": 74885,
+            "title": "Question Q2: Performance of segmenting into low-level phases"
+        },
+        {
+            "endOffset": 43313,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 2 reports some background information regarding the process of process modeling and the automatic phase detection problem.",
+            "startOffset": 43183,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43421,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Section 3 formalizes the contribution of the paper and Section 4 evaluates the performance of the approach.",
+            "startOffset": 43314,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0169023X17303282",
+    "metadata": {
+        "asjc": [
+            "1802"
+        ],
+        "authors": [
+            {
+                "email": "andbur@dtu.dk",
+                "first": "Andrea",
+                "initial": "A.",
+                "last": "Burattin"
+            },
+            {
+                "email": "michael.kaiser@student.uibk.ac.at",
+                "first": "Michael",
+                "initial": "M.",
+                "last": "Kaiser"
+            },
+            {
+                "email": "manuel.neurauter@uibk.ac.at",
+                "first": "Manuel",
+                "initial": "M.",
+                "last": "Neurauter"
+            },
+            {
+                "email": "barbara.weber@unisg.ch",
+                "first": "Barbara",
+                "initial": "B.",
+                "last": "Weber"
+            }
+        ],
+        "doi": "10.1016/j.datak.2019.04.001",
+        "firstpage": "1",
+        "issn": "0169023X",
+        "keywords": [
+            "Automatic phase detection",
+            "Classification",
+            "Eye tracking",
+            "Interaction tracking",
+            "Process of process modeling",
+            "Sequence labeling"
+        ],
+        "lastpage": "17",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "DECI"
+        ],
+        "title": "Learning process modeling phases from modeling interactions and eye tracking data"
+    }
+}

@@ -1,0 +1,980 @@
+{
+    "abstract": "Given a finite set of bases b1, b2, \u2026, br (integers greater than 1), a multi-base representation of an integer n is a sum with summands db1\u03b11b2\u03b12\u22efbr\u03b1r, where the \u03b1j are nonnegative integers and the digits d are taken from a fixed finite set. We consider multi-base representations with at least two bases that are multiplicatively independent. Our main result states that the order of magnitude of the minimal Hamming weight of an integer n, i.e., the minimal number of nonzero summands in a representation of n, is log\u2061n/(log\u2061log\u2061n). This is independent of the number of bases, the bases themselves, and the digit set. For the proof, the existing upper bound for prime bases is generalized to multiplicatively independent bases; for the required analysis of the natural greedy algorithm, an auxiliary result in Diophantine approximation is derived. The lower bound follows by a counting argument and alternatively by using communication complexity; thereby improving the existing bounds and closing the gap in the order of magnitude. This implies also that the greedy algorithm terminates after O(log\u2061n/log\u2061log\u2061n) steps, and that this bound is sharp.",
+    "bib_entries": {
+        "br0010": null,
+        "br0020": {
+            "authors": [
+                {
+                    "first": "Roberto",
+                    "initial": "R.",
+                    "last": "Avanzi"
+                },
+                {
+                    "first": "Vassil",
+                    "initial": "V.",
+                    "last": "Dimitrov"
+                },
+                {
+                    "first": "Christophe",
+                    "initial": "C.",
+                    "last": "Doche"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Sica"
+                }
+            ],
+            "doi": "10.1007/11935230_9",
+            "firstpage": "130",
+            "issn": "03029743",
+            "lastpage": "144",
+            "pub_year": 2006,
+            "title": "Extending scalar multiplication using double bases",
+            "volume": "4284"
+        },
+        "br0030": null,
+        "br0040": {
+            "authors": [
+                {
+                    "first": "Csan\u00e1d",
+                    "initial": "C.",
+                    "last": "Bert\u00f3k"
+                }
+            ],
+            "doi": "10.1007/s10474-013-0309-9",
+            "firstpage": "291",
+            "issn": "02365294",
+            "lastpage": "300",
+            "pub_year": 2013,
+            "title": "Representing integers as sums or differences of general power products",
+            "volume": "141"
+        },
+        "br0050": {
+            "authors": [
+                {
+                    "first": "Csanad",
+                    "initial": "C.",
+                    "last": "Bertok"
+                },
+                {
+                    "first": "Lajos",
+                    "initial": "L.",
+                    "last": "Hajdu"
+                },
+                {
+                    "first": "Florian",
+                    "initial": "F.",
+                    "last": "Luca"
+                },
+                {
+                    "first": "Divyum",
+                    "initial": "D.",
+                    "last": "Sharma"
+                }
+            ],
+            "doi": "10.5486/PMD.2017.7562",
+            "firstpage": "181",
+            "issn": "00333883",
+            "lastpage": "194",
+            "pub_year": 2017,
+            "title": "On the number of non-zero digits of integers in multi-base representations",
+            "volume": "90"
+        },
+        "br0060": {
+            "authors": [
+                {
+                    "first": "Val\u00e9rie",
+                    "initial": "V.",
+                    "last": "Berthe"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "Imbert"
+                }
+            ],
+            "firstpage": "153",
+            "issn": "14627264",
+            "lastpage": "172",
+            "pub_year": 2009,
+            "title": "Diophantine approximation, ostrowski numeration and the double-base number system",
+            "volume": "11"
+        },
+        "br0070": null,
+        "br0080": {
+            "authors": [
+                {
+                    "first": "Parinya",
+                    "initial": "P.",
+                    "last": "Chalermsook"
+                },
+                {
+                    "first": "Hiroshi",
+                    "initial": "H.",
+                    "last": "Imai"
+                },
+                {
+                    "first": "Vorapong",
+                    "initial": "V.",
+                    "last": "Suppakitpaisarn"
+                }
+            ],
+            "doi": "10.1587/transfun.E98.A.1310",
+            "firstpage": "1310",
+            "issn": "09168508",
+            "lastpage": "1312",
+            "pub_year": 2015,
+            "title": "Two lower bounds for shortest double-base number system",
+            "volume": "E98A"
+        },
+        "br0090": {
+            "authors": [
+                {
+                    "first": "Henri",
+                    "initial": "H.",
+                    "last": "Cohen"
+                }
+            ],
+            "doi": "10.1007/s00145-004-0218-8",
+            "firstpage": "63",
+            "issn": "09332790",
+            "lastpage": "76",
+            "pub_year": 2005,
+            "title": "Analysis of the sliding window powering algorithm",
+            "volume": "18"
+        },
+        "br0100": {
+            "authors": [
+                {
+                    "first": "Vassil S.",
+                    "initial": "V.S.",
+                    "last": "Dimitrov"
+                },
+                {
+                    "first": "Everett W.",
+                    "initial": "E.W.",
+                    "last": "Howe"
+                }
+            ],
+            "doi": "10.1090/S0002-9939-2011-10764-0",
+            "firstpage": "3423",
+            "issn": "00029939",
+            "lastpage": "3430",
+            "pub_year": 2011,
+            "title": "Lower bounds on the lengths of double-base representations",
+            "volume": "139"
+        },
+        "br0110": {
+            "authors": [
+                {
+                    "first": "Vassil",
+                    "initial": "V.",
+                    "last": "Dimitrov"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "Imbert"
+                },
+                {
+                    "first": "Pradeep K.",
+                    "initial": "P.K.",
+                    "last": "Mishra"
+                }
+            ],
+            "doi": "10.1090/S0025-5718-07-02048-0",
+            "firstpage": "1075",
+            "issn": "00255718",
+            "lastpage": "1104",
+            "pub_year": 2008,
+            "title": "The double-base number system and its application to elliptic curve cryptography",
+            "volume": "77"
+        },
+        "br0120": {
+            "authors": [
+                {
+                    "first": "V. S.",
+                    "initial": "V.S.",
+                    "last": "Dimitrov"
+                },
+                {
+                    "first": "G. A.",
+                    "initial": "G.A.",
+                    "last": "Jullien"
+                },
+                {
+                    "first": "W. C.",
+                    "initial": "W.C.",
+                    "last": "Miller"
+                }
+            ],
+            "doi": "10.1016/s0020-0190(98)00044-1",
+            "firstpage": "155",
+            "issn": "00200190",
+            "lastpage": "159",
+            "pub_year": 1998,
+            "title": "An algorithm for modular exponentiation",
+            "volume": "66"
+        },
+        "br0130": {
+            "authors": [
+                {
+                    "first": "Vassil S.",
+                    "initial": "V.S.",
+                    "last": "Dimitrov"
+                },
+                {
+                    "first": "Graham A.",
+                    "initial": "G.A.",
+                    "last": "Jullien"
+                },
+                {
+                    "first": "William C.",
+                    "initial": "W.C.",
+                    "last": "Miller"
+                }
+            ],
+            "doi": "10.1109/12.805158",
+            "firstpage": "1098",
+            "issn": "00189340",
+            "lastpage": "1106",
+            "pub_year": 1999,
+            "title": "Theory and applications of the double-base number system",
+            "volume": "48"
+        },
+        "br0140": {
+            "authors": [
+                {
+                    "first": "Peter J.",
+                    "initial": "P.J.",
+                    "last": "Grabner"
+                },
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Heuberger"
+                }
+            ],
+            "doi": "10.1007/s10623-005-6158-y",
+            "firstpage": "25",
+            "issn": "09251022",
+            "lastpage": "39",
+            "pub_year": 2006,
+            "title": "On the number of optimal base 2 representations of integers",
+            "volume": "40"
+        },
+        "br0150": {
+            "authors": [
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Heuberger"
+                },
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Krenn"
+                }
+            ],
+            "doi": "10.5802/jtnb.840",
+            "firstpage": "353",
+            "issn": "12467405",
+            "lastpage": "386",
+            "pub_year": 2013,
+            "title": "Optimality of the width-w non-adjacent form: General characterisation and the case of imaginary quadratic bases",
+            "volume": "25"
+        },
+        "br0160": {
+            "authors": [
+                {
+                    "first": "Clemens",
+                    "initial": "C.",
+                    "last": "Heuberger"
+                },
+                {
+                    "first": "James A.",
+                    "initial": "J.A.",
+                    "last": "Muir"
+                }
+            ],
+            "doi": "10.1007/s10623-009-9276-0",
+            "firstpage": "185",
+            "issn": "09251022",
+            "lastpage": "208",
+            "pub_year": 2009,
+            "title": "Unbalanced digit sets and the closest choice strategy for minimal weight integer representations",
+            "volume": "52"
+        },
+        "br0170": null,
+        "br0180": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "Dimbinaina",
+                    "initial": "D.",
+                    "last": "Ralaivaosaona"
+                },
+                {
+                    "first": "Stephan",
+                    "initial": "S.",
+                    "last": "Wagner"
+                }
+            ],
+            "doi": "10.2298/AADM150917018K",
+            "firstpage": "285",
+            "issn": "14528630",
+            "lastpage": "312",
+            "pub_year": 2015,
+            "title": "Multi-base representations of integers: Asymptotic enumeration and central limit theorems",
+            "volume": "9"
+        },
+        "br0190": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Krenn"
+                },
+                {
+                    "first": "J\u00f6rg",
+                    "initial": "J.",
+                    "last": "Thuswaldner"
+                },
+                {
+                    "first": "Volker",
+                    "initial": "V.",
+                    "last": "Ziegler"
+                }
+            ],
+            "doi": "10.1007/s00605-012-0443-4",
+            "firstpage": "377",
+            "issn": "00269255",
+            "lastpage": "394",
+            "pub_year": 2013,
+            "title": "On linear combinations of units with bounded coefficients and double-base digit expansions",
+            "volume": "171"
+        },
+        "br0200": null,
+        "br0210": {
+            "authors": [
+                {
+                    "first": "Eyal",
+                    "initial": "E.",
+                    "last": "Kushilevitz"
+                }
+            ],
+            "doi": "10.1016/S0065-2458(08)60342-3",
+            "firstpage": "331",
+            "issn": "00652458",
+            "lastpage": "360",
+            "pub_year": 1997,
+            "title": "Communication Complexity",
+            "volume": "44"
+        },
+        "br0220": null,
+        "br0230": {
+            "authors": [
+                {
+                    "first": "James A.",
+                    "initial": "J.A.",
+                    "last": "Muir"
+                },
+                {
+                    "first": "Douglas R.",
+                    "initial": "D.R.",
+                    "last": "Stinson"
+                }
+            ],
+            "doi": "10.1090/S0025-5718-05-01769-2",
+            "firstpage": "369",
+            "issn": "00255718",
+            "lastpage": "384",
+            "pub_year": 2006,
+            "title": "Minimality and other properties of the width-w nonadjacent form",
+            "volume": "74"
+        },
+        "br0240": {
+            "authors": [
+                {
+                    "first": "Braden",
+                    "initial": "B.",
+                    "last": "Phillips"
+                },
+                {
+                    "first": "Neil",
+                    "initial": "N.",
+                    "last": "Burgess"
+                }
+            ],
+            "doi": "10.1109/TC.2004.14",
+            "firstpage": "666",
+            "issn": "00189340",
+            "lastpage": "677",
+            "pub_year": 2004,
+            "title": "Minimal weight digit set conversions",
+            "volume": "53"
+        },
+        "br0250": null,
+        "br0260": {
+            "authors": [
+                {
+                    "first": "Jerome A.",
+                    "initial": "J.A.",
+                    "last": "Solinas"
+                }
+            ],
+            "doi": "10.1023/A:1008306223194",
+            "firstpage": "195",
+            "issn": "09251022",
+            "lastpage": "249",
+            "pub_year": 2000,
+            "title": "Efficient Arithmetic on Koblitz Curves",
+            "volume": "19"
+        },
+        "br0270": {
+            "authors": [
+                {
+                    "first": "J\u00f6rg M.",
+                    "initial": "J.M.",
+                    "last": "Thuswaldner"
+                }
+            ],
+            "firstpage": "111",
+            "issn": "00315303",
+            "lastpage": "130",
+            "pub_year": 1999,
+            "title": "Summatory functions of digital sums occurring in cryptography",
+            "volume": "38"
+        },
+        "br0280": null,
+        "br0290": {
+            "authors": [
+                {
+                    "first": "Andrew Chi Chih",
+                    "initial": "A.C.C.",
+                    "last": "Yao"
+                }
+            ],
+            "doi": "10.1145/800135.804414",
+            "firstpage": "209",
+            "issn": "07378017",
+            "lastpage": "213",
+            "pub_year": 1979,
+            "title": "Some complexity questions related to distributive computing"
+        },
+        "br0300": {
+            "authors": [
+                {
+                    "first": "Wei",
+                    "initial": "W.",
+                    "last": "Yu"
+                },
+                {
+                    "first": "Kunpeng",
+                    "initial": "K.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Bao",
+                    "initial": "B.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Song",
+                    "initial": "S.",
+                    "last": "Tian"
+                }
+            ],
+            "doi": "10.1007/978-3-642-38553-7-25",
+            "firstpage": "424",
+            "issn": "03029743",
+            "lastpage": "432",
+            "pub_year": 2013,
+            "title": "On the expansion length of triple-base number systems",
+            "volume": "7918"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 44023,
+            "parents": [],
+            "refoffsets": {
+                "br0120": {
+                    "endOffset": 44013,
+                    "startOffset": 44009
+                },
+                "br0280": {
+                    "endOffset": 43951,
+                    "startOffset": 43947
+                }
+            },
+            "secId": "se0110",
+            "sentence": "The following lemma is the statement corresponding to the result of Tijdeman [28] on which the analysis of Dimitrov, Jullien and Miller in [12] is based.",
+            "startOffset": 43870,
+            "title": "The upper bound"
+        },
+        {
+            "endOffset": 48055,
+            "parents": [],
+            "secId": "se0120",
+            "sentence": "Multiplicative independence is not actually required, though.",
+            "startOffset": 47994,
+            "title": "The lower bound"
+        },
+        {
+            "endOffset": 39540,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0040": {
+                    "endOffset": 39539,
+                    "startOffset": 39529
+                },
+                "br0050": {
+                    "endOffset": 39539,
+                    "startOffset": 39529
+                },
+                "br0060": {
+                    "endOffset": 39539,
+                    "startOffset": 39529
+                },
+                "br0190": {
+                    "endOffset": 39539,
+                    "startOffset": 39529
+                }
+            },
+            "secId": "se0060",
+            "sentence": "Questions such as: does every integer have a multi-base representation, or: what is the smallest number that cannot be represented in a certain system, are also of great interest; cf. [6,4,5,19].",
+            "startOffset": 39345,
+            "title": "Background on multi-base representations"
+        },
+        {
+            "endOffset": 40292,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0120": {
+                    "endOffset": 40226,
+                    "startOffset": 40222
+                }
+            },
+            "secId": "se0070",
+            "sentence": "The upper bound for the minimal Hamming weight is derived by Dimitrov, Jullien and Miller [12] by analyzing the greedy algorithm (as mentioned for prime bases).",
+            "startOffset": 40132,
+            "title": "Greedy algorithm"
+        },
+        {
+            "endOffset": 51412,
+            "parents": [],
+            "secId": "se0130",
+            "sentence": "For the proof below, we will use the assumptions made in Section 1.2, but again we do not require multiplicative independence.",
+            "startOffset": 51286,
+            "title": "From the point of view of communication complexity"
+        },
+        {
+            "endOffset": 36090,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0040",
+            "sentence": "A multi-base representation of an integer n is called minimal if it minimizes the Hamming weight among all multi-base representations of n with the same bases and digit set.",
+            "startOffset": 35917,
+            "title": "Hamming weight"
+        },
+        {
+            "endOffset": 39618,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0170": {
+                    "endOffset": 39617,
+                    "startOffset": 39610
+                },
+                "br0180": {
+                    "endOffset": 39617,
+                    "startOffset": 39610
+                }
+            },
+            "secId": "se0060",
+            "sentence": "The number of multi-base representations has also been analyzed; see [17,18].",
+            "startOffset": 39541,
+            "title": "Background on multi-base representations"
+        },
+        {
+            "endOffset": 40333,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0070",
+            "sentence": "This is also our approach in this paper.",
+            "startOffset": 40293,
+            "title": "Greedy algorithm"
+        },
+        {
+            "endOffset": 35916,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0040",
+            "sentence": "The Hamming weight is a measure of how efficient a certain representation is.",
+            "startOffset": 35839,
+            "title": "Hamming weight"
+        },
+        {
+            "endOffset": 41675,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0120": {
+                    "endOffset": 41556,
+                    "startOffset": 41552
+                }
+            },
+            "secId": "se0070",
+            "sentence": "It is already mentioned in [12] that their upper bound of the Hamming weight of the representations obtained by the greedy algorithm is best possible.",
+            "startOffset": 41525,
+            "title": "Greedy algorithm"
+        },
+        {
+            "endOffset": 47944,
+            "parents": [],
+            "secId": "se0120",
+            "sentence": "The second statement (L) of Theorem 1 is proven by means of a simple counting argument.",
+            "startOffset": 47857,
+            "title": "The lower bound"
+        },
+        {
+            "endOffset": 50415,
+            "parents": [],
+            "secId": "se0130",
+            "sentence": "In this section, we will provide an alternative proof based on communication complexity, to show that the upper bound obtained in Section 2 is asymptotically tight; i.e., we prove (L) of Theorem 1.",
+            "startOffset": 50218,
+            "title": "From the point of view of communication complexity"
+        },
+        {
+            "endOffset": 41718,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0080": {
+                    "endOffset": 41717,
+                    "startOffset": 41714
+                }
+            },
+            "secId": "se0070",
+            "sentence": "Such a lower bound is also derived in [8].",
+            "startOffset": 41676,
+            "title": "Greedy algorithm"
+        },
+        {
+            "endOffset": 43691,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0140": {
+                    "endOffset": 43612,
+                    "startOffset": 43608
+                }
+            },
+            "secId": "se0100",
+            "sentence": "Grabner and Heuberger [14] count representations with minimal Hamming weight for such a signed digit set.",
+            "startOffset": 43586,
+            "title": "Single-base representations"
+        },
+        {
+            "endOffset": 39345,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0020": {
+                    "endOffset": 39235,
+                    "startOffset": 39226
+                },
+                "br0110": {
+                    "endOffset": 39235,
+                    "startOffset": 39226
+                },
+                "br0130": {
+                    "endOffset": 39235,
+                    "startOffset": 39226
+                }
+            },
+            "secId": "se0060",
+            "sentence": "Beside many other references, [2,11,13] describe the usage of double-base systems for cryptographic applications; the typical bases used are 2 and 3.",
+            "startOffset": 39196,
+            "title": "Background on multi-base representations"
+        },
+        {
+            "endOffset": 35762,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0040",
+            "sentence": "Of course, only finitely many terms of the sum (\u22c7) can be nonzero.",
+            "startOffset": 35696,
+            "title": "Hamming weight"
+        },
+        {
+            "endOffset": 35838,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0040",
+            "sentence": "The number of these terms is called the Hamming weight of a representation.",
+            "startOffset": 35763,
+            "title": "Hamming weight"
+        },
+        {
+            "endOffset": 43399,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0090": {
+                    "endOffset": 43398,
+                    "startOffset": 43383
+                },
+                "br0220": {
+                    "endOffset": 43398,
+                    "startOffset": 43383
+                },
+                "br0230": {
+                    "endOffset": 43398,
+                    "startOffset": 43383
+                },
+                "br0260": {
+                    "endOffset": 43398,
+                    "startOffset": 43383
+                },
+                "br0270": {
+                    "endOffset": 43398,
+                    "startOffset": 43383
+                }
+            },
+            "secId": "se0100",
+            "sentence": "The minimal Hamming weight of different kinds of single-base representations is studied in [9,22,23,26,27].",
+            "startOffset": 43292,
+            "title": "Single-base representations"
+        },
+        {
+            "endOffset": 43870,
+            "parents": [],
+            "secId": "se0110",
+            "sentence": "The proof of the first statement of Theorem 1 follows from an analysis of the natural greedy algorithm and is based on some results from Diophantine approximation.",
+            "startOffset": 43707,
+            "title": "The upper bound"
+        },
+        {
+            "endOffset": 47993,
+            "parents": [],
+            "secId": "se0120",
+            "sentence": "We will use the assumptions made in Section 1.2.",
+            "startOffset": 47945,
+            "title": "The lower bound"
+        },
+        {
+            "endOffset": 40458,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0070",
+            "sentence": "Our result translates to the following corollary, which is a direct consequence of the proof and the statement of Theorem 1.",
+            "startOffset": 40334,
+            "title": "Greedy algorithm"
+        },
+        {
+            "endOffset": 39070,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0060",
+            "sentence": "Motivation for studying multi-base representations comes from fast and efficient arithmetical operations.",
+            "startOffset": 38965,
+            "title": "Background on multi-base representations"
+        },
+        {
+            "endOffset": 37058,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "se0050",
+            "sentence": "The precise statement is as follows.",
+            "startOffset": 37022,
+            "title": "Main result"
+        },
+        {
+            "endOffset": 43291,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0160": {
+                    "endOffset": 43232,
+                    "startOffset": 43228
+                },
+                "br0240": {
+                    "endOffset": 43241,
+                    "startOffset": 43237
+                }
+            },
+            "secId": "se0100",
+            "sentence": "Papers [16] and [24] provide a way to compute minimal representations.",
+            "startOffset": 43221,
+            "title": "Single-base representations"
+        },
+        {
+            "endOffset": 39195,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0120": {
+                    "endOffset": 39108,
+                    "startOffset": 39104
+                }
+            },
+            "secId": "se0060",
+            "sentence": "One particular starting point is [12], where double-base and multi-base representations are used for modular exponentiation.",
+            "startOffset": 39071,
+            "title": "Background on multi-base representations"
+        },
+        {
+            "endOffset": 43585,
+            "parents": [
+                {
+                    "id": "se0010",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "br0150": {
+                    "endOffset": 43502,
+                    "startOffset": 43495
+                },
+                "br0250": {
+                    "endOffset": 43502,
+                    "startOffset": 43495
+                }
+            },
+            "secId": "se0100",
+            "sentence": "One particular representation, which often is minimal, is the so-called non-adjacent form (cf. [25,15]); it uses a signed digit set, i.e., a digit set containing also negative integers.",
+            "startOffset": 43400,
+            "title": "Single-base representations"
+        },
+        {
+            "endOffset": 46405,
+            "parents": [],
+            "secId": "se0110",
+            "sentence": "Now we are ready to prove statement (U) of Theorem 1.",
+            "startOffset": 46352,
+            "title": "The upper bound"
+        }
+    ],
+    "docId": "S0022314X19302768",
+    "metadata": {
+        "asjc": [
+            "2602"
+        ],
+        "authors": [
+            {
+                "email": "math@danielkrenn.at",
+                "first": "Daniel",
+                "initial": "D.",
+                "last": "Krenn"
+            },
+            {
+                "email": "vorapong@is.s.u-tokyo.ac.jp",
+                "first": "Vorapong",
+                "initial": "V.",
+                "last": "Suppakitpaisarn"
+            },
+            {
+                "email": "swagner@sun.ac.za",
+                "first": "Stephan",
+                "initial": "S.",
+                "last": "Wagner"
+            }
+        ],
+        "doi": "10.1016/j.jnt.2019.07.023",
+        "firstpage": "168",
+        "issn": "0022314X",
+        "keywords": [
+            "Hamming weight",
+            "Minimal weight",
+            "Multi-base representations"
+        ],
+        "lastpage": "179",
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "On the minimal Hamming weight of a multi-base representation"
+    }
+}

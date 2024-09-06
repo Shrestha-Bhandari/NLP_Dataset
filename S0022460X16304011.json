@@ -1,0 +1,2499 @@
+{
+    "abstract": "Ultrasonic guided waves are often used in the detection of defects in oil and gas pipelines. It is common for these pipelines to be buried underground and this may restrict the length of the pipe that can be successfully tested. This is because acoustic energy travelling along the pipe walls may radiate out into the surrounding medium. Accordingly, it is important to develop a better understanding of the way in which elastic waves propagate along the walls of buried pipes, and so in this article a numerical model is developed that is suitable for computing the eigenmodes for uncoated and coated buried pipes. This is achieved by combining a one dimensional eigensolution based on the semi-analytic finite element (SAFE) method, with a perfectly matched layer (PML) for the infinite medium surrounding the pipe. This article also explores an alternative exponential complex coordinate stretching function for the PML in order to improve solution convergence. It is shown for buried pipelines that accurate solutions may be obtained over the entire frequency range typically used in long range ultrasonic testing (LRUT) using a PML layer with a thickness equal to the pipe wall thickness. This delivers a fast and computationally efficient method and it is shown for pipes buried in sand or soil that relevant eigenmodes can be computed and sorted in less than one second using relatively modest computer hardware. The method is also used to find eigenmodes for a buried pipe coated with the viscoelastic material bitumen. It was recently observed in the literature that a viscoelastic coating may effectively isolate particular eigenmodes so that energy does not radiate from these modes into the surrounding [elastic] medium. A similar effect is also observed in this article and it is shown that this occurs even for a relatively thin layer of bitumen, and when the shear impedance of the coating material is larger than that of the surrounding medium.",
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "D. N.",
+                    "initial": "D.N.",
+                    "last": "Alleyne"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Cawley"
+                }
+            ],
+            "doi": "10.1016/S0041-624X(97)00038-3",
+            "firstpage": "147",
+            "issn": "0041624X",
+            "lastpage": "154",
+            "pub_year": 1998,
+            "title": "Defect detection in pipes using guided waves",
+            "volume": "36"
+        },
+        "bib10": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Long"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Cawley"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Lowe"
+                }
+            ],
+            "doi": "10.1098/rspa.2003.1148",
+            "firstpage": "2749",
+            "issn": "13645021",
+            "lastpage": "2770",
+            "pub_year": 2003,
+            "title": "Acoustic wave propagation in buried iron water pipes",
+            "volume": "459"
+        },
+        "bib11": {
+            "authors": [
+                {
+                    "first": "Eli",
+                    "initial": "E.",
+                    "last": "Leinov"
+                },
+                {
+                    "first": "Michael J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Cawley"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.02.036",
+            "firstpage": "96",
+            "issn": "0022460X",
+            "lastpage": "114",
+            "pub_year": 2015,
+            "title": "Investigation of guided wave propagation and attenuation in pipe buried in sand",
+            "volume": "347"
+        },
+        "bib12": {
+            "authors": [
+                {
+                    "first": "Eli",
+                    "initial": "E.",
+                    "last": "Leinov"
+                },
+                {
+                    "first": "Michael J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Cawley"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2015.10.018",
+            "firstpage": "225",
+            "issn": "0022460X",
+            "lastpage": "239",
+            "pub_year": 2016,
+            "title": "Ultrasonic isolation of buried pipes",
+            "volume": "363"
+        },
+        "bib13": {
+            "authors": [
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Kirby"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2009.03.032",
+            "firstpage": "565",
+            "issn": "0022460X",
+            "lastpage": "582",
+            "pub_year": 2009,
+            "title": "A comparison between analytic and numerical methods for modelling automotive dissipative silencers with mean flow",
+            "volume": "325"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "B. N.",
+                    "initial": "B.N.",
+                    "last": "Pavlakovic"
+                },
+                {
+                    "first": "M. J.S.",
+                    "initial": "M.J.S.",
+                    "last": "Lowe"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Cawley"
+                }
+            ],
+            "doi": "10.1115/1.1347995",
+            "firstpage": "67",
+            "issn": "00218936",
+            "lastpage": "75",
+            "pub_year": 2001,
+            "title": "High-frequency low-loss ultrasonic modes in imbedded bars",
+            "volume": "68"
+        },
+        "bib15": {
+            "authors": [
+                {
+                    "first": "J. A.",
+                    "initial": "J.A.",
+                    "last": "Simmons"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Drescher-Krasicka"
+                },
+                {
+                    "first": "H. N.G.",
+                    "initial": "H.N.G.",
+                    "last": "Wadley"
+                }
+            ],
+            "doi": "10.1121/1.404036",
+            "firstpage": "1061",
+            "issn": "00014966",
+            "lastpage": "1090",
+            "pub_year": 1992,
+            "title": "Leaky axisymmetric modes in infinite clad rods. I",
+            "volume": "92"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "Fabien",
+                    "initial": "F.",
+                    "last": "Treyss\u00e8de"
+                },
+                {
+                    "first": "Laurent",
+                    "initial": "L.",
+                    "last": "Laguerre"
+                }
+            ],
+            "doi": "10.1121/1.4802651",
+            "firstpage": "3827",
+            "issn": "00014966",
+            "lastpage": "3837",
+            "pub_year": 2013,
+            "title": "Numerical and analytical calculation of modal excitability for elastic wave generation in lossy waveguides",
+            "volume": "133"
+        },
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Alessandro",
+                    "initial": "A.",
+                    "last": "Marzani"
+                },
+                {
+                    "first": "Erasmo",
+                    "initial": "E.",
+                    "last": "Viola"
+                },
+                {
+                    "first": "Ivan",
+                    "initial": "I.",
+                    "last": "Bartoli"
+                },
+                {
+                    "first": "Francesco",
+                    "initial": "F.",
+                    "last": "Lanza di Scalea"
+                },
+                {
+                    "first": "Piervincenzo",
+                    "initial": "P.",
+                    "last": "Rizzo"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2008.04.028",
+            "firstpage": "488",
+            "issn": "0022460X",
+            "lastpage": "505",
+            "pub_year": 2008,
+            "title": "A semi-analytical finite element formulation for modeling stress wave propagation in axisymmetric damped waveguides",
+            "volume": "318"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Jing",
+                    "initial": "J.",
+                    "last": "Mu"
+                },
+                {
+                    "first": "Joseph L.",
+                    "initial": "J.L.",
+                    "last": "Rose"
+                }
+            ],
+            "doi": "10.1121/1.2940586",
+            "firstpage": "866",
+            "issn": "00014966",
+            "lastpage": "874",
+            "pmid": "18681579",
+            "pub_year": 2008,
+            "title": "Guided wave propagation and mode differentiation in hollow cylinders with viscoelastic coatings",
+            "volume": "124"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Michel",
+                    "initial": "M.",
+                    "last": "Castaings"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Lowe"
+                }
+            ],
+            "doi": "10.1121/1.2821973",
+            "firstpage": "696",
+            "issn": "00014966",
+            "lastpage": "708",
+            "pub_year": 2008,
+            "title": "Finite element model for waves guided along solid systems of arbitrary section coupled to infinite solid media",
+            "volume": "123"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "Wenbo",
+                    "initial": "W.",
+                    "last": "Duan"
+                },
+                {
+                    "first": "Ray",
+                    "initial": "R.",
+                    "last": "Kirby"
+                }
+            ],
+            "doi": "10.1016/j.finel.2015.02.008",
+            "firstpage": "28",
+            "issn": "0168874X",
+            "lastpage": "40",
+            "pub_year": 2015,
+            "title": "A numerical model for the scattering of elastic waves from a non-axisymmetric defect in a pipe",
+            "volume": "100"
+        },
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Hua",
+                    "initial": "H.",
+                    "last": "Jia"
+                },
+                {
+                    "first": "Mu",
+                    "initial": "M.",
+                    "last": "Jing"
+                },
+                {
+                    "first": "L. Rose",
+                    "initial": "L.R.",
+                    "last": "Joseph"
+                }
+            ],
+            "doi": "10.1121/1.3531807",
+            "firstpage": "691",
+            "issn": "00014966",
+            "lastpage": "700",
+            "pmid": "21361428",
+            "pub_year": 2011,
+            "title": "Guided wave propagation in single and double layer hollow cylinders embedded in infinite media",
+            "volume": "129"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "R. J.",
+                    "initial": "R.J.",
+                    "last": "Astley"
+                }
+            ],
+            "doi": "10.1002/1097-0207(20001110)49:7<951::AID-NME989>3.0.CO;2-T",
+            "firstpage": "951",
+            "issn": "00295981",
+            "lastpage": "976",
+            "pub_year": 2000,
+            "title": "Infinite elements for wave problems: A review of current formulations and an assessment of accuracy",
+            "volume": "49"
+        },
+        "bib22": {
+            "authors": [
+                {
+                    "first": "Hauke",
+                    "initial": "H.",
+                    "last": "Gravenkamp"
+                },
+                {
+                    "first": "Carolin",
+                    "initial": "C.",
+                    "last": "Birk"
+                },
+                {
+                    "first": "Chongmin",
+                    "initial": "C.",
+                    "last": "Song"
+                }
+            ],
+            "doi": "10.1121/1.4864303",
+            "firstpage": "1127",
+            "issn": "00014966",
+            "lastpage": "1138",
+            "pmid": "24606256",
+            "pub_year": 2014,
+            "title": "Computation of dispersion curves for embedded waveguides using a dashpot boundary condition",
+            "volume": "135"
+        },
+        "bib23": {
+            "authors": [
+                {
+                    "first": "Hauke",
+                    "initial": "H.",
+                    "last": "Gravenkamp"
+                },
+                {
+                    "first": "Carolin",
+                    "initial": "C.",
+                    "last": "Birk"
+                },
+                {
+                    "first": "Jason",
+                    "initial": "J.",
+                    "last": "Van"
+                }
+            ],
+            "doi": "10.1016/j.compstruc.2014.11.007",
+            "firstpage": "61",
+            "issn": "00457949",
+            "lastpage": "71",
+            "pub_year": 2015,
+            "title": "Modeling ultrasonic waves in elastic waveguides of arbitrary cross-section embedded in infinite solid medium",
+            "volume": "149"
+        },
+        "bib24": {
+            "authors": [
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mazzotti"
+                },
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Bartoli"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Marzani"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Viola"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2013.03.003",
+            "firstpage": "1227",
+            "issn": "0041624X",
+            "lastpage": "1241",
+            "pub_year": 2013,
+            "title": "A coupled SAFE-2.5D BEM approach for the dispersion analysis of damped leaky guided waves in embedded waveguides of arbitrary cross-section",
+            "volume": "53"
+        },
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Jean Pierre",
+                    "initial": "J.P.",
+                    "last": "Berenger"
+                }
+            ],
+            "doi": "10.1006/jcph.1994.1159",
+            "firstpage": "185",
+            "issn": "00219991",
+            "lastpage": "200",
+            "pub_year": 1994,
+            "title": "A perfectly matched layer for the absorption of electromagnetic waves",
+            "volume": "114"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "Weng Cho",
+                    "initial": "W.C.",
+                    "last": "Chew"
+                },
+                {
+                    "first": "William H.",
+                    "initial": "W.H.",
+                    "last": "Weedon"
+                }
+            ],
+            "doi": "10.1002/mop.4650071304",
+            "firstpage": "599",
+            "issn": "08952477",
+            "lastpage": "604",
+            "pub_year": 1994,
+            "title": "A 3D perfectly matched medium from modified maxwell's equations with stretched coordinates",
+            "volume": "7"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "Quan",
+                    "initial": "Q.",
+                    "last": "Qi"
+                },
+                {
+                    "first": "Thomas L.",
+                    "initial": "T.L.",
+                    "last": "Geers"
+                }
+            ],
+            "doi": "10.1006/jcph.1997.5868",
+            "firstpage": "166",
+            "issn": "00219991",
+            "lastpage": "183",
+            "pub_year": 1998,
+            "title": "Evaluation of the Perfectly Matched Layer for Computational Acoustics",
+            "volume": "139"
+        },
+        "bib28": {
+            "authors": [
+                {
+                    "first": "K. L.",
+                    "initial": "K.L.",
+                    "last": "Nguyen"
+                },
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Treyss\u00e8de"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Hazard"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2014.12.032",
+            "firstpage": "158",
+            "issn": "0022460X",
+            "lastpage": "178",
+            "pub_year": 2015,
+            "title": "Numerical modeling of three-dimensional open elastic waveguides combining semi-analytical finite element and perfectly matched layer methods",
+            "volume": "344"
+        },
+        "bib29": null,
+        "bib3": {
+            "authors": [
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Brennan"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Gao"
+                },
+                {
+                    "first": "P. F.",
+                    "initial": "P.F.",
+                    "last": "Joseph"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2007.02.023",
+            "firstpage": "213",
+            "issn": "0022460X",
+            "lastpage": "223",
+            "pub_year": 2007,
+            "title": "On the relationship between time and frequency domain methods in time delay estimation for leak detection in water distribution pipes",
+            "volume": "304"
+        },
+        "bib30": {
+            "authors": [
+                {
+                    "first": "W. C.",
+                    "initial": "W.C.",
+                    "last": "Chew"
+                },
+                {
+                    "first": "Q. H.",
+                    "initial": "Q.H.",
+                    "last": "Liu"
+                }
+            ],
+            "doi": "10.1142/S0218396X96000118",
+            "firstpage": "341",
+            "issn": "0218396X",
+            "lastpage": "359",
+            "pub_year": 1996,
+            "title": "Perfectly matched layers for elastodynamics: A new absorbing boundary condition",
+            "volume": "4"
+        },
+        "bib31": {
+            "authors": [
+                {
+                    "first": "M. G.",
+                    "initial": "M.G.",
+                    "last": "Silk"
+                },
+                {
+                    "first": "K. F.",
+                    "initial": "K.F.",
+                    "last": "Bainton"
+                }
+            ],
+            "doi": "10.1016/0041-624X(79)90006-4",
+            "firstpage": "11",
+            "issn": "0041624X",
+            "lastpage": "19",
+            "pub_year": 1979,
+            "title": "The propagation in metal tubing of ultrasonic wave modes equivalent to Lamb waves",
+            "volume": "17"
+        },
+        "bib32": {
+            "authors": [
+                {
+                    "first": "Radu",
+                    "initial": "R.",
+                    "last": "Cimpeanu"
+                },
+                {
+                    "first": "Anton",
+                    "initial": "A.",
+                    "last": "Martinsson"
+                },
+                {
+                    "first": "Matthias",
+                    "initial": "M.",
+                    "last": "Heil"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2015.05.006",
+            "firstpage": "329",
+            "issn": "00219991",
+            "lastpage": "347",
+            "pub_year": 2015,
+            "title": "A parameter-free perfectly matched layer formulation for the finite-element-based solution of the Helmholtz equation",
+            "volume": "296"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Michler"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Demkowlcz"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Kurtz"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Pardo"
+                }
+            ],
+            "doi": "10.1002/num.20252",
+            "firstpage": "832",
+            "issn": "0749159X",
+            "lastpage": "858",
+            "pub_year": 2007,
+            "title": "Improving the performance of perfectly matched layers by means of hp-adaptivity",
+            "volume": "23"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Rabinovich"
+                },
+                {
+                    "first": "Dan",
+                    "initial": "D.",
+                    "last": "Givoli"
+                },
+                {
+                    "first": "Eliane",
+                    "initial": "E.",
+                    "last": "B\u00e9cache"
+                }
+            ],
+            "doi": "10.1002/cnm.1394",
+            "firstpage": "1351",
+            "issn": "20407939",
+            "lastpage": "1369",
+            "pub_year": 2010,
+            "title": "Comparison of high-order absorbing boundary conditions and perfectly matched layers in the frequency domain",
+            "volume": "26"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "Arash",
+                    "initial": "A.",
+                    "last": "Fathi"
+                },
+                {
+                    "first": "Babak",
+                    "initial": "B.",
+                    "last": "Poursartip"
+                },
+                {
+                    "first": "Loukas F.",
+                    "initial": "L.F.",
+                    "last": "Kallivokas"
+                }
+            ],
+            "doi": "10.1002/nme.4780",
+            "firstpage": "165",
+            "issn": "00295981",
+            "lastpage": "198",
+            "pub_year": 2015,
+            "title": "Time-domain hybrid formulations for wave simulations in three-dimensional PML-truncated heterogeneous media",
+            "volume": "101"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "I.",
+                    "initial": "I.",
+                    "last": "Singer"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Turkel"
+                }
+            ],
+            "doi": "10.1016/j.jcp.2004.06.010",
+            "firstpage": "439",
+            "issn": "00219991",
+            "lastpage": "465",
+            "pub_year": 2004,
+            "title": "A perfectly matched layer for the Helmholtz equation in a semi-infinite strip",
+            "volume": "201"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "James N.",
+                    "initial": "J.N.",
+                    "last": "Barshinger"
+                },
+                {
+                    "first": "Joseph L.",
+                    "initial": "J.L.",
+                    "last": "Rose"
+                }
+            ],
+            "doi": "10.1109/TUFFC.2004.1367496",
+            "firstpage": "1547",
+            "issn": "08853010",
+            "lastpage": "1556",
+            "pub_year": 2004,
+            "title": "Guided wave propagation in an elastic hollow cylinder coated with a viscoelastic material",
+            "volume": "51"
+        },
+        "bib4": {
+            "authors": [
+                {
+                    "first": "J. M.",
+                    "initial": "J.M.",
+                    "last": "Muggleton"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Yan"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2012.10.024",
+            "firstpage": "1216",
+            "issn": "0022460X",
+            "lastpage": "1230",
+            "pub_year": 2013,
+            "title": "Wavenumber prediction and measurement of axisymmetric waves in buried fluid-filled pipes: Inclusion of shear coupling at a lubricated pipe/soil interface",
+            "volume": "332"
+        },
+        "bib5": {
+            "authors": [
+                {
+                    "first": "Ray",
+                    "initial": "R.",
+                    "last": "Kirby"
+                },
+                {
+                    "first": "Zahari",
+                    "initial": "Z.",
+                    "last": "Zlatev"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Mudge"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2012.04.013",
+            "firstpage": "3989",
+            "issn": "0022460X",
+            "lastpage": "4004",
+            "pub_year": 2012,
+            "title": "On the scattering of torsional elastic waves from axisymmetric defects in coated pipes",
+            "volume": "331"
+        },
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Ray",
+                    "initial": "R.",
+                    "last": "Kirby"
+                },
+                {
+                    "first": "Zahari",
+                    "initial": "Z.",
+                    "last": "Zlatev"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Mudge"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2013.04.039",
+            "firstpage": "5040",
+            "issn": "0022460X",
+            "lastpage": "5058",
+            "pub_year": 2013,
+            "title": "On the scattering of longitudinal elastic waves from axisymmetric defects in coated pipes",
+            "volume": "332"
+        },
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Wenbo",
+                    "initial": "W.",
+                    "last": "Duan"
+                },
+                {
+                    "first": "Ray",
+                    "initial": "R.",
+                    "last": "Kirby"
+                },
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Mudge"
+                }
+            ],
+            "doi": "10.1016/j.ultras.2015.09.019",
+            "firstpage": "228",
+            "issn": "0041624X",
+            "lastpage": "241",
+            "pub_year": 2016,
+            "title": "On the scattering of elastic waves from a non-axisymmetric defect in a coated pipe",
+            "volume": "65"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Michael J.",
+                    "initial": "M.J.",
+                    "last": "Lowe"
+                }
+            ],
+            "doi": "10.1109/58.393096",
+            "firstpage": "525",
+            "issn": "08853010",
+            "lastpage": "542",
+            "pub_year": 1995,
+            "title": "Matrix Techniques for Modeling Ultrasonic Waves in Multilayered Media",
+            "volume": "42"
+        },
+        "bib9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 98607,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 98569,
+                    "startOffset": 98565
+                },
+                "bib28": {
+                    "endOffset": 98589,
+                    "startOffset": 98585
+                },
+                "bib9": {
+                    "endOffset": 98606,
+                    "startOffset": 98603
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Section 3, an exponential PML coordinate stretching function is introduced and predictions are benchmarked against those of Castaings and Lowe [19], Nguyen et al. [28] and DISPERSE [9].",
+            "startOffset": 98419,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96621,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Accordingly, it is not uncommon to obtain hundreds of additional radiation modes for each low order non-radiating mode required for the buried waveguide.",
+            "startOffset": 96468,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97223,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, buried pipelines are likely to represent a large majority of the applications for long range ultrasonic testing, and this means it is necessary to analyse structures larger than those studied by Nguyen et al.",
+            "startOffset": 97006,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124646,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Accordingly, an 8 in.",
+            "startOffset": 124625,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 135050,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The article uses a Galerkin based approach to derive a one dimensional version of the SAFE formulation, which is then closed using a one dimensional PML.",
+            "startOffset": 134897,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 128000,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "That is, the L(0,1) family does not exhibit the same behaviour as that seen for T(0,1) and L(0,2), and so one cannot conclude that isolation is a general effect that applies to all modes.",
+            "startOffset": 127813,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 86034,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is common to locate defects or ruptures in pipelines by monitoring the propagation of acoustic energy travelling along the walls of the pipe.",
+            "startOffset": 85890,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87535,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "If one assumes that the pipeline of interest is long and slender then the acoustic energy travels along the pipe walls in a discrete set of pipe eigenmodes.",
+            "startOffset": 87379,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 138562,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "This will help in the application of non-destructive testing in buried pipelines, as under certain conditions one is limited only by the attenuation properties of the coating and not the surrounding medium; however, the degree of isolation provided by a coating will depend on many parameters relating to material properties and excitation frequency, and one cannot always be sure that levels of isolation will be maintained if one or more of these parameters is changed.",
+            "startOffset": 138091,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 137131,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "However, it is noted that this isolation effect depends on the mode, or modes, that are being analysed, the properties and geometry of the viscoelastic coating and surrounding medium, as well as the frequency range being studied.",
+            "startOffset": 136902,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97455,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This places significant demands on the computational efficiency of a 2D numerical model and it is desirable to develop efficient alternatives if one is to successfully analyse pipelines with dimensions typically found in the field.",
+            "startOffset": 97224,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137854,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 137727,
+                    "startOffset": 137723
+                }
+            },
+            "secId": "s0050",
+            "sentence": "However, Leniov et al. [12] show that by choosing a different viscoelastic material one may achieve good levels of isolation in the lower frequency range.",
+            "startOffset": 137700,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 92369,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Hua et al. analysed coated and uncoated pipes buried in soil and they obtained a large number of axisymmetric and flexural modes.",
+            "startOffset": 92240,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135846,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Furthermore, this permits the use of a relatively thin PML and it is shown that accurate results may be obtained over a wide frequency range using a PML of thickness equal to the thickness of the pipe wall, or the radius of a rod.",
+            "startOffset": 135616,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 94064,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 93978,
+                    "startOffset": 93974
+                }
+            },
+            "secId": "s0005",
+            "sentence": "An alternative method for closing the problem was presented by Mazzotti et al. [24], who proposed a SAFE based formulation closed by a 2.5D Boundary Element formulation.",
+            "startOffset": 93895,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127182,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 127088,
+                    "startOffset": 127084
+                }
+            },
+            "secId": "s0040",
+            "sentence": "This effect has recently been observed by Leinov et al. [12] following the addition of a Polyethylene (PE) viscoelastic coating with a thickness of 19 mm.",
+            "startOffset": 127028,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 89067,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Furthermore, if one wishes to find a large number of eigenmodes then the difficulties with root finding multiply, and it is common to miss modes when attempting to track large numbers of roots through the complex plane.",
+            "startOffset": 88848,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86656,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For example, viscoelastic coatings are often present and they attenuate energy as the wave travels along the pipe wall.",
+            "startOffset": 86537,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89840,
+            "parents": [],
+            "refoffsets": {
+                "bib15": {
+                    "endOffset": 89678,
+                    "startOffset": 89674
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Simmons et al. [15] also used an analytic expression to obtain axisymmetric modes for buried bars, or rods, and showed how the argument principle may be used to aid in root finding.",
+            "startOffset": 89659,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127812,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In contrast, for the L(0,1) family the difference in the level of attenuation between a buried and unburied coated pipe is very large across the entire frequency range.",
+            "startOffset": 127644,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 131540,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This choice of parameters also enables Leinov et al. to provide lower levels of attenuation than that seen for bitumen in this current study.",
+            "startOffset": 131399,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 130482,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "If one adopts their definition for impedance it is observed that the impedance of the bitumen studied here is 34 times that of the PE used by Leinov et al., and it is 5.3 times that of sand.",
+            "startOffset": 130292,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 136536,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "This is likely to have a significant and detrimental impact on non-destructive testing methodologies.",
+            "startOffset": 136435,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 87807,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A popular approach for obtaining these eigenmodes is through the solution of an analytic expression for the governing dispersion relation.",
+            "startOffset": 87669,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 126271,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 126231,
+                    "startOffset": 126228
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For example, the L(0,1) family typically has a strong displacement in the radial direction for the parameters shown in Fig. 6, see also the mode shapes presented by Duan and Kirby [7] for the same [unburied] pipe at 70 kHz.",
+            "startOffset": 126048,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 131737,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Accordingly, it appears to be possible, through careful choice of a coating material for a given application, to optimise levels of attenuation for a particular mode over a chosen frequency range.",
+            "startOffset": 131541,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 90880,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The SAFE method requires the solution domain to be closed, which presents a problem for pipes buried in a nominally infinite, or open, medium.",
+            "startOffset": 90738,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 128663,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "However, at lower frequencies the coating is less effective (seen in a reduction in attenuation for the unburied coated pipe) and so the amplitude of displacement is proportionally higher within the coating and more energy leaks out.",
+            "startOffset": 128430,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 126468,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "A strong radial displacement means that the L(0,1) family couples efficiently to the surrounding medium and so high levels of energy radiates from the pipe and these modes are strongly attenuated.",
+            "startOffset": 126272,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 90224,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 90223,
+                    "startOffset": 90217
+                },
+                "bib2": {
+                    "endOffset": 90223,
+                    "startOffset": 90217
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Whilst this change of approach may be desirable for the analysis of coated pipes and/or more complex multi-layered problems, one may argue that numerical methods are unavoidable when large numbers of eigenmodes are required for use in techniques developed for wave scattering problems [2,16].",
+            "startOffset": 89932,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93201,
+            "parents": [],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 93200,
+                    "startOffset": 93193
+                },
+                "bib23": {
+                    "endOffset": 93200,
+                    "startOffset": 93193
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Alternative numerical methods for analysing embedded waveguides include a Scaled Boundary Finite Element Method (SBFEM) proposed by Gravenkamp et al. [22,23].",
+            "startOffset": 93043,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90605,
+            "parents": [],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 90537,
+                    "startOffset": 90533
+                },
+                "bib18": {
+                    "endOffset": 90604,
+                    "startOffset": 90600
+                },
+                "bib5": {
+                    "endOffset": 90575,
+                    "startOffset": 90570
+                },
+                "bib6": {
+                    "endOffset": 90575,
+                    "startOffset": 90570
+                },
+                "bib7": {
+                    "endOffset": 90575,
+                    "startOffset": 90570
+                }
+            },
+            "secId": "s0005",
+            "sentence": "A number of different numerical methods are available for finding the eigenmodes for pipes; however, the authors favour the so-called semi-analytic finite element (SAFE) method as it is computationally efficient and it may readily be applied to pipelines with multiple layers, see for example Marzani et al. [17], and for coated pipes see refs. [5\u20137], as well as Mu and Rose [18].",
+            "startOffset": 90225,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92556,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The infinite elements used by Hua et al. are popular in the solution of the Helmholtz Equation because they have the potential to be more computationally efficient than absorbing layers.",
+            "startOffset": 92370,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 134896,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "This article presents a numerical method for computing the eigenmodes for a multi-layer embedded axisymmetric waveguide.",
+            "startOffset": 134776,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 131398,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 131159,
+                    "startOffset": 131155
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For example, Leinov et al. [12] demonstrate that by choosing a material that is much less attenuative than bitumen, and also increasing the width of this material to 19mm, then it is possible to achieve good isolation for T(0,1) and L(0,2) at relatively low frequencies.",
+            "startOffset": 131128,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 128429,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 128368,
+                    "startOffset": 128365
+                }
+            },
+            "secId": "s0040",
+            "sentence": "For instance, in the medium to high frequency range the presence of the coating means that the displacement for the T(0,1) and L(0,2) is relatively low at the edge of the coating [7] and this means that little energy radiates from the coating.",
+            "startOffset": 128186,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 86288,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 86170,
+                    "startOffset": 86165
+                },
+                "bib2": {
+                    "endOffset": 86170,
+                    "startOffset": 86165
+                },
+                "bib3": {
+                    "endOffset": 86287,
+                    "startOffset": 86282
+                },
+                "bib4": {
+                    "endOffset": 86287,
+                    "startOffset": 86282
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For example, in non-destructive testing an ultrasonic guided wave is used to interrogate the structural integrity of the pipeline [1,2], whereas at much lower [audio] frequencies one may detect propagating elastic waves generated by pipe ruptures [3,4].",
+            "startOffset": 86035,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86925,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 86924,
+                    "startOffset": 86921
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Furthermore, pipelines are often buried underground and acoustic energy radiates out from the pipe so that the energy remaining in the pipe wall is reduced [4].",
+            "startOffset": 86765,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89459,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It is, therefore, not surprising to see that those modes obtained following the solution of an analytic dispersion relation are generally restricted to lower order/axisymmetric modes.",
+            "startOffset": 89276,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97733,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 97701,
+                    "startOffset": 97697
+                },
+                "bib22": {
+                    "endOffset": 97732,
+                    "startOffset": 97725
+                },
+                "bib23": {
+                    "endOffset": 97732,
+                    "startOffset": 97725
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Accordingly, in this article we return to a one dimensional formulation of the SAFE method similar to that proposed by Hua et al. [20], and Gravenkamp et al. [22,23].",
+            "startOffset": 97567,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130291,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "For a viscoelastic material there are two [complex] values for impedance, although Leinov et al. choose to define their impedance using only the real part of the shear properties.",
+            "startOffset": 130112,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 89658,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 89518,
+                    "startOffset": 89514
+                },
+                "bib14": {
+                    "endOffset": 89568,
+                    "startOffset": 89564
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For instance, Leinov et al. examine T(0,1) and L(0,2) [12], whereas for imbedded bars Pavlakovic et al. [14] restrict their analysis to [axisymmetric] longitudinal modes and the first flexural mode.",
+            "startOffset": 89460,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 130622,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "However, isolation effects are still observed for bitumen, albeit over a higher frequency range when compared to that seen by Leinov et al.",
+            "startOffset": 130483,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 94886,
+            "parents": [],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 94668,
+                    "startOffset": 94664
+                },
+                "bib26": {
+                    "endOffset": 94885,
+                    "startOffset": 94878
+                },
+                "bib27": {
+                    "endOffset": 94885,
+                    "startOffset": 94878
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This method was first introduced by Berenger [25] in the analysis of electromagnetic waveguides and it has become increasingly popular due to the relatively straightforward way in which the method can be integrated into existing finite element based software [26,27].",
+            "startOffset": 94619,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135969,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "This enables eigenmodes to be obtained and sorted at frequencies up to 120 kHz in under about 1 second for each frequency.",
+            "startOffset": 135847,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 86536,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, in many pipeline applications it is common for some form of attenuation to be present.",
+            "startOffset": 86441,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135396,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The use of a PML means that the problem can readily be tackled using a standard FE based approach, and this facilitates an investigation into different coordinate stretching functions.",
+            "startOffset": 135212,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 129237,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "That is, if the effect of a coating is to lower significantly the modal displacement pattern within the coating region, then the energy radiated into a surrounding medium will be small and the attenuation of a buried coated pipe will tend towards that of an unburied coated pipe and this will \u201cisolate\u201d the pipe.",
+            "startOffset": 128925,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 94287,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This method was applied in the analysis of non-axisymmetric embedded waveguides, where the use of boundary elements ensures that the appropriate radiation condition is properly enforced over the surface of the SAFE region.",
+            "startOffset": 94065,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88079,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 88078,
+                    "startOffset": 88071
+                },
+                "bib11": {
+                    "endOffset": 88078,
+                    "startOffset": 88071
+                },
+                "bib12": {
+                    "endOffset": 88078,
+                    "startOffset": 88071
+                },
+                "bib8": {
+                    "endOffset": 87838,
+                    "startOffset": 87833
+                },
+                "bib9": {
+                    "endOffset": 87838,
+                    "startOffset": 87833
+                }
+            },
+            "secId": "s0005",
+            "sentence": "For example, Lowe et al. [8,9] show that by adopting a general matrix method it is possible to obtain eigenmodes for multiple layers, which enables the addition of viscoelastic coatings and/or a surrounding elastic medium such as that encountered by buried pipes [10\u201312].",
+            "startOffset": 87808,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136434,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "For uncoated pipes buried in sand or soil, it is seen that the attenuation of each mode is high, as energy radiates out of the pipe into the surrounding medium.",
+            "startOffset": 136274,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 87253,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Accordingly, this article presents a fast numerical method suitable for obtaining the eigenmodes for a buried pipe, which may then be used to optimise detection techniques.",
+            "startOffset": 87081,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92786,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The application of infinite elements requires the discretisation of the exterior domain using elements with an asymptotic or wave based shape function so that one may properly enforce the appropriate radiation boundary condition.",
+            "startOffset": 92557,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94504,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, the addition of the 2.5D boundary element formulation does present a number of numerical challenges, which may be avoided by using alternative formulations if one is only interested in axisymmetric problems.",
+            "startOffset": 94288,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95921,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 95920,
+                    "startOffset": 95916
+                }
+            },
+            "secId": "s0005",
+            "sentence": "It is demonstrated by Nguyen et al. that the problem may be solved with a PML that has the same thickness as the radius of their waveguide, which shows a significant improvement on the [much larger] absorbing layer used by Castaings and Lowe [19].",
+            "startOffset": 95674,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136193,
+            "parents": [],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 136192,
+                    "startOffset": 136184
+                },
+                "bib2": {
+                    "endOffset": 136192,
+                    "startOffset": 136184
+                },
+                "bib7": {
+                    "endOffset": 136192,
+                    "startOffset": 136184
+                }
+            },
+            "secId": "s0050",
+            "sentence": "Accordingly, the technique presented here is sufficiently fast and accurate to be suitable for use in the development of \u201chybrid\u201d models that have been applied previously to the analysis of scattering from defects [2,7,16].",
+            "startOffset": 135970,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 87668,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Knowledge of the properties of these eigenmodes is essential in order to fully interpret information obtained from a testing regime.",
+            "startOffset": 87536,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 138090,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Therefore, the results presented here demonstrate that most viscoelastic coatings are likely to provide some degree of isolation from their surrounding medium, and this includes those materials typically found in pipeline applications.",
+            "startOffset": 137855,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 127451,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "To enable this, the attenuation of an unburied coated pipe is also shown in Fig. 6(a\u2013(c).",
+            "startOffset": 127362,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 89275,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 89274,
+                    "startOffset": 89270
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This means that for problems in which complex roots are present, and where one would like to locate a significant number of these roots, root finding can become time consuming and difficult to automate [13].",
+            "startOffset": 89068,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129491,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Conversely, if the effect of the coating is reduced, for example when the frequency is lowered for bitumen, then the attenuation in a coated buried pipe will tend towards the behaviour seen for an uncoated buried pipe and the pipe is no longer isolated.",
+            "startOffset": 129238,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 98253,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Furthermore, a new one dimensional PML stretching function is also investigated with the aim of further reducing the degrees of freedom required for a buried pipe and hence optimising solution time.",
+            "startOffset": 98055,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137310,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "This is because the ability of a mode to radiate energy into the surrounding medium [and hence to undergo high levels of attenuation] is linked to the shape of a given eigenmode.",
+            "startOffset": 137132,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 128185,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It is proposed that the difference in behaviour seen for different families of modes can again be explained by the mode shapes that are common to, and indeed define, each modal family.",
+            "startOffset": 128001,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 91697,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Here, Castaings and Lowe note problems with the ability of the layer to absorb longer wavelengths, which was seen in inaccuracies found with the computation of leaky modes with high radiation angles, as well as those modes found at lower ultrasonic frequencies.",
+            "startOffset": 91436,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91266,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Castaings and Lowe used a finite element discretisation for the steel rod, and a concentric portion of the surrounding concrete, they then closed the problem with an outer absorbing layer designed to prevent erroneous reflections from the [artificial] boundary of the problem.",
+            "startOffset": 90990,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90989,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 90940,
+                    "startOffset": 90936
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This problem was first addressed by Castaings and Lowe [19], who studied a steel rod surrounded by concrete.",
+            "startOffset": 90881,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131127,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "These parameters are likely to include the acoustic properties of each material (both shear and longitudinal), the density of each material, the thickness of the coating, the frequency of excitation, and the mode of interest.",
+            "startOffset": 130902,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 95486,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 95319,
+                    "startOffset": 95315
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This was accomplished by Nguyen et al. [28], who used the SAFE method to discretise an elastic waveguide of arbitrary cross-section, and then closed the problem using either a rectangular or circular PML layer.",
+            "startOffset": 95276,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96467,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Moreover, the PML layer generates its own [radiation] eigenmodes and these must also be removed when filtering the unordered list of eigenvalues obtained on solution of the problem.",
+            "startOffset": 96286,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 131927,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "However, this isolation effect is not limited to low impedance materials, and may also be observed in other viscoelastic materials that are common in pipeline applications, such as bitumen.",
+            "startOffset": 131738,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 97875,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 97783,
+                    "startOffset": 97779
+                },
+                "bib22": {
+                    "endOffset": 97812,
+                    "startOffset": 97808
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, rather than using infinite elements [20], or a numerical dashpot [22], to close the one dimensional problem this article uses a PML.",
+            "startOffset": 97734,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88847,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This is because it becomes much harder to track and locate roots in the complex plane and one needs to develop sophisticated algorithms to do this over multiple frequencies.",
+            "startOffset": 88674,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92239,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 92190,
+                    "startOffset": 92186
+                }
+            },
+            "secId": "s0005",
+            "sentence": "An alternative to the use of an absorbing layer was later proposed by Hua et al. [20], who replaced this layer with infinite elements.",
+            "startOffset": 92105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88673,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "When one adds complexity to the problem, such as through the addition of a coating and/or a surrounding elastic medium, then root finding becomes ever more problematic.",
+            "startOffset": 88505,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89931,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "If one wishes to avoid root finding then it is necessary to move towards numerical methods.",
+            "startOffset": 89840,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127361,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Accordingly, the predictions obtained here support the findings of Leinov et al., and it is interesting also to compare the relative levels of \u201cisolation\u201d achieved in each study.",
+            "startOffset": 127183,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 124498,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 124334,
+                    "startOffset": 124330
+                }
+            },
+            "secId": "s0040",
+            "sentence": "A recent article by Leinov et al. [12] reported that \u201cisolation\u201d effects may appear whereby particular modes in coated pipes leak less energy into the surrounding medium when compared to uncoated pipes.",
+            "startOffset": 124296,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 124975,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The attenuation of different eigenmodes is presented in Fig. 6(a) to (c), and in order to view the effects of the coating predictions are also presented for the equivalent uncoated pipe.",
+            "startOffset": 124789,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 128924,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 128845,
+                    "startOffset": 128842
+                }
+            },
+            "secId": "s0040",
+            "sentence": "In contrast, the displacement pattern of the L(0,1) family remains relatively high at the edge of the coating over the entire frequency range, especially in the radial direction [7], so that high levels of energy radiate out of the pipe for all of these modes.",
+            "startOffset": 128664,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 124624,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This is an interesting finding that has ramifications for LRUT and so this effect is explored in more detail in this section.",
+            "startOffset": 124499,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 98871,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, conclusions are presented in Section 5.",
+            "startOffset": 98823,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129671,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 129601,
+                    "startOffset": 129597
+                }
+            },
+            "secId": "s0040",
+            "sentence": "The \u201cisolation\u201d imparted by the coating described above was also observed experimentally by Leinov et al. [12] for T(0,1) and L(0,2) at frequencies between about 10 kHz and 40 kHz.",
+            "startOffset": 129491,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 93894,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This may lead to inaccuracies when, for example, there is a high impedance mismatch between the two regions.",
+            "startOffset": 93786,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95185,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 95184,
+                    "startOffset": 95180
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Moreover, a PML is capable of attenuating the outgoing wave much more efficiently than an equivalent absorbing layer such as the one used by Castaings and Lowe [19].",
+            "startOffset": 95020,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 135615,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "It is shown that an exponential stretching function is more computationally efficient when compared to the more traditional polynomial coordinate stretching function, at least for the problems examined in this article.",
+            "startOffset": 135397,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 91851,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Moreover, even away from these limiting cases it was found to be necessary to extend the outer boundary of the problem to 16 times the radius of the rod.",
+            "startOffset": 91698,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125575,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 125574,
+                    "startOffset": 125571
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Furthermore, predictions are grouped into \u201cfamilies\u201d of modes, so that the T(0,1) family contains T(0,1), F(1,2) and F(2,2); the L(0,1) family contains L(0,1), F(1,1,) and F(2,1); and the L(0,2) family contains L(0,2), F(1,3) and F(2,3) [7].",
+            "startOffset": 125334,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 124295,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The SAFE-PML model is now used to investigate the effects of a coating on the propagation of elastic waves in buried pipes.",
+            "startOffset": 124172,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 90737,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The extension of the SAFE method to problems involving structures embedded in an infinite medium is, however, less straightforward.",
+            "startOffset": 90606,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96830,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This means that when using a two dimensional approach, large numbers of degrees of freedom are still required in order to obtain accurate predictions for a relatively small number of non-radiating eigenmodes.",
+            "startOffset": 96622,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 137699,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "For bitumen, the effect of the coating on each eigenmode is seen to limit isolation to the medium and high frequency range for T(0,1), and the medium frequency range for L(0,2).",
+            "startOffset": 137522,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 137521,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Those modes with a relatively high displacement within the coating region, especially in the radial direction, will radiate energy more effectively than those in which the displacement drops within the coating.",
+            "startOffset": 137311,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 96285,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, their method adopts a two-dimensional discretisation of the problem and this generates large numbers of radiation eigenmodes, most of which are of little physical interest.",
+            "startOffset": 96104,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97005,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 96878,
+                    "startOffset": 96874
+                },
+                "bib28": {
+                    "endOffset": 96902,
+                    "startOffset": 96898
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The models presented by Castaings and Lowe [19], and Nguyen et al. [28] are, of course, two dimensional models in order to permit the analysis of non-axisymmetric waveguides.",
+            "startOffset": 96831,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125195,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Note that for large pipes the number of leaky modes present at normal LRUT frequencies is substantial and if one plotted all of these modes over a wide frequency range then the attenuation plots would be unintelligible.",
+            "startOffset": 124976,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 92105,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Thus, the method requires the use of a large number of degrees of freedom, even for a relatively thin rod, and so the absorbing layer proposed by Castaings and Lowe is unlikely to be computationally efficient for problems involving much larger pipework.",
+            "startOffset": 91852,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 125798,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "If one first examines the attenuation in a buried pipe without a coating in Fig. 6, then it is evident that relatively large levels of attenuation are present as energy radiates from these modes into the surrounding medium.",
+            "startOffset": 125575,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 129840,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Leinov et al. measured levels of attenuation that are lower than those observed here and this is seen to extend to frequencies below those observed in Fig. 6(a) to (c).",
+            "startOffset": 129672,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 88273,
+            "parents": [],
+            "refoffsets": {
+                "bib4": {
+                    "endOffset": 88201,
+                    "startOffset": 88198
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Analytic techniques have also been used to study the signals generated by pipe ruptures, for example Muggleton et al. [4] obtained the axisymmetric modes for a buried fluid-filled plastic pipe.",
+            "startOffset": 88080,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91435,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Castaings and Lowe successfully obtained low order longitudinal and flexural modes, although the accuracy of the method depends on the success of their absorbing layer.",
+            "startOffset": 91267,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 126723,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "In contrast, the radial displacement patterns for the T(0,1) and L(0,2) families are relatively weak, which means that the coupling between the coated pipe and sand is reduced and so less energy from the T(0,1) and L(0,2) families radiates into the sand.",
+            "startOffset": 126469,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 86764,
+            "parents": [],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 86763,
+                    "startOffset": 86758
+                },
+                "bib6": {
+                    "endOffset": 86763,
+                    "startOffset": 86758
+                },
+                "bib7": {
+                    "endOffset": 86763,
+                    "startOffset": 86758
+                }
+            },
+            "secId": "s0005",
+            "sentence": "This limits the inspection range of non-destructive techniques such as long range ultrasonic testing [5\u20137].",
+            "startOffset": 86657,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93624,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Gravenkamp et al. successfully applied this method to axisymmetric problems using a one dimensional SBFEM formulation, as well as non-axisymmetric problems using a two dimensional formulation.",
+            "startOffset": 93432,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88504,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The use of analytic techniques to find guided wave properties in buried or embedded structures does however present a number of challenges, and these are mostly associated with finding the roots of an analytic dispersion relation.",
+            "startOffset": 88274,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93785,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The dashpot used by Gravenkamp et al. is, however, only an approximation of the appropriate boundary condition between the waveguide and the surrounding medium.",
+            "startOffset": 93625,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95673,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Nguyen et al. go on to present a large number of eigenmodes for a steel bar embedded in concrete, as well as a steel rod embedded in stiff stone and a square steel rod embedded in grout.",
+            "startOffset": 95487,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94618,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A popular alternative for closing numerical models for infinite domains is to use a perfectly matched layer (PML).",
+            "startOffset": 94504,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 93431,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Gravenkamp et al. used the SBFEM in the same way that previous authors had applied the SAFE method, but this time they closed the problem using a numerical dashpot, which was chosen to simulate the appropriate boundary condition.",
+            "startOffset": 93202,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98054,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In order to do this, it is necessary first to return to a more general Galerkin based writing of the SAFE equations, which then facilitates the addition of a one dimensional PML.",
+            "startOffset": 97876,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136273,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The one-dimensional SAFE-PML model is applied here to coated and uncoated pipes.",
+            "startOffset": 136193,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 124788,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "schedule 40 pipe coated with bitumen and buried in sand is studied here (see the start of this section for geometry and material properties).",
+            "startOffset": 124647,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 97567,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "One way of doing this is to dedicate the analysis to axisymmetric geometries and to take advantage of symmetry.",
+            "startOffset": 97456,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 98822,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 98821,
+                    "startOffset": 98817
+                }
+            },
+            "secId": "s0005",
+            "sentence": "In Section 4, the method is applied to pipelines with geometries typically found in the field, and this focusses on the addition of a viscoelastic coating and investigates recent observations by Leinov et al. [12].",
+            "startOffset": 98608,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87080,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This means that it is potentially more difficult to use pulse-echo based techniques to locate defects and ruptures in pipes that are buried and/or coated.",
+            "startOffset": 86926,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96103,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 95972,
+                    "startOffset": 95968
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The SAFE-PML method presented by Nguyen et al. [28] demonstrates that it is possible to use a numerically based method to recover a large number of eigenmodes for a buried waveguide.",
+            "startOffset": 95921,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127027,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The addition of a coating is seen to reduce the attenuation of each mode in Fig. 6(a)\u2013(c).",
+            "startOffset": 126937,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 125333,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Thus, in Fig. 6 only those modes that have low levels of attenuation are included, as these are most relevant in non-destructive testing.",
+            "startOffset": 125196,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 126047,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "It is interesting to note that very high levels of attenuation are seen for the L(0,1) family, and the large difference between this and the T(0,1) and L(0,2) families is believed to be because of the different mode shapes belonging to each family.",
+            "startOffset": 125799,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 130901,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Accordingly, it appears likely that these isolation effects are related to a range of parameters and that they are not limited solely to the relative impedance of the coating and the surrounding material (where the impedance is defined as the real part of the shear properties).",
+            "startOffset": 130623,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 126937,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This is believed to be the reason why the different modal families exhibit such different levels of attenuation, and serves to illustrate the importance of mode shape in explaining modal behaviour in buried pipes.",
+            "startOffset": 126724,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 93043,
+            "parents": [],
+            "refoffsets": {
+                "bib21": {
+                    "endOffset": 93042,
+                    "startOffset": 93038
+                }
+            },
+            "secId": "s0005",
+            "sentence": "However, in regions of high modal scattering it is necessary to increase the radial order of the infinite elements in order to maintain solution accuracy; moreover, infinite elements are also known to suffer from problems with numerical instabilities [21].",
+            "startOffset": 92787,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87378,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In long range ultrasonic testing, acoustic energy is generated using transducers attached around the circumference of a pipe.",
+            "startOffset": 87253,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 86440,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "These techniques are well developed and they generally work well for pipeline applications where the attenuation of the propagating wave is negligible.",
+            "startOffset": 86289,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 132238,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Therefore, in order to optimise the levels of isolation provided by a coating for a given application, the evidence presented here suggests that one needs first to start by analysing the modal displacement patterns for the coupled system, and to do this for the individual mode and frequency range of interest.",
+            "startOffset": 131928,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 130111,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Leinov et al. propose that the isolation effect observed in their measurements is determined by the \u201cimpedance\u201d of their viscoelastic material relative to that of sand, such that low relative values of impedance for the viscoelastic coating delivers effective isolation.",
+            "startOffset": 129841,
+            "title": "Uncoated and coated pipe buried in sand"
+        },
+        {
+            "endOffset": 98418,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Accordingly, in Section 2 of this article the governing equations are presented for an axisymmetric embedded waveguide using a one-dimensional SAFE-PML formulation.",
+            "startOffset": 98254,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136721,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "However, when a coating is applied the coating will, under particular conditions, isolate the pipe by concentrating the energy propagation within the walls of the pipe and the coating.",
+            "startOffset": 136537,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 135211,
+            "parents": [],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 135182,
+                    "startOffset": 135178
+                },
+                "bib22": {
+                    "endOffset": 135210,
+                    "startOffset": 135206
+                }
+            },
+            "secId": "s0050",
+            "sentence": "This approach is designed to offer a PML based alternative to the one dimensional SAFE formulations that use infinite elements [20], or numerical dashpots [22].",
+            "startOffset": 135051,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 95275,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "However, it is only recently that a PML has been applied in the analysis of buried pipes.",
+            "startOffset": 95186,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 136901,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 136900,
+                    "startOffset": 136896
+                }
+            },
+            "secId": "s0050",
+            "sentence": "This is observed here for bitumen with a thickness of 1.5 mm, and this effect is the same as the isolation imparted by a thick layer of PE recently observed by Leinov et al. [12].",
+            "startOffset": 136722,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 95019,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For this reason, PMLs are widely used in the study of wave propagation and they form the basis of most commercial FE based software.",
+            "startOffset": 94887,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127643,
+            "parents": [
+                {
+                    "id": "s0035",
+                    "title": "Application to buried pipes"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This shows that for the T(0,1) family good isolation is achieved in the medium to high frequency range, whereas for the L(0,2) family the isolation remains limited to the mid frequency range.",
+            "startOffset": 127452,
+            "title": "Uncoated and coated pipe buried in sand"
+        }
+    ],
+    "docId": "S0022460X16304011",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "wenbo.duan@brunel.ac.uk",
+                "first": "Wenbo",
+                "initial": "W.",
+                "last": "Duan"
+            },
+            {
+                "email": null,
+                "first": "Ray",
+                "initial": "R.",
+                "last": "Kirby"
+            },
+            {
+                "email": null,
+                "first": "Peter",
+                "initial": "P.",
+                "last": "Mudge"
+            },
+            {
+                "email": null,
+                "first": "Tat Hean",
+                "initial": "T.H.",
+                "last": "Gan"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2016.08.013",
+        "firstpage": "177",
+        "issn": "0022460X",
+        "keywords": [
+            "Coated and buried pipes",
+            "Dispersion curves",
+            "Exponential coordinate stretching function",
+            "One dimensional PML",
+            "SAFE method"
+        ],
+        "lastpage": "193",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "A one dimensional numerical approach for computing the eigenmodes of elastic waves in buried pipelines"
+    }
+}

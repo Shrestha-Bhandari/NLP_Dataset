@@ -1,0 +1,502 @@
+{
+    "abstract": "Swiss cheese sets are compact subsets of the complex plane obtained by deleting a sequence of open disks from a closed disk. Such sets have provided numerous counterexamples in the theory of uniform algebras. In this paper, we introduce a topological space whose elements are what we call \"abstract Swiss cheeses\". Working within this topological space, we show how to prove the existence of \"classical\" Swiss cheese sets (as discussed in [6]) with various desired properties. We first give a new proof of the Feinstein-Heath classicalisation theorem [6]. We then consider when it is possible to \"classicalise\" a Swiss cheese while leaving disks which lie outside a given region unchanged. We also consider sets obtained by deleting a sequence of open disks from a closed annulus, and we obtain an analogue of the Feinstein-Heath theorem for these sets. We then discuss regularity for certain uniform algebras. We conclude with an application of these techniques to obtain a classical Swiss cheese set which has the same properties as a non-classical example of O'Farrell [5].",
+    "bib_entries": {
+        "br0010": {
+            "authors": [
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "Feinstein"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Heath"
+                }
+            ],
+            "doi": "10.4064/sm196-3-5",
+            "firstpage": "289",
+            "issn": "00393223",
+            "lastpage": "306",
+            "pub_year": 2010,
+            "title": "Swiss cheeses, rational approximation and universal plane curves",
+            "volume": "196"
+        },
+        "br0020": {
+            "authors": [
+                {
+                    "first": "Anthony G.",
+                    "initial": "A.G.",
+                    "last": "O'Farrell"
+                }
+            ],
+            "doi": "10.1112/blms/11.1.41",
+            "firstpage": "41",
+            "issn": "00246093",
+            "lastpage": "44",
+            "pub_year": 1979,
+            "title": "A regular uniform algebra with a continuous point derivation of infinite order",
+            "volume": "11"
+        },
+        "br0030": null,
+        "br0040": null,
+        "br0050": null,
+        "br0060": null,
+        "br0070": null,
+        "br0080": {
+            "authors": [
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "McKissick"
+                }
+            ],
+            "doi": "10.1090/S0002-9904-1963-10940-4",
+            "firstpage": "391",
+            "issn": "02730979",
+            "lastpage": "395",
+            "pub_year": 1963,
+            "title": "A Nontrivial Normal Sup Norm Algebra",
+            "volume": "69"
+        },
+        "br0090": {
+            "authors": [
+                {
+                    "first": "J. W.D.",
+                    "initial": "J.W.D.",
+                    "last": "Mason"
+                }
+            ],
+            "doi": "10.1090/S0002-9939-2010-10447-1",
+            "firstpage": "4423",
+            "issn": "00029939",
+            "lastpage": "4432",
+            "pub_year": 2010,
+            "title": "An inductive proof of the feinstein-heath swiss cheese \" classicalisation\" theorem",
+            "volume": "138"
+        },
+        "br0100": {
+            "authors": [
+                {
+                    "first": "H. G.",
+                    "initial": "H.G.",
+                    "last": "Dales"
+                },
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "Feinstein"
+                }
+            ],
+            "doi": "10.1007/s13226-010-0005-1",
+            "firstpage": "153",
+            "issn": "00195588",
+            "lastpage": "187",
+            "pub_year": 2010,
+            "title": "Normed alegebras of differentiable functions on compact plane sets",
+            "volume": "41"
+        },
+        "br0110": null,
+        "br0120": {
+            "authors": [
+                {
+                    "first": "J. F.",
+                    "initial": "J.F.",
+                    "last": "Feinstein"
+                },
+                {
+                    "first": "D. W.B.",
+                    "initial": "D.W.B.",
+                    "last": "Somerset"
+                }
+            ],
+            "firstpage": "53",
+            "issn": "00393223",
+            "lastpage": "68",
+            "pub_year": 2000,
+            "title": "Non-regularity for Banach function algebras",
+            "volume": "141"
+        },
+        "br0130": {
+            "authors": [
+                {
+                    "first": "H. G.",
+                    "initial": "H.G.",
+                    "last": "Dales"
+                },
+                {
+                    "first": "J. P.",
+                    "initial": "J.P.",
+                    "last": "McClure"
+                }
+            ],
+            "doi": "10.1016/0022-1236(77)90009-X",
+            "firstpage": "166",
+            "issn": "00221236",
+            "lastpage": "189",
+            "pub_year": 1977,
+            "title": "Higher point derivations on commutative Banach algebras, I",
+            "volume": "26"
+        },
+        "br0140": {
+            "authors": [
+                {
+                    "first": "Alfred P.",
+                    "initial": "A.P.",
+                    "last": "Hallstrom"
+                }
+            ],
+            "doi": "10.1016/0022-1236(69)90028-7",
+            "firstpage": "153",
+            "issn": "00221236",
+            "lastpage": "165",
+            "pub_year": 1969,
+            "title": "On bounded point derivations and analytic capacity",
+            "volume": "4"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 206965,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "We first require some preliminary lemmas.",
+            "startOffset": 206924,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 185258,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "Where existing examples of Swiss cheese sets in the literature are not classical, it is of interest to construct classical Swiss cheese sets which solve the same problems.",
+            "startOffset": 185087,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 183905,
+            "parents": [],
+            "refoffsets": {
+                "br0090": {
+                    "endOffset": 183847,
+                    "startOffset": 183843
+                }
+            },
+            "secId": "se0010",
+            "sentence": "Later, Mason [10] gave a proof of this theorem using transfinite induction.",
+            "startOffset": 183830,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 193064,
+            "parents": [],
+            "secId": "se0030",
+            "sentence": "Throughout, we shall require the following elementary geometric lemmas.",
+            "startOffset": 192993,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 183666,
+            "parents": [],
+            "refoffsets": {
+                "br0010": {
+                    "endOffset": 183532,
+                    "startOffset": 183529
+                }
+            },
+            "secId": "se0010",
+            "sentence": "Feinstein and Heath [6] considered Swiss cheeses in which the sum of the radii of the open disks is strictly less than the radius of the larger, closed disk.",
+            "startOffset": 183509,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 194723,
+            "parents": [],
+            "secId": "se0040",
+            "sentence": "We first introduce the following terminology.",
+            "startOffset": 194678,
+            "title": "Classicalisation of Swiss cheeses"
+        },
+        {
+            "endOffset": 195086,
+            "parents": [],
+            "secId": "se0040",
+            "sentence": "An elementary argument, which we leave to the reader, shows that it is easy to eliminate redundancy from abstract Swiss cheeses with finite radius sum, as in the following lemma.",
+            "startOffset": 194908,
+            "title": "Classicalisation of Swiss cheeses"
+        },
+        {
+            "endOffset": 193411,
+            "parents": [],
+            "refoffsets": {
+                "br0010": {
+                    "endOffset": 193332,
+                    "startOffset": 193326
+                },
+                "br0090": {
+                    "endOffset": 193332,
+                    "startOffset": 193326
+                }
+            },
+            "secId": "se0030",
+            "sentence": "The following two elementary lemmas are essentially those used in [6,10], but including some additional information distilled from the original proofs.",
+            "startOffset": 193260,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 215513,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "We are now ready to prove the controlled classicalisation theorem.",
+            "startOffset": 215447,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 204246,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "This process we call \u201ccontrolled classicalisation\u201d.",
+            "startOffset": 204195,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 204194,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "In this section we discuss some situations in which it is possible to make a Swiss cheese classical without changing certain disks.",
+            "startOffset": 204063,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 221153,
+            "parents": [],
+            "secId": "se0060",
+            "sentence": "It is easy for the reader to check that the following analogue of Lemma 4.3 holds for annular Swiss cheeses.",
+            "startOffset": 221045,
+            "title": "Annular classicalisation"
+        },
+        {
+            "endOffset": 232461,
+            "parents": [],
+            "secId": "se0080",
+            "sentence": "We now use a sequence of lemmas to show that we can construct a classical annular Swiss cheese with the same properties as those in Proposition 8.2.",
+            "startOffset": 232313,
+            "title": "Classicalisation of an example of O'Farrell"
+        },
+        {
+            "endOffset": 218587,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "Taking I to have just one element in Theorem 5.7, we obtain the following corollary, which we use in Section 8.",
+            "startOffset": 218476,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 183397,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "We call such a pair a Swiss cheese and say it is classical if the collection of open disks and the complement of the closed disk have pairwise disjoint closures and the sum of the radii of all open disks is finite.",
+            "startOffset": 183183,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 200347,
+            "parents": [],
+            "secId": "se0040",
+            "sentence": "We are now ready to prove the main results of this section.",
+            "startOffset": 200288,
+            "title": "Classicalisation of Swiss cheeses"
+        },
+        {
+            "endOffset": 240157,
+            "parents": [],
+            "secId": "se0080",
+            "sentence": "We raise the following open question related to regularity and bounded point derivations.",
+            "startOffset": 240068,
+            "title": "Classicalisation of an example of O'Farrell"
+        },
+        {
+            "endOffset": 193450,
+            "parents": [],
+            "secId": "se0030",
+            "sentence": "These lemmas are summarised in Fig. 1.",
+            "startOffset": 193412,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 183182,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "We may consider a pair consisting of a closed disk and a collection of open disks in the plane, from which we obtain the desired Swiss cheese set (see Definition 2.1 below).",
+            "startOffset": 183009,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 229184,
+            "parents": [],
+            "secId": "se0070",
+            "sentence": "We shall require the following theorem.",
+            "startOffset": 229145,
+            "title": "Regularity of R(X)"
+        },
+        {
+            "endOffset": 194677,
+            "parents": [],
+            "secId": "se0040",
+            "sentence": "We will see below that it is enough to prove this theorem for abstract Swiss cheeses where some redundancy has been eliminated, as the general case then follows.",
+            "startOffset": 194516,
+            "title": "Classicalisation of Swiss cheeses"
+        },
+        {
+            "endOffset": 208271,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "By Lemma 5.1 we see that B also satisfies (a), and it is immediate that (b) is also satisfied.",
+            "startOffset": 208177,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 231769,
+            "parents": [],
+            "refoffsets": {
+                "br0130": {
+                    "endOffset": 231633,
+                    "startOffset": 231630
+                }
+            },
+            "secId": "se0080",
+            "sentence": "We refer the reader to [4] (especially Lemma 2.1 and p. 170) for further details, related results and comments concerning non-degenerate higher point derivations.",
+            "startOffset": 231607,
+            "title": "Classicalisation of an example of O'Farrell"
+        },
+        {
+            "endOffset": 207131,
+            "parents": [],
+            "secId": "se0050",
+            "sentence": "The following lemma is probably well-known and can be proved using a Hausdorff metric argument, but we include an elementary proof for the convenience of the reader.",
+            "startOffset": 206966,
+            "title": "Controlled classicalisation"
+        },
+        {
+            "endOffset": 194137,
+            "parents": [],
+            "secId": "se0030",
+            "sentence": "The cases in which equality holds in Lemmas 3.2 and 3.3 are illustrated in Fig. 2.",
+            "startOffset": 194055,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 183508,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "Note that, in the literature, the term \u2018Swiss cheese\u2019 traditionally refers to what we call a Swiss cheese set.",
+            "startOffset": 183398,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 193127,
+            "parents": [],
+            "secId": "se0030",
+            "sentence": "The first is probably well-known, and the proof is elementary.",
+            "startOffset": 193065,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 193518,
+            "parents": [],
+            "secId": "se0030",
+            "sentence": "In the first lemma, we allow for the line segment to be degenerate.",
+            "startOffset": 193451,
+            "title": "Some geometric results"
+        },
+        {
+            "endOffset": 183829,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "They proved, using Zorn's lemma, that for such a Swiss cheese, the associated Swiss cheese set contains a Swiss cheese set associated to a classical Swiss cheese.",
+            "startOffset": 183667,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 232131,
+            "parents": [],
+            "refoffsets": {
+                "br0010": {
+                    "endOffset": 232106,
+                    "startOffset": 232085
+                },
+                "br0020": {
+                    "endOffset": 232129,
+                    "startOffset": 232126
+                },
+                "br0080": {
+                    "endOffset": 232121,
+                    "startOffset": 232117
+                }
+            },
+            "secId": "se0080",
+            "sentence": "The following proposition is an immediate corollary of Proposition 7.3 and the result of McKissick [6, Proposition 1.10] (see also [11] and [5]).",
+            "startOffset": 231986,
+            "title": "Classicalisation of an example of O'Farrell"
+        },
+        {
+            "endOffset": 185386,
+            "parents": [],
+            "secId": "se0010",
+            "sentence": "As part of a general classicalisation scheme, we discuss some new techniques for constructing such classical Swiss cheese sets.",
+            "startOffset": 185259,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 194358,
+            "parents": [],
+            "secId": "se0040",
+            "sentence": "We aim to give a topological proof of the Feinstein\u2013Heath classicalisation theorem (Theorem 4.1), as described in the introduction, stated below in the language of abstract Swiss cheeses.",
+            "startOffset": 194171,
+            "title": "Classicalisation of Swiss cheeses"
+        }
+    ],
+    "docId": "S0022247X16001232",
+    "metadata": {
+        "asjc": [
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "joel.feinstein@nottingham.ac.uk",
+                "first": "J. F.",
+                "initial": "J.F.",
+                "last": "Feinstein"
+            },
+            {
+                "email": "pmxsm9@nottingham.ac.uk",
+                "first": "S.",
+                "initial": "S.",
+                "last": "Morley"
+            },
+            {
+                "email": "pmxhy1@nottingham.ac.uk",
+                "first": "H.",
+                "initial": "H.",
+                "last": "Yang"
+            }
+        ],
+        "doi": "10.1016/j.jmaa.2016.02.004",
+        "firstpage": "119",
+        "issn": "0022247X",
+        "keywords": [
+            "Bounded point derivations",
+            "Rational approximation",
+            "Regularity of R(X)",
+            "Swiss cheeses",
+            "Uniform algebras"
+        ],
+        "lastpage": "141",
+        "openaccess": "Full",
+        "pub_year": 2016,
+        "subjareas": [
+            "MATH"
+        ],
+        "title": "Abstract Swiss cheese space and classicalisation of Swiss cheeses"
+    }
+}

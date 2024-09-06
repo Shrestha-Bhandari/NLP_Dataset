@@ -1,0 +1,1516 @@
+{
+    "abstract": "We present an extension that allows a recently proposed structure-based model for turbulent scalar transport to account for buoyancy effects. The proposed model is based on a generalization of the Interactive Particle Representation Model (IPRM) and is accompanied by a four-equation transport model that provides the turbulence scales needed for the closure of the complete structure-based model (SBM). The structure tensors and their invariants are used to model the additional buoyancy terms that emerge in the four-equation transport equations. Model parameters are set by matching the asymptotic decay exponents in decaying turbulence. The validity of the model is considered for a large number of different types of stably stratified flows at different Richardson numbers (Ri), showing encouraging results. The complete structure-based model achieves fair agreement with LES and DNS predictions for vertical shear in the presence of vertical mean stratification, while the structure tensors are shown to be suitable for use as diagnostic tools for the morphology of highly anisotropic turbulent structures. Additionally, the proposed model is shown to be sensitive to the variation of the inclination angle \u03b8 between the direction of the mean velocity gradient and the orientation of the mean scalar gradient. Furthermore, the model correctly predicts that the evolution of the inverse shear parameter is insensitive to the choice of inclination angle, yielding a turbulent Prandtl number close to unity, in accordance with DNS results.",
+    "author_highlights": [
+        {
+            "endOffset": 84317,
+            "sentence": "The Interacting Particle Representation Model (IPRM) is extended for active scalar transport.",
+            "startOffset": 84224
+        },
+        {
+            "endOffset": 84419,
+            "sentence": "We develop a structure-based set of scale equations for the scalar field and couple them to the IPRM.",
+            "startOffset": 84318
+        },
+        {
+            "endOffset": 84508,
+            "sentence": "The model is assessed for several cases of homogeneous shear with stable stratification.",
+            "startOffset": 84420
+        },
+        {
+            "endOffset": 84571,
+            "sentence": "Good agreement is achieved with available LES and DNS results.",
+            "startOffset": 84509
+        }
+    ],
+    "bib_entries": {
+        "bib0001": {
+            "authors": [
+                {
+                    "first": "V. M.",
+                    "initial": "V.M.",
+                    "last": "Canuto"
+                },
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Chasnov"
+                }
+            ],
+            "doi": "10.1017/S0022112092001149",
+            "firstpage": "349",
+            "issn": "00221120",
+            "lastpage": "378",
+            "pub_year": 1992,
+            "title": "Homogeneous buoyancy-generated turbulence",
+            "volume": "235"
+        },
+        "bib0002": {
+            "authors": [
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Chasnov"
+                }
+            ],
+            "doi": "10.1063/1.868535",
+            "firstpage": "1498",
+            "issn": "10706631",
+            "lastpage": "1506",
+            "pub_year": 1995,
+            "title": "Similarity states of passive scalar transport in buoyancy-generated turbulence",
+            "volume": "7"
+        },
+        "bib0003": {
+            "authors": [
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Gerz"
+                },
+                {
+                    "first": "U.",
+                    "initial": "U.",
+                    "last": "Schumann"
+                },
+                {
+                    "first": "S. E.",
+                    "initial": "S.E.",
+                    "last": "Elghobashi"
+                }
+            ],
+            "doi": "10.1017/S0022112089000765",
+            "firstpage": "563",
+            "issn": "00221120",
+            "lastpage": "594",
+            "pub_year": 1989,
+            "title": "Direct numerical simulation of stratified homogeneous turbulent shear flows",
+            "volume": "200"
+        },
+        "bib0004": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Hanjali\u0107"
+                }
+            ],
+            "doi": "10.1146/annurev.fluid.34.082801.161035",
+            "firstpage": "321",
+            "issn": "00664189",
+            "lastpage": "347",
+            "pub_year": 2002,
+            "title": "One-point closure models for buoyancy-driven turbulent flows",
+            "volume": "34"
+        },
+        "bib0005": {
+            "authors": [
+                {
+                    "first": "Steven E.",
+                    "initial": "S.E.",
+                    "last": "Holt"
+                },
+                {
+                    "first": "Jeffrey R.",
+                    "initial": "J.R.",
+                    "last": "Koseff"
+                }
+            ],
+            "doi": "10.1017/S0022112092003513",
+            "firstpage": "499",
+            "issn": "00221120",
+            "lastpage": "539",
+            "pub_year": 1992,
+            "title": "A numerical study of the evolution and structure of homogeneous stably stratified sheared turbulence",
+            "volume": "237"
+        },
+        "bib0006": {
+            "authors": [
+                {
+                    "first": "E. C.",
+                    "initial": "E.C.",
+                    "last": "Itsweire"
+                },
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Koseff"
+                },
+                {
+                    "first": "D. A.",
+                    "initial": "D.A.",
+                    "last": "Briggs"
+                },
+                {
+                    "first": "J. H.",
+                    "initial": "J.H.",
+                    "last": "Ferziger"
+                }
+            ],
+            "doi": "10.1175/1520-0485(1993)023<1508:TISSFI>2.0.CO;2",
+            "firstpage": "1508",
+            "issn": "00223670",
+            "lastpage": "1522",
+            "pub_year": 1993,
+            "title": "Turbulence in stratified shear flows: implications for interpreting shear-induced mixing in the ocean",
+            "volume": "23"
+        },
+        "bib0007": {
+            "authors": [
+                {
+                    "first": "Frank G.",
+                    "initial": "F.G.",
+                    "last": "Jacobitz"
+                },
+                {
+                    "first": "Sutanu",
+                    "initial": "S.",
+                    "last": "Sarkar"
+                }
+            ],
+            "doi": "10.1063/1.869640",
+            "firstpage": "1158",
+            "issn": "10706631",
+            "lastpage": "1168",
+            "pub_year": 1998,
+            "title": "The effect of nonvertical shear on turbulence in a stably stratified medium",
+            "volume": "10"
+        },
+        "bib0008": {
+            "authors": [
+                {
+                    "first": "Frank G.",
+                    "initial": "F.G.",
+                    "last": "Jacobitz"
+                },
+                {
+                    "first": "Sutanu",
+                    "initial": "S.",
+                    "last": "Sarkar"
+                },
+                {
+                    "first": "Charles W.",
+                    "initial": "C.W.",
+                    "last": "Van Atta"
+                }
+            ],
+            "doi": "10.1017/S0022112097005478",
+            "firstpage": "231",
+            "issn": "00221120",
+            "lastpage": "261",
+            "pub_year": 1997,
+            "title": "Direct numerical simulations of the turbulence evolution in a uniformly sheared and stably stratified flow",
+            "volume": "342"
+        },
+        "bib0009": {
+            "authors": [
+                {
+                    "first": "H. J.",
+                    "initial": "H.J.",
+                    "last": "Kaltenbach"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Gerz"
+                },
+                {
+                    "first": "U.",
+                    "initial": "U.",
+                    "last": "Schumann"
+                }
+            ],
+            "doi": "10.1017/S0022112094002831",
+            "firstpage": "1",
+            "issn": "00221120",
+            "lastpage": "40",
+            "pub_year": 1994,
+            "title": "Large-Eddy Simulation of Homogeneous Turbulence and Diffusion in Stably Stratified Shear Flow",
+            "volume": "280"
+        },
+        "bib0010": null,
+        "bib0011": null,
+        "bib0012": null,
+        "bib0013": null,
+        "bib0014": null,
+        "bib0015": {
+            "authors": [
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Kassinos"
+                },
+                {
+                    "first": "W. C.",
+                    "initial": "W.C.",
+                    "last": "Reynolds"
+                },
+                {
+                    "first": "M. M.",
+                    "initial": "M.M.",
+                    "last": "Rogers"
+                }
+            ],
+            "doi": "10.1017/S0022112000002615",
+            "firstpage": "213",
+            "issn": "00221120",
+            "lastpage": "248",
+            "pub_year": 2001,
+            "title": "One-point turbulence structure tensors",
+            "volume": "428"
+        },
+        "bib0016": {
+            "authors": [
+                {
+                    "first": "C. F.",
+                    "initial": "C.F.",
+                    "last": "Panagiotou"
+                },
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Kassinos"
+                }
+            ],
+            "doi": "10.1016/j.ijheatfluidflow.2015.11.008",
+            "firstpage": "109",
+            "issn": "0142727X",
+            "lastpage": "129",
+            "pub_year": 2016,
+            "title": "A structure-based model for the transport of passive scalars in homogeneous turbulent flows",
+            "volume": "57"
+        },
+        "bib0017": {
+            "authors": [
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Piccirillo"
+                },
+                {
+                    "first": "Charles W.",
+                    "initial": "C.W.",
+                    "last": "Van Atta"
+                }
+            ],
+            "doi": "10.1017/S002211209600434X",
+            "firstpage": "61",
+            "issn": "00221120",
+            "lastpage": "86",
+            "pub_year": 1997,
+            "title": "The evolution of a uniformly sheared thermally stratified turbulent flow",
+            "volume": "334"
+        },
+        "bib0018": {
+            "authors": [
+                {
+                    "first": "S. V.",
+                    "initial": "S.V.",
+                    "last": "Poroseva"
+                },
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Kassinos"
+                },
+                {
+                    "first": "C. A.",
+                    "initial": "C.A.",
+                    "last": "Langer"
+                },
+                {
+                    "first": "W. C.",
+                    "initial": "W.C.",
+                    "last": "Reynolds"
+                }
+            ],
+            "doi": "10.1063/1.1458008",
+            "firstpage": "1523",
+            "issn": "10706631",
+            "lastpage": "1532",
+            "pub_year": 2002,
+            "title": "Structure-based turbulence model: Application to a rotating pipe flow",
+            "volume": "14"
+        },
+        "bib0019": null,
+        "bib0020": {
+            "authors": [
+                {
+                    "first": "J. J.",
+                    "initial": "J.J.",
+                    "last": "Rohr"
+                },
+                {
+                    "first": "E. C.",
+                    "initial": "E.C.",
+                    "last": "Itsweire"
+                },
+                {
+                    "first": "K. N.",
+                    "initial": "K.N.",
+                    "last": "Helland"
+                },
+                {
+                    "first": "C. W.",
+                    "initial": "C.W.",
+                    "last": "Van Atta"
+                }
+            ],
+            "doi": "10.1017/S0022112088002332",
+            "firstpage": "77",
+            "issn": "00221120",
+            "lastpage": "111",
+            "pub_year": 1988,
+            "title": "Growth and decay of turbulence in a stably stratified shear flow",
+            "volume": "195"
+        },
+        "bib0021": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Sarkar"
+                }
+            ],
+            "doi": "10.1016/S0898-1221(03)90022-8",
+            "firstpage": "639",
+            "issn": "08981221",
+            "lastpage": "646",
+            "pub_year": 2003,
+            "title": "The Effect of Stable Stratification on Turbulence Anisotropy in Uniformly Sheared Flow",
+            "volume": "46"
+        },
+        "bib0022": {
+            "authors": [
+                {
+                    "first": "U.",
+                    "initial": "U.",
+                    "last": "Schumann"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Gerz"
+                }
+            ],
+            "doi": "10.1175/1520-0450-34.1.33",
+            "firstpage": "33",
+            "issn": "08948763",
+            "lastpage": "48",
+            "pub_year": 1995,
+            "title": "Turbulent mixing in stably stratified shear flows",
+            "volume": "34"
+        },
+        "bib0023": {
+            "authors": [
+                {
+                    "first": "F. S.",
+                    "initial": "F.S.",
+                    "last": "Stylianou"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Pecnik"
+                },
+                {
+                    "first": "S. C.",
+                    "initial": "S.C.",
+                    "last": "Kassinos"
+                }
+            ],
+            "doi": "10.1016/j.compfluid.2014.09.042",
+            "firstpage": "54",
+            "issn": "00457930",
+            "lastpage": "66",
+            "pub_year": 2015,
+            "title": "A general framework for computing the turbulence structure tensors",
+            "volume": "106"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 95262,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "In analogy to the use of wave-packets in spectral space, the PRM utilizes hypothetical particles assigned with a number of key properties describing the turbulence.",
+            "startOffset": 95098,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 106590,
+            "parents": [],
+            "secId": "sec0009",
+            "sentence": "More details regarding the ELSE model and the properties of the triple decomposition scheme can be found in PK16.",
+            "startOffset": 106477,
+            "title": "An extended set of transport equations for the turbulent scales"
+        },
+        {
+            "endOffset": 89578,
+            "parents": [],
+            "refoffsets": {
+                "bib0004": {
+                    "endOffset": 89576,
+                    "startOffset": 89537
+                },
+                "bib0009": {
+                    "endOffset": 89576,
+                    "startOffset": 89537
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The highly anisotropic nature of this type of flows is related to the occurrence of complex phenomena, such as strong pressure fluctuations or counter-gradient diffusion that are believed to be associated with large-scale distinct coherent structures (Kaltenbach et al., 1994; Hanjalic, 2002).",
+            "startOffset": 89285,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 127932,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0014",
+            "sentence": "Fig. 10a shows the predictions of the structure-based model for the time advancement of the inverse shear parameter ratio \u03f5/S\u03ba for different inclination angles \u03b8.",
+            "startOffset": 127770,
+            "title": "Homogeneous non-vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 124185,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "refoffsets": {
+                "bib0015": {
+                    "endOffset": 124070,
+                    "startOffset": 124048
+                }
+            },
+            "secId": "sec0013",
+            "sentence": "One of the arguments put forth by Kassinos et al. (2001) is that the one-point structure tensors can be used to distinguish among different types of turbulence structures.",
+            "startOffset": 124014,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 93205,
+            "parents": [],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 93031,
+                    "startOffset": 93004
+                },
+                "bib0012": {
+                    "endOffset": 93037,
+                    "startOffset": 93033
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "In the mid-1990s, Kassinos and Reynolds (1994; 1995) introduced the idea that the componentality information contained in the Reynolds stress tensor provides an incomplete description of the turbulence anisotropy state.",
+            "startOffset": 92986,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 88694,
+            "parents": [],
+            "refoffsets": {
+                "bib0003": {
+                    "endOffset": 88692,
+                    "startOffset": 88656
+                },
+                "bib0020": {
+                    "endOffset": 88692,
+                    "startOffset": 88656
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Often called pancakes, these structures represent a two-component limit that is presumed to be approached but never actually reached in real flows (Rohr et al., 1988; Gerz et al., 1989).",
+            "startOffset": 88508,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 124733,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0013",
+            "sentence": "At the same time, the structure has significant spatial extent in the plane containing the velocity fluctuations, but a small extent along the direction normal to the plane of motion (1D).",
+            "startOffset": 124545,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 130419,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In the case of unstrained turbulence, and for various spectra combinations, the model provides good agreement with LES and analytical predictions for the asymptotic values of the decay exponents of the scalar and velocity statistics.",
+            "startOffset": 130186,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97610,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "In effect, each particle represents a one-dimensional one-component (1D-1C) flowfield.",
+            "startOffset": 97524,
+            "title": "Particle properties"
+        },
+        {
+            "endOffset": 93620,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Examples of such tensors are the componentality (Reynolds stress) tensor, which describes the direction in which the fluctuations are more intense, and the dimensionality tensor, which gives information about the spatial extent of the coherent structures.",
+            "startOffset": 93365,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 124827,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0013",
+            "sentence": "In this limit, the structures approach a two-component one-dimensional (2C-1D) configuration.",
+            "startOffset": 124734,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 94896,
+            "parents": [],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 94724,
+                    "startOffset": 94697
+                },
+                "bib0012": {
+                    "endOffset": 94730,
+                    "startOffset": 94726
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "This motivated Kassinos and Reynolds (1994; 1995) to develop the Particle Representation Model (PRM), a numerically efficient and affordable method for carrying out exact Rapid Distortion Theory (RDT) computations.",
+            "startOffset": 94682,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 115537,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "refoffsets": {
+                "bib0002": {
+                    "endOffset": 115414,
+                    "startOffset": 115400
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "Chasnov (1995) considered low-wave spectra that vary either as k2 or k4 in order to study the asymptotic behavior of the turbulent field.",
+            "startOffset": 115400,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 97013,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Finally, we describe an efficient numerical implementation of the model in terms of conditionally averaged equations for clusters of particles.",
+            "startOffset": 96870,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 88397,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "However, the damping of the vertical motions is enhanced with increasing gradient Richardson number Ri, and above a critical value Ricr, the turbulent kinetic energy eventually decays.",
+            "startOffset": 88213,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 88120,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "For example, in the case where a streamwise velocity component with vertical gradient is present, the extracted energy is transferred preferentially to the streamwise direction, thus enhancing the streamwise fluctuations.",
+            "startOffset": 87899,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95097,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The PRM is a reduced representation that retains only a portion of the information that is normally carried in spectral simulations, but nevertheless provides access to the exact one-point statistics.",
+            "startOffset": 94897,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 115399,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "The choice of the spectra form also plays an important role on the decay evolution of the turbulent kinetic energy and the scalar field.",
+            "startOffset": 115263,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 115989,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Details regarding the mathematical analysis conducted for this case can be found in Appendix B.",
+            "startOffset": 115894,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 95925,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Turbulence closures based on the IPRM approach have been proven to be powerful, providing encouraging results for general deformations of homogeneous turbulence.",
+            "startOffset": 95764,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 91026,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In Section 4, we introduce a set of model equations for the turbulence scales that are sensitized to buoyancy effects and this allows us to bring closure to the extended IPRM model.",
+            "startOffset": 90845,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 108157,
+            "parents": [],
+            "secId": "sec0009",
+            "sentence": "Applying the triple decomposition scheme only to the fluctuating field of Eq. (31) and using Eq. (30) yields the following set of governing equations for the three contributors of the instantaneous vorticity field",
+            "startOffset": 107944,
+            "title": "An extended set of transport equations for the turbulent scales"
+        },
+        {
+            "endOffset": 93364,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Hence, they introduced a set of tensors that characterize the anisotropy of the flow by providing a complete tensorial representation of turbulence structure.",
+            "startOffset": 93206,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 90467,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Here, we present the extended model and an evaluation of its performance for several cases involving different configurations of mean shear and buoyancy effects.",
+            "startOffset": 90306,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 97124,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Here, these properties are taken to be,",
+            "startOffset": 97085,
+            "title": "Particle properties"
+        },
+        {
+            "endOffset": 94199,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 94132,
+                    "startOffset": 94105
+                },
+                "bib0014": {
+                    "endOffset": 94138,
+                    "startOffset": 94134
+                },
+                "bib0016": {
+                    "endOffset": 94198,
+                    "startOffset": 94168
+                },
+                "bib0018": {
+                    "endOffset": 94163,
+                    "startOffset": 94141
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "The use of these tensors in the development of turbulence models that are sensitized to the morphology of the large-scale eddies is considered in Kassinos and Reynolds (1996; 1999), Poroseva et al. (2002) and Panagiotou and Kassinos (2016).",
+            "startOffset": 93959,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 97523,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "The remaining vectors, except the gravity vector, are by definition perpendicular to the gradient vector, lying in the plane of independence.",
+            "startOffset": 97382,
+            "title": "Particle properties"
+        },
+        {
+            "endOffset": 114895,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "However, in order to retain numerical stability at very large times, the PRM and IPRM models require large numbers of particles, which renders such simulations very time consuming.",
+            "startOffset": 114715,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 115756,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Based on similarity arguments, Chasnov obtained analytical predictions for the decay exponents of the scalar and velocity field which were found to be in good agreement with LES simulations for the corresponding cases.",
+            "startOffset": 115538,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 128092,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0014",
+            "sentence": "It appears that the shear parameter does not depend on the inclination angle, yielding similar asymptotic values at large times, in accordance to the DNS data.",
+            "startOffset": 127933,
+            "title": "Homogeneous non-vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 95614,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 95612,
+                    "startOffset": 95585
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "Later the approach was extended for general deformations of homogeneous turbulence in the form of the Interacting Particle Representation Model (IPRM) (Kassinos and Reynolds, 1996).",
+            "startOffset": 95433,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 91133,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In Section 5 the complete model is validated for a large number of test cases, yielding promising results.",
+            "startOffset": 91027,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 116426,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "SBM accurately captures the asymptotic values for both spectra combinations, thus correctly showing that the choice of spectra is trivial for the specific large-scale quantities.",
+            "startOffset": 116248,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 124013,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0013",
+            "sentence": "Another interesting observation can be made about the morphology of the large-scale coherent structures.",
+            "startOffset": 123909,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 94525,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The structure tensors can be obtained via Direct Numerical Simulations (DNS), and in the case of homogeneous turbulence, from spectral or pseudo-spectral direct numerical simulations.",
+            "startOffset": 94342,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 88879,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Work on nonvertical stratification has also gained attention during the last decades, due to its relevance to engineering and environmental applications, such as coastal river outflows.",
+            "startOffset": 88694,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129683,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In order to achieve that, we performed fundamental mathematical analysis in the particle space which lead to the development of a generalized IPRM model that includes all the buoyancy terms.",
+            "startOffset": 129493,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 95432,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Consequently, the structure tensors can be obtained by following the time evolution of these particle properties and then applying ensemble averaging over the particles.",
+            "startOffset": 95263,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 89125,
+            "parents": [],
+            "refoffsets": {
+                "bib0007": {
+                    "endOffset": 88950,
+                    "startOffset": 88924
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The first systematic study was published by Jacobitz and Sarkar (1998) who showed that flow dynamics are controlled not only by the magnitude of the mean shear, but also by its orientation relative to the direction of gravity and stratification.",
+            "startOffset": 88880,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87737,
+            "parents": [],
+            "refoffsets": {
+                "bib0005": {
+                    "endOffset": 87635,
+                    "startOffset": 87617
+                },
+                "bib0006": {
+                    "endOffset": 87691,
+                    "startOffset": 87669
+                },
+                "bib0017": {
+                    "endOffset": 87667,
+                    "startOffset": 87637
+                },
+                "bib0021": {
+                    "endOffset": 87706,
+                    "startOffset": 87693
+                },
+                "bib0022": {
+                    "endOffset": 87736,
+                    "startOffset": 87711
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "A number of experimental and numerical works on vertically stratified and vertically sheared flows has been performed, for example Holt et al. (1992), Piccirillo and Van Atta (1997), Itsweire et al. (1993), Sarkar (2003) and Schumann and Gertz (1995).",
+            "startOffset": 87486,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 129492,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "We have presented, for the first time, an extended structure based model which accounts for buoyancy effects.",
+            "startOffset": 129383,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 96265,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The proposed model was successfully validated in a large number of cases involving both rotational and irrotational flows in fixed and rotating frames and for both weak and rapid deformation rates.",
+            "startOffset": 96068,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 96480,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "In the present work, we extend further the IPRM model in order to account for buoyancy effects.",
+            "startOffset": 96385,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 115893,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "We have extended his analytical work in order to include the decay rates of the large-scale enstrophy and large-scale gradient variance.",
+            "startOffset": 115757,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 116247,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "In Fig. 1 we demonstrate the comparison between the model predictions and the analytical predictions (Appendix B) based on similarity arguments for the time advancement of the power law exponent of the large-scale gradient variance and large-scale enstrophy.",
+            "startOffset": 115989,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 87485,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Stable stratification is of particular scientific interest because it is associated with the strong anisotropy of the turbulent field caused by the combined action of mean shear and stratification.",
+            "startOffset": 87288,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96869,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "We then proceed to derive the evolution equations for the basic particle properties in the presence of an active scalar.",
+            "startOffset": 96749,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 90306,
+            "parents": [],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 90216,
+                    "startOffset": 90186
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "For this purpose, in the current work we have extended the Structure-Based Model (SBM) for passive scalar transport that was recently proposed by Panagiotou and Kassinos (2016) based on the Interacting Particle Representation Model (IPRM) for homogeneous turbulence.",
+            "startOffset": 90040,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90555,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The governing equations for the velocity and scalar fields are introduced in Section 2.",
+            "startOffset": 90468,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 104302,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0008",
+            "sentence": "\u03f5\u03d5 is the scalar dissipation rate which is determined through transport model equations.",
+            "startOffset": 104214,
+            "title": "Conditionally averaged particle clusters"
+        },
+        {
+            "endOffset": 114714,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "For this case, one would normally proceed to solve the fully coupled IPRM model to sufficiently long times.",
+            "startOffset": 114607,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 96653,
+            "parents": [],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 96652,
+                    "startOffset": 96622
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "In what follows, we briefly recount the basic features of particle representation models, while a more elaborate description can be found in Panagiotou and Kassinos (2016).",
+            "startOffset": 96481,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 89285,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In particular, orientation affects the growth rate of the turbulent kinetic energy, while it can push the critical gradient Richardson number to higher values.",
+            "startOffset": 89126,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90039,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The significant effect that the large-scale structure has on the evolution of stratified flows motivated us to construct a structure-based model for scalar transport that accounts for buoyancy effects.",
+            "startOffset": 89838,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 87898,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "For these cases, stratification tends to suppress vertical velocity fluctuations, while the mean shear is responsible for extracting energy from the mean field.",
+            "startOffset": 87738,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 114440,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Next, the performance of the extended ELSE model was also tested on predicting the decay rates of the statistical quantities.",
+            "startOffset": 114315,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 102290,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0007",
+            "sentence": "Note that, due to the linear form of the buoyancy term, no additional modeling considerations are needed in the evolution equations for the particle properties.",
+            "startOffset": 102130,
+            "title": "IPRM evolution equations"
+        },
+        {
+            "endOffset": 102390,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0007",
+            "sentence": "Nevertheless, additional modeling is required in the transport equations for the turbulence scales.",
+            "startOffset": 102291,
+            "title": "IPRM evolution equations"
+        },
+        {
+            "endOffset": 124544,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0013",
+            "sentence": "This type of structure is characterized by velocity fluctuations that are dominant in a particular plane, while becoming vanishingly small in the direction normal to the plane (2C).",
+            "startOffset": 124363,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 97381,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "The gradient vector Ni is parallel to the direction of dependence, that is the direction in which the spatial derivatives are most profound.",
+            "startOffset": 97241,
+            "title": "Particle properties"
+        },
+        {
+            "endOffset": 90844,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The extended IPRM is derived by modifying the basic transport equations in the particle space.",
+            "startOffset": 90750,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 90749,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The definitions of the turbulence structure tensors are briefly recounted in Section 3, where we also introduce the equivalent representation of the basic evolution equations in particle space.",
+            "startOffset": 90556,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 96067,
+            "parents": [],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 95966,
+                    "startOffset": 95936
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "Recently, Panagiotou and Kassinos (2016) successfully extended the IPRM to include the transport of passive scalars in the homogeneous limit.",
+            "startOffset": 95926,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 96385,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The model was shown to be able to capture the anisotropy details of both the velocity and scalar fields in these flows.",
+            "startOffset": 96266,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 93760,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "The turbulence circulicity tensor provides information about the direction in which large-scale circulation in the turbulence is organized.",
+            "startOffset": 93621,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 129813,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "In addition, the four-equation scale model of PK16 was properly modified, such that it is sensitized to these additional effects.",
+            "startOffset": 129684,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 93958,
+            "parents": [],
+            "refoffsets": {
+                "bib0015": {
+                    "endOffset": 93897,
+                    "startOffset": 93875
+                },
+                "bib0016": {
+                    "endOffset": 93957,
+                    "startOffset": 93927
+                },
+                "bib0023": {
+                    "endOffset": 93922,
+                    "startOffset": 93899
+                }
+            },
+            "secId": "sec0004",
+            "sentence": "A detailed description of the complete set of the turbulence structure tensors is given in several works, such as Kassinos et al. (2001), Stylianou et al. (2015) and Panagiotou and Kassinos (2016).",
+            "startOffset": 93761,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 124362,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                },
+                {
+                    "id": "sec0012",
+                    "title": "Homogeneous shear in stably stratified flow."
+                }
+            ],
+            "secId": "sec0013",
+            "sentence": "Hence, we assess the ability of the model to correctly predict the tendency of the turbulent flow to evolve towards a pancake-like structure with increasing Richardson numbers.",
+            "startOffset": 124186,
+            "title": "Homogeneous vertical shear on stably stratified flows."
+        },
+        {
+            "endOffset": 96748,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "We first introduce the particle properties and a set of useful algebraic relations among them.",
+            "startOffset": 96654,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 102129,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 102128,
+                    "startOffset": 102098
+                }
+            },
+            "secId": "sec0007",
+            "sentence": "The model parameters that appear in Eqs. (13)\u2013(16) are the same as the ones described in Panagiotou and Kassinos (2016).",
+            "startOffset": 102009,
+            "title": "IPRM evolution equations"
+        },
+        {
+            "endOffset": 130070,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The emerging expressions needing closure in the four-equation model were modeled in terms of structure tensors and their invariants and calibrated such that the complete model correctly predicts the asymptotic decay rates in unstrained decaying turbulence.",
+            "startOffset": 129814,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 97084,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0005",
+            "sentence": "Each particle is assigned a number of properties.",
+            "startOffset": 97035,
+            "title": "Particle properties"
+        },
+        {
+            "endOffset": 106755,
+            "parents": [],
+            "secId": "sec0009",
+            "sentence": "Applying the triple decomposition approach to the governing equations yields the following set of equations for the contributors of the instantaneous kinetic energy",
+            "startOffset": 106591,
+            "title": "An extended set of transport equations for the turbulent scales"
+        },
+        {
+            "endOffset": 88212,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "At low values of Ri, shear effects dominate and the turbulent kinetic energy grows in time.",
+            "startOffset": 88121,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 94341,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "For the development of structure-based turbulence closures, one needs to have access to the structure tensors for a range of canonical flows.",
+            "startOffset": 94200,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 88507,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In the high Ri limit, the flow tends towards a two-component state composed of highly anisotropic structures.",
+            "startOffset": 88398,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91183,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "A summary and conclusions are given in Section 6.",
+            "startOffset": 91134,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 114606,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "In particular, we sought to evaluate the asymptotic decay rates of the fluctuating statistics at large times, a case where the non-linear effects become not trivial.",
+            "startOffset": 114441,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 102423,
+            "parents": [
+                {
+                    "id": "sec0004",
+                    "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+                }
+            ],
+            "secId": "sec0007",
+            "sentence": "This is considered in Section 4.",
+            "startOffset": 102391,
+            "title": "IPRM evolution equations"
+        },
+        {
+            "endOffset": 89838,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "All these phenomena are proven to constitute a particular challenge to conventional closure models that lack structural information (morphology of turbulence eddies) and thus exhibit a limited behavior, at best capturing only some of the underlying phenomena.",
+            "startOffset": 89579,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 95763,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "Although no longer exact, the IPRM allows the computation of one-point turbulence statistics of homogeneous turbulence under arbitrary deformations.",
+            "startOffset": 95615,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 115043,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Fortunately, we have found that the values of the structure tensors only influence the transients and not the asymptotic values of the decay rates.",
+            "startOffset": 114896,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 94681,
+            "parents": [],
+            "secId": "sec0004",
+            "sentence": "However, this approach is computationally costly and an overkill if all that one is interested in is to extract the one-point statistics of the turbulence.",
+            "startOffset": 94526,
+            "title": "An Interacting Particle Representation Model (IPRM) for active scalar transport."
+        },
+        {
+            "endOffset": 114314,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "refoffsets": {
+                "bib0001": {
+                    "endOffset": 114260,
+                    "startOffset": 114237
+                }
+            },
+            "secId": "sec0011",
+            "sentence": "At t/\u03c4o \u2248 8.0 we found \u03c0 \u2248 9.0, which is in good agreement with the analytical predictions of Batchelor et al. (1992) who found a value for \u03c0 around 8 in the linear limit.",
+            "startOffset": 114143,
+            "title": "Homogeneous decaying turbulence"
+        },
+        {
+            "endOffset": 130186,
+            "parents": [],
+            "secId": "sec0015",
+            "sentence": "The complete structure based model was validated in a large number of cases in the limit of homogeneous turbulence.",
+            "startOffset": 130071,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 112347,
+            "parents": [],
+            "refoffsets": {
+                "bib0016": {
+                    "endOffset": 112345,
+                    "startOffset": 112316
+                }
+            },
+            "secId": "sec0009",
+            "sentence": "The complete IPRM model is summarized in Appendix A and all details regarding the model parameters can be found in Tables 1 and 2 of PK16 (Panagiotou and Kassinos, 2016).",
+            "startOffset": 112177,
+            "title": "An extended set of transport equations for the turbulent scales"
+        },
+        {
+            "endOffset": 115263,
+            "parents": [
+                {
+                    "id": "sec0010",
+                    "title": "Validation of the extended structure-based model for buoyant flows."
+                }
+            ],
+            "secId": "sec0011",
+            "sentence": "Hence, the asymptotic values of the structure tensors and their invariants arising in the linear regime as shown above were supplied to the fourequation model and were kept fixed during the entire nonlinear simulations.",
+            "startOffset": 115044,
+            "title": "Homogeneous decaying turbulence"
+        }
+    ],
+    "docId": "S0142727X16305197",
+    "metadata": {
+        "asjc": [
+            "1507",
+            "2210",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": null,
+                "first": "C. F.",
+                "initial": "C.F.",
+                "last": "Panagiotou"
+            },
+            {
+                "email": "kassinos@ucy.ac.cy",
+                "first": "S. C.",
+                "initial": "S.C.",
+                "last": "Kassinos"
+            }
+        ],
+        "doi": "10.1016/j.ijheatfluidflow.2016.12.005",
+        "firstpage": "309",
+        "issn": "0142727X",
+        "lastpage": "322",
+        "openaccess": "Full",
+        "pub_year": 2017,
+        "subjareas": [
+            "CENG",
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "A structure-based model for transport in stably stratified homogeneous turbulent flows"
+    }
+}

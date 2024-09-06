@@ -1,0 +1,1845 @@
+{
+    "abstract": "This paper provides new formulations to derive the impulse response matrix, which is then used in the problem of load identification with application to wind induced vibration. The applied loads are inversely identified based on the measured structural responses by solving the associated discrete ill-posed problem. To this end - based on an existing parametric structural model - the impulse response functions of acceleration, velocity and displacement have been computed. Time discretization of convolution integral has been implemented according to an existing and a newly proposed procedure, which differ in the numerical integration methods. The former was evaluated based on a constant rectangular approximation of the sampled data and impulse response function in a number of steps corresponding to the sampling rate, while the latter interpolates the sampled data in an arbitrary number of sub-steps and then integrates over the sub-steps and steps. The identification procedure was implemented for a simulation example as well as an experimental laboratory case. The ill-conditioning of the impulse response matrix made it necessary to use Tikhonov regularization to recover the applied force from noise polluted measured response. The optimal regularization parameter has been obtained by L-curve and GCV method. The results of simulation represent good agreement between identified and measured force. In the experiments the identification results based on the measured displacement as well as acceleration are provided. Further it is shown that the accuracy of experimentally identified load depends on the sensitivity of measurement instruments over the different frequency ranges.",
+    "bib_entries": {
+        "bib1": null,
+        "bib10": null,
+        "bib11": null,
+        "bib12": null,
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Per Christian",
+                    "initial": "P.C.",
+                    "last": "Hansen"
+                }
+            ],
+            "doi": "10.1007/s11075-007-9136-9",
+            "firstpage": "189",
+            "issn": "10171398",
+            "lastpage": "194",
+            "pub_year": 2007,
+            "title": "Regularization Tools version 4.0 for Matlab 7.3",
+            "volume": "46"
+        },
+        "bib14": null,
+        "bib15": {
+            "authors": [
+                {
+                    "first": "A. G.",
+                    "initial": "A.G.",
+                    "last": "Davenport"
+                }
+            ],
+            "doi": "10.1002/qj.49708737208",
+            "firstpage": "194",
+            "issn": "00359009",
+            "lastpage": "211",
+            "pub_year": 1961,
+            "title": "The spectrum of horizontal gustiness near the ground in high winds",
+            "volume": "87"
+        },
+        "bib16": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Hillary"
+                },
+                {
+                    "first": "D. J.",
+                    "initial": "D.J.",
+                    "last": "Ewins"
+                }
+            ],
+            "firstpage": "627",
+            "lastpage": "634",
+            "pub_year": 1984,
+            "title": "USE OF STRAIN GAUGES IN FORCE DETERMINATION AND FREQUENCY RESPONSE FUNCTION MEASUREMENTS.",
+            "volume": "2"
+        },
+        "bib2": {
+            "authors": [
+                {
+                    "first": "Misha E.",
+                    "initial": "M.E.",
+                    "last": "Kilmer"
+                },
+                {
+                    "first": "Dianne P.",
+                    "initial": "D.P.",
+                    "last": "O'Leary"
+                }
+            ],
+            "doi": "10.1137/S0895479899345960",
+            "firstpage": "1204",
+            "issn": "08954798",
+            "lastpage": "1221",
+            "pub_year": 2001,
+            "title": "Choosing regularization parameters in iterative methods for ill-posed problems",
+            "volume": "22"
+        },
+        "bib3": null,
+        "bib4": null,
+        "bib5": null,
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Gene H.",
+                    "initial": "G.H.",
+                    "last": "Golub"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Heath"
+                },
+                {
+                    "first": "Grace",
+                    "initial": "G.",
+                    "last": "Wahba"
+                }
+            ],
+            "doi": "10.1080/00401706.1979.10489751",
+            "firstpage": "215",
+            "issn": "00401706",
+            "lastpage": "223",
+            "pub_year": 1979,
+            "title": "Generalized cross-validation as a method for choosing a good ridge parameter",
+            "volume": "21"
+        },
+        "bib7": null,
+        "bib8": null,
+        "bib9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 48310,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "We provide the results of load identification via simulation and laboratory experiments for a rigidly clamped cantilever beam.",
+            "startOffset": 48184,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60628,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Use of the word \u201cstable\u201d means that the optimal regularization parameter can be found based on the criteria of L-curve or GCV as many as times the load identification was repeated.",
+            "startOffset": 60448,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 69226,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "This amplification must occur before the sensor level so that the sensor be able to sense it.",
+            "startOffset": 69133,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 57324,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The identified system parameters were utilized to construct the parametric impulse response matrices for numerical and experimental load identification in Sections 4.2 and 4.3, respectively.",
+            "startOffset": 57134,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 62402,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The recovered wind forces via GCV using both impulse response matrices have the same quality and are better identified than their counterpart by means of L-curve and ordinary impulse response matrix.",
+            "startOffset": 62203,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 72920,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Consequently in order to be able to select the time step longer than that of the ordinary scheme the augmented impulse response matrix, which interpolates the force in a number of sub-steps was introduced.",
+            "startOffset": 72715,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 45306,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Consequently an indirect procedure that gives the ability to identify the load from measured response \u2014 a so-called inverse problem \u2014 seems to be attractive.",
+            "startOffset": 45149,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61571,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The wind force PSD is plotted in Fig. 8.",
+            "startOffset": 61531,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 61218,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This was done by simulating a one dimensional single variable stationary random process, thus just the wind velocity autospectrum is needed.",
+            "startOffset": 61078,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 48869,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In other words we are going to build the impulse response matrix, which when multiplied by the input signal (i.e. force record) renders the output as time history of displacement.",
+            "startOffset": 48690,
+            "title": "Dynamic response analysis of discrete-time systems"
+        },
+        {
+            "endOffset": 47523,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "It must be noted that the regularization methods need a regularization parameter as a stop criterion to tune the amplitude of smoothening of the response.",
+            "startOffset": 47369,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67324,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Thus in order to circumvent such problem, the wind load was identified directly based on the acceleration response by selecting the third of Eqs. (10).",
+            "startOffset": 67173,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 48689,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In this section an input\u2013output relation in a discretized time domain is constructed.",
+            "startOffset": 48604,
+            "title": "Dynamic response analysis of discrete-time systems"
+        },
+        {
+            "endOffset": 59916,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The magnitude of the additional noise was scaled with respect to the standard deviation of the actual response and adjusted by defining a noise level multiplier.",
+            "startOffset": 59755,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 69471,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Since the acceleration response is proportional to the excitation frequency, consequently by raising the lower band of excitation frequency we can increase the amplitude of acceleration response.",
+            "startOffset": 69276,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 60076,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In the numerical simulation of load identification, the number of sub-steps for construction of augmented impulse response matrix i.e. m is considered to be 5.",
+            "startOffset": 59917,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 60157,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Firstly the recovering of a white noise excitation limited to 25 Hz is simulated.",
+            "startOffset": 60076,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 68780,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "It was because the applied wind excitation has the characteristics that stimulated the stiffness of the structure (which belongs to lower frequency components of response) much more than its inertia (which conversely belongs to higher frequency components of response).",
+            "startOffset": 68511,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 62203,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This problem occurs due to the difficulty in finding the location of the L-curve corner, since many points on the L-curve have the properties to be the optimal regularization parameter based on L-curve criterion.",
+            "startOffset": 61991,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 65592,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The results of experimentally recovered white noise show nearly the same accuracy with which were obtained in the corresponding numerical simulation.",
+            "startOffset": 65443,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 57421,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 57420,
+                    "startOffset": 57416
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The codes needed for the procedure of load identification have been implemented in slangTNG [12].",
+            "startOffset": 57324,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 63818,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Then we readily determined the first mode eigenfrequency, mass, stiffness and damping ratio.",
+            "startOffset": 63726,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 73622,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Otherwise the recovered force accuracy would be poor such as it occurred for the recovered wind load as was for instance shown in Fig. 6.",
+            "startOffset": 73485,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 49034,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "In this paper this aim was reached by means of modal analysis since it is closely consistent with modal testing methods of system identification in practical cases.",
+            "startOffset": 48870,
+            "title": "Dynamic response analysis of discrete-time systems"
+        },
+        {
+            "endOffset": 68205,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In other words the measured displacements due to the wind excitation, which has dominant low frequency components, do not sufficiently contain the portion of high frequency components of the displacement response.",
+            "startOffset": 67992,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 44962,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The presence of the fluctuating wind components due to turbulence makes the wind force measurement even tougher, because more sensitive force or pressure measurement devices in huge numbers are necessary, which might not be practically realistic.",
+            "startOffset": 44716,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72195,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The dynamic loads were identified based on structural response measurement and by means of solving the corresponding inverse problem.",
+            "startOffset": 72062,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 48183,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In this paper the regularization method of Tikhonov for the regularization together with two procedures of GCV and L-curve for finding the regularization parameter were selected.",
+            "startOffset": 48005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45787,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Therefore it is required to prepare and evaluate a load identification procedure in the time domain, which is consistent with the methodology in the subsequent application.",
+            "startOffset": 45615,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66541,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "According to this table the errors corresponding to the augmented scheme are slightly smaller than the ordinary one but nevertheless not good enough.",
+            "startOffset": 66392,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 65659,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The identification results of white noise are provided in Table 3.",
+            "startOffset": 65593,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 64253,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "By successively attaching lumped masses on the cantilever\u05f3s tip and observing the change in the eigenfrequencies, the equivalent mass and stiffness were determined, while the damping ratio was obtained via harmonic decay test.",
+            "startOffset": 64027,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 63561,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The configuration of loading stimulates the structure such that the first mode is the governing mode of vibration.",
+            "startOffset": 63447,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 65273,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The investigation on application of the acceleration-based wind load identification will be dealt with in more detail in the forthcoming lines.",
+            "startOffset": 65130,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 69275,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Therefore the excitation input must be modified.",
+            "startOffset": 69227,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 61990,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The results demonstrate that the recovered wind force by use of augmented impulse response matrix via L-curve is unacceptable.",
+            "startOffset": 61864,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 49299,
+            "parents": [],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 49174,
+                    "startOffset": 49171
+                }
+            },
+            "secId": "s0010",
+            "sentence": "It is mentioned here that the input\u2013output relation might also be alternatively derived via testing, mathematical system identification [9] or simulation of application of impulsive loads on degrees of freedom when the finite element model of the structure exists.",
+            "startOffset": 49035,
+            "title": "Dynamic response analysis of discrete-time systems"
+        },
+        {
+            "endOffset": 44562,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The idea of direct measurement of the applied loads generally becomes more infeasible if the structure as well as the load action become more complex.",
+            "startOffset": 44412,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73801,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Last but not least the load identification based on the measured displacement response was observed to be more robust than acceleration based when L-curve or GCV methods are used.",
+            "startOffset": 73622,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67172,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "First of all it was supposed that this problem occurs due to the high-pass filtering within double integration of acceleration response, since we have obtained the displacement from acceleration response via the signal conditioner device.",
+            "startOffset": 66934,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 48553,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The applied loads are realized by white noise limited to 25 Hz and wind excitation, which are identified separately from measured displacement and acceleration response by means of the derived ordinary and augmented impulse response matrices.",
+            "startOffset": 48311,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72355,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Construction of two different types of impulse response matrices (ordinary and augmented), which are different in their integration schemes, was also presented.",
+            "startOffset": 72195,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 46083,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Firstly having an updated finite element model for fatigue analysis is needed.",
+            "startOffset": 46005,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61376,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 61317,
+                    "startOffset": 61313
+                },
+                "bib15": {
+                    "endOffset": 61348,
+                    "startOffset": 61344
+                }
+            },
+            "secId": "s0060",
+            "sentence": "For digital simulation of wind speed, amongst existing power spectral density (PSD) functions [14], Davenport\u05f3s autospectrum [15] was (arbitrarily) selected.",
+            "startOffset": 61219,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 45148,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "On the other hand measurement of the response to the excitation is more common and better developed due to its extensive use in the other application areas such as system identification.",
+            "startOffset": 44962,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44411,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "A good knowledge on applied loads is necessary for extraction of their characteristics or their reproduction via simulation for other purposes.",
+            "startOffset": 44268,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46004,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For the sake of load identification we initially need to set up a complete input\u2013output relation for the direct problem (based on already known, e.g. previously identified parameters of the structure) for two reasons.",
+            "startOffset": 45787,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 66000,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The experimental wind load identification was repeated based on the measured displacement response as have been already simulated in Section 4.2 for wind-type excitation.",
+            "startOffset": 65830,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 72607,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This is because the ordinary impulse response matrix is constructed based on the constant approximation of force within a time step.",
+            "startOffset": 72475,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 62715,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "As mentioned earlier the case study investigates the load identification for a vertically erected aluminum alloy cantilever whose one end is rigidly clamped.",
+            "startOffset": 62558,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 57572,
+            "parents": [],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 57526,
+                    "startOffset": 57522
+                }
+            },
+            "secId": "s0050",
+            "sentence": "The results gained from slangTNG were cross-checked with those achieved from Regularization toolbox [13], which showed good agreement with each other.",
+            "startOffset": 57422,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 63283,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Shaker applies one point-force at the tip of the beam as well.",
+            "startOffset": 63221,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 62504,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In Fig. 4 the time history of recovered wind forces based on the noisy displacement response is shown.",
+            "startOffset": 62402,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 64590,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "For the sake of experimental load identification the identification procedure was repeated for the white noise and fluctuating wind force based on measured displacement.",
+            "startOffset": 64421,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 66293,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "For instance in Fig. 6 the comparison of identified fluctuating wind load with the actual one by means of GCV in augmented scheme has been depicted.",
+            "startOffset": 66145,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 70707,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 70706,
+                    "startOffset": 70702
+                }
+            },
+            "secId": "s0075",
+            "sentence": "The problem of identification in low level vibrations could be also resolved either by use of acceleration transducer, which are appropriate for such vibrations or by means of strain gauge instead of accelerometer as reported in [16].",
+            "startOffset": 70473,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 55625,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Load identification using regularization method"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Selection of regularization parameter"
+                }
+            ],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 55624,
+                    "startOffset": 55621
+                }
+            },
+            "secId": "s0040",
+            "sentence": "As a result, the problem of parameter selection changes to finding such an \u03b1, which is the minimizer of negative value of L-curve\u05f3s curvature [8].",
+            "startOffset": 55479,
+            "title": "L-curve"
+        },
+        {
+            "endOffset": 60828,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Moreover the identified forces obtained by using the augmented impulse response matrix were recovered more accurately than those obtained by using the ordinary impulse response matrix (c.f. Table 1).",
+            "startOffset": 60629,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 61530,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The spectrum was widened and the upper frequency was extended to 30 Hz in order to cover the relatively high resonance frequency region of the structure.",
+            "startOffset": 61377,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 45446,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Load identification can be done in time or frequency domain, the best choice depends on the type of loading or the identification purposes.",
+            "startOffset": 45307,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56763,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The inverse problem has been solved by means of regularization methods.",
+            "startOffset": 56692,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 47597,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The parameter selection methods are categorized into two general classes.",
+            "startOffset": 47524,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 65442,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The first part of the experimental analysis again consists of identification of the white noise excitation with the same features as previously explained in Section 4.2.",
+            "startOffset": 65273,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 55137,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Load identification using regularization method"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Selection of regularization parameter"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "L-curve is the log\u2013log plot of the smoothened solution versus the residual norm, corresponding to different values of regularization parameter.",
+            "startOffset": 54994,
+            "title": "L-curve"
+        },
+        {
+            "endOffset": 63052,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Two of them are piezoelectric accelerometers, which are used to derive the acceleration and displacement responses at the same time.",
+            "startOffset": 62920,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 72061,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "In this paper the formulations for derivation of impulse response matrices, which are used in the de-convolution problem of load identification, were presented.",
+            "startOffset": 71901,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 56979,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "As a result there is always one unknown force versus a single measured structural response.",
+            "startOffset": 56888,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 61795,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The response sampling rate and duration of excitations were respectively 180 s\u22121 and 5 s.",
+            "startOffset": 61706,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 66391,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Table 3 provides the wind load identification results based on different methods in both schemes.",
+            "startOffset": 66294,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 60262,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The duration of excitation, noise level and sampling rate are 5 s, 2.5 percent and 120 s\u22121 respectively.",
+            "startOffset": 60158,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 67523,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Therefore the utilization of acceleration response does not significantly improve the identified wind load.",
+            "startOffset": 67416,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 64910,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The acceleration responses have been used just when we initially speculated that the reason of inaccuracy in the identified wind load is related to the measured displacement response.",
+            "startOffset": 64727,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 66934,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "It means that the optimal regularization parameters found based on the GCV and L-curve criteria do not render the identified loads of good quality.",
+            "startOffset": 66787,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 47755,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The first class includes the methods working based on a priori knowledge about the measurement noise and the second class, which is applicable independently.",
+            "startOffset": 47598,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56402,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "In the first step the solutions of direct problem, i.e. dynamic response analysis, by means of ordinary and augmented response matrices are compared.",
+            "startOffset": 56253,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 60914,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 3 represents the comparison of the identified white noise with the actual force.",
+            "startOffset": 60829,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 66144,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "The identification results of wind load demonstrate that the recovered forces based on GCV or L-curve criteria do not have acceptable accuracy.",
+            "startOffset": 66001,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 68510,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "According to this finding it was assumed that the inadequate sensitivity of the measurement sensors and not other issues regarding the identification methods gave rise to the inaccurate identified wind loads.",
+            "startOffset": 68302,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 65129,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "However the main focus is on using the measured displacement response, since the L-curve or GCV function corresponding to the measured displacements was seen to be better shaped than those of the acceleration response.",
+            "startOffset": 64911,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 67681,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "More inspection revealed that the displacement-based identified load divided by structure\u05f3s stiffness, k, is very close to the measured displacement response.",
+            "startOffset": 67523,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 45614,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The authors\u05f3 interest is to apply the solution of this inverse problem, i.e. the inverse wind load identification, in wind fatigue analysis of a full-scale guyed-mast.",
+            "startOffset": 45447,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59661,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In order to simulate the measured structural response, white noise was added to the computed \u201cdisplacement responses\u201d of the structure under the actual force.",
+            "startOffset": 59503,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 63725,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "As a result the structure has been modeled directly as a single degree of freedom system and the dynamic response of the cantilever is truncated to its first mode.",
+            "startOffset": 63562,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 73257,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "Nonetheless the forces recovered by means of the augmented impulse matrix were more accurate than by the ordinary one even for such small time step lengths (c.f. Tables 1 and 4).",
+            "startOffset": 73079,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 53083,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Dynamic response analysis of discrete-time systems"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "For a full formulation of input-out setup, the impulse response functions of displacement, velocity and acceleration should be known.",
+            "startOffset": 52950,
+            "title": "Complete set of discrete dynamic response"
+        },
+        {
+            "endOffset": 53222,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Dynamic response analysis of discrete-time systems"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "Afterwards depending on the type of the response sensor attached to any degrees of freedom, the applied force may be inversely identified.",
+            "startOffset": 53084,
+            "title": "Complete set of discrete dynamic response"
+        },
+        {
+            "endOffset": 63447,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The picture of the whole setup is also shown in Fig. 5.",
+            "startOffset": 63392,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 63150,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The displacement response was obtained from the measured acceleration via the signal conditioner.",
+            "startOffset": 63053,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 73484,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "The identification results illustrate that the high accuracy of load identification drastically depends on the use of appropriate response sensors for different types of excitation in the sense of the contained frequency range.",
+            "startOffset": 73257,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 67415,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Several runs of this procedure show that slightly better or worse results may be achieved.",
+            "startOffset": 67325,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 61863,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The error analysis of the identified wind loads is given in Table 1.",
+            "startOffset": 61795,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 46227,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 46184,
+                    "startOffset": 46181
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Secondly utilization of an experimental input\u2013output model such as quasi-impulse response matrix [1] due to its limitations is not appropriate.",
+            "startOffset": 46084,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56515,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "These results, provided in Section 4.1, aim at justifying the introduction of augmented impulse response matrix.",
+            "startOffset": 56403,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 55262,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Load identification using regularization method"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Selection of regularization parameter"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Depending on the selection of regularization parameter, there is a trade-off between residual norm and the size of solution.",
+            "startOffset": 55138,
+            "title": "L-curve"
+        },
+        {
+            "endOffset": 64384,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The modal system parameters including mass, stiffness and damping ratio are respectively 0.2196 kg, 1666.4 N m\u22121 and 0.07 percent.",
+            "startOffset": 64254,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 67991,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Hence according to this observation, it can be concluded that the use of this kind of measured displacement response led to recovering a sort of quasi-static force.",
+            "startOffset": 67827,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 56691,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "Secondly we provide the numerical results of inverse problem in terms of simulation and experimental laboratory-scale load identification, respectively in Sections 4.2 and 4.3.",
+            "startOffset": 56515,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 64026,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Firstly the eigenfrequency was determined by an impulse test and compared with those gained via incremental-frequency and variable-frequency harmonic excitation that was estimated nearly the same as 13.8 Hz.",
+            "startOffset": 63819,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 69132,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "One way to resolve the problem in measurement when the sensors do not have sufficient sensitivity is to amplify the amplitude of the quantity of interest, which in our case is the acceleration response.",
+            "startOffset": 68930,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 72715,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This assumption demands such a small time step in order that the approximated force resembles the real one.",
+            "startOffset": 72608,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 44267,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The load identification in engineering problems becomes more important if the excitations are caused by the actions which cannot be measured directly.",
+            "startOffset": 44117,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67727,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "This comparison was illustrated in Fig. 7(a).",
+            "startOffset": 67682,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 73989,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "This is due to the fact that the L-curve and GCV criteria corresponding to the acceleration response were observed to fail way more often than when the displacement response was utilized.",
+            "startOffset": 73802,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 47865,
+            "parents": [],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 47809,
+                    "startOffset": 47806
+                },
+                "bib7": {
+                    "endOffset": 47827,
+                    "startOffset": 47822
+                },
+                "bib8": {
+                    "endOffset": 47827,
+                    "startOffset": 47822
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The methods of generalized cross validation (GCV) [6] and L-curve [7,8] are two examples of the second class.",
+            "startOffset": 47756,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 60447,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The simulation of identification was run several times and it was observed that both identification methods are stable in recovering the force based on the noisy displacement response.",
+            "startOffset": 60263,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 61705,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "For simulation of wind load identification, the actual displacement response of the structure was polluted at 2.5 percent noise level.",
+            "startOffset": 61571,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 67826,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "But rather as shown in Fig. 7(b), this analogy does not exist for the white noise excitation case.",
+            "startOffset": 67728,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 66786,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "With repeating the procedure of the experimental wind force recovering under different simulated wind excitations, it was perceived that the regularization methods are stable while the recovered force is not in agreement with the measured force.",
+            "startOffset": 66541,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 74173,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "As a result there is the lack of robustness in the placement of the optimal regularization parameter according to those criteria (e.g. Fig. 10) when the acceleration response is used.",
+            "startOffset": 73990,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 44715,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "For example, wind loading is one of the dominant design parameters for structures having low natural frequencies such as tall buildings or long bridges.",
+            "startOffset": 44563,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62919,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "Three sensors have been mounted on the tip of the beam.",
+            "startOffset": 62864,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 72474,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "According to Section 4.1 the response via the augmented scheme converges faster than the response of the ordinary one.",
+            "startOffset": 72356,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 63220,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The third sensor measures the applied force directly from the shaker.",
+            "startOffset": 63151,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 54312,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Dynamic response analysis of discrete-time systems"
+                }
+            ],
+            "secId": "s0025",
+            "sentence": "These relations might be reduced in the absence of either any response sensors or excitations in a single node.",
+            "startOffset": 54201,
+            "title": "Complete set of discrete dynamic response"
+        },
+        {
+            "endOffset": 62863,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The cantilever is a rectangular beam with cross sectional dimensions 0.03 and 0.01 m as well as 0.68 m height, which is bending over its weak axis.",
+            "startOffset": 62716,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 48005,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Also it has been recommended to evaluate which parameter selection method is more efficient according to the nature of the certain problem.",
+            "startOffset": 47866,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59754,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Then this noise-polluted displacement response was used for the load identification purpose.",
+            "startOffset": 59662,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 68302,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "As a result, those parts of loading concerning the inertia and damping force are not identified.",
+            "startOffset": 68206,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 55375,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Load identification using regularization method"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Selection of regularization parameter"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Hence L-curve aims at finding the balancing regularization parameter, which should lie on the corner of L-curve.",
+            "startOffset": 55263,
+            "title": "L-curve"
+        },
+        {
+            "endOffset": 68930,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "In addition, the portion of the damping force due to the small damping ratio of structure as well as the low velocity of loading is not considerable.",
+            "startOffset": 68781,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 61077,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In order to evaluate the consistency of identification methods for wind load, the fluctuating parts of wind velocity and correspondingly wind loads were generated.",
+            "startOffset": 60914,
+            "title": "Simulation of load identification"
+        },
+        {
+            "endOffset": 73078,
+            "parents": [],
+            "secId": "s0080",
+            "sentence": "However in the context of accuracy comparison, the sampling rates were selected relatively high so that the response of the ordinary scheme can converge too.",
+            "startOffset": 72921,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 63391,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0070",
+            "sentence": "The specifications of measurement equipments, which are the products of Br\u00fcel & Kj\u00e6r, are given in Table 2.",
+            "startOffset": 63284,
+            "title": "Case study"
+        },
+        {
+            "endOffset": 57133,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The system parameters of the equivalent mass\u2013spring\u2013dashpot model corresponding to the cantilever have been identified, which are given in Section 4.3.1.",
+            "startOffset": 56980,
+            "title": "Numerical results"
+        },
+        {
+            "endOffset": 65830,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Since the identification of white noise excitation has the satisfactory exactness alike the simulations, we end with it here and resume with the wind load identification.",
+            "startOffset": 65660,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 64726,
+            "parents": [
+                {
+                    "id": "s0050",
+                    "title": "Numerical results"
+                },
+                {
+                    "id": "s0065",
+                    "title": "Laboratory-scale load identification"
+                }
+            ],
+            "secId": "s0075",
+            "sentence": "Moreover in this section the results of the experimental wind load identification based on measured acceleration will be also provided.",
+            "startOffset": 64591,
+            "title": "Experimental load identification"
+        },
+        {
+            "endOffset": 55478,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Load identification using regularization method"
+                },
+                {
+                    "id": "s0035",
+                    "title": "Selection of regularization parameter"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "This corner can be approximately recognized as the point on which the curvature of L-curve is maximal.",
+            "startOffset": 55376,
+            "title": "L-curve"
+        },
+        {
+            "endOffset": 56887,
+            "parents": [],
+            "secId": "s0050",
+            "sentence": "The case study is a rigidly clamped aluminum alloy cantilever, which has been modelled as a single degree of freedom system.",
+            "startOffset": 56763,
+            "title": "Numerical results"
+        }
+    ],
+    "docId": "S0022460X14010311",
+    "metadata": {
+        "asjc": [
+            "2210",
+            "2211",
+            "3102",
+            "3104"
+        ],
+        "authors": [
+            {
+                "email": "mehrad_hoo@yahoo.com",
+                "first": "A.",
+                "initial": "A.",
+                "last": "Kazemi Amiri"
+            },
+            {
+                "email": null,
+                "first": "C.",
+                "initial": "C.",
+                "last": "Bucher"
+            }
+        ],
+        "doi": "10.1016/j.jsv.2014.12.027",
+        "firstpage": "101",
+        "issn": "0022460X",
+        "lastpage": "113",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "ENGI",
+            "PHYS"
+        ],
+        "title": "Derivation of a new parametric impulse response matrix utilized for nodal wind load identification by response measurement"
+    }
+}

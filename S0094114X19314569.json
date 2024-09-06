@@ -1,0 +1,2070 @@
+{
+    "abstract": "In this paper we present a modeling procedure for a flexible knuckle boom crane, which is actuated by hydraulic cylinders and is modeled as a planar multibody system. We propose a convenient framework where both rigid body velocities and velocities caused by flexible behavior are represented as twists. Such formulation allows for using screw transformations, which leads to systematic derivations. Dynamics of a crane and mass balance of hydraulic cylinders are coupled using the bond graph method. In addition, we present a procedure for the determination of reaction forces in passive joints, which is conveniently given as an extension of the dynamic modeling procedure. Both procedures are presented in a general and systematic manner such that they can be applied for a group of planar flexible manipulators. We study the dynamics of luffing motion of a crane by numerical simulation and provide the simulation results, as well as determine the reaction forces in passive joints. The simulation results are validated by the ANSYS finite element analysis. The derived model provides a basis for design of luffing cylinders and can potentially be used for studying performance of a crane control system.",
+    "author_highlights": [
+        {
+            "endOffset": 66007,
+            "sentence": "A general dynamic modeling procedure for planar flexible manipulators.",
+            "startOffset": 65937
+        },
+        {
+            "endOffset": 66079,
+            "sentence": "A general procedure for force analysis of planar flexible manipulators.",
+            "startOffset": 66008
+        },
+        {
+            "endOffset": 66164,
+            "sentence": "Rigid body velocities and velocities caused by elasticity are represented as twists.",
+            "startOffset": 66080
+        },
+        {
+            "endOffset": 66244,
+            "sentence": "Coupling of dynamics of a manipulator and hydraulic cylinders using bond graph.",
+            "startOffset": 66165
+        },
+        {
+            "endOffset": 66312,
+            "sentence": "An implementation example for a planar flexible knuckle boom crane.",
+            "startOffset": 66245
+        }
+    ],
+    "bib_entries": {
+        "bib0001": {
+            "authors": [
+                {
+                    "first": "Eihab M.",
+                    "initial": "E.M.",
+                    "last": "Abdel-Rahman"
+                },
+                {
+                    "first": "Ali H.",
+                    "initial": "A.H.",
+                    "last": "Nayfeh"
+                },
+                {
+                    "first": "Ziyad N.",
+                    "initial": "Z.N.",
+                    "last": "Masoud"
+                }
+            ],
+            "doi": "10.1177/1077546303009007007",
+            "firstpage": "863",
+            "issn": "10775463",
+            "lastpage": "908",
+            "pub_year": 2003,
+            "title": "Dynamics and control of cranes: A review",
+            "volume": "9"
+        },
+        "bib0002": {
+            "authors": [
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Kili\u00e7aslan"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Balkan"
+                },
+                {
+                    "first": "S. K.",
+                    "initial": "S.K.",
+                    "last": "Ider"
+                }
+            ],
+            "firstpage": "645",
+            "issn": "0022460X",
+            "lastpage": "657",
+            "pub_year": 1999,
+            "title": "Tipping loads of mobile cranes with flexible booms",
+            "volume": "223"
+        },
+        "bib0003": {
+            "authors": [
+                {
+                    "first": "B.",
+                    "initial": "B.",
+                    "last": "Posiada\u0142a"
+                }
+            ],
+            "doi": "10.1016/0094-114X(96)00044-4",
+            "firstpage": "9",
+            "issn": "0094114X",
+            "lastpage": "20",
+            "pub_year": 1997,
+            "title": "Influence of crane support system on motion of the lifted load",
+            "volume": "32"
+        },
+        "bib0004": {
+            "authors": [
+                {
+                    "first": "Arkadiusz",
+                    "initial": "A.",
+                    "last": "Tra\u0327bka"
+                }
+            ],
+            "doi": "10.1016/j.ijmecsci.2014.07.009",
+            "firstpage": "162",
+            "issn": "00207403",
+            "lastpage": "174",
+            "pub_year": 2014,
+            "title": "Dynamics of telescopic cranes with flexible structural components",
+            "volume": "88"
+        },
+        "bib0005": {
+            "authors": [
+                {
+                    "first": "Guangfu",
+                    "initial": "G.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Michael",
+                    "initial": "M.",
+                    "last": "Kleeberger"
+                }
+            ],
+            "doi": "10.1016/S0094-114X(03)00099-5",
+            "firstpage": "1489",
+            "issn": "0094114X",
+            "lastpage": "1508",
+            "pub_year": 2003,
+            "title": "Dynamic responses of hydraulic mobile crane with consideration of the drive system",
+            "volume": "38"
+        },
+        "bib0006": {
+            "authors": [
+                {
+                    "first": "F.",
+                    "initial": "F.",
+                    "last": "Ju"
+                },
+                {
+                    "first": "Y. S.",
+                    "initial": "Y.S.",
+                    "last": "Choo"
+                },
+                {
+                    "first": "F. S.",
+                    "initial": "F.S.",
+                    "last": "Cui"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2005.03.078",
+            "firstpage": "376",
+            "issn": "00207683",
+            "lastpage": "389",
+            "pub_year": 2006,
+            "title": "Dynamic response of tower crane induced by the pendulum motion of the payload",
+            "volume": "43"
+        },
+        "bib0007": {
+            "authors": [
+                {
+                    "first": "Ran",
+                    "initial": "R.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Liang",
+                    "initial": "L.",
+                    "last": "Yan"
+                },
+                {
+                    "first": "Zongxia",
+                    "initial": "Z.",
+                    "last": "Jiao"
+                },
+                {
+                    "first": "Yaoxing",
+                    "initial": "Y.",
+                    "last": "Shang"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2018.09.047",
+            "firstpage": "144",
+            "issn": "0022460X",
+            "lastpage": "155",
+            "pub_year": 2019,
+            "title": "Dynamic modeling and analysis of flexible H-type gantry stage",
+            "volume": "439"
+        },
+        "bib0008": {
+            "authors": [
+                {
+                    "first": "Henrik C.",
+                    "initial": "H.C.",
+                    "last": "Pedersen"
+                },
+                {
+                    "first": "Torben O.",
+                    "initial": "T.O.",
+                    "last": "Andersen"
+                },
+                {
+                    "first": "Brian K.",
+                    "initial": "B.K.",
+                    "last": "Nielsen"
+                }
+            ],
+            "doi": "10.1115/1.4030801",
+            "issn": "00220434",
+            "pub_year": 2015,
+            "title": "Comparison of Methods for Modeling a Hydraulic Loader Crane with Flexible Translational Links",
+            "volume": "137"
+        },
+        "bib0009": {
+            "authors": [
+                {
+                    "first": "Guangfu",
+                    "initial": "G.",
+                    "last": "Sun"
+                },
+                {
+                    "first": "Jie",
+                    "initial": "J.",
+                    "last": "Liu"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2006.01.008",
+            "firstpage": "1273",
+            "issn": "0094114X",
+            "lastpage": "1288",
+            "pub_year": 2006,
+            "title": "Dynamic responses of hydraulic crane during luffing motion",
+            "volume": "41"
+        },
+        "bib0010": {
+            "authors": [
+                {
+                    "first": "Ahmed A.",
+                    "initial": "A.A.",
+                    "last": "Shabana"
+                }
+            ],
+            "doi": "10.1017/CBO9781107337213",
+            "firstpage": "1",
+            "lastpage": "384",
+            "pub_year": 2013,
+            "title": "Dynamics of multibody systems",
+            "volume": "9781107042650"
+        },
+        "bib0011": {
+            "authors": [
+                {
+                    "first": "P\u00e5l J.",
+                    "initial": "P.J.",
+                    "last": "From"
+                },
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Duindam"
+                },
+                {
+                    "first": "Kristin Y.",
+                    "initial": "K.Y.",
+                    "last": "Pettersen"
+                },
+                {
+                    "first": "Jan T.",
+                    "initial": "J.T.",
+                    "last": "Gravdahl"
+                },
+                {
+                    "first": "Shankar",
+                    "initial": "S.",
+                    "last": "Sastry"
+                }
+            ],
+            "doi": "10.1016/j.simpat.2010.01.012",
+            "firstpage": "712",
+            "issn": "1569190X",
+            "lastpage": "731",
+            "pub_year": 2010,
+            "title": "Singularity-free dynamic equations of vehicle-manipulator systems",
+            "volume": "18"
+        },
+        "bib0012": {
+            "authors": [
+                {
+                    "first": "P\u00e5l J.",
+                    "initial": "P.J.",
+                    "last": "From"
+                },
+                {
+                    "first": "Kristin",
+                    "initial": "K.",
+                    "last": "Ytterstad Pettersen"
+                },
+                {
+                    "first": "Jan T.",
+                    "initial": "J.T.",
+                    "last": "Gravdahl"
+                }
+            ],
+            "doi": "10.1016/j.actaastro.2011.06.014",
+            "firstpage": "1057",
+            "issn": "00945765",
+            "lastpage": "1065",
+            "pub_year": 2011,
+            "title": "Singularity-free dynamic equations of spacecraft-manipulator systems",
+            "volume": "69"
+        },
+        "bib0013": {
+            "authors": [
+                {
+                    "first": "Bhaskar",
+                    "initial": "B.",
+                    "last": "Dasgupta"
+                },
+                {
+                    "first": "T. S.",
+                    "initial": "T.S.",
+                    "last": "Mruthyunjaya"
+                }
+            ],
+            "doi": "10.1016/S0094-114X(97)00087-6",
+            "firstpage": "993",
+            "issn": "0094114X",
+            "lastpage": "1012",
+            "pub_year": 1998,
+            "title": "Closed-form dynamic equations of the general Stewart platform through the Newton-Euler approach",
+            "volume": "33"
+        },
+        "bib0014": {
+            "authors": [
+                {
+                    "first": "Yunn Lin",
+                    "initial": "Y.L.",
+                    "last": "Hwang"
+                }
+            ],
+            "doi": "10.1007/s00170-005-2530-3",
+            "firstpage": "598",
+            "issn": "02683768",
+            "lastpage": "604",
+            "pub_year": 2006,
+            "title": "Recursive Newton-Euler formulation for flexible dynamic manufacturing analysis of open-loop robotic systems",
+            "volume": "29"
+        },
+        "bib0015": null,
+        "bib0016": {
+            "authors": [
+                {
+                    "first": "T. R.",
+                    "initial": "T.R.",
+                    "last": "Kane"
+                },
+                {
+                    "first": "R. R.",
+                    "initial": "R.R.",
+                    "last": "Ryan"
+                },
+                {
+                    "first": "A. K.",
+                    "initial": "A.K.",
+                    "last": "Banerjee"
+                }
+            ],
+            "doi": "10.2514/3.20195",
+            "firstpage": "139",
+            "issn": "07315090",
+            "lastpage": "151",
+            "pub_year": 1987,
+            "title": "Dynamics of a cantilever beam attached to a moving base",
+            "volume": "10"
+        },
+        "bib0017": {
+            "authors": [
+                {
+                    "first": "Andrej",
+                    "initial": "A.",
+                    "last": "Cibicik"
+                },
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2018.10.019",
+            "firstpage": "179",
+            "issn": "0094114X",
+            "lastpage": "194",
+            "pub_year": 2019,
+            "title": "Dynamic modelling and force analysis of a knuckle boom crane using screw theory",
+            "volume": "133"
+        },
+        "bib0018": {
+            "authors": [
+                {
+                    "first": "Andrej",
+                    "initial": "A.",
+                    "last": "Cibicik"
+                },
+                {
+                    "first": "Geir O.",
+                    "initial": "G.O.",
+                    "last": "Tysse"
+                },
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                }
+            ],
+            "doi": "10.1115/1.4043701",
+            "issn": "08927219",
+            "pub_year": 2019,
+            "title": "Determination of Reaction Forces of a Deck Crane in Wave Motion Using Screw Theory",
+            "volume": "141"
+        },
+        "bib0019": null,
+        "bib0020": {
+            "authors": [
+                {
+                    "first": "Andrej",
+                    "initial": "A.",
+                    "last": "Cibicik"
+                },
+                {
+                    "first": "Olav",
+                    "initial": "O.",
+                    "last": "Egeland"
+                }
+            ],
+            "doi": "10.1109/CoDIT.2018.8394867",
+            "firstpage": "233",
+            "lastpage": "240",
+            "pub_year": 2018,
+            "title": "Determination of constraint forces for an offshore crane on a moving base"
+        },
+        "bib0021": {
+            "authors": [
+                {
+                    "first": "Marek",
+                    "initial": "M.",
+                    "last": "Wojtyra"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2009.07.008",
+            "firstpage": "2265",
+            "issn": "0094114X",
+            "lastpage": "2278",
+            "pub_year": 2009,
+            "title": "Joint reactions in rigid body mechanisms with dependent constraints",
+            "volume": "44"
+        },
+        "bib0022": {
+            "authors": [
+                {
+                    "first": "Filipe",
+                    "initial": "F.",
+                    "last": "Marques"
+                },
+                {
+                    "first": "Ant\u00f3nio P.",
+                    "initial": "A.P.",
+                    "last": "Souto"
+                },
+                {
+                    "first": "Paulo",
+                    "initial": "P.",
+                    "last": "Flores"
+                }
+            ],
+            "doi": "10.1007/s11044-016-9530-y",
+            "firstpage": "385",
+            "issn": "13845640",
+            "lastpage": "419",
+            "pub_year": 2017,
+            "title": "On the constraints violation in forward dynamics of multibody systems",
+            "volume": "39"
+        },
+        "bib0023": {
+            "authors": [
+                {
+                    "first": "Dean C.",
+                    "initial": "D.C.",
+                    "last": "Karnopp"
+                },
+                {
+                    "first": "Donald L.",
+                    "initial": "D.L.",
+                    "last": "Margolis"
+                },
+                {
+                    "first": "Ronald C.",
+                    "initial": "R.C.",
+                    "last": "Rosenberg"
+                }
+            ],
+            "doi": "10.1002/9781118152812",
+            "pub_year": 2012,
+            "title": "System Dynamics: Modeling, Simulation, and Control of Mechatronic Systems: Fifth Edition"
+        },
+        "bib0024": {
+            "authors": [
+                {
+                    "first": "Tarun Kumar",
+                    "initial": "T.K.",
+                    "last": "Bera"
+                },
+                {
+                    "first": "Arun Kumar",
+                    "initial": "A.K.",
+                    "last": "Samantaray"
+                }
+            ],
+            "firstpage": "173",
+            "issn": "17467233",
+            "lastpage": "188",
+            "pub_year": 2011,
+            "title": "Consistent bond graph modelling of planar multibody systems",
+            "volume": "7"
+        },
+        "bib0025": {
+            "authors": [
+                {
+                    "first": "Ashraf A.",
+                    "initial": "A.A.",
+                    "last": "Zeid"
+                },
+                {
+                    "first": "James L.",
+                    "initial": "J.L.",
+                    "last": "Overholt"
+                }
+            ],
+            "doi": "10.1016/0016-0032(95)00002-F",
+            "firstpage": "21",
+            "issn": "00160032",
+            "lastpage": "45",
+            "pub_year": 1995,
+            "title": "Singularly perturbed formulation: Explicit modeling of multibody systems",
+            "volume": "332"
+        },
+        "bib0026": null,
+        "bib0027": {
+            "authors": [
+                {
+                    "first": "Yihan",
+                    "initial": "Y.",
+                    "last": "Xing"
+                },
+                {
+                    "first": "Eilif",
+                    "initial": "E.",
+                    "last": "Pedersen"
+                },
+                {
+                    "first": "Torgeir",
+                    "initial": "T.",
+                    "last": "Moan"
+                }
+            ],
+            "doi": "10.1016/j.jsv.2011.05.025",
+            "firstpage": "5114",
+            "issn": "0022460X",
+            "lastpage": "5130",
+            "pub_year": 2011,
+            "title": "An inertia-capacitance beam substructure formulation based on the bond graph method with application to rotating beams",
+            "volume": "330"
+        },
+        "bib0028": {
+            "authors": [
+                {
+                    "first": "Vjekoslav",
+                    "initial": "V.",
+                    "last": "Damic"
+                },
+                {
+                    "first": "Majda",
+                    "initial": "M.",
+                    "last": "Cohodar"
+                }
+            ],
+            "firstpage": "147",
+            "lastpage": "154",
+            "pub_year": 2006,
+            "title": "Bond graph based modelling and simulation of flexible robotic manipulators"
+        },
+        "bib0029": {
+            "authors": [
+                {
+                    "first": "Rochdi",
+                    "initial": "R.",
+                    "last": "Merzouki"
+                },
+                {
+                    "first": "Arun Kumar",
+                    "initial": "A.K.",
+                    "last": "Samantaray"
+                },
+                {
+                    "first": "Pushparaj Mani",
+                    "initial": "P.M.",
+                    "last": "Pathak"
+                },
+                {
+                    "first": "Belkacem Ould",
+                    "initial": "B.O.",
+                    "last": "Bouamama"
+                }
+            ],
+            "doi": "10.1007/978-1-4471-4628-5",
+            "firstpage": "1",
+            "lastpage": "943",
+            "pub_year": 2013,
+            "title": "Intelligent mechatronic systems: Modeling, control and diagnosis",
+            "volume": "9781447146285"
+        },
+        "bib0030": {
+            "authors": [
+                {
+                    "first": "T. K.",
+                    "initial": "T.K.",
+                    "last": "Bera"
+                },
+                {
+                    "first": "A. K.",
+                    "initial": "A.K.",
+                    "last": "Samantaray"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Karmakar"
+                }
+            ],
+            "doi": "10.1016/j.mechmachtheory.2011.07.016",
+            "firstpage": "2",
+            "issn": "0094114X",
+            "lastpage": "20",
+            "pub_year": 2012,
+            "title": "Bond graph modeling of planar prismatic joints",
+            "volume": "49"
+        },
+        "bib0031": {
+            "authors": [
+                {
+                    "first": "Yingguang",
+                    "initial": "Y.",
+                    "last": "Chu"
+                },
+                {
+                    "first": "Lars Ivar",
+                    "initial": "L.I.",
+                    "last": "Hatledal"
+                },
+                {
+                    "first": "Vilmar",
+                    "initial": "V.",
+                    "last": "\u00c6s\u00f8y"
+                },
+                {
+                    "first": "S\u00f6ren",
+                    "initial": "S.",
+                    "last": "Ehlers"
+                },
+                {
+                    "first": "Houxiang",
+                    "initial": "H.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1115/1.4038346",
+            "issn": "08927219",
+            "pub_year": 2018,
+            "title": "An object-oriented modeling approach to virtual prototyping of marine operation systems based on functional mock-up interface co-simulation",
+            "volume": "140"
+        },
+        "bib0032": {
+            "authors": [
+                {
+                    "first": "Soo Jin",
+                    "initial": "S.J.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Pyung Hun",
+                    "initial": "P.H.",
+                    "last": "Chang"
+                }
+            ],
+            "doi": "10.1007/s12206-011-0938-2",
+            "firstpage": "195",
+            "issn": "1738494X",
+            "lastpage": "204",
+            "pub_year": 2012,
+            "title": "Modeling of a hydraulic excavator based on bond graph method and its parameter estimation",
+            "volume": "26"
+        },
+        "bib0033": {
+            "authors": [
+                {
+                    "first": "Vjekoslav",
+                    "initial": "V.",
+                    "last": "Damic"
+                },
+                {
+                    "first": "Maida",
+                    "initial": "M.",
+                    "last": "Cohodarb"
+                },
+                {
+                    "first": "Malik",
+                    "initial": "M.",
+                    "last": "Kulenovic"
+                }
+            ],
+            "doi": "10.1016/j.proeng.2014.02.222",
+            "firstpage": "203",
+            "issn": "18777058",
+            "lastpage": "209",
+            "pub_year": 2014,
+            "title": "Modeling and simulation of hydraulic actuated multibody systems by Bond Graphs",
+            "volume": "69"
+        },
+        "bib0034": null,
+        "bib0035": null,
+        "bib0036": null,
+        "bib0037": null,
+        "bib0038": null,
+        "bib0039": null,
+        "bib0040": {
+            "authors": [
+                {
+                    "first": "Om",
+                    "initial": "O.",
+                    "last": "Prakash"
+                },
+                {
+                    "first": "Arun Kumar",
+                    "initial": "A.K.",
+                    "last": "Samantaray"
+                },
+                {
+                    "first": "Ranjan",
+                    "initial": "R.",
+                    "last": "Bhattacharyya"
+                }
+            ],
+            "doi": "10.1016/j.conengprac.2017.11.003",
+            "firstpage": "1",
+            "issn": "09670661",
+            "lastpage": "18",
+            "pub_year": 2018,
+            "title": "Model-based multi-component adaptive prognosis for hybrid dynamical systems",
+            "volume": "72"
+        },
+        "bib0041": {
+            "authors": [
+                {
+                    "first": "Vilmar",
+                    "initial": "V.",
+                    "last": "Aesoy"
+                },
+                {
+                    "first": "Eilif",
+                    "initial": "E.",
+                    "last": "Pedersen"
+                }
+            ],
+            "issn": "01487191",
+            "pub_year": 2011,
+            "title": "Modeling and simulation for design and testing of direct injection gaseous fuel systems for medium-speed engines"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 71739,
+            "parents": [],
+            "refoffsets": {
+                "bib0023": {
+                    "endOffset": 71601,
+                    "startOffset": 71597
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The bond graph (BG) method [23] is a component-based approach for modeling multiphysical systems, where the energy is exchanged between the components through the bonds.",
+            "startOffset": 71570,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74003,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "We implement the presented procedures numerically and study dynamics of luffing motion by simulations.",
+            "startOffset": 73901,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72968,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The modeling procedure is given in a generalized and systematic manner, such that it can be applied for a group of planar flexible manipulators.",
+            "startOffset": 72824,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92181,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "Explicit modeling of the hydraulic system is outside the scope of this work.",
+            "startOffset": 92105,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 82256,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "Therefore, in this section we will present the dynamic modeling procedure in a general manner, such that it can be applied for a group of planar flexible mechanical manipulators.",
+            "startOffset": 82078,
+            "title": "Modeling of planar flexible manipulators"
+        },
+        {
+            "endOffset": 72565,
+            "parents": [],
+            "refoffsets": {
+                "bib0032": {
+                    "endOffset": 72499,
+                    "startOffset": 72495
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In [32] the BG model of a hydraulically actuated excavator was presented.",
+            "startOffset": 72492,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68383,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In a mechanical design process of such cranes the internal reaction forces obtained from a dynamic analysis may be required.",
+            "startOffset": 68259,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73402,
+            "parents": [],
+            "refoffsets": {
+                "bib0018": {
+                    "endOffset": 73318,
+                    "startOffset": 73314
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The original formulation of projection matrices [18] for rigid multibody systems is also extended for a case of planar flexible systems.",
+            "startOffset": 73266,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70273,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Knuckle boom cranes are mechanically similar to robotic manipulators, and dynamics of a crane can be formulated in the same manner as dynamics of a robotic manipulator.",
+            "startOffset": 70105,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 103646,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The elastic behavior is evaluated by comparison of the position of the end points of Link 1 and Link 2 given as x and y coordinates in the inertial frame.",
+            "startOffset": 103492,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 105143,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "We have proposed a modeling framework, where both rigid body velocities and velocities associated with elastic motion are represented as twists.",
+            "startOffset": 104999,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 106186,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "The advantage of the proposed method is that the proposed modeling assumptions significantly simplified the model.",
+            "startOffset": 106072,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 104115,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "Therefore, the modeling assumptions are considered to be reasonable.",
+            "startOffset": 104047,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 104472,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "The terms \u03c11, \u03c12 are the reaction forces in Joint 1 given in the coordinates of Frame 1 along x and y axes.",
+            "startOffset": 104365,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 103772,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The position of the end point of Link 1 is given in Fig. 15, and the position of the end point of Link 2 is given in Fig. 16.",
+            "startOffset": 103647,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 68529,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In addition, flexible behavior of a crane can lead to higher forces in hydraulic cylinders and a hydraulic system may require a different design.",
+            "startOffset": 68384,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106072,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "Both the elastic behavior and the values of reaction forces showed good agreement compared to the ANSYS results.",
+            "startOffset": 105960,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 72002,
+            "parents": [],
+            "refoffsets": {
+                "bib0024": {
+                    "endOffset": 71890,
+                    "startOffset": 71883
+                },
+                "bib0025": {
+                    "endOffset": 71890,
+                    "startOffset": 71883
+                },
+                "bib0026": {
+                    "endOffset": 71890,
+                    "startOffset": 71883
+                },
+                "bib0027": {
+                    "endOffset": 71934,
+                    "startOffset": 71930
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The BG method can be used for modeling rigid mechanical systems [24\u201326], or flexible mechanical systems, as in [27] where a bond graph model of a flexible rotation beam was presented.",
+            "startOffset": 71819,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92104,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "Consider the dynamics of the hydraulic cylinder i, which is coupled with dynamics of the manipulator by the power bond i12, see Fig. 5.",
+            "startOffset": 91969,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 72823,
+            "parents": [],
+            "refoffsets": {
+                "bib0017": {
+                    "endOffset": 72727,
+                    "startOffset": 72717
+                },
+                "bib0018": {
+                    "endOffset": 72727,
+                    "startOffset": 72717
+                },
+                "bib0020": {
+                    "endOffset": 72727,
+                    "startOffset": 72717
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In this work we extend the previous results of [17,18,20] to the model of a planar flexible knuckle boom crane, which is actuated by hydraulic cylinders.",
+            "startOffset": 72670,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74649,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The proposed modeling procedure for flexible planar manipulators is given in Section 3, while coupling of manipulator dynamics and dynamics of hydraulic cylinders using the BG method is presented in Section 4.",
+            "startOffset": 74440,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74077,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Simulation results are validated by the finite element analysis in ANSYS.",
+            "startOffset": 74004,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73265,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "This allows for using screw transformations for flexible multibody systems, which simplifies the derivations.",
+            "startOffset": 73156,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101120,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "In this work we model elasticity of the beams using the assumed mode method, where the first three eigenmodes for a hinged-hinged uniform Euler\u2013Bernoulli beam are included.",
+            "startOffset": 100948,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 104711,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "The terms \u03c15, \u03c16 are the reaction forces in the pivot joint of the payload given in the coordinates of Frame 3 along x and y axes.",
+            "startOffset": 104581,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 89116,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0014",
+            "sentence": "The bond graph model is illustrated in Fig. 5.",
+            "startOffset": 89070,
+            "title": "Manipulator model"
+        },
+        {
+            "endOffset": 107071,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "In addition, the presented formulation can be extended to include the joint clearance effect, joint flexibility, frictional effects and rub-impact loading.",
+            "startOffset": 106916,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 72087,
+            "parents": [],
+            "refoffsets": {
+                "bib0028": {
+                    "endOffset": 72010,
+                    "startOffset": 72006
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In [28] the authors presented the bond graph approach for modeling a flexible robot.",
+            "startOffset": 72003,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105959,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "We have also determined reaction forces in three passive joints and validated the values by the results from the ANSYS analysis.",
+            "startOffset": 105831,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 70386,
+            "parents": [],
+            "refoffsets": {
+                "bib0010": {
+                    "endOffset": 70385,
+                    "startOffset": 70381
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "One of the commonly used methods for modeling dynamics of manipulators is the Euler-Lagrange\u2019s formulation [10].",
+            "startOffset": 70274,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106800,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "The proposed modeling and force analysis procedures can be a useful tool in design process of flexible mechanisms as well as in design and verification of hydraulic control systems.",
+            "startOffset": 106619,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 74276,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Theoretical results of this work have a potential for practical applications for dimensioning of luffing cylinders, mechanical design of cranes and studying the performance of crane control systems.",
+            "startOffset": 74078,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 104580,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "The terms \u03c13, \u03c14 are the reaction forces in Joint 2 given in the coordinates of Frame 2 along x and y axes.",
+            "startOffset": 104473,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 82077,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "A knuckle boom crane is a mechanical system similar to a robotic manipulator arm.",
+            "startOffset": 81996,
+            "title": "Modeling of planar flexible manipulators"
+        },
+        {
+            "endOffset": 70978,
+            "parents": [],
+            "refoffsets": {
+                "bib0019": {
+                    "endOffset": 70977,
+                    "startOffset": 70973
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "A review and comparison of different computational algorithms for solving rigid and flexible multibody dynamics problems was given in [19].",
+            "startOffset": 70839,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105573,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "In addition, we have presented a procedure for the determination of reaction forces in passive joints of a manipulator, which was given as an extension of the dynamic modeling procedure.",
+            "startOffset": 105387,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 104260,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "In this section we present time histories of reaction forces in the passive joints of the crane, which were determined by (97).",
+            "startOffset": 104133,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 72283,
+            "parents": [],
+            "refoffsets": {
+                "bib0029": {
+                    "endOffset": 72182,
+                    "startOffset": 72175
+                },
+                "bib0030": {
+                    "endOffset": 72182,
+                    "startOffset": 72175
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Since the BG method provides a convenient framework for modeling multiphysical systems [29,30], it can efficiently be applied for modeling dynamics of mechanical systems with hydraulic actuators.",
+            "startOffset": 72088,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69812,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "A number of flexible cranes actuated by hydraulic cylinders was also investigated.",
+            "startOffset": 69730,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106619,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "In contrast to a set of DAE, which is a common way of modeling flexible systems with closed kinematic loops, a minimal formulation does not require inclusion of the constraint equations.",
+            "startOffset": 106433,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 71098,
+            "parents": [],
+            "refoffsets": {
+                "bib0015": {
+                    "endOffset": 71097,
+                    "startOffset": 71093
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "For determination of reaction forces in a dynamical system the method of auxiliary generalized speeds can be used [15].",
+            "startOffset": 70979,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105386,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "We have also demonstrated how dynamics of a manipulator can be coupled with dynamics of cylinders using the bond graph method.",
+            "startOffset": 105260,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 104998,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "In this work we have presented a procedure for the dynamic modeling of planar flexible manipulators, which are actuated by hydraulic cylinders.",
+            "startOffset": 104855,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 69374,
+            "parents": [],
+            "refoffsets": {
+                "bib0005": {
+                    "endOffset": 69281,
+                    "startOffset": 69278
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Another dynamic model of a flexible mobile crane actuated by hydraulic cylinders was presented in [5], where the method of Langrange\u2019s multipliers was used for constraining bodies in the system.",
+            "startOffset": 69180,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92227,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "Therefore, a simplified system is considered.",
+            "startOffset": 92182,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 73155,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "We propose a unified framework for derivation of differential kinematics, where twists are used for formulation of both rigid body velocities and velocities related to flexible behavior.",
+            "startOffset": 72969,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 92336,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "The mathematical model of a directional control valve is implemented for controlling the hydraulic oil flow.",
+            "startOffset": 92228,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 92447,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "In this work we disregard the effects of hoses transporting hydraulic oil in the system and external leakages.",
+            "startOffset": 92337,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 103491,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The comparison of the degrees of freedom associated with large motion is given in Fig. 14.",
+            "startOffset": 103401,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 104364,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "The determined reaction forces are compared to the results obtained from the ANSYS analysis in Fig. 18.",
+            "startOffset": 104261,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 74439,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In Section 2 preliminaries on dynamic modeling of rigid body systems and dynamics of hydraulic cylinders are given.",
+            "startOffset": 74324,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74897,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "A numerical example of a knuckle boom crane and simulation results are presented in Section 6, while the conclusions of this work are given in Section 7.",
+            "startOffset": 74744,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105830,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "The modeling assumptions and simulation results were validated using the finite element analysis in ANSYS.",
+            "startOffset": 105724,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 106432,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "In particular, elimination of closed kinematic loops formed by hydraulic cylinders and derivation of closed-form kinematic relations between the cylinder lengths and joint rotation angles allowed for modeling the system as a minimal set of ODEs.",
+            "startOffset": 106187,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68832,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Mobile cranes are typical mechanisms where the flexible behavior was investigated.",
+            "startOffset": 68750,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 91907,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0016",
+            "sentence": "In this section we implement the dynamics of a hydraulic cylinder (28) as a bond graph model.",
+            "startOffset": 91814,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 101470,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The cylinder forces are applied directly on the crane links.",
+            "startOffset": 101410,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 69470,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Alternatively to mobile cranes, flexible behavior of other crane types was also under research.",
+            "startOffset": 69375,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69729,
+            "parents": [],
+            "refoffsets": {
+                "bib0007": {
+                    "endOffset": 69728,
+                    "startOffset": 69725
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The analysis of an H-type gantry crane, where the transverse beam was modeled as an elastic body, was presented in [7].",
+            "startOffset": 69610,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71279,
+            "parents": [],
+            "refoffsets": {
+                "bib0020": {
+                    "endOffset": 71224,
+                    "startOffset": 71220
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The method of auxiliary generalized speeds was formulated for rigid body systems using twists and projection matrices in [20], which resulted in a general and systematic procedure.",
+            "startOffset": 71099,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74323,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The rest of this paper is organized as follows.",
+            "startOffset": 74276,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82367,
+            "parents": [],
+            "refoffsets": {
+                "bib0017": {
+                    "endOffset": 82320,
+                    "startOffset": 82316
+                }
+            },
+            "secId": "sec0007",
+            "sentence": "The dynamic modeling procedure is given as an extension of [17], where rigid multibody systems were discussed.",
+            "startOffset": 82257,
+            "title": "Modeling of planar flexible manipulators"
+        },
+        {
+            "endOffset": 68098,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "In such cases lightweight cranes actuated by hydraulic cylinders may be a preferred option.",
+            "startOffset": 68007,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100238,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0020",
+            "sentence": "The lengths of the cylinders and the rates of cylinder lengths are given in Fig. 8.",
+            "startOffset": 100155,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 91968,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "refoffsets": {
+                "bib0041": {
+                    "endOffset": 91947,
+                    "startOffset": 91943
+                }
+            },
+            "secId": "sec0016",
+            "sentence": "The modeling approach presented in [41] was used as a basis.",
+            "startOffset": 91908,
+            "title": "Hydraulic model of cylinders"
+        },
+        {
+            "endOffset": 105723,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "We have implemented the presented procedures for a case of a planar model of a knuckle boom crane and studied dynamics of luffing motion of the crane.",
+            "startOffset": 105573,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 104046,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "Results obtained in Figs. 13\u201317 show very good agreement and suggest that the dynamic behavior of the simplified model presented in this work agrees well with the behavior of the more complex FE model.",
+            "startOffset": 103845,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 69179,
+            "parents": [],
+            "refoffsets": {
+                "bib0004": {
+                    "endOffset": 69040,
+                    "startOffset": 69037
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In the other paper [4] the author presented the analysis of flexibility properties of a mobile crane depending on the different selection of flexible components.",
+            "startOffset": 69018,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89069,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "secId": "sec0014",
+            "sentence": "The equation of motion of a planar flexible manipulator (43) is used for the derivation of the bong graph model in this section.",
+            "startOffset": 88941,
+            "title": "Manipulator model"
+        },
+        {
+            "endOffset": 103844,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The comparison of the axial forces in the cylinders is given in Fig. 17.",
+            "startOffset": 103772,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 88921,
+            "parents": [],
+            "secId": "sec0013",
+            "sentence": "The dynamical model of a planar flexible manipulator (43) and the dynamics of a hydraulic cylinder (28) are coupled into one dynamical system using the bong graph method.",
+            "startOffset": 88751,
+            "title": "Coupling of manipulator and cylinder models using bond graph"
+        },
+        {
+            "endOffset": 101238,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The inertia of each cylinder is modeled as a lumped mass of a cylinder barrel and a lumped mass of a cylinder piston.",
+            "startOffset": 101121,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 70105,
+            "parents": [],
+            "refoffsets": {
+                "bib0009": {
+                    "endOffset": 70104,
+                    "startOffset": 70101
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The dynamic analysis of luffing motion of a flexible single-boom crane actuated by hydraulic cylinders was given in [9].",
+            "startOffset": 69985,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71818,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The BG method also allows for convenient graphical representation of a system.",
+            "startOffset": 71740,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73717,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The dynamical model of the crane is coupled with the dynamics of the cylinders using the bond graph method.",
+            "startOffset": 73610,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 106915,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "The future work is suggested to be an extension of the proposed procedures for spatial flexible multibody systems.",
+            "startOffset": 106801,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 74743,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "A procedure for the determination of reaction forces in passive joints is given in Section 5.",
+            "startOffset": 74650,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73827,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Additionally, we present a procedure for the determination of reaction forces in passive joints of the crane.",
+            "startOffset": 73718,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 104843,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0022",
+            "sentence": "The values of reaction forces obtained by (97) agree well with the results from the ANSYS analysis throughout the whole simulation.",
+            "startOffset": 104712,
+            "title": "Reaction forces"
+        },
+        {
+            "endOffset": 100462,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0020",
+            "sentence": "The pressures in cylinder chambers are given in Fig. 9, where Pp1, Pr1 are the pressures in cylinder 1 chambers on the piston and rod sides, and Pp2, Pr2 are the pressures in cylinder 2 chambers on the piston and rod sides.",
+            "startOffset": 100239,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 72491,
+            "parents": [],
+            "refoffsets": {
+                "bib0031": {
+                    "endOffset": 72380,
+                    "startOffset": 72376
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The BG model of a rigid knuckle boom crane actuated by hydraulic cylinders was presented in [31], where the authors additionally implemented the functional mock-up interface for the simulation of the system.",
+            "startOffset": 72284,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73507,
+            "parents": [],
+            "refoffsets": {
+                "bib0023": {
+                    "endOffset": 73506,
+                    "startOffset": 73502
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Projection matrices are used for the formulation of the momentum form of Euler\u2013Lagrange\u2019s equation [23].",
+            "startOffset": 73403,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69609,
+            "parents": [],
+            "refoffsets": {
+                "bib0006": {
+                    "endOffset": 69555,
+                    "startOffset": 69552
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The dynamic response of a tower crane due to the payload motion was presented in [6], where the finite element modeling approach was used.",
+            "startOffset": 69471,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69017,
+            "parents": [],
+            "refoffsets": {
+                "bib0002": {
+                    "endOffset": 68910,
+                    "startOffset": 68907
+                },
+                "bib0003": {
+                    "endOffset": 69016,
+                    "startOffset": 69013
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "The dynamic model of a mobile crane with a flexible boom was presented in [2], while the dynamic model of a mobile crane with flexibility in the supporting system was presented in [3].",
+            "startOffset": 68833,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72670,
+            "parents": [],
+            "refoffsets": {
+                "bib0033": {
+                    "endOffset": 72669,
+                    "startOffset": 72665
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "In addition, bond graph models of multibody systems actuated by hydraulic motors were discussed in [33].",
+            "startOffset": 72566,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 101610,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "This way we avoid closed kinematic loops formed by the cylinders, which significantly simplifies the model and reduces the simulation time.",
+            "startOffset": 101471,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 103400,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The comparison of the time histories of the cylinder lengths is given is Fig. 13.",
+            "startOffset": 103319,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 101409,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0021",
+            "sentence": "The lumped masses are attached to the crane links through the spring-damper systems, where the spring stiffness is tuned to avoid significant relative motion, see Fig. 4.",
+            "startOffset": 101239,
+            "title": "Validation of crane modeling assumptions"
+        },
+        {
+            "endOffset": 69984,
+            "parents": [],
+            "refoffsets": {
+                "bib0008": {
+                    "endOffset": 69930,
+                    "startOffset": 69927
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "For example, comparison of different methods for modeling a telescopic crane with flexible links was presented in [8], where the crane was actuated by hydraulic cylinders.",
+            "startOffset": 69813,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 89188,
+            "parents": [
+                {
+                    "id": "sec0013",
+                    "title": "Coupling of manipulator and cylinder models using bond graph"
+                }
+            ],
+            "refoffsets": {
+                "bib0023": {
+                    "endOffset": 89146,
+                    "startOffset": 89139
+                },
+                "bib0040": {
+                    "endOffset": 89146,
+                    "startOffset": 89139
+                }
+            },
+            "secId": "sec0014",
+            "sentence": "A reader can refer to [23,40] for a summary of the bond graph elements.",
+            "startOffset": 89117,
+            "title": "Manipulator model"
+        },
+        {
+            "endOffset": 67861,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Safety during the payload landing is an important issue, where the information about the exact position of a payload relative to the landing site is necessary.",
+            "startOffset": 67702,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100905,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0020",
+            "sentence": "The strokes of the control valves are given in Fig. 11, where xv1 is the piston stroke of the control valve for cylinder 1, and xv2 is the piston stroke of the control valve for cylinder 2.",
+            "startOffset": 100716,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 73609,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The elasticity of links is modeled using the Euler\u2013Bernoulli beam theory and the assumed mode method.",
+            "startOffset": 73508,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100154,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0020",
+            "sentence": "The values of generalized coordinates of the crane during the simulation are given in Fig. 7.",
+            "startOffset": 100061,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 68258,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Flexibility of lightweight and long-reach cranes is often significant, which makes it more difficult to operate a crane and estimate the position of a payload.",
+            "startOffset": 68099,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70640,
+            "parents": [],
+            "refoffsets": {
+                "bib0011": {
+                    "endOffset": 70536,
+                    "startOffset": 70529
+                },
+                "bib0012": {
+                    "endOffset": 70536,
+                    "startOffset": 70529
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Formulation of velocities and angular velocities as twists can be beneficial for derivation of kinetic energy in Euler-Lagrange\u2019s formulation [11,12], as twists satisfy screw transformations, which leads to a general and systematic derivation procedure.",
+            "startOffset": 70387,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 73901,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "The procedure is given as an extension of the dynamic modeling procedure.",
+            "startOffset": 73828,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 67701,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "Hoisting of a crane payload is a very common procedure in offshore operations.",
+            "startOffset": 67623,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 105259,
+            "parents": [],
+            "secId": "sec0023",
+            "sentence": "This led to a general and systematic procedure, where screw transformations were conveniently used for derivations.",
+            "startOffset": 105144,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 68006,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "At the same time there is a limitation for the mass of a crane installed on a smaller supply vessels due to the vessel stability considerations.",
+            "startOffset": 67862,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68625,
+            "parents": [],
+            "refoffsets": {
+                "bib0001": {
+                    "endOffset": 68584,
+                    "startOffset": 68581
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Cranes are often modeled as rigid multibody systems [1] due to high stiffness of crane elements.",
+            "startOffset": 68529,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68749,
+            "parents": [],
+            "secId": "sec0001",
+            "sentence": "However in some applications flexibility becomes important and several researchers investigated elastic behavior of cranes.",
+            "startOffset": 68626,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 100715,
+            "parents": [
+                {
+                    "id": "sec0018",
+                    "title": "Numerical example: A knuckle boom crane"
+                }
+            ],
+            "secId": "sec0020",
+            "sentence": "The hydraulic flows into the cylinder chambers are given in Fig. 10, where Qp1, Qr1 are the hydraulic flows into cylinder 1 chambers on the piston and rod sides, and Qp2, Qr2 are the hydraulic flows into cylinder 2 chambers on the piston and rod sides.",
+            "startOffset": 100463,
+            "title": "Simulation results"
+        },
+        {
+            "endOffset": 70838,
+            "parents": [],
+            "refoffsets": {
+                "bib0013": {
+                    "endOffset": 70710,
+                    "startOffset": 70703
+                },
+                "bib0014": {
+                    "endOffset": 70710,
+                    "startOffset": 70703
+                },
+                "bib0015": {
+                    "endOffset": 70747,
+                    "startOffset": 70740
+                },
+                "bib0016": {
+                    "endOffset": 70747,
+                    "startOffset": 70740
+                },
+                "bib0017": {
+                    "endOffset": 70747,
+                    "startOffset": 70740
+                },
+                "bib0018": {
+                    "endOffset": 70747,
+                    "startOffset": 70740
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "It is noted that methods such as the Newton-Euler formulation [13,14] or Kane\u2019s equation of motion [15\u201318] are also commonly used for modeling dynamics of both rigid and flexible multibody systems.",
+            "startOffset": 70641,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 71570,
+            "parents": [],
+            "refoffsets": {
+                "bib0021": {
+                    "endOffset": 71415,
+                    "startOffset": 71408
+                },
+                "bib0022": {
+                    "endOffset": 71415,
+                    "startOffset": 71408
+                }
+            },
+            "secId": "sec0001",
+            "sentence": "Alternatively, when equations of motion for a multibody system are formulated using the method of Langrange\u2019s multipliers as in [21,22], the reaction forces associated with the constrain equations are the unknowns in the system of differential-algebraic equations and are obtained directly.",
+            "startOffset": 71280,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 82469,
+            "parents": [],
+            "secId": "sec0007",
+            "sentence": "The elasticity of links is modeled using the Euler-Bernoulli beam theory and the assumed mode method.",
+            "startOffset": 82368,
+            "title": "Modeling of planar flexible manipulators"
+        }
+    ],
+    "docId": "S0094114X19314569",
+    "metadata": {
+        "asjc": [
+            "1502",
+            "1706",
+            "2210",
+            "2211"
+        ],
+        "authors": [
+            {
+                "email": "andrej.cibicik@ntnu.no",
+                "first": "Andrej",
+                "initial": "A.",
+                "last": "Cibicik"
+            },
+            {
+                "email": "eilif.pedersen@ntnu.no",
+                "first": "Eilif",
+                "initial": "E.",
+                "last": "Pedersen"
+            },
+            {
+                "email": "olav.egeland@ntnu.no",
+                "first": "Olav",
+                "initial": "O.",
+                "last": "Egeland"
+            }
+        ],
+        "doi": "10.1016/j.mechmachtheory.2019.103616",
+        "issn": "0094114X",
+        "keywords": [
+            "Bond graph",
+            "Crane",
+            "Dynamic modeling",
+            "Hydraulic cylinder",
+            "Reaction force",
+            "Screw theory"
+        ],
+        "openaccess": "Full",
+        "pub_year": 2020,
+        "subjareas": [
+            "CENG",
+            "COMP",
+            "ENGI"
+        ],
+        "title": "Dynamics of luffing motion of a flexible knuckle boom crane actuated by hydraulic cylinders"
+    }
+}

@@ -1,0 +1,3260 @@
+{
+    "abstract": "In this paper, we study the scheduling decisions for handling deadline-constrained workflows in the context of planning customized virtual infrastructures in the cloud. We specifically focus on the effects of using different types of greediness in selecting cost-effective virtual machines for the tasks in an application's workflow graph. The profiling procedure followed demonstrates that for the widely used approach of the partial critical path algorithm a greedy version is preferred to a more stringent version under different stress conditions, from tight to loose deadlines. Representative topologies of workflow applications are used to generate sets of task graph scheduling problems. Monitoring the performance of the partial critical path algorithm with different types of greediness reveals which of the topologies tested are difficult to solve under various stress conditions. It turns out that an invalid outcome of a greedy version of the partial critical path algorithm is more susceptible to become valid via a final refinement cycle than a less greedy version. The procedure outlined in this paper will allow for a systematic study of a specific heuristic in a workflow scheduling method to increase its success in infrastructure planning under different deadline conditions and is proposed to be part of a general profiling framework.",
+    "author_highlights": [
+        {
+            "endOffset": 38224,
+            "sentence": "Virtual Infrastructure planning for time critical applications.",
+            "startOffset": 38161
+        },
+        {
+            "endOffset": 38299,
+            "sentence": "Different heuristics exhibit different performance on different data sets.",
+            "startOffset": 38225
+        },
+        {
+            "endOffset": 38378,
+            "sentence": "The effect of greediness in VM assignment for tasks in partial critical paths.",
+            "startOffset": 38300
+        },
+        {
+            "endOffset": 38458,
+            "sentence": "Systematic profiling approach for analyzing greediness in a heuristic solution.",
+            "startOffset": 38379
+        },
+        {
+            "endOffset": 38531,
+            "sentence": "Recommendation for choosing suitable infrastructure planning strategies.",
+            "startOffset": 38459
+        }
+    ],
+    "bib_entries": {
+        "b1": {
+            "authors": [
+                {
+                    "first": "M. S.",
+                    "initial": "M.S.",
+                    "last": "Mizielinski"
+                },
+                {
+                    "first": "M. J.",
+                    "initial": "M.J.",
+                    "last": "Roberts"
+                },
+                {
+                    "first": "P. L.",
+                    "initial": "P.L.",
+                    "last": "Vidale"
+                },
+                {
+                    "first": "R.",
+                    "initial": "R.",
+                    "last": "Schiemann"
+                },
+                {
+                    "first": "M. E.",
+                    "initial": "M.E.",
+                    "last": "Demory"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Strachan"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Edwards"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Stephens"
+                },
+                {
+                    "first": "B. N.",
+                    "initial": "B.N.",
+                    "last": "Lawrence"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Pritchard"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Chiu"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Iwi"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Churchill"
+                },
+                {
+                    "first": "C.",
+                    "initial": "C.",
+                    "last": "Del Cano Novales"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Kettleborough"
+                },
+                {
+                    "first": "W.",
+                    "initial": "W.",
+                    "last": "Roseblade"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Selwood"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Foster"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Glover"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Malcolm"
+                }
+            ],
+            "doi": "10.5194/gmd-7-1629-2014",
+            "firstpage": "1629",
+            "issn": "1991959X",
+            "lastpage": "1640",
+            "pub_year": 2014,
+            "title": "High-resolution global climate modelling: The UPSCALE project, a large-simulation campaign",
+            "volume": "7"
+        },
+        "b10": {
+            "authors": [
+                {
+                    "first": "Saeid",
+                    "initial": "S.",
+                    "last": "Abrishami"
+                },
+                {
+                    "first": "Mahmoud",
+                    "initial": "M.",
+                    "last": "Naghibzadeh"
+                },
+                {
+                    "first": "Dick H.J.",
+                    "initial": "D.H.J.",
+                    "last": "Epema"
+                }
+            ],
+            "doi": "10.1016/j.future.2012.05.004",
+            "firstpage": "158",
+            "issn": "0167739X",
+            "lastpage": "169",
+            "pub_year": 2013,
+            "title": "Deadline-constrained workflow scheduling algorithms for Infrastructure as a Service Clouds",
+            "volume": "29"
+        },
+        "b11": {
+            "authors": [
+                {
+                    "first": "Sucha",
+                    "initial": "S.",
+                    "last": "Smanchat"
+                },
+                {
+                    "first": "Kanchana",
+                    "initial": "K.",
+                    "last": "Viriyapant"
+                }
+            ],
+            "doi": "10.1016/j.future.2015.04.019",
+            "firstpage": "1",
+            "issn": "0167739X",
+            "lastpage": "12",
+            "pub_year": 2015,
+            "title": "Taxonomies of workflow scheduling problem and techniques in the cloud",
+            "volume": "52"
+        },
+        "b12": {
+            "authors": [
+                {
+                    "first": "Fuhui",
+                    "initial": "F.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Qingbo",
+                    "initial": "Q.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Yusong",
+                    "initial": "Y.",
+                    "last": "Tan"
+                }
+            ],
+            "doi": "10.1007/s11227-015-1438-4",
+            "firstpage": "3373",
+            "issn": "09208542",
+            "lastpage": "3418",
+            "pub_year": 2015,
+            "title": "Workflow scheduling in cloud: a survey",
+            "volume": "71"
+        },
+        "b13": {
+            "authors": [
+                {
+                    "first": "Ehab Nabiel",
+                    "initial": "E.N.",
+                    "last": "Alkhanak"
+                },
+                {
+                    "first": "Sai Peck",
+                    "initial": "S.P.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Reza",
+                    "initial": "R.",
+                    "last": "Rezaei"
+                },
+                {
+                    "first": "Reza Meimandi",
+                    "initial": "R.M.",
+                    "last": "Parizi"
+                }
+            ],
+            "doi": "10.1016/j.jss.2015.11.023",
+            "firstpage": "1",
+            "issn": "01641212",
+            "lastpage": "26",
+            "pub_year": 2016,
+            "title": "Cost optimization approaches for scientific workflow scheduling in cloud and grid computing: A review, classifications, and open issues",
+            "volume": "113"
+        },
+        "b14": {
+            "authors": [
+                {
+                    "first": "Wei",
+                    "initial": "W.",
+                    "last": "Zheng"
+                },
+                {
+                    "first": "Rizos",
+                    "initial": "R.",
+                    "last": "Sakellariou"
+                }
+            ],
+            "doi": "10.1007/s10723-013-9257-4",
+            "firstpage": "633",
+            "issn": "15707873",
+            "lastpage": "651",
+            "pub_year": 2013,
+            "title": "Budget-Deadline Constrained Workflow Planning for Admission Control",
+            "volume": "11"
+        },
+        "b15": {
+            "authors": [
+                {
+                    "first": "Haluk",
+                    "initial": "H.",
+                    "last": "Topcuoglu"
+                },
+                {
+                    "first": "Salim",
+                    "initial": "S.",
+                    "last": "Hariri"
+                },
+                {
+                    "first": "Min You",
+                    "initial": "M.Y.",
+                    "last": "Wu"
+                }
+            ],
+            "doi": "10.1109/71.993206",
+            "firstpage": "260",
+            "issn": "10459219",
+            "lastpage": "274",
+            "pub_year": 2002,
+            "title": "Performance-effective and low-complexity task scheduling for heterogeneous computing",
+            "volume": "13"
+        },
+        "b16": {
+            "authors": [
+                {
+                    "first": "Hamid",
+                    "initial": "H.",
+                    "last": "Arabnejad"
+                },
+                {
+                    "first": "Jorge G.",
+                    "initial": "J.G.",
+                    "last": "Barbosa"
+                }
+            ],
+            "doi": "10.1109/TPDS.2013.57",
+            "firstpage": "682",
+            "issn": "10459219",
+            "lastpage": "694",
+            "pub_year": 2014,
+            "title": "List scheduling algorithm for heterogeneous systems by an optimistic cost table",
+            "volume": "25"
+        },
+        "b17": {
+            "authors": [
+                {
+                    "first": "Jiyuan",
+                    "initial": "J.",
+                    "last": "Shi"
+                },
+                {
+                    "first": "Junzhou",
+                    "initial": "J.",
+                    "last": "Luo"
+                },
+                {
+                    "first": "Fang",
+                    "initial": "F.",
+                    "last": "Dong"
+                },
+                {
+                    "first": "Jinghui",
+                    "initial": "J.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Junxue",
+                    "initial": "J.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1007/s10586-015-0530-0",
+            "firstpage": "167",
+            "issn": "13867857",
+            "lastpage": "182",
+            "pub_year": 2016,
+            "title": "Elastic resource provisioning for scientific workflow scheduling in cloud under budget and deadline constraints",
+            "volume": "19"
+        },
+        "b18": {
+            "authors": [
+                {
+                    "first": "Zhaomeng",
+                    "initial": "Z.",
+                    "last": "Zhu"
+                },
+                {
+                    "first": "Gongxuan",
+                    "initial": "G.",
+                    "last": "Zhang"
+                },
+                {
+                    "first": "Miqing",
+                    "initial": "M.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Xiaohui",
+                    "initial": "X.",
+                    "last": "Liu"
+                }
+            ],
+            "doi": "10.1109/TPDS.2015.2446459",
+            "firstpage": "1344",
+            "issn": "10459219",
+            "lastpage": "1357",
+            "pub_year": 2016,
+            "title": "Evolutionary Multi-Objective Workflow Scheduling in Cloud",
+            "volume": "27"
+        },
+        "b19": {
+            "authors": [
+                {
+                    "first": "Junchao",
+                    "initial": "J.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Arie",
+                    "initial": "A.",
+                    "last": "Taal"
+                },
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Martin"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Jianmin",
+                    "initial": "J.",
+                    "last": "Pang"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "de Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1016/j.future.2017.02.001",
+            "firstpage": "365",
+            "issn": "0167739X",
+            "lastpage": "375",
+            "pub_year": 2017,
+            "title": "Planning virtual infrastructures for time critical applications with multiple deadline constraints",
+            "volume": "75"
+        },
+        "b2": {
+            "authors": [
+                {
+                    "first": "Shifeng",
+                    "initial": "S.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Lida",
+                    "initial": "L.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Yunqiang",
+                    "initial": "Y.",
+                    "last": "Zhu"
+                },
+                {
+                    "first": "Yongqiang",
+                    "initial": "Y.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Zhihui",
+                    "initial": "Z.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Pei"
+                },
+                {
+                    "first": "Jianwu",
+                    "initial": "J.",
+                    "last": "Yan"
+                },
+                {
+                    "first": "Huifang",
+                    "initial": "H.",
+                    "last": "Zhang"
+                }
+            ],
+            "doi": "10.1007/s10796-013-9466-1",
+            "firstpage": "321",
+            "issn": "13873326",
+            "lastpage": "335",
+            "pub_year": 2015,
+            "title": "An integrated information system for snowmelt flood early-warning based on internet of things",
+            "volume": "17"
+        },
+        "b20": {
+            "authors": [
+                {
+                    "first": "Suraj",
+                    "initial": "S.",
+                    "last": "Pandey"
+                },
+                {
+                    "first": "Linlin",
+                    "initial": "L.",
+                    "last": "Wu"
+                },
+                {
+                    "first": "Siddeswara Mayura",
+                    "initial": "S.M.",
+                    "last": "Guru"
+                },
+                {
+                    "first": "Rajkumar",
+                    "initial": "R.",
+                    "last": "Buyya"
+                }
+            ],
+            "doi": "10.1109/AINA.2010.31",
+            "firstpage": "400",
+            "issn": "1550445X",
+            "lastpage": "407",
+            "pub_year": 2010,
+            "title": "A particle swarm optimization-based heuristic for scheduling workflow applications in cloud computing environments"
+        },
+        "b21": {
+            "authors": [
+                {
+                    "first": "Shengjun",
+                    "initial": "S.",
+                    "last": "Xue"
+                },
+                {
+                    "first": "Mengying",
+                    "initial": "M.",
+                    "last": "Li"
+                },
+                {
+                    "first": "Xiaolong",
+                    "initial": "X.",
+                    "last": "Xu"
+                },
+                {
+                    "first": "Jingyi",
+                    "initial": "J.",
+                    "last": "Chen"
+                }
+            ],
+            "doi": "10.4304/jsw.9.2.466-473",
+            "firstpage": "466",
+            "issn": "1796217X",
+            "lastpage": "473",
+            "pub_year": 2014,
+            "title": "An ACO-LB algorithm for task scheduling in the cloud environment",
+            "volume": "9"
+        },
+        "b22": null,
+        "b23": {
+            "authors": [
+                {
+                    "first": "Gideon",
+                    "initial": "G.",
+                    "last": "Juve"
+                },
+                {
+                    "first": "Ann",
+                    "initial": "A.",
+                    "last": "Chervenak"
+                },
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Shishir",
+                    "initial": "S.",
+                    "last": "Bharathi"
+                },
+                {
+                    "first": "Gaurang",
+                    "initial": "G.",
+                    "last": "Mehta"
+                },
+                {
+                    "first": "Karan",
+                    "initial": "K.",
+                    "last": "Vahi"
+                }
+            ],
+            "doi": "10.1016/j.future.2012.08.015",
+            "firstpage": "682",
+            "issn": "0167739X",
+            "lastpage": "692",
+            "pub_year": 2013,
+            "title": "Characterizing and profiling scientific workflows",
+            "volume": "29"
+        },
+        "b24": {
+            "authors": [
+                {
+                    "first": "Young Choon",
+                    "initial": "Y.C.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Hyuck",
+                    "initial": "H.",
+                    "last": "Han"
+                },
+                {
+                    "first": "Albert Y.",
+                    "initial": "A.Y.",
+                    "last": "Zomaya"
+                },
+                {
+                    "first": "Mazin",
+                    "initial": "M.",
+                    "last": "Yousif"
+                }
+            ],
+            "doi": "10.1016/j.knosys.2015.02.012",
+            "firstpage": "153",
+            "issn": "09507051",
+            "lastpage": "162",
+            "pub_year": 2015,
+            "title": "Resource-efficient workflow scheduling in clouds",
+            "volume": "80"
+        },
+        "b25": null,
+        "b26": {
+            "authors": [
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                },
+                {
+                    "first": "Paola",
+                    "initial": "P.",
+                    "last": "Grosso"
+                },
+                {
+                    "first": "Jeroen",
+                    "initial": "J.",
+                    "last": "Van Der Ham"
+                },
+                {
+                    "first": "Ralph",
+                    "initial": "R.",
+                    "last": "Koning"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "De Laat"
+                }
+            ],
+            "doi": "10.3233/MGS-2011-0180",
+            "firstpage": "187",
+            "issn": "15741702",
+            "lastpage": "202",
+            "pub_year": 2011,
+            "title": "An agent based network resource planner for workflow applications",
+            "volume": "7"
+        },
+        "b27": {
+            "authors": [
+                {
+                    "first": "Keith",
+                    "initial": "K.",
+                    "last": "Jeferry"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Kousiouris"
+                },
+                {
+                    "first": "Dimosthenis",
+                    "initial": "D.",
+                    "last": "Kyriazis"
+                },
+                {
+                    "first": "J\u00f6rn",
+                    "initial": "J.",
+                    "last": "Altmann"
+                },
+                {
+                    "first": "Augusto",
+                    "initial": "A.",
+                    "last": "Ciuffoletti"
+                },
+                {
+                    "first": "Ilias",
+                    "initial": "I.",
+                    "last": "Maglogiannis"
+                },
+                {
+                    "first": "Paolo",
+                    "initial": "P.",
+                    "last": "Nesi"
+                },
+                {
+                    "first": "Bojan",
+                    "initial": "B.",
+                    "last": "Suzic"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1016/j.procs.2015.09.238",
+            "firstpage": "227",
+            "issn": "18770509",
+            "lastpage": "237",
+            "pub_year": 2015,
+            "title": "Challenges Emerging from Future Cloud Application Scenarios",
+            "volume": "68"
+        },
+        "b28": {
+            "authors": [
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "de Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1007/978-3-319-96983-1_26",
+            "firstpage": "365",
+            "issn": "03029743",
+            "lastpage": "377",
+            "pub_year": 2018,
+            "title": "ECSched: Efficient Container Scheduling on Heterogeneous Clusters",
+            "volume": "11014"
+        },
+        "b29": {
+            "authors": [
+                {
+                    "first": "Huan",
+                    "initial": "H.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "Yang",
+                    "initial": "Y.",
+                    "last": "Hu"
+                },
+                {
+                    "first": "Jinshu",
+                    "initial": "J.",
+                    "last": "Su"
+                },
+                {
+                    "first": "Mingmin",
+                    "initial": "M.",
+                    "last": "Chi"
+                },
+                {
+                    "first": "Cees",
+                    "initial": "C.",
+                    "last": "De Laat"
+                },
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                }
+            ],
+            "doi": "10.1109/CLOUD.2018.00068",
+            "firstpage": "484",
+            "issn": "21596182",
+            "lastpage": "491",
+            "pub_year": 2018,
+            "title": "Empowering Dynamic Task-Based Applications with Agile Virtual Infrastructure Programmability",
+            "volume": "2018-"
+        },
+        "b3": {
+            "authors": [
+                {
+                    "first": "Matteo",
+                    "initial": "M.",
+                    "last": "Nardelli"
+                },
+                {
+                    "first": "Stefan",
+                    "initial": "S.",
+                    "last": "Nastic"
+                },
+                {
+                    "first": "Schahram",
+                    "initial": "S.",
+                    "last": "Dustdar"
+                },
+                {
+                    "first": "Massimo",
+                    "initial": "M.",
+                    "last": "Villari"
+                },
+                {
+                    "first": "Rajiv",
+                    "initial": "R.",
+                    "last": "Ranjan"
+                }
+            ],
+            "doi": "10.1109/MCC.2017.22",
+            "firstpage": "68",
+            "issn": "23256095",
+            "lastpage": "75",
+            "pub_year": 2017,
+            "title": "Osmotic Flow: Osmotic Computing + IoT Workflow",
+            "volume": "4"
+        },
+        "b30": null,
+        "b31": null,
+        "b32": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Zhou"
+                },
+                {
+                    "first": "P. E.D.",
+                    "initial": "P.E.D.",
+                    "last": "Love"
+                },
+                {
+                    "first": "X.",
+                    "initial": "X.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "K. L.",
+                    "initial": "K.L.",
+                    "last": "Teo"
+                },
+                {
+                    "first": "Z.",
+                    "initial": "Z.",
+                    "last": "Irani"
+                }
+            ],
+            "doi": "10.1057/jors.2012.174",
+            "firstpage": "1091",
+            "issn": "01605682",
+            "lastpage": "1105",
+            "pub_year": 2013,
+            "title": "A review of methods and algorithms for optimizing construction scheduling",
+            "volume": "64"
+        },
+        "b33": null,
+        "b34": {
+            "authors": [
+                {
+                    "first": "S. A.",
+                    "initial": "S.A.",
+                    "last": "Curtis"
+                }
+            ],
+            "doi": "10.1016/j.scico.2003.09.001",
+            "firstpage": "125",
+            "issn": "01676423",
+            "lastpage": "157",
+            "pub_year": 2003,
+            "title": "The classification of greedy algorithms",
+            "volume": "49"
+        },
+        "b35": {
+            "authors": [
+                {
+                    "first": "G. Bruce",
+                    "initial": "G.B.",
+                    "last": "Berriman"
+                },
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Good"
+                },
+                {
+                    "first": "Joseph",
+                    "initial": "J.",
+                    "last": "Jacob"
+                },
+                {
+                    "first": "Daniel S.",
+                    "initial": "D.S.",
+                    "last": "Katz"
+                },
+                {
+                    "first": "Carl",
+                    "initial": "C.",
+                    "last": "Kesselman"
+                },
+                {
+                    "first": "Anastasia",
+                    "initial": "A.",
+                    "last": "Laity"
+                },
+                {
+                    "first": "Thomas A.",
+                    "initial": "T.A.",
+                    "last": "Prince"
+                },
+                {
+                    "first": "Gurmeet",
+                    "initial": "G.",
+                    "last": "Singh"
+                },
+                {
+                    "first": "Mei Hu",
+                    "initial": "M.H.",
+                    "last": "Su"
+                }
+            ],
+            "doi": "10.1117/12.550551",
+            "firstpage": "221",
+            "issn": "0277786X",
+            "lastpage": "232",
+            "pub_year": 2004,
+            "title": "Montage: A grid enabled engine for delivering custom science-grade mosaics on demand",
+            "volume": "5493"
+        },
+        "b36": {
+            "authors": [
+                {
+                    "first": "Philip",
+                    "initial": "P.",
+                    "last": "Maechling"
+                },
+                {
+                    "first": "Ewa",
+                    "initial": "E.",
+                    "last": "Deelman"
+                },
+                {
+                    "first": "Li",
+                    "initial": "L.",
+                    "last": "Zhao"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Graves"
+                },
+                {
+                    "first": "Gaurang",
+                    "initial": "G.",
+                    "last": "Mehta"
+                },
+                {
+                    "first": "Nitin",
+                    "initial": "N.",
+                    "last": "Gupta"
+                },
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Mehringer"
+                },
+                {
+                    "first": "Carl",
+                    "initial": "C.",
+                    "last": "Kesselman"
+                },
+                {
+                    "first": "Scott",
+                    "initial": "S.",
+                    "last": "Callaghan"
+                },
+                {
+                    "first": "David",
+                    "initial": "D.",
+                    "last": "Okaya"
+                },
+                {
+                    "first": "Hunter",
+                    "initial": "H.",
+                    "last": "Francoeur"
+                },
+                {
+                    "first": "Vipin",
+                    "initial": "V.",
+                    "last": "Gupta"
+                },
+                {
+                    "first": "Yifeng",
+                    "initial": "Y.",
+                    "last": "Cui"
+                },
+                {
+                    "first": "Karan",
+                    "initial": "K.",
+                    "last": "Vahi"
+                },
+                {
+                    "first": "Thomas",
+                    "initial": "T.",
+                    "last": "Jordan"
+                },
+                {
+                    "first": "Edward",
+                    "initial": "E.",
+                    "last": "Field"
+                }
+            ],
+            "doi": "10.1007/978-1-84628-757-2_10",
+            "firstpage": "143",
+            "lastpage": "163",
+            "pub_year": 2007,
+            "title": "SCEC cybershake workflows-automating probabilistic seismic hazard analysis calculations"
+        },
+        "b37": null,
+        "b38": null,
+        "b39": null,
+        "b4": {
+            "authors": [
+                {
+                    "first": "Zhiming",
+                    "initial": "Z.",
+                    "last": "Zhao"
+                },
+                {
+                    "first": "Arie",
+                    "initial": "A.",
+                    "last": "Taal"
+                },
+                {
+                    "first": "Andrew",
+                    "initial": "A.",
+                    "last": "Jones"
+                },
+                {
+                    "first": "Ian",
+                    "initial": "I.",
+                    "last": "Taylor"
+                },
+                {
+                    "first": "Vlado",
+                    "initial": "V.",
+                    "last": "Stankovski"
+                },
+                {
+                    "first": "Ignacio Garcia",
+                    "initial": "I.G.",
+                    "last": "Vega"
+                },
+                {
+                    "first": "Francisco Jesus",
+                    "initial": "F.J.",
+                    "last": "Hidalgo"
+                },
+                {
+                    "first": "George",
+                    "initial": "G.",
+                    "last": "Suciu"
+                },
+                {
+                    "first": "Alexandre",
+                    "initial": "A.",
+                    "last": "Ulisses"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Ferreira"
+                },
+                {
+                    "first": "Cees De",
+                    "initial": "C.D.",
+                    "last": "Laat"
+                }
+            ],
+            "doi": "10.1109/CCGrid.2015.73",
+            "firstpage": "1181",
+            "lastpage": "1184",
+            "pub_year": 2015,
+            "title": "A software workbench for interactive, time critical and highly self-adaptive cloud applications (SWITCH)"
+        },
+        "b40": {
+            "authors": [
+                {
+                    "first": "Daniel",
+                    "initial": "D.",
+                    "last": "Cordeiro"
+                },
+                {
+                    "first": "Gr\u00e9gory",
+                    "initial": "G.",
+                    "last": "Mouni\u00e9"
+                },
+                {
+                    "first": "Swann",
+                    "initial": "S.",
+                    "last": "Perarnau"
+                },
+                {
+                    "first": "Denis",
+                    "initial": "D.",
+                    "last": "Trystram"
+                },
+                {
+                    "first": "Jean Marc",
+                    "initial": "J.M.",
+                    "last": "Vincent"
+                },
+                {
+                    "first": "Fr\u00e9d\u00e9ric",
+                    "initial": "F.",
+                    "last": "Wagner"
+                }
+            ],
+            "doi": "10.4108/ICST.SIMUTOOLS2010.8667",
+            "pub_year": 2010,
+            "title": "Random graph generation for scheduling simulations"
+        },
+        "b41": {
+            "authors": [
+                {
+                    "first": "Apostolos",
+                    "initial": "A.",
+                    "last": "Gerasoulis"
+                },
+                {
+                    "first": "Tao",
+                    "initial": "T.",
+                    "last": "Yang"
+                }
+            ],
+            "doi": "10.1109/71.242154",
+            "firstpage": "686",
+            "issn": "10459219",
+            "lastpage": "701",
+            "pub_year": 1993,
+            "title": "On the Granularity and Clustering of Directed Acyclic Task Graphs",
+            "volume": "4"
+        },
+        "b42": null,
+        "b5": {
+            "authors": [
+                {
+                    "first": "Tania",
+                    "initial": "T.",
+                    "last": "Lorido-Botran"
+                },
+                {
+                    "first": "Jose",
+                    "initial": "J.",
+                    "last": "Miguel-Alonso"
+                },
+                {
+                    "first": "Jose A.",
+                    "initial": "J.A.",
+                    "last": "Lozano"
+                }
+            ],
+            "doi": "10.1007/s10723-014-9314-7",
+            "firstpage": "559",
+            "issn": "15707873",
+            "lastpage": "592",
+            "pub_year": 2014,
+            "title": "A Review of Auto-scaling Techniques for Elastic Applications in Cloud Environments",
+            "volume": "12"
+        },
+        "b6": {
+            "authors": [
+                {
+                    "first": "Yu Kwong",
+                    "initial": "Y.K.",
+                    "last": "Kwok"
+                },
+                {
+                    "first": "Ishfaq",
+                    "initial": "I.",
+                    "last": "Ahmad"
+                }
+            ],
+            "doi": "10.1145/344588.344618",
+            "firstpage": "406",
+            "issn": "03600300",
+            "lastpage": "471",
+            "pub_year": 1999,
+            "title": "Static Scheduling Algorithms for Allocating Directed Task Graphs to Multiprocessors",
+            "volume": "31"
+        },
+        "b7": {
+            "authors": [
+                {
+                    "first": "Congfeng",
+                    "initial": "C.",
+                    "last": "Jiang"
+                },
+                {
+                    "first": "Cheng",
+                    "initial": "C.",
+                    "last": "Wang"
+                },
+                {
+                    "first": "Xiaohu",
+                    "initial": "X.",
+                    "last": "Liu"
+                },
+                {
+                    "first": "Yinghui",
+                    "initial": "Y.",
+                    "last": "Zhao"
+                }
+            ],
+            "firstpage": "419",
+            "issn": "03029743",
+            "lastpage": "427",
+            "pub_year": 2007,
+            "title": "A survey of job scheduling in grids",
+            "volume": "4505"
+        },
+        "b8": null,
+        "b9": {
+            "authors": [
+                {
+                    "first": "Fairouz",
+                    "initial": "F.",
+                    "last": "Fakhfakh"
+                },
+                {
+                    "first": "Hatem Hadj",
+                    "initial": "H.H.",
+                    "last": "Kacem"
+                },
+                {
+                    "first": "Ahmed Hadj",
+                    "initial": "A.H.",
+                    "last": "Kacem"
+                }
+            ],
+            "doi": "10.1109/EDOCW.2014.61",
+            "firstpage": "372",
+            "issn": "15417719",
+            "lastpage": "378",
+            "pub_year": 2014,
+            "title": "Workflow scheduling in cloud computing: A survey"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 51833,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The IC-PCP algorithm applies a particular kind of heuristics.",
+            "startOffset": 51772,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 45465,
+            "parents": [],
+            "refoffsets": {
+                "b14": {
+                    "endOffset": 45308,
+                    "startOffset": 45304
+                },
+                "b15": {
+                    "endOffset": 45464,
+                    "startOffset": 45460
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Zheng and Sakellariou [14] used a Budget-Deadline Constrained heuristic called BHEFT, derived from the widely applied HEFT approach, Heterogeneous Earliest-Finish-Time algorithm [15].",
+            "startOffset": 45282,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62362,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 62281,
+                    "startOffset": 62277
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "From the Pegasus project [22] we took the topologies of the following Real-world Scientific workflow examples.",
+            "startOffset": 62252,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 45697,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 45612,
+                    "startOffset": 45608
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Abrishami et al. [10] presented a scheduling algorithm based on the Partial Critical Path method (IC-PCP).",
+            "startOffset": 45591,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 78480,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In case the greedy implementation failed to find a solution under tight deadline conditions and ended in an invalid not implementable state, a finishing repair cycle, (Fig. 5), was able to turn the invalid final state into a valid solution.",
+            "startOffset": 78240,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 42928,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 42889,
+                    "startOffset": 42885
+                },
+                "b9": {
+                    "endOffset": 42837,
+                    "startOffset": 42834
+                }
+            },
+            "secId": "sec1",
+            "sentence": "To demonstrate the profiling procedure we selected from the many different workflow scheduling approaches [9] the IC-PCP (IaaS Cloud Partial Critical Paths) [10] algorithm, which we slightly modified.",
+            "startOffset": 42728,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70209,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "If the final configuration is valid, nothing will change.",
+            "startOffset": 70152,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 46443,
+            "parents": [],
+            "refoffsets": {
+                "b20": {
+                    "endOffset": 46367,
+                    "startOffset": 46363
+                },
+                "b21": {
+                    "endOffset": 46442,
+                    "startOffset": 46438
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Other meta-heuristics applied in a globalsearch to find the best solution of a workflow are a Particle Swarm optimization-based heuristic (PSO) applied by Pandey et al. [20], and an Ant Colony optimization-based heuristic applied by Xue et al. [21].",
+            "startOffset": 46194,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 60627,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "To find out whether the greedy version with Requirement (2) or the more stringent version with Requirements (2)\u2013(4) is to be preferred, tests on series of task graphs are performed.",
+            "startOffset": 60446,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 39702,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Via the customized virtual environment, application components can then be fast and elastically deployed.",
+            "startOffset": 39597,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55861,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "According to the Best-Local approach the IC-PCP algorithm successively assigns tasks of a partial critical path to the cheapest service possible by applying a greedy step with respect to a local optimality criterion, such that each intermediate configuration of services remains the best so far after the greedy step.",
+            "startOffset": 55544,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 44112,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "We organized the paper as follows.",
+            "startOffset": 44078,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43339,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The basic idea of this approach is to map the tasks of the DAG onto the fastest VMs offered by the cloud provider such that the single deadline of the workflow is met and then recursively assign partial critical paths of the DAG to the cheapest VM possible.",
+            "startOffset": 43082,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39380,
+            "parents": [],
+            "refoffsets": {
+                "b4": {
+                    "endOffset": 39379,
+                    "startOffset": 39376
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Since cloud computing has been evolving to be an obvious choice for more and more companies and research institutes, interest in accommodating more complex workflows on cloud infrastructure emerges [4].",
+            "startOffset": 39178,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 55543,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The algorithm starts by assigning the best service, i.e. the fastest most expensive service, to each individual task, the start configuration, with a deadline large enough allowing the start configuration to be valid or implementable.",
+            "startOffset": 55309,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 78660,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "However, if the input workflow is a workflow \u2018similar\u2019 to Montage (Figs. 3 and 5), we observed that a repair cycle did not improve the success rate in solving the workflow problem.",
+            "startOffset": 78480,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 50548,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In this paper, we try to characterize the workflow type by a graph metric or topological index.",
+            "startOffset": 50453,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 77313,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "These result from the outcome of the scheduling algorithm, although their metric might be applied to the start configuration with each task assigned to the fastest VM.",
+            "startOffset": 77146,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 47679,
+            "parents": [],
+            "refoffsets": {
+                "b23": {
+                    "endOffset": 47608,
+                    "startOffset": 47604
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Juve et al. [23] provided a characterization of the workflows from the Pegasus project.",
+            "startOffset": 47592,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 54837,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b33": {
+                    "endOffset": 54836,
+                    "startOffset": 54832
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "Applying a critical path-based algorithm is a widely used approach for tackling the multi-processor scheduling problem [33].",
+            "startOffset": 54713,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 70337,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "But an invalid configuration might become valid by inserting idle time, i.e. enlarging the EST of a task that starts too early.",
+            "startOffset": 70210,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 55196,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 55183,
+                    "startOffset": 55179
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "To such ends, the Partial Critical path approach(IC-PCP) of Abrishami et al. [10] is proposed.",
+            "startOffset": 55102,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 80888,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "From a practical point of view, one might run differentscheduling approaches in parallel in solving a single workflow problem and take the result of the winner.",
+            "startOffset": 80728,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 76592,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Fig. 7 displays the success ratio of the PCP_v01 algorithm for the different sets, and for both sizes of task graphs, the success rate is larger if the number of paths per task is less than 2.5.",
+            "startOffset": 76398,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 69772,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In case it fails, i.e. it ends in a final configuration that is not valid because some tasks start too early with respect to one of their parents, the greedy version can benefit from a repair cycle at the end.",
+            "startOffset": 69563,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 43916,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The profiling procedure might reveal the limits of a certain kind of heuristics, for instance, a greedy heuristic versus a less greedy, more stringent heuristic.",
+            "startOffset": 43755,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 77518,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "In this paper, we profiled two implementations of the IC-PCP algorithm with different rules of greediness for assigning the tasks of a partial critical path to a virtual machine.",
+            "startOffset": 77340,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 81676,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Another interesting question is under which circumstances a greedy implementation might be susceptible for a finishing repair cycle to improve its success rate under tight deadline conditions as found for the IC-PCP algorithm.",
+            "startOffset": 81450,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 47954,
+            "parents": [],
+            "refoffsets": {
+                "b25": {
+                    "endOffset": 47854,
+                    "startOffset": 47850
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Most recently Ilyushkin and Epema [25] used the Real-World workflows to profile dynamic and plan-based policies during runtime conditions.",
+            "startOffset": 47816,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 72944,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 72869,
+                    "startOffset": 72865
+                }
+            },
+            "secId": "sec4.2",
+            "sentence": "If one compares the Montage topology with the other topologies [22], one would notice that the Montage topology contains fewer parallel paths.",
+            "startOffset": 72802,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 44779,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "From this large diversity of methods, we restrict to those works that can be designated as static workflow scheduling problems for the cloud.",
+            "startOffset": 44638,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 47591,
+            "parents": [],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 47442,
+                    "startOffset": 47438
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Workflows from the Pegasus project [22] are the Montage, Cybershake, Epigenomics, LIGO Inspiral, and Sipht workflows, which are an integral part of the profiling procedure presented below.",
+            "startOffset": 47403,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 72801,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "What makes the Montage workflow topologies a difficult topology for the partial critical path algorithm under tight deadline conditions?",
+            "startOffset": 72665,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 50996,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Fig. 2 depicts a schematic view of a profiling procedure.",
+            "startOffset": 50939,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 39913,
+            "parents": [],
+            "refoffsets": {
+                "b5": {
+                    "endOffset": 39912,
+                    "startOffset": 39909
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Compared to traditional infrastructures, the virtual infrastructures offered allow users not only to pay per use but also to customize the computing and storage capacity (via selected virtual machines(VM)) [5].",
+            "startOffset": 39703,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50225,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Through our observations, we distinguish the following aspects that may affect the performance of a virtual infrastructure planning approach: the scale of a workflow, the workflow type, deadline, heuristics (greedy or more stringent).",
+            "startOffset": 49991,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 65784,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The version of the IC-PCP algorithm applied in this section is the adjusted one as explained above, Algorithm 3.",
+            "startOffset": 65672,
+            "title": "Success rate of a greedy versus a more stringent version of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 51931,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "It tries to assign a path of unassigned tasks in a workflow DAG to a single Virtual Machine (VM).",
+            "startOffset": 51834,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 70842,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "Additionally, to the repair cycle, it is checked whether an instance with idle time can be split into separate instances when the idle time inserted is larger than the original communication time between the adjusted task and its parent task in the instance.",
+            "startOffset": 70584,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 65933,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "Two implementations with respect to assigning a service to a partial critical path are compared with each other, a greedy one and a less greedy one.",
+            "startOffset": 65785,
+            "title": "Success rate of a greedy versus a more stringent version of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 70583,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "So a valid solution produced by PCP_v0 may also have instances containing idle time.",
+            "startOffset": 70499,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 79699,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "As we think that every scheduling approach based on heuristics or without proof of convergence for an NP-hard problem will fail for a certain kind of scheduling problem under tight deadline conditions, we propose to add the different steps of IC-PCP profiling presented above into a profiling framework Fig. 2.",
+            "startOffset": 79389,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 41052,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In the static scheduling of a workflow, the application is represented by a Directed Acyclic Graph (DAG), where the different vertices of the graph represent the tasks of the application mapped onto the VMs offered by the cloud provider.",
+            "startOffset": 40815,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52467,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "To find the cheapest possible VM for the partial critical path the IC-PCP algorithm applies a greedy assignment criterion.",
+            "startOffset": 52345,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 78963,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "This asked for a way to characterize the Montage workflow problem.",
+            "startOffset": 78897,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 46758,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As all methods try to find the best solution under a strict deadline, it is of importance how this deadline compares to the longest execution path in the workflow graph or the critical path of the workflow.",
+            "startOffset": 46552,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 70996,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The enhanced implementation of PCP_v0 by adding a repair cycle at the end and a splitting procedure for instances with idle time is designated as PCP_v01.",
+            "startOffset": 70842,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 39023,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These workflows are usually complex due to the strict data dependencies among the different processing components, and the required time constraints or deadlines for finishing execution.",
+            "startOffset": 38837,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48718,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The basic scenario of virtual infrastructure planning is shown in Fig. 1.",
+            "startOffset": 48645,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 49990,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "To judge how well a scheduling approach performs we define the performance as the total cost of the solution produced by the scheduling approach under the condition that the total execution time of the solution does not exceed the predefined deadline of the workflow.",
+            "startOffset": 49723,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 49294,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "For instance, some users may want to finish the execution of a workflow as soon as possible.",
+            "startOffset": 49202,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 82449,
+            "parents": [],
+            "secId": "d1e4845",
+            "sentence": "All four implementations of the IC-PCP algorithm used in this study as well as the data to produce the performance figures are available at https://bitbucket.org/uva-sne/ic-pcp-profiling/src/master.",
+            "startOffset": 82251,
+            "title": "Code and data availability"
+        },
+        {
+            "endOffset": 65250,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Once each set contains 20 examples, for each generated example computation times and execution times were generated for the different VMs following the same procedure as explained above for the Real-world Scientific workflow examples.",
+            "startOffset": 65016,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 44078,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "More steps might be added to the profiling procedure presented below, and contribute to the increase of knowledge about different workflow scheduling approaches.",
+            "startOffset": 43917,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51399,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In case the DAGs of the workflow problems from the data set can be characterized by different metrics or topological indices, one might be able to predict on the basis of these metrics which scheduling approach is the best choice for solving the workflow problem.",
+            "startOffset": 51136,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 71146,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In Fig. 5 the performance improvement of this enhanced implementation PCP_v01 is compared with the implementation PCP_v0, as applied above in Fig. 3.",
+            "startOffset": 70997,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 80728,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Therefore, we think that more success can be expected from metrics that take the number of different paths in the DAG into account.",
+            "startOffset": 80597,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 45876,
+            "parents": [],
+            "refoffsets": {
+                "b17": {
+                    "endOffset": 45743,
+                    "startOffset": 45739
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Based on the IC-PCP algorithm Shi et al. [17] proposed a data-aware virtual machine type assigning algorithm in their elastic resource provisioning and task scheduling framework.",
+            "startOffset": 45698,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 46193,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 45971,
+                    "startOffset": 45967
+                },
+                "b19": {
+                    "endOffset": 46056,
+                    "startOffset": 46052
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Methods applying meta-heuristics encompass methods based on Genetic algorithms; Zhu et al. [18] proposed an Evolutionary Multi-objective Optimization method (EMO), Wang et al. [19] presented a genetic algorithm based workflow Planning Algorithm (MEPA), an extended workflow scheduling with advanced resource planning.",
+            "startOffset": 45876,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 50742,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This choice is not straightforward, as each workflow scheduling approach exhibits weak and strong features.",
+            "startOffset": 50635,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 55308,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b34": {
+                    "endOffset": 55285,
+                    "startOffset": 55281
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "This IC-PCP approach resembles according to the classification of greedy algorithms [34] a Best-Local approach.",
+            "startOffset": 55197,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 44364,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 4, we summarize and analyze the profiling results.",
+            "startOffset": 44303,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 47193,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Furthermore, if specific workflow problems turn out to be a tough problem to tackle by some scheduling approaches under tight deadline conditions, it might be appropriate to look for a metric or topological index to characterize those problematic scheduling problems.",
+            "startOffset": 46926,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 40019,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Planning a customized virtual infrastructure for a complex workflow in the cloud faces several challenges.",
+            "startOffset": 39913,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44173,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 2, we review existing works on static scheduling.",
+            "startOffset": 44113,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81334,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "A closer look at Fig. 3 raises the question of what makes topologies like Cybershake and Sipht rather insensitive to tight deadline conditions for the greedy approach.",
+            "startOffset": 81167,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 56264,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In Algorithms 1, 2 the pseudo code of the IC-PCP algorithm is presented, the variables used in the pseudo code are summarized in Table 1.",
+            "startOffset": 56127,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 75864,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Two sets are generated for task graphs having size 32 and 64 vertices where the in-degree parameter had values between 2 and 5 and the out-degree parameter values between 1 and 4.",
+            "startOffset": 75685,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 77927,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Besides the greediness of the heuristics, the deadlines and the workflow type are important features.",
+            "startOffset": 77826,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 39596,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Cloud environments provide virtualized infrastructures (via Infrastructure-as-a-Service) and allow application developers to establish a customized networked virtual environment for specific application requirements.",
+            "startOffset": 39380,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52033,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Their approach can be characterized as an adaptation of the Critical Path Method (CPM) for the cloud.",
+            "startOffset": 51932,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 48277,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "A systematic profiling approach may reveal whether a chosen heuristic, greedy or less greedy, can be considered as a \u2018general scheduling solver\u2019.",
+            "startOffset": 48132,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43452,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "During the assignment, the communication latencies between tasks are treated as zero if they are on the same VM.",
+            "startOffset": 43340,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 39177,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Such applications often require a well-customized environment for optimizing the workflow performance to meet all the required time and data constraints.",
+            "startOffset": 39024,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44426,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 5, we conclude the paper and plan our future work.",
+            "startOffset": 44365,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 80211,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Difficulty in finding a graph metric is the fact that not all metrics have a meaning for directed acyclic graphs.",
+            "startOffset": 80098,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 79389,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The graph metric was tested by generating two random sets of workflow problems (DAGs), one set with workflow problems \u2018similar\u2019 to the Montage workflow and the other set with workflow problems more \u2018similar\u2019 to the other Real-World workflow problems.",
+            "startOffset": 79139,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 51135,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "By selecting different workflow problems from a data set one can discover which DAGs are difficult to solve by a chosen scheduling method.",
+            "startOffset": 50997,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 62864,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b37": {
+                    "endOffset": 62863,
+                    "startOffset": 62859
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "Epigenomic workflows of 24 vertices and 100 vertices were taken from the Epigenomic workflow examples, originating from the USC Epigenome Center [37].",
+            "startOffset": 62714,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 65374,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In this section we evaluate two implementations of the IC-PCP algorithm for the data sets described above.",
+            "startOffset": 65268,
+            "title": "Profiling results"
+        },
+        {
+            "endOffset": 65471,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A greedy version is compared with a less greedy, more stringent version of the IC-PCP algorithm.",
+            "startOffset": 65375,
+            "title": "Profiling results"
+        },
+        {
+            "endOffset": 76398,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "Once each set contained 20 examples, for each example computation times and execution times were generated for the different VMs following the same procedure as explained above.",
+            "startOffset": 76221,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 79138,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "We tried this by applying a graph metric for the DAG of the workflow problem that could discriminate between the Montage workflows and the other Real-World workflow problems.",
+            "startOffset": 78964,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 45281,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Also, the static scheduling approaches exhibit a vast diversity in optimizing the execution cost and execution time under a strict deadline within a given budget.",
+            "startOffset": 45119,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 81449,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Compared to the other topologies the success rate reaches almost 100% for the whole range of the stress parameter.",
+            "startOffset": 81335,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 49723,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Such virtual infrastructure services are called \u201csoftware-defined infrastructures\u201d.",
+            "startOffset": 49640,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 76220,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "For each size of a task graph the generated graph was checked for the number of paths per vertex, for a value less than 2.5 the graph was added to a set called GG 32_0/GG 64_0, otherwise, it was added to a set called GG 32_1/GG 64_1.",
+            "startOffset": 75987,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 78896,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "Another feature that becomes apparent from Fig. 6 is that the less greedy, more stringent, version produces solutions with the same mean cost as the greedy version under less tight deadline conditions except for the Montage topologies.",
+            "startOffset": 78661,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 41602,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Therefore, a framework suitable to profile a (static) scheduling approach is of importance to come with a quantitative appreciating of a scheduling approach.",
+            "startOffset": 41445,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45590,
+            "parents": [],
+            "refoffsets": {
+                "b16": {
+                    "endOffset": 45529,
+                    "startOffset": 45525
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Also inspired by the HEFT algorithm, Arabnejad and Barbosa [16] presented the Predict-Earliest-Finish-Time (PEFT) algorithm.",
+            "startOffset": 45466,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49639,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The cloud offers different levels of service at different prices which can be defined and provisioned on the user\u2019s demand.",
+            "startOffset": 49516,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 82225,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "To the best of our knowledge, this is the first attempt to build a systematic profiling framework suited to study different static scheduling algorithms.",
+            "startOffset": 82072,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 48131,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "However, the effectiveness of scheduling decisions under tight deadline conditions for different workflow topologies is a subject not yet addressed in the scientific literature.",
+            "startOffset": 47954,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 43553,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This approach provides a straightforward way to assign VMs to an application with a single deadline.",
+            "startOffset": 43453,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50452,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The scale of a workflow specifies how many tasks there are inside a workflow, and the workflow type refers to the internal aspects of the DAG, like the degree distribution and dependencies among the different tasks in the DAG.",
+            "startOffset": 50226,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 62550,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b35": {
+                    "endOffset": 62441,
+                    "startOffset": 62437
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "From the Montage examples, part of the NASA/IPAC Infrared Science Archive [35], the examples of Montage 25 and Montage 100 were taken, having 25 and 100 individual vertices, respectively.",
+            "startOffset": 62363,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 69562,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The greedy implementation PCP_v0 has an advantage over its more stringent counterpart PCP_v1.",
+            "startOffset": 69469,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 64958,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "For a value of the metric indicating the task graph as easy to solve, the graph was added to a set called GG_32_0/GG_64_0.",
+            "startOffset": 64836,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 63057,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b38": {
+                    "endOffset": 63056,
+                    "startOffset": 63052
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "Inspiral workflows with 30 vertices and 100 vertices were chosen from the LIGO Inspiral Analysis workflow examples, used by the Laser Interferometer Gravitational-Wave Observatory (LIGO) [38].",
+            "startOffset": 62865,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 51771,
+            "parents": [],
+            "refoffsets": {
+                "b10": {
+                    "endOffset": 51711,
+                    "startOffset": 51707
+                }
+            },
+            "secId": "sec3",
+            "sentence": "To illustrate the different items of the profiling procedure we select from the diverse set of static scheduling approaches the IC-PCP algorithm [10] by Abrishami et al. to demonstrate the profiling procedure.",
+            "startOffset": 51562,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 42496,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The workflow examples in the training set are used to find those workflow examples difficult to solve by the scheduling approach.",
+            "startOffset": 42367,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 43081,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The IC-PCP algorithm is a typical scheduling solution for deadline-constrained cloud workflows, which has been a basis for several other extended works.",
+            "startOffset": 42929,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50634,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "After all one has to decide which workflow schedulingmethod(s) one wants to recommend.",
+            "startOffset": 50548,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 49414,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "So in such cases, the objective becomes minimizing the workflow\u2019s total execution time or the makespan of the workflow.",
+            "startOffset": 49295,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 46925,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The closer the deadline to the time of the critical path, these scheduling approaches may exhibit difficulties in their search for a solution of the workflow problem.",
+            "startOffset": 46759,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62713,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b36": {
+                    "endOffset": 62651,
+                    "startOffset": 62647
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "From the CyberShake workflow examples, used by the Southern California Earthquake Center (SCEC) [36], we choose the Cybershake workflows with 30 and 100 vertices.",
+            "startOffset": 62551,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 65015,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Otherwise, it was added to a set called GG_32_1/GG_64_1.",
+            "startOffset": 64959,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 64835,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "For each size of a task graph, the graph generated by the GGen algorithm was checked for the metric under study.",
+            "startOffset": 64723,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 63196,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Lastly, from the Sipht workflow examples, bioinformatics project at Harvard University, Sipht workflows of 30 and 100 vertices were taken.",
+            "startOffset": 63058,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 40815,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Scheduling approaches which apply the initial a priori state of the cloud are called static scheduling approaches.",
+            "startOffset": 40701,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72380,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "The conclusion is that the greedy version with a finishing repair cycle performs well for all topologies except for the Montage topology.",
+            "startOffset": 72243,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 44513,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "There exists a large variety of workflow scheduling methods for the cloud.",
+            "startOffset": 44439,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52616,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Besides the original greedy assignment criterion, we created a version with a more stringent assignment criterion to study the effect of greediness.",
+            "startOffset": 52468,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 73114,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "In the next section, we will search for a metric based on the number of parallel paths that allows to discriminate between the Montage topology and the other topologies.",
+            "startOffset": 72945,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 75684,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 75683,
+                    "startOffset": 75679
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "A first trial to test this conjecture is by generating random task graphs by means of the open source random graph generator GGen [40].",
+            "startOffset": 75549,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 44302,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In Section 3, we propose our profiling approach of the widely used IC-PCP algorithm and present the data sets for the profiling.",
+            "startOffset": 44174,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 51562,
+            "parents": [],
+            "refoffsets": {
+                "b26": {
+                    "endOffset": 51549,
+                    "startOffset": 51547
+                },
+                "b27": {
+                    "endOffset": 51552,
+                    "startOffset": 51550
+                },
+                "b28": {
+                    "endOffset": 51557,
+                    "startOffset": 51555
+                },
+                "b29": {
+                    "endOffset": 51560,
+                    "startOffset": 51558
+                },
+                "b4": {
+                    "endOffset": 51554,
+                    "startOffset": 51553
+                }
+            },
+            "secId": "sec3",
+            "sentence": "This is of particular importance in software workbenches that automatically produce a scheduling plan for time-critical applications in the cloud [26,27,4,28,29].",
+            "startOffset": 51400,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 44995,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In static scheduling all the characteristics of the individual tasks of a workflow, such as a task\u2019s processing and communication time and its synchronization requirements, are known before the workflow\u2019s execution.",
+            "startOffset": 44780,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 70498,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As explained above, Algorithm 3 may also add idle time to an instance by the updating EST, and EFT of all tasks, after an assignment of a partial critical path.",
+            "startOffset": 70338,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 76914,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "refoffsets": {
+                "b33": {
+                    "endOffset": 76913,
+                    "startOffset": 76909
+                },
+                "b41": {
+                    "endOffset": 76877,
+                    "startOffset": 76873
+                }
+            },
+            "secId": "sec4.3",
+            "sentence": "The metric applied is a topological metric of the task graph that should be distinguished from a more detailed metric which quantifies the granularity of a DAG as defined by Gerasoulis and Yang [41] and applied by McCreary et al. [33].",
+            "startOffset": 76679,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 41444,
+            "parents": [],
+            "refoffsets": {
+                "b6": {
+                    "endOffset": 41238,
+                    "startOffset": 41235
+                },
+                "b7": {
+                    "endOffset": 41299,
+                    "startOffset": 41296
+                }
+            },
+            "secId": "sec1",
+            "sentence": "As already stated by Kwok and Ahmad [6] for the multi-processor environment, and by Jiang et al. [7] for the Grid, it still holds for the cloud that it is difficult to evaluate the performance of the various scheduling approaches quantitatively.",
+            "startOffset": 41199,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 46551,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "To benchmark these diverse scheduling methods for the cloud, a set of different workflow problems is needed.",
+            "startOffset": 46443,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 80363,
+            "parents": [],
+            "refoffsets": {
+                "b42": {
+                    "endOffset": 80362,
+                    "startOffset": 80358
+                }
+            },
+            "secId": "sec5",
+            "sentence": "More research in this field might be facilitated by looking at the use of topological indices in other fields of science, e.g. molecular sciences [42].",
+            "startOffset": 80212,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 47402,
+            "parents": [],
+            "refoffsets": {
+                "b18": {
+                    "endOffset": 47334,
+                    "startOffset": 47330
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The runtime comparison for different Evolutionary Multi-Objective Workflow Scheduling algorithms in the cloud were studied by Zhu et al. [18] using the Real-World Scientific Workflows from the Pegasus project.",
+            "startOffset": 47193,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49134,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In Fig. 1, the QoS refers to a set of parameters set by the user, reflecting different requirements.",
+            "startOffset": 49034,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 76679,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "A first tentative result to test a conjecture based upon the topology of a task graph.",
+            "startOffset": 76593,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 77825,
+            "parents": [],
+            "refoffsets": {
+                "b22": {
+                    "endOffset": 77824,
+                    "startOffset": 77820
+                }
+            },
+            "secId": "sec5",
+            "sentence": "Through the systematic profiling proposed in this paper, the difference in performance of both implementations of the IC-PCP algorithm could be made more explicit as a function of different types of workflows and QoS requirements, this for the Real-World Scientific Workflows from the Pegasus project [22].",
+            "startOffset": 77519,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 42728,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "After finding a metric that can discriminate between the successful and unsuccessful workflows in the training set, the effectiveness of the found metric can be tested on a test set of workflows constructed according to the metric.",
+            "startOffset": 42497,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 81902,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The proposed profiling procedure might also be suitable to study scheduling algorithms applying meta-heuristics including genetic algorithms (GA), particle swarm optimization (PSO) and ant colony optimization algorithms (ACO).",
+            "startOffset": 81676,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 74942,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "As already noticed above the Montage topologies show less parallel paths, which might be an inkling for the lower success rate for these topologies, as displayed in Fig. 5.",
+            "startOffset": 74770,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 49201,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The objectives refer to the parameters the user wants to optimize.",
+            "startOffset": 49135,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 55101,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "However, the cloud provides infrastructure level programmability, allowing the user to define and provision the resources needed.",
+            "startOffset": 54972,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 81167,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "However, from a theoretical perspective, it is still of interest to characterize the success ratio of an algorithmic approach with a certain heuristic, or greediness, and to study its behavior under different tight deadline conditions and or topology features of the task graph.",
+            "startOffset": 80889,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 72664,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "As all DAGs for a topology set is generated with the same algorithm, applying the same range of execution times and communication times, the question arises how far certain characteristics of a topology might play a role in predicting the performance under tight deadline conditions.",
+            "startOffset": 72381,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 41994,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "These difficult to solve workflow examples may be found by studying the performance under high-stress conditions, e.g. tight deadline conditions.",
+            "startOffset": 41849,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70151,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.2",
+            "sentence": "With a repair cycle we mean a sweep over the DAG after the last assignment taken by the algorithm, in order to resolve a disagreement between the earliest finish time (EFT) of a task and the earliest start time (EST) of one of its children, likewise for a disagreement between the latest finish time (LFT) of a parent task and the latest start time (LST) of one of its children.",
+            "startOffset": 69773,
+            "title": "The greedy version of IC-PCP revisited"
+        },
+        {
+            "endOffset": 64414,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This tool allows for generating task graphs by controlling properties like in-degree/out-degree of the vertices.",
+            "startOffset": 64302,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 82072,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "From our experience, we know that these approaches become very time consuming compared to e.g. the IC-PCP algorithm, when the size of the task graph (DAG) becomes large.",
+            "startOffset": 81903,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 41848,
+            "parents": [],
+            "refoffsets": {
+                "b8": {
+                    "endOffset": 41847,
+                    "startOffset": 41844
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The framework should be equipped with different sets of workflow examples to discover the kind of workflows the approach has difficulty with; Knowledge does not increase from a series of confirmatory observations, disconfirming instances do [8].",
+            "startOffset": 41603,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 52190,
+            "parents": [],
+            "refoffsets": {
+                "b30": {
+                    "endOffset": 52117,
+                    "startOffset": 52110
+                },
+                "b31": {
+                    "endOffset": 52117,
+                    "startOffset": 52110
+                },
+                "b32": {
+                    "endOffset": 52189,
+                    "startOffset": 52185
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The Critical Path Method, developed in the late 1950s by Kelley and Walker ([30,31]), found its way in many different fields of science and technology [32].",
+            "startOffset": 52034,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 40700,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In case all the characteristics of the different infrastructure services of a cloud provider are known a priori, e.g. all the task execution times on the different VMs, and the task communication times, the planning of the workflow is considered as an off-line workflow scheduling plan.",
+            "startOffset": 40414,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 42366,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Like common practice in machine learning, the different workflow examples should be divided into a so-called training set and test set.",
+            "startOffset": 42231,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 49033,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The planning procedure takes the application requirements of a workflow and the available infrastructure resources as input and creates a customized virtual infrastructure for the application.",
+            "startOffset": 48841,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 54971,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "These algorithms are designed to solve the task scheduling in a fixed infrastructure (e.g. a fixed number of homogeneous processors).",
+            "startOffset": 54838,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 40136,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Cloud environments offer customizable infrastructure services (e.g., VMs, storage, and network) at different prices.",
+            "startOffset": 40020,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 44637,
+            "parents": [],
+            "refoffsets": {
+                "b11": {
+                    "endOffset": 44636,
+                    "startOffset": 44629
+                },
+                "b12": {
+                    "endOffset": 44636,
+                    "startOffset": 44629
+                },
+                "b13": {
+                    "endOffset": 44636,
+                    "startOffset": 44629
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Different authors have constructed a taxonomy to capture this large variety of techniques in classification schema [11\u201313].",
+            "startOffset": 44514,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 62251,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Different topology sets are created to test both versions of the IC-PCP algorithm.",
+            "startOffset": 62169,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 78239,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "A striking feature is the fact that the greedy implementation of the IC-PCP algorithm could be enhanced.",
+            "startOffset": 78135,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 77145,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "They take the communication cost and the execution cost into account, whereas a workflow DAG for the cloud only defines the dependencies of the tasks and the communication cost among tasks and not the execution times of the tasks.",
+            "startOffset": 76915,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 47815,
+            "parents": [],
+            "refoffsets": {
+                "b24": {
+                    "endOffset": 47707,
+                    "startOffset": 47703
+                }
+            },
+            "secId": "sec2",
+            "sentence": "Young Choon Lee et al. [24] studied the resource-efficient workflow scheduling in clouds utilizing the Real-World Scientific Workflows.",
+            "startOffset": 47680,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 48840,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "It consists of three entities: the cloud provider, the cloud consumer, and the software-defined (virtual) infrastructure.",
+            "startOffset": 48719,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 79864,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "By applying such a profiling framework, one can recommend heuristics and greediness for a given scheduling algorithm given workflows with different characteristics.",
+            "startOffset": 79700,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 64301,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "refoffsets": {
+                "b40": {
+                    "endOffset": 64300,
+                    "startOffset": 64296
+                }
+            },
+            "secId": "sec3.3",
+            "sentence": "To test a graph metric that discriminates between easy and difficult to solve Real-world Scientific workflow example topologies (see section \u201cCharacterization by Graph metrics or Topological indices\u201d) with respect to the performance of both versions of the IC-PCP algorithm, a second set of task graphs is generated by means of the open source random graph generator GGen [40].",
+            "startOffset": 63924,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 43754,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "The profiling procedure proposed in this paper will provide a better understanding of selecting algorithms for planning virtual infrastructure under different conditions of application characteristics.",
+            "startOffset": 43553,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64722,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This choice prevents the GGen algorithm from generating simple task graphs, for instance, task graphs with a single path.",
+            "startOffset": 64601,
+            "title": "Data sets"
+        },
+        {
+            "endOffset": 38836,
+            "parents": [],
+            "refoffsets": {
+                "b1": {
+                    "endOffset": 38710,
+                    "startOffset": 38707
+                },
+                "b2": {
+                    "endOffset": 38738,
+                    "startOffset": 38735
+                },
+                "b3": {
+                    "endOffset": 38758,
+                    "startOffset": 38755
+                }
+            },
+            "secId": "sec1",
+            "sentence": "In many scientific and industrial applications, e.g., climate modeling [1], disaster early warning [2], or IoT systems [3], workflows composed of many interdependent processing components are present.",
+            "startOffset": 38636,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48625,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "This is a new approach to enhance insight into which task graph topologies might be complicated for a scheduling algorithm under tight deadline conditions.",
+            "startOffset": 48470,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 41198,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "There exists a rich history in the study of static scheduling problems on different services as multi-processor systems, the Grid, and the cloud.",
+            "startOffset": 41053,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 75047,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "In Table 3 the values of some easy to calculate metrics are listed for the different topologies applied.",
+            "startOffset": 74943,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 78134,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "The closer the deadline of the workflow problem to the time of the critical path for the fastest VMs, different success rates in solving a specific workflow problem became apparent for the IC-PCP algorithm.",
+            "startOffset": 77928,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 42231,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Another important feature of a profiling framework should be a set of graph metrics or topological indices to discriminate between the workflow graphs the scheduling approach under study cannot solve and those it can solve successfully.",
+            "startOffset": 41995,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 48469,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In the following sections, we present a profiling approach wherein these Real-World workflows are used to pinpoint the effectiveness of different greediness of the IC-PCP scheduling algorithm.",
+            "startOffset": 48277,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 52344,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the IC-PCP algorithm, a partial critical path is constructed starting at an unassigned task from which a path of critical parent tasks is constructed.",
+            "startOffset": 52191,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 80596,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "During the search for a \u2018successful\u2019 graph metric, we noticed that metrics that are purely degree based were in general not able to discriminate between the topology of Montage DAG and the DAGs of other Real-World workflow problems.",
+            "startOffset": 80364,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 40414,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "As the execution time of an application\u2019s task heavily depends on the selected infrastructure service, it is crucial to optimize the selection of infrastructure services for the tasks of the workflow such that the data and time constraints are met for the lowest cost possible.",
+            "startOffset": 40137,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 50938,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "These weak and strong features may become apparent by a systematic profiling procedure that allows studying the effect of the different aspects that influence the virtual infrastructure planning.",
+            "startOffset": 50743,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 66070,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The greedy one applies the necessary Requirement 2 only in the Path Assigning Algorithm and this implementation is designated by PCP_v0.",
+            "startOffset": 65934,
+            "title": "Success rate of a greedy versus a more stringent version of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 66245,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.1",
+            "sentence": "The more stringent implementation applies the additional Requirements (3) and (4), i.e. the Requirements (2)\u2013(4) in the Path Assigning Algorithm, and is designated by PCP_v1.",
+            "startOffset": 66071,
+            "title": "Success rate of a greedy versus a more stringent version of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 56126,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Besides a local optimality criterion, the algorithm must obey to a global optimality criterion, namely to keep the cost of the final configuration as low as possible, and to realize a latest finish time for the exit task not exceeding the deadline of the workflow.",
+            "startOffset": 55862,
+            "title": "Greediness of the IC-PCP algorithm"
+        },
+        {
+            "endOffset": 65589,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Experimental results show that under different deadline settings, different greediness can lead to different results.",
+            "startOffset": 65472,
+            "title": "Profiling results"
+        },
+        {
+            "endOffset": 75986,
+            "parents": [
+                {
+                    "id": "sec4",
+                    "title": "Profiling results"
+                }
+            ],
+            "secId": "sec4.3",
+            "sentence": "This choice prevents the GGen algorithm from generating simple task graphs, for instance, task graphs with a single path.",
+            "startOffset": 75865,
+            "title": "Characterization by graph metrics or topological indices"
+        },
+        {
+            "endOffset": 80097,
+            "parents": [],
+            "secId": "sec5",
+            "sentence": "If an impairment of performance of a scheduling approach is discovered for a certain kind of workflow problems, it is a challenge to find a graph metric or a topological index that can characterize these difficult workflow problems.",
+            "startOffset": 79865,
+            "title": "Discussion and future work"
+        },
+        {
+            "endOffset": 45119,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "A common characteristic of static scheduling is that the set of tasks in the workflow forms a directed acyclic graph (DAG).",
+            "startOffset": 44996,
+            "title": "Related work"
+        },
+        {
+            "endOffset": 49515,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "In the scenario of this paper, we try to optimize the overall monetary cost of executing a workflow.",
+            "startOffset": 49415,
+            "title": "Profiling procedure"
+        },
+        {
+            "endOffset": 64600,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Profiling procedure"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Two sets are generated for task graphs having a size of 32 and 64 vertices, where the in-degree parameter has values between 2 and 5 and the out-degree parameter values between 1 and 4.",
+            "startOffset": 64415,
+            "title": "Data sets"
+        }
+    ],
+    "docId": "S0167739X18311634",
+    "metadata": {
+        "asjc": [
+            "1705",
+            "1708",
+            "1712"
+        ],
+        "authors": [
+            {
+                "email": "a.taal@uva.nl",
+                "first": "Arie",
+                "initial": "A.",
+                "last": "Taal"
+            },
+            {
+                "email": "j.wang4@uva.nl",
+                "first": "Junchao",
+                "initial": "J.",
+                "last": "Wang"
+            },
+            {
+                "email": "delaat@uva.nl",
+                "first": "Cees",
+                "initial": "C.",
+                "last": "de Laat"
+            },
+            {
+                "email": "z.zhao@uva.nl",
+                "first": "Zhiming",
+                "initial": "Z.",
+                "last": "Zhao"
+            }
+        ],
+        "doi": "10.1016/j.future.2019.05.002",
+        "firstpage": "237",
+        "issn": "0167739X",
+        "keywords": [
+            "Cloud computing",
+            "Partial critical path",
+            "Profiling approach",
+            "Time critical",
+            "Workflow planning"
+        ],
+        "lastpage": "249",
+        "openaccess": "Full",
+        "pub_year": 2019,
+        "subjareas": [
+            "COMP"
+        ],
+        "title": "Profiling the scheduling decisions for handling critical paths in deadline-constrained cloud workflows"
+    }
+}

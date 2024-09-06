@@ -1,0 +1,2319 @@
+{
+    "abstract": "The classic snap-through problem of shallow arches is revisited using the so-called generalised path-following technique. Classical buckling theory is a popular tool for designing structures prone to instabilities, albeit with limited applicability as it assumes a linear pre-buckling state. While incremental-iterative nonlinear finite element methods are more accurate, they are considered to be complex and costly for parametric studies. In this regard, a powerful approach for exploring the entire design space of nonlinear structures is the generalised path-following technique. Within this framework, a nonlinear finite element model is coupled with a numerical continuation solver to provide an accurate and robust way of evaluating multi-parametric structural problems. The capabilities of this technique are exemplified here by studying the effects of four different parameters on the structural behaviour of shallow arches, namely, mid span transverse loading, arch rise height, distribution of cross-sectional area along the span, and total volume of the arch. In particular, the distribution of area has a pronounced effect on the nonlinear load-displacement response and can therefore be used effectively for elastic tailoring. Most importantly, we illustrate the risks entailed in optimising the shape of arches using linear assumptions, which arise because the design drivers influencing linear and nonlinear designs are in fact topologically opposed.",
+    "author_highlights": [
+        {
+            "endOffset": 24137,
+            "sentence": "Design space of nonlinear shallow arches is explored with generalised path-following.",
+            "startOffset": 24052
+        },
+        {
+            "endOffset": 24219,
+            "sentence": "Shallow nonlinear arch design is topologically opposed to the linear equiv-alent.",
+            "startOffset": 24138
+        },
+        {
+            "endOffset": 24305,
+            "sentence": "Distributing mass to the midspan increases load-carrying capacity before instability.",
+            "startOffset": 24220
+        },
+        {
+            "endOffset": 24390,
+            "sentence": "Additional midspan mass reduces local membrane energy, and increases bending energy.",
+            "startOffset": 24306
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Pedro M.",
+                    "initial": "P.M.",
+                    "last": "Reis"
+                }
+            ],
+            "doi": "10.1115/1.4031456",
+            "issn": "00218936",
+            "pub_year": 2015,
+            "title": "A Perspective on the Revival of Structural (In) Stability With Novel Opportunities for Function: From Buckliphobia to Buckliphilia",
+            "volume": "82"
+        },
+        "bib10": null,
+        "bib11": null,
+        "bib12": null,
+        "bib13": null,
+        "bib14": null,
+        "bib15": null,
+        "bib16": null,
+        "bib17": null,
+        "bib18": null,
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Sofie E.",
+                    "initial": "S.E.",
+                    "last": "Leon"
+                },
+                {
+                    "first": "Glaucio H.",
+                    "initial": "G.H.",
+                    "last": "Paulino"
+                },
+                {
+                    "first": "Anderson",
+                    "initial": "A.",
+                    "last": "Pereira"
+                },
+                {
+                    "first": "Ivan F.M.",
+                    "initial": "I.F.M.",
+                    "last": "Menezes"
+                },
+                {
+                    "first": "Eduardo N.",
+                    "initial": "E.N.",
+                    "last": "Lages"
+                }
+            ],
+            "doi": "10.1115/1.4006992",
+            "issn": "00036900",
+            "pub_year": 2011,
+            "title": "A unified library of nonlinear solution schemes",
+            "volume": "64"
+        },
+        "bib2": null,
+        "bib20": null,
+        "bib21": null,
+        "bib22": null,
+        "bib23": null,
+        "bib24": {
+            "authors": [
+                {
+                    "first": "Anders",
+                    "initial": "A.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1016/S0045-7825(97)00200-4",
+            "firstpage": "45",
+            "issn": "00457825",
+            "lastpage": "74",
+            "pub_year": 1998,
+            "title": "Structural instability analyses based on generalised path-following",
+            "volume": "156"
+        },
+        "bib25": null,
+        "bib26": null,
+        "bib27": null,
+        "bib28": null,
+        "bib29": null,
+        "bib3": null,
+        "bib30": null,
+        "bib31": null,
+        "bib32": {
+            "authors": [
+                {
+                    "first": "Anders",
+                    "initial": "A.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1016/0045-7825(94)90163-5",
+            "firstpage": "77",
+            "issn": "00457825",
+            "lastpage": "101",
+            "pub_year": 1994,
+            "title": "Fold lines for sensitivity analyses in structural instability",
+            "volume": "114"
+        },
+        "bib33": {
+            "authors": [
+                {
+                    "first": "Anders",
+                    "initial": "A.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1016/S0045-7825(96)01096-1",
+            "firstpage": "305",
+            "issn": "00457825",
+            "lastpage": "327",
+            "pub_year": 1997,
+            "title": "Equilibrium subsets for multi-parametric structural analysis",
+            "volume": "140"
+        },
+        "bib34": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Pirrera"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Avitabile"
+                },
+                {
+                    "first": "P. M.",
+                    "initial": "P.M.",
+                    "last": "Weaver"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2010.08.019",
+            "firstpage": "3412",
+            "issn": "00207683",
+            "lastpage": "3425",
+            "pub_year": 2010,
+            "title": "Bistable plates for morphing structures: A refined analytical approach with high-order polynomials",
+            "volume": "47"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Pirrera"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Avitabile"
+                },
+                {
+                    "first": "P. M.",
+                    "initial": "P.M.",
+                    "last": "Weaver"
+                }
+            ],
+            "doi": "10.1016/j.ijsolstr.2011.11.011",
+            "firstpage": "685",
+            "issn": "00207683",
+            "lastpage": "700",
+            "pub_year": 2012,
+            "title": "On the thermally induced bistability of composite cylindrical shells for morphing structures",
+            "volume": "49"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "R. M.J.",
+                    "initial": "R.M.J.",
+                    "last": "Groh"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Pirrera"
+                }
+            ],
+            "doi": "10.1016/j.cma.2017.12.001",
+            "firstpage": "394",
+            "issn": "00457825",
+            "lastpage": "426",
+            "pub_year": 2018,
+            "title": "Generalised path-following for well-behaved nonlinear structures",
+            "volume": "331"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "Anders",
+                    "initial": "A.",
+                    "last": "Eriksson"
+                }
+            ],
+            "doi": "10.1016/j.compstruc.2014.05.003",
+            "firstpage": "39",
+            "issn": "00457949",
+            "lastpage": "47",
+            "pub_year": 2014,
+            "title": "Constraint paths in non-linear structural optimization",
+            "volume": "140"
+        },
+        "bib38": null,
+        "bib39": null,
+        "bib4": null,
+        "bib40": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Engelborghs"
+                },
+                {
+                    "first": "T.",
+                    "initial": "T.",
+                    "last": "Luzyanina"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Roose"
+                }
+            ],
+            "doi": "10.1145/513001.513002",
+            "firstpage": "1",
+            "issn": "00983500",
+            "lastpage": "21",
+            "pub_year": 2002,
+            "title": "Numerical bifurcation analysis of delay differential equations using DDE-BIFTOOL",
+            "volume": "28"
+        },
+        "bib41": null,
+        "bib42": {
+            "authors": [
+                {
+                    "first": "James",
+                    "initial": "J.",
+                    "last": "Rankin"
+                },
+                {
+                    "first": "Daniele",
+                    "initial": "D.",
+                    "last": "Avitabile"
+                },
+                {
+                    "first": "Javier",
+                    "initial": "J.",
+                    "last": "Baladron"
+                },
+                {
+                    "first": "Gregory",
+                    "initial": "G.",
+                    "last": "Faye"
+                },
+                {
+                    "first": "David J.B.",
+                    "initial": "D.J.B.",
+                    "last": "Lloyd"
+                }
+            ],
+            "doi": "10.1137/130918721",
+            "firstpage": "B70",
+            "issn": "10648275",
+            "lastpage": "B93",
+            "pub_year": 2014,
+            "title": "Continuation of localized coherent structures in nonlocal neural field equations",
+            "volume": "36"
+        },
+        "bib43": null,
+        "bib44": null,
+        "bib45": null,
+        "bib46": null,
+        "bib47": null,
+        "bib48": {
+            "authors": [
+                {
+                    "first": "Michael E.",
+                    "initial": "M.E.",
+                    "last": "Henderson"
+                }
+            ],
+            "doi": "10.1142/S0218127402004498",
+            "firstpage": "451",
+            "issn": "02181274",
+            "lastpage": "476",
+            "pub_year": 2002,
+            "title": "Multiple parameter continuation: Computing implicitly defined k-manifolds",
+            "volume": "12"
+        },
+        "bib49": null,
+        "bib5": null,
+        "bib50": null,
+        "bib51": null,
+        "bib52": null,
+        "bib53": {
+            "authors": [
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "Reissner"
+                }
+            ],
+            "doi": "10.1002/sapm197352287",
+            "firstpage": "87",
+            "issn": "00222526",
+            "lastpage": "95",
+            "pub_year": 1973,
+            "title": "On One-Dimensional Large-Displacement Finite-Strain Beam Theory",
+            "volume": "52"
+        },
+        "bib54": null,
+        "bib55": null,
+        "bib6": null,
+        "bib7": {
+            "authors": [
+                {
+                    "first": "Sami A.",
+                    "initial": "S.A.",
+                    "last": "Alkharabsheh"
+                },
+                {
+                    "first": "Mohammad I.",
+                    "initial": "M.I.",
+                    "last": "Younis"
+                }
+            ],
+            "doi": "10.1115/1.4023055",
+            "issn": "10489002",
+            "pub_year": 2013,
+            "title": "Statics and dynamics of MEMS arches under axial forces",
+            "volume": "135"
+        },
+        "bib8": {
+            "authors": [
+                {
+                    "first": "Ahmad",
+                    "initial": "A.",
+                    "last": "Rafsanjani"
+                },
+                {
+                    "first": "Abdolhamid",
+                    "initial": "A.",
+                    "last": "Akbarzadeh"
+                },
+                {
+                    "first": "Damiano",
+                    "initial": "D.",
+                    "last": "Pasini"
+                }
+            ],
+            "doi": "10.1002/adma.201502809",
+            "firstpage": "5931",
+            "issn": "09359648",
+            "lastpage": "5935",
+            "pmid": "26314680",
+            "pub_year": 2015,
+            "title": "Snapping Mechanical Metamaterials under Tension",
+            "volume": "27"
+        },
+        "bib9": null
+    },
+    "body_text": [
+        {
+            "endOffset": 34070,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "In this sense, the generalised path-following technique is introduced as an advanced design and analysis tool which can be used to explore a bounded multi-dimensional design space within a finite element context.",
+            "startOffset": 33858,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 25561,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In micro- and meso-scale applications thin-walled structures are exploited for their ease of manufacture and ability to deform significantly without failure, thus providing unparalleled functionality that relies on nonlinear behaviour.",
+            "startOffset": 25326,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59842,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Conversely, Fig. 5e\u2013g shows that the optimum cross-sectional area distribution leads to a concentration of bending energy at the mid-span and greater magnitude of bending moment over most portions of the arch, thereby maximising the out-of-plane bending deformation before snap-through occurs as previously noted for Fig. 5a. Hence, the optimum area distribution redistributes some of the internal loading from membrane action to bending action.",
+            "startOffset": 59397,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 58098,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "For example, consider the membrane energy in Fig. 5b.",
+            "startOffset": 58045,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 60184,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "refoffsets": {
+                "bib50": {
+                    "endOffset": 60150,
+                    "startOffset": 60148
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The only case directly comparable to the results presented within this paper (m = 2 and n = 2 in Ref. [50]) agree with the findings herein.",
+            "startOffset": 60045,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 57412,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As the snap-through instability occurs at the mid-span of the arch, it intuitively follows that increasing the load carrying capability of the arch requires a re-distribution of the compressive membrane forces away from the mid-span and towards the supported edges.",
+            "startOffset": 57147,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 30863,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 30793,
+                    "startOffset": 30788
+                },
+                "bib21": {
+                    "endOffset": 30793,
+                    "startOffset": 30788
+                },
+                "bib22": {
+                    "endOffset": 30793,
+                    "startOffset": 30788
+                },
+                "bib23": {
+                    "endOffset": 30793,
+                    "startOffset": 30788
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "Historically, the generalised path-following technique has been used extensively in the fields of applied mathematics and physics [20\u201323], where the term numerical continuation is a more common designation.",
+            "startOffset": 30657,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 57973,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "refoffsets": {
+                "bib55": {
+                    "endOffset": 57971,
+                    "startOffset": 57969
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "As a result of this stiffness variation compressive stresses can be tailored, i.e. re-distributed from the central unsupported region of the plate to the supported edges, thereby significantly increasing the critical buckling load [55].",
+            "startOffset": 57737,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 35771,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Generally speaking, analytical methods are more popular for these parametric studies, as they are less computationally demanding than finite element methods and therefore allow for quicker iteration in the evaluation of the design space.",
+            "startOffset": 35534,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 60470,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This is because the mortar used to bind together the rigid links of the arch fare poorly under tensile loading.",
+            "startOffset": 60359,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 58196,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The constant cross-section (blue) provides a relatively constant membrane energy across the span.",
+            "startOffset": 58099,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 65285,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Finally, by redistributing mass the load-carrying capacity of the arch at the first instability load is increased by 14% over the baseline design of constant cross-sectional area.",
+            "startOffset": 65106,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 59165,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Fig. 5c shows that changes in distribution of cross-sectional area from the inverse-optimum configuration (thicker towards the boundaries) to a constant cross-sectional area and further to the optimum configuration (thicker towards the mid-span) reduces the magnitude of the compressive load across the arch.",
+            "startOffset": 58857,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 30657,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "This technique allows any number of parameters to be continued, i.e. treated akin to a loading factor, during a single solution run and thus eliminates the necessity for extensive parametric studies.",
+            "startOffset": 30458,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 58606,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Furthermore, the opposite distribution membrane energy is observed for the inverse-optimum distribution \u2013 the membrane energy is maximised towards the centre.",
+            "startOffset": 58448,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 51580,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Increased awareness of the characteristics of the unstable regions mitigates the uncertainty, and thus improving the robustness, of prospective designs.",
+            "startOffset": 51428,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 39366,
+            "parents": [],
+            "refoffsets": {
+                "bib33": {
+                    "endOffset": 39116,
+                    "startOffset": 39114
+                },
+                "bib47": {
+                    "endOffset": 39136,
+                    "startOffset": 39134
+                }
+            },
+            "secId": "sec2",
+            "sentence": "The comprehensive computational framework is discussed by Eriksson [33] (also see Ref. [47]), but in principle, an additional variable is introduced as a control parameter and the solution space explored in this third dimension using standard path-following techniques, see Fig. 1b, generating a two-dimensional surface.",
+            "startOffset": 39046,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 32858,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib44": {
+                    "endOffset": 32806,
+                    "startOffset": 32804
+                },
+                "bib45": {
+                    "endOffset": 32809,
+                    "startOffset": 32807
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "We refer the readers to [44,45] for a recent review and tutorial, respectively.",
+            "startOffset": 32779,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 35365,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In principle, it is desirable to understand how structures behave when one or more design parameter are varied.",
+            "startOffset": 35254,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 43326,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In this way, we parametrise the solution manifold using level sets at constant \u03bbj.",
+            "startOffset": 43244,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 44374,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The basic model is illustrated in Fig. 2a for a circular cross-section with baseline quantities of height-to-span ratio of 1\u221510, an axial rigidity of EA = 6.5 \u00d7 1011N, a shear rigidity GA = 2.8275 \u00d7 1011N, a bending rigidity EI = 1.68107 \u00d7 1011Nm.",
+            "startOffset": 44127,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 44509,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Additionally, some of the arch characteristics are explicitly defined as active parameters that can be varied throughout the analysis.",
+            "startOffset": 44375,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 24696,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 24694,
+                    "startOffset": 24693
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Structural nonlinearities, particularly those of an elastic nature, are gaining considerable momentum within engineering applications, and are being viewed as a positive design feature [1].",
+            "startOffset": 24507,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56073,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The mode shape of the optimum configuration also suggests that the deformation is more uniform over the central portion of the arch where snap-through occurs, suggesting that the internal loads are being re-distributed to use the available material more efficiently.",
+            "startOffset": 55807,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 31605,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 31485,
+                    "startOffset": 31480
+                },
+                "bib27": {
+                    "endOffset": 31485,
+                    "startOffset": 31480
+                },
+                "bib28": {
+                    "endOffset": 31485,
+                    "startOffset": 31480
+                },
+                "bib29": {
+                    "endOffset": 31603,
+                    "startOffset": 31598
+                },
+                "bib30": {
+                    "endOffset": 31603,
+                    "startOffset": 31598
+                },
+                "bib31": {
+                    "endOffset": 31603,
+                    "startOffset": 31598
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "With the advent of catastrophe theory in structural mechanics this interest intensified, mostly in an analytical setting [26\u201328], but a generalised computational framework was not introduced to the community until the 1980's by Rheinboldt [29\u201331].",
+            "startOffset": 31358,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 46508,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "The preliminary process in using the generalised path-following technique requires the solution of a fundamental load-displacement equilibrium path for a baseline problem.",
+            "startOffset": 46337,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 34479,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "The remaining sections of the paper are structured as follows.",
+            "startOffset": 34417,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 57561,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "refoffsets": {
+                "bib55": {
+                    "endOffset": 57559,
+                    "startOffset": 57557
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "In fact, this mechanism is widely attributed to the improved load-carrying capability of variable-angle tow composite plates under compression [55].",
+            "startOffset": 57413,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 40909,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "For r auxiliary equations, the solution to Eq. (3) becomes (p \u2212 r)-dimensional and hence p \u2212 1 auxiliary equations are required to define a one-dimensional curve.",
+            "startOffset": 40747,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 29295,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "There appears to be little question that the so-called incremental-iterative methods represent by far the most popular procedures for the solution of nonlinear continuum mechanics.",
+            "startOffset": 29115,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 42087,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "where j corresponds to the jth increment and the comma notation has been used to denote differentiation.",
+            "startOffset": 41983,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 34935,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "The problem definition is presented, followed by a robust four-parameter analysis of the structural response.",
+            "startOffset": 34826,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 49369,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "Parameters \u03bb2 and \u03bb3 are now introduced to tailor the structural response to a specific application.",
+            "startOffset": 49269,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 46134,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The analysis is therefore restricted to only geometrical nonlinearities, however the strains are assessed throughout the loading history to ensure elastic behaviour is maintained.",
+            "startOffset": 45955,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 25707,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In macro-scale applications, such as the aerospace and automotive sectors, thin-walled shell structures are used for their structural efficiency.",
+            "startOffset": 25562,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30157,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "Hence, traditional arc-length methods available in commercial finite element solvers are degenerate cases of a generalised path-following technique restricted to the forcing parameter-displacement space, and it is cumbersome or impossible to change two or more parameters simultaneously, which for example is required for tracking bifurcations.",
+            "startOffset": 29813,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 32778,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib38": {
+                    "endOffset": 32564,
+                    "startOffset": 32562
+                },
+                "bib39": {
+                    "endOffset": 32567,
+                    "startOffset": 32565
+                },
+                "bib40": {
+                    "endOffset": 32661,
+                    "startOffset": 32659
+                },
+                "bib41": {
+                    "endOffset": 32698,
+                    "startOffset": 32696
+                },
+                "bib42": {
+                    "endOffset": 32735,
+                    "startOffset": 32733
+                },
+                "bib43": {
+                    "endOffset": 32776,
+                    "startOffset": 32774
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "In parallel, numerical bifurcation analysis techniques have been developed for generic dynamical systems, from the pioneering work of Doedel, Keller, and Kervenez [38,39], to cover a wide range of differential equations, including delay-differential equations [40], partial differential equations [41], integro-differential equations [42], and stochastic evolution equations [43].",
+            "startOffset": 32398,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 58447,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "It is clearly visible that membrane energy is distributed outwards away from the critical region and towards the supported edges.",
+            "startOffset": 58318,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 49002,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "In many engineering applications of arch structures, height is a design specification and therefore fixed a priori.",
+            "startOffset": 48887,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 43243,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "From an algorithmic viewpoint, we have opted for a simple yet affordable choice: we compute one-parameter families of equilibria (in the parameter \u03bbi), as the secondary parameter \u03bbj is held constant, and we repeat the calculation for various values of \u03bbj.",
+            "startOffset": 42988,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 38935,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Conventional design philosophy requires a complete re-analysis of the problem with different values for each variable.",
+            "startOffset": 38817,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 31149,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 31033,
+                    "startOffset": 31031
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "In structural engineering applications, however, path-following is a familiar term and therefore generalised path-following, as introduced by Eriksson and co-workers [24], is a more intuitive designation as it differentiates from conventional path-following in load-displacement space.",
+            "startOffset": 30864,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 45828,
+            "parents": [],
+            "refoffsets": {
+                "bib53": {
+                    "endOffset": 45733,
+                    "startOffset": 45731
+                }
+            },
+            "secId": "sec3",
+            "sentence": "Indeed initial convergence studies showed that more elaborate beam formulations, e.g. the finite strain theory by Reissner [53], produced identical results for the constitutive and geometric parameters studied throughout.",
+            "startOffset": 45607,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 33564,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "First, by means of an exploratory exercise we investigate the mechanics of compliant shallow arched structures to determine a shape-optimised arch for maximising the first instability load, and show that the design drivers for the nonlinear mechanics of arches are opposite to what would be expected from a linear analysis.",
+            "startOffset": 33241,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 29062,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.1",
+            "sentence": "Once the solution space is opened up to more parameters beyond a simple load factor, however, it quickly becomes apparent that this problem is more intricate and complex than at first sight.",
+            "startOffset": 28872,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 33240,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "The aim of this paper is twofold.",
+            "startOffset": 33207,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 27509,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "All of these fields can introduce their own forms of nonlinearity and these can interact in a complex manner to yield emergent phenomena that are difficult to predict.",
+            "startOffset": 27342,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37743,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "On the contrary, at a pitchfork bifurcation point the symmetry of the system is broken such that a secondary equilibrium path branches away from the fundamental path (not shown in Fig. 1a).",
+            "startOffset": 37554,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 49268,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "From the results presented in Fig. 3 it may already be possible to design for the application in mind, however, in the event that the load carrying capacity or the deformations sustained are not appropriate for the given application, further evaluation is required.",
+            "startOffset": 49003,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 58317,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The optimum configuration (red) reduces the membrane energy over the critical mid-span region where snap-through occurs.",
+            "startOffset": 58197,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 57736,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Variable angle-tow plates are composite laminates manufactured from orthotropic plies with the reinforcing fibres steered continuously over the planform in curvilinear paths.",
+            "startOffset": 57562,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 65105,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This physical mechanism is analogous to variable angle tow plates, where compressive stresses are redistributed from the unsupported centre of the plate to supported edges.",
+            "startOffset": 64933,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64078,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Although the analysis was restricted to only geometrical nonlinearities, the strain was assessed throughout the loading history and showed no sign of plasticity onset.",
+            "startOffset": 63911,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 26820,
+            "parents": [],
+            "refoffsets": {
+                "bib2": {
+                    "endOffset": 26710,
+                    "startOffset": 26709
+                }
+            },
+            "secId": "sec1",
+            "sentence": "Carpinteri et al. [2] present an industrial example illustrating the importance of nonlinear analysis for a modern roof-structure.",
+            "startOffset": 26690,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45954,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The mechanics of slender shallow arches are typically governed by snap-through instabilities and not material nonlinearities.",
+            "startOffset": 45829,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 27776,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "With the application of the generalised path-following technique, however, the design space can be evaluated within a single solution process, for any number of parameters.",
+            "startOffset": 27604,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 32214,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 31916,
+                    "startOffset": 31914
+                },
+                "bib32": {
+                    "endOffset": 31919,
+                    "startOffset": 31917
+                },
+                "bib33": {
+                    "endOffset": 31922,
+                    "startOffset": 31920
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "During the mid 1990's, Eriksson and co-workers [24,32,33] established themselves as the main proponents and developers of generalised path-following, presenting numerous examples where the approach proved to be of great benefit, while also providing details on how the technique could be incorporated into commercial nonlinear finite element codes.",
+            "startOffset": 31866,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 34638,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "Section 2 introduces a general overview of the mathematical framework of coupling the numerical continuation technique to the nonlinear finite element method.",
+            "startOffset": 34480,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 36761,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The blue segments of the curve correspond to stable equilibrium paths (all eigenvalues of the tangential stiffness matrix are positive), red segments denote one unstable mode (one negative eigenvalue) and green segments denote two unstable modes (two or more negative eigenvalues).",
+            "startOffset": 36480,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 38144,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In Fig. 1a, the maximum limit point precedes the bifurcation point for a typical loading history starting from the unloaded state, but this is not necessarily always the case, and the order in which they appear may reverse for other configurations.",
+            "startOffset": 37896,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 25325,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Across all length scales, slender and thin-walled structures are commonly used in engineering applications for a number of reasons.",
+            "startOffset": 25194,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 28871,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.1",
+            "sentence": "The critical buckling of shallow arches, either by symmetric snap-through or by an asymmetric bifurcation, is a seemingly well-understood problem.",
+            "startOffset": 28725,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 43724,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In some instances, however, it is also possible to compute loci of branching points as \u03bbi and \u03bbj vary simultaneously, using standard two-parameter continuation of bifurcation points.",
+            "startOffset": 43542,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 44793,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "These four parameters are the loading factor, \u03bb1, quadratic distribution of cross-sectional area, \u03bb2 (See Fig. 2b), average cross-sectional area (defined as a ratio of bending and axial rigidity EI\u2215EA = A\u22154\u03c0), \u03bb3, and arch height normalised by span, \u03bb4 which are detailed in Table 1.",
+            "startOffset": 44510,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 33185,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "The wealth of literature on each of the topics illustrates a considerable interest in the (in)stability of shallow arched structures; path-following of solutions in algebraic and differential equations; and also in structural optimisation, but there is little that brings together all three, this paper aims to do exactly that.",
+            "startOffset": 32858,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 46292,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "Finally, geometric symmetry of the structure is not exploited to reduced computational expense as this eliminates the possibility of asymmetric bifurcations.",
+            "startOffset": 46135,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 60044,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "refoffsets": {
+                "bib50": {
+                    "endOffset": 59927,
+                    "startOffset": 59925
+                }
+            },
+            "secId": "sec3.2",
+            "sentence": "The optimum design is found to be in agreement with the findings observed by Rapp [50], whereby the critical buckling loads are evaluated for non-uniform beams with three different volume distributions.",
+            "startOffset": 59842,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 51173,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Fig. 4a presents three distinct regions, each corresponding to a different degree of stability: blue, stable equilibria; red, one unstable mode; green, two or more unstable modes.",
+            "startOffset": 50994,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 63133,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The aim of this investigation was to explore the mechanics of shallow arched beams using a computational framework known as generalised path-following, our objective being to illustrate the juxtaposition between the design of a linear and a nonlinear arch structure.",
+            "startOffset": 62867,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 33857,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "Second, we wish to illustrate how nonlinear structures with multi-parameter dependent characteristics can be designed robustly and quickly using a systematic approach.",
+            "startOffset": 33690,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 64647,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "In many linear structures, such as masonry arches, the optimum design drives a re-distribution of mass to the supported boundary conditions, and thus a linear analysis tool is sufficient.",
+            "startOffset": 64460,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63910,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "A quadratic distribution of a marginally thicker cross-section at the mid-span provides the greatest rigidity to a centrally applied bending load, i.e. the greatest load carrying capacity to displacement ratio.",
+            "startOffset": 63700,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 64932,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "For the nonlinear structure investigated here, the opposite is true as a redistribution of mass towards the mid-span reduces the destabilising compressive membrane force within the structure, which in turn increases the load-carrying capacity before the first instability is observed.",
+            "startOffset": 64648,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 26246,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Arched structures, which are the focus of this paper, are known to exhibit instabilities and are a textbook example of classic snap-through buckling behaviour.",
+            "startOffset": 26087,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 61203,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "This comparison illustrates the risks entailed in optimising elastic arches used in the nonlinear domain using linear assumptions, as the design driver, i.e. minimising the compressive thrust, is indeed opposite to that for most linear arches.",
+            "startOffset": 60960,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 38817,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "More specifically, how do these variables affect the characteristics of the aforementioned three solution points?",
+            "startOffset": 38704,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 26986,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Carpinteri concludes that current linear methods are insufficient in predicting the post-buckled state and, most importantly, the load-carrying capacity of the roof.",
+            "startOffset": 26821,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 64387,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Furthermore, we illustrate that the mechanics of shallow nonlinear circular arches are topologically opposed to that of the linear equivalent.",
+            "startOffset": 64245,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 35234,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "The cross-sectional area is distributed along the beam span, and this optimum distribution is then analysed further by evaluating the effect of arch mass and arch rise height on the structural response, whereby the optimality criterion is defined as the maximum stiffness before instability occurs.",
+            "startOffset": 34936,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 43541,
+            "parents": [],
+            "refoffsets": {
+                "bib48": {
+                    "endOffset": 43488,
+                    "startOffset": 43486
+                }
+            },
+            "secId": "sec2",
+            "sentence": "An attractive alternative approach (which has not been pursued here for simplicity) is to cover the solution manifold with polygons, as proposed by Henderson [48] and implemented in the software package MULTIFARIO.",
+            "startOffset": 43327,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 47011,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "For every solution point on the fundamental path it is possible to follow a one-dimensional subset equilibrium curve, expanding the design space from a single-parameter space (\u03bb1-d), to a dual-parameter space (\u03bb1-d-\u03bbi).",
+            "startOffset": 46792,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 35931,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "For nonlinear problems, analytical techniques that allow rapid parametric design are found wanting such that the design space investigated is often restricted.",
+            "startOffset": 35772,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 63497,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "The design of this simple arch proves to be very sensitive to the investigated parameters.",
+            "startOffset": 63407,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 38703,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "To optimise the nonlinear structure (for any given criteria \u2013 weight, cost, strength, etc.), it is important to understand the variables (material properties, geometric dimensions, etc.) that affect the structural response.",
+            "startOffset": 38480,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 34825,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "Section 3 discusses the application of the generalised path-following framework to a shallow arched beam problem, presents the results obtained and provides a discussion of key findings.",
+            "startOffset": 34639,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 31357,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 31222,
+                    "startOffset": 31220
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "In the 1960's Sewell introduced the notion of the equilibrium surface [25], whose shape could be used to identify the stability of the underlying structure with respect to changes in the governing parameters.",
+            "startOffset": 31149,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 36407,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The mid-span applied load is parametrised and the corresponding vertical displacement of the centre is measured.",
+            "startOffset": 36295,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 60358,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The linear design of arch structures, such as masonry arches in antiquity, is often based on minimising bending moments and maximising the compressive thrust within the arch.",
+            "startOffset": 60184,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 55806,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As this relative increase in deformation is considerably less than the 1.56 times increase in load, the stiffness of the optimum configuration is greater than the inverse-optimum configuration.",
+            "startOffset": 55613,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 39045,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The re-evaluation of the structural behaviour can be avoided, however, when using generalised path-following.",
+            "startOffset": 38936,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 37368,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "A saddle-node bifurcation (limit) point describes an extremal point (maximum or minimum) with respect to the control parameter, where equilibrium of the system switches from stable to unstable, or vice versa, but symmetry of the system is maintained.",
+            "startOffset": 37118,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 39496,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Therefore, the generalised path-following process involves tracing one-dimensional curves in a higher-dimensional solution space.",
+            "startOffset": 39367,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 58856,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The significance of this re-distribution is further emphasised in Fig. 5c and d, which respectively show the membrane force Nx along the length of the beam normalised by the respective critical buckling load and the reaction force Nx at the boundary.",
+            "startOffset": 58606,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 62549,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "The most important aspect of any structure is usually the load carrying capacity.",
+            "startOffset": 62468,
+            "title": "Changing total arch volume, \u03bb3"
+        },
+        {
+            "endOffset": 24848,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Nonlinear structural problems have been discussed in the literature for decades, however they are seldom exploited outside of the academic environment.",
+            "startOffset": 24697,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 27890,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.1",
+            "sentence": "Concave load-bearing structures are one of the oldest structures known to man.",
+            "startOffset": 27812,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 60959,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Hence, the inverse-optimum distribution (thicker at the boundaries and thinner towards the mid-span) could be viewed as an optimised design for masonry arches, and this is indeed the case for many arch bridges and aqueducts.",
+            "startOffset": 60735,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 33689,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib46": {
+                    "endOffset": 33687,
+                    "startOffset": 33685
+                }
+            },
+            "secId": "sec1.3",
+            "sentence": "Hence, the risks inherited in shells optimised with linear assumptions observed by Lee and Hinton are confirmed herein [46].",
+            "startOffset": 33565,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 60734,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As shown in Fig. 5c the compressive membrane force is uniformly at the greatest value throughout the inverse-optimum structure.",
+            "startOffset": 60607,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 28548,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.1",
+            "sentence": "Throughout this paper we refer to compliant elastic arches which use snap-through for functionality and hence the research presented herein is restricted to slender arches.",
+            "startOffset": 28376,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 44992,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "The baseline geometry of the arch is defined as \u03bb2 = 1 (no spanwise variation of the cross-section), circular cross-sectional area with \u03bb3 = I\u2215A = 0.2586 and arch height normalised by span \u03bb4 = 0.1.",
+            "startOffset": 44794,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 25194,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "This general reluctance engineers harbour for nonlinear structures is justified by two prevailing statements: (i) the lack of sufficiently robust computational tools, and (ii) the time-consuming nature of solving incremental-iterative problems, especially when multi-parametric studies for optimisation or imperfection sensitivity are conducted.",
+            "startOffset": 24849,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 37118,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The points separating different colour segments are called critical points, i.e. points where at least one eigenvalue of the tangential stiffness matrix is exactly zero, and these can either be saddle-node bifurcation points (limit points), pitchfork bifurcation points, or a coincidence of both known as hilltop-branching points with two zero eigenvalues.",
+            "startOffset": 36762,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 27145,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 27079,
+                    "startOffset": 27076
+                },
+                "bib4": {
+                    "endOffset": 27079,
+                    "startOffset": 27076
+                },
+                "bib5": {
+                    "endOffset": 27079,
+                    "startOffset": 27076
+                }
+            },
+            "secId": "sec1",
+            "sentence": "The same buckling behaviour is also observed on the micro-scale within the field of MEMS [3\u20135], a discipline which has seen significant growth in recent years.",
+            "startOffset": 26986,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 45484,
+            "parents": [],
+            "refoffsets": {
+                "bib52": {
+                    "endOffset": 45465,
+                    "startOffset": 45463
+                }
+            },
+            "secId": "sec3",
+            "sentence": "The problem is solved via a simple one-dimensional finite element formulation using fifty quadratic, three node, nonlinear Timoshenko beam elements with von K\u00e1rm\u00e1n strains (See Ref. [52] for formulation).",
+            "startOffset": 45280,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 28725,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 28690,
+                    "startOffset": 28689
+                },
+                "bib8": {
+                    "endOffset": 28723,
+                    "startOffset": 28722
+                }
+            },
+            "secId": "sec1.1",
+            "sentence": "Such compliant arches, which utilise elastic snap-through \u201cfailure\u201d well before plastic deformations occur, are being used in MEMS devices [7] and for novel meta-materials [8].",
+            "startOffset": 28549,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 36294,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Consider a classic force-displacement equilibrium path of an arch loaded by a transverse point load at its mid-span, as illustrated in Fig. 1a.",
+            "startOffset": 36151,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 36151,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "In a nonlinear setting, robust computational tools for parametric studies are therefore indispensable and the generalised path-following technique is presented here as such a tool to investigate the entire design space.",
+            "startOffset": 35932,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 62467,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Fig. 6 is a good example of a visual aid that is useful to the design engineer.",
+            "startOffset": 62388,
+            "title": "Changing total arch volume, \u03bb3"
+        },
+        {
+            "endOffset": 26689,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Large scale arched structures, particularly those whose loading capacity is intrinsically linked to the deformations sustained, are particularly prone to instabilities.",
+            "startOffset": 26521,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 35533,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "During the design of engineering structures, parametric studies are the conventional approach, whereby multiple simulations for different configurations are performed.",
+            "startOffset": 35366,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 41319,
+            "parents": [],
+            "refoffsets": {
+                "bib33": {
+                    "endOffset": 40937,
+                    "startOffset": 40935
+                }
+            },
+            "secId": "sec2",
+            "sentence": "As outlined by Eriksson [33] these subset equations can define fundamental equilibrium paths, i.e. the fundamental load parameter is varied and all other parameters are constant; secondary equilibrium paths (parameter paths), i.e. a different parameter is varied; bifurcation branching paths (pitchfork bifurcation paths); critical paths where the tangential stiffness matrix is singular (foldline path); etc.",
+            "startOffset": 40910,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 64245,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Indeed, the mechanics of slender shallow arches are typically governed by snap-through instabilities and material nonlinearities are more important for higher arches.",
+            "startOffset": 64079,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 60606,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "In this regard, a linear design of a masonry arch would be based on maximising the compressive membrane force throughout the structure.",
+            "startOffset": 60471,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 30457,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "The capabilities of a generalised path-following technique exceed those of conventional path-following methods by enabling visualisation of the structure's behaviour in multi-dimensional space.",
+            "startOffset": 30264,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 43959,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "We now proceed to the evaluation of the arched beam structure, using generalised path-following techniques to elucidate physical insight into the underlying mechanics of the system.",
+            "startOffset": 43778,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 28375,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 28373,
+                    "startOffset": 28372
+                }
+            },
+            "secId": "sec1.1",
+            "sentence": "For a fascinating history of arch construction, and its theoretical development from arch theory to computational mechanics, the interested reader is directed to chapter 4 of reference [6].",
+            "startOffset": 28186,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 28185,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.1",
+            "sentence": "In this sense, a clear demarcation between masonry arches introduced in antiquity, i.e. concave structures constructed by a series of rigid building blocks joined with little to no tensile loading, and elastic arches, capable of resisting both membrane forces and bending moments, is necessary.",
+            "startOffset": 27891,
+            "title": "History of arched beam structures"
+        },
+        {
+            "endOffset": 59396,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Furthermore, Fig. 5d illustrates that for the optimum design not only the magnitude of the compressive load is reduced at the critical mid-span region, but the distribution of Nx is also more uniform across the entire arch domain.",
+            "startOffset": 59166,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 37895,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "Depending on the stability of this bifurcating branch, stable or unstable, the structure may transition onto this path or snap to another stable point.",
+            "startOffset": 37744,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 63406,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "This investigation produces equilibrium surfaces of the structural behaviour which facilitate an intuitive understanding of the structural stability response with respect to any number of parameters, here the external load, distribution of mass, total mass and arch height.",
+            "startOffset": 63133,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 63699,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "Nonlinear buckling behaviour of arched beams strongly depends on the arch rise height, the beam slenderness ratio, beam volume, and most interestingly the spanwise distribution of cross-sectional area.",
+            "startOffset": 63498,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 46791,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "It is from this fundamental path that other parameters are now explored.",
+            "startOffset": 46719,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 55612,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "As a result of reaching 1.56 times the critical snap-through load, the optimum configuration deforms more than the inverse-optimum configuration at the point of snap-through (see Fig. 5a).",
+            "startOffset": 55424,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 26521,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "In fact, snap-through instabilities of arched structures occur in a wide range of applications, from the tailorable design of micro-electromechanical systems (MEMS), to the meso-scale light-switch type structures, and further, to the failure of macro-scale civil structures.",
+            "startOffset": 26247,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 25857,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Although more efficient in their load carrying capacities, macro-scale thin-walled and slender structures are susceptible to structural instabilities.",
+            "startOffset": 25707,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 62856,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "This technique allows engineers to design more efficient structures by fully exploiting nonlinear kinematics.",
+            "startOffset": 62747,
+            "title": "Changing total arch volume, \u03bb3"
+        },
+        {
+            "endOffset": 32398,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib34": {
+                    "endOffset": 32338,
+                    "startOffset": 32333
+                },
+                "bib35": {
+                    "endOffset": 32338,
+                    "startOffset": 32333
+                },
+                "bib36": {
+                    "endOffset": 32338,
+                    "startOffset": 32333
+                },
+                "bib37": {
+                    "endOffset": 32396,
+                    "startOffset": 32394
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "More recently the technique has been embraced for the analysis of bistable plates and shells for morphing structures [34\u201336] and is also being considered as an optimisation tool [37].",
+            "startOffset": 32215,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 26087,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Small-scale structures relying on nonlinearities for functionality and large scale structures being prone to instabilities, it is evident that geometric nonlinearities need to be accounted for at all stages of the design process.",
+            "startOffset": 25858,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 30263,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "Whereby the only parameter that can be actively varied in these commercial solvers is the loading factor.",
+            "startOffset": 30158,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 42489,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The approach used for this is to consider a particular norm of the displacement field, e.g. the displacement at a specific point of interest u = uref, and to continue solution subsets in one parameter at a time.",
+            "startOffset": 42278,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 51743,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Furthermore, awareness of the unstable regions becomes far more significant for dynamic behaviour and thus a complete investigation of these regions is important.",
+            "startOffset": 51581,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 38479,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "From this didactic example we can deduce particular points that are of interest to the engineer of practical nonlinear structures: (i) limit loads that induce snapping, (ii) bifurcation points that lead to branch switching or snapping, and (iii) classical design points where critical stress values or displacement values are exceeded.",
+            "startOffset": 38144,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 36479,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "The chosen colour code denotes the degree of instability of the system.",
+            "startOffset": 36408,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 34417,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.3",
+            "sentence": "The overarching aim is to further evolve the engineer's capability to design structures by employing nonlinearities to potentially extend the concept of structural efficiency into the nonlinear elastic regime or include additional functionality by exploiting compliance and large reversible deformations which may replace more complex mechanisms.",
+            "startOffset": 34071,
+            "title": "Aims and objectives"
+        },
+        {
+            "endOffset": 45606,
+            "parents": [],
+            "secId": "sec3",
+            "sentence": "This element choice is merely for simplicity as the model arch problem considered here is governed by moderate rotations.",
+            "startOffset": 45485,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 64459,
+            "parents": [],
+            "secId": "sec4",
+            "sentence": "It shows that there are essentially two approaches to designing arches.",
+            "startOffset": 64388,
+            "title": "Conclusion"
+        },
+        {
+            "endOffset": 27341,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Micro-electromechanical systems provide a particularly challenging problem since the topic couples a number of disciplines, from solid and fluid mechanics to thermomechanics and electromagnetism.",
+            "startOffset": 27146,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 31866,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "The concepts introduced by Rheinboldt allowed, for example, loci of bifurcation and/or limit points to be traced directly with respect to an additional parameter (load factor being the first) without having to compute an entire set of load-displacement curves.",
+            "startOffset": 31606,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 44127,
+            "parents": [],
+            "refoffsets": {
+                "bib49": {
+                    "endOffset": 44087,
+                    "startOffset": 44082
+                },
+                "bib50": {
+                    "endOffset": 44087,
+                    "startOffset": 44082
+                },
+                "bib51": {
+                    "endOffset": 44087,
+                    "startOffset": 44082
+                }
+            },
+            "secId": "sec3",
+            "sentence": "A shallow arched beam with encastr\u00e9 boundary conditions at either end, ubiquitous in the structural mechanics literature [49\u201351], is an ideal problem for this purpose.",
+            "startOffset": 43960,
+            "title": "Instability analysis using generalised path-following"
+        },
+        {
+            "endOffset": 29550,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 29394,
+                    "startOffset": 29392
+                },
+                "bib11": {
+                    "endOffset": 29405,
+                    "startOffset": 29403
+                },
+                "bib12": {
+                    "endOffset": 29408,
+                    "startOffset": 29406
+                },
+                "bib13": {
+                    "endOffset": 29428,
+                    "startOffset": 29426
+                },
+                "bib14": {
+                    "endOffset": 29431,
+                    "startOffset": 29429
+                },
+                "bib15": {
+                    "endOffset": 29451,
+                    "startOffset": 29446
+                },
+                "bib16": {
+                    "endOffset": 29451,
+                    "startOffset": 29446
+                },
+                "bib17": {
+                    "endOffset": 29451,
+                    "startOffset": 29446
+                },
+                "bib18": {
+                    "endOffset": 29451,
+                    "startOffset": 29446
+                },
+                "bib19": {
+                    "endOffset": 29467,
+                    "startOffset": 29465
+                },
+                "bib9": {
+                    "endOffset": 29391,
+                    "startOffset": 29390
+                }
+            },
+            "secId": "sec1.2",
+            "sentence": "Conventional path-following techniques are based on a single parameter, either: displacement [9,10], load [11,12], external work [13,14], arc-length [15\u201318], or others [19], and these result in a single load-displacement curve, as illustrated in Fig. 1a.",
+            "startOffset": 29296,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 29812,
+            "parents": [
+                {
+                    "id": "sec1",
+                    "title": "Introduction"
+                }
+            ],
+            "secId": "sec1.2",
+            "sentence": "This curve is, however, only a single equilibrium locus on a multi-dimensional solution manifold parametrised by any number of other variables that can influence the behaviour of the structure, e.g. material properties, geometric dimensions, imperfections, etc.",
+            "startOffset": 29551,
+            "title": "Generalised path-following in structural mechanics"
+        },
+        {
+            "endOffset": 46719,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.1",
+            "sentence": "As defined above the baseline configuration corresponds to \u03bb2 = 1, \u03bb3 = 0.2586 m2 and \u03bb4 = 0.1 and for this configuration the solution path illustrates the classic snap-through behaviour illustrated in Fig. 1a.",
+            "startOffset": 46509,
+            "title": "Instabilities with varying arch height, \u03bb4"
+        },
+        {
+            "endOffset": 62746,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.3",
+            "sentence": "Each equilibrium curve drawn in Fig. 6 represents a fixed load, and it is therefore possible to follow a given load to find a specified displacement before or even after snap-through has occurred.",
+            "startOffset": 62550,
+            "title": "Changing total arch volume, \u03bb3"
+        },
+        {
+            "endOffset": 58044,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Precisely the same mechanism can be observed for the arch studied here.",
+            "startOffset": 57973,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 42277,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "For visualisation purposes it is convenient to reduce the dimensionality of the presented results from (n + p)-dimensional solution space to a more palatable two- or three-dimensional space.",
+            "startOffset": 42087,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 49528,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "The second parameter \u03bb2, evaluated herein relates to the distribution of cross-sectional area along the span of the arch.",
+            "startOffset": 49407,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 51427,
+            "parents": [
+                {
+                    "id": "sec3",
+                    "title": "Instability analysis using generalised path-following"
+                }
+            ],
+            "secId": "sec3.2",
+            "sentence": "Of course, the red and green segments of the equilibrium path are unstable and therefore of relatively little practical use to the practical engineer, but it is often important to include these regions as they are important for imperfection sensitivity.",
+            "startOffset": 51174,
+            "title": "Optimising distribution of mass, \u03bb2"
+        },
+        {
+            "endOffset": 37553,
+            "parents": [],
+            "secId": "sec2",
+            "sentence": "As the control parameter increases (or decreases) beyond a limit point, the structure snaps to an adjacent stable equilibrium state at the specified load, as shown by the dotted arrow.",
+            "startOffset": 37369,
+            "title": "Problem formulation"
+        },
+        {
+            "endOffset": 27603,
+            "parents": [],
+            "secId": "sec1",
+            "sentence": "Established methods for exploring a nonlinear design space require onerous parametric studies.",
+            "startOffset": 27509,
+            "title": "Introduction"
+        }
+    ],
+    "docId": "S0168874X17305899",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "Bradley.Cox@bristol.ac.uk",
+                "first": "B. S.",
+                "initial": "B.S.",
+                "last": "Cox"
+            },
+            {
+                "email": "Rainer.Groh@bristol.ac.uk",
+                "first": "R. M.J.",
+                "initial": "R.M.J.",
+                "last": "Groh"
+            },
+            {
+                "email": "Daniele.Avitabile@nottingham.ac.uk",
+                "first": "D.",
+                "initial": "D.",
+                "last": "Avitabile"
+            },
+            {
+                "email": "Alberto.Pirrera@bristol.ac.uk",
+                "first": "A.",
+                "initial": "A.",
+                "last": "Pirrera"
+            }
+        ],
+        "doi": "10.1016/j.finel.2018.01.004",
+        "firstpage": "1",
+        "issn": "0168874X",
+        "keywords": [
+            "Arches",
+            "Bifurcation",
+            "Generalised path-following",
+            "Numerical continuation",
+            "Parametric analysis",
+            "Snap-through"
+        ],
+        "lastpage": "10",
+        "openaccess": "Full",
+        "pub_year": 2018,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "Exploring the design space of nonlinear shallow arches with generalised path-following"
+    }
+}

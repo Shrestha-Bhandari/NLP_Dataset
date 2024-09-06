@@ -1,0 +1,4504 @@
+{
+    "abstract": "Three models were developed to simulate the transfer of prestress force from steel to concrete in pre-tensioned concrete elements. The first is an analytical model based on the thick-walled cylinder theory and considers linear material properties for both steel and concrete. The second is an axi-symmetric finite element (FE) model with linear material properties; it is used to verify the analytical model. The third model is a three dimensional nonlinear FE model. This model considers the post-cracking behaviour of concrete as well as concrete shrinkage and the time of prestress releasing. A new expression from the analytical model is developed to estimate the transmission length as well as the stress distribution along the tendon. The paper also presents a parametric study to illustrate the impact of diameter of prestressing steel, concrete cover, concrete strength, initial prestress, section size, surface roughness of prestressing steel, time of prestress release, and the member length on the transfer of stress in pre-tensioned concrete elements.",
+    "author_highlights": [
+        {
+            "endOffset": 49515,
+            "sentence": "Three numerical models were developed to simulate prestress transfer in pre-tensioned concrete and validated against previous experiments.",
+            "startOffset": 49377
+        },
+        {
+            "endOffset": 49629,
+            "sentence": "A closed-form expression is proposed to predict the transmission length and stress distribution along the tendon.",
+            "startOffset": 49516
+        },
+        {
+            "endOffset": 49707,
+            "sentence": "A parametric study was conducted on factors affecting the prestress transfer.",
+            "startOffset": 49630
+        },
+        {
+            "endOffset": 49798,
+            "sentence": "The use of thick wall cylinder theory in the modelling of prestress transfer was examined.",
+            "startOffset": 49708
+        }
+    ],
+    "bib_entries": {
+        "bib1": {
+            "authors": [
+                {
+                    "first": "Jos\u00e9 M.",
+                    "initial": "J.M.",
+                    "last": "Ben\u00edtez"
+                },
+                {
+                    "first": "Jaime C.",
+                    "initial": "J.C.",
+                    "last": "G\u00e1lvez"
+                }
+            ],
+            "doi": "10.1617/s11527-010-9625-5",
+            "firstpage": "263",
+            "issn": "13595997",
+            "lastpage": "278",
+            "pub_year": 2011,
+            "title": "Bond modelling of prestressed concrete during the prestressing force release",
+            "volume": "44"
+        },
+        "bib10": null,
+        "bib11": null,
+        "bib12": null,
+        "bib13": {
+            "authors": [
+                {
+                    "first": "Jeffrey",
+                    "initial": "J.",
+                    "last": "Kannel"
+                },
+                {
+                    "first": "Catherine",
+                    "initial": "C.",
+                    "last": "French"
+                },
+                {
+                    "first": "Henryk",
+                    "initial": "H.",
+                    "last": "Stolarski"
+                }
+            ],
+            "doi": "10.15554/pcij.01011997.42.54",
+            "firstpage": "42",
+            "issn": "08879672",
+            "lastpage": "54",
+            "pub_year": 1997,
+            "title": "Release methodology of strands to reduce end cracking in pretensioned concrete girders",
+            "volume": "42"
+        },
+        "bib14": {
+            "authors": [
+                {
+                    "first": "Sakdirat",
+                    "initial": "S.",
+                    "last": "Kaewunruen"
+                },
+                {
+                    "first": "Alex M.",
+                    "initial": "A.M.",
+                    "last": "Remennikov"
+                }
+            ],
+            "firstpage": "323",
+            "lastpage": "328",
+            "pub_year": 2006,
+            "title": "Nonlinear finite element modeling of railway prestressed concrete sleeper",
+            "volume": "4"
+        },
+        "bib15": null,
+        "bib16": null,
+        "bib17": {
+            "authors": [
+                {
+                    "first": "Ashraf",
+                    "initial": "A.",
+                    "last": "Ayoub"
+                },
+                {
+                    "first": "Filip C.",
+                    "initial": "F.C.",
+                    "last": "Filippou"
+                }
+            ],
+            "doi": "10.1061/(ASCE)ST.1943-541X.0000132",
+            "firstpage": "401",
+            "issn": "07339445",
+            "lastpage": "409",
+            "pub_year": 2010,
+            "title": "Finite-element model for pretensioned prestressed concrete girders",
+            "volume": "136"
+        },
+        "bib18": {
+            "authors": [
+                {
+                    "first": "Amir A.",
+                    "initial": "A.A.",
+                    "last": "Arab"
+                },
+                {
+                    "first": "Sameh S.",
+                    "initial": "S.S.",
+                    "last": "Badie"
+                },
+                {
+                    "first": "Majid T.",
+                    "initial": "M.T.",
+                    "last": "Manzari"
+                }
+            ],
+            "doi": "10.1016/j.engstruct.2011.02.028",
+            "firstpage": "1918",
+            "issn": "01410296",
+            "lastpage": "1929",
+            "pub_year": 2011,
+            "title": "A methodological approach for finite element modeling of pretensioned concrete members at the release of pretensioning",
+            "volume": "33"
+        },
+        "bib19": {
+            "authors": [
+                {
+                    "first": "Vincent",
+                    "initial": "V.",
+                    "last": "Briere"
+                },
+                {
+                    "first": "Kent A.",
+                    "initial": "K.A.",
+                    "last": "Harries"
+                },
+                {
+                    "first": "Jarret",
+                    "initial": "J.",
+                    "last": "Kasan"
+                },
+                {
+                    "first": "Charles",
+                    "initial": "C.",
+                    "last": "Hager"
+                }
+            ],
+            "doi": "10.1016/j.conbuildmat.2012.11.064",
+            "firstpage": "650",
+            "issn": "09500618",
+            "lastpage": "658",
+            "pub_year": 2013,
+            "title": "Dilation behavior of seven-wire prestressing strand-The Hoyer effect",
+            "volume": "40"
+        },
+        "bib2": null,
+        "bib20": {
+            "authors": [
+                {
+                    "first": "Peter",
+                    "initial": "P.",
+                    "last": "Marti"
+                },
+                {
+                    "first": "Robert",
+                    "initial": "R.",
+                    "last": "Ullner"
+                },
+                {
+                    "first": "Markus",
+                    "initial": "M.",
+                    "last": "Faller"
+                },
+                {
+                    "first": "Christoph",
+                    "initial": "C.",
+                    "last": "Czaderski"
+                },
+                {
+                    "first": "Masoud",
+                    "initial": "M.",
+                    "last": "Motavalli"
+                }
+            ],
+            "firstpage": "51",
+            "issn": "08893241",
+            "lastpage": "89",
+            "pub_year": 2008,
+            "title": "Temporary corrosion protection and bond of prestressing steel",
+            "volume": "105"
+        },
+        "bib21": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Cairns"
+                },
+                {
+                    "first": "Y.",
+                    "initial": "Y.",
+                    "last": "Du"
+                },
+                {
+                    "first": "D.",
+                    "initial": "D.",
+                    "last": "Law"
+                }
+            ],
+            "doi": "10.1016/j.conbuildmat.2005.06.054",
+            "firstpage": "190",
+            "issn": "09500618",
+            "lastpage": "197",
+            "pub_year": 2007,
+            "title": "Influence of corrosion on the friction characteristics of the steel/concrete interface",
+            "volume": "21"
+        },
+        "bib22": null,
+        "bib23": null,
+        "bib24": null,
+        "bib25": {
+            "authors": [
+                {
+                    "first": "Jos\u00e9 R.",
+                    "initial": "J.R.",
+                    "last": "Mart\u00ed-Vargas"
+                },
+                {
+                    "first": "C\u00e9sar A.",
+                    "initial": "C.A.",
+                    "last": "Arbel\u00e1ez"
+                },
+                {
+                    "first": "Pedro",
+                    "initial": "P.",
+                    "last": "Serna-Ros"
+                },
+                {
+                    "first": "Carmen",
+                    "initial": "C.",
+                    "last": "Castro-Bugallo"
+                }
+            ],
+            "firstpage": "487",
+            "issn": "08893241",
+            "lastpage": "494",
+            "pub_year": 2007,
+            "title": "Reliability of transfer length estimation from strand end slip",
+            "volume": "104"
+        },
+        "bib26": {
+            "authors": [
+                {
+                    "first": "K.",
+                    "initial": "K.",
+                    "last": "Lundgren"
+                }
+            ],
+            "doi": "10.1680/macr.2005.57.7.371",
+            "firstpage": "371",
+            "issn": "00249831",
+            "lastpage": "382",
+            "pub_year": 2005,
+            "title": "Bond between ribbed bars and concrete. Part 1: Modified model",
+            "volume": "57"
+        },
+        "bib27": {
+            "authors": [
+                {
+                    "first": "M. Fern\u00e1ndez",
+                    "initial": "M.F.",
+                    "last": "Ruiz"
+                },
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Muttoni"
+                },
+                {
+                    "first": "P. G.",
+                    "initial": "P.G.",
+                    "last": "Gambarova"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9445(2007)133:10(1364)",
+            "firstpage": "1364",
+            "issn": "07339445",
+            "lastpage": "1372",
+            "pub_year": 2007,
+            "title": "Analytical modeling of the pre- and postyield behavior of bond in reinforced concrete",
+            "volume": "133"
+        },
+        "bib28": null,
+        "bib29": {
+            "authors": [
+                {
+                    "first": "A.",
+                    "initial": "A.",
+                    "last": "Hillerborg"
+                },
+                {
+                    "first": "M.",
+                    "initial": "M.",
+                    "last": "Mod\u00e9er"
+                },
+                {
+                    "first": "P. E.",
+                    "initial": "P.E.",
+                    "last": "Petersson"
+                }
+            ],
+            "doi": "10.1016/0008-8846(76)90007-7",
+            "firstpage": "773",
+            "issn": "00088846",
+            "lastpage": "781",
+            "pub_year": 1976,
+            "title": "Analysis of crack formation and crack growth in concrete by means of fracture mechanics and finite elements",
+            "volume": "6"
+        },
+        "bib3": {
+            "authors": [
+                {
+                    "first": "J. R.",
+                    "initial": "J.R.",
+                    "last": "Mart\u00ed-Vargas"
+                },
+                {
+                    "first": "P.",
+                    "initial": "P.",
+                    "last": "Serna"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Navarro-Gregori"
+                },
+                {
+                    "first": "L.",
+                    "initial": "L.",
+                    "last": "Pallar\u00e9s"
+                }
+            ],
+            "doi": "10.1016/j.engstruct.2012.03.056",
+            "firstpage": "403",
+            "issn": "01410296",
+            "lastpage": "412",
+            "pub_year": 2012,
+            "title": "Bond of 13mm prestressing steel strands in pretensioned concrete members",
+            "volume": "41"
+        },
+        "bib30": {
+            "authors": [
+                {
+                    "first": "D. V.",
+                    "initial": "D.V.",
+                    "last": "Phillips"
+                },
+                {
+                    "first": "Zhang",
+                    "initial": "Z.",
+                    "last": "Binsheng"
+                }
+            ],
+            "doi": "10.1680/macr.1993.45.162.25",
+            "firstpage": "25",
+            "issn": "00249831",
+            "lastpage": "35",
+            "pub_year": 1993,
+            "title": "Direct tension tests on notched and un-notched plain concrete specimens",
+            "volume": "45"
+        },
+        "bib31": {
+            "authors": [
+                {
+                    "first": "Jeeho",
+                    "initial": "J.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Gregory L.",
+                    "initial": "G.L.",
+                    "last": "Fenves"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9399(1998)124:8(892)",
+            "firstpage": "892",
+            "issn": "07339399",
+            "lastpage": "900",
+            "pub_year": 1998,
+            "title": "Plastic-damage model for cyclic loading of concrete structures",
+            "volume": "124"
+        },
+        "bib32": {
+            "authors": [
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Lubliner"
+                },
+                {
+                    "first": "J.",
+                    "initial": "J.",
+                    "last": "Oliver"
+                },
+                {
+                    "first": "S.",
+                    "initial": "S.",
+                    "last": "Oller"
+                },
+                {
+                    "first": "E.",
+                    "initial": "E.",
+                    "last": "O\u00f1ate"
+                }
+            ],
+            "doi": "10.1016/0020-7683(89)90050-4",
+            "firstpage": "299",
+            "issn": "00207683",
+            "lastpage": "326",
+            "pub_year": 1989,
+            "title": "A plastic-damage model for concrete",
+            "volume": "25"
+        },
+        "bib33": null,
+        "bib34": {
+            "authors": [
+                {
+                    "first": "Bernd",
+                    "initial": "B.",
+                    "last": "Koeberl"
+                },
+                {
+                    "first": "Kaspar",
+                    "initial": "K.",
+                    "last": "Willam"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9399(2008)134:9(804)",
+            "firstpage": "804",
+            "issn": "07339399",
+            "lastpage": "808",
+            "pub_year": 2008,
+            "title": "Question of tension softening versus tension stiffening in plain and reinforced concrete",
+            "volume": "134"
+        },
+        "bib35": {
+            "authors": [
+                {
+                    "first": "Antonio",
+                    "initial": "A.",
+                    "last": "Nanni"
+                },
+                {
+                    "first": "Masaharu",
+                    "initial": "M.",
+                    "last": "Tanigaki"
+                },
+                {
+                    "first": "Koichi",
+                    "initial": "K.",
+                    "last": "Hasuo"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9445(1992)118:10(2837)",
+            "firstpage": "2837",
+            "issn": "07339445",
+            "lastpage": "2854",
+            "pub_year": 1992,
+            "title": "Bond anchorage of pretensioned frp tendon at force release",
+            "volume": "118"
+        },
+        "bib36": {
+            "authors": [
+                {
+                    "first": "Do Young",
+                    "initial": "D.Y.",
+                    "last": "Moon"
+                },
+                {
+                    "first": "Goangseup",
+                    "initial": "G.",
+                    "last": "Zi"
+                },
+                {
+                    "first": "Jang Ho",
+                    "initial": "J.H.",
+                    "last": "Kim"
+                },
+                {
+                    "first": "Seung Jung",
+                    "initial": "S.J.",
+                    "last": "Lee"
+                },
+                {
+                    "first": "Gyuseon",
+                    "initial": "G.",
+                    "last": "Kim"
+                }
+            ],
+            "doi": "10.1016/j.engstruct.2010.04.030",
+            "firstpage": "2570",
+            "issn": "01410296",
+            "lastpage": "2578",
+            "pub_year": 2010,
+            "title": "On strain change of prestressing strand during detensioning procedures",
+            "volume": "32"
+        },
+        "bib37": {
+            "authors": [
+                {
+                    "first": "John",
+                    "initial": "J.",
+                    "last": "Newman"
+                },
+                {
+                    "first": "Ban Seng",
+                    "initial": "B.S.",
+                    "last": "Choo"
+                }
+            ],
+            "doi": "10.1016/B978-0-7506-5686-3.X5246-X",
+            "firstpage": "1",
+            "lastpage": "1433",
+            "pub_year": 2003,
+            "title": "Advanced concrete technology"
+        },
+        "bib38": {
+            "authors": [
+                {
+                    "first": "Paul",
+                    "initial": "P.",
+                    "last": "Zia"
+                },
+                {
+                    "first": "Talat",
+                    "initial": "T.",
+                    "last": "Mostafa"
+                }
+            ],
+            "firstpage": "54",
+            "lastpage": "65",
+            "pub_year": 1977,
+            "title": "DEVELOPMENT LENGTH OF PRESTRESSING STRANDS.",
+            "volume": "22"
+        },
+        "bib39": {
+            "authors": [
+                {
+                    "first": "Congqi",
+                    "initial": "C.",
+                    "last": "Fang"
+                },
+                {
+                    "first": "Karin",
+                    "initial": "K.",
+                    "last": "Lundgren"
+                },
+                {
+                    "first": "Liuguo",
+                    "initial": "L.",
+                    "last": "Chen"
+                },
+                {
+                    "first": "Chaoying",
+                    "initial": "C.",
+                    "last": "Zhu"
+                }
+            ],
+            "doi": "10.1016/j.cemconres.2004.04.006",
+            "firstpage": "2159",
+            "issn": "00088846",
+            "lastpage": "2167",
+            "pub_year": 2004,
+            "title": "Corrosion influence on bond in reinforced concrete",
+            "volume": "34"
+        },
+        "bib4": null,
+        "bib40": {
+            "authors": [
+                {
+                    "first": "Robert W.",
+                    "initial": "R.W.",
+                    "last": "Barnes"
+                },
+                {
+                    "first": "John W.",
+                    "initial": "J.W.",
+                    "last": "Grove"
+                },
+                {
+                    "first": "Ned H.",
+                    "initial": "N.H.",
+                    "last": "Burns"
+                }
+            ],
+            "firstpage": "740",
+            "issn": "08893241",
+            "lastpage": "748",
+            "pub_year": 2003,
+            "title": "Experimental Assessment of Factors Affecting Transfer Length",
+            "volume": "100"
+        },
+        "bib5": null,
+        "bib6": {
+            "authors": [
+                {
+                    "first": "Byung Hwan",
+                    "initial": "B.H.",
+                    "last": "Oh"
+                },
+                {
+                    "first": "Eui Sung",
+                    "initial": "E.S.",
+                    "last": "Kim"
+                }
+            ],
+            "firstpage": "821",
+            "issn": "08893241",
+            "lastpage": "830",
+            "pub_year": 2000,
+            "title": "Realistic evaluation of transfer lengths in pretensioned prestressed concrete members",
+            "volume": "97"
+        },
+        "bib7": null,
+        "bib8": null,
+        "bib9": {
+            "authors": [
+                {
+                    "first": "Byung",
+                    "initial": "B.",
+                    "last": "Hwan Oh"
+                },
+                {
+                    "first": "Eui",
+                    "initial": "E.",
+                    "last": "Sung Kim"
+                },
+                {
+                    "first": "Young",
+                    "initial": "Y.",
+                    "last": "Cheol Choi"
+                }
+            ],
+            "doi": "10.1061/(ASCE)0733-9399(2006)132:10(1057)",
+            "firstpage": "1057",
+            "issn": "07339399",
+            "lastpage": "1066",
+            "pub_year": 2006,
+            "title": "Theoretical analysis of transfer lengths in pretensioned prestressed concrete members",
+            "volume": "132"
+        }
+    },
+    "body_text": [
+        {
+            "endOffset": 62183,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "This assumption will be examined in Section 8.",
+            "startOffset": 62137,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 85066,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The comparison between the FE prediction, analytical model (i.e. Eq. (12)) and the experimental estimations of transmission length are shown in Fig. 22.",
+            "startOffset": 84914,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 86070,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 86069,
+                    "startOffset": 86065
+                }
+            },
+            "secId": "s0135",
+            "sentence": "Previous reports showed 20% coefficient of variance (COV) between upper and lower bound of the transmission length in observations under similar circumstances [22].",
+            "startOffset": 85906,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 73327,
+            "parents": [],
+            "secId": "s0070",
+            "sentence": "The material models used, prestressing modelling strategy and implemented solution algorithms are discussed below.",
+            "startOffset": 73213,
+            "title": "3D non-linear FE modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 76650,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 76649,
+                    "startOffset": 76645
+                }
+            },
+            "secId": "s0100",
+            "sentence": "In case of the biaxial loading tests, the angle of 31\u00b0 produces a small difference in out-of-plane strain caused by larger dilatancy in comparison to the angle about 25\u00b0 [31].",
+            "startOffset": 76475,
+            "title": "Flow rule"
+        },
+        {
+            "endOffset": 74129,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "Therefore, the post-cracking behaviour of concrete has to be considered in the concrete material model.",
+            "startOffset": 74026,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 91840,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0170",
+            "sentence": "No considerable change in either transmission length or effective prestress was observed after 21 days.",
+            "startOffset": 91737,
+            "title": "Time of release"
+        },
+        {
+            "endOffset": 69175,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 69174,
+                    "startOffset": 69170
+                }
+            },
+            "secId": "s0055",
+            "sentence": "The allowable slip was defined when the relative displacement exceeds 1.0% of the element length across the contact surface [24].",
+            "startOffset": 69046,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 71705,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The presence of slip causes a drop in the bond stress, Fig. 11b, and in the normal pressure, Fig. 11c, therefore the effective stress in the axi-symmetric FE model beyond the sliding zone, Figs. 11d and 10, is less than that in the analytical model.",
+            "startOffset": 71456,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 62330,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The prestress transfer in pre-tensioned concrete was model by examining the equilibrium, the compatibility and the bond conditions at each section.",
+            "startOffset": 62183,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 85263,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The comparisons against 12 specimens (i.e 24 measurements) show a reasonable agreement.",
+            "startOffset": 85176,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 67778,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The pressure starts from a high value at the end and decreases to nearly zero after the transmission length.",
+            "startOffset": 67670,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 80383,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "The sensitivity from element sizes of 25 mm, 20 mm, and 10 mm at the outer edges was also examined; no remarkable change on the model results was observed.",
+            "startOffset": 80228,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 70413,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The slip is implicitly considered in the analytical model by using of the Coulomb\u05f3s friction law which is only true in the case of slippage.",
+            "startOffset": 70273,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 78992,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 78991,
+                    "startOffset": 78987
+                }
+            },
+            "secId": "s0115",
+            "sentence": "The following strategies are recommended to reduce mesh dependency [28]:",
+            "startOffset": 78920,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 79786,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "The sensitivity of the numerical solution to the mesh discretisation was investigated in order to identify a suitable mesh.",
+            "startOffset": 79663,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 84521,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The same method was followed to estimate the corresponding transmission length of their specimens from the FE model.",
+            "startOffset": 84405,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 93963,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "Fig. 32 shows similar stress contours for all beams.",
+            "startOffset": 93911,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 63357,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The mechanical resistance only contributes to bond when deformed steel bars are used.",
+            "startOffset": 63272,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 78131,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "The augmented Lagrange multiplier solver, which updates the contact stiffness any iteration, was used in solving of the contact behaviour in the normal direction of the interface while the penalty method was used to solve the contact tangential behaviour.",
+            "startOffset": 77876,
+            "title": "Bond modelling and model solution"
+        },
+        {
+            "endOffset": 81394,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "In the third step the prestressing steel released (Fig. 17c).",
+            "startOffset": 81333,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 70913,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The element size used in the mesh in this example is discretised into 200 divisions in the longitudinal direction (i.e. 15 mm), and 3 divisions (i.e. 2.12 mm) and 10 divisions (i.e. 3 mm) in radial direction in the steel and concrete, respectively.",
+            "startOffset": 70665,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 80921,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "The prestressing procedure includes three different steps.",
+            "startOffset": 80863,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 57399,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib16": {
+                    "endOffset": 57398,
+                    "startOffset": 57394
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Concrete cracking and crushing were modelled using the concrete damage plasticity model proposed by Willam and Warnke [16].",
+            "startOffset": 57276,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 67584,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "The general trend of the stress profile is exponential, which can be easily seen in Eq. (12), starting from zero at the end and yields to asymptote beyond the transmission zone.",
+            "startOffset": 67407,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 83941,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "It can be clearly seen that the variability in measurement of experimental data and the number of measuring points between the two figures.",
+            "startOffset": 83802,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 68044,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The model\u05f3s aim is to verify the proposed analytical model.",
+            "startOffset": 67985,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 85469,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "In the other hand the analytical model overestimate the transmission length by 11% based on ten specimens.",
+            "startOffset": 85363,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 94283,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "Also the von Mises contours are plotted for the 200\u00d7200 mm2 beams with different concrete cover shown in Section 7.4 (Fig. 33).",
+            "startOffset": 94156,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 55109,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 55004,
+                    "startOffset": 55001
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The model by Oh et al. [9] considered non-linear anisotropic concrete behaviour after the occurrence of cracks and assumed no slip.",
+            "startOffset": 54978,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 63658,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 63657,
+                    "startOffset": 63653
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Some researchers pointed out that the contribution of the torsional stresses and lack-of-fit, from the variation in the pitch of outer strand wires, to the frictional stress is very low [22].",
+            "startOffset": 63467,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 89794,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0155",
+            "sentence": "It can also be seen that in all beams the effective prestress force develop to the same percentage.",
+            "startOffset": 89695,
+            "title": "Initial prestress"
+        },
+        {
+            "endOffset": 56305,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 56144,
+                    "startOffset": 56140
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Kannel et al. [13] used the ABAQUS 5.4 software to model pre-tensioned concrete girders using three dimensional continuum elements for concrete and truss elements for the strands.",
+            "startOffset": 56126,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 95253,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The developed 3D FE model was then used to examine the assumptions of the thick-wall cylinder model to simulate the prestress transfer in pre-tensioned concrete elements which was found to be reliable.",
+            "startOffset": 95052,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 58724,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Although this technique is less complex and has less computational cost it assumes a perfect bond and thereby neglects the possibility of strand slip.",
+            "startOffset": 58574,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 94377,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "In this case, also circular contours are observed around the tendon with different intensity.",
+            "startOffset": 94284,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 78782,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 78781,
+                    "startOffset": 78777
+                }
+            },
+            "secId": "s0115",
+            "sentence": "Therefore, the global response may not be identical when different element sizes are used normal to the crack direction [31].",
+            "startOffset": 78657,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 94483,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "The beams with smaller concrete cover show higher level of stress compare to those with the larger cover.",
+            "startOffset": 94378,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 55385,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "The literature shows that the use of the thick-wall cylinder concept in modelling of prestress transfer is simple and provides a more rational basis.",
+            "startOffset": 55236,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 57159,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib14": {
+                    "endOffset": 57158,
+                    "startOffset": 57151
+                },
+                "bib15": {
+                    "endOffset": 57158,
+                    "startOffset": 57151
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The ANSYS FE package was also used to model pre-tensioned concrete beams and railway sleepers [14,15].",
+            "startOffset": 57057,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 59208,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The prestressing stage was effectively modelled by applying initial strain then the releasing stage was simulated by applying a strain-compatibility condition.",
+            "startOffset": 59049,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 82973,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "Fig. 18 shows the visualisation of concrete cracks around the tendon and along the transmission length.",
+            "startOffset": 82870,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 88729,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0150",
+            "sentence": "This is because of increasing concrete tensile strength and Young\u05f3s modulus as a result of increasing the compressive strength.",
+            "startOffset": 88602,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 93910,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "The beams with a width of 100 mm and depth vary from 125 mm up to 250 mm (Table 2).",
+            "startOffset": 93827,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 56832,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The use of truss elements, which account only for axial forces, neglects the effect of radial deformation due to Poisson\u05f3s effect.",
+            "startOffset": 56702,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 60354,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "In pre-tensioned concrete elements, when the prestress is released after hardening of concrete, the prestress force transfers gradually into the concrete.",
+            "startOffset": 60200,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 68341,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Regarding the contact element, the contact between two bodies occurs when the normal distance between two pairs of nodes on these bodies lies within a specified tolerance.",
+            "startOffset": 68170,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 69655,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "In the first step, which simulates the prestressing step, an initial stress equal to the initial prestress was applied to the prestressing steel before any solution step and before concrete casting.",
+            "startOffset": 69457,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 92027,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib39": {
+                    "endOffset": 92026,
+                    "startOffset": 92022
+                }
+            },
+            "secId": "s0175",
+            "sentence": "It is well known that the increase of steel roughness due to the presence of rust on the steel enhances the bond between steel and concrete [39].",
+            "startOffset": 91882,
+            "title": "Surface roughness of prestressing steel"
+        },
+        {
+            "endOffset": 94644,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "A closed-form expression of the transmission length is presented in this paper based on a linear analytical model and the thick-wall cylinder theory.",
+            "startOffset": 94495,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 58573,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In the first approach, the strand was modelled as a truss element that was embedded in the concrete \u201cembedment approach\u201d.",
+            "startOffset": 58452,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 75214,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 75057,
+                    "startOffset": 75053
+                },
+                "bib32": {
+                    "endOffset": 75133,
+                    "startOffset": 75129
+                }
+            },
+            "secId": "s0090",
+            "sentence": "The model uses the yield function proposed by Lee and Fenves [31] which is a modification of the plastic damage model of Lubliner et al. [32] to consider different strength evolution under concrete tension and compression.",
+            "startOffset": 74992,
+            "title": "Concrete damage plasticity (CDP)"
+        },
+        {
+            "endOffset": 80826,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "This is followed by the validations of the 3D FE model against previous experiments.",
+            "startOffset": 80742,
+            "title": "Discussion of results of the 3D FE model"
+        },
+        {
+            "endOffset": 93541,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "The von Mises contours take a circular shape and they diminish at a distance approximately equal to the concrete cover, Fig. 31.",
+            "startOffset": 93413,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 58812,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In the extrusion approach, prestressing steel was modelled using 8-node solid elements.",
+            "startOffset": 58725,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 52359,
+            "parents": [],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 52358,
+                    "startOffset": 52355
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Because of the rapid innovation in construction industry and introducing of new types of concrete materials (i.e. high-strength, self-compacting etc.), experimental tests are needed to estimate the transmission length [1].",
+            "startOffset": 52137,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 70575,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "In order to scrutinise the impact of neglecting the compatibility in longitudinal direction, the analytical model is assessed against the axi-symmetric FE model.",
+            "startOffset": 70414,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 79882,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "The number of segments around the steel (Fig. 15) is defined as np and was varied from 8 to 64.",
+            "startOffset": 79787,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 72541,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "The results of the axi-symmetric FE model in Fig. 12 show that the hoop stress in the first part of the transmission length reaches values exceeding the concrete tensile strength adjacent to the tendon.",
+            "startOffset": 72339,
+            "title": "Predicted stress in concrete"
+        },
+        {
+            "endOffset": 82358,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "Furthermore, the subtraction of shrinkage losses from the initial stress in the modelling of prestress transfer does not properly account for the variation of shrinkage strain profile along the transmission length.",
+            "startOffset": 82144,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 89694,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0155",
+            "sentence": "This observation is supported by Eq. (13).",
+            "startOffset": 89652,
+            "title": "Initial prestress"
+        },
+        {
+            "endOffset": 93685,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "This observation means the assumption that the prestressing steel is a solid cylinder surrounded by a hollow thick-wall cylinder is acceptable.",
+            "startOffset": 93542,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 58909,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Bond behaviour between steel and concrete was modelled using surface to surface contact element.",
+            "startOffset": 58813,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 68539,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "When this distance is positive (i.e. gap), separation occurs and the contact pressure is set to zero.",
+            "startOffset": 68438,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 74480,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "The behaviour of concrete in tension was modelled as linear-elastic up to its tensile strength, which was taken as one-tenth of the concrete compressive strength.",
+            "startOffset": 74318,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 70664,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "As an example, consider a pre-tensioned concrete member with parameters shown in Table 1.",
+            "startOffset": 70575,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 56125,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 56124,
+                    "startOffset": 56120
+                }
+            },
+            "secId": "s0020",
+            "sentence": "The FE method has been used by other researchers to study the effects of the releasing techniques of prestressing steel on the stress field and cracks at the end zone [13].",
+            "startOffset": 55953,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 61729,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The inner diameter of the concrete cylinder equals the diameter of the prestressing steel before releasing, and the outer diameter measures to the nearest concrete surface as shown in Fig. 3.",
+            "startOffset": 61538,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 66488,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Eq. (12) gives the distribution of the stress in the prestressing steel along the transmission zone.",
+            "startOffset": 66388,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 60062,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These models include a linear analytical model, which has been verified by means of an axi-symmetric FE model; both analytical and axi-symmetric models approximate the concrete around the pre-tensioned steel to a hollow concrete cylinder with thickness equal to the smallest concrete cover.",
+            "startOffset": 59772,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 62406,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The bond between steel and concrete is modelled using Coulomb friction law.",
+            "startOffset": 62331,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 71151,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Good agreement between the model solutions is observed for the transmission zone.",
+            "startOffset": 71070,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 70991,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "No notable improvement was observed in the results for smaller element sizes.",
+            "startOffset": 70914,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 93826,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "More investigations are carried out on beams with different cross section and constant concrete cover of 30 mm (i.e. 3d) as shown in Fig. 32.",
+            "startOffset": 93685,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 67406,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fig. 8a shows the distribution of stress in prestressing steel in the longitudinal direction.",
+            "startOffset": 67313,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 72896,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib26": {
+                    "endOffset": 72895,
+                    "startOffset": 72888
+                },
+                "bib27": {
+                    "endOffset": 72895,
+                    "startOffset": 72888
+                }
+            },
+            "secId": "s0065",
+            "sentence": "One disadvantage of the axi-symmetric modelling is that the number of radial cracks needs to be assumed (2\u20136 cracks) in order to account for the non-linear behaviour of concrete [26,27].",
+            "startOffset": 72710,
+            "title": "Predicted stress in concrete"
+        },
+        {
+            "endOffset": 89532,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0155",
+            "sentence": "The increasing of the initial prestress force causes an increase in the magnitude of circumferential stresses around the prestressing steel and hence the concrete cracking.",
+            "startOffset": 89360,
+            "title": "Initial prestress"
+        },
+        {
+            "endOffset": 52812,
+            "parents": [],
+            "refoffsets": {
+                "bib10": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib11": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib3": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib4": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib5": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib6": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib7": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib8": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                },
+                "bib9": {
+                    "endOffset": 52811,
+                    "startOffset": 52805
+                }
+            },
+            "secId": "s0005",
+            "sentence": "The transmission length is influenced by many factors such as diameter of prestressing steel, initial or effective prestress, concrete strength, type of release, type of tendon, bond condition, concrete cover, surface condition and size of the section on the transmission length [3\u201311].",
+            "startOffset": 52526,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53335,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "This paper is organised in nine sections.",
+            "startOffset": 53294,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72056,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 72005,
+                    "startOffset": 71994
+                },
+                "bib17": {
+                    "endOffset": 72005,
+                    "startOffset": 71994
+                },
+                "bib7": {
+                    "endOffset": 72055,
+                    "startOffset": 72050
+                },
+                "bib8": {
+                    "endOffset": 72005,
+                    "startOffset": 71994
+                },
+                "bib9": {
+                    "endOffset": 72055,
+                    "startOffset": 72050
+                }
+            },
+            "secId": "s0060",
+            "sentence": "The general trend of these curves is consistent with the findings of many other researchers [8,9,12,17] and with previous experimental observations [7,9].",
+            "startOffset": 71902,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 77875,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "The Coulomb friction law was used to define the frictional behaviour between steel and concrete with a coefficient of friction of 0.4 and zero cohesion.",
+            "startOffset": 77723,
+            "title": "Bond modelling and model solution"
+        },
+        {
+            "endOffset": 70133,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The slip of a tendon at a certain section can be defined as the relative displacement at the interface between concrete and steel cylinders.",
+            "startOffset": 69993,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 74025,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "In most practical cases, the circumferential stresses exceed the concrete tensile strength which leads to the formation of radial cracks around the prestressing steel.",
+            "startOffset": 73858,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 97047,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "In general, the paper has drawn advanced numerical simulations to improve the understanding of the prestressed transfer in pre-tensioned concrete.",
+            "startOffset": 96901,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 60928,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "This pressure induces a frictional resistance, which acts against the shortening of the pre-tensioning steel and holds the bar/strand in tension (Fig. 2b).",
+            "startOffset": 60773,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 90540,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0160",
+            "sentence": "The trend also shows that the reduction in the transmission length reached a plateau beyond a concrete cover of 5.5d in this simulation.",
+            "startOffset": 90404,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 54640,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "Although the model assumed an infinite radius for concrete and neglected the effect of longitudinal stress on concrete, a simple expression for prestress transfer and transmission length was given.",
+            "startOffset": 54443,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 79529,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "In addition to the above, in this study, the effective stress was used to assess mesh sensitivity.",
+            "startOffset": 79431,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 73212,
+            "parents": [],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 73211,
+                    "startOffset": 73207
+                }
+            },
+            "secId": "s0070",
+            "sentence": "A non-linear 3D model of a single-pre-tensioned concrete beam was developed using the commercial finite element package ABAQUS Version 6.10 [28].",
+            "startOffset": 73067,
+            "title": "3D non-linear FE modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 97177,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "It has also proposed an analytical formula of the transmission length as well the stress distribution over the transmission zone.",
+            "startOffset": 97048,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 85681,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "However, the 3D FE model completed in about 3 h in one CPU compared to 5 ms. Take into account, in both experiments sets, the average difference in measuring the transmission length in the two ends is about 14%.",
+            "startOffset": 85470,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 90771,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 90684,
+                    "startOffset": 90681
+                }
+            },
+            "secId": "s0165",
+            "sentence": "Russell and Burns [5] reported that large elements with multiple strands have a shorter transmission length.",
+            "startOffset": 90663,
+            "title": "Cross-sectional area of concrete"
+        },
+        {
+            "endOffset": 96811,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The presented parametric study, based on the 3D FE model, provides useful information about the influence of steel diameter, concrete cover, concrete strength, initial prestress, section size, member length, time of prestress releasing, and surface condition of the tendon on the transfer of prestress force from steel to concrete in pre-tensioned concrete elements.",
+            "startOffset": 96445,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 80741,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0120",
+            "sentence": "In this section the simulation of prestressing steps in pre-tensioned concrete elements is illustrated and the influence of concrete shrinkage on prestress transfer is shown, based on the 3D FE non-linear model.",
+            "startOffset": 80530,
+            "title": "Discussion of results of the 3D FE model"
+        },
+        {
+            "endOffset": 53820,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Finally, a summary and conclusions are given in Section 9.",
+            "startOffset": 53762,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 72308,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "The presence of sliding in the entire transmission zone, Fig. 11a and d, supports the use of the static coefficient of friction.",
+            "startOffset": 72180,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 56701,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib13": {
+                    "endOffset": 56566,
+                    "startOffset": 56562
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Another method was also used by Kannel et al. [13] in which the interactions between the steel strand and concrete were modelled by using connected rigid springs with plastic behaviour.",
+            "startOffset": 56516,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 90177,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0160",
+            "sentence": "It is found that the transmission length decreases with the increase of the concrete cover (Fig. 26).",
+            "startOffset": 90076,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 95619,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The following conclusions can be drawn:",
+            "startOffset": 95580,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 87892,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "This has reduced the computational time drastically and has allowed for a number of parameter to be studied.",
+            "startOffset": 87784,
+            "title": "Parametric study"
+        },
+        {
+            "endOffset": 90628,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 90627,
+                    "startOffset": 90624
+                }
+            },
+            "secId": "s0160",
+            "sentence": "However, Den Uijl has reported no further reduction to be expected beyond 3d to 4d [8].",
+            "startOffset": 90541,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 96038,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The 3D non-linear FE model can be used as a tool to understand the phenomenon of prestress transfer considering different aspects.",
+            "startOffset": 95908,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 58390,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "Both approaches implement friction-based contact surface algorithms to model the interface between steel and concrete.",
+            "startOffset": 58272,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 89359,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0155",
+            "sentence": "The radial expansion of prestressing steel due to Poisson\u05f3s effect after the release of prestressing force is in direct proportion with the magnitude of the initial prestress.",
+            "startOffset": 89184,
+            "title": "Initial prestress"
+        },
+        {
+            "endOffset": 72710,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "This indicates that cracks will be present in the radial direction in concrete; therefore the concrete is not expected to display true elastic behaviour after cracking.",
+            "startOffset": 72542,
+            "title": "Predicted stress in concrete"
+        },
+        {
+            "endOffset": 80010,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "For the beam in Table 1, it was found that the effective stress values start to form a plateau for np greater than 40, Fig. 16.",
+            "startOffset": 79883,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 84913,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib5": {
+                    "endOffset": 84912,
+                    "startOffset": 84909
+                },
+                "bib9": {
+                    "endOffset": 84784,
+                    "startOffset": 84781
+                }
+            },
+            "secId": "s0135",
+            "sentence": "In the work of Oh et al. [9] the transmission length was estimated by predicting the transmission length at 95% of the average maximum strain (95% AMS), [5].",
+            "startOffset": 84756,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 72179,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 11b and c also shows how the normal pressure and bond stress are proportioned according to the Coulomb\u05f3s friction law.",
+            "startOffset": 72056,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 82776,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "refoffsets": {
+                "bib36": {
+                    "endOffset": 82775,
+                    "startOffset": 82771
+                }
+            },
+            "secId": "s0130",
+            "sentence": "These bursting cracks occurs due to expansion of the tendon and the wedge action [36].",
+            "startOffset": 82690,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 68774,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Slip on the other hand occurs when the tangential distance between the pairs exceeds the specified tolerance.",
+            "startOffset": 68665,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 70273,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib25": {
+                    "endOffset": 70272,
+                    "startOffset": 70268
+                }
+            },
+            "secId": "s0060",
+            "sentence": "Slip of prestressing steel is likely to occur within the transmission length after the failure of cohesion between steel and concrete [25].",
+            "startOffset": 70134,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 59048,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The ABAQUS concrete damage plasticity model, which accounts for concrete post-cracking behaviour, was used to model the concrete material.",
+            "startOffset": 58910,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 81173,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "The second step is casting of concrete (Fig. 17b).",
+            "startOffset": 81123,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 83199,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 83198,
+                    "startOffset": 83194
+                }
+            },
+            "secId": "s0130",
+            "sentence": "It is assumed that the direction of the maximum principal plastic strain is parallel to the direction of the vector normal to the crack plane [28].",
+            "startOffset": 83052,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 76242,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "A value of 0.1 eccentricity controls that the material has almost the same dilation angle \u03c8-measured angle in the p\u2013q plane at high confining pressure \u2013 over a wide range of confining pressure stress values.",
+            "startOffset": 76035,
+            "title": "Flow rule"
+        },
+        {
+            "endOffset": 95907,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The proposed expression can be used in the initial design stage where new concrete materials are used and there is an absence of code-design formulae.",
+            "startOffset": 95757,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 69404,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Two solution algorithms are used to solve the contact between steel and concrete: (1) the augmented Lagrange multiplier method for solving normal contact behaviour; (2) the penalty method for solving tangential contact behaviour.",
+            "startOffset": 69175,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 71235,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "However, there is a difference between the two models beyond the transmission zone.",
+            "startOffset": 71152,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 63100,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "Bond between steel and grout is attributed to three factors: (1) cohesion between steel and grout; (2) friction between steel and grout; and (3) mechanical resistance.",
+            "startOffset": 62933,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 63466,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 63465,
+                    "startOffset": 63461
+                }
+            },
+            "secId": "s0040",
+            "sentence": "Since a strand slips through the grout follows the pre-shaped groves without shearing off the concrete [22].",
+            "startOffset": 63358,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 88601,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0150",
+            "sentence": "It is found that the increase of concrete compressive strength reduces the transmission length and increases the effective prestress.",
+            "startOffset": 88468,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 54977,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 54976,
+                    "startOffset": 54973
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The same concept was used to estimate the transmission length in pre-tensioned concrete element [9].",
+            "startOffset": 54877,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 52003,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The prestress force in pre-tensioned concrete elements is transferred from the steel to the concrete over a certain length, which is known as the transmission length.",
+            "startOffset": 51837,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 74632,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 74577,
+                    "startOffset": 74573
+                }
+            },
+            "secId": "s0085",
+            "sentence": "The post-cracking behaviour was modelled using the Hillerborg\u05f3s fictitious cracking concept [29] assuming linear tension softening as shown in Fig. 13.",
+            "startOffset": 74481,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 81588,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "The release of the prestressing force creates radial stress and activates a frictional resistance component which enhances the transfer of prestress force into the concrete (Fig. 17 \u2013 curve c).",
+            "startOffset": 81395,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 89651,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0155",
+            "sentence": "As a result, the length that is required to transfer the prestress force becomes longer as is demonstrated in Fig. 25.",
+            "startOffset": 89533,
+            "title": "Initial prestress"
+        },
+        {
+            "endOffset": 52136,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The formulae of the transmission length in the current design code are basically developed empirically for normal types of concrete.",
+            "startOffset": 52004,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54442,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 54441,
+                    "startOffset": 54437
+                }
+            },
+            "secId": "s0015",
+            "sentence": "Analytical modelling of prestress transfer was previously carried out by considering the prestressing steel as a solid cylinder and concrete as a hollow cylinder with inner radius equal to the prestressing steel radius and with an infinite outer radius [12].",
+            "startOffset": 54184,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 78656,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib28": {
+                    "endOffset": 78655,
+                    "startOffset": 78642
+                },
+                "bib29": {
+                    "endOffset": 78655,
+                    "startOffset": 78642
+                },
+                "bib31": {
+                    "endOffset": 78655,
+                    "startOffset": 78642
+                },
+                "bib34": {
+                    "endOffset": 78655,
+                    "startOffset": 78642
+                }
+            },
+            "secId": "s0115",
+            "sentence": "The results obtained by using the concrete damage plasticity model showed mesh dependency since the model is dependent on the concrete crack bandwidth, the width affected by the crack [28,29,31,34].",
+            "startOffset": 78458,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 80227,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Therefore the use of np equals 40 gives an acceptable prediction of transmission length at reasonable computational cost.",
+            "startOffset": 80106,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 95052,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "It is found that the 3D non-linear finite element model is more accurate than the analytical model although the analytical model is more computationally efficient.",
+            "startOffset": 94889,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 83399,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 83398,
+                    "startOffset": 83393
+                },
+                "bib9": {
+                    "endOffset": 83398,
+                    "startOffset": 83393
+                }
+            },
+            "secId": "s0135",
+            "sentence": "To validate the proposed models, data were compared to previous experimental results [7,9].",
+            "startOffset": 83308,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 90324,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 90323,
+                    "startOffset": 90320
+                }
+            },
+            "secId": "s0160",
+            "sentence": "This is caused by the increase of nonlinearity in concrete and decrease of frictional resistance at the interface in the case of small covers [8].",
+            "startOffset": 90178,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 79380,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Defining the characteristic crack length to be equal to the length of a line across an element in the first order element.",
+            "startOffset": 79258,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 82689,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "refoffsets": {
+                "bib35": {
+                    "endOffset": 82688,
+                    "startOffset": 82684
+                }
+            },
+            "secId": "s0130",
+            "sentence": "The release of prestressing steel usually causes radial cracks in concrete around the tendon [35].",
+            "startOffset": 82591,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 93115,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0180",
+            "sentence": "Note that although there is no slip at the member\u05f3s half-length, the change in steel strain is not equal to the concrete strain.",
+            "startOffset": 92987,
+            "title": "Length of pre-tensioned member"
+        },
+        {
+            "endOffset": 55568,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0015",
+            "sentence": "On the other hand, the reviewed literature did not present a closed-form mathematical expression to estimate the transmission length and stress distribution along prestressing steel.",
+            "startOffset": 55386,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 62628,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The flowchart in Fig. 4 shows the solution procedure for the prestress transfer model.",
+            "startOffset": 62542,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 92154,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 92153,
+                    "startOffset": 92149
+                }
+            },
+            "secId": "s0175",
+            "sentence": "To investigate the influence of surface roughness the coefficient of friction in the model is varied between 0.3 and 0.7 [22].",
+            "startOffset": 92028,
+            "title": "Surface roughness of prestressing steel"
+        },
+        {
+            "endOffset": 93412,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "A contour plot of von Mises stresses shows the concentration of stress around the prestressing steel.",
+            "startOffset": 93311,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 91218,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0165",
+            "sentence": "This contradiction can be attributed to the fact that their experimental observations were based on a comparison between various beams with different number of strands, and different concrete properties and shapes (i.e. rectangular and I-beams).",
+            "startOffset": 90973,
+            "title": "Cross-sectional area of concrete"
+        },
+        {
+            "endOffset": 62136,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "In other words; the stress contours takes a circular shape around the bar with nearly zero contours at the cylinder perimeter.",
+            "startOffset": 62010,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 68437,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "This normal distance is known as penetration, it is a direct function of the normal pressure p.",
+            "startOffset": 68342,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 61876,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The prestressing steel is modelled as a solid cylinder with a radius that equals the nominal radius of prestressing steel (strand, bar, and wire).",
+            "startOffset": 61730,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 67669,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "Fig. 8b illustrates the normal pressure at the interface between steel and concrete.",
+            "startOffset": 67585,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 73580,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "Accordingly, a linear elastic material model was used for the pre-stressing steel.",
+            "startOffset": 73498,
+            "title": "Steel"
+        },
+        {
+            "endOffset": 88880,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0150",
+            "sentence": "The increase of tensile strength reduces the cracked concrete zone around prestressing steel and thereby enhances the transfer of the prestress force.",
+            "startOffset": 88730,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 57742,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The assumption of full bond condition affects the estimation of transfer of prestress force to concrete because it eliminates the contribution of prestressing steel slippage.",
+            "startOffset": 57568,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 60535,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "This results in varying diameter within the transmission length in the shape of a wedge (Fig. 1).",
+            "startOffset": 60438,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 90972,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0165",
+            "sentence": "However, for a pre-tensioned beam with a single strand, the results show that the size of the section does not affect either the transmission length or the effective prestress significantly (Fig. 27).",
+            "startOffset": 90772,
+            "title": "Cross-sectional area of concrete"
+        },
+        {
+            "endOffset": 76474,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "refoffsets": {
+                "bib31": {
+                    "endOffset": 76473,
+                    "startOffset": 76469
+                }
+            },
+            "secId": "s0100",
+            "sentence": "Lee and Fenves [31] found that when concrete was subjected to uni-axial compressive and tensile failures in both monotonic and cyclic tests, a dilation angle of 31\u00b0 produces results in good agreement with the experimental ones [31].",
+            "startOffset": 76242,
+            "title": "Flow rule"
+        },
+        {
+            "endOffset": 85362,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "It was found that the average error on the 3D FE model predictions is less than 8% in 48 specimens.",
+            "startOffset": 85263,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 87674,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "The transmission length is normalised to the diameter of the pre-tensioning steel (d) while the effective prestress (fpe) is normalised to the initial prestress (fpi).",
+            "startOffset": 87507,
+            "title": "Parametric study"
+        },
+        {
+            "endOffset": 64288,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0040",
+            "sentence": "The magnitude of the normal pressure p can be estimated by applying the compatibility condition at the interface between the bar and concrete.",
+            "startOffset": 64146,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 55236,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib1": {
+                    "endOffset": 55235,
+                    "startOffset": 55232
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The slip of prestressing steel was considered in evaluation of the transmission length in the study of Ben\u00edtez and G\u00e1lvez [1].",
+            "startOffset": 55110,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 60630,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "The increment in the bar diameter imposes a normal pressure acting on the surrounding concrete.",
+            "startOffset": 60535,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 90075,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib6": {
+                    "endOffset": 90074,
+                    "startOffset": 90071
+                }
+            },
+            "secId": "s0160",
+            "sentence": "A Similar trend was observed in previous experiments conducted by Oh and Kim [6].",
+            "startOffset": 89994,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 69456,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The prestressing process is modelled in three steps.",
+            "startOffset": 69404,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 91564,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0170",
+            "sentence": "Ageing of the concrete causes an increase in the concrete compressive strength, tensile strength, Young\u05f3s modulus and shrinkage strain, which results in enhanced bond between steel and concrete.",
+            "startOffset": 91370,
+            "title": "Time of release"
+        },
+        {
+            "endOffset": 71901,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 71752,
+                    "startOffset": 71749
+                }
+            },
+            "secId": "s0060",
+            "sentence": "This finding was also observed by Den Uijl [8], who found that the slip had insignificant influence on the transmission of the prestressing force after more than 95% of the prestress is achieved.",
+            "startOffset": 71706,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 74318,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "After prestress release, the radial stresses are always less than the compressive strength; hence, it is acceptable to use a linear model to describe the compressive behaviour of concrete.",
+            "startOffset": 74130,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 89043,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 88943,
+                    "startOffset": 88940
+                }
+            },
+            "secId": "s0150",
+            "sentence": "A similar observation was also reported by Mitchell et al. [7] who investigated experimentally the influence of high concrete strength on the transmission length.",
+            "startOffset": 88881,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 87783,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "The parametric study is performed on a high performance computing cluster using eight CPUs with 16 GB of RAM.",
+            "startOffset": 87674,
+            "title": "Parametric study"
+        },
+        {
+            "endOffset": 58121,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The main shortcoming of this model and the models before is the neglecting of the concrete tension softening behaviour.",
+            "startOffset": 58002,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 79431,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Use of elements with aspect ratios close to one.",
+            "startOffset": 79383,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 53652,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Axi-symmetric and 3D finite element (FE) models are developed in Sections 5 and 6.",
+            "startOffset": 53570,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 56515,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The transfer of the prestress force from steel to concrete was modelled by varying the strand diameter linearly from zero at the end of the girder to the nominal diameter at the end of the transmission length.",
+            "startOffset": 56306,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 80105,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "The estimated transmission length at np equals 40 is just 1.8% below the one for np equals 64.",
+            "startOffset": 80011,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 88327,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "On the other hand the effective prestress slightly decreases with increase of the tendon diameter within a range less than 6% of the initial prestress.",
+            "startOffset": 88176,
+            "title": "Diameter"
+        },
+        {
+            "endOffset": 74991,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0090",
+            "sentence": "The concrete constitutive model used in the analysis presented in this section is the CDP model in ABAQUS (Fig. 14).",
+            "startOffset": 74875,
+            "title": "Concrete damage plasticity (CDP)"
+        },
+        {
+            "endOffset": 87351,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "The Poisson ratio for steel and concrete is taken as 0.3 and 0.2, respectively.",
+            "startOffset": 87272,
+            "title": "Parametric study"
+        },
+        {
+            "endOffset": 67312,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "For the pre-tensioned concrete element with the properties shown in Table 1, the steel stress profile and the normal pressure are shown in Fig. 8.",
+            "startOffset": 67166,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 77722,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "The bond between steel and concrete was modelled using surface-to-surface contact element.",
+            "startOffset": 77632,
+            "title": "Bond modelling and model solution"
+        },
+        {
+            "endOffset": 84235,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The method estimates the transmission length from the end of the element to the intersection of the fitted line within the curved part of the strain profile with the horizontal fitted line of the asymptote.",
+            "startOffset": 84029,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 60437,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "The prestressing steel tries to shorten and expands due to Poisson\u05f3s ratio effect.",
+            "startOffset": 60355,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 87506,
+            "parents": [],
+            "secId": "s0140",
+            "sentence": "The study focuses on the influences on the transmission length and on the effective prestress (i.e. maximum stress along the tendon after release) as well.",
+            "startOffset": 87351,
+            "title": "Parametric study"
+        },
+        {
+            "endOffset": 88120,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib38": {
+                    "endOffset": 88119,
+                    "startOffset": 88113
+                },
+                "bib5": {
+                    "endOffset": 88119,
+                    "startOffset": 88113
+                }
+            },
+            "secId": "s0145",
+            "sentence": "The same conclusion was made by other researchers [5,38].",
+            "startOffset": 88063,
+            "title": "Diameter"
+        },
+        {
+            "endOffset": 94888,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The paper also presents a 3D non-linear FE model considering the post-cracking behaviour of concrete in addition to different parameters such as concrete cover, initial prestress, concrete strength, concrete shrinkage and member cross section.",
+            "startOffset": 94645,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 60772,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "The pressure starts from high value at the end and continues decreasing along the transmission zone and reaches plateau after that (Fig. 2a).",
+            "startOffset": 60631,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 62856,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0035",
+            "sentence": "To find out the distribution of stresses in a prestressing bar along the transmission length, consider a small element dx subjected to radial pressure p, axial stress fp and bond stress as shown in Fig. 5.",
+            "startOffset": 62651,
+            "title": "Equilibrium equation"
+        },
+        {
+            "endOffset": 60178,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "This is followed by a 3D FE model which considers non-linear material models as well as the rectangular beam shape.",
+            "startOffset": 60063,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 76767,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "In the models presented here, values of 0.1 and 30\u00b0 were used for the eccentricity and dilation angle, respectively.",
+            "startOffset": 76651,
+            "title": "Flow rule"
+        },
+        {
+            "endOffset": 83288,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "refoffsets": {
+                "bib36": {
+                    "endOffset": 83287,
+                    "startOffset": 83283
+                }
+            },
+            "secId": "s0130",
+            "sentence": "The presence of concrete cracks agrees to observations in the previous experiments [36].",
+            "startOffset": 83200,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 93310,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "The developed 3D FE model was also used to examine the thick-wall cylinder assumption for prestressed concrete.",
+            "startOffset": 93199,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 84404,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "For this reason only the results from 3D FE model are compared.",
+            "startOffset": 84341,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 53294,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Moreover, this study will develop a finite element model to understand the influence of different parameters on the prestress transfer.",
+            "startOffset": 53159,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 53761,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Section 7 presents a parametric study while Section 8 examines the assumptions used in the analytical model.",
+            "startOffset": 53653,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 54876,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib8": {
+                    "endOffset": 54875,
+                    "startOffset": 54872
+                }
+            },
+            "secId": "s0015",
+            "sentence": "The thick-wall cylinder model was also used to evaluate the effects of concrete cover on bond behaviour of prestressing strands in both high and normal concrete strengths considering the non-linear behaviour of concrete in tension [8].",
+            "startOffset": 54641,
+            "title": "Analytical modelling background"
+        },
+        {
+            "endOffset": 58001,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib17": {
+                    "endOffset": 57780,
+                    "startOffset": 57776
+                }
+            },
+            "secId": "s0020",
+            "sentence": "In the work of Ayoub and Filippou [17], the prestressing process was modelled across the different stages in the pre-tensioned concrete elements (i.e. prestressing, casting and releasing) using FE models in which an empirical local bond relationship was used.",
+            "startOffset": 57742,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 58271,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 58270,
+                    "startOffset": 58266
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Recently two FE approaches were developed to model the pre-tensioned concrete element, namely: the embedment approach and the extrusion approach [18].",
+            "startOffset": 58121,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 92986,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0180",
+            "sentence": "This finding is very helpful when experiments are designed, especially if the aim of the test is studying the bond behaviour in the end zone rather than focusing on measuring of the transmission length.",
+            "startOffset": 92784,
+            "title": "Length of pre-tensioned member"
+        },
+        {
+            "endOffset": 80989,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "The first step is prestressing where steel is tensioned (Fig. 17a).",
+            "startOffset": 80922,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 79133,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Using of fracture energy or stress displacement methods to define concrete post-cracking rather than using the stress\u2013strain relationship.",
+            "startOffset": 78995,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 53158,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "The aim of this study is to develop a model that accounts for different concrete materials and reinforcing steel as a closed-form expression to predict the transmission length to be used in initial design stage where new concretes are used.",
+            "startOffset": 52918,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 79255,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "This is because the latter introduces unreasonable mesh dependency into the results in the regions lacking reinforcement.",
+            "startOffset": 79134,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 69840,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The third step, the prestressing steel is gradually released and a solution step takes place.",
+            "startOffset": 69747,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 73497,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "Pre-tensioning steel is always stressed to a value less than the yield stress and it is, therefore, bound to behave elastically when released.",
+            "startOffset": 73355,
+            "title": "Steel"
+        },
+        {
+            "endOffset": 88175,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "This observation can be also demonstrated by Eq. (13).",
+            "startOffset": 88121,
+            "title": "Diameter"
+        },
+        {
+            "endOffset": 96901,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The size of the element was found to have no significant effect on the prestress transfer",
+            "startOffset": 96812,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 79663,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "This is because the transmission length is calculated using the 95% AMS method, which means it is not a direct result from the model.",
+            "startOffset": 79530,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 57057,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "These techniques and the assumption of a linear material model for both steel and concrete do not accurately reflect the reality of the bond behaviour between prestressing steel and concrete in prestressed concrete elements.",
+            "startOffset": 56833,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 57275,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The concrete was modelled using 8-node solid elements and truss elements were used to model the prestressing steel.",
+            "startOffset": 57160,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 73857,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0085",
+            "sentence": "The release of prestressing steel exerts radial compressive stresses and circumferential tensile stresses onto the surrounding concrete.",
+            "startOffset": 73721,
+            "title": "Concrete"
+        },
+        {
+            "endOffset": 95580,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "This model is also used to investigate the influence of prestressing steel diameter, concrete cover, concrete strength, initial prestress, section size, member length, time of prestress releasing, and surface condition of the tendon on the transfer of prestress force from steel to concrete in pre-tensioned concrete elements.",
+            "startOffset": 95254,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 52918,
+            "parents": [],
+            "refoffsets": {
+                "bib3": {
+                    "endOffset": 52917,
+                    "startOffset": 52914
+                }
+            },
+            "secId": "s0005",
+            "sentence": "To date, no full agreement exists on the factors used in formulae to predict the transmission length [3].",
+            "startOffset": 52813,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 78253,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "For solving this model under the static condition, a full Newton\u2013Raphson solver with un-symmetric matrix storage was used.",
+            "startOffset": 78131,
+            "title": "Bond modelling and model solution"
+        },
+        {
+            "endOffset": 83051,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "The cracks are visualised here plotting the maximum principal plastic strain.",
+            "startOffset": 82974,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 91352,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0165",
+            "sentence": "Also, this can be related to the presence of the transverse reinforcement which enhances the concrete confinement and bond behaviour.",
+            "startOffset": 91219,
+            "title": "Cross-sectional area of concrete"
+        },
+        {
+            "endOffset": 80487,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0115",
+            "sentence": "Hence, to reduce the computational cost, the element size of 25 mm at the edges was used in this study.",
+            "startOffset": 80384,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 82143,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "Therefore, neglecting the effect of concrete shrinkage does not reflect the true behaviour of pre-tensioned concrete in the analysis of the prestress transfer.",
+            "startOffset": 81984,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 94156,
+            "parents": [],
+            "secId": "s0185",
+            "sentence": "This result is also supporting the findings in Section 7.5, which shows that the prestress transfer is not dependant on the size of the pre-tensioned concrete unit in the case of equal covers.",
+            "startOffset": 93964,
+            "title": "Assessment of using the thick-wall cylinder concept in modelling prestress transfer"
+        },
+        {
+            "endOffset": 59771,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "In this paper, realistic models that consider the effects of different parameters on the transmission length are proposed.",
+            "startOffset": 59649,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 92359,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "refoffsets": {
+                "bib40": {
+                    "endOffset": 92358,
+                    "startOffset": 92354
+                }
+            },
+            "secId": "s0175",
+            "sentence": "This finding was also reported in Ref. [40].",
+            "startOffset": 92315,
+            "title": "Surface roughness of prestressing steel"
+        },
+        {
+            "endOffset": 61228,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "As a result, the stress in steel increases gradually until it becomes constant beyond the transmission length (Fig. 2c).",
+            "startOffset": 61108,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 84756,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "In their published work, the transmission length was measured at the ends of each beam, i.e. end A and B, which gives 44 measurements of the transmission length (Fig. 21).",
+            "startOffset": 84585,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 73014,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0065",
+            "sentence": "However, this phenomenon can be conveniently modelled using 3D FE analysis considering concrete non-linear behaviour.",
+            "startOffset": 72897,
+            "title": "Predicted stress in concrete"
+        },
+        {
+            "endOffset": 61376,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "The distribution of compressive stress in concrete follows a similar pattern to the stress in steel (Fig. 2d), with an additional shear lag effect.",
+            "startOffset": 61229,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 68978,
+            "parents": [],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 68977,
+                    "startOffset": 68973
+                }
+            },
+            "secId": "s0055",
+            "sentence": "Values between 0.3 and 0.7 of the coefficient of friction are reported in literature [22].",
+            "startOffset": 68888,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 84028,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib7": {
+                    "endOffset": 83960,
+                    "startOffset": 83957
+                }
+            },
+            "secId": "s0135",
+            "sentence": "Mitchell et al. [7] estimated the transmission length using the slope-intercept method.",
+            "startOffset": 83941,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 61107,
+            "parents": [],
+            "secId": "s0025",
+            "sentence": "This phenomenon enhances bonding of the released prestressing steel with the surrounding concrete.",
+            "startOffset": 61009,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 84584,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "Validation of the 3D FE model is carried out against 22 tests.",
+            "startOffset": 84522,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 95756,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "A linear closed-form expression has been proposed to predict the transmission length and the stress profile along the transmission zone.",
+            "startOffset": 95620,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 63271,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "refoffsets": {
+                "bib20": {
+                    "endOffset": 63270,
+                    "startOffset": 63263
+                },
+                "bib21": {
+                    "endOffset": 63270,
+                    "startOffset": 63263
+                }
+            },
+            "secId": "s0040",
+            "sentence": "The cohesion always has an insignificant influence on the load-deformation response of the structure, because the cohesion fails after a very small relative slip [20,21].",
+            "startOffset": 63101,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 63837,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "refoffsets": {
+                "bib22": {
+                    "endOffset": 63836,
+                    "startOffset": 63832
+                }
+            },
+            "secId": "s0040",
+            "sentence": "An empirical law was proposed by considering the so-called pitch effect to simulate different bond situations although the physical meaning of pitch effect is not explained [22].",
+            "startOffset": 63659,
+            "title": "Bond equation"
+        },
+        {
+            "endOffset": 54022,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "Modelling the transfer of prestress force in pre-tensioned concrete elements has been described either by using empirical or numerical models (i.e. analytical and finite element (FE) models).",
+            "startOffset": 53831,
+            "title": "Background"
+        },
+        {
+            "endOffset": 62542,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "Successive solutions of these conditions along the length of the member give the distribution of prestress and the transmission length.",
+            "startOffset": 62407,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 71455,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "This is because the analytical model uses Coulomb friction law for the entire length of the member; however this is only true within transmission zone where slip/sliding of prestressing steel is present, Fig. 11a and d.",
+            "startOffset": 71236,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 68169,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "Both steel and concrete were modelled as thick wall cylinders using 8-node elements with linear material properties, Fig. 9.",
+            "startOffset": 68045,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 83489,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "The comparisons exhibit a good agreement between the model and experimental measurements.",
+            "startOffset": 83400,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 89164,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0150",
+            "sentence": "The increase of compressive strength from 25 MPa to 50 MPa results only in about 3% increase in the effective prestress.",
+            "startOffset": 89044,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 90403,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0160",
+            "sentence": "Only less than 2% change was observed in the effective prestress in this case.",
+            "startOffset": 90325,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 92541,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0175",
+            "sentence": "In the figure, it also can be observed that the tendons in all cases develop to the same stress level, which means the surface roughness has no influence on the effective prestress.",
+            "startOffset": 92360,
+            "title": "Surface roughness of prestressing steel"
+        },
+        {
+            "endOffset": 83801,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "In Fig. 20, the decrease of the slope of tendon stress (i.e. bond stress) can be related to the non-linear behaviour of concrete (i.e. bursting cracks), which is not considered in the analytical simulation.",
+            "startOffset": 83595,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 73708,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0080",
+            "sentence": "The pre-tensioning stress was modelled as an initial stress in the steel element as has previously been described in Section 5.",
+            "startOffset": 73581,
+            "title": "Steel"
+        },
+        {
+            "endOffset": 55794,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The analytical modelling becomes very complicated when the material\u05f3s non-linearity and the effect of different types of stresses in addition to the behaviour in 3D are taken into account.",
+            "startOffset": 55606,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 68887,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "In this study the interface between steel and concrete is modelled using the surface-to-surface contact elements.",
+            "startOffset": 68774,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 85176,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib9": {
+                    "endOffset": 85080,
+                    "startOffset": 85077
+                }
+            },
+            "secId": "s0135",
+            "sentence": "Oh et al. [9] gives an estimation of each beam at the end of releasing (live end) and the far end (dead end).",
+            "startOffset": 85067,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 59416,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib18": {
+                    "endOffset": 59225,
+                    "startOffset": 59221
+                }
+            },
+            "secId": "s0020",
+            "sentence": "Arab et al. [18] introduced a frictionless casting bed in their modelling to account for the effect of the self-weight in prestress transfer, although in practice, the prestressing beds always have friction.",
+            "startOffset": 59209,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 91736,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0170",
+            "sentence": "In this investigation, it was found that later release of external prestress force results in shorter transmission length and up to 3% higher effective prestress, Fig. 28.",
+            "startOffset": 91565,
+            "title": "Time of release"
+        },
+        {
+            "endOffset": 81332,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "After the setting of concrete, concrete shrinkage takes place causing a change to the stress profile in the pre-tensioned concrete member (Fig. 17 \u2013 curve b).",
+            "startOffset": 81174,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 81861,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "The influence of concrete shrinkage before releasing the prestress force is highest at the end of the element and decreases towards the centre of the element until it stabilizes to a value less than the initial prestress after a certain distance (Fig. 17 \u2013 curves a and b).",
+            "startOffset": 81588,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 53569,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "In Section 4, an analytical expression to calculate the transmission length and the stress distribution is given.",
+            "startOffset": 53456,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 68664,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The relation between the tangential stress and the normal pressure is based on the Coulomb friction law as shown in Eq. (2).",
+            "startOffset": 68540,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 69954,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "A full Newton\u2013Raphson solver with un-symmetric matrix storage was used in the static solution of the model steps.",
+            "startOffset": 69841,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 71069,
+            "parents": [
+                {
+                    "id": "s0055",
+                    "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0060",
+            "sentence": "Fig. 10 shows a comparison between the analytical and the axi-symmetric model.",
+            "startOffset": 70991,
+            "title": "Verification of the analytical model"
+        },
+        {
+            "endOffset": 89993,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0160",
+            "sentence": "The final point (i.e. at 6d) was excluded from the curve fit as it appears to be an outlier.",
+            "startOffset": 89901,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 86229,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "This means that the ratio between characteristic upper and lower limit is 2.0, which indicated a high scatter in transmission length measurements in practice.",
+            "startOffset": 86071,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 92783,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0180",
+            "sentence": "In case half of the length of a member is less than the transfer length, it is found that the stress distribution follows the full transmission curve up to the stress corresponding to the half-length, Fig. 30.",
+            "startOffset": 92574,
+            "title": "Length of pre-tensioned member"
+        },
+        {
+            "endOffset": 67854,
+            "parents": [
+                {
+                    "id": "s0030",
+                    "title": "Analytical modelling"
+                }
+            ],
+            "secId": "s0050",
+            "sentence": "This finding confirms to the concept of Hoyer\u05f3s effect (i.e. wedge action).",
+            "startOffset": 67779,
+            "title": "Model solution"
+        },
+        {
+            "endOffset": 57567,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The prestress was simulated by assigning initial strain for the truss elements while the interaction between steel and concrete surface was assumed to be fully bonded.",
+            "startOffset": 57400,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 58451,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The approaches were modelled using the ABAQUS v.6.9 package.",
+            "startOffset": 58391,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 61008,
+            "parents": [],
+            "refoffsets": {
+                "bib19": {
+                    "endOffset": 61007,
+                    "startOffset": 61003
+                }
+            },
+            "secId": "s0025",
+            "sentence": "The forming of wedging and frictional forces is known as the Hoyer effect [19].",
+            "startOffset": 60929,
+            "title": "Transfer of prestress"
+        },
+        {
+            "endOffset": 61537,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 61536,
+                    "startOffset": 61532
+                }
+            },
+            "secId": "s0030",
+            "sentence": "The analytical model proposed here adopts the thick-wall cylinder theory and assumes elastic material behaviour for steel and concrete [12].",
+            "startOffset": 61397,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 88467,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0150",
+            "sentence": "Fig. 24 shows the influence of concrete compressive strength at release on prestress transfer in pre-tensioned concrete.",
+            "startOffset": 88347,
+            "title": "Concrete strength"
+        },
+        {
+            "endOffset": 96202,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "In the modelling of prestress transfer, it is not appropriate to account for the concrete shrinkage by subtracting the shrinkage losses from the initial prestress.",
+            "startOffset": 96039,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 81122,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "In this step, the distribution of stresses along its length remains constant and equals the prestress magnitude (Fig. 17 \u2013 curve a).",
+            "startOffset": 80990,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 82869,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0130",
+            "sentence": "In this section, the model is examined whether it is able to predict this phenomenon or not.",
+            "startOffset": 82777,
+            "title": "Concrete cracking along the transmission length"
+        },
+        {
+            "endOffset": 83594,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "As an example, Figs. 19 and 20 show comparisons of strain data normalised by the average maximum strain.",
+            "startOffset": 83490,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 96444,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "The use of the thick-wall cylinder theory was found to be reliable in modelling the prestress transfer.",
+            "startOffset": 96341,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 78919,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "refoffsets": {
+                "bib29": {
+                    "endOffset": 78918,
+                    "startOffset": 78914
+                }
+            },
+            "secId": "s0115",
+            "sentence": "Moreover, increasing the number of elements has been observed to result in the formation of new cracks in the localised crack zone [29].",
+            "startOffset": 78783,
+            "title": "Mesh sensitivity"
+        },
+        {
+            "endOffset": 92314,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0175",
+            "sentence": "Fig. 29 shows that pre-tensioned concrete elements with a rough surface tendon have a smaller transmission length in comparison to those with a smooth surface.",
+            "startOffset": 92155,
+            "title": "Surface roughness of prestressing steel"
+        },
+        {
+            "endOffset": 84340,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "This method is highly dependent on how these parts are determined and the number of points in each part.",
+            "startOffset": 84236,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 89900,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0160",
+            "sentence": "Fig. 26 shows a possible trend of influence of concrete cover on the transmission length.",
+            "startOffset": 89811,
+            "title": "Concrete cover"
+        },
+        {
+            "endOffset": 52526,
+            "parents": [],
+            "refoffsets": {
+                "bib2": {
+                    "endOffset": 52525,
+                    "startOffset": 52522
+                }
+            },
+            "secId": "s0005",
+            "sentence": "Models account for the new type of concrete material, based on the mechanical properties of materials which can be measured using simple tests, will be desirable [2].",
+            "startOffset": 52360,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 59649,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 59549,
+                    "startOffset": 59541
+                },
+                "bib8": {
+                    "endOffset": 59549,
+                    "startOffset": 59541
+                },
+                "bib9": {
+                    "endOffset": 59549,
+                    "startOffset": 59541
+                }
+            },
+            "secId": "s0020",
+            "sentence": "While the value of the coefficient of friction between steel strands and concrete in such models has been assumed to be 0.4 [8,9,12], Arab et al. used values of 0.7 and 1.4 based on AASHTO LRFD shear friction design recommendations.",
+            "startOffset": 59417,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 88062,
+            "parents": [
+                {
+                    "id": "s0140",
+                    "title": "Parametric study"
+                }
+            ],
+            "secId": "s0145",
+            "sentence": "The results of the model show that in case of constant concrete cover, the transmission length increases proportionally with an increase of diameter (Fig. 23).",
+            "startOffset": 87903,
+            "title": "Diameter"
+        },
+        {
+            "endOffset": 54150,
+            "parents": [],
+            "secId": "s0010",
+            "sentence": "These models allow for calculating the transmission length that is needed to transfer the prestress force in steel to concrete.",
+            "startOffset": 54023,
+            "title": "Background"
+        },
+        {
+            "endOffset": 55953,
+            "parents": [
+                {
+                    "id": "s0010",
+                    "title": "Background"
+                }
+            ],
+            "secId": "s0020",
+            "sentence": "The FE method on the other hand is much more effective in handling the complexities associated with material non-linearity and the structural behaviour in 3D.",
+            "startOffset": 55795,
+            "title": "Finite element modelling background"
+        },
+        {
+            "endOffset": 78439,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0110",
+            "sentence": "A small time step size, and therefore, a large number of increments were used to promote the convergence of the complex non-linear material behaviour and the contact problem\u05f3s solution.",
+            "startOffset": 78254,
+            "title": "Bond modelling and model solution"
+        },
+        {
+            "endOffset": 82539,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "As shown in Fig. 17, the calculation of transmission length was found to be 55.1d compared to 41.3d when concrete shrinkage before release is considered (i.e. about 25% reduction).",
+            "startOffset": 82359,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 67984,
+            "parents": [],
+            "refoffsets": {
+                "bib24": {
+                    "endOffset": 67983,
+                    "startOffset": 67979
+                }
+            },
+            "secId": "s0055",
+            "sentence": "A simple axi-symmetric FE model is developed using the ANSYS FE package [24].",
+            "startOffset": 67907,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 69045,
+            "parents": [],
+            "refoffsets": {
+                "bib12": {
+                    "endOffset": 69044,
+                    "startOffset": 69038
+                },
+                "bib9": {
+                    "endOffset": 69044,
+                    "startOffset": 69038
+                }
+            },
+            "secId": "s0055",
+            "sentence": "The coefficient of friction in this study was taken as 0.4 [9,12].",
+            "startOffset": 68979,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        },
+        {
+            "endOffset": 62009,
+            "parents": [],
+            "secId": "s0030",
+            "sentence": "The thick-wall cylinder assumes that the stress is highest around the prestressing steel while the far parts have nearly zero stress.",
+            "startOffset": 61876,
+            "title": "Analytical modelling"
+        },
+        {
+            "endOffset": 96340,
+            "parents": [],
+            "secId": "s0190",
+            "sentence": "Concrete shrinkage before release imposed non-uniform increase (at the end) and decrease (far from the end) of stresses along the member.",
+            "startOffset": 96203,
+            "title": "Conclusions"
+        },
+        {
+            "endOffset": 76034,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0075",
+                    "title": "Material models"
+                }
+            ],
+            "secId": "s0100",
+            "sentence": "The eccentricity e defines the rate at which the function approaches the asymptote.",
+            "startOffset": 75951,
+            "title": "Flow rule"
+        },
+        {
+            "endOffset": 81983,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                },
+                {
+                    "id": "s0120",
+                    "title": "Discussion of results of the 3D FE model"
+                }
+            ],
+            "secId": "s0125",
+            "sentence": "This behaviour enhances the transfer of prestress although it reduces the effective prestress (Fig. 17 \u2013 curves c and d).",
+            "startOffset": 81862,
+            "title": "Simulation of prestressing steps"
+        },
+        {
+            "endOffset": 85905,
+            "parents": [
+                {
+                    "id": "s0070",
+                    "title": "3D non-linear FE modelling of pre-tensioned concrete"
+                }
+            ],
+            "secId": "s0135",
+            "sentence": "Additionally, this scatter can be due to the different in the quality of the interface between steel and concrete which is influenced by many parameters such as compaction, presence of air bubbles, and mortar sedimentation.",
+            "startOffset": 85682,
+            "title": "Models validation"
+        },
+        {
+            "endOffset": 53455,
+            "parents": [],
+            "secId": "s0005",
+            "sentence": "Sections 2 and 3 give a brief background about the previous modelling work and the transfer of prestress, respectively.",
+            "startOffset": 53336,
+            "title": "Introduction"
+        },
+        {
+            "endOffset": 69746,
+            "parents": [],
+            "secId": "s0055",
+            "sentence": "The concrete placement is modelled by the formation of contact between steel and concrete.",
+            "startOffset": 69656,
+            "title": "FE axi-symmetric modelling of pre-tensioned concrete"
+        }
+    ],
+    "docId": "S0168874X14001875",
+    "metadata": {
+        "asjc": [
+            "1704",
+            "2200",
+            "2603",
+            "2604"
+        ],
+        "authors": [
+            {
+                "email": "Amged.Abdelatif@uofk.edu",
+                "first": "A. O.",
+                "initial": "A.O.",
+                "last": "Abdelatif"
+            },
+            {
+                "email": "john.owen@nottingham.ac.uk",
+                "first": "J. S.",
+                "initial": "J.S.",
+                "last": "Owen"
+            },
+            {
+                "email": "mhussein@qu.edu.qa",
+                "first": "M. F.M.",
+                "initial": "M.F.M.",
+                "last": "Hussein"
+            }
+        ],
+        "doi": "10.1016/j.finel.2014.09.007",
+        "firstpage": "47",
+        "issn": "0168874X",
+        "keywords": [
+            "Bond",
+            "Finite element",
+            "Modelling",
+            "Prestressed concrete",
+            "Transfer length",
+            "Transmission length"
+        ],
+        "lastpage": "63",
+        "openaccess": "Full",
+        "pub_year": 2015,
+        "subjareas": [
+            "COMP",
+            "ENGI",
+            "MATH"
+        ],
+        "title": "Modelling the prestress transfer in pre-tensioned concrete elements"
+    }
+}
